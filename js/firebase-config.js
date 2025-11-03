@@ -3,6 +3,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 import { getDatabase } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+import { logger } from './logger.js';
 
 // Configuration Firebase - Avantage QUIZZ
 // Configuration complète avec Firestore + Realtime Database
@@ -24,6 +25,6 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const realtimeDB = getDatabase(app);
 
-console.log('✅ Firebase initialisé avec succès');
-console.log('📊 Projet:', firebaseConfig.projectId);
-console.log('🔐 Services: Authentication, Firestore, Realtime Database');
+logger.log('✅ Firebase initialisé avec succès');
+logger.log('📊 Projet:', firebaseConfig.projectId);
+logger.log('🔐 Services: Authentication, Firestore, Realtime Database');

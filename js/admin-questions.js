@@ -14,6 +14,12 @@ import {
     showSkeleton,
     hideSkeleton
 } from './skeleton.js';
+import { logger } from './logger.js';
+import { 
+    sanitizeHTML, 
+    validateQuestionData, 
+    sanitizeQuestionData 
+} from './security.js';
 
 // ✅ Clé localStorage pour persistance mode démo
 const DEMO_STORAGE_KEY = 'avantage-quizz-demo-questions';
