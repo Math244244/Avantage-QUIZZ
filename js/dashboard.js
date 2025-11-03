@@ -98,54 +98,72 @@ function createProgressRing(percentage) {
 }
 
 function createCompletedCard(month, score) {
-    // Couleur basée sur le score
-    const getScoreColor = (score) => {
-        if (score >= 90) return { bg: 'from-green-500 to-emerald-600', ring: 'ring-green-500/20', text: 'text-green-700', icon: 'text-green-600' };
-        if (score >= 75) return { bg: 'from-blue-500 to-indigo-600', ring: 'ring-blue-500/20', text: 'text-blue-700', icon: 'text-blue-600' };
-        if (score >= 60) return { bg: 'from-orange-500 to-amber-600', ring: 'ring-orange-500/20', text: 'text-orange-700', icon: 'text-orange-600' };
-        return { bg: 'from-slate-400 to-slate-600', ring: 'ring-slate-500/20', text: 'text-slate-700', icon: 'text-slate-600' };
+    // Intensité du dégradé indigo basée sur le score
+    const getScoreStyle = (score) => {
+        if (score >= 90) return { 
+            bg: 'from-indigo-600 via-indigo-700 to-indigo-800', 
+            badge: 'bg-emerald-500',
+            badgeText: 'Excellent'
+        };
+        if (score >= 75) return { 
+            bg: 'from-indigo-500 via-indigo-600 to-indigo-700', 
+            badge: 'bg-blue-500',
+            badgeText: 'Très bien'
+        };
+        if (score >= 60) return { 
+            bg: 'from-indigo-400 via-indigo-500 to-indigo-600', 
+            badge: 'bg-indigo-400',
+            badgeText: 'Bien'
+        };
+        return { 
+            bg: 'from-slate-400 via-slate-500 to-slate-600', 
+            badge: 'bg-slate-400',
+            badgeText: 'Passable'
+        };
     };
     
-    const colors = getScoreColor(score);
+    const style = getScoreStyle(score);
     
     return `
-        <div class="card-hover relative bg-gradient-to-br ${colors.bg} p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col items-center cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
-            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                <svg class="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+        <div class="card-hover relative bg-gradient-to-br ${style.bg} p-6 rounded-2xl shadow-lg hover:shadow-xl border border-white/20 flex flex-col items-center cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group">
+            <div class="absolute top-3 right-3 ${style.badge} text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-md">
+                ${style.badgeText}
+            </div>
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm p-1.5 rounded-full">
+                <svg class="h-4 w-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4 drop-shadow-lg">${month}</h3>
+            <h3 class="text-xl font-bold text-white mb-4 drop-shadow-md">${month}</h3>
             ${createProgressRing(score)}
-            <span class="mt-4 text-sm font-semibold text-white/90 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Score: ${score}%</span>
-            <a href="#" class="mt-3 text-sm font-medium text-white hover:text-white/80 underline decoration-2 underline-offset-4 opacity-0 group-hover:opacity-100 transition-opacity">Voir les détails →</a>
+            <span class="mt-4 text-sm font-semibold text-white/95 bg-white/15 px-3 py-1.5 rounded-full backdrop-blur-sm">Score: ${score}%</span>
+            <a href="#" class="mt-3 text-sm font-medium text-white/90 hover:text-white underline decoration-2 underline-offset-2 opacity-0 group-hover:opacity-100 transition-opacity">Voir détails →</a>
         </div>
     `;
 }
 
 function createLockedCard(month) {
     return `
-        <div class="relative bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 p-6 rounded-2xl border-2 border-slate-300 flex flex-col items-center justify-center min-h-[260px] shadow-lg overflow-hidden">
-            <!-- Effet de texture -->
-            <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.05) 10px, rgba(0,0,0,.05) 20px);"></div>
+        <div class="relative bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 p-6 rounded-2xl border border-slate-300 flex flex-col items-center justify-center min-h-[260px] shadow-sm overflow-hidden">
+            <!-- Motif subtil -->
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.1) 10px, rgba(0,0,0,.1) 20px);"></div>
             
-            <!-- Badge verrouillé -->
-            <div class="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse">
-                🔒 VERROUILLÉ
+            <!-- Badge verrouillé discret -->
+            <div class="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
+                🔒 Verrouillé
             </div>
             
-            <!-- Cadenas rouge avec effet 3D -->
+            <!-- Cadenas minimaliste -->
             <div class="relative mb-4">
-                <div class="absolute inset-0 bg-red-600 rounded-full blur-xl opacity-30 animate-pulse"></div>
-                <div class="relative bg-gradient-to-br from-red-500 to-red-700 p-4 rounded-2xl shadow-2xl transform hover:rotate-6 transition-transform">
-                    <svg class="h-10 w-10 text-white drop-shadow-lg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <div class="relative bg-white p-3.5 rounded-xl shadow-md border-2 border-red-100">
+                    <svg class="h-8 w-8 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
             </div>
             
             <h3 class="text-xl font-bold text-slate-700 mb-2">${month}</h3>
-            <div class="flex items-center gap-2 text-sm text-slate-500 bg-white/60 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <div class="flex items-center gap-2 text-sm text-slate-500 bg-white px-3 py-1.5 rounded-lg">
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
@@ -157,38 +175,32 @@ function createLockedCard(month) {
 
 function createIncompleteCard(month) {
     return `
-        <div class="card-hover relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 p-6 rounded-2xl shadow-lg border-2 border-amber-300 flex flex-col items-center justify-center min-h-[260px] cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-orange-400 group overflow-hidden">
-            <!-- Effet lumineux -->
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            
+        <div class="card-hover relative bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl shadow-sm hover:shadow-md border border-amber-200 flex flex-col items-center justify-center min-h-[260px] cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group overflow-hidden">
             <!-- Badge à compléter -->
-            <div class="absolute top-3 right-3 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold shadow-md">
-                À COMPLÉTER
+            <div class="absolute top-3 right-3 bg-amber-500 text-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
+                À compléter
             </div>
             
-            <!-- Icône horloge avec animation -->
+            <!-- Icône horloge -->
             <div class="relative mb-4">
-                <div class="absolute inset-0 bg-orange-500 rounded-full blur-xl opacity-20"></div>
-                <div class="relative bg-gradient-to-br from-orange-400 to-amber-600 p-4 rounded-2xl shadow-lg">
-                    <svg class="h-10 w-10 text-white animate-pulse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <div class="relative bg-white p-3.5 rounded-xl shadow-md border-2 border-amber-100">
+                    <svg class="h-8 w-8 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
             </div>
             
-            <h3 class="text-xl font-bold text-amber-900 mb-2">${month}</h3>
-            <span class="text-sm text-amber-700 text-center font-medium mb-3">Mois manqué - Rattrapez-le !</span>
+            <h3 class="text-xl font-bold text-slate-700 mb-2">${month}</h3>
+            <span class="text-sm text-amber-600 text-center font-medium mb-3">Mois manqué - Rattrapez-le !</span>
             
-            <!-- Barre de progression stylée -->
-            <div class="mt-3 w-full bg-amber-200 rounded-full h-3 shadow-inner overflow-hidden">
-                <div class="bg-gradient-to-r from-orange-400 to-amber-500 h-3 rounded-full relative overflow-hidden" style="width: 0%">
-                    <div class="absolute inset-0 bg-white/30 animate-pulse"></div>
-                </div>
+            <!-- Barre de progression -->
+            <div class="mt-3 w-full bg-amber-100 rounded-full h-2.5 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-400 to-amber-500 h-2.5 rounded-full" style="width: 0%"></div>
             </div>
-            <span class="mt-2 text-xs text-amber-600 font-semibold">0% complété</span>
+            <span class="mt-2 text-xs text-amber-600 font-medium">0% complété</span>
             
             <!-- Bouton au hover -->
-            <button class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r from-orange-500 to-amber-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
+            <button class="mt-4 opacity-0 group-hover:opacity-100 transition-all bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded-lg shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                 Compléter maintenant
             </button>
         </div>
@@ -197,39 +209,30 @@ function createIncompleteCard(month) {
 
 function createActiveCard(month) {
     return `
-        <div class="card-hover relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-6 rounded-2xl shadow-2xl border-2 border-white/30 flex flex-col items-center justify-center min-h-[260px] ring-4 ring-purple-500/30 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-3xl group overflow-hidden">
-            <!-- Effet de brillance animé -->
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+        <div class="card-hover relative bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 p-6 rounded-2xl shadow-xl hover:shadow-2xl border border-indigo-400/30 flex flex-col items-center justify-center min-h-[260px] ring-2 ring-indigo-400/20 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group overflow-hidden">
+            <!-- Effet de brillance subtil -->
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             
-            <!-- Particules flottantes -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute w-2 h-2 bg-white/40 rounded-full top-10 left-10 animate-ping"></div>
-                <div class="absolute w-2 h-2 bg-white/40 rounded-full top-20 right-20 animate-ping" style="animation-delay: 0.5s;"></div>
-                <div class="absolute w-2 h-2 bg-white/40 rounded-full bottom-10 left-20 animate-ping" style="animation-delay: 1s;"></div>
-            </div>
-            
-            <!-- Badge ACTIF avec animation -->
-            <span class="absolute top-3 right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-bounce z-10">
-                ⚡ ACTIF
+            <!-- Badge ACTIF -->
+            <span class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-md">
+                ⚡ Actif
             </span>
             
-            <!-- Icône stylo avec effet glow -->
-            <div class="relative mb-4 z-10">
-                <div class="absolute inset-0 bg-white rounded-full blur-2xl opacity-50 animate-pulse"></div>
-                <div class="relative bg-white/20 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-white/30">
-                    <svg class="h-12 w-12 text-white drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <!-- Icône stylo -->
+            <div class="relative mb-4">
+                <div class="relative bg-white/15 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/20">
+                    <svg class="h-10 w-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
                 </div>
             </div>
             
-            <h3 class="text-2xl font-black text-white mb-2 drop-shadow-lg z-10">${month}</h3>
-            <p class="text-white/90 text-sm font-medium mb-4 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm z-10">🎯 Prêt à être complété</p>
+            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">${month}</h3>
+            <p class="text-white/90 text-sm font-medium mb-4 bg-white/10 px-3 py-1 rounded-lg backdrop-blur-sm">🎯 Prêt à être complété</p>
             
-            <!-- Bouton CTA avec effet premium -->
-            <button class="start-quiz-button relative w-full bg-white text-purple-600 font-bold px-6 py-3 rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1 group/btn z-10 overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-yellow-200 via-pink-200 to-purple-200 opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
-                <span class="relative flex items-center justify-center gap-2">
+            <!-- Bouton CTA -->
+            <button class="start-quiz-button w-full bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 group/btn">
+                <span class="flex items-center justify-center gap-2">
                     Démarrer le quiz
                     <svg class="h-5 w-5 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
