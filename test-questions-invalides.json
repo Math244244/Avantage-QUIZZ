@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Question INVALIDE - Cette question contient un champ difficulty qui ne devrait PAS être accepté",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "correctAnswer": 0,
+    "difficulty": "facile",
+    "explanation": "Cette question ne devrait PAS être importée car elle contient un champ difficulty.",
+    "module": "auto",
+    "month": "novembre",
+    "year": 2025
+  },
+  {
+    "question": "Question INVALIDE 2 - Autre question avec difficulty",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "correctAnswer": 1,
+    "difficulty": "moyen",
+    "explanation": "Import doit échouer.",
+    "module": "loisir",
+    "month": "novembre",
+    "year": 2025
+  }
+]

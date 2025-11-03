@@ -1,0 +1,130 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation "Navigation principale" [ref=e2]:
+    - generic [ref=e3]:
+      - heading "QuizPro" [level=1] [ref=e4]
+      - paragraph [ref=e5]: Formation Continue
+    - menubar "Menu de navigation" [ref=e7]:
+      - menuitem "Tableau de Bord" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - text: Tableau de Bord
+      - listitem [ref=e11]:
+        - menuitem "Quiz" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+          - text: Quiz
+      - listitem [ref=e15]:
+        - link "Mes Résultats" [ref=e16] [cursor=pointer]:
+          - /url: /results.html
+          - img [ref=e17]
+          - text: Mes Résultats
+      - listitem [ref=e19]:
+        - link "Ressources" [ref=e20] [cursor=pointer]:
+          - /url: /resources.html
+          - img [ref=e21]
+          - text: Ressources
+      - listitem [ref=e23]:
+        - link "Gestion Admin 🔰" [ref=e24] [cursor=pointer]:
+          - /url: /admin.html
+          - img [ref=e25]
+          - generic [ref=e28]:
+            - text: Gestion Admin
+            - generic [ref=e29]: 🔰
+    - generic [ref=e30]:
+      - generic [ref=e31]: 🔰 Administrateur
+      - button "Mode Sombre" [ref=e32] [cursor=pointer]:
+        - img [ref=e33]
+        - generic [ref=e35]: Mode Sombre
+      - generic [ref=e36]:
+        - img "Avatar" [ref=e37]
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Utilisateur Démo
+          - button "Déconnexion" [active] [ref=e40] [cursor=pointer]
+  - main [ref=e41]:
+    - generic [ref=e43]:
+      - generic [ref=e46]:
+        - heading "Tableau de Bord" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Bonjour Utilisateur, prêt à relever votre défi de Novembre ?
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - img [ref=e55]
+            - generic [ref=e57]: Quiz mensuel disponible
+          - heading "Quiz de Novembre" [level=3] [ref=e58]
+          - paragraph [ref=e59]: Votre module mensuel est prêt. Relevez le défi et améliorez vos compétences !
+          - button "Démarrer le quiz" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61]: Démarrer le quiz
+            - img [ref=e62]
+        - generic [ref=e64]:
+          - paragraph [ref=e65]:
+            - img [ref=e66]
+            - text: Progression Annuelle
+          - paragraph [ref=e69]: 0/12
+          - paragraph [ref=e70]: modules complétés cette année
+      - generic [ref=e71]:
+        - heading "Vos Modules 2025" [level=3] [ref=e72]:
+          - img [ref=e73]
+          - text: Vos Modules 2025
+        - generic [ref=e75]:
+          - generic [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - heading "Janvier" [level=3] [ref=e79]
+            - generic [ref=e80]: Pas encore complété
+            - generic [ref=e82]: 0% complété
+          - generic [ref=e83] [cursor=pointer]:
+            - img [ref=e84]
+            - heading "Février" [level=3] [ref=e86]
+            - generic [ref=e87]: Pas encore complété
+            - generic [ref=e89]: 0% complété
+          - generic [ref=e90] [cursor=pointer]:
+            - img [ref=e91]
+            - heading "Mars" [level=3] [ref=e93]
+            - generic [ref=e94]: Pas encore complété
+            - generic [ref=e96]: 0% complété
+          - generic [ref=e97] [cursor=pointer]:
+            - img [ref=e98]
+            - heading "Avril" [level=3] [ref=e100]
+            - generic [ref=e101]: Pas encore complété
+            - generic [ref=e103]: 0% complété
+          - generic [ref=e104] [cursor=pointer]:
+            - img [ref=e105]
+            - heading "Mai" [level=3] [ref=e107]
+            - generic [ref=e108]: Pas encore complété
+            - generic [ref=e110]: 0% complété
+          - generic [ref=e111] [cursor=pointer]:
+            - img [ref=e112]
+            - heading "Juin" [level=3] [ref=e114]
+            - generic [ref=e115]: Pas encore complété
+            - generic [ref=e117]: 0% complété
+          - generic [ref=e118] [cursor=pointer]:
+            - img [ref=e119]
+            - heading "Juillet" [level=3] [ref=e121]
+            - generic [ref=e122]: Pas encore complété
+            - generic [ref=e124]: 0% complété
+          - generic [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - heading "Août" [level=3] [ref=e128]
+            - generic [ref=e129]: Pas encore complété
+            - generic [ref=e131]: 0% complété
+          - generic [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - heading "Septembre" [level=3] [ref=e135]
+            - generic [ref=e136]: Pas encore complété
+            - generic [ref=e138]: 0% complété
+          - generic [ref=e139] [cursor=pointer]:
+            - img [ref=e140]
+            - heading "Octobre" [level=3] [ref=e142]
+            - generic [ref=e143]: Pas encore complété
+            - generic [ref=e145]: 0% complété
+          - generic [ref=e146] [cursor=pointer]:
+            - generic [ref=e147]: ACTIF
+            - img [ref=e148]
+            - heading "Novembre" [level=3] [ref=e150]
+            - paragraph [ref=e151]: Prêt à être complété
+            - button "Démarrer le quiz" [ref=e152]
+          - generic [ref=e153]:
+            - img [ref=e154]
+            - heading "Décembre" [level=3] [ref=e156]
+            - generic [ref=e157]: Disponible le 1er du mois
+```

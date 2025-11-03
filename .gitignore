@@ -1,0 +1,23 @@
+# Ne pas committer les dépendances
+node_modules/
+
+# Fichiers de build
+css/output.css
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Variables d'environnement (si vous en ajoutez)
+.env
+.env.local
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache
+.cache/

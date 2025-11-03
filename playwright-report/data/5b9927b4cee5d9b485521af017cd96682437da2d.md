@@ -1,0 +1,63 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation "Navigation principale" [ref=e2]:
+    - generic [ref=e3]:
+      - heading "QuizPro" [level=1] [ref=e4]
+      - paragraph [ref=e5]: Formation Continue
+    - menubar "Menu de navigation" [ref=e7]:
+      - menuitem "Tableau de Bord" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - text: Tableau de Bord
+      - listitem [ref=e11]:
+        - menuitem "Quiz" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+          - text: Quiz
+      - listitem [ref=e15]:
+        - link "Mes Résultats" [ref=e16] [cursor=pointer]:
+          - /url: /results.html
+          - img [ref=e17]
+          - text: Mes Résultats
+      - listitem [ref=e19]:
+        - link "Ressources" [ref=e20] [cursor=pointer]:
+          - /url: /resources.html
+          - img [ref=e21]
+          - text: Ressources
+    - generic [ref=e23]:
+      - button "Mode Sombre" [ref=e24] [cursor=pointer]:
+        - img [ref=e25]
+        - generic [ref=e27]: Mode Sombre
+      - generic [ref=e28]:
+        - img "Avatar" [ref=e29]
+        - generic [ref=e30]:
+          - paragraph [ref=e31]: Chargement...
+          - button "Déconnexion" [ref=e32] [cursor=pointer]
+  - main [ref=e33]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - img [ref=e39]
+        - heading "QuizPro" [level=1] [ref=e41]
+        - paragraph [ref=e42]: Formation Continue
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Bienvenue 👋" [level=2] [ref=e46]
+          - paragraph [ref=e47]: Connectez-vous pour accéder à vos modules de formation et suivre votre progression.
+        - button "Se connecter avec Google" [active] [ref=e48] [cursor=pointer]:
+          - img [ref=e49]
+          - generic [ref=e54]: Connexion avec Google
+        - generic [ref=e59]: ou
+        - button "Accéder en mode démo sans connexion" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: 🎨
+          - generic [ref=e62]: Mode Démo
+        - paragraph [ref=e63]: Accès temporaire pour explorer l'interface
+      - paragraph [ref=e65]:
+        - img [ref=e66]
+        - text: Connexion sécurisée par Firebase
+  - generic [ref=e70]:
+    - img [ref=e73]
+    - paragraph [ref=e76]: Erreur lors de la connexion
+    - button [ref=e77] [cursor=pointer]:
+      - img [ref=e78]
+  - iframe [ref=e80]
+```

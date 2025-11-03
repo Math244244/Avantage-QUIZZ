@@ -1,0 +1,182 @@
+[
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost--2025_11_03_02_32_29.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost--2025_11_03_02_32_29.report.json",
+    "summary": {
+      "performance": 0.69,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost--2025_11_03_02_32_44.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost--2025_11_03_02_32_44.report.json",
+    "summary": {
+      "performance": 0.81,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/quiz.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-quiz_html-2025_11_03_02_33_09.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-quiz_html-2025_11_03_02_33_09.report.json",
+    "summary": {
+      "performance": 0.78,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/quiz.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-quiz_html-2025_11_03_02_33_34.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-quiz_html-2025_11_03_02_33_34.report.json",
+    "summary": {
+      "performance": 0.8,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/results.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-results_html-2025_11_03_02_33_59.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-results_html-2025_11_03_02_33_59.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/results.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-results_html-2025_11_03_02_34_12.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-results_html-2025_11_03_02_34_12.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/resources.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-resources_html-2025_11_03_02_34_37.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-resources_html-2025_11_03_02_34_37.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/resources.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-resources_html-2025_11_03_02_34_49.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-resources_html-2025_11_03_02_34_49.report.json",
+    "summary": {
+      "performance": 0.81,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/admin.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-admin_html-2025_11_03_02_35_14.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-admin_html-2025_11_03_02_35_14.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/admin.html",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-admin_html-2025_11_03_02_35_27.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-admin_html-2025_11_03_02_35_27.report.json",
+    "summary": {
+      "performance": 0.78,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost--2025_11_03_02_32_56.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost--2025_11_03_02_32_56.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/quiz.html",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-quiz_html-2025_11_03_02_33_21.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-quiz_html-2025_11_03_02_33_21.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/results.html",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-results_html-2025_11_03_02_33_46.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-results_html-2025_11_03_02_33_46.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/resources.html",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-resources_html-2025_11_03_02_34_24.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-resources_html-2025_11_03_02_34_24.report.json",
+    "summary": {
+      "performance": 0.8,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/admin.html",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-admin_html-2025_11_03_02_35_02.report.html",
+    "jsonPath": "C:\\Users\\guilb\\Desktop\\Avantage QUIZZ\\lighthouse-reports\\localhost-admin_html-2025_11_03_02_35_02.report.json",
+    "summary": {
+      "performance": 0.79,
+      "accessibility": 0.91,
+      "best-practices": 0.96,
+      "seo": 0.92
+    }
+  }
+]

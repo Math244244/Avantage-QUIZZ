@@ -1,0 +1,987 @@
+// Dashboard Admin Avancé - Statistiques globales et analytics
+import { db } from './firebase-config.js';
+import { collection, query, getDocs, where, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+import { toast } from './toast.js';
+import { isDemoMode } from './auth.js';
+import {
+    createStatsSkeleton,
+    createChartSkeleton,
+    createListSkeleton,
+    showSkeleton,
+    hideSkeleton
+} from './skeleton.js';
+
+// ✅ Données simulées pour le mode démo
+const MOCK_DATA = {
+    stats: {
+        totalUsers: 42,
+        totalQuizzes: 156,
+        totalQuestions: 240,
+        totalResources: 35,
+        avgScore: 78,
+        activeUsersToday: 8,
+        activeUsersWeek: 23,
+        quizzesToday: 12,
+        quizzesWeek: 67
+    },
+    topUsers: [
+        { id: '1', email: 'alice.dupont@example.com', displayName: 'Alice Dupont', totalQuizzes: 24, averageScore: 92 },
+        { id: '2', email: 'bob.martin@example.com', displayName: 'Bob Martin', totalQuizzes: 21, averageScore: 88 },
+        { id: '3', email: 'claire.bernard@example.com', displayName: 'Claire Bernard', totalQuizzes: 19, averageScore: 85 },
+        { id: '4', email: 'david.dubois@example.com', displayName: 'David Dubois', totalQuizzes: 18, averageScore: 83 },
+        { id: '5', email: 'emma.petit@example.com', displayName: 'Emma Petit', totalQuizzes: 16, averageScore: 81 },
+        { id: '6', email: 'francois.roux@example.com', displayName: 'François Roux', totalQuizzes: 15, averageScore: 79 },
+        { id: '7', email: 'julie.moreau@example.com', displayName: 'Julie Moreau', totalQuizzes: 14, averageScore: 76 },
+        { id: '8', email: 'lucas.simon@example.com', displayName: 'Lucas Simon', totalQuizzes: 13, averageScore: 74 },
+        { id: '9', email: 'marie.laurent@example.com', displayName: 'Marie Laurent', totalQuizzes: 12, averageScore: 72 },
+        { id: '10', email: 'nicolas.michel@example.com', displayName: 'Nicolas Michel', totalQuizzes: 11, averageScore: 70 }
+    ],
+    recentActivity: [
+        { id: '1', userName: 'Alice Dupont', module: 'Auto - Novembre', score: 95, completedAt: new Date(Date.now() - 300000) },
+        { id: '2', userName: 'Emma Petit', module: 'Loisir - Novembre', score: 90, completedAt: new Date(Date.now() - 720000) },
+        { id: '3', userName: 'Bob Martin', module: 'VR - Novembre', score: 88, completedAt: new Date(Date.now() - 1380000) },
+        { id: '4', userName: 'Claire Bernard', module: 'Auto - Octobre', score: 82, completedAt: new Date(Date.now() - 2700000) },
+        { id: '5', userName: 'David Dubois', module: 'Tracteur - Octobre', score: 79, completedAt: new Date(Date.now() - 3600000) }
+    ],
+    moduleStats: [
+        { module: 'Auto', questionsCount: 85, avgScore: 76, completions: 67 },
+        { module: 'Loisir', questionsCount: 62, avgScore: 81, completions: 45 },
+        { module: 'VR', questionsCount: 54, avgScore: 73, completions: 32 },
+        { module: 'Tracteur', questionsCount: 39, avgScore: 79, completions: 28 }
+    ]
+};
+
+// État
+let globalStats = {
+    totalUsers: 0,
+    totalQuizzes: 0,
+    totalQuestions: 0,
+    totalResources: 0,
+    avgScore: 0,
+    activeUsersToday: 0,
+    activeUsersWeek: 0,
+    quizzesToday: 0,
+    quizzesWeek: 0
+};
+
+let chartProgress = null;
+let chartModules = null;
+let chartActivity = null;
+
+/**
+ * Initialiser le dashboard admin
+ */
+export async function initAdminDashboard() {
+    console.log('📊 Initialisation du dashboard admin avancé');
+    
+    // Afficher loading
+    showLoadingState();
+    
+    try {
+        // Charger toutes les statistiques
+        await Promise.all([
+            loadGlobalStats(),
+            loadTopUsers(),
+            loadRecentActivity(),
+            loadModuleStats()
+        ]);
+        
+        // Créer les graphiques
+        createCharts();
+        
+        // Initialiser les event listeners
+        initEventListeners();
+        
+        hideLoadingState();
+        toast.success('Dashboard chargé avec succès !', 3000);
+        
+    } catch (error) {
+        console.error('❌ Erreur chargement dashboard:', error);
+        hideLoadingState();
+        toast.error('Erreur lors du chargement du dashboard', 4000);
+    }
+}
+
+/**
+ * Charger les statistiques globales
+ */
+async function loadGlobalStats() {
+    try {
+        // ✅ Mode démo : Utiliser données simulées
+        if (isDemoMode()) {
+            console.log('📊 Mode démo : Chargement des statistiques simulées...');
+            globalStats = MOCK_DATA.stats;
+            renderGlobalStats();
+            console.log('✅ Statistiques simulées chargées:', globalStats);
+            return;
+        }
+        
+        console.log('📈 Chargement des statistiques globales...');
+        
+        // Compter les utilisateurs
+        const usersSnapshot = await getDocs(collection(db, 'users'));
+        globalStats.totalUsers = usersSnapshot.size;
+        
+        // Compter les quiz complétés
+        const quizzesSnapshot = await getDocs(collection(db, 'quizResults'));
+        globalStats.totalQuizzes = quizzesSnapshot.size;
+        
+        // Calculer le score moyen
+        let totalScore = 0;
+        quizzesSnapshot.forEach(doc => {
+            totalScore += doc.data().score || 0;
+        });
+        globalStats.avgScore = quizzesSnapshot.size > 0 
+            ? Math.round(totalScore / quizzesSnapshot.size) 
+            : 0;
+        
+        // Compter les questions
+        const questionsSnapshot = await getDocs(collection(db, 'questions'));
+        globalStats.totalQuestions = questionsSnapshot.size;
+        
+        // Compter les ressources
+        const resourcesSnapshot = await getDocs(collection(db, 'resources'));
+        globalStats.totalResources = resourcesSnapshot.size;
+        
+        // Utilisateurs actifs aujourd'hui
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        let activeToday = 0;
+        usersSnapshot.forEach(doc => {
+            const lastLogin = doc.data().lastLogin?.toDate();
+            if (lastLogin && lastLogin >= today) {
+                activeToday++;
+            }
+        });
+        globalStats.activeUsersToday = activeToday;
+        
+        // Utilisateurs actifs cette semaine
+        const weekAgo = new Date();
+        weekAgo.setDate(weekAgo.getDate() - 7);
+        
+        let activeWeek = 0;
+        usersSnapshot.forEach(doc => {
+            const lastLogin = doc.data().lastLogin?.toDate();
+            if (lastLogin && lastLogin >= weekAgo) {
+                activeWeek++;
+            }
+        });
+        globalStats.activeUsersWeek = activeWeek;
+        
+        // Quiz complétés aujourd'hui
+        let quizzesToday = 0;
+        quizzesSnapshot.forEach(doc => {
+            const completedAt = doc.data().completedAt?.toDate();
+            if (completedAt && completedAt >= today) {
+                quizzesToday++;
+            }
+        });
+        globalStats.quizzesToday = quizzesToday;
+        
+        // Quiz complétés cette semaine
+        let quizzesWeek = 0;
+        quizzesSnapshot.forEach(doc => {
+            const completedAt = doc.data().completedAt?.toDate();
+            if (completedAt && completedAt >= weekAgo) {
+                quizzesWeek++;
+            }
+        });
+        globalStats.quizzesWeek = quizzesWeek;
+        
+        // Afficher les statistiques
+        renderGlobalStats();
+        
+        console.log('✅ Statistiques globales chargées:', globalStats);
+        
+    } catch (error) {
+        console.error('❌ Erreur chargement stats globales:', error);
+        throw error;
+    }
+}
+
+/**
+ * Charger le top 10 des utilisateurs
+ */
+async function loadTopUsers() {
+    try {
+        // ✅ Mode démo : Utiliser données simulées
+        if (isDemoMode()) {
+            console.log('🏆 Mode démo : Chargement du top 10 simulé...');
+            renderTopUsers(MOCK_DATA.topUsers);
+            console.log('✅ Top 10 simulé chargé');
+            return;
+        }
+        
+        console.log('🏆 Chargement du top 10 utilisateurs...');
+        
+        // Récupérer tous les résultats groupés par utilisateur
+        const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+        const userScores = {};
+        
+        resultsSnapshot.forEach(doc => {
+            const data = doc.data();
+            const userId = data.userId;
+            const score = data.score || 0;
+            
+            if (!userScores[userId]) {
+                userScores[userId] = {
+                    userId: userId,
+                    userName: data.userName || 'Utilisateur',
+                    totalQuizzes: 0,
+                    totalScore: 0,
+                    avgScore: 0
+                };
+            }
+            
+            userScores[userId].totalQuizzes++;
+            userScores[userId].totalScore += score;
+        });
+        
+        // Calculer les moyennes
+        Object.values(userScores).forEach(user => {
+            user.avgScore = Math.round(user.totalScore / user.totalQuizzes);
+        });
+        
+        // Trier par score moyen décroissant
+        const topUsers = Object.values(userScores)
+            .sort((a, b) => b.avgScore - a.avgScore)
+            .slice(0, 10);
+        
+        // Afficher le top 10
+        renderTopUsers(topUsers);
+        
+        console.log('✅ Top 10 utilisateurs chargé:', topUsers);
+        
+    } catch (error) {
+        console.error('❌ Erreur chargement top users:', error);
+        throw error;
+    }
+}
+
+/**
+ * Charger l'activité récente
+ */
+async function loadRecentActivity() {
+    try {
+        // ✅ Mode démo : Utiliser données simulées
+        if (isDemoMode()) {
+            console.log('📅 Mode démo : Chargement de l\'activité simulée...');
+            renderRecentActivity(MOCK_DATA.recentActivity);
+            console.log('✅ Activité simulée chargée');
+            return;
+        }
+        
+        console.log('📅 Chargement de l\'activité récente...');
+        
+        // Récupérer les 10 derniers quiz complétés
+        const q = query(
+            collection(db, 'quizResults'),
+            orderBy('completedAt', 'desc'),
+            limit(10)
+        );
+        
+        const snapshot = await getDocs(q);
+        const activities = [];
+        
+        snapshot.forEach(doc => {
+            const data = doc.data();
+            activities.push({
+                id: doc.id,
+                userName: data.userName || 'Utilisateur',
+                module: data.module || 'Module',
+                score: data.score || 0,
+                completedAt: data.completedAt?.toDate() || new Date()
+            });
+        });
+        
+        // Afficher l'activité
+        renderRecentActivity(activities);
+        
+        console.log('✅ Activité récente chargée:', activities);
+        
+    } catch (error) {
+        console.error('❌ Erreur chargement activité:', error);
+        throw error;
+    }
+}
+
+/**
+ * Charger les statistiques par module
+ */
+async function loadModuleStats() {
+    try {
+        // ✅ Mode démo : Utiliser données simulées
+        if (isDemoMode()) {
+            console.log('📊 Mode démo : Chargement des stats modules simulées...');
+            // Transformer les données mockées au format attendu
+            const mockStats = {
+                'Auto': { count: 85, totalScore: 6460, avgScore: 76 },
+                'Loisir': { count: 62, totalScore: 5022, avgScore: 81 },
+                'VR': { count: 54, totalScore: 3942, avgScore: 73 },
+                'Tracteur': { count: 39, totalScore: 3081, avgScore: 79 }
+            };
+            console.log('✅ Stats modules simulées chargées:', mockStats);
+            return mockStats;
+        }
+        
+        console.log('📊 Chargement des stats par module...');
+        
+        const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+        const moduleStats = {};
+        
+        resultsSnapshot.forEach(doc => {
+            const data = doc.data();
+            const module = data.module || 'Autre';
+            
+            if (!moduleStats[module]) {
+                moduleStats[module] = {
+                    count: 0,
+                    totalScore: 0,
+                    avgScore: 0
+                };
+            }
+            
+            moduleStats[module].count++;
+            moduleStats[module].totalScore += data.score || 0;
+        });
+        
+        // Calculer les moyennes
+        Object.values(moduleStats).forEach(stat => {
+            stat.avgScore = Math.round(stat.totalScore / stat.count);
+        });
+        
+        console.log('✅ Stats par module chargées:', moduleStats);
+        return moduleStats;
+        
+    } catch (error) {
+        console.error('❌ Erreur chargement stats modules:', error);
+        throw error;
+    }
+}
+
+/**
+ * Afficher les statistiques globales
+ */
+function renderGlobalStats() {
+    const container = document.getElementById('global-stats-cards');
+    if (!container) return;
+    
+    container.innerHTML = `
+        <!-- Total Utilisateurs -->
+        <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-6 text-white shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/20 p-3 rounded-lg">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Total</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-1">${globalStats.totalUsers}</h3>
+            <p class="text-blue-100 text-sm">Utilisateurs inscrits</p>
+            <div class="mt-3 text-xs">
+                <span class="bg-white/20 px-2 py-1 rounded">📅 ${globalStats.activeUsersToday} aujourd'hui</span>
+                <span class="bg-white/20 px-2 py-1 rounded ml-2">📆 ${globalStats.activeUsersWeek} cette semaine</span>
+            </div>
+        </div>
+        
+        <!-- Total Quiz -->
+        <div class="bg-gradient-to-br from-green-500 to-green-700 rounded-xl p-6 text-white shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/20 p-3 rounded-lg">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Complétés</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-1">${globalStats.totalQuizzes}</h3>
+            <p class="text-green-100 text-sm">Quiz réalisés</p>
+            <div class="mt-3 text-xs">
+                <span class="bg-white/20 px-2 py-1 rounded">📅 ${globalStats.quizzesToday} aujourd'hui</span>
+                <span class="bg-white/20 px-2 py-1 rounded ml-2">📆 ${globalStats.quizzesWeek} cette semaine</span>
+            </div>
+        </div>
+        
+        <!-- Score Moyen -->
+        <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-6 text-white shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/20 p-3 rounded-lg">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Moyenne</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-1">${globalStats.avgScore}%</h3>
+            <p class="text-purple-100 text-sm">Score moyen global</p>
+            <div class="mt-3">
+                <div class="bg-white/20 rounded-full h-2">
+                    <div class="bg-white rounded-full h-2" style="width: ${globalStats.avgScore}%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Total Questions -->
+        <div class="bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 text-white shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/20 p-3 rounded-lg">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Base</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-1">${globalStats.totalQuestions}</h3>
+            <p class="text-orange-100 text-sm">Questions disponibles</p>
+            <div class="mt-3 text-xs">
+                <span class="bg-white/20 px-2 py-1 rounded">📚 ${globalStats.totalResources} ressources</span>
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Afficher le top 10 utilisateurs
+ */
+function renderTopUsers(users) {
+    const container = document.getElementById('top-users-list');
+    if (!container) return;
+    
+    if (users.length === 0) {
+        container.innerHTML = `
+            <div class="text-center py-8 text-slate-500">
+                <svg class="w-12 h-12 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <p class="font-medium">Aucun utilisateur</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = users.map((user, index) => {
+        const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`;
+        const bgColor = index === 0 ? 'bg-yellow-50 border-yellow-200' : 
+                       index === 1 ? 'bg-slate-50 border-slate-200' :
+                       index === 2 ? 'bg-orange-50 border-orange-200' : 
+                       'bg-white border-slate-200';
+        
+        return `
+            <div class="flex items-center justify-between p-4 rounded-lg border ${bgColor} hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl font-bold w-8">${medal}</span>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">${user.userName}</h4>
+                        <p class="text-sm text-slate-600">${user.totalQuizzes} quiz complétés</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="text-2xl font-bold text-indigo-600">${user.avgScore}%</div>
+                    <div class="text-xs text-slate-500">Score moyen</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+/**
+ * Afficher l'activité récente
+ */
+function renderRecentActivity(activities) {
+    const container = document.getElementById('recent-activity-list');
+    if (!container) return;
+    
+    if (activities.length === 0) {
+        container.innerHTML = `
+            <div class="text-center py-8 text-slate-500">
+                <svg class="w-12 h-12 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="font-medium">Aucune activité récente</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = activities.map(activity => {
+        const timeAgo = getTimeAgo(activity.completedAt);
+        const scoreColor = activity.score >= 80 ? 'text-green-600' : 
+                          activity.score >= 60 ? 'text-yellow-600' : 
+                          'text-red-600';
+        
+        return `
+            <div class="flex items-center justify-between p-3 hover:bg-slate-50 rounded-lg transition-colors">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                        <span class="text-lg font-bold text-indigo-600">${activity.userName.charAt(0).toUpperCase()}</span>
+                    </div>
+                    <div>
+                        <p class="font-medium text-slate-900">${activity.userName}</p>
+                        <p class="text-sm text-slate-600">${activity.module}</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="text-lg font-bold ${scoreColor}">${activity.score}%</div>
+                    <div class="text-xs text-slate-500">${timeAgo}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+/**
+ * Créer les graphiques Chart.js
+ */
+function createCharts() {
+    // Graphique de progression (Line Chart)
+    createProgressChart();
+    
+    // Graphique par modules (Doughnut Chart)
+    createModulesChart();
+    
+    // Graphique d'activité (Bar Chart)
+    createActivityChart();
+}
+
+/**
+ * Créer le graphique de progression
+ */
+async function createProgressChart() {
+    const canvas = document.getElementById('chart-progress');
+    if (!canvas) return;
+    
+    try {
+        let labels, counts, avgScores;
+        
+        // ✅ Mode démo : Utiliser données simulées
+        if (isDemoMode()) {
+            console.log('📈 Mode démo : Création graphique progression simulé...');
+            
+            // Générer 30 jours de données mockées
+            labels = [];
+            counts = [];
+            avgScores = [];
+            
+            for (let i = 29; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                labels.push(date.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }));
+                
+                // Données aléatoires mais cohérentes
+                counts.push(Math.floor(Math.random() * 15) + 5);
+                avgScores.push(Math.floor(Math.random() * 20) + 70);
+            }
+        } else {
+            // Mode Firebase normal
+            // Récupérer les quiz des 30 derniers jours
+            const thirtyDaysAgo = new Date();
+            thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+            
+            const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+            const dailyData = {};
+            
+            // Initialiser les 30 derniers jours
+            for (let i = 0; i < 30; i++) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                dailyData[dateStr] = { count: 0, totalScore: 0 };
+            }
+            
+            // Compter les quiz par jour
+            resultsSnapshot.forEach(doc => {
+                const data = doc.data();
+                const completedAt = data.completedAt?.toDate();
+                if (completedAt && completedAt >= thirtyDaysAgo) {
+                    const dateStr = completedAt.toISOString().split('T')[0];
+                    if (dailyData[dateStr]) {
+                        dailyData[dateStr].count++;
+                        dailyData[dateStr].totalScore += data.score || 0;
+                    }
+                }
+            });
+            
+            // Préparer les données pour le graphique
+            labels = Object.keys(dailyData).reverse().map(date => {
+                const d = new Date(date);
+                return d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
+            });
+            
+            counts = Object.values(dailyData).reverse().map(d => d.count);
+            avgScores = Object.values(dailyData).reverse().map(d => 
+                d.count > 0 ? Math.round(d.totalScore / d.count) : 0
+            );
+        }
+        
+        // Créer le graphique
+        if (chartProgress) chartProgress.destroy();
+        
+        chartProgress = new Chart(canvas, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Quiz complétés',
+                        data: counts,
+                        borderColor: 'rgb(99, 102, 241)',
+                        backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                        tension: 0.4,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Score moyen (%)',
+                        data: avgScores,
+                        borderColor: 'rgb(34, 197, 94)',
+                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        tension: 0.4,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Nombre de quiz'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Score moyen (%)'
+                        },
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Évolution sur 30 jours'
+                    }
+                }
+            }
+        });
+        
+    } catch (error) {
+        console.error('❌ Erreur création graphique progression:', error);
+    }
+}
+
+/**
+ * Créer le graphique par modules
+ */
+async function createModulesChart() {
+    const canvas = document.getElementById('chart-modules');
+    if (!canvas) return;
+    
+    try {
+        const moduleStats = await loadModuleStats();
+        
+        const labels = Object.keys(moduleStats);
+        const data = Object.values(moduleStats).map(s => s.count);
+        
+        const colors = [
+            'rgba(99, 102, 241, 0.8)',
+            'rgba(34, 197, 94, 0.8)',
+            'rgba(251, 146, 60, 0.8)',
+            'rgba(236, 72, 153, 0.8)',
+            'rgba(14, 165, 233, 0.8)'
+        ];
+        
+        if (chartModules) chartModules.destroy();
+        
+        chartModules = new Chart(canvas, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: data,
+                    backgroundColor: colors,
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Répartition par module'
+                    }
+                }
+            }
+        });
+        
+    } catch (error) {
+        console.error('❌ Erreur création graphique modules:', error);
+    }
+}
+
+/**
+ * Créer le graphique d'activité
+ */
+async function createActivityChart() {
+    const canvas = document.getElementById('chart-activity');
+    if (!canvas) return;
+    
+    try {
+        // Activité des 7 derniers jours
+        const labels = [];
+        const data = [];
+        
+        for (let i = 6; i >= 0; i--) {
+            const date = new Date();
+            date.setDate(date.getDate() - i);
+            labels.push(date.toLocaleDateString('fr-FR', { weekday: 'short' }));
+            data.push(Math.floor(Math.random() * 20) + 5); // Données de démo
+        }
+        
+        if (chartActivity) chartActivity.destroy();
+        
+        chartActivity = new Chart(canvas, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Utilisateurs actifs',
+                    data: data,
+                    backgroundColor: 'rgba(99, 102, 241, 0.8)',
+                    borderColor: 'rgb(99, 102, 241)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Activité des 7 derniers jours'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 5
+                        }
+                    }
+                }
+            }
+        });
+        
+    } catch (error) {
+        console.error('❌ Erreur création graphique activité:', error);
+    }
+}
+
+/**
+ * Exporter en PDF
+ */
+export async function exportToPDF() {
+    const loadingToast = toast.showLoadingToast('Génération du PDF...');
+    
+    try {
+        // Importer jsPDF dynamiquement
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        // Titre
+        doc.setFontSize(20);
+        doc.text('Dashboard Admin - QuizPro', 20, 20);
+        
+        // Date
+        doc.setFontSize(10);
+        doc.text(`Généré le ${new Date().toLocaleDateString('fr-FR')}`, 20, 30);
+        
+        // Statistiques globales
+        doc.setFontSize(14);
+        doc.text('Statistiques Globales', 20, 45);
+        
+        doc.setFontSize(10);
+        let y = 55;
+        doc.text(`Total Utilisateurs: ${globalStats.totalUsers}`, 25, y);
+        y += 7;
+        doc.text(`Total Quiz: ${globalStats.totalQuizzes}`, 25, y);
+        y += 7;
+        doc.text(`Score Moyen: ${globalStats.avgScore}%`, 25, y);
+        y += 7;
+        doc.text(`Questions: ${globalStats.totalQuestions}`, 25, y);
+        y += 7;
+        doc.text(`Ressources: ${globalStats.totalResources}`, 25, y);
+        
+        // Sauvegarder
+        doc.save(`dashboard-admin-${new Date().toISOString().split('T')[0]}.pdf`);
+        
+        toast.updateLoadingToast(loadingToast, 'PDF généré avec succès !', 'success');
+        
+    } catch (error) {
+        console.error('❌ Erreur export PDF:', error);
+        toast.updateLoadingToast(loadingToast, 'Erreur d\'export PDF', 'error');
+        toast.error('Erreur: Assurez-vous que jsPDF est chargé', 4000);
+    }
+}
+
+/**
+ * Exporter en CSV avancé
+ */
+export async function exportToAdvancedCSV() {
+    const loadingToast = toast.showLoadingToast('Génération du CSV...');
+    
+    try {
+        // Récupérer toutes les données
+        const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+        
+        const headers = ['Date', 'Utilisateur', 'Module', 'Mois', 'Année', 'Score (%)', 'Bonnes réponses', 'Total questions', 'Temps (s)'];
+        const rows = [];
+        
+        resultsSnapshot.forEach(doc => {
+            const data = doc.data();
+            const date = data.completedAt?.toDate().toLocaleString('fr-FR') || 'N/A';
+            
+            rows.push([
+                date,
+                data.userName || 'Inconnu',
+                data.module || 'N/A',
+                data.month || 'N/A',
+                data.year || 'N/A',
+                data.score || 0,
+                data.correctAnswers || 0,
+                data.totalQuestions || 0,
+                data.timeSpent || 0
+            ]);
+        });
+        
+        const csv = [headers, ...rows].map(row => row.join(',')).join('\n');
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `dashboard-complet-${new Date().toISOString().split('T')[0]}.csv`;
+        link.click();
+        
+        toast.updateLoadingToast(loadingToast, 'CSV généré avec succès !', 'success');
+        
+    } catch (error) {
+        console.error('❌ Erreur export CSV:', error);
+        toast.updateLoadingToast(loadingToast, 'Erreur d\'export CSV', 'error');
+        toast.error('Erreur lors de l\'export CSV', 4000);
+    }
+}
+
+/**
+ * Initialiser les event listeners
+ */
+function initEventListeners() {
+    // Boutons d'export
+    document.getElementById('export-pdf-btn')?.addEventListener('click', exportToPDF);
+    document.getElementById('export-csv-btn')?.addEventListener('click', exportToAdvancedCSV);
+    
+    // Filtres de période (à implémenter)
+    document.getElementById('period-filter')?.addEventListener('change', handlePeriodChange);
+    
+    // Rafraîchir
+    document.getElementById('refresh-dashboard-btn')?.addEventListener('click', () => {
+        toast.info('Actualisation du dashboard...', 2000);
+        initAdminDashboard();
+    });
+}
+
+/**
+ * Gérer le changement de période
+ */
+async function handlePeriodChange(e) {
+    const period = e.target.value;
+    toast.info(`Filtrage: ${period}`, 2000);
+    // TODO: Filtrer les données selon la période
+}
+
+/**
+ * Afficher l'état de chargement
+ */
+function showLoadingState() {
+    // Skeletons pour les stats
+    const statsContainer = document.getElementById('global-stats-cards');
+    if (statsContainer) {
+        showSkeleton('global-stats-cards', createStatsSkeleton(4));
+    }
+    
+    // Skeletons pour les top users
+    const topUsersContainer = document.getElementById('top-users-list');
+    if (topUsersContainer) {
+        showSkeleton('top-users-list', createListSkeleton(10));
+    }
+    
+    // Skeletons pour l'activité récente
+    const activityContainer = document.getElementById('recent-activity-list');
+    if (activityContainer) {
+        showSkeleton('recent-activity-list', createListSkeleton(8));
+    }
+    
+    // Skeletons pour les graphiques
+    const progressChartContainer = document.getElementById('progress-chart');
+    if (progressChartContainer) {
+        progressChartContainer.innerHTML = createChartSkeleton();
+    }
+    
+    const modulesChartContainer = document.getElementById('modules-chart');
+    if (modulesChartContainer) {
+        modulesChartContainer.innerHTML = createChartSkeleton();
+    }
+    
+    const activityChartContainer = document.getElementById('activity-chart');
+    if (activityChartContainer) {
+        activityChartContainer.innerHTML = createChartSkeleton();
+    }
+}
+
+/**
+ * Cacher l'état de chargement
+ */
+function hideLoadingState() {
+    // Les conteneurs sont mis à jour par les fonctions de rendu
+}
+
+/**
+ * Temps relatif
+ */
+function getTimeAgo(date) {
+    const now = new Date();
+    const diff = now - date;
+    const seconds = Math.floor(diff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days > 0) return `Il y a ${days}j`;
+    if (hours > 0) return `Il y a ${hours}h`;
+    if (minutes > 0) return `Il y a ${minutes}min`;
+    return 'À l\'instant';
+}

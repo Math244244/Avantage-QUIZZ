@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuizPro - Formation Continue pour Concessions">
+    <meta name="theme-color" content="#312e81">
+    <title>QuizPro - Tableau de Bord</title>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/css/output.css" as="style">
+    <link rel="preload" href="/js/auth.js" as="script">
+    <link rel="dns-prefetch" href="https://firestore.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googleapis.com">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/micro-interactions.css">
+    
+    <style>
+        /* Éviter le flash of unstyled content (FOUC) */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafd;
+            background-image: radial-gradient(#dbeafe 1px, transparent 1px);
+            background-size: 16px 16px;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+            /* Masquer pendant le chargement */
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.15s ease-in, visibility 0s 0.15s;
+        }
+        
+        body.loaded {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.15s ease-in;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+        
+        .view-hidden {
+            display: none;
+        }
+        
+        /* Animations de transition entre vues */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes animate-fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: animate-fade-in 0.6s ease-out;
+        }
+        
+        main > div:not(.view-hidden) {
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        /* Animations hover pour les cartes */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Animation pour les cercles de progression */
+        .progress-circle {
+            animation: drawCircle 1.5s ease-out forwards;
+        }
+        
+        @keyframes pulse-flame {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .animate-pulse {
+            animation: pulse-flame 2s ease-in-out infinite;
+        }
+        
+        /* Mode Focus */
+        body.focus-mode nav {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        body.focus-mode main {
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+        }
+        
+        /* Dark Mode */
+        .dark {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        
+        .dark body {
+            background-color: #1a202c;
+            background-image: radial-gradient(#2d3748 1px, transparent 1px);
+        }
+        
+        .dark .bg-white {
+            background-color: #2d3748 !important;
+        }
+        
+        .dark .text-slate-900 {
+            color: #e2e8f0 !important;
+        }
+        
+        .dark .text-slate-600 {
+            color: #a0aec0 !important;
+        }
+        
+        .dark .border-gray-200 {
+            border-color: #4a5568 !important;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="h-full flex">
+
+    <!-- BARRE LATÉRALE DE NAVIGATION -->
+    <nav class="w-64 bg-indigo-900 text-white flex flex-col h-full fixed" aria-label="Navigation principale" role="navigation">
+        <div class="px-6 py-5 border-b border-indigo-800">
+            <h1 class="text-2xl font-bold tracking-tight">QuizPro</h1>
+            <p class="text-sm text-indigo-300">Formation Continue</p>
+        </div>
+        <div class="flex-1 overflow-y-auto">
+            <ul class="py-4" role="menubar" aria-label="Menu de navigation">
+                <li class="px-6 py-3" role="none">
+                    <a href="#" id="nav-dashboard" class="nav-link flex items-center text-indigo-100 bg-indigo-800 rounded-lg px-4 py-2" role="menuitem" aria-current="page">
+                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                        Tableau de Bord
+                    </a>
+                </li>
+                <li class="px-6 py-3">
+                    <a href="#" id="nav-quiz" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors" role="menuitem">
+                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V7a2 2 0 00-2-2h-3.34a2 2 0 01-1.789-1.106l-.342-.685A2 2 0 0010.34 3H7a2 2 0 00-2 2v4" /></svg>
+                        Quiz
+                    </a>
+                </li>
+                <li class="px-6 py-3">
+                    <a href="/results.html" id="nav-results" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                        Mes Résultats
+                    </a>
+                </li>
+                <li class="px-6 py-3">
+                    <a href="/resources.html" id="nav-resources" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0l-2.47-2.47m2.47 2.47l2.47-2.47M5 12H4a1 1 0 00-1 1v4a1 1 0 001 1h1m14-5h1a1 1 0 011 1v4a1 1 0 01-1 1h-1M5 12a2 2 0 012-2h10a2 2 0 012 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2" /></svg>
+                        Ressources
+                    </a>
+                </li>
+                <li class="px-6 py-3 hidden" id="nav-admin-item">
+                    <a href="/admin.html" class="nav-link flex items-center text-yellow-300 hover:text-white hover:bg-yellow-600 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <span class="flex items-center gap-2">
+                            Gestion Admin
+                            <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded-full">🔰</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="px-6 py-4 border-t border-indigo-800">
+            <!-- Badge Admin (masqué par défaut) -->
+            <div id="admin-badge-nav" class="hidden mb-4 bg-yellow-500 text-white text-center py-2 px-4 rounded-lg font-semibold text-sm">
+                🔰 Administrateur
+            </div>
+            
+            <!-- Toggle Dark Mode -->
+            <button id="theme-toggle" data-theme-toggle class="w-full mb-4 px-4 py-2 bg-indigo-800 hover:bg-indigo-700 rounded-lg text-sm font-medium text-indigo-100 flex items-center justify-center gap-2 transition-colors">
+                <svg id="theme-icon-sun" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <svg id="theme-icon-moon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+                <span id="theme-text">Mode Sombre</span>
+            </button>
+            
+            <div id="user-profile" class="flex items-center">
+                <img id="user-avatar" class="h-10 w-10 rounded-full object-cover" src="https://placehold.co/100x100/667eea/e0e7ff?text=U" alt="Avatar">
+                <div class="ml-3">
+                    <p id="user-name" class="text-sm font-medium text-white">Chargement...</p>
+                    <button id="signout-link" class="text-xs text-indigo-300 hover:text-indigo-100">Déconnexion</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-1 ml-64 h-full overflow-y-auto">
+
+        <!-- VUE: CONNEXION -->
+        <div id="login-view" class="view-hidden">
+            <div class="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+                <div class="max-w-md w-full">
+                    <!-- Logo animé -->
+                    <div class="text-center mb-8 animate-fade-in">
+                        <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl shadow-xl mb-6 transform hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3">QuizPro</h1>
+                        <p class="text-xl text-slate-600 font-medium">Formation Continue</p>
+                    </div>
+                    
+                    <!-- Carte de connexion -->
+                    <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 border border-slate-200">
+                        <div class="space-y-6">
+                            <div>
+                                <h2 class="text-3xl font-bold text-slate-900 mb-2">Bienvenue 👋</h2>
+                                <p class="text-slate-600">Connectez-vous pour accéder à vos modules de formation et suivre votre progression.</p>
+                            </div>
+                            
+                            <button id="google-signin-btn" class="group w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1" aria-label="Se connecter avec Google">
+                                <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                </svg>
+                                <span class="text-lg">Connexion avec Google</span>
+                            </button>
+                            
+                            <div class="relative">
+                                <div class="absolute inset-0 flex items-center">
+                                    <div class="w-full border-t border-slate-300"></div>
+                                </div>
+                                <div class="relative flex justify-center text-sm">
+                                    <span class="px-4 bg-white text-slate-500 font-medium">ou</span>
+                                </div>
+                            </div>
+                            
+                            <button id="demo-mode-btn" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 border-2 border-slate-300 hover:border-slate-400" aria-label="Accéder en mode démo sans connexion">
+                                <span class="text-2xl">🎨</span>
+                                <span>Mode Démo</span>
+                            </button>
+                            
+                            <p class="text-xs text-center text-slate-400">Accès temporaire pour explorer l'interface</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer info -->
+                    <div class="mt-8 text-center">
+                        <p class="text-sm text-slate-500">
+                            <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                            Connexion sécurisée par Firebase
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VUE: TABLEAU DE BORD -->
+        <div id="dashboard-view" class="view-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <!-- Header amélioré -->
+                <header class="mb-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                        <div>
+                            <h2 class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">Tableau de Bord</h2>
+                            <p id="welcome-message" class="text-lg text-slate-600">Bienvenue. Voici votre parcours de formation 2025.</p>
+                        </div>
+                        <div id="streak-badge" class="group card-hover bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 text-white px-8 py-5 rounded-2xl shadow-xl flex items-center gap-4 cursor-pointer transform hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl animate-pulse group-hover:scale-125 transition-transform">🔥</div>
+                            <div>
+                                <div class="text-3xl font-bold" id="streak-count">10</div>
+                                <div class="text-sm font-medium opacity-90">Série active</div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Bloc d'action principal - Version modernisée -->
+                <div class="mb-12 relative overflow-hidden rounded-3xl shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 opacity-95"></div>
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJ6TTM0IDM0djJoMnYtMnptMC0ydjJoMnYtMnptMi0ydjJoMnYtMnptLTItMnYyaDJ2LTJ6bTItMnYyaDJ2LTJ6bS0yLTJ2Mmgydi0yem0yLTJ2Mmgydi0yeiIvPjwvZz48L2c+PC9zdmc+')] opacity-10"></div>
+                    <div class="relative px-8 py-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                        <div class="flex-1">
+                            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium mb-4">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Quiz mensuel disponible</span>
+                            </div>
+                            <h3 class="text-4xl font-bold text-white mb-3">Quiz de Novembre</h3>
+                            <p class="text-indigo-100 text-lg mb-6">Votre module mensuel est prêt. Relevez le défi et améliorez vos compétences !</p>
+                            <button class="start-quiz-button group bg-white text-indigo-700 font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-3 transform hover:-translate-y-1">
+                                <span class="text-lg">Démarrer le quiz</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[280px]">
+                            <p class="text-sm text-indigo-200 font-medium mb-3 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                                Progression Annuelle
+                            </p>
+                            <div class="bg-white/20 rounded-full h-4 mb-3 overflow-hidden">
+                                <div id="annual-progress-bar" class="bg-gradient-to-r from-green-400 to-emerald-400 h-4 rounded-full transition-all duration-500 shadow-lg" style="width: 0%"></div>
+                            </div>
+                            <p id="annual-progress-text" class="text-2xl font-bold text-white">0/12</p>
+                            <p class="text-xs text-indigo-200 mt-1">modules complétés cette année</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grille des modules mensuels avec titre -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        Vos Modules 2025
+                    </h3>
+                    <div id="modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <!-- Les cartes seront générées par JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VUE: SÉLECTION DES MODULES -->
+        <div id="module-selection-view" class="view-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- Header avec breadcrumb -->
+                <div class="mb-10">
+                    <button class="back-to-dashboard group inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium mb-4 transition-colors">
+                        <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Retour au tableau de bord
+                    </button>
+                    <h2 id="module-selection-title" class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3">Quiz de Novembre</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">Sélection des modules</h2>
+                    <p class="text-xl text-slate-600">Choisissez votre domaine d'expertise et démarrez votre évaluation</p>
+                </div>
+
+                <!-- Grille de sélection des 4 modules - Version premium -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="#" data-module="auto" class="module-card group relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-700 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                        <div class="relative flex flex-col items-center text-center h-full justify-between">
+                            <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                                <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.14a1.5 1.5 0 0 0-1.38-.83L6.48.31a1.5 1.5 0 0 0-1.38.83L.03 13.6a1.5 1.5 0 0 0 1.34 2.14l.84-.21a3 3 0 0 0 1.98-.94l.21-.21c.21-.21.46-.37.71-.52h.23c.31.2.66.33 1.04.33h7.94c.38 0 .73-.13 1.04-.33h.23c.25.15.5.31.71.52l.21.21a3 3 0 0 0 1.98.94l.84.21a1.5 1.5 0 0 0 1.34-2.14L18.9 1.14ZM6.6 9.38c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Zm10.8 0c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Z"/></svg>
+                            </div>
+                            <div class="flex-1 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Auto</h3>
+                                <p class="text-sm text-indigo-100 mb-4 opacity-90">AT-AVE-AVEX</p>
+                            </div>
+                            <div class="w-full pt-4 border-t border-white/20">
+                                <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                                    Commencer
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" data-module="loisir" class="module-card group relative overflow-hidden bg-gradient-to-br from-cyan-500 to-cyan-700 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                        <div class="relative flex flex-col items-center text-center h-full justify-between">
+                            <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                                <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="m21.35 6.6-3.8-3.8c-.34-.34-.8-.53-1.28-.53s-.94.19-1.28.53L12 5.8 9.03 2.83c-.34-.34-.8-.53-1.28-.53s-.94.19-1.28.53l-3.8 3.8c-.34.34-.53.8-.53 1.28s.19.94.53 1.28L5.8 12l-3.03 3.03c-.34.34-.53.8-.53 1.28s.19.94.53 1.28l3.8 3.8c.34.34.8.53 1.28.53s.94-.19 1.28-.53L12 18.2l2.97 2.97c.34.34.8.53 1.28.53s.94-.19 1.28-.53l3.8-3.8c.34.34.53-.8.53-1.28s-.19-.94-.53-1.28L18.2 12l3.15-3.12c.34-.34.53-.8.53-1.28s-.19-.94-.53-1.28ZM12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3Z"/></svg>
+                            </div>
+                            <div class="flex-1 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Loisir</h3>
+                                <p class="text-sm text-cyan-100 mb-4 opacity-90">VTT, Motoneige</p>
+                            </div>
+                            <div class="w-full pt-4 border-t border-white/20">
+                                <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                                    Commencer
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" data-module="vr" class="module-card group relative overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                        <div class="relative flex flex-col items-center text-center h-full justify-between">
+                            <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                                <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8.69V6c0-1.1-.9-2-2-2h-3.32c-.4-.68-1.04-1.23-1.79-1.58L12 2 8.11 2.42C7.36 2.77 6.72 3.32 6.32 4H3c-1.1 0-2 .9-2 2v2.69A5.006 5.006 0 0 0 0 13v5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h18v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-5a5.006 5.006 0 0 0-1-3.31Z"/></svg>
+                            </div>
+                            <div class="flex-1 text-white">
+                                <h3 class="text-2xl font-bold mb-2">VR</h3>
+                                <p class="text-sm text-orange-100 mb-4 opacity-90">Véhicules Récréatifs</p>
+                            </div>
+                            <div class="w-full pt-4 border-t border-white/20">
+                                <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                                    Commencer
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" data-module="tracteur" class="module-card group relative overflow-hidden bg-gradient-to-br from-green-500 to-green-700 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                        <div class="relative flex flex-col items-center text-center h-full justify-between">
+                            <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                                <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2ZM5 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2Z"/></svg>
+                            </div>
+                            <div class="flex-1 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Tracteur</h3>
+                                <p class="text-sm text-green-100 mb-4 opacity-90">Équipement Agricole</p>
+                            </div>
+                            <div class="w-full pt-4 border-t border-white/20">
+                                <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                                    Commencer
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Éviter le FOUC (Flash of Unstyled Content) -->
+    <script>
+        // Révéler la page même si l'événement load est retardé (ex: fonts externes bloquées en CI)
+        (function() {
+            let revealed = false;
+
+            function reveal() {
+                if (revealed) return;
+                revealed = true;
+                document.body.classList.add('loaded');
+            }
+
+            function cssReadyCheck() {
+                try {
+                    // Vérifier qu'une classe Tailwind de base est appliquée
+                    const probe = document.createElement('div');
+                    probe.style.position = 'absolute';
+                    probe.style.visibility = 'hidden';
+                    probe.className = 'w-6 h-6'; // 1.5rem = 24px si Tailwind est appliqué
+                    document.documentElement.appendChild(probe);
+                    const size = probe.getBoundingClientRect();
+                    probe.remove();
+                    return Math.round(size.width) === 24 && Math.round(size.height) === 24;
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            function waitForCSSThenReveal() {
+                if (revealed) return;
+                if (cssReadyCheck()) return reveal();
+
+                // Boucle rAF avec garde-fou temps max (~1.2s)
+                const start = performance.now();
+                const maxMs = 1200;
+                function tick() {
+                    if (revealed) return;
+                    if (cssReadyCheck() || performance.now() - start > maxMs) return reveal();
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            }
+
+            // Fallback ultime: forcer l'affichage après 1.5s
+            const forceTimer = setTimeout(reveal, 1500);
+            const clearForce = () => { if (forceTimer) clearTimeout(forceTimer); };
+
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                waitForCSSThenReveal();
+            } else {
+                document.addEventListener('DOMContentLoaded', waitForCSSThenReveal, { once: true });
+                window.addEventListener('load', waitForCSSThenReveal, { once: true });
+            }
+        })();
+    </script>
+
+    <!-- Firebase & App Scripts -->
+    <script type="module" src="js/toast.js"></script>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/index-init.js"></script>
+    <script type="module" src="js/quiz.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    
+    <!-- Service Worker: désactivé en localhost pour éviter le cache en dev -->
+    <script>
+        (function() {
+            if (!('serviceWorker' in navigator)) return;
+
+            const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname) || location.hostname.endsWith('.local');
+
+            if (isLocal) {
+                // Unregister tous les SW en dev pour éviter les caches obsolètes
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                    registrations.forEach(reg => reg.unregister());
+                    console.log('🧹 Service Workers désenregistrés en dev');
+                });
+            } else {
+                // Production: enregistrer le SW
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then(() => console.log('✅ Service Worker enregistré'))
+                        .catch(err => console.log('❌ Erreur SW:', err));
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>

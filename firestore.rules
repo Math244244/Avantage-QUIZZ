@@ -1,0 +1,127 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Collection: users
+    match /users/{userId} {
+      // Lecture: l'utilisateur peut lire son propre profil, les admins peuvent tout lire
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      
+      // Écriture: l'utilisateur peut mettre à jour son propre profil (sauf le rôle)
+      // Les admins peuvent tout créer/modifier
+      allow create, update: if isOwner(userId) || isAdmin();
+      
+      // Empêcher les users de modifier leur propre rôle
+      allow update: if isOwner(userId) && 
+                       (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['role'])) ||
+                       isAdmin();
+      
+      // Suppression: seulement les admins
+      allow delete: if isAdmin();
+    }
+    
+    // Collection: questions (SANS champ difficulty)
+    match /questions/{questionId} {
+      // Lecture: tous les utilisateurs authentifiés
+      allow get: if isAuthenticated();
+      allow list: if isAuthenticated();
+      
+      // Écriture: seulement les admins
+      allow create, update, delete: if isAdmin();
+      
+      // Validation des données lors de la création/modification
+      allow create, update: if isAdmin() &&
+        request.resource.data.question is string &&
+        request.resource.data.question.size() >= 10 &&
+        request.resource.data.options is list &&
+        request.resource.data.options.size() == 4 &&
+        request.resource.data.correctAnswer is int &&
+        request.resource.data.correctAnswer >= 0 &&
+        request.resource.data.correctAnswer <= 3 &&
+        request.resource.data.explanation is string &&
+        request.resource.data.explanation.size() >= 20 &&
+        request.resource.data.module in ['auto', 'loisir', 'vr', 'tracteur'] &&
+        request.resource.data.month is int &&
+        request.resource.data.month >= 1 &&
+        request.resource.data.month <= 12;
+    }
+    
+    // Collection: quizResults
+    match /quizResults/{resultId} {
+      // Lecture: l'utilisateur peut lire ses propres résultats, les admins peuvent tout lire
+      allow get: if isOwner(resource.data.userId) || isAdmin();
+      allow list: if isAdmin();
+      
+      // Écriture: l'utilisateur peut créer ses propres résultats
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      
+      // Modification/Suppression: seulement les admins
+      allow update, delete: if isAdmin();
+    }
+    
+    // Collection: monthlyProgress
+    match /monthlyProgress/{progressId} {
+      // Lecture: l'utilisateur peut lire sa propre progression, les admins peuvent tout lire
+      allow get: if isAuthenticated();
+      allow list: if isAuthenticated();
+      
+      // Écriture: l'utilisateur peut créer/modifier sa propre progression
+      allow create, update: if isAuthenticated() && 
+                               request.resource.data.userId == request.auth.uid;
+      
+      // Suppression: seulement les admins
+      allow delete: if isAdmin();
+    }
+    
+    // Collection: resources
+    match /resources/{resourceId} {
+      // Lecture: tous les utilisateurs authentifiés peuvent lire les ressources
+      allow get: if isAuthenticated();
+      allow list: if isAuthenticated();
+      
+      // Écriture: seulement les admins
+      allow create, update, delete: if isAdmin();
+    }
+    
+    // Collection: importLogs (logs d'import JSON)
+    match /importLogs/{logId} {
+      // Lecture: seulement les admins
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      
+      // Écriture: seulement les admins
+      allow create: if isAdmin();
+      
+      // Modification/Suppression: interdite (logs immuables)
+      allow update, delete: if false;
+    }
+    
+    // Collection: auditLogs (logs d'actions admin)
+    match /auditLogs/{logId} {
+      // Lecture: seulement les admins
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      
+      // Écriture: seulement les admins
+      allow create: if isAdmin();
+      
+      // Modification/Suppression: interdite (logs immuables)
+      allow update, delete: if false;
+    }
+  }
+}

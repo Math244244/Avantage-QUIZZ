@@ -1,0 +1,264 @@
+/* Skeleton Loaders - Styles et animations shimmer */
+
+/* Animation shimmer effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Appliquer l'effet shimmer aux éléments skeleton */
+.skeleton-text,
+.skeleton-circle,
+.skeleton-image,
+.skeleton-input,
+.skeleton-button,
+.skeleton-badge,
+.skeleton-icon,
+.skeleton-avatar,
+.skeleton-bar {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #e0e0e0 20%,
+        #f0f0f0 40%,
+        #f0f0f0 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+    border-radius: 4px;
+}
+
+/* Variations de border-radius */
+.skeleton-circle,
+.skeleton-avatar {
+    border-radius: 50%;
+}
+
+.skeleton-badge {
+    border-radius: 9999px; /* Tailwind's rounded-full */
+}
+
+.skeleton-button {
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+}
+
+/* Mode sombre - ajuster les couleurs shimmer */
+@media (prefers-color-scheme: dark) {
+    .skeleton-text,
+    .skeleton-circle,
+    .skeleton-image,
+    .skeleton-input,
+    .skeleton-button,
+    .skeleton-badge,
+    .skeleton-icon,
+    .skeleton-avatar,
+    .skeleton-bar {
+        background: linear-gradient(
+            90deg,
+            #2d3748 0%,
+            #4a5568 20%,
+            #2d3748 40%,
+            #2d3748 100%
+        );
+        background-size: 1000px 100%;
+    }
+}
+
+/* Animation pulse (alternative au shimmer) */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Classes Tailwind animate-pulse déjà incluses, mais on peut personnaliser */
+.skeleton-card,
+.skeleton-list-item,
+.skeleton-question,
+.skeleton-user,
+.skeleton-result,
+.skeleton-resource,
+.skeleton-stats {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Transition pour hide/show */
+.skeleton-fade-out {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.skeleton-fade-in {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+/* Responsive - Ajustements mobiles */
+@media (max-width: 640px) {
+    .skeleton-card,
+    .skeleton-question,
+    .skeleton-user,
+    .skeleton-result,
+    .skeleton-resource {
+        padding: 1rem;
+    }
+    
+    .skeleton-text {
+        min-height: 1rem;
+    }
+}
+
+/* Accessibilité - Indiquer que c'est un état de chargement */
+[class*="skeleton-"] {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Option: Ajouter un label accessible */
+[class*="skeleton-"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Effet de gradient plus prononcé pour meilleure visibilité */
+.skeleton-enhanced {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #d0d0d0 20%,
+        #f0f0f0 40%,
+        #f0f0f0 100%
+    ) !important;
+}
+
+/* Skeleton pour les barres de graphique */
+.skeleton-bar {
+    display: inline-block;
+    animation: skeleton-bar-grow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes skeleton-bar-grow {
+    0% {
+        transform: scaleY(0.8);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* Container pour skeleton fullpage */
+.skeleton-container {
+    min-height: 100vh;
+    background-color: #f8fafd;
+}
+
+/* Amélioration de performance - Utiliser transform au lieu de left */
+@keyframes shimmer-optimized {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Option: Shimmer avec pseudo-élément (plus performant) */
+.skeleton-optimized {
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.skeleton-optimized::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        transparent 100%
+    );
+    animation: shimmer-optimized 2s infinite;
+}
+
+/* Styles pour états vides (bonus) */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: #64748b;
+}
+
+.empty-state-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #334155;
+}
+
+.empty-state-description {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* Animation d'apparition du contenu réel */
+@keyframes content-appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-loaded {
+    animation: content-appear 400ms ease-out;
+}
+
+/* Préférence de mouvement réduit (accessibilité) */
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-text,
+    .skeleton-circle,
+    .skeleton-image,
+    .skeleton-input,
+    .skeleton-button,
+    .skeleton-badge,
+    .skeleton-icon,
+    .skeleton-avatar,
+    .skeleton-bar,
+    [class*="skeleton-"] {
+        animation: none;
+        background: #f0f0f0;
+    }
+    
+    .content-loaded {
+        animation: none;
+    }
+}

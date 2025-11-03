@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Quelle est la durée standard d'une garantie prolongée automobile?",
+    "options": ["1 an", "2 ans", "3 ans", "5 ans"],
+    "correctAnswer": 2,
+    "explanation": "La garantie prolongée standard est de 3 ans ou 60 000 km, selon la première éventualité.",
+    "module": "auto",
+    "month": "novembre",
+    "year": 2025
+  },
+  {
+    "question": "Quel est le kilométrage maximum couvert par une garantie de base?",
+    "options": ["20 000 km", "40 000 km", "60 000 km", "100 000 km"],
+    "correctAnswer": 2,
+    "explanation": "La garantie de base couvre jusqu'à 60 000 km.",
+    "module": "auto",
+    "month": "novembre",
+    "year": 2025
+  },
+  {
+    "question": "Quelle inspection est obligatoire avant la vente d'un VTT d'occasion?",
+    "options": ["Inspection visuelle", "Inspection mécanique complète", "Test routier", "Aucune"],
+    "correctAnswer": 1,
+    "explanation": "Une inspection mécanique complète est obligatoire pour tout VTT d'occasion.",
+    "module": "loisir",
+    "month": "novembre",
+    "year": 2025
+  },
+  {
+    "question": "Quelle est la capacité de remorquage minimale d'un véhicule pour tracter un VR de 5000 lb?",
+    "options": ["5000 lb", "6000 lb", "7500 lb", "10000 lb"],
+    "correctAnswer": 2,
+    "explanation": "Il faut une capacité d'au moins 7500 lb pour remorquer un VR de 5000 lb (marge de sécurité de 50%).",
+    "module": "vr",
+    "month": "novembre",
+    "year": 2025
+  },
+  {
+    "question": "À quelle fréquence faut-il vidanger l'huile d'un tracteur agricole?",
+    "options": ["Tous les 25 heures", "Tous les 50 heures", "Tous les 100 heures", "Tous les 200 heures"],
+    "correctAnswer": 1,
+    "explanation": "La vidange d'huile est recommandée tous les 50 heures d'utilisation.",
+    "module": "tracteur",
+    "month": "novembre",
+    "year": 2025
+  }
+]

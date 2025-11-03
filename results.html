@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Résultats - QuizPro 2025</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/micro-interactions.css">
+    <style>
+        .view-hidden { display: none; }
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="h-full flex bg-gradient-to-br from-slate-50 to-indigo-50">
+    
+    <!-- BARRE LATÉRALE DE NAVIGATION -->
+    <nav class="w-64 bg-indigo-900 text-white flex flex-col h-screen fixed" aria-label="Navigation principale">
+        <div class="px-6 py-5 border-b border-indigo-800">
+            <h1 class="text-2xl font-bold tracking-tight">QuizPro</h1>
+            <p class="text-sm text-indigo-300">Formation Continue</p>
+        </div>
+        <div class="flex-1 overflow-y-auto">
+            <ul class="py-4">
+                <li class="px-6 py-3">
+                    <a href="/index.html" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                        Tableau de Bord
+                    </a>
+                </li>
+                <li class="px-6 py-3">
+                    <a href="/index.html#quiz" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V7a2 2 0 00-2-2h-3.34a2 2 0 01-1.789-1.106l-.342-.685A2 2 0 0010.34 3H7a2 2 0 00-2 2v4"/></svg>
+                        Quiz
+                    </a>
+                </li>
+                <li class="px-6 py-3">
+                    <a href="/results.html" class="nav-link flex items-center text-indigo-100 bg-indigo-800 rounded-lg px-4 py-2">
+                        <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                        Mes Résultats
+                    </a>
+                </li>
+                <li class="px-6 py-3">
+                    <a href="/resources.html" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0l-2.47-2.47m2.47 2.47l2.47-2.47M5 12H4a1 1 0 00-1 1v4a1 1 0 001 1h1m14-5h1a1 1 0 011 1v4a1 1 0 01-1 1h-1M5 12a2 2 0 012-2h10a2 2 0 012 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
+                        Ressources
+                    </a>
+                </li>
+                <li class="px-6 py-3 hidden" id="nav-admin-item">
+                    <a href="/admin.html" class="nav-link flex items-center text-yellow-300 hover:text-white hover:bg-yellow-600 rounded-lg px-4 py-2 transition-colors">
+                        <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span class="flex items-center gap-2">
+                            Gestion Admin
+                            <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded-full">🔰</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="px-6 py-4 border-t border-indigo-800">
+            <div id="admin-badge-nav" class="hidden mb-4 bg-yellow-500 text-white text-center py-2 px-4 rounded-lg font-semibold text-sm">
+                🔰 Administrateur
+            </div>
+            <button id="theme-toggle" class="w-full mb-4 px-4 py-2 bg-indigo-800 hover:bg-indigo-700 rounded-lg text-sm font-medium flex items-center justify-center gap-2 transition-colors">
+                <span>Mode Sombre</span>
+            </button>
+            <div id="user-profile" class="flex items-center">
+                <img id="user-avatar" class="h-10 w-10 rounded-full" src="https://placehold.co/100x100/667eea/e0e7ff?text=U" alt="Avatar">
+                <div class="ml-3">
+                    <p id="user-display-name" class="text-sm font-medium text-white">Chargement...</p>
+                    <button id="signout-link" class="text-xs text-indigo-300 hover:text-indigo-100">Déconnexion</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-1 ml-64 min-h-screen overflow-y-auto">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+        
+        <!-- En-tête -->
+        <div class="mb-8 fade-in">
+            <h1 class="text-4xl font-bold text-slate-900 mb-2">📊 Mes Résultats</h1>
+            <p class="text-slate-600 text-lg">Suivez votre progression et analysez vos performances</p>
+        </div>
+
+        <!-- Statistiques globales -->
+        <div id="global-stats" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <!-- Sera rempli dynamiquement -->
+        </div>
+
+        <!-- Filtres -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8 fade-in">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">🔍 Filtres</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Module</label>
+                    <select id="filter-module" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        <option value="">Tous les modules</option>
+                        <option value="auto">AT-AVE-AVEX</option>
+                        <option value="loisir">VTT, Motoneige, etc.</option>
+                        <option value="vr">Véhicules Récréatifs</option>
+                        <option value="tracteur">Équipement Agricole</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Période</label>
+                    <select id="filter-period" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        <option value="all">Toute la période</option>
+                        <option value="week">7 derniers jours</option>
+                        <option value="month">30 derniers jours</option>
+                        <option value="year">Cette année</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Tri</label>
+                    <select id="filter-sort" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        <option value="date-desc">Plus récent</option>
+                        <option value="date-asc">Plus ancien</option>
+                        <option value="score-desc">Meilleur score</option>
+                        <option value="score-asc">Score le plus bas</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button id="reset-filters-btn" class="w-full px-4 py-2 border-2 border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
+                        Réinitialiser
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphiques -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Progression -->
+            <div class="bg-white rounded-xl shadow-md p-6 fade-in">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">📈 Évolution des scores</h2>
+                <canvas id="progress-chart" height="250"></canvas>
+            </div>
+            
+            <!-- Répartition par module -->
+            <div class="bg-white rounded-xl shadow-md p-6 fade-in">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">📊 Répartition par module</h2>
+                <canvas id="module-chart" height="250"></canvas>
+            </div>
+        </div>
+
+        <!-- Historique des quiz -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden fade-in">
+            <div class="px-6 py-4 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white">
+                <h2 class="text-2xl font-bold">📋 Historique complet</h2>
+            </div>
+            
+            <div id="results-loading" class="p-12 text-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-4 border-indigo-600 mx-auto mb-4"></div>
+                <p class="text-slate-600">Chargement de vos résultats...</p>
+            </div>
+
+            <div id="results-container" class="hidden">
+                <div id="results-list" class="divide-y divide-gray-200">
+                    <!-- Sera rempli dynamiquement -->
+                </div>
+                
+                <!-- Pagination -->
+                <div id="pagination" class="px-6 py-4 bg-slate-50 border-t border-gray-200 flex items-center justify-between">
+                    <button id="prev-page-btn" class="px-4 py-2 border border-gray-300 rounded-lg text-slate-700 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        Précédent
+                    </button>
+                    <span id="page-info" class="text-sm text-slate-600">Page 1 sur 1</span>
+                    <button id="next-page-btn" class="px-4 py-2 border border-gray-300 rounded-lg text-slate-700 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        Suivant
+                    </button>
+                </div>
+            </div>
+
+            <div id="no-results" class="hidden p-12 text-center">
+                <svg class="w-20 h-20 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <h3 class="text-xl font-bold text-slate-700 mb-2">Aucun résultat</h3>
+                <p class="text-slate-500 mb-4">Vous n'avez pas encore complété de quiz</p>
+                <a href="dashboard.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                    Commencer un quiz
+                </a>
+            </div>
+        </div>
+
+        <!-- Bouton export -->
+        <div class="mt-8 text-center">
+            <button id="export-results-btn" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all inline-flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Exporter en CSV
+            </button>
+        </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="/js/toast.js"></script>
+    <script type="module" src="/js/results.js"></script>
+</body>
+</html>
