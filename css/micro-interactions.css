@@ -1,5 +1,67 @@
 /* Micro-interactions - Animations et feedback visuels */
 
+/* === ANIMATIONS KEYFRAMES === */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes ping-slow {
+    75%, 100% { 
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* === CLASSES D'ANIMATION === */
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+.shadow-3xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-glow-purple {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+.shadow-glow-red {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+}
+
 /* === BOUTONS === */
 
 /* Bouton primaire avec élévation */
