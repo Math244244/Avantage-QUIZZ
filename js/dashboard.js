@@ -534,29 +534,35 @@ function attachNavigationListeners() {
 
     // Navigation - Mes Résultats (demander confirmation si un quiz est en cours)
     document.getElementById('nav-results')?.addEventListener('click', (e) => {
+        e.preventDefault(); // TOUJOURS empêcher la navigation par défaut
         const target = e.currentTarget;
         if (window.__QUIZ_ACTIVE) {
-            e.preventDefault();
             const ok = confirm('Un quiz est en cours. Voulez-vous vraiment quitter ?');
             if (ok && target && target.href) {
                 window.location.href = target.href;
             }
         } else {
-            console.log('Navigation vers Résultats...');
+            // Navigation normale vers la page des résultats
+            if (target && target.href) {
+                window.location.href = target.href;
+            }
         }
     });
 
     // Navigation - Ressources (demander confirmation si un quiz est en cours)
     document.getElementById('nav-resources')?.addEventListener('click', (e) => {
+        e.preventDefault(); // TOUJOURS empêcher la navigation par défaut
         const target = e.currentTarget;
         if (window.__QUIZ_ACTIVE) {
-            e.preventDefault();
             const ok = confirm('Un quiz est en cours. Voulez-vous vraiment quitter ?');
             if (ok && target && target.href) {
                 window.location.href = target.href;
             }
         } else {
-            console.log('Navigation vers Ressources...');
+            // Navigation normale vers la page des ressources
+            if (target && target.href) {
+                window.location.href = target.href;
+            }
         }
     });
     
