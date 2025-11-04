@@ -504,45 +504,26 @@ function createActivityHeatmap() {
     container.innerHTML = heatmapHTML;
 }
 
-function attachDashboardEvents() {
-    // Boutons "Démarrer le quiz"
-    document.querySelectorAll('.start-quiz-button').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const activeMonth = monthsData[currentMonthIndex].name;
-            elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
-            showView('moduleSelection');
-        });
-    });
+// Variable pour empêcher l'attachement multiple des listeners
+let navigationListenersAttached = false;
 
-    // Boutons "Retour au dashboard"
-    document.querySelectorAll('.back-to-dashboard').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            showView('dashboard');
-            updateActiveNavLink('nav-dashboard');
-        });
-    });
+function attachNavigationListeners() {
+    // Éviter d'attacher les listeners plusieurs fois
+    if (navigationListenersAttached) {
+        return;
+    }
+    navigationListenersAttached = true;
 
-    // Cartes de sélection de module
-    document.querySelectorAll('.module-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            e.preventDefault();
-            const module = card.getAttribute('data-module');
-            console.log('🎯 Module sélectionné:', module);
-            // Lancer l'interface du quiz
-            startQuiz(module);
-        });
-    });
+    console.log('🔧 Attachement des listeners de navigation (une seule fois)...');
 
-    // Navigation
+    // Navigation - Dashboard
     document.getElementById('nav-dashboard')?.addEventListener('click', (e) => {
         e.preventDefault();
         showView('dashboard');
         updateActiveNavLink('nav-dashboard');
     });
 
-    // Navigation vers Quiz (ouvre la sélection de modules)
+    // Navigation - Quiz (ouvre la sélection de modules)
     document.getElementById('nav-quiz')?.addEventListener('click', (e) => {
         e.preventDefault();
         const activeMonth = monthsData[currentMonthIndex].name;
@@ -551,7 +532,7 @@ function attachDashboardEvents() {
         updateActiveNavLink('nav-quiz');
     });
 
-    // Navigation vers Mes Résultats (demander confirmation si un quiz est en cours)
+    // Navigation - Mes Résultats (demander confirmation si un quiz est en cours)
     document.getElementById('nav-results')?.addEventListener('click', (e) => {
         const target = e.currentTarget;
         if (window.__QUIZ_ACTIVE) {
@@ -565,7 +546,7 @@ function attachDashboardEvents() {
         }
     });
 
-    // Navigation vers Ressources (demander confirmation si un quiz est en cours)
+    // Navigation - Ressources (demander confirmation si un quiz est en cours)
     document.getElementById('nav-resources')?.addEventListener('click', (e) => {
         const target = e.currentTarget;
         if (window.__QUIZ_ACTIVE) {
@@ -577,6 +558,62 @@ function attachDashboardEvents() {
         } else {
             console.log('Navigation vers Ressources...');
         }
+    });
+    
+    console.log('✅ Listeners de navigation attachés');
+}
+
+function attachDashboardEvents() {
+    // Supprimer tous les anciens listeners en clonant les éléments
+    // (alternative: utiliser des event listeners nommés qu'on peut remove)
+    
+    // Boutons "Démarrer le quiz" - Délégation d'événements
+    const oldStartButtons = document.querySelectorAll('.start-quiz-button');
+    oldStartButtons.forEach(btn => {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode?.replaceChild(newBtn, btn);
+    });
+    
+    document.querySelectorAll('.start-quiz-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const activeMonth = monthsData[currentMonthIndex].name;
+            elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
+            showView('moduleSelection');
+            updateActiveNavLink('nav-quiz');
+        });
+    });
+
+    // Boutons "Retour au dashboard"
+    const oldBackButtons = document.querySelectorAll('.back-to-dashboard');
+    oldBackButtons.forEach(btn => {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode?.replaceChild(newBtn, btn);
+    });
+    
+    document.querySelectorAll('.back-to-dashboard').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            showView('dashboard');
+            updateActiveNavLink('nav-dashboard');
+        });
+    });
+
+    // Cartes de sélection de module
+    const oldModuleCards = document.querySelectorAll('.module-card');
+    oldModuleCards.forEach(card => {
+        const newCard = card.cloneNode(true);
+        card.parentNode?.replaceChild(newCard, card);
+    });
+    
+    document.querySelectorAll('.module-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const module = card.getAttribute('data-module');
+            console.log('🎯 Module sélectionné:', module);
+            // Lancer l'interface du quiz
+            startQuiz(module);
+        });
     });
 }
 
@@ -632,6 +669,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialiser le thème
     initializeTheme();
+    
+    // Attacher les listeners de navigation UNE SEULE FOIS
+    attachNavigationListeners();
     
     // Bouton toggle thème
     document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
