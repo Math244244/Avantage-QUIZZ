@@ -1,7 +1,7 @@
 // Page Ressources - Gestion de la bibliothèque de documents
 import { db } from './firebase-config.js';
 import { collection, query, orderBy, getDocs, addDoc, deleteDoc, doc, where } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
-import { getCurrentUser, onAuthChange, logout, isDemoMode, getDemoUser } from './auth.js';
+import { getCurrentUser, onAuthChange, signOutUser, isDemoMode, getDemoUser } from './auth.js';
 import { toast } from './toast.js';
 import {
     createResourceSkeleton,
@@ -354,8 +354,8 @@ function showNoResources() {
 // Déconnexion
 async function handleLogout() {
     try {
-        await logout();
-        window.location.href = '/login.html';
+        await signOutUser();
+        window.location.href = '/';
     } catch (error) {
         console.error('Erreur lors de la déconnexion:', error);
     }

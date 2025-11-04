@@ -1,7 +1,7 @@
 // Page Mes Résultats - Gestion complète des résultats et statistiques
 import { db } from './firebase-config.js';
 import { collection, query, where, orderBy, getDocs } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
-import { getCurrentUser, onAuthChange, logout, isDemoMode, getDemoUser } from './auth.js';
+import { getCurrentUser, onAuthChange, signOutUser, isDemoMode, getDemoUser } from './auth.js';
 import { toast } from './toast.js';
 import {
     createResultSkeleton,
@@ -600,8 +600,8 @@ function formatTime(seconds) {
 // Déconnexion
 async function handleLogout() {
     try {
-        await logout();
-        window.location.href = '/login.html';
+        await signOutUser();
+        window.location.href = '/';
     } catch (error) {
         console.error('Erreur lors de la déconnexion:', error);
     }
