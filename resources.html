@@ -108,11 +108,11 @@
                 <div class="flex-1">
                     <label class="block text-sm font-medium text-slate-700 mb-2">🔍 Recherche</label>
                     <input type="text" id="search-input" placeholder="Rechercher un document..." 
-                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ap-red-primary focus:border-transparent transition-all">
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-2">Catégorie</label>
-                    <select id="filter-category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    <select id="filter-category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ap-red-primary focus:border-transparent transition-all">
                         <option value="">Toutes les catégories</option>
                         <option value="guides">Guides</option>
                         <option value="manuels">Manuels</option>
@@ -123,7 +123,7 @@
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-2">Module</label>
-                    <select id="filter-module" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    <select id="filter-module" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ap-red-primary focus:border-transparent transition-all">
                         <option value="">Tous les modules</option>
                         <option value="auto">AT-AVE-AVEX</option>
                         <option value="loisir">VTT, Motoneige, etc.</option>
@@ -139,9 +139,9 @@
 
         <!-- Bouton upload (admin uniquement) -->
         <div id="admin-section" class="hidden mb-8">
-            <button id="upload-btn" class="bg-gradient-to-r from-indigo-600 to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all inline-flex items-center gap-2">
+            <button id="upload-btn" class="bg-ap-gradient-primary text-white px-6 py-3 rounded-xl font-semibold hover:shadow-ap-lg transform hover:-translate-y-1 transition-all inline-flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 1 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
                 </svg>
                 Ajouter un document
             </button>
