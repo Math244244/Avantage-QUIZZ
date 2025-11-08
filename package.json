@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  "build": "npm run build:css && vite build && node scripts/postbuild.mjs",
+    "build": "npm run build:css && vite build && node scripts/postbuild.mjs",
     "build:css": "tailwindcss -i ./css/input.css -o ./css/output.css --minify",
     "preview": "vite preview",
     "deploy": "npm run build && firebase deploy",
@@ -19,7 +19,15 @@
     "test:e2e:debug": "playwright test --debug",
     "test:e2e:report": "playwright show-report",
     "lighthouse": "lhci autorun",
-    "lighthouse:report": "start lighthouse-reports/index.html"
+    "lighthouse:report": "start lighthouse-reports/index.html",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
   },
   "keywords": [
     "firebase",
@@ -38,10 +46,15 @@
     "@testing-library/dom": "^10.4.1",
     "@vitest/coverage-v8": "^4.0.6",
     "@vitest/ui": "^4.0.6",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^9.1.2",
     "happy-dom": "^20.0.10",
     "http-server": "^14.1.1",
+    "husky": "^9.1.7",
     "jsdom": "^27.1.0",
     "lighthouse": "^12.8.2",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.6.2",
     "tailwindcss": "^3.3.5",
     "vite": "^7.1.12",
     "vitest": "^4.0.6"

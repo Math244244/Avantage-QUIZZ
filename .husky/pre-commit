@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "[Husky] Pré-commit: lint-staged + format check"
+
+npx lint-staged || { echo "[Husky] lint-staged a échoué"; exit 1; }
+
+# Optionnel: tests rapides (désactivés pour vitesse)
+# npm run test:run --silent || { echo "[Husky] tests unitaires échoués"; exit 1; }
+
+echo "[Husky] OK"
