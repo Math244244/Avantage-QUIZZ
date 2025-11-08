@@ -1,0 +1,41 @@
+version = 1
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
+name = "python"
+
+  [analyzers.meta]
+  runtime_version = "3.x.x"
+
+[[analyzers]]
+name = "csharp"
+
+[[analyzers]]
+name = "cxx"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = [
+    "react",
+    "ember",
+    "vue",
+    "angularjs",
+    "meteor"
+  ]
+  environment = [
+    "nodejs",
+    "jasmine",
+    "mocha",
+    "vitest",
+    "cypress",
+    "jest",
+    "mongo",
+    "jquery"
+  ]
