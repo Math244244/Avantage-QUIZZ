@@ -109,27 +109,19 @@ function createProgressRing(percentage) {
 }
 
 function createCompletedCard(month, score) {
-    // Intensité du dégradé indigo basée sur le score
+    // ✅ AVANTAGE PLUS: Cartes complétées en doré/vert
     const getScoreStyle = (score) => {
         if (score >= 90) return { 
-            bg: 'from-indigo-600 via-indigo-700 to-indigo-800', 
-            badge: 'bg-emerald-500',
-            badgeText: 'Excellent'
+            badgeText: '🏆 Excellent'
         };
         if (score >= 75) return { 
-            bg: 'from-indigo-500 via-indigo-600 to-indigo-700', 
-            badge: 'bg-blue-500',
-            badgeText: 'Très bien'
+            badgeText: '⭐ Très bien'
         };
         if (score >= 60) return { 
-            bg: 'from-indigo-400 via-indigo-500 to-indigo-600', 
-            badge: 'bg-indigo-400',
-            badgeText: 'Bien'
+            badgeText: '✓ Bien'
         };
         return { 
-            bg: 'from-slate-400 via-slate-500 to-slate-600', 
-            badge: 'bg-slate-400',
-            badgeText: 'Passable'
+            badgeText: '✓ Passable'
         };
     };
     
@@ -139,53 +131,47 @@ function createCompletedCard(month, score) {
     const safeScore = escapeHtml(score);
     
     return `
-        <div class="card-hover relative bg-gradient-to-br ${style.bg} p-6 rounded-2xl shadow-lg hover:shadow-xl border border-white/20 flex flex-col items-center cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group">
-            <div class="absolute top-3 right-3 ${style.badge} text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-md">
-                ${style.badgeText}
+        <div class="module-card module-card--completed">
+            <div class="module-card-header">
+                <div class="module-card-icon">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="module-card-badge">${style.badgeText}</div>
             </div>
-            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm p-1.5 rounded-full">
-                <svg class="h-4 w-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
+            <h3 class="module-card-title">${safeMonth}</h3>
+            <p class="module-card-subtitle">Quiz complété</p>
+            <p class="module-card-progress-label">Score obtenu</p>
+            <div class="module-card-progress-bar">
+                <div class="module-card-progress-fill" style="width: ${safeScore}%"></div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4 drop-shadow-md">${safeMonth}</h3>
-            ${createProgressRing(score)}
-            <span class="mt-4 text-sm font-semibold text-white/95 bg-white/15 px-3 py-1.5 rounded-full backdrop-blur-sm">Score: ${safeScore}%</span>
-            <a href="#" class="mt-3 text-sm font-medium text-white/90 hover:text-white underline decoration-2 underline-offset-2 opacity-0 group-hover:opacity-100 transition-opacity">Voir détails →</a>
+            <span class="text-sm font-semibold text-ap-red-dark">Score: ${safeScore}%</span>
         </div>
     `;
 }
 
 function createLockedCard(month) {
-    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    // ✅ AVANTAGE PLUS: Cartes verrouillées en gris
     const safeMonth = escapeHtml(month);
     
     return `
-        <div class="relative bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 p-6 rounded-2xl border border-slate-300 flex flex-col items-center justify-center min-h-[260px] shadow-sm overflow-hidden">
-            <!-- Motif subtil -->
-            <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.1) 10px, rgba(0,0,0,.1) 20px);"></div>
-            
-            <!-- Badge verrouillé discret -->
-            <div class="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
-                🔒 Verrouillé
-            </div>
-            
-            <!-- Cadenas minimaliste -->
-            <div class="relative mb-4">
-                <div class="relative bg-white p-3.5 rounded-xl shadow-md border-2 border-red-100">
-                    <svg class="h-8 w-8 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="module-card module-card--locked">
+            <div class="module-card-header">
+                <div class="module-card-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
+                <div class="module-card-badge">🔒 Verrouillé</div>
             </div>
-            
-            <h3 class="text-xl font-bold text-slate-700 mb-2">${safeMonth}</h3>
-            <div class="flex items-center gap-2 text-sm text-slate-500 bg-white px-3 py-1.5 rounded-lg">
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span class="font-medium">Disponible le 1er du mois</span>
+            <h3 class="module-card-title">${safeMonth}</h3>
+            <p class="module-card-subtitle">Disponible le 1er du mois</p>
+            <p class="module-card-progress-label">Progression</p>
+            <div class="module-card-progress-bar">
+                <div class="module-card-progress-fill" style="width: 0%"></div>
             </div>
+            <span class="text-sm text-ap-gray-600">Pas encore accessible</span>
         </div>
     `;
 }

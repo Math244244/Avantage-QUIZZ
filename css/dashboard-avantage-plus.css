@@ -1,0 +1,478 @@
+/**
+ * 📊 DASHBOARD AVANTAGE PLUS
+ * ==========================
+ * Cartes de modules et tableau de bord avec thème rouge/doré
+ * 
+ * Créé le: 2025-11-08
+ * Version: 1.0.0
+ */
+
+/* ========================================
+   LAYOUT PRINCIPAL
+   ======================================== */
+
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF4F5 0%, #FFFFFF 50%, #FFF4CC 100%);
+  padding: 40px;
+}
+
+.dashboard-header {
+  margin-bottom: 40px;
+}
+
+.dashboard-title {
+  font-size: var(--ap-text-4xl);
+  font-weight: var(--ap-font-extrabold);
+  color: var(--ap-red-primary);
+  margin-bottom: 8px;
+  letter-spacing: var(--ap-tracking-tight);
+}
+
+.dashboard-subtitle {
+  font-size: var(--ap-text-lg);
+  color: var(--ap-gray-600);
+  font-weight: var(--ap-font-medium);
+}
+
+/* ========================================
+   CARTE QUIZ PRINCIPAL (HERO)
+   ======================================== */
+
+.quiz-hero-card {
+  background: var(--ap-gradient-primary);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: var(--ap-shadow-xl);
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--ap-gold);
+  transition: all 0.4s var(--ap-ease-smooth);
+}
+
+.quiz-hero-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(1.1);
+  }
+}
+
+.quiz-hero-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(196, 30, 58, 0.3);
+  border-color: var(--ap-gold-dark);
+}
+
+.quiz-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 215, 0, 0.2);
+  color: var(--ap-gold);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: var(--ap-text-sm);
+  font-weight: var(--ap-font-bold);
+  margin-bottom: 16px;
+  border: 2px solid var(--ap-gold);
+  text-transform: uppercase;
+  letter-spacing: var(--ap-tracking-wide);
+}
+
+.quiz-hero-title {
+  font-size: var(--ap-text-3xl);
+  font-weight: var(--ap-font-black);
+  color: white;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-hero-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--ap-text-base);
+  margin-bottom: 24px;
+  line-height: var(--ap-leading-relaxed);
+}
+
+.quiz-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color: var(--ap-red-primary);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: var(--ap-font-bold);
+  font-size: var(--ap-text-lg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ap-ease-smooth);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: var(--ap-gold);
+  color: var(--ap-red-dark);
+}
+
+.quiz-hero-progress {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.quiz-hero-progress-label {
+  color: var(--ap-gold);
+  font-size: var(--ap-text-xs);
+  font-weight: var(--ap-font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ap-tracking-wider);
+  margin-bottom: 8px;
+}
+
+.quiz-hero-progress-value {
+  color: white;
+  font-size: var(--ap-text-4xl);
+  font-weight: var(--ap-font-black);
+  line-height: 1;
+}
+
+/* ========================================
+   SECTION MODULES
+   ======================================== */
+
+.modules-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modules-section-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--ap-red-primary);
+}
+
+.modules-section-title {
+  font-size: var(--ap-text-2xl);
+  font-weight: var(--ap-font-bold);
+  color: var(--ap-gray-900);
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* ========================================
+   CARTES DE MODULES - BASE
+   ======================================== */
+
+.module-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ap-ease-smooth);
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--ap-gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ap-ease-out);
+}
+
+.module-card:hover::before {
+  transform: scaleX(1);
+}
+
+.module-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--ap-shadow-lg);
+}
+
+.module-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.module-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: all 0.3s var(--ap-ease-smooth);
+}
+
+.module-card:hover .module-card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.module-card-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: var(--ap-text-xs);
+  font-weight: var(--ap-font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ap-tracking-wide);
+}
+
+.module-card-title {
+  font-size: var(--ap-text-xl);
+  font-weight: var(--ap-font-bold);
+  color: var(--ap-gray-900);
+  margin-bottom: 8px;
+}
+
+.module-card-subtitle {
+  font-size: var(--ap-text-sm);
+  color: var(--ap-gray-600);
+  margin-bottom: 16px;
+}
+
+.module-card-progress-label {
+  font-size: var(--ap-text-xs);
+  color: var(--ap-gray-500);
+  font-weight: var(--ap-font-medium);
+  margin-bottom: 8px;
+}
+
+.module-card-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--ap-gray-200);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.module-card-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s var(--ap-ease-out);
+}
+
+/* ========================================
+   CARTE MODULE - ÉTAT "COMPLÉTÉ" (VERT/OR)
+   ======================================== */
+
+.module-card--completed {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF4CC 100%);
+  border-color: var(--ap-gold);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+}
+
+.module-card--completed .module-card-icon {
+  background: var(--ap-gradient-gold);
+  color: var(--ap-red-dark);
+  box-shadow: var(--ap-shadow-gold);
+}
+
+.module-card--completed .module-card-badge {
+  background: var(--ap-success);
+  color: white;
+}
+
+.module-card--completed .module-card-progress-fill {
+  background: var(--ap-gradient-success);
+}
+
+.module-card--completed:hover {
+  border-color: var(--ap-gold-dark);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
+   CARTE MODULE - ÉTAT "ACTIF" (ROUGE/OR)
+   ======================================== */
+
+.module-card--active {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF4F5 100%);
+  border-color: var(--ap-red-primary);
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.15);
+}
+
+.module-card--active .module-card-icon {
+  background: var(--ap-gradient-primary);
+  color: white;
+  box-shadow: var(--ap-shadow-md);
+}
+
+.module-card--active .module-card-badge {
+  background: var(--ap-red-primary);
+  color: white;
+  animation: badgePulse 1.5s ease-in-out infinite;
+}
+
+.module-card--active .module-card-progress-fill {
+  background: var(--ap-gradient-active);
+}
+
+.module-card--active:hover {
+  border-color: var(--ap-red-dark);
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.25);
+}
+
+/* ========================================
+   CARTE MODULE - ÉTAT "VERROUILLÉ" (GRIS)
+   ======================================== */
+
+.module-card--locked {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--ap-gray-100) 100%);
+  border-color: var(--ap-gray-300);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.module-card--locked .module-card-icon {
+  background: var(--ap-gray-300);
+  color: var(--ap-gray-600);
+}
+
+.module-card--locked .module-card-badge {
+  background: var(--ap-gray-400);
+  color: white;
+}
+
+.module-card--locked .module-card-progress-fill {
+  background: var(--ap-gray-400);
+}
+
+.module-card--locked:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========================================
+   CARTE MODULE - ÉTAT "INCOMPLET" (ORANGE)
+   ======================================== */
+
+.module-card--incomplete {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF4E6 100%);
+  border-color: var(--ap-warning);
+  box-shadow: 0 4px 20px rgba(255, 193, 7, 0.15);
+}
+
+.module-card--incomplete .module-card-icon {
+  background: linear-gradient(135deg, var(--ap-warning) 0%, var(--ap-gold) 100%);
+  color: white;
+}
+
+.module-card--incomplete .module-card-badge {
+  background: var(--ap-warning);
+  color: white;
+}
+
+.module-card--incomplete .module-card-progress-fill {
+  background: linear-gradient(90deg, var(--ap-warning) 0%, var(--ap-gold) 100%);
+}
+
+.module-card--incomplete:hover {
+  border-color: var(--ap-gold);
+  box-shadow: 0 8px 30px rgba(255, 193, 7, 0.25);
+}
+
+/* ========================================
+   ANIMATIONS SPÉCIALES
+   ======================================== */
+
+/* Stagger animation pour cartes */
+.module-card:nth-child(1) { animation: cardSlideIn 0.5s ease-out 0.05s backwards; }
+.module-card:nth-child(2) { animation: cardSlideIn 0.5s ease-out 0.1s backwards; }
+.module-card:nth-child(3) { animation: cardSlideIn 0.5s ease-out 0.15s backwards; }
+.module-card:nth-child(4) { animation: cardSlideIn 0.5s ease-out 0.2s backwards; }
+.module-card:nth-child(5) { animation: cardSlideIn 0.5s ease-out 0.25s backwards; }
+.module-card:nth-child(6) { animation: cardSlideIn 0.5s ease-out 0.3s backwards; }
+.module-card:nth-child(7) { animation: cardSlideIn 0.5s ease-out 0.35s backwards; }
+.module-card:nth-child(8) { animation: cardSlideIn 0.5s ease-out 0.4s backwards; }
+.module-card:nth-child(9) { animation: cardSlideIn 0.5s ease-out 0.45s backwards; }
+.module-card:nth-child(10) { animation: cardSlideIn 0.5s ease-out 0.5s backwards; }
+.module-card:nth-child(11) { animation: cardSlideIn 0.5s ease-out 0.55s backwards; }
+.module-card:nth-child(12) { animation: cardSlideIn 0.5s ease-out 0.6s backwards; }
+
+/* Hero card entrance */
+.quiz-hero-card {
+  animation: fadeInUp 0.8s var(--ap-ease-out);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+  
+  .quiz-hero-card {
+    padding: 28px 24px;
+  }
+  
+  .quiz-hero-progress {
+    position: static;
+    margin-top: 24px;
+    width: fit-content;
+  }
+  
+  .modules-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .dashboard-title {
+    font-size: var(--ap-text-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-hero-title {
+    font-size: var(--ap-text-2xl);
+  }
+  
+  .quiz-hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
