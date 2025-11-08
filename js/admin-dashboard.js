@@ -392,74 +392,74 @@ function renderGlobalStats() {
     
     container.innerHTML = `
         <!-- Total Utilisateurs -->
-        <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-6 text-white shadow-lg">
+        <div class="bg-ap-gradient-primary rounded-xl p-6 text-white shadow-ap-lg hover:shadow-ap-xl transition-all">
             <div class="flex items-center justify-between mb-4">
-                <div class="bg-white/20 p-3 rounded-lg">
+                <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Total</span>
+                <span class="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Total</span>
             </div>
-            <h3 class="text-3xl font-bold mb-1">${escapeHtml(String(globalStats.totalUsers))}</h3>
-            <p class="text-blue-100 text-sm">Utilisateurs inscrits</p>
-            <div class="mt-3 text-xs">
-                <span class="bg-white/20 px-2 py-1 rounded">📅 ${globalStats.activeUsersToday} aujourd'hui</span>
-                <span class="bg-white/20 px-2 py-1 rounded ml-2">📆 ${globalStats.activeUsersWeek} cette semaine</span>
+            <h3 class="text-4xl font-black mb-1">${escapeHtml(String(globalStats.totalUsers))}</h3>
+            <p class="text-white/90 text-sm font-medium">Utilisateurs inscrits</p>
+            <div class="mt-3 text-xs flex gap-2">
+                <span class="bg-white/20 px-2 py-1 rounded backdrop-blur-sm">📅 ${globalStats.activeUsersToday} aujourd'hui</span>
+                <span class="bg-white/20 px-2 py-1 rounded backdrop-blur-sm">📆 ${globalStats.activeUsersWeek} cette semaine</span>
             </div>
         </div>
         
         <!-- Total Quiz -->
-        <div class="bg-gradient-to-br from-green-500 to-green-700 rounded-xl p-6 text-white shadow-lg">
+        <div class="bg-ap-gradient-success rounded-xl p-6 text-white shadow-lg hover:shadow-xl transition-all">
             <div class="flex items-center justify-between mb-4">
-                <div class="bg-white/20 p-3 rounded-lg">
+                <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Complétés</span>
+                <span class="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Complétés</span>
             </div>
-            <h3 class="text-3xl font-bold mb-1">${globalStats.totalQuizzes}</h3>
-            <p class="text-green-100 text-sm">Quiz réalisés</p>
-            <div class="mt-3 text-xs">
-                <span class="bg-white/20 px-2 py-1 rounded">📅 ${globalStats.quizzesToday} aujourd'hui</span>
-                <span class="bg-white/20 px-2 py-1 rounded ml-2">📆 ${globalStats.quizzesWeek} cette semaine</span>
+            <h3 class="text-4xl font-black mb-1">${globalStats.totalQuizzes}</h3>
+            <p class="text-white/90 text-sm font-medium">Quiz réalisés</p>
+            <div class="mt-3 text-xs flex gap-2">
+                <span class="bg-white/20 px-2 py-1 rounded backdrop-blur-sm">📅 ${globalStats.quizzesToday} aujourd'hui</span>
+                <span class="bg-white/20 px-2 py-1 rounded backdrop-blur-sm">📆 ${globalStats.quizzesWeek} cette semaine</span>
             </div>
         </div>
         
         <!-- Score Moyen -->
-        <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-6 text-white shadow-lg">
+        <div class="bg-ap-gradient-gold rounded-xl p-6 text-white shadow-ap-gold-lg hover:shadow-ap-gold transition-all">
             <div class="flex items-center justify-between mb-4">
-                <div class="bg-white/20 p-3 rounded-lg">
+                <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Moyenne</span>
+                <span class="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Moyenne</span>
             </div>
-            <h3 class="text-3xl font-bold mb-1">${globalStats.avgScore}%</h3>
-            <p class="text-purple-100 text-sm">Score moyen global</p>
+            <h3 class="text-4xl font-black mb-1">${globalStats.avgScore}%</h3>
+            <p class="text-white/90 text-sm font-medium">Score moyen global</p>
             <div class="mt-3">
-                <div class="bg-white/20 rounded-full h-2">
-                    <div class="bg-white rounded-full h-2" style="width: ${globalStats.avgScore}%"></div>
+                <div class="bg-white/20 rounded-full h-2.5">
+                    <div class="bg-white rounded-full h-2.5 shadow-lg" style="width: ${globalStats.avgScore}%"></div>
                 </div>
             </div>
         </div>
         
         <!-- Total Questions -->
-        <div class="bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 text-white shadow-lg">
+        <div class="bg-gradient-to-br from-ap-warning to-ap-warning-dark rounded-xl p-6 text-white shadow-lg hover:shadow-xl transition-all">
             <div class="flex items-center justify-between mb-4">
-                <div class="bg-white/20 p-3 rounded-lg">
+                <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Base</span>
+                <span class="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Base</span>
             </div>
-            <h3 class="text-3xl font-bold mb-1">${globalStats.totalQuestions}</h3>
-            <p class="text-orange-100 text-sm">Questions disponibles</p>
+            <h3 class="text-4xl font-black mb-1">${globalStats.totalQuestions}</h3>
+            <p class="text-white/90 text-sm font-medium">Questions disponibles</p>
             <div class="mt-3 text-xs">
-                <span class="bg-white/20 px-2 py-1 rounded">📚 ${globalStats.totalResources} ressources</span>
+                <span class="bg-white/20 px-2 py-1 rounded backdrop-blur-sm">📚 ${globalStats.totalResources} ressources</span>
             </div>
         </div>
     `;
@@ -488,9 +488,9 @@ function renderTopUsers(users) {
     const fragment = document.createDocumentFragment();
     users.forEach((user, index) => {
         const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`;
-        const bgColor = index === 0 ? 'bg-yellow-50 border-yellow-200' :
-            index === 1 ? 'bg-slate-50 border-slate-200' :
-            index === 2 ? 'bg-orange-50 border-orange-200' :
+        const bgColor = index === 0 ? 'bg-ap-gold-light border-ap-gold' :
+            index === 1 ? 'bg-slate-50 border-slate-300' :
+            index === 2 ? 'bg-ap-warning-light border-ap-warning' :
             'bg-white border-slate-200';
     const rawUserName = user.userName || user.displayName || user.email || 'Utilisateur';
     const userName = escapeHtml(rawUserName);
@@ -555,8 +555,8 @@ function renderRecentActivity(activities) {
         row.className = 'flex items-center justify-between p-3 hover:bg-slate-50 rounded-lg transition-colors';
         row.innerHTML = `
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <span class="text-lg font-bold text-indigo-600">${avatarInitial}</span>
+                <div class="w-10 h-10 bg-ap-red-100 rounded-full flex items-center justify-center">
+                    <span class="text-lg font-bold text-ap-red-primary">${avatarInitial}</span>
                 </div>
                 <div>
                     <p class="font-medium text-slate-900">${userName}</p>
