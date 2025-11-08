@@ -1,6 +1,11 @@
 // Initialisation de la page d'accueil (index.html)
 import { signInWithGoogle } from './auth.js';
 import { showErrorToast, showSuccessToast, showLoadingToast, updateLoadingToast } from './toast.js';
+// Import des gestionnaires d'erreurs centralisés (Section 1 - Architecture)
+import { errorHandler, withErrorHandling } from './error-handler.js';
+import { withRetry, withFirestoreRetry } from './retry-handler.js';
+// ✅ CORRECTION SECTION 8 : Gestion Offline Complète
+import { offlineManager } from './offline-manager.js';
 
 console.log('Initialisation de la page d accueil...');
 

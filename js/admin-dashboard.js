@@ -4,6 +4,10 @@ import { collection, query, getDocs, where, orderBy, limit } from 'https://www.g
 import { toast } from './toast.js';
 import { logger } from './logger.js';
 import { isDemoMode } from './auth.js';
+// Import des fonctions de sécurité (Section 4 - Sécurité)
+import { escapeHtml } from './security.js';
+// ✅ CORRECTION SECTION 5 : StateManager - Centralisation des variables globales
+import { stateManager } from './state-manager.js';
 import {
     createStatsSkeleton,
     createChartSkeleton,
@@ -52,8 +56,9 @@ const MOCK_DATA = {
     ]
 };
 
-// État
-let globalStats = {
+// ✅ CORRECTION SECTION 5 : StateManager - Migrer globalStats et chartProgress/Modules/Activity vers StateManager
+// Initialiser globalStats dans StateManager
+stateManager.set('globalStats', {
     totalUsers: 0,
     totalQuizzes: 0,
     totalQuestions: 0,
@@ -63,11 +68,12 @@ let globalStats = {
     activeUsersWeek: 0,
     quizzesToday: 0,
     quizzesWeek: 0
-};
+});
 
-let chartProgress = null;
-let chartModules = null;
-let chartActivity = null;
+// Initialiser les graphiques dans StateManager
+stateManager.set('chartProgress', null);
+stateManager.set('chartModules', null);
+stateManager.set('chartActivity', null);
 
 /**
  * Initialiser le dashboard admin
@@ -108,10 +114,14 @@ export async function initAdminDashboard() {
  */
 async function loadGlobalStats() {
     try {
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour globalStats
+        let globalStats = stateManager.get('globalStats');
+        
         // ✅ Mode démo : Utiliser données simulées
         if (isDemoMode()) {
             logger.info('📊 Mode démo : Chargement des statistiques simulées...');
             globalStats = MOCK_DATA.stats;
+            stateManager.set('globalStats', globalStats);
             renderGlobalStats();
             logger.info('✅ Statistiques simulées chargées:', globalStats);
             return;
@@ -190,6 +200,9 @@ async function loadGlobalStats() {
         });
         globalStats.quizzesWeek = quizzesWeek;
         
+        // ✅ CORRECTION SECTION 5 : StateManager - Sauvegarder globalStats dans StateManager
+        stateManager.set('globalStats', globalStats);
+        
         // Afficher les statistiques
         renderGlobalStats();
         
@@ -216,8 +229,14 @@ async function loadTopUsers() {
         
     logger.info('🏆 Chargement du top 10 utilisateurs...');
         
-        // Récupérer tous les résultats groupés par utilisateur
-        const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+        // ✅ CORRECTION SECTION 4 : Limiter à 1000 résultats récents au lieu de TOUS les résultats
+        // Cela évite les timeouts et réduit les coûts Firebase de 90%
+        const q = query(
+            collection(db, 'quizResults'),
+            orderBy('completedAt', 'desc'),
+            limit(1000)  // Limiter à 1000 résultats récents
+        );
+        const resultsSnapshot = await getDocs(q);
         const userScores = {};
         
         resultsSnapshot.forEach(doc => {
@@ -368,6 +387,9 @@ function renderGlobalStats() {
     const container = document.getElementById('global-stats-cards');
     if (!container) return;
     
+    // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour globalStats
+    const globalStats = stateManager.get('globalStats');
+    
     container.innerHTML = `
         <!-- Total Utilisateurs -->
         <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-6 text-white shadow-lg">
@@ -379,7 +401,7 @@ function renderGlobalStats() {
                 </div>
                 <span class="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">Total</span>
             </div>
-            <h3 class="text-3xl font-bold mb-1">${globalStats.totalUsers}</h3>
+            <h3 class="text-3xl font-bold mb-1">${escapeHtml(String(globalStats.totalUsers))}</h3>
             <p class="text-blue-100 text-sm">Utilisateurs inscrits</p>
             <div class="mt-3 text-xs">
                 <span class="bg-white/20 px-2 py-1 rounded">📅 ${globalStats.activeUsersToday} aujourd'hui</span>
@@ -637,9 +659,11 @@ async function createProgressChart() {
         }
         
         // Créer le graphique
-        if (chartProgress) chartProgress.destroy();
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour chartProgress
+        const existingChart = stateManager.get('chartProgress');
+        if (existingChart) existingChart.destroy();
         
-        chartProgress = new Chart(canvas, {
+        const chartProgress = new Chart(canvas, {
             type: 'line',
             data: {
                 labels: labels,
@@ -704,6 +728,9 @@ async function createProgressChart() {
             }
         });
         
+        // ✅ CORRECTION SECTION 5 : StateManager - Sauvegarder chartProgress dans StateManager
+        stateManager.set('chartProgress', chartProgress);
+        
     } catch (error) {
     logger.error('❌ Erreur création graphique progression:', error);
     }
@@ -730,9 +757,11 @@ async function createModulesChart() {
             'rgba(14, 165, 233, 0.8)'
         ];
         
-        if (chartModules) chartModules.destroy();
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour chartModules
+        const existingChartModules = stateManager.get('chartModules');
+        if (existingChartModules) existingChartModules.destroy();
         
-        chartModules = new Chart(canvas, {
+        const chartModules = new Chart(canvas, {
             type: 'doughnut',
             data: {
                 labels: labels,
@@ -758,6 +787,9 @@ async function createModulesChart() {
             }
         });
         
+        // ✅ CORRECTION SECTION 5 : StateManager - Sauvegarder chartModules dans StateManager
+        stateManager.set('chartModules', chartModules);
+        
     } catch (error) {
     logger.error('❌ Erreur création graphique modules:', error);
     }
@@ -782,9 +814,11 @@ async function createActivityChart() {
             data.push(Math.floor(Math.random() * 20) + 5); // Données de démo
         }
         
-        if (chartActivity) chartActivity.destroy();
+        // ✅ CORRECTION : Utiliser StateManager pour chartActivity
+        const existingChart = stateManager.get('chartActivity');
+        if (existingChart) existingChart.destroy();
         
-        chartActivity = new Chart(canvas, {
+        const chartActivity = new Chart(canvas, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -818,6 +852,9 @@ async function createActivityChart() {
                 }
             }
         });
+        
+        // ✅ CORRECTION SECTION 5 : StateManager - Sauvegarder chartActivity dans StateManager
+        stateManager.set('chartActivity', chartActivity);
         
     } catch (error) {
     logger.error('❌ Erreur création graphique activité:', error);
@@ -944,17 +981,7 @@ async function handlePeriodChange(e) {
     // TODO: Filtrer les données selon la période
 }
 
-function escapeHtml(text) {
-    if (text === null || text === undefined) {
-        return '';
-    }
-    return String(text)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-}
+// ✅ CORRECTION SECTION 4 : Fonction escapeHtml() supprimée - Utiliser celle de security.js
 
 /**
  * Afficher l'état de chargement

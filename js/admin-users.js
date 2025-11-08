@@ -1,11 +1,14 @@
 // Admin Users Manager - Gestion des utilisateurs
 import { 
     getAllUsers, 
+    getAllUsersPaginated, // ✅ CORRECTION SECTION 7 : Pagination
     updateUserRole,
     getUsersStats
 } from './firestore-service.js';
 import { toast } from './toast.js';
 import { isDemoMode } from './auth.js';
+// ✅ CORRECTION SECTION 4 : Protection XSS - Utiliser escapeHtml centralisé
+import { escapeHtml } from './security.js';
 import {
     createUserSkeleton,
     createStatsSkeleton,
@@ -35,6 +38,14 @@ let currentUsers = [];
 let currentFilters = {
     role: '',
     status: 'all'
+};
+
+// ✅ CORRECTION SECTION 7 : Pagination - État de pagination
+let paginationState = {
+    lastDoc: null,
+    hasMore: false,
+    isLoading: false,
+    pageSize: 20
 };
 
 /**
@@ -236,13 +247,20 @@ async function loadUsers() {
             return;
         }
         
-        // Mode Firebase normal
+        // Mode Firebase normal avec pagination
         const filters = {};
         if (currentFilters.role) {
             filters.role = currentFilters.role;
         }
         
-        currentUsers = await getAllUsers(filters);
+        // ✅ CORRECTION SECTION 7 : Pagination - Réinitialiser la pagination au chargement initial
+        paginationState.lastDoc = null;
+        paginationState.hasMore = false;
+        
+        const result = await getAllUsersPaginated(filters, paginationState.pageSize, null);
+        currentUsers = result.users;
+        paginationState.lastDoc = result.lastDoc;
+        paginationState.hasMore = result.hasMore;
         
         // Filtrer par statut actif/inactif côté client
         if (currentFilters.status !== 'all') {
@@ -261,17 +279,20 @@ async function loadUsers() {
         
         console.log(`Utilisateurs charges: ${currentUsers.length}`);
         renderUsersList();
+        renderPaginationControls();
     } catch (error) {
         console.error('Erreur chargement utilisateurs:', error);
         const container = document.getElementById('users-list');
         if (container) {
+            // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper le message d'erreur
+            const safeErrorMessage = escapeHtml(error.message);
             container.innerHTML = `
                 <div class="text-center py-12 text-red-500">
                     <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <p class="text-lg font-medium">Erreur lors du chargement</p>
-                    <p class="text-sm">${error.message}</p>
+                    <p class="text-sm">${safeErrorMessage}</p>
                 </div>
             `;
         }
@@ -304,6 +325,112 @@ function renderUsersList() {
 }
 
 /**
+ * ✅ CORRECTION SECTION 7 : Pagination - Charger plus d'utilisateurs
+ */
+async function loadMoreUsers() {
+    if (paginationState.isLoading || !paginationState.hasMore) {
+        return;
+    }
+    
+    try {
+        paginationState.isLoading = true;
+        
+        const filters = {};
+        if (currentFilters.role) {
+            filters.role = currentFilters.role;
+        }
+        
+        const result = await getAllUsersPaginated(filters, paginationState.pageSize, paginationState.lastDoc);
+        
+        // Filtrer par statut actif/inactif côté client
+        let newUsers = result.users;
+        if (currentFilters.status !== 'all') {
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            
+            newUsers = newUsers.filter(user => {
+                if (!user.lastLogin) return currentFilters.status === 'inactive';
+                
+                const lastLoginDate = user.lastLogin.toDate ? user.lastLogin.toDate() : new Date(user.lastLogin);
+                const isActive = lastLoginDate > oneWeekAgo;
+                
+                return currentFilters.status === 'active' ? isActive : !isActive;
+            });
+        }
+        
+        // Ajouter les nouveaux utilisateurs à la liste existante
+        currentUsers = [...currentUsers, ...newUsers];
+        paginationState.lastDoc = result.lastDoc;
+        paginationState.hasMore = result.hasMore;
+        
+        renderUsersList();
+        renderPaginationControls();
+        
+        console.log(`✅ ${newUsers.length} utilisateurs supplémentaires chargés`);
+    } catch (error) {
+        console.error('❌ Erreur chargement utilisateurs supplémentaires:', error);
+        toast.error('Erreur lors du chargement des utilisateurs supplémentaires');
+    } finally {
+        paginationState.isLoading = false;
+    }
+}
+
+/**
+ * ✅ CORRECTION SECTION 7 : Pagination - Afficher les contrôles de pagination
+ */
+function renderPaginationControls() {
+    // Supprimer les contrôles existants
+    const existingControls = document.getElementById('users-pagination-controls');
+    if (existingControls) {
+        existingControls.remove();
+    }
+    
+    // Si pas de pagination nécessaire, ne rien afficher
+    if (!paginationState.hasMore && currentUsers.length <= paginationState.pageSize) {
+        return;
+    }
+    
+    const container = document.getElementById('users-list');
+    if (!container) return;
+    
+    const paginationHTML = `
+        <div id="users-pagination-controls" class="mt-6 flex justify-center items-center gap-4">
+            ${paginationState.hasMore ? `
+                <button 
+                    id="load-more-users-btn" 
+                    class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                    ${paginationState.isLoading ? 'disabled' : ''}
+                >
+                    ${paginationState.isLoading ? `
+                        <svg class="animate-spin h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Chargement...
+                    ` : `
+                        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        Charger plus
+                    `}
+                </button>
+            ` : ''}
+            <span class="text-sm text-slate-600">
+                ${currentUsers.length} utilisateur${currentUsers.length > 1 ? 's' : ''} affiché${currentUsers.length > 1 ? 's' : ''}
+            </span>
+        </div>
+    `;
+    
+    container.insertAdjacentHTML('beforeend', paginationHTML);
+    
+    // Ajouter l'event listener pour le bouton "Charger plus"
+    const loadMoreBtn = document.getElementById('load-more-users-btn');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', loadMoreUsers);
+    }
+}
+
+/**
  * Rendu d'une carte utilisateur
  */
 function renderUserCard(user) {
@@ -323,18 +450,22 @@ function renderUserCard(user) {
     
     const lastLoginText = lastLogin ? formatRelativeTime(lastLogin) : 'Jamais connecte';
     
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper toutes les données utilisateur
+    const safeDisplayName = escapeHtml(user.displayName || 'Sans nom');
+    const safeEmail = escapeHtml(user.email || '');
+    const safeAvatarAlt = escapeHtml(user.displayName || 'User');
     const avatarUrl = user.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.displayName || user.email)}&background=667eea&color=fff&size=128`;
     
     return `
         <div class="user-card bg-white rounded-xl shadow-md p-6 mb-4 hover:shadow-lg transition-shadow" data-user-id="${user.uid}">
             <div class="flex items-start gap-4">
-                <img src="${avatarUrl}" alt="${user.displayName || 'User'}" class="w-16 h-16 rounded-full object-cover flex-shrink-0" onerror="this.src='https://ui-avatars.com/api/?name=U&background=667eea&color=fff&size=128'">
+                <img src="${avatarUrl}" alt="${safeAvatarAlt}" class="w-16 h-16 rounded-full object-cover flex-shrink-0" onerror="this.src='https://ui-avatars.com/api/?name=U&background=667eea&color=fff&size=128'">
                 
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center justify-between mb-2">
                         <div>
-                            <h4 class="text-lg font-bold text-slate-900 truncate">${escapeHtml(user.displayName || 'Sans nom')}</h4>
-                            <p class="text-sm text-slate-600 truncate">${escapeHtml(user.email)}</p>
+                            <h4 class="text-lg font-bold text-slate-900 truncate">${safeDisplayName}</h4>
+                            <p class="text-sm text-slate-600 truncate">${safeEmail}</p>
                         </div>
                         <div class="flex gap-2 flex-shrink-0 ml-4">
                             <button class="edit-user-btn text-indigo-600 hover:text-indigo-800 p-2 rounded hover:bg-indigo-50 transition" data-user-id="${user.uid}" data-user-email="${user.email}" data-user-role="${user.role || 'user'}" title="Modifier">
@@ -434,7 +565,7 @@ function openEditRoleModal(userId, userEmail, currentRole) {
             
             <div class="mb-6">
                 <p class="text-slate-600 mb-1">Utilisateur:</p>
-                <p class="font-semibold text-slate-900">${escapeHtml(userEmail)}</p>
+                <p class="font-semibold text-slate-900">${escapeHtml(userEmail || '')}</p>
             </div>
             
             <div class="mb-6">
@@ -555,9 +686,11 @@ function handleSearch(e) {
     if (!container) return;
     
     if (filtered.length === 0) {
+        // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper le terme de recherche
+        const safeSearchTerm = escapeHtml(searchTerm);
         container.innerHTML = `
             <div class="text-center py-12 text-slate-500">
-                <p class="text-lg">Aucun resultat pour "${searchTerm}"</p>
+                <p class="text-lg">Aucun resultat pour "${safeSearchTerm}"</p>
             </div>
         `;
         return;
@@ -667,12 +800,14 @@ function showError(containerId, message) {
         return;
     }
     
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper le message d'erreur
+    const safeMessage = escapeHtml(message);
     container.innerHTML = `
         <div class="bg-red-50 border-2 border-red-500 rounded-xl p-6 text-center">
             <svg class="w-12 h-12 mx-auto text-red-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <p class="text-red-900 font-semibold">${message}</p>
+            <p class="text-red-900 font-semibold">${safeMessage}</p>
         </div>
     `;
 }
@@ -683,12 +818,14 @@ function showError(containerId, message) {
 function showSuccess(message) {
     const toast = document.createElement('div');
     toast.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50 animate-fade-in';
-    toast.innerHTML = `
+        // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper le message
+        const safeMessage = escapeHtml(message);
+        toast.innerHTML = `
         <div class="flex items-center gap-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
             </svg>
-            <span class="font-semibold">${message}</span>
+            <span class="font-semibold">${safeMessage}</span>
         </div>
     `;
     
@@ -718,12 +855,4 @@ function formatRelativeTime(date) {
     return date.toLocaleDateString('fr-FR');
 }
 
-/**
- * Échapper le HTML
- */
-function escapeHtml(text) {
-    if (!text) return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
+// ✅ CORRECTION SECTION 4 : Fonction escapeHtml() supprimée - Utiliser celle de security.js

@@ -3,6 +3,8 @@ import { db } from './firebase-config.js';
 import { collection, query, orderBy, getDocs, addDoc, deleteDoc, doc, where } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 import { getCurrentUser, onAuthChange, signOutUser } from './auth.js';
 import { toast } from './toast.js';
+// ✅ CORRECTION SECTION 4 : Protection XSS
+import { escapeHtml } from './security.js';
 import {
     createResourceSkeleton,
     showSkeleton,
@@ -150,11 +152,23 @@ function renderResources() {
     
     document.getElementById('no-resources')?.classList.add('hidden');
     
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper toutes les données utilisateur
     container.innerHTML = filteredResources.map(resource => {
         const category = categoryNames[resource.category] || { name: resource.category, icon: '📄', color: 'gray' };
         const date = resource.createdAt 
             ? new Date(resource.createdAt).toLocaleDateString('fr-FR')
             : 'Date inconnue';
+        
+        // Échapper toutes les données utilisateur
+        const safeTitle = escapeHtml(resource.title || '');
+        const safeDescription = escapeHtml(resource.description || 'Aucune description');
+        const safeCategoryName = escapeHtml(category.name);
+        const safeModuleName = escapeHtml(moduleNames[resource.module] || resource.module || '');
+        const safeDate = escapeHtml(date);
+        const safeResourceId = escapeHtml(resource.id);
+        // URL doit être validée avec sanitizeURL, mais pour l'instant on échappe juste l'affichage
+        const safeUrl = escapeHtml(resource.url || '#');
+        const safeDownloads = resource.downloads ? escapeHtml(String(resource.downloads)) : '';
         
         return `
             <div class="file-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all overflow-hidden fade-in">
@@ -162,7 +176,7 @@ function renderResources() {
                     <div class="flex items-start justify-between mb-4">
                         <div class="file-icon text-4xl">${category.icon}</div>
                         ${isAdmin ? `
-                            <button onclick="deleteResource('${resource.id}')" class="text-red-600 hover:text-red-800 transition-colors">
+                            <button onclick="deleteResource('${safeResourceId}')" class="text-red-600 hover:text-red-800 transition-colors">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                                 </svg>
@@ -170,29 +184,29 @@ function renderResources() {
                         ` : ''}
                     </div>
                     
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">${resource.title}</h3>
-                    <p class="text-sm text-slate-600 mb-4 line-clamp-2">${resource.description || 'Aucune description'}</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">${safeTitle}</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-2">${safeDescription}</p>
                     
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-${category.color}-100 text-${category.color}-700 text-xs font-medium rounded-full">
-                            ${category.name}
+                            ${safeCategoryName}
                         </span>
                         <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-full">
-                            ${moduleNames[resource.module] || resource.module}
+                            ${safeModuleName}
                         </span>
                     </div>
                     
                     <div class="flex items-center justify-between text-xs text-slate-500 mb-4">
-                        <span>📅 ${date}</span>
-                        ${resource.downloads ? `<span>⬇️ ${resource.downloads} téléchargements</span>` : ''}
+                        <span>📅 ${safeDate}</span>
+                        ${safeDownloads ? `<span>⬇️ ${safeDownloads} téléchargements</span>` : ''}
                     </div>
                     
                     <div class="flex gap-2">
-                        <a href="${resource.url}" target="_blank" rel="noopener noreferrer" 
+                        <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" 
                            class="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium text-center text-sm">
                             📥 Télécharger
                         </a>
-                        <a href="${resource.url}" target="_blank" rel="noopener noreferrer" 
+                        <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" 
                            class="px-4 py-2 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors font-medium text-center text-sm">
                             👁️
                         </a>

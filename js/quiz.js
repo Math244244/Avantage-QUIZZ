@@ -5,6 +5,16 @@ import { getCurrentUserUnified, isDemoMode } from './auth.js';
 import { launchConfetti } from './confetti.js';
 import { saveQuizResult } from './firestore-service.js';
 import { toast, showLoadingToast, updateLoadingToast } from './toast.js';
+// ✅ CORRECTION SECTION 9 : Analytics
+import { trackQuizStart, trackQuizComplete } from './analytics.js';
+// Import du gestionnaire de retry (Section 1 - Architecture)
+import { withFirestoreRetry } from './retry-handler.js';
+// Import des fonctions de sécurité (Section 4 - Sécurité)
+import { escapeHtml } from './security.js';
+// Import du rate limiter (Section 4 - Sécurité)
+import { safeFirestoreRead } from './rate-limiter.js';
+// ✅ CORRECTION SECTION 5 : Import du gestionnaire d'état centralisé
+import { stateManager } from './state-manager.js';
 
 // Configuration des modules (métadonnées uniquement - pas de questions hardcodées)
 const moduleConfig = {
@@ -30,22 +40,38 @@ const moduleConfig = {
     }
 };
 
-// État du quiz
-let currentQuiz = null;
-let currentQuestionIndex = 0;
-let userAnswers = [];
-let startTime = null;
-let timerInterval = null;
-let questionStartTime = null;
-let currentStreak = 0;
-let isPaused = false;
-let totalPausedDuration = 0;
-let pauseStartedAt = null;
-let currentModule = null;
-let currentMonth = null;
-let currentYear = null;
-let hasCurrentQuestionBeenAnswered = false;
-let quizEventDelegationInitialized = false;
+// ✅ CORRECTION SECTION 5 : État du quiz géré par StateManager
+// Helper functions pour faciliter la migration (utilisent StateManager en arrière-plan)
+const getCurrentQuiz = () => stateManager.get('currentQuiz');
+const setCurrentQuiz = (value) => stateManager.set('currentQuiz', value);
+const getCurrentQuestionIndex = () => stateManager.get('currentQuestionIndex');
+const setCurrentQuestionIndex = (value) => stateManager.set('currentQuestionIndex', value);
+const getUserAnswers = () => stateManager.get('userAnswers');
+const setUserAnswers = (value) => stateManager.set('userAnswers', value);
+const getStartTime = () => stateManager.get('startTime');
+const setStartTime = (value) => stateManager.set('startTime', value);
+const getTimerInterval = () => stateManager.get('timerInterval');
+const setTimerInterval = (value) => stateManager.set('timerInterval', value);
+const getQuestionStartTime = () => stateManager.get('questionStartTime');
+const setQuestionStartTime = (value) => stateManager.set('questionStartTime', value);
+const getCurrentStreak = () => stateManager.get('currentStreak');
+const setCurrentStreak = (value) => stateManager.set('currentStreak', value);
+const getIsPaused = () => stateManager.get('isPaused');
+const setIsPaused = (value) => stateManager.set('isPaused', value);
+const getPausedDuration = () => stateManager.get('pausedDuration');
+const setPausedDuration = (value) => stateManager.set('pausedDuration', value);
+const getPauseStartedAt = () => stateManager.get('pauseStartedAt');
+const setPauseStartedAt = (value) => stateManager.set('pauseStartedAt', value);
+const getCurrentModule = () => stateManager.get('currentModule');
+const setCurrentModule = (value) => stateManager.set('currentModule', value);
+const getCurrentMonth = () => stateManager.get('currentMonth');
+const setCurrentMonth = (value) => stateManager.set('currentMonth', value);
+const getCurrentYear = () => stateManager.get('currentYear');
+const setCurrentYear = (value) => stateManager.set('currentYear', value);
+const getHasCurrentQuestionBeenAnswered = () => stateManager.get('hasCurrentQuestionBeenAnswered');
+const setHasCurrentQuestionBeenAnswered = (value) => stateManager.set('hasCurrentQuestionBeenAnswered', value);
+const getQuizEventDelegationInitialized = () => stateManager.get('quizEventDelegationInitialized');
+const setQuizEventDelegationInitialized = (value) => stateManager.set('quizEventDelegationInitialized', value);
 
 // Couleurs par module
 const moduleColors = {
@@ -278,50 +304,62 @@ export async function startQuiz(moduleId) {
     
     try {
         // Déterminer le mois (numérique) et l'année actuels
-        const now = new Date();
-        const monthNames = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-        const monthNumber = now.getMonth() + 1;
-        currentMonth = monthNames[monthNumber - 1];
-        currentYear = now.getFullYear();
-        currentModule = moduleId;
+        // ✅ CORRECTION SECTION 2 : Utiliser les utilitaires de mois pour normalisation
+        const { getCurrentMonthNumber, getCurrentYear, normalizeMonthFormat } = await import('./month-utils.js');
+        const monthNumber = getCurrentMonthNumber();
+        const year = getCurrentYear();
+        // Normaliser le format du mois pour garantir la cohérence avec le dashboard
+        // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+        const normalizedMonth = normalizeMonthFormat(monthNumber, year);
+        setCurrentMonth(normalizedMonth);
+        setCurrentYear(year);
+        setCurrentModule(moduleId);
         
     // Indiquer qu'un quiz est en cours (utilisé pour confirmations de navigation)
     try { window.__QUIZ_ACTIVE = true; } catch (e) {}
 
     // Charger les questions depuis Firestore (numérique/texte)
-        let questions = await loadQuizFromFirestore(moduleId, monthNumber, currentYear);
+        let questions = await loadQuizFromFirestore(moduleId, monthNumber, year);
 
         // En mode Démo, si aucune question en base, charger depuis JSON local
         if (questions.length === 0 && isDemoMode()) {
             console.log('ℹ️ Mode Démo: chargement des questions locales de test');
-            questions = await loadDemoQuestions(moduleId, monthNumber, currentYear);
+            questions = await loadDemoQuestions(moduleId, monthNumber, year);
         }
         
         if (questions.length === 0) {
             hideLoadingScreen();
             updateLoadingToast(loadingToast, 'Aucune question disponible', 'error');
-            toast.error(`Aucune question trouvée pour ${config.label} en ${currentMonth} ${currentYear}.\n\nContactez l'administrateur.`, 5000);
+            // ✅ CORRECTION SECTION 2 : currentMonth est déjà normalisé (format "Novembre 2025")
+            const currentMonth = getCurrentMonth();
+            toast.error(`Aucune question trouvée pour ${config.label} en ${currentMonth}.\n\nContactez l'administrateur.`, 5000);
             return;
         }
         
         // Créer l'objet quiz
-        currentQuiz = {
-            name: `Quiz ${config.label} - ${currentMonth.charAt(0).toUpperCase() + currentMonth.slice(1)}`,
+        // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+        const currentMonth = getCurrentMonth();
+        setCurrentQuiz({
+            // ✅ CORRECTION SECTION 2 : currentMonth est déjà normalisé (format "Novembre 2025")
+            name: `Quiz ${config.label} - ${currentMonth}`,
             module: config.name,
             color: config.color,
             questions: questions
-        };
+        });
         
         // Réinitialiser l'état
-    currentQuestionIndex = 0;
-    userAnswers = [];
-    startTime = Date.now();
-    questionStartTime = Date.now();
-    currentStreak = 0;
-    isPaused = false;
-    totalPausedDuration = 0;
-    pauseStartedAt = null;
-    hasCurrentQuestionBeenAnswered = false;
+        setCurrentQuestionIndex(0);
+        setUserAnswers([]);
+        setStartTime(Date.now());
+        setQuestionStartTime(Date.now());
+        
+        // ✅ CORRECTION SECTION 9 : Tracker le début du quiz
+        trackQuizStart(moduleId, getCurrentMonth());
+        setCurrentStreak(0);
+        setIsPaused(false);
+        setPausedDuration(0);
+        setPauseStartedAt(null);
+        setHasCurrentQuestionBeenAnswered(false);
         
         // Cacher l'écran de chargement et démarrer
     hideLoadingScreen();
@@ -334,6 +372,7 @@ export async function startQuiz(moduleId) {
         updateLoadingToast(loadingToast, `${questions.length} questions chargées !`, 'success');
         
     } catch (error) {
+        stopTimer(); // ✅ CORRECTION SECTION 3 : Nettoyer le timer en cas d'erreur
         hideLoadingScreen();
         console.error('❌ Erreur lors du démarrage du quiz:', error);
         updateLoadingToast(loadingToast, 'Erreur de chargement', 'error');
@@ -348,7 +387,7 @@ function showLoadingScreen(moduleName) {
         <div class="min-h-screen flex items-center justify-center">
             <div class="text-center">
                 <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-indigo-600 mx-auto mb-6"></div>
-                <h2 class="text-2xl font-bold text-slate-900 mb-2">Chargement du quiz ${moduleName}</h2>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-2">Chargement du quiz ${escapeHtml(moduleName)}</h2>
                 <p class="text-slate-600">Récupération des questions...</p>
             </div>
         </div>
@@ -382,7 +421,8 @@ function getOrCreateQuizView() {
 }
 
 function initializeQuizEventDelegation(quizView) {
-    if (quizEventDelegationInitialized || !quizView) {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+    if (getQuizEventDelegationInitialized() || !quizView) {
         return;
     }
 
@@ -427,15 +467,18 @@ function initializeQuizEventDelegation(quizView) {
         }
     });
 
-    quizEventDelegationInitialized = true;
+    setQuizEventDelegationInitialized(true);
 }
 
 // Rendre la question actuelle
 function renderQuestion() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+    const currentQuiz = getCurrentQuiz();
+    const currentQuestionIndex = getCurrentQuestionIndex();
     const question = currentQuiz.questions[currentQuestionIndex];
     const quizView = document.getElementById('quiz-view');
     const colorScheme = moduleColors[currentQuiz.color];
-    hasCurrentQuestionBeenAnswered = false;
+    setHasCurrentQuestionBeenAnswered(false);
     
     quizView.innerHTML = `
         <!-- En-tête du quiz -->
@@ -443,7 +486,7 @@ function renderQuestion() {
             <div class="max-w-5xl mx-auto px-6 py-4">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h1 class="text-xl font-bold text-slate-900">${currentQuiz.name}</h1>
+                        <h1 class="text-xl font-bold text-slate-900">${escapeHtml(currentQuiz.name)}</h1>
                         <p class="text-sm text-slate-500">Question ${currentQuestionIndex + 1} sur ${currentQuiz.questions.length}</p>
                     </div>
                     <div class="flex items-center gap-6">
@@ -496,7 +539,7 @@ function renderQuestion() {
                     </div>
                     
                     <h2 class="text-2xl font-bold text-slate-900 leading-relaxed">
-                        ${question.question}
+                        ${escapeHtml(question.question)}
                     </h2>
                     
                     <!-- Tags -->
@@ -504,7 +547,7 @@ function renderQuestion() {
                         <div class="flex flex-wrap gap-2 mt-4">
                             ${question.tags.map(tag => `
                                 <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">
-                                    ${tag}
+                                    ${escapeHtml(tag)}
                                 </span>
                             `).join('')}
                         </div>
@@ -515,14 +558,14 @@ function renderQuestion() {
                 <div class="p-8">
                     <div class="space-y-3">
                         ${question.options.map(option => `
-                            <button data-option-id="${option.id}" 
+                            <button data-option-id="${escapeHtml(option.id)}" 
                                     class="option-button w-full text-left px-6 py-5 rounded-xl border-2 border-gray-200 hover:border-${currentQuiz.color}-400 hover:bg-${currentQuiz.color}-50 transition-all duration-200 group">
                                 <div class="flex items-center gap-4">
                                     <div class="flex-shrink-0 w-10 h-10 rounded-lg ${colorScheme.bg} bg-opacity-10 flex items-center justify-center group-hover:bg-opacity-20 transition-colors">
-                                        <span class="text-lg font-bold ${colorScheme.text}">${option.id}</span>
+                                        <span class="text-lg font-bold ${colorScheme.text}">${escapeHtml(option.id)}</span>
                                     </div>
                                     <span class="text-lg text-slate-700 group-hover:text-slate-900 font-medium">
-                                        ${option.text}
+                                        ${escapeHtml(option.text)}
                                     </span>
                                 </div>
                             </button>
@@ -555,15 +598,20 @@ function renderQuestion() {
 
 // Gérer la réponse de l'utilisateur
 function handleAnswer(optionId) {
-    if (hasCurrentQuestionBeenAnswered) {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+    if (getHasCurrentQuestionBeenAnswered()) {
         return;
     }
+    const currentQuiz = getCurrentQuiz();
+    const currentQuestionIndex = getCurrentQuestionIndex();
+    const questionStartTime = getQuestionStartTime();
     const question = currentQuiz.questions[currentQuestionIndex];
     const selectedOption = question.options.find(opt => opt.id === optionId);
     const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
-    hasCurrentQuestionBeenAnswered = true;
+    setHasCurrentQuestionBeenAnswered(true);
     
     // Enregistrer la réponse
+    const userAnswers = getUserAnswers();
     userAnswers.push({
         questionId: question.id,
         question: question.question,
@@ -572,13 +620,16 @@ function handleAnswer(optionId) {
         isCorrect: selectedOption.correct,
         timeSpent: timeSpent
     });
+    setUserAnswers(userAnswers);
     
     // Mettre à jour le streak
+    let currentStreak = getCurrentStreak();
     if (selectedOption.correct) {
         currentStreak++;
     } else {
         currentStreak = 0;
     }
+    setCurrentStreak(currentStreak);
     
     // Désactiver tous les boutons
     document.querySelectorAll('.option-button').forEach(btn => {
@@ -600,6 +651,8 @@ function handleAnswer(optionId) {
 
 // Afficher le feedback de la réponse
 function showAnswerFeedback(selectedId, isCorrect, question) {
+    // ✅ CORRECTION : Utiliser StateManager pour currentQuiz
+    const currentQuiz = getCurrentQuiz();
     const colorScheme = moduleColors[currentQuiz.color];
     const correctOption = question.options.find(opt => opt.correct);
     
@@ -631,8 +684,8 @@ function showAnswerFeedback(selectedId, isCorrect, question) {
                     <h3 class="text-lg font-bold ${isCorrect ? 'text-green-700' : 'text-red-700'} mb-2">
                         ${isCorrect ? '✅ Bonne réponse !' : '❌ Réponse incorrecte'}
                     </h3>
-                    <p class="text-slate-700 mb-2"><strong>Explication :</strong> ${question.explanation}</p>
-                    ${question.reference ? `<p class="text-sm text-slate-500"><strong>Référence :</strong> ${question.reference}</p>` : ''}
+                    <p class="text-slate-700 mb-2"><strong>Explication :</strong> ${escapeHtml(question.explanation)}</p>
+                    ${question.reference ? `<p class="text-sm text-slate-500"><strong>Référence :</strong> ${escapeHtml(question.reference)}</p>` : ''}
                 </div>
             </div>
         `;
@@ -642,10 +695,14 @@ function showAnswerFeedback(selectedId, isCorrect, question) {
 
 // Passer à la question suivante
 function nextQuestion() {
-    questionStartTime = Date.now();
-    currentQuestionIndex++;
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+    setQuestionStartTime(Date.now());
+    const currentQuestionIndex = getCurrentQuestionIndex();
+    setCurrentQuestionIndex(currentQuestionIndex + 1);
     
-    if (currentQuestionIndex < currentQuiz.questions.length) {
+    const currentQuiz = getCurrentQuiz();
+    const newIndex = getCurrentQuestionIndex();
+    if (newIndex < currentQuiz.questions.length) {
         renderQuestion();
     } else {
         showResults();
@@ -654,23 +711,52 @@ function nextQuestion() {
 
 // Afficher les résultats finaux
 function showResults() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
     stopTimer();
     try { window.__QUIZ_ACTIVE = false; } catch (e) {}
     
-    const score = Math.round((userAnswers.filter(a => a.isCorrect).length / userAnswers.length) * 100);
-    let pausedOffset = totalPausedDuration;
+    const userAnswers = getUserAnswers();
+    // ✅ CORRECTION SECTION 2 : Validation avant calcul du score pour éviter division par zéro
+    if (userAnswers.length === 0) {
+        console.error('❌ Aucune réponse enregistrée - quiz invalide');
+        toast.error('Aucune réponse enregistrée. Le quiz ne peut pas être complété.');
+        return;
+    }
+    
+    const correctCount = userAnswers.filter(a => a.isCorrect).length;
+    const score = Math.round((correctCount / userAnswers.length) * 100);
+    
+    // ✅ CORRECTION SECTION 2 : Validation du score calculé
+    if (isNaN(score) || score < 0 || score > 100) {
+        console.error('❌ Score invalide calculé:', score);
+        toast.error('Erreur de calcul du score. Contactez le support.');
+        return;
+    }
+    const pausedDuration = getPausedDuration();
+    const isPaused = getIsPaused();
+    const pauseStartedAt = getPauseStartedAt();
+    let pausedOffset = pausedDuration;
     if (isPaused && pauseStartedAt) {
         pausedOffset += Date.now() - pauseStartedAt;
     }
+    const startTime = getStartTime();
     const totalTime = Math.max(0, Math.floor((Date.now() - startTime - pausedOffset) / 1000));
-    isPaused = false;
-    pauseStartedAt = null;
-    totalPausedDuration = 0;
+    setIsPaused(false);
+    setPauseStartedAt(null);
+    setPausedDuration(0);
     const minutes = Math.floor(totalTime / 60);
     const seconds = totalTime % 60;
     
     // Sauvegarder dans Firestore
     saveQuizToFirestore(score, totalTime);
+    
+    // ✅ CORRECTION : Utiliser StateManager pour currentQuiz
+    const currentQuiz = getCurrentQuiz();
+    if (!currentQuiz) {
+        console.error('❌ currentQuiz non défini dans showResults');
+        toast.error('Erreur: Impossible d\'afficher les résultats. Veuillez réessayer.');
+        return;
+    }
     
     const colorScheme = moduleColors[currentQuiz.color];
     const quizView = document.getElementById('quiz-view');
@@ -741,9 +827,24 @@ function showResults() {
         setTimeout(() => launchConfetti(), 500);
     }
     
+    // ✅ CORRECTION SECTION 9 : Tracker la fin du quiz
+    // currentQuiz est déjà défini plus haut dans la fonction
+    const quizTotalTime = Math.floor((Date.now() - getStartTime()) / 1000);
+    trackQuizComplete(
+        getCurrentModule(),
+        score,
+        quizTotalTime,
+        currentQuiz?.questions?.length || 0
+    );
+    
     // Événements
     document.getElementById('retry-quiz-btn')?.addEventListener('click', () => {
-        startQuiz(currentModule);
+        const currentModule = getCurrentModule();
+        if (currentModule) {
+            startQuiz(currentModule);
+        } else {
+            toast.error('Erreur: Impossible de redémarrer le quiz.');
+        }
     });
     
     document.getElementById('return-dashboard-btn')?.addEventListener('click', returnToDashboard);
@@ -751,10 +852,12 @@ function showResults() {
 
 // Sauvegarder le résultat dans Firestore
 async function saveQuizToFirestore(score, totalTime) {
+    // ✅ CORRECTION SECTION 3 : Nettoyer le timer en cas d'erreur
     try {
         const user = getCurrentUserUnified();
         if (!user) {
             console.log('Aucun utilisateur - résultat non sauvegardé');
+            stopTimer(); // Nettoyer le timer
             return;
         }
         
@@ -762,11 +865,18 @@ async function saveQuizToFirestore(score, totalTime) {
         if (isDemoMode()) {
             console.log('Mode démo - résultat non sauvegardé dans Firestore');
             toast.info('Mode Démo : les résultats ne sont pas sauvegardés');
+            stopTimer(); // Nettoyer le timer
             return;
         }
         
+        // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+        const currentModule = getCurrentModule();
+        const currentMonth = getCurrentMonth();
+        const currentYear = getCurrentYear();
+        const currentQuiz = getCurrentQuiz();
+        const userAnswers = getUserAnswers();
         const moduleDetails = moduleConfig[currentModule] || {};
-        await saveQuizResult({
+        const quizData = {
             moduleId: currentModule,
             moduleName: moduleDetails.name || currentQuiz.module || currentModule,
             score,
@@ -776,23 +886,90 @@ async function saveQuizToFirestore(score, totalTime) {
             answers: userAnswers,
             month: currentMonth,
             year: currentYear
-        });
+        };
         
+        // ✅ CORRECTION SECTION 3 : Utiliser retry automatique avec notification utilisateur
+        await withFirestoreRetry(
+            () => saveQuizResult(quizData),
+            {
+                maxRetries: 3,
+                onRetry: (attempt, delay) => {
+                    toast.info(`Nouvelle tentative de sauvegarde ${attempt}/3...`, 3000);
+                }
+            }
+        );
+        
+        toast.success('Résultat sauvegardé avec succès !', 3000);
         console.log('✅ Résultat sauvegardé dans Firestore');
     } catch (error) {
         console.error('❌ Erreur lors de la sauvegarde:', error);
+        stopTimer(); // ✅ CORRECTION SECTION 3 : Nettoyer le timer en cas d'erreur
+        
+        // ✅ CORRECTION SECTION 3 : Informer l'utilisateur de l'erreur
+        toast.error('Erreur lors de la sauvegarde. Le résultat sera sauvegardé localement et synchronisé plus tard.', 8000);
+        
+        // ✅ CORRECTION SECTION 8 : Utiliser la file d'attente globale
+        try {
+            // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+            const currentModule = getCurrentModule();
+            const currentMonth = getCurrentMonth();
+            const currentYear = getCurrentYear();
+            const userAnswers = getUserAnswers();
+            
+            const resultData = {
+                moduleId: currentModule,
+                moduleName: moduleConfig[currentModule]?.name || currentModule,
+                score: score,
+                correctAnswers: userAnswers.filter(a => a.isCorrect).length,
+                totalQuestions: userAnswers.length,
+                timeElapsed: totalTime,
+                answers: userAnswers,
+                month: currentMonth,
+                year: currentYear
+            };
+            
+            // ✅ CORRECTION SECTION 8 : Ajouter à la file d'attente globale
+            const { syncQueue } = await import('./sync-queue.js');
+            await syncQueue.add('quizResult', async (data) => {
+                await saveQuizResult(data);
+            }, resultData);
+            
+            console.log('✅ Résultat ajouté à la file d\'attente de synchronisation');
+        } catch (queueError) {
+            console.error('❌ Erreur ajout à la file d\'attente:', queueError);
+            // Fallback sur localStorage si IndexedDB n'est pas disponible
+            try {
+                const queueKey = `quiz_result_${Date.now()}`;
+                localStorage.setItem(queueKey, JSON.stringify({
+                    score,
+                    totalTime,
+                    moduleId: getCurrentModule(),
+                    month: getCurrentMonth(),
+                    year: getCurrentYear(),
+                    userAnswers: getUserAnswers(),
+                    timestamp: Date.now()
+                }));
+            } catch (localError) {
+                console.error('❌ Erreur sauvegarde locale de secours:', localError);
+            }
+        }
     }
 }
 
 // Timer du quiz
 function startTimer() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
     stopTimer();
-    timerInterval = setInterval(() => {
+    const interval = setInterval(() => {
+        const startTime = getStartTime();
         if (startTime === null) {
             return;
         }
 
-        let pausedOffset = totalPausedDuration;
+        const pausedDuration = getPausedDuration();
+        const isPaused = getIsPaused();
+        const pauseStartedAt = getPauseStartedAt();
+        let pausedOffset = pausedDuration;
         if (isPaused && pauseStartedAt) {
             pausedOffset += Date.now() - pauseStartedAt;
         }
@@ -806,18 +983,36 @@ function startTimer() {
             timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
         }
     }, 1000);
+    setTimerInterval(interval);
 }
 
 function stopTimer() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+    const timerInterval = getTimerInterval();
     if (timerInterval) {
         clearInterval(timerInterval);
-        timerInterval = null;
+        setTimerInterval(null);
     }
-    pauseStartedAt = null;
+    setPauseStartedAt(null);
 }
+
+// ✅ CORRECTION SECTION 3 : Nettoyer le timer sur toutes les sorties (beforeunload, erreurs)
+// Nettoyer le timer quand l'utilisateur quitte la page
+window.addEventListener('beforeunload', () => {
+    stopTimer();
+});
+
+// Nettoyer le timer quand la page est cachée (onglet inactif)
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // Optionnel : on peut aussi nettoyer ici si nécessaire
+    }
+});
 
 // Mettre à jour l'affichage du score
 function updateScoreDisplay() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+    const userAnswers = getUserAnswers();
     if (userAnswers.length === 0) return;
     
     const score = Math.round((userAnswers.filter(a => a.isCorrect).length / userAnswers.length) * 100);
@@ -834,22 +1029,27 @@ function toggleFocusMode() {
 
 // Pause
 function togglePause() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
     const pauseBtn = document.getElementById('pause-btn');
     if (!pauseBtn) {
         return;
     }
 
+    const isPaused = getIsPaused();
     if (!isPaused) {
-        isPaused = true;
-        pauseStartedAt = Date.now();
+        setIsPaused(true);
+        setPauseStartedAt(Date.now());
         pauseBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Reprendre';
         toast.warning('Quiz en pause. Cliquez sur "Reprendre" pour continuer.', 3000);
     } else {
-        isPaused = false;
+        // ✅ CORRECTION SECTION 5 : Utiliser StateManager
+        setIsPaused(false);
+        const pauseStartedAt = getPauseStartedAt();
         if (pauseStartedAt) {
-            totalPausedDuration += Date.now() - pauseStartedAt;
+            const pausedDuration = getPausedDuration();
+            setPausedDuration(pausedDuration + (Date.now() - pauseStartedAt));
         }
-        pauseStartedAt = null;
+        setPauseStartedAt(null);
         pauseBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Pause';
         toast.success('Quiz repris !', 2000);
     }
@@ -857,12 +1057,13 @@ function togglePause() {
 
 // Retour au dashboard
 function returnToDashboard() {
+    // ✅ CORRECTION SECTION 5 : Utiliser StateManager
     stopTimer();
     try { window.__QUIZ_ACTIVE = false; } catch (e) {}
-    isPaused = false;
-    totalPausedDuration = 0;
-    pauseStartedAt = null;
-    hasCurrentQuestionBeenAnswered = false;
+    setIsPaused(false);
+    setPausedDuration(0);
+    setPauseStartedAt(null);
+    setHasCurrentQuestionBeenAnswered(false);
     document.getElementById('quiz-view')?.classList.add('view-hidden');
     document.getElementById('dashboard-view')?.classList.remove('view-hidden');
     

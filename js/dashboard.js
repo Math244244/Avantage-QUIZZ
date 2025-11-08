@@ -7,16 +7,24 @@ import {
     getUserQuizResults,
     updateStreak
 } from './firestore-service.js';
+// Import des utilitaires de mois (Section 2 - Correction logique mensuelle)
+import { MONTH_NAMES, getCurrentMonthIndex, getCurrentYear, normalizeMonthFormat } from './month-utils.js';
+// ✅ CORRECTION SECTION 4 : Protection XSS
+import { escapeHtml } from './security.js';
+// ✅ CORRECTION SECTION 5 : StateManager - Centralisation des variables globales
+import { stateManager } from './state-manager.js';
+// ✅ CORRECTION SECTION 9 : Analytics
+import { trackPageView } from './analytics.js';
 
 // --- CONSTANTES GLOBALES ---
-const currentMonthIndex = 10; // 0 = Jan, 10 = Nov (Novembre 2025)
-const MONTH_NAMES = [
-    'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
-    'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
-];
+// ✅ CORRECTION SECTION 2 : Utilise la date réelle au lieu d'une valeur hardcodée
+const currentMonthIndex = getCurrentMonthIndex(); // 0-11, change automatiquement chaque mois
+const MONTH_NAMES_IMPORTED = MONTH_NAMES; // Alias pour compatibilité
 
+// ✅ CORRECTION SECTION 5 : StateManager - Initialiser monthsData dans le StateManager
 // Données des mois (sera remplacé par les données Firebase)
-let monthsData = MONTH_NAMES.map(name => ({ name, score: null }));
+stateManager.set('monthsData', MONTH_NAMES_IMPORTED.map(name => ({ name, score: null })));
+stateManager.set('currentMonthIndex', currentMonthIndex);
 
 // --- ÉLÉMENTS DOM ---
 const views = {
@@ -37,7 +45,8 @@ const elements = {
     signoutLink: document.getElementById('signout-link')
 };
 
-let dashboardEventDelegationAttached = false;
+// ✅ CORRECTION SECTION 5 : StateManager - dashboardEventDelegationAttached migré vers StateManager
+stateManager.set('dashboardEventDelegationAttached', false);
 
 // --- FONCTIONS DE NAVIGATION ---
 
@@ -125,6 +134,9 @@ function createCompletedCard(month, score) {
     };
     
     const style = getScoreStyle(score);
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    const safeMonth = escapeHtml(month);
+    const safeScore = escapeHtml(score);
     
     return `
         <div class="card-hover relative bg-gradient-to-br ${style.bg} p-6 rounded-2xl shadow-lg hover:shadow-xl border border-white/20 flex flex-col items-center cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group">
@@ -136,15 +148,18 @@ function createCompletedCard(month, score) {
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4 drop-shadow-md">${month}</h3>
+            <h3 class="text-xl font-bold text-white mb-4 drop-shadow-md">${safeMonth}</h3>
             ${createProgressRing(score)}
-            <span class="mt-4 text-sm font-semibold text-white/95 bg-white/15 px-3 py-1.5 rounded-full backdrop-blur-sm">Score: ${score}%</span>
+            <span class="mt-4 text-sm font-semibold text-white/95 bg-white/15 px-3 py-1.5 rounded-full backdrop-blur-sm">Score: ${safeScore}%</span>
             <a href="#" class="mt-3 text-sm font-medium text-white/90 hover:text-white underline decoration-2 underline-offset-2 opacity-0 group-hover:opacity-100 transition-opacity">Voir détails →</a>
         </div>
     `;
 }
 
 function createLockedCard(month) {
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    const safeMonth = escapeHtml(month);
+    
     return `
         <div class="relative bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 p-6 rounded-2xl border border-slate-300 flex flex-col items-center justify-center min-h-[260px] shadow-sm overflow-hidden">
             <!-- Motif subtil -->
@@ -164,7 +179,7 @@ function createLockedCard(month) {
                 </div>
             </div>
             
-            <h3 class="text-xl font-bold text-slate-700 mb-2">${month}</h3>
+            <h3 class="text-xl font-bold text-slate-700 mb-2">${safeMonth}</h3>
             <div class="flex items-center gap-2 text-sm text-slate-500 bg-white px-3 py-1.5 rounded-lg">
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -176,6 +191,9 @@ function createLockedCard(month) {
 }
 
 function createIncompleteCard(month) {
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    const safeMonth = escapeHtml(month);
+    
     return `
         <div class="card-hover relative bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl shadow-sm hover:shadow-md border border-amber-200 flex flex-col items-center justify-center min-h-[260px] cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group overflow-hidden">
             <!-- Badge à compléter -->
@@ -192,7 +210,7 @@ function createIncompleteCard(month) {
                 </div>
             </div>
             
-            <h3 class="text-xl font-bold text-slate-700 mb-2">${month}</h3>
+            <h3 class="text-xl font-bold text-slate-700 mb-2">${safeMonth}</h3>
             <span class="text-sm text-amber-600 text-center font-medium mb-3">Mois manqué - Rattrapez-le !</span>
             
             <!-- Barre de progression -->
@@ -210,6 +228,9 @@ function createIncompleteCard(month) {
 }
 
 function createActiveCard(month) {
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    const safeMonth = escapeHtml(month);
+    
     return `
         <div class="card-hover relative bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 p-6 rounded-2xl shadow-xl hover:shadow-2xl border border-indigo-400/30 flex flex-col items-center justify-center min-h-[260px] ring-2 ring-indigo-400/20 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group overflow-hidden">
             <!-- Effet de brillance subtil -->
@@ -229,7 +250,7 @@ function createActiveCard(month) {
                 </div>
             </div>
             
-            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">${month}</h3>
+            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">${safeMonth}</h3>
             <p class="text-white/90 text-sm font-medium mb-4 bg-white/10 px-3 py-1 rounded-lg backdrop-blur-sm">🎯 Prêt à être complété</p>
             
             <!-- Bouton CTA -->
@@ -248,6 +269,8 @@ function createActiveCard(month) {
 // --- INITIALISATION DU DASHBOARD ---
 
 function calculateStreak() {
+    // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+    const monthsData = stateManager.get('monthsData');
     let streak = 0;
     for (let i = currentMonthIndex - 1; i >= 0; i--) {
         if (monthsData[i].score !== null && monthsData[i].score >= 60) {
@@ -282,8 +305,13 @@ async function loadDashboardData() {
         const progress = await getAnnualProgress(user.uid);
         
         // Mettre à jour monthsData avec les vraies données
+        // ✅ CORRECTION SECTION 2 : Normaliser le format du mois pour garantir la correspondance
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+        const currentYear = getCurrentYear();
+        let monthsData = stateManager.get('monthsData');
         monthsData = monthsData.map((month, index) => {
-            const monthKey = `${month.name} ${new Date().getFullYear()}`;
+            // Normaliser le format du mois pour garantir la correspondance
+            const monthKey = normalizeMonthFormat(month.name, currentYear);
             if (progress[monthKey]) {
                 return {
                     name: month.name,
@@ -312,13 +340,15 @@ async function initializeDashboard() {
         return;
     }
     
-    // Charger les données Firebase en premier
-    await loadDashboardData();
-    
-    elements.modulesGrid.innerHTML = '';
-    let completedCount = 0;
+        // Charger les données Firebase en premier
+        await loadDashboardData();
+        
+        elements.modulesGrid.innerHTML = '';
+        let completedCount = 0;
 
-    monthsData.forEach((month, index) => {
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+        const currentMonthsData = stateManager.get('monthsData');
+        currentMonthsData.forEach((month, index) => {
         let cardHtml = '';
         if (index < currentMonthIndex) {
             // Mois passés : vérifier s'ils sont complétés ou non
@@ -411,6 +441,8 @@ function createScoresTrendChart() {
     const ctx = document.getElementById('scores-trend-chart');
     if (!ctx) return;
     
+    // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+    const monthsData = stateManager.get('monthsData');
     const completedMonths = monthsData.filter((m, i) => i < currentMonthIndex);
     
     new Chart(ctx, {
@@ -497,6 +529,7 @@ function createActivityHeatmap() {
     }
     
     heatmapHTML += '</div>';
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Le HTML généré ici ne contient pas de données utilisateur, donc safe
     container.innerHTML = heatmapHTML;
 }
 
@@ -522,7 +555,10 @@ function attachNavigationListeners() {
     // Navigation - Quiz (ouvre la sélection de modules)
     document.getElementById('nav-quiz')?.addEventListener('click', (e) => {
         e.preventDefault();
-        const activeMonth = monthsData[currentMonthIndex].name;
+        // ✅ CORRECTION SECTION 4 : Protection XSS - Utiliser textContent (échappement automatique)
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+        const monthsData = stateManager.get('monthsData');
+        const activeMonth = monthsData[currentMonthIndex]?.name || 'ce mois';
         elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
         showView('moduleSelection');
         updateActiveNavLink('nav-quiz');
@@ -566,7 +602,8 @@ function attachNavigationListeners() {
 }
 
 function initializeDashboardEventDelegation() {
-    if (dashboardEventDelegationAttached) {
+    // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour dashboardEventDelegationAttached
+    if (stateManager.get('dashboardEventDelegationAttached')) {
         return;
     }
 
@@ -574,7 +611,10 @@ function initializeDashboardEventDelegation() {
         const startButton = event.target.closest('.start-quiz-button');
         if (startButton) {
             event.preventDefault();
-            const activeMonth = monthsData[currentMonthIndex].name;
+            // ✅ CORRECTION SECTION 4 : Protection XSS - Utiliser textContent (échappement automatique)
+            // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+            const monthsData = stateManager.get('monthsData');
+            const activeMonth = monthsData[currentMonthIndex]?.name || 'ce mois';
             elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
             showView('moduleSelection');
             updateActiveNavLink('nav-quiz');
@@ -599,19 +639,24 @@ function initializeDashboardEventDelegation() {
         }
     });
 
-    dashboardEventDelegationAttached = true;
+    // ✅ CORRECTION SECTION 5 : StateManager - Sauvegarder dans StateManager
+    stateManager.set('dashboardEventDelegationAttached', true);
 }
 
 // --- GESTION DE L'AUTHENTIFICATION ---
 
 function updateUserProfile(user) {
     if (user) {
+        // ✅ CORRECTION SECTION 4 : Protection XSS - Utiliser textContent (échappement automatique)
         elements.userName.textContent = user.displayName || 'Utilisateur';
         elements.userAvatar.src = user.photoURL || 'https://placehold.co/100x100/667eea/e0e7ff?text=' + (user.displayName?.[0] || 'U');
         
-        // Message de bienvenue personnalisé
+        // Message de bienvenue personnalisé - textContent échappe automatiquement
+        // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+        const monthsData = stateManager.get('monthsData');
         const firstName = user.displayName?.split(' ')[0] || 'Utilisateur';
-        elements.welcomeMessage.textContent = `Bonjour ${firstName}, prêt à relever votre défi de ${monthsData[currentMonthIndex].name} ?`;
+        const monthName = monthsData[currentMonthIndex]?.name || 'ce mois';
+        elements.welcomeMessage.textContent = `Bonjour ${firstName}, prêt à relever votre défi de ${monthName} ?`;
     }
 }
 
@@ -650,6 +695,8 @@ function toggleTheme() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // ✅ CORRECTION SECTION 9 : Tracker la page vue
+    trackPageView('Dashboard', '/index.html');
     console.log('🚀 Initialisation de QuizPro...');
 
     // Initialiser le thème

@@ -5,6 +5,8 @@ import { onAuthChange, signOutUser } from './auth.js';
 import { getUserProfile } from './firestore-service.js';
 import { toast } from './toast.js';
 import { logger } from './logger.js';
+// ✅ CORRECTION SECTION 4 : Protection XSS - Utiliser escapeHtml centralisé
+import { escapeHtml } from './security.js';
 import {
     createResultSkeleton,
     createStatsSkeleton,
@@ -210,6 +212,9 @@ function updateGlobalStats() {
         ? Math.round(totalTime / totalQuizzes) 
         : 0;
     
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Les valeurs numériques sont safe, mais formatTime() peut retourner du texte
+    const safeAvgTime = escapeHtml(formatTime(avgTime));
+    
     statsContainer.innerHTML = `
         <div class="bg-white rounded-xl shadow-md p-6 fade-in">
             <div class="flex items-center gap-4">
@@ -262,7 +267,7 @@ function updateGlobalStats() {
                 </div>
                 <div>
                     <p class="text-sm text-slate-500">Temps moyen</p>
-                    <p class="text-3xl font-bold text-slate-900">${formatTime(avgTime)}</p>
+                    <p class="text-3xl font-bold text-slate-900">${safeAvgTime}</p>
                 </div>
             </div>
         </div>
@@ -407,6 +412,7 @@ function createResultCardElement(result) {
         : 'Date inconnue';
 
     const scoreColor = result.score >= 80 ? 'text-green-600' : result.score >= 60 ? 'text-yellow-600' : 'text-red-600';
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper toutes les données utilisateur
     const moduleLabel = escapeHtml(moduleNames[result.module] || result.module || 'Module');
     const monthLabelRaw = result.month ? String(result.month).trim() : '';
     const yearLabelRaw = result.year ? String(result.year).trim() : '';
@@ -595,12 +601,13 @@ function openResultDetails(resultId) {
         return;
     }
 
-    const moduleLabel = moduleNames[result.module] || result.module || 'Module';
-    const periodLabel = [result.month, result.year].filter(Boolean).join(' ');
+    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper toutes les données utilisateur
+    const moduleLabel = escapeHtml(moduleNames[result.module] || result.module || 'Module');
+    const periodLabel = escapeHtml([result.month, result.year].filter(Boolean).join(' '));
     const scoreValue = Number.isFinite(result.score) ? result.score : 0;
     const correctAnswersValue = Number.isFinite(result.correctAnswers) ? result.correctAnswers : 0;
     const totalQuestionsValue = Number.isFinite(result.totalQuestions) ? result.totalQuestions : 0;
-    const timeDisplay = formatTime(result.timeSpent || 0);
+    const timeDisplay = escapeHtml(formatTime(result.timeSpent || 0));
     const answers = Array.isArray(result.answers) ? result.answers : [];
 
     const modal = document.createElement('div');
@@ -617,6 +624,7 @@ function openResultDetails(resultId) {
     title.textContent = 'Détails du quiz';
     const subtitle = document.createElement('p');
     subtitle.className = 'text-indigo-100 mt-1';
+    // ✅ CORRECTION SECTION 4 : Protection XSS - textContent échappe automatiquement
     subtitle.textContent = periodLabel ? `${moduleLabel} - ${periodLabel}` : moduleLabel;
     header.append(title, subtitle);
     dialog.appendChild(header);
@@ -682,6 +690,7 @@ function openResultDetails(resultId) {
 
             const questionText = document.createElement('p');
             questionText.className = 'text-sm text-slate-700 mb-2';
+            // ✅ CORRECTION SECTION 4 : Protection XSS - textContent échappe automatiquement
             questionText.textContent = answer.question || 'Question indisponible';
             content.appendChild(questionText);
 
@@ -692,11 +701,13 @@ function openResultDetails(resultId) {
                 const userAnswer = document.createElement('p');
                 const userLabel = document.createElement('strong');
                 userLabel.textContent = 'Votre réponse :';
+                // ✅ CORRECTION SECTION 4 : Protection XSS - textContent échappe automatiquement
                 userAnswer.append(userLabel, document.createTextNode(` ${answer.selectedAnswer || 'N/A'}`));
 
                 const correctAnswer = document.createElement('p');
                 const correctLabel = document.createElement('strong');
                 correctLabel.textContent = 'Bonne réponse :';
+                // ✅ CORRECTION SECTION 4 : Protection XSS - textContent échappe automatiquement
                 correctAnswer.append(correctLabel, document.createTextNode(` ${answer.correctAnswer || 'N/A'}`));
 
                 diff.append(userAnswer, correctAnswer);
@@ -762,17 +773,7 @@ function formatTime(seconds) {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-function escapeHtml(text) {
-    if (text === null || text === undefined) {
-        return '';
-    }
-    return String(text)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-}
+// ✅ CORRECTION SECTION 4 : Fonction escapeHtml() supprimée - Utiliser celle de security.js
 
 // Déconnexion
 async function handleLogout() {

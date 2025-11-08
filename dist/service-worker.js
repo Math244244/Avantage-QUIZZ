@@ -1,7 +1,9 @@
-const CACHE_VERSION = '2025-11-08-v2.0.4';
+// ✅ CORRECTION SECTION 8 : Gestion Offline Complète - Version mise à jour
+const CACHE_VERSION = '2025-11-08-v2.0.5-offline';
 const STATIC_CACHE = `avantage-quizz-static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `avantage-quizz-dynamic-${CACHE_VERSION}`;
 const API_CACHE = `avantage-quizz-api-${CACHE_VERSION}`;
+const QUESTIONS_CACHE = `avantage-quizz-questions-${CACHE_VERSION}`;
 
 const CORE_ASSETS = [
   '/',
@@ -41,7 +43,7 @@ self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     const cacheNames = await caches.keys();
     const deletions = cacheNames
-      .filter((name) => ![STATIC_CACHE, DYNAMIC_CACHE, API_CACHE].includes(name))
+      .filter((name) => ![STATIC_CACHE, DYNAMIC_CACHE, API_CACHE, QUESTIONS_CACHE].includes(name))
       .map((name) => caches.delete(name));
 
     await Promise.all(deletions);
@@ -80,6 +82,15 @@ self.addEventListener('fetch', (event) => {
     }
   }
 
+  // ✅ CORRECTION SECTION 8 : Cache des questions pour mode offline
+  if (url.hostname.includes('firestore.googleapis.com') && url.pathname.includes('/documents')) {
+    // Vérifier si c'est une requête de questions
+    if (url.searchParams.get('collectionId') === 'questions' || url.pathname.includes('questions')) {
+      event.respondWith(cacheQuestions(request));
+      return;
+    }
+  }
+  
   if (url.hostname.includes('firebaseio.com') || url.hostname.includes('firestore.googleapis.com')) {
     event.respondWith(networkFirstApi(request));
     return;
@@ -150,4 +161,35 @@ async function staleWhileRevalidate(request) {
     .catch(() => cachedResponse);
 
   return cachedResponse || networkPromise;
+}
+
+// ✅ CORRECTION SECTION 8 : Cache des questions pour mode offline
+async function cacheQuestions(request) {
+  const cache = await caches.open(QUESTIONS_CACHE);
+  
+  try {
+    // Essayer d'abord le réseau
+    const response = await fetch(request);
+    
+    if (response.ok) {
+      // Mettre en cache pour usage offline
+      cache.put(request, response.clone());
+      return response;
+    }
+    
+    // Si erreur réseau, essayer le cache
+    const cachedResponse = await cache.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    throw new Error('Network error and no cache');
+  } catch (error) {
+    // En cas d'erreur, retourner le cache si disponible
+    const cachedResponse = await cache.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    throw error;
+  }
 }

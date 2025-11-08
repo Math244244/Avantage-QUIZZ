@@ -2,6 +2,7 @@
 import { db } from './firebase-config.js';
 import { collection, query, where, orderBy, onSnapshot, addDoc, updateDoc, doc, deleteDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 import { toast } from './toast.js';
+import { escapeHtml } from './security.js';
 
 // État
 let notificationsListener = null;
@@ -89,12 +90,16 @@ export async function createNotification(userId, data) {
  * Afficher une notification sous forme de toast
  */
 function showNotificationToast(notification) {
-    const message = `<strong>${notification.title}</strong><br>${notification.message}`;
+    // ✅ CORRECTION SECTION 4 : Protection XSS - escapeHtml appliqué dans toast.js
+    // On passe les messages séparément pour que toast.js puisse les échapper
+    const title = escapeHtml(notification.title);
+    const message = escapeHtml(notification.message);
+    const fullMessage = `${title}<br>${message}`;
     
     if (notification.actionUrl && notification.actionText) {
-        toast.info(message, 5000);
+        toast.info(fullMessage, 5000);
     } else {
-        toast.info(message, 4000);
+        toast.info(fullMessage, 4000);
     }
 }
 
@@ -288,13 +293,13 @@ function renderNotificationsList() {
                     </div>
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-semibold text-slate-900 ${notification.read ? '' : 'text-indigo-900'}">
-                            ${notification.title}
+                            ${escapeHtml(notification.title)}
                         </p>
-                        <p class="text-sm text-slate-600 mt-1">${notification.message}</p>
-                        <p class="text-xs text-slate-500 mt-2">${timeAgo}</p>
+                        <p class="text-sm text-slate-600 mt-1">${escapeHtml(notification.message)}</p>
+                        <p class="text-xs text-slate-500 mt-2">${escapeHtml(timeAgo)}</p>
                         ${notification.actionUrl ? `
-                            <a href="${notification.actionUrl}" class="inline-block mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-700">
-                                ${notification.actionText || 'Voir plus'} →
+                            <a href="${escapeHtml(notification.actionUrl)}" class="inline-block mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-700">
+                                ${escapeHtml(notification.actionText || 'Voir plus')} →
                             </a>
                         ` : ''}
                     </div>

@@ -1,5 +1,6 @@
 // Système de Notifications Toast - Feedback utilisateur moderne
 // Utilisation: showToast('Message', 'success|error|warning|info')
+import { escapeHtml } from './security.js';
 
 /**
  * Afficher une notification toast
@@ -57,7 +58,7 @@ function createToastElement(message, type) {
                 ${config.icon}
             </div>
             <div class="flex-1">
-                <p class="text-sm font-medium text-slate-900">${message}</p>
+                <p class="text-sm font-medium text-slate-900">${escapeHtml(message)}</p>
             </div>
             <button class="toast-close flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,9 +162,9 @@ export function showToastWithAction(message, type, actionText, actionCallback) {
                 ${config.icon}
             </div>
             <div class="flex-1">
-                <p class="text-sm font-medium text-slate-900 mb-2">${message}</p>
+                <p class="text-sm font-medium text-slate-900 mb-2">${escapeHtml(message)}</p>
                 <button class="toast-action text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors">
-                    ${actionText}
+                    ${escapeHtml(actionText)}
                 </button>
             </div>
             <button class="toast-close flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors">
@@ -205,7 +206,7 @@ export function showLoadingToast(message) {
                 <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
             </div>
             <div class="flex-1">
-                <p class="text-sm font-medium text-slate-900">${message}</p>
+                <p class="text-sm font-medium text-slate-900">${escapeHtml(message)}</p>
             </div>
         </div>
     `;
@@ -235,7 +236,7 @@ export function updateLoadingToast(toast, message, type = 'success') {
                 ${config.icon}
             </div>
             <div class="flex-1">
-                <p class="text-sm font-medium text-slate-900">${message}</p>
+                <p class="text-sm font-medium text-slate-900">${escapeHtml(message)}</p>
             </div>
             <button class="toast-close flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

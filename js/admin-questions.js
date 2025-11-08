@@ -1,6 +1,7 @@
 // Admin Questions Manager - Gestion des questions de quiz
 import { 
     getQuestions, 
+    getQuestionsPaginated, // ✅ CORRECTION SECTION 7 : Pagination
     createQuestion, 
     updateQuestion, 
     deleteQuestion,
