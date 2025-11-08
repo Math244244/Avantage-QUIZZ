@@ -17,12 +17,13 @@
   top: 0;
   bottom: 0;
   width: 280px;
-  background: var(--ap-gradient-sidebar);
-  border-right: 3px solid var(--ap-gold);
+  /* Dégradé rouge plus lumineux et visible */
+  background: linear-gradient(180deg, #C41E3A 0%, #DC1F32 50%, #C41E3A 100%);
+  border-right: 4px solid var(--ap-gold);
   overflow-y: auto;
   z-index: var(--ap-z-fixed);
   transition: all 0.3s var(--ap-ease-smooth);
-  box-shadow: 4px 0 20px rgba(139, 20, 41, 0.3);
+  box-shadow: 4px 0 30px rgba(196, 30, 58, 0.5);
 }
 
 /* Scrollbar personnalisée pour sidebar */
@@ -50,18 +51,35 @@
 .sidebar-logo-container {
   padding: 32px 24px;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--ap-gold);
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.sidebar-logo-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: var(--ap-gradient-gold);
+  box-shadow: 0 0 10px var(--ap-gold);
 }
 
 .sidebar-logo {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 4px 20px rgba(255, 215, 0, 0.4));
   animation: logoPulse 3s ease-in-out infinite;
   transition: transform 0.3s var(--ap-ease-smooth);
+  border: 3px solid var(--ap-gold);
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
 }
 
 .sidebar-logo:hover {
@@ -80,12 +98,13 @@
 
 .sidebar-brand-text {
   margin-top: 16px;
-  font-size: var(--ap-text-lg);
-  font-weight: var(--ap-font-bold);
-  color: var(--ap-gold);
+  font-size: var(--ap-text-xl);
+  font-weight: var(--ap-font-extrabold);
+  color: white;
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: var(--ap-tracking-wide);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px var(--ap-gold);
+  letter-spacing: var(--ap-tracking-wider);
+  text-transform: uppercase;
 }
 
 /* ========================================
@@ -109,41 +128,33 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 24px;
+  padding: 16px 24px;
+  margin: 4px 12px;
   color: white;
   text-decoration: none;
   font-size: var(--ap-text-base);
-  font-weight: var(--ap-font-medium);
+  font-weight: var(--ap-font-semibold);
   transition: all 0.3s var(--ap-ease-smooth);
   cursor: pointer;
-  border-left: 4px solid transparent;
+  border-left: 5px solid transparent;
+  border-radius: 8px;
   position: relative;
-}
-
-.sidebar-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0;
-  background: var(--ap-gold);
-  transition: width 0.3s var(--ap-ease-smooth);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(5px);
-}
-
-.sidebar-item:hover::before {
-  width: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-left-color: var(--ap-gold);
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-item.active {
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.05) 100%);
   border-left-color: var(--ap-gold);
-  font-weight: var(--ap-font-semibold);
+  border-left-width: 5px;
+  font-weight: var(--ap-font-bold);
+  box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .sidebar-item.active .sidebar-item-icon {
@@ -184,17 +195,17 @@
    ======================================== */
 
 .sidebar-admin-badge {
-  margin: 16px 24px;
-  padding: 12px 20px;
+  margin: 0 0 16px 0;
+  padding: 14px 20px;
   background: var(--ap-gradient-gold);
   color: var(--ap-red-dark);
-  border-radius: 24px;
+  border-radius: 12px;
   text-align: center;
-  font-weight: var(--ap-font-bold);
+  font-weight: var(--ap-font-black);
   font-size: var(--ap-text-sm);
   text-transform: uppercase;
-  letter-spacing: var(--ap-tracking-wide);
-  box-shadow: var(--ap-shadow-gold);
+  letter-spacing: var(--ap-tracking-widest);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
   animation: shimmerGold 2s ease-in-out infinite;
   display: flex;
   align-items: center;
@@ -202,11 +213,12 @@
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s var(--ap-ease-smooth);
+  border: 2px solid var(--ap-gold-dark);
 }
 
 .sidebar-admin-badge:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
 }
 
 .sidebar-admin-badge-icon {
@@ -223,26 +235,29 @@
   left: 0;
   right: 0;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid var(--ap-gold);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-user-profile {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  border: 2px solid var(--ap-gold);
+  border: 3px solid var(--ap-gold);
   transition: all 0.3s var(--ap-ease-smooth);
   cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
 .sidebar-user-profile:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  border-color: var(--ap-gold-dark);
 }
 
 .sidebar-user-avatar {

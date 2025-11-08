@@ -1,4 +1,5 @@
 # 🎨 PLAN COMPLET DE REFONTE ESTHÉTIQUE
+
 ## Application QuizPro - Branding Avantage Plus
 
 ---
@@ -16,6 +17,7 @@
 ## 🎯 PHASE 0: PRÉPARATION DES ASSETS (ACTUELLE)
 
 ### ✅ Dossiers Créés
+
 ```
 assets/
   └── images/
@@ -42,7 +44,7 @@ assets/
    - Destination: `assets/images/logos/logo-avantage-plus-red-transparent.png`
    - Action: Clic droit → Enregistrer sous...
 
-**📖 Instructions Détaillées:** 
+**📖 Instructions Détaillées:**
 Consultez: `assets/images/logos/INSTRUCTIONS-AJOUT-IMAGES.md`
 
 ---
@@ -50,45 +52,49 @@ Consultez: `assets/images/logos/INSTRUCTIONS-AJOUT-IMAGES.md`
 ## 🚀 PHASE 1: FONDATIONS (Dès que logos ajoutés)
 
 ### Semaine 1 - Jour 1-2: Système de Couleurs
+
 **Durée:** 8-10 heures
 
 **Fichiers à Créer/Modifier:**
 
 #### 1. `css/colors-avantage-plus.css`
+
 ```css
 /* Palette de Couleurs Avantage Plus */
 :root {
   /* Rouge Principal (Brand) */
-  --ap-red-primary: #C41E3A;
-  --ap-red-dark: #8B1429;
-  --ap-red-light: #E63946;
-  --ap-red-bg: #DC1F32;
-  
+  --ap-red-primary: #c41e3a;
+  --ap-red-dark: #8b1429;
+  --ap-red-light: #e63946;
+  --ap-red-bg: #dc1f32;
+
   /* Blanc/Gris (Complémentaires) */
-  --ap-white: #FFFFFF;
-  --ap-gray-50: #F8F9FA;
-  --ap-gray-600: #6C757D;
-  --ap-gray-900: #343A40;
-  
+  --ap-white: #ffffff;
+  --ap-gray-50: #f8f9fa;
+  --ap-gray-600: #6c757d;
+  --ap-gray-900: #343a40;
+
   /* Doré (Accent Premium) */
-  --ap-gold: #FFD700;
-  --ap-gold-light: #FFF4CC;
-  
+  --ap-gold: #ffd700;
+  --ap-gold-light: #fff4cc;
+
   /* Fonctionnels */
-  --ap-success: #28A745;
-  --ap-info: #17A2B8;
-  --ap-warning: #FFC107;
-  
+  --ap-success: #28a745;
+  --ap-info: #17a2b8;
+  --ap-warning: #ffc107;
+
   /* Dégradés */
-  --ap-gradient-primary: linear-gradient(135deg, #C41E3A 0%, #8B1429 100%);
-  --ap-gradient-card: linear-gradient(to bottom, #FFFFFF 0%, #FFF4F5 100%);
-  --ap-gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  --ap-gradient-active: linear-gradient(to right, #E63946 0%, #C41E3A 100%);
+  --ap-gradient-primary: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+  --ap-gradient-card: linear-gradient(to bottom, #ffffff 0%, #fff4f5 100%);
+  --ap-gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+  --ap-gradient-active: linear-gradient(to right, #e63946 0%, #c41e3a 100%);
 }
 ```
 
 #### 2. Remplacer Toutes les Couleurs Actuelles
+
 **Fichiers à Modifier:**
+
 - `css/output.css` (si Tailwind configuré)
 - `tailwind.config.js`
 - `js/dashboard.js` (couleurs hardcodées)
@@ -96,6 +102,7 @@ Consultez: `assets/images/logos/INSTRUCTIONS-AJOUT-IMAGES.md`
 - `js/admin-dashboard.js` (couleurs graphiques)
 
 **Mapping:**
+
 ```
 AVANT → APRÈS
 Indigo (#4F46E5) → Rouge Avantage Plus (#C41E3A)
@@ -107,26 +114,32 @@ Orange (#F97316) → Doré (#FFD700)
 ---
 
 ### Semaine 1 - Jour 3-4: Typographie & Layout
+
 **Durée:** 8-10 heures
 
 #### 1. Intégrer Google Fonts
+
 **Modifier:** `index.html`, `admin.html`, `results.html`, `resources.html`
 
 ```html
 <head>
   <!-- Typographie Avantage Plus -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 ```
 
 #### 2. `css/typography-avantage-plus.css`
+
 ```css
 /* Typographie Avantage Plus */
 :root {
   --font-primary: 'Inter', sans-serif;
-  
+
   /* Échelle */
   --font-display: 3.5rem;
   --font-h1: 2.5rem;
@@ -142,7 +155,12 @@ body {
   color: var(--ap-gray-900);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-primary);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -153,32 +171,45 @@ h1, h2, h3, h4, h5, h6 {
 ---
 
 ### Semaine 1 - Jour 5: Logo & Branding Basique
+
 **Durée:** 6-8 heures
 
 #### 1. Générer Favicons
+
 **Outil:** https://realfavicongenerator.net/
 **Input:** `logo-avantage-plus-white-on-red.png`
 **Output:** Placer dans `assets/images/favicons/`
 
 #### 2. Intégrer Favicons
+
 **Modifier:** Tous les fichiers HTML
 
 ```html
 <head>
   <!-- Favicons Avantage Plus -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
-  <meta name="theme-color" content="#DC1F32">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/images/favicons/favicon-32x32.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/images/favicons/apple-touch-icon-180x180.png"
+  />
+  <meta name="theme-color" content="#DC1F32" />
 </head>
 ```
 
 #### 3. Logo Sidebar
+
 **Modifier:** Composant sidebar dans chaque page
 
 ```html
 <div class="sidebar-logo-container">
-  <img 
-    src="/assets/images/logos/logo-avantage-plus-white-on-red-150.png" 
+  <img
+    src="/assets/images/logos/logo-avantage-plus-white-on-red-150.png"
     alt="Avantage Plus"
     class="sidebar-logo"
     width="150"
@@ -188,15 +219,21 @@ h1, h2, h3, h4, h5, h6 {
 ```
 
 **Créer:** `css/logo-animations.css`
+
 ```css
 .sidebar-logo {
   animation: logoPulse 3s ease-in-out infinite;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 @keyframes logoPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 ```
 
@@ -205,24 +242,28 @@ h1, h2, h3, h4, h5, h6 {
 ## 📊 PHASE 2: COMPOSANTS (Semaine 2)
 
 ### Jour 1: Sidebar & Navigation
+
 **Durée:** 8-10 heures
 
 **Fichiers à Modifier:**
+
 - Tous les fichiers HTML avec sidebar
 - CSS pour le styling
 
 **Changements:**
 
 1. **Background Dégradé Rouge**
+
 ```css
 .sidebar {
-  background: linear-gradient(180deg, #8B1429 0%, #C41E3A 100%);
+  background: linear-gradient(180deg, #8b1429 0%, #c41e3a 100%);
   border-right: 3px solid var(--ap-gold);
   width: 280px;
 }
 ```
 
 2. **Items de Menu**
+
 ```css
 .sidebar-item {
   color: white;
@@ -230,18 +271,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-item:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-left: 4px solid var(--ap-gold);
   transform: translateX(5px);
 }
 
 .sidebar-item.active {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-left: 4px solid var(--ap-gold);
 }
 ```
 
 3. **Badge Admin**
+
 ```css
 .admin-badge {
   background: var(--ap-gradient-gold);
@@ -256,17 +298,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes shimmer {
-  0%, 100% { box-shadow: 0 0 10px rgba(255,215,0,0.3); }
-  50% { box-shadow: 0 0 20px rgba(255,215,0,0.6); }
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  }
 }
 ```
 
 ---
 
 ### Jour 2: Dashboard (Tableau de Bord)
+
 **Durée:** 10-12 heures
 
 #### 1. Carte Principale "Quiz du Mois"
+
 **Modifier:** `js/dashboard.js`
 
 ```javascript
@@ -344,10 +393,11 @@ const mainCard = `
 ```
 
 **Créer:** `css/dashboard-avantage-plus.css`
+
 ```css
 .btn-start-quiz:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
 .btn-start-quiz svg {
@@ -371,6 +421,7 @@ const mainCard = `
 ```
 
 #### 2. Cartes de Modules (Grid)
+
 **Modifier:** `js/dashboard.js` - Fonction de génération des cartes
 
 ```javascript
@@ -380,30 +431,34 @@ function createModuleCard(module, status) {
       border: '3px solid #28A745',
       bgGradient: 'linear-gradient(to bottom, #FFFFFF, #F0FFF4)',
       iconBg: 'linear-gradient(135deg, #28A745, #FFD700)',
-      badge: { bg: '#28A745', text: 'Complété' }
+      badge: { bg: '#28A745', text: 'Complété' },
     },
     active: {
       border: '3px solid #C41E3A',
       bgGradient: 'linear-gradient(to bottom, #FFFFFF, #FFF4F5)',
       iconBg: 'linear-gradient(135deg, #E63946, #C41E3A)',
-      badge: { bg: '#C41E3A', text: 'À compléter', pulse: true }
+      badge: { bg: '#C41E3A', text: 'À compléter', pulse: true },
     },
     locked: {
       border: '2px dashed #6C757D',
       bgGradient: 'linear-gradient(to bottom, #F8F9FA, #E9ECEF)',
       iconBg: '#6C757D',
-      badge: { bg: '#6C757D', text: 'Verrouillé' }
+      badge: { bg: '#6C757D', text: 'Verrouillé' },
     },
     missed: {
       border: '3px solid #C41E3A',
       bgGradient: 'linear-gradient(to bottom, #FFF4F5, #FFE5E9)',
       iconBg: '#C41E3A',
-      badge: { bg: 'linear-gradient(to right, #C41E3A, #FF6B35)', text: 'Rattrapez-le !', pulse: true }
-    }
+      badge: {
+        bg: 'linear-gradient(to right, #C41E3A, #FF6B35)',
+        text: 'Rattrapez-le !',
+        pulse: true,
+      },
+    },
   };
-  
+
   const style = statusStyles[status];
-  
+
   return `
     <div class="module-card ${status}" style="
       background: ${style.bgGradient};
@@ -472,13 +527,14 @@ function getStatusIcon(status) {
     completed: '✓',
     active: '⏱️',
     locked: '🔒',
-    missed: '⚠️'
+    missed: '⚠️',
   };
   return icons[status];
 }
 ```
 
 **Créer:** `css/module-cards.css`
+
 ```css
 .module-card:not(.locked):hover {
   transform: translateY(-5px);
@@ -498,11 +554,12 @@ function getStatusIcon(status) {
 }
 
 @keyframes badgePulse {
-  0%, 100% { 
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.7);
   }
-  50% { 
+  50% {
     transform: scale(1.05);
     box-shadow: 0 0 10px 5px rgba(196, 30, 58, 0);
   }
@@ -512,9 +569,11 @@ function getStatusIcon(status) {
 ---
 
 ### Jour 3: Interface Quiz
+
 **Durée:** 10-12 heures
 
 #### 1. Header Quiz
+
 **Modifier:** `js/quiz.js` - Fonction `renderQuestion()`
 
 ```javascript
@@ -579,7 +638,7 @@ const quizHeader = `
       margin-top: 16px;
     ">
       <div class="progress-bar" style="
-        width: ${(currentQuestionIndex + 1) / totalQuestions * 100}%;
+        width: ${((currentQuestionIndex + 1) / totalQuestions) * 100}%;
         height: 100%;
         background: linear-gradient(to right, #FFD700, #FFA500);
         border-radius: 10px;
@@ -591,6 +650,7 @@ const quizHeader = `
 ```
 
 #### 2. Carte de Question
+
 **Modifier:** `js/quiz.js`
 
 ```javascript
@@ -627,7 +687,9 @@ const questionCard = `
     
     <!-- Options -->
     <div class="options-container">
-      ${question.options.map(option => `
+      ${question.options
+        .map(
+          (option) => `
         <button 
           class="option-button" 
           data-option-id="${option.id}"
@@ -661,13 +723,16 @@ const questionCard = `
           ">${option.id}</span>
           <span class="option-text">${escapeHtml(option.text)}</span>
         </button>
-      `).join('')}
+      `
+        )
+        .join('')}
     </div>
   </div>
 `;
 ```
 
 **Créer:** `css/quiz-interface.css`
+
 ```css
 @keyframes slideInQuestion {
   from {
@@ -681,15 +746,15 @@ const questionCard = `
 }
 
 .option-button:hover {
-  background: #FFF4F5;
-  border-color: #C41E3A;
+  background: #fff4f5;
+  border-color: #c41e3a;
   transform: translateX(8px);
   box-shadow: 0 4px 15px rgba(196, 30, 58, 0.15);
 }
 
 .option-button.correct {
-  background: linear-gradient(to right, #28A745, #20C997);
-  border-color: #28A745;
+  background: linear-gradient(to right, #28a745, #20c997);
+  border-color: #28a745;
   color: white;
   transform: scale(1.02);
   box-shadow: 0 6px 25px rgba(40, 167, 69, 0.3);
@@ -697,12 +762,12 @@ const questionCard = `
 
 .option-button.correct .option-letter {
   background: white;
-  color: #28A745;
+  color: #28a745;
 }
 
 .option-button.incorrect {
-  background: linear-gradient(to right, #C41E3A, #8B1429);
-  border-color: #C41E3A;
+  background: linear-gradient(to right, #c41e3a, #8b1429);
+  border-color: #c41e3a;
   color: white;
   animation: shake 0.5s;
   box-shadow: 0 6px 25px rgba(196, 30, 58, 0.3);
@@ -710,22 +775,31 @@ const questionCard = `
 
 .option-button.incorrect .option-letter {
   background: white;
-  color: #C41E3A;
+  color: #c41e3a;
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-10px); }
-  75% { transform: translateX(10px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
 }
 ```
 
 ---
 
 ### Jour 4: Page Résultats
+
 **Durée:** 8-10 heures
 
 #### 1. Header avec Score
+
 **Modifier:** `js/quiz.js` - Fonction `showResults()`
 
 ```javascript
@@ -781,7 +855,9 @@ const resultsHeader = `
     </div>
     
     <!-- Mascotte célébration (si score >= 80%) -->
-    ${score >= 80 ? `
+    ${
+      score >= 80
+        ? `
       <div class="mascot-celebration" style="
         position: absolute;
         right: 48px;
@@ -792,7 +868,9 @@ const resultsHeader = `
       ">
         <!-- Image mascotte heureuse ici -->
       </div>
-    ` : ''}
+    `
+        : ''
+    }
   </div>
 `;
 
@@ -805,6 +883,7 @@ function getScoreGradient(score) {
 ```
 
 **Créer:** `css/results-page.css`
+
 ```css
 @keyframes scoreCountUp {
   from {
@@ -835,43 +914,49 @@ function getScoreGradient(score) {
 ---
 
 ### Jour 5: Interface Admin
+
 **Durée:** 8-10 heures
 
 #### 1. Header Admin
+
 **Modifier:** `admin.html`
 
 ```html
-<header class="admin-header" style="
+<header
+  class="admin-header"
+  style="
   background: linear-gradient(135deg, #8B1429 0%, #1A1A1A 100%);
   color: white;
   padding: 24px 48px;
   border-bottom: 4px solid #FFD700;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-">
-  <div class="header-content" style="
+"
+>
+  <div
+    class="header-content"
+    style="
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
-  ">
+  "
+  >
     <div style="display: flex; align-items: center; gap: 24px;">
-      <img 
-        src="/assets/images/logos/logo-avantage-plus-white-on-red-60.png" 
-        alt="Avantage Plus" 
+      <img
+        src="/assets/images/logos/logo-avantage-plus-white-on-red-60.png"
+        alt="Avantage Plus"
         style="width: 60px; height: 60px;"
       />
       <div>
-        <h1 style="font-size: 1.8rem; font-weight: 700; margin: 0;">
-          Gestion Admin
-        </h1>
-        <p style="margin: 0; opacity: 0.8; font-size: 0.875rem;">
-          QuizPro - Avantage Plus
-        </p>
+        <h1 style="font-size: 1.8rem; font-weight: 700; margin: 0;">Gestion Admin</h1>
+        <p style="margin: 0; opacity: 0.8; font-size: 0.875rem;">QuizPro - Avantage Plus</p>
       </div>
     </div>
-    
-    <div class="admin-badge" style="
+
+    <div
+      class="admin-badge"
+      style="
       background: linear-gradient(135deg, #FFD700, #FFA500);
       color: #8B1429;
       padding: 12px 24px;
@@ -881,7 +966,8 @@ function getScoreGradient(score) {
       align-items: center;
       gap: 8px;
       animation: shimmer 2s infinite;
-    ">
+    "
+    >
       👑 Administrateur
     </div>
   </div>
@@ -889,6 +975,7 @@ function getScoreGradient(score) {
 ```
 
 #### 2. Cartes Statistiques
+
 **Modifier:** `js/admin-dashboard.js`
 
 ```javascript
@@ -946,13 +1033,15 @@ const statsHTML = `
 ```
 
 **Créer:** `css/admin-interface.css`
+
 ```css
 @keyframes shimmer {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(255,215,0,0.3);
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255,215,0,0.6);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
   }
 }
 
@@ -979,6 +1068,7 @@ const statsHTML = `
 ## 🎬 PHASE 3: ANIMATIONS & POLISH (Semaine 3)
 
 ### Jour 1-2: Micro-interactions
+
 **Durée:** 12-15 heures
 
 **Créer:** `css/animations-avantage-plus.css`
@@ -1009,10 +1099,18 @@ const statsHTML = `
   animation: cardSlideIn 0.5s ease-out;
 }
 
-.card-enter:nth-child(1) { animation-delay: 0.1s; }
-.card-enter:nth-child(2) { animation-delay: 0.2s; }
-.card-enter:nth-child(3) { animation-delay: 0.3s; }
-.card-enter:nth-child(4) { animation-delay: 0.4s; }
+.card-enter:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card-enter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card-enter:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.card-enter:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
 @keyframes cardSlideIn {
   from {
@@ -1041,9 +1139,11 @@ const statsHTML = `
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .btn-ripple:active::after {
@@ -1067,32 +1167,32 @@ const statsHTML = `
 .spinner-avantage-plus {
   width: 48px;
   height: 48px;
-  border: 4px solid #F8F9FA;
-  border-top-color: #C41E3A;
+  border: 4px solid #f8f9fa;
+  border-top-color: #c41e3a;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Skeleton shimmer */
 .skeleton {
-  background: linear-gradient(
-    90deg,
-    #F8F9FA 0%,
-    #FFF4F5 20%,
-    #F8F9FA 40%,
-    #F8F9FA 100%
-  );
+  background: linear-gradient(90deg, #f8f9fa 0%, #fff4f5 20%, #f8f9fa 40%, #f8f9fa 100%);
   background-size: 200% 100%;
   animation: shimmer 1.5s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* === TOASTS === */
@@ -1150,9 +1250,15 @@ const statsHTML = `
 }
 
 @keyframes celebrate {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3) rotate(5deg); }
-  100% { transform: scale(1) rotate(0deg); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 /* === CONFETTI === */
@@ -1181,7 +1287,9 @@ const statsHTML = `
 }
 
 @keyframes progressFill {
-  from { width: 0%; }
+  from {
+    width: 0%;
+  }
   /* Width finale sera définie inline */
 }
 
@@ -1193,11 +1301,12 @@ const statsHTML = `
 }
 
 @keyframes badgePulse {
-  0%, 100% { 
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.7);
   }
-  50% { 
+  50% {
     transform: scale(1.05);
     box-shadow: 0 0 10px 5px rgba(196, 30, 58, 0);
   }
@@ -1245,6 +1354,7 @@ const statsHTML = `
 ---
 
 ### Jour 3: Mascotte Integration
+
 **Durée:** 6-8 heures
 
 **Créer:** `js/mascot-integration.js`
@@ -1260,9 +1370,9 @@ const Mascot = {
     NEUTRAL: '/assets/images/mascot/mascot-neutral.png',
     SAD: '/assets/images/mascot/mascot-sad.png',
     EXCITED: '/assets/images/mascot/mascot-excited.png',
-    THINKING: '/assets/images/mascot/mascot-thinking.png'
+    THINKING: '/assets/images/mascot/mascot-thinking.png',
   },
-  
+
   /**
    * Afficher la mascotte dans le dashboard
    */
@@ -1284,10 +1394,10 @@ const Mascot = {
         />
       </div>
     `;
-    
+
     document.querySelector('.quiz-month-card').insertAdjacentHTML('beforeend', mascotHTML);
   },
-  
+
   /**
    * Mascotte célébration (résultats >= 80%)
    */
@@ -1308,13 +1418,13 @@ const Mascot = {
         />
       </div>
     `;
-    
+
     document.querySelector('.results-header').insertAdjacentHTML('beforeend', mascotHTML);
-    
+
     // Ajouter confettis
     this.launchConfetti();
   },
-  
+
   /**
    * Mascotte triste (résultats < 60%)
    */
@@ -1335,10 +1445,10 @@ const Mascot = {
         />
       </div>
     `;
-    
+
     document.querySelector('.results-header').insertAdjacentHTML('beforeend', mascotHTML);
   },
-  
+
   /**
    * Mascotte en réflexion (loading)
    */
@@ -1357,10 +1467,10 @@ const Mascot = {
         />
       </div>
     `;
-    
+
     container.innerHTML = mascotHTML;
   },
-  
+
   /**
    * Easter egg: Click sur la mascotte
    */
@@ -1368,15 +1478,15 @@ const Mascot = {
     // Animation surprise
     const mascot = document.querySelector('.mascot-dashboard');
     mascot.style.animation = 'mascotSpin 1s ease-out';
-    
+
     // Message fun
     toast.success('🐕 Woof! Bonne chance pour ton quiz! 🛡️');
-    
+
     setTimeout(() => {
       mascot.style.animation = 'mascotBounce 2s ease-in-out infinite';
     }, 1000);
   },
-  
+
   /**
    * Lancer confettis
    */
@@ -1389,10 +1499,10 @@ const Mascot = {
         colors: ['#C41E3A', '#FFD700', '#FFFFFF', '#E63946'],
         shapes: ['circle', 'square'],
         gravity: 1.2,
-        drift: 0.5
+        drift: 0.5,
       });
     }
-  }
+  },
 };
 
 // Export
@@ -1404,8 +1514,13 @@ export default Mascot;
 ```css
 /* Bounce subtil */
 @keyframes mascotBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 /* Célébration (entrée dynamique) */
@@ -1425,31 +1540,44 @@ export default Mascot;
 
 /* Sway (balancement doux) */
 @keyframes mascotSway {
-  0%, 100% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
 }
 
 /* Bob (haut/bas pensif) */
 @keyframes mascotBob {
-  0%, 100% { 
-    transform: translateY(0) scale(1); 
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
   }
-  50% { 
-    transform: translateY(-10px) scale(1.05); 
+  50% {
+    transform: translateY(-10px) scale(1.05);
   }
 }
 
 /* Spin (tour complet) */
 @keyframes mascotSpin {
-  0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(1.2); }
-  100% { transform: rotate(360deg) scale(1); }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 ```
 
 **Intégrer dans les pages:**
 
-1. **Dashboard:** 
+1. **Dashboard:**
+
 ```javascript
 // Dans dashboard.js, après chargement
 import Mascot from './mascot-integration.js';
@@ -1457,6 +1585,7 @@ Mascot.showInDashboard();
 ```
 
 2. **Résultats:**
+
 ```javascript
 // Dans quiz.js, fonction showResults()
 if (score >= 80) {
@@ -1467,6 +1596,7 @@ if (score >= 80) {
 ```
 
 3. **Loading:**
+
 ```javascript
 // Dans tout état de chargement
 const loadingContainer = document.getElementById('loading');
@@ -1476,6 +1606,7 @@ Mascot.showThinking(loadingContainer);
 ---
 
 ### Jour 4: Responsive Testing
+
 **Durée:** 6-8 heures
 
 **Créer:** `css/responsive-avantage-plus.css`
@@ -1493,63 +1624,63 @@ Mascot.showThinking(loadingContainer);
     z-index: 1000;
     transition: left 0.3s ease;
   }
-  
+
   .sidebar.open {
     left: 0;
-    box-shadow: 4px 0 20px rgba(0,0,0,0.3);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
   }
-  
+
   /* Overlay */
   .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
-  
+
   .sidebar-overlay.active {
     opacity: 1;
     pointer-events: all;
   }
-  
+
   /* Dashboard grid */
   .modules-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 16px !important;
   }
-  
+
   /* Quiz */
   .question-card {
     padding: 24px 16px !important;
     margin: 24px 16px !important;
   }
-  
+
   .question-text {
     font-size: 1.4rem !important;
   }
-  
+
   .quiz-header {
     padding: 16px !important;
     flex-wrap: wrap;
   }
-  
+
   .quiz-stats {
     flex-direction: column;
     gap: 8px !important;
   }
-  
+
   /* Résultats */
   .results-header {
     padding: 32px 16px !important;
   }
-  
+
   .score-display {
     font-size: 3.5rem !important;
   }
-  
+
   .mascot-celebration,
   .mascot-dashboard {
     display: none; /* Masquer sur mobile */
@@ -1562,11 +1693,11 @@ Mascot.showThinking(loadingContainer);
   .modules-grid {
     grid-template-columns: repeat(3, 1fr) !important;
   }
-  
+
   .sidebar {
     width: 240px;
   }
-  
+
   .main-content {
     margin-left: 240px;
   }
@@ -1578,16 +1709,16 @@ Mascot.showThinking(loadingContainer);
   .modules-grid {
     grid-template-columns: 1fr !important;
   }
-  
+
   .quiz-header h1 {
     font-size: 1.125rem !important;
   }
-  
+
   .option-button {
     padding: 16px !important;
     font-size: 1rem !important;
   }
-  
+
   .option-letter {
     min-width: 32px !important;
     height: 32px !important;
@@ -1598,16 +1729,18 @@ Mascot.showThinking(loadingContainer);
 
 @media (hover: none) and (pointer: coarse) {
   /* Augmenter zones de touch */
-  button, .option-button, .module-card {
+  button,
+  .option-button,
+  .module-card {
     min-height: 48px;
   }
-  
+
   /* Désactiver certains hovers */
   .hover-float:hover,
   .hover-rotate:hover {
     transform: none;
   }
-  
+
   /* Active states plutôt que hover */
   button:active {
     transform: scale(0.98);
@@ -1635,15 +1768,17 @@ Mascot.showThinking(loadingContainer);
 ---
 
 ### Jour 5: Final Polish
+
 **Durée:** 6-8 heures
 
 #### 1. Audit A11y (Accessibilité)
+
 **Créer:** `css/accessibility.css`
 
 ```css
 /* Focus visible pour tous les éléments interactifs */
 :focus-visible {
-  outline: 3px solid #FFD700;
+  outline: 3px solid #ffd700;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -1675,9 +1810,9 @@ button:focus-visible,
 /* Mode haut contraste */
 @media (prefers-contrast: high) {
   :root {
-    --ap-red-primary: #A01726; /* Plus foncé pour meilleur contraste */
+    --ap-red-primary: #a01726; /* Plus foncé pour meilleur contraste */
   }
-  
+
   .option-button {
     border-width: 3px !important;
   }
@@ -1696,6 +1831,7 @@ button:focus-visible,
 ```
 
 #### 2. Performance Optimization
+
 **Créer:** `js/performance-optimizations.js`
 
 ```javascript
@@ -1708,14 +1844,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('loading' in HTMLImageElement.prototype) {
     // Browser supporte loading="lazy"
     const images = document.querySelectorAll('img[data-src]');
-    images.forEach(img => {
+    images.forEach((img) => {
       img.src = img.dataset.src;
       img.loading = 'lazy';
     });
   } else {
     // Fallback: Intersection Observer
     const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
           img.src = img.dataset.src;
@@ -1723,8 +1859,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-    
-    document.querySelectorAll('img[data-src]').forEach(img => {
+
+    document.querySelectorAll('img[data-src]').forEach((img) => {
       imageObserver.observe(img);
     });
   }
@@ -1734,10 +1870,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function preloadCriticalImages() {
   const criticalImages = [
     '/assets/images/logos/logo-avantage-plus-white-on-red-150.png',
-    '/assets/images/logos/logo-avantage-plus-red-transparent-60.png'
+    '/assets/images/logos/logo-avantage-plus-red-transparent-60.png',
   ];
-  
-  criticalImages.forEach(src => {
+
+  criticalImages.forEach((src) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
@@ -1760,15 +1896,19 @@ function debounce(func, wait) {
 }
 
 // Optimiser les events resize
-window.addEventListener('resize', debounce(() => {
-  // Logique de resize ici
-}, 250));
+window.addEventListener(
+  'resize',
+  debounce(() => {
+    // Logique de resize ici
+  }, 250)
+);
 
 // Export
 export { preloadCriticalImages, debounce };
 ```
 
 #### 3. Tests Cross-Browser
+
 **Checklist:**
 
 ```
@@ -1807,6 +1947,7 @@ export { preloadCriticalImages, debounce };
 ## 📦 PHASE 4: TESTING & DÉPLOIEMENT (Semaine 4)
 
 ### Jour 1-2: User Testing
+
 **Durée:** 10-12 heures
 
 **Créer:** `USER-TESTING-PLAN.md`
@@ -1815,12 +1956,14 @@ export { preloadCriticalImages, debounce };
 # Plan de Tests Utilisateurs
 
 ## Objectifs
+
 1. Valider l'expérience utilisateur
 2. Identifier bugs visuels
 3. Confirmer la clarté du branding
 4. Mesurer la satisfaction
 
 ## Participants
+
 - 5-10 utilisateurs variés
 - Mix: nouveaux + existants
 - Différents niveaux techniques
@@ -1828,6 +1971,7 @@ export { preloadCriticalImages, debounce };
 ## Scénarios de Test
 
 ### Scénario 1: Première Connexion
+
 1. Ouvrir l'application
 2. Se connecter avec Google
 3. Observer le dashboard
@@ -1837,6 +1981,7 @@ export { preloadCriticalImages, debounce };
    - Navigation claire?
 
 ### Scénario 2: Compléter un Quiz
+
 1. Cliquer sur "Démarrer le quiz"
 2. Répondre aux questions
 3. Voir les résultats
@@ -1846,6 +1991,7 @@ export { preloadCriticalImages, debounce };
    - Animations agréables?
 
 ### Scénario 3: Navigation
+
 1. Explorer toutes les sections
 2. Tester sur mobile
 3. **Questions:**
@@ -1853,6 +1999,7 @@ export { preloadCriticalImages, debounce };
    - Responsive fonctionne?
 
 ## Métriques
+
 - SUS Score (System Usability Scale)
 - Net Promoter Score
 - Temps de complétion des tâches
@@ -1860,6 +2007,7 @@ export { preloadCriticalImages, debounce };
 ```
 
 **Actions:**
+
 1. Recruter testeurs
 2. Préparer environnement de test
 3. Exécuter les tests
@@ -1869,6 +2017,7 @@ export { preloadCriticalImages, debounce };
 ---
 
 ### Jour 3: Bug Fixes
+
 **Durée:** 8-10 heures
 
 **Workflow:**
@@ -1879,17 +2028,18 @@ export { preloadCriticalImages, debounce };
    - Mineurs (polish)
 
 2. **Corriger par Priorité**
+
    ```
    P0: Bugs critiques
    - App ne charge pas
    - Fonctionnalité cassée
    - Données perdues
-   
+
    P1: Bugs majeurs
    - Mauvais affichage
    - Animation saccadée
    - Confusion UX
-   
+
    P2: Bugs mineurs
    - Petits décalages CSS
    - Typos
@@ -1904,10 +2054,13 @@ export { preloadCriticalImages, debounce };
 ---
 
 ### Jour 4: Performance Audit
+
 **Durée:** 6-8 heures
 
 #### 1. Lighthouse Audit
+
 **Objectifs:**
+
 ```
 Performance: >= 90
 Accessibility: >= 95
@@ -1918,6 +2071,7 @@ SEO: >= 90
 **Actions si score < objectif:**
 
 **Performance:**
+
 - Optimiser images (WebP, compression)
 - Minifier CSS/JS
 - Lazy loading
@@ -1925,29 +2079,35 @@ SEO: >= 90
 - Reduce unused CSS
 
 **Accessibility:**
+
 - Vérifier contrastes
 - Ajouter ARIA labels
 - Focus visible
 - Alt text images
 
 **Best Practices:**
+
 - HTTPS
 - No console errors
 - Secure headers
 
 **SEO:**
+
 - Meta tags
 - Open Graph
 - Structured data
 
 #### 2. WebPageTest
+
 **Tester:**
+
 - First Contentful Paint
 - Largest Contentful Paint
 - Time to Interactive
 - Total Blocking Time
 
 **Optimiser si besoin:**
+
 - CDN pour assets
 - Cache headers
 - Code splitting
@@ -1956,6 +2116,7 @@ SEO: >= 90
 ---
 
 ### Jour 5: Production Deploy
+
 **Durée:** 4-6 heures
 
 #### Checklist Pre-Deploy
@@ -2008,6 +2169,7 @@ SEO: >= 90
 #### Deploy Process
 
 1. **Backup Actuel**
+
 ```bash
 # Créer une branche backup
 git checkout -b backup-pre-redesign
@@ -2015,12 +2177,14 @@ git push origin backup-pre-redesign
 ```
 
 2. **Build Production**
+
 ```bash
 cd "C:\Users\guilb\Desktop\Avantage QUIZZ"
 npm run build
 ```
 
 3. **Test Build Localement**
+
 ```bash
 npm run preview
 # Ouvrir http://localhost:4173
@@ -2028,6 +2192,7 @@ npm run preview
 ```
 
 4. **Deploy Firebase**
+
 ```bash
 firebase deploy
 ```
@@ -2049,6 +2214,7 @@ firebase deploy
 ## 📊 MÉTRIQUES DE SUCCÈS
 
 ### Avant Refonte
+
 ```
 Identité de Marque: ⭐☆☆☆☆ (1/5)
 - Logo absent
@@ -2066,6 +2232,7 @@ Professionnalisme: ⭐⭐⭐☆☆ (3/5)
 ```
 
 ### Après Refonte (Objectifs)
+
 ```
 Identité de Marque: ⭐⭐⭐⭐⭐ (5/5)
 - Logo partout
@@ -2088,6 +2255,7 @@ Professionnalisme: ⭐⭐⭐⭐⭐ (5/5)
 ## 🎯 RÉSUMÉ VISUEL AVANT/APRÈS
 
 ### Palette de Couleurs
+
 ```
 AVANT:
 🟣 Violet #8B5CF6
@@ -2103,6 +2271,7 @@ APRÈS:
 ```
 
 ### Composants Clés
+
 ```
 SIDEBAR:
 Avant: Bleu/Violet foncé
@@ -2132,26 +2301,31 @@ Après: Dégradé adaptatif (or si excellent, rouge si faible)
 À chaque étape, valider:
 
 ### ✓ Cohérence Visuelle
+
 - Toutes les pages utilisent les couleurs Avantage Plus
 - Logo visible sur chaque page
 - Typographie uniforme
 
 ### ✓ Performance
+
 - Pas de ralentissement
 - Animations fluides (60fps)
 - Temps de chargement < 3s
 
 ### ✓ Accessibilité
+
 - Contraste suffisant (ratio >= 4.5:1)
 - Navigation clavier fonctionnelle
 - ARIA labels présents
 
 ### ✓ Responsive
+
 - Mobile: Tout accessible et utilisable
 - Tablette: Layout adapté
 - Desktop: Expérience optimale
 
 ### ✓ Cross-Browser
+
 - Chrome, Firefox, Safari, Edge
 - Pas de bugs majeurs
 - Fallbacks pour features non supportées
@@ -2163,6 +2337,7 @@ Après: Dégradé adaptatif (or si excellent, rouge si faible)
 ### ⏳ ACTIONS UTILISATEUR REQUISES
 
 **ÉTAPE 1: Ajouter les Logos**
+
 1. Ouvrir le chat où vous avez envoyé les images
 2. Clic droit sur **Image 1** (fond rouge) → Enregistrer sous...
 3. Sauvegarder dans: `C:\Users\guilb\Desktop\Avantage QUIZZ\assets\images\logos\logo-avantage-plus-white-on-red.png`
@@ -2176,6 +2351,7 @@ Une fois les 2 logos ajoutés, me dire: **"✅ Logos ajoutés"**
 
 **ÉTAPE 3: Je commence la refonte**
 Je pourrai alors:
+
 1. Générer les favicons
 2. Créer les variations de tailles
 3. Commencer Phase 1 (Fondations)
@@ -2205,6 +2381,5 @@ Avant de commencer, confirmer:
 
 ---
 
-*Plan créé le 2025-11-08 23:10*
-*Prêt à transformer QuizPro en expérience premium Avantage Plus! 🚀*
-
+_Plan créé le 2025-11-08 23:10_
+_Prêt à transformer QuizPro en expérience premium Avantage Plus! 🚀_
