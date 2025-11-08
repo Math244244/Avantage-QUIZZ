@@ -60,20 +60,24 @@
   
   
   /* ========================================
-     DORÉ (Accent Premium)
+     DORÉ (Accent Premium) - VERSION SUBTILE
      ======================================== */
   
-  /* Or principal - Pour badges, succès, premium */
-  --ap-gold: #FFD700;
-  --ap-gold-rgb: 255, 215, 0;
+  /* Or principal - Or antique, plus raffiné */
+  --ap-gold: #D4AF37;
+  --ap-gold-rgb: 212, 175, 55;
   
   /* Or foncé - Pour hover et dégradés */
-  --ap-gold-dark: #FFA500;
-  --ap-gold-dark-rgb: 255, 165, 0;
+  --ap-gold-dark: #B8860B;
+  --ap-gold-dark-rgb: 184, 134, 11;
   
-  /* Or clair - Pour backgrounds */
-  --ap-gold-light: #FFF4CC;
-  --ap-gold-light-rgb: 255, 244, 204;
+  /* Or clair - Crème dorée pour backgrounds */
+  --ap-gold-light: #F4E5C2;
+  --ap-gold-light-rgb: 244, 229, 194;
+  
+  /* Ivoire - Fond très subtil */
+  --ap-gold-pale: #FFFBF5;
+  --ap-gold-pale-rgb: 255, 251, 245;
   
   
   /* ========================================
@@ -92,11 +96,11 @@
   --ap-info-light: #D1ECF1;
   --ap-info-dark: #117A8B;
   
-  /* Avertissement - Jaune/Orange */
-  --ap-warning: #FFC107;
-  --ap-warning-rgb: 255, 193, 7;
-  --ap-warning-light: #FFF3CD;
-  --ap-warning-dark: #E0A800;
+  /* Avertissement - Orange doux */
+  --ap-warning: #FF9F43;
+  --ap-warning-rgb: 255, 159, 67;
+  --ap-warning-light: #FFE5CC;
+  --ap-warning-dark: #FF8510;
   
   /* Danger - Rouge (utilise rouge principal) */
   --ap-danger: var(--ap-red-primary);
@@ -118,8 +122,9 @@
   /* Dégradé carte - Backgrounds subtils */
   --ap-gradient-card: linear-gradient(to bottom, #FFFFFF 0%, #FFF4F5 100%);
   
-  /* Dégradé doré - Success, badges premium */
-  --ap-gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  /* Dégradé doré - Success, badges premium (subtil) */
+  --ap-gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  --ap-gradient-gold-soft: linear-gradient(135deg, #F4E5C2 0%, #D4AF37 100%);
   
   /* Dégradé actif - Boutons principaux */
   --ap-gradient-active: linear-gradient(to right, #E63946 0%, #C41E3A 100%);
@@ -128,7 +133,7 @@
   --ap-gradient-hover: linear-gradient(to right, #DC1F32 0%, #C41E3A 100%);
   
   /* Dégradé success - Score élevé */
-  --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #FFD700 100%);
+  --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #D4AF37 100%);
   
   
   /* ========================================
@@ -153,8 +158,9 @@
   /* Ombre hover - Plus prononcée */
   --ap-shadow-hover: 0 10px 30px rgba(196, 30, 58, 0.25);
   
-  /* Ombre dorée - Pour éléments premium */
-  --ap-shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.3);
+  /* Ombre dorée - Pour éléments premium (subtile) */
+  --ap-shadow-gold: 0 4px 15px rgba(212, 175, 55, 0.2);
+  --ap-shadow-gold-lg: 0 8px 25px rgba(212, 175, 55, 0.25);
   
   
   /* ========================================

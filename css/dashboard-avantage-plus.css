@@ -46,7 +46,7 @@
   box-shadow: 0 12px 40px rgba(196, 30, 58, 0.2);
   position: relative;
   overflow: hidden;
-  border: 4px solid #FFD700;
+  border: 3px solid var(--ap-gold);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -81,17 +81,17 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 215, 0, 0.25);
-  color: #FFD700;
+  background: rgba(244, 229, 194, 0.3);
+  color: var(--ap-gold-light);
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 16px;
-  border: 2px solid #FFD700;
+  border: 2px solid rgba(212, 175, 55, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .quiz-hero-title {
@@ -128,8 +128,8 @@
 .quiz-hero-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  background: #FFD700;
-  color: #8B1429;
+  background: var(--ap-gold);
+  color: var(--ap-red-dark);
 }
 
 .quiz-hero-progress {
@@ -137,15 +137,15 @@
   top: 32px;
   right: 40px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 16px;
-  border: 2px solid rgba(255, 215, 0, 0.4);
+  border: 2px solid rgba(212, 175, 55, 0.5);
   backdrop-filter: blur(10px);
 }
 
 .quiz-hero-progress-label {
-  color: var(--ap-gold);
+  color: #F4E5C2;
   font-size: var(--ap-text-xs);
   font-weight: var(--ap-font-bold);
   text-transform: uppercase;
@@ -301,24 +301,25 @@
    ======================================== */
 
 .module-card--completed {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFF4CC 100%);
-  border-color: #FFD700;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--ap-gold-light) 100%);
+  border-color: var(--ap-gold);
+  box-shadow: var(--ap-shadow-gold);
 }
 
 .module-card--completed .module-card-icon {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #8B1429;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+  background: var(--ap-gradient-gold-soft);
+  color: var(--ap-red-dark);
+  box-shadow: var(--ap-shadow-gold);
 }
 
 .module-card--completed .module-card-badge {
-  background: #28A745;
+  background: rgba(40, 167, 69, 0.9);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .module-card--completed .module-card-progress-fill {
-  background: linear-gradient(135deg, #28A745 0%, #FFD700 100%);
+  background: var(--ap-gradient-success);
 }
 
 .module-card--completed:hover {
@@ -398,17 +399,18 @@
 }
 
 .module-card--incomplete .module-card-icon {
-  background: linear-gradient(135deg, #FFC107 0%, #FFD700 100%);
+  background: linear-gradient(135deg, #FFD4A3 0%, var(--ap-warning) 100%);
   color: white;
 }
 
 .module-card--incomplete .module-card-badge {
-  background: #FFC107;
+  background: rgba(255, 159, 67, 0.9);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .module-card--incomplete .module-card-progress-fill {
-  background: linear-gradient(90deg, #FFC107 0%, #FFD700 100%);
+  background: linear-gradient(90deg, var(--ap-warning) 0%, #FFD4A3 100%);
 }
 
 .module-card--incomplete:hover {
