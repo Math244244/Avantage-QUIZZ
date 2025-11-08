@@ -31,6 +31,28 @@
    ANIMATIONS GLOBALES
    ======================================== */
 
+/* Pulse Doré Subtil - Pour badges actifs */
+@keyframes pulseGoldSubtle {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    transform: scale(1.02);
+  }
+}
+
+/* Pulse Doré pour Icône */
+@keyframes iconPulseGold {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+  }
+}
+
 /* Fade In */
 @keyframes fadeIn {
   from {
