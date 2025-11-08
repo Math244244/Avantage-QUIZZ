@@ -282,11 +282,35 @@ function updateCharts() {
 
 // Graphique d'évolution des scores
 function updateProgressChart() {
+    console.log('🎯 updateProgressChart() appelée');
+    
     const ctx = document.getElementById('progress-chart');
-    if (!ctx) return;
+    console.log('📊 Canvas ctx:', ctx);
+    console.log('📊 Chart.js disponible?', typeof Chart !== 'undefined');
+    
+    if (!ctx) {
+        console.error('❌ Canvas #progress-chart introuvable!');
+        return;
+    }
     
     // Prendre les 10 derniers résultats
     const recentResults = [...filteredResults].reverse().slice(-10);
+    console.log('📊 recentResults:', recentResults);
+    
+    // Fallback si pas de données
+    if (recentResults.length === 0) {
+        console.warn('⚠️ Aucune donnée pour le graphique de progression');
+        ctx.parentElement.innerHTML = `
+            <div class="flex flex-col items-center justify-center h-64 text-slate-400">
+                <svg class="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                <p class="text-lg font-medium">Aucune donnée disponible</p>
+                <p class="text-sm mt-1">Complétez des quiz pour voir votre évolution</p>
+            </div>
+        `;
+        return;
+    }
     
     const labels = recentResults.map((r, i) => {
         const date = r.completedAt;
@@ -294,6 +318,8 @@ function updateProgressChart() {
     });
     
     const scores = recentResults.map(r => r.score);
+    console.log('📊 labels:', labels);
+    console.log('📊 scores:', scores);
     
     if (progressChart) {
         progressChart.destroy();
@@ -336,12 +362,21 @@ function updateProgressChart() {
             }
         }
     });
+    
+    console.log('✅ Chart progression créé:', progressChart);
 }
 
 // Graphique de répartition par module
 function updateModuleChart() {
+    console.log('🎯 updateModuleChart() appelée');
+    
     const ctx = document.getElementById('module-chart');
-    if (!ctx) return;
+    console.log('📊 Canvas module ctx:', ctx);
+    
+    if (!ctx) {
+        console.error('❌ Canvas #module-chart introuvable!');
+        return;
+    }
     
     // Compter les quiz par module
     const moduleCounts = {};
@@ -349,9 +384,31 @@ function updateModuleChart() {
         moduleCounts[r.module] = (moduleCounts[r.module] || 0) + 1;
     });
     
+    console.log('📊 moduleCounts:', moduleCounts);
+    
+    // Fallback si pas de données
+    if (Object.keys(moduleCounts).length === 0) {
+        console.warn('⚠️ Aucune donnée pour le graphique de modules');
+        ctx.parentElement.innerHTML = `
+            <div class="flex flex-col items-center justify-center h-64 text-slate-400">
+                <svg class="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                </svg>
+                <p class="text-lg font-medium">Aucune donnée disponible</p>
+                <p class="text-sm mt-1">Complétez des quiz pour voir la répartition</p>
+            </div>
+        `;
+        return;
+    }
+    
     const labels = Object.keys(moduleCounts).map(m => moduleNames[m] || m);
     const data = Object.values(moduleCounts);
     const colors = Object.keys(moduleCounts).map(m => moduleColors[m] || '#C41E3A');
+    
+    console.log('📊 labels:', labels);
+    console.log('📊 data:', data);
+    console.log('📊 colors:', colors);
     
     if (moduleChart) {
         moduleChart.destroy();
@@ -378,18 +435,31 @@ function updateModuleChart() {
             }
         }
     });
+    
+    console.log('✅ Chart module créé:', moduleChart);
 }
 
 // Afficher les résultats avec pagination
 function renderResults() {
+    console.log('🎯 renderResults() appelée');
+    
     const container = document.getElementById('results-list');
-    if (!container) return;
+    console.log('📋 Container results-list:', container);
+    
+    if (!container) {
+        console.error('❌ Container #results-list introuvable!');
+        return;
+    }
 
     const start = (currentPage - 1) * resultsPerPage;
     const end = start + resultsPerPage;
     const pageResults = filteredResults.slice(start, end);
     
+    console.log('📋 Page:', currentPage, 'Start:', start, 'End:', end);
+    console.log('📋 pageResults:', pageResults);
+    
     if (pageResults.length === 0) {
+        console.warn('⚠️ Aucun résultat à afficher pour cette page');
         container.replaceChildren();
         return;
     }
@@ -400,6 +470,7 @@ function renderResults() {
     });
     
     container.replaceChildren(fragment);
+    console.log('✅ Résultats rendus:', pageResults.length, 'cartes affichées');
     
     updatePagination();
 }
