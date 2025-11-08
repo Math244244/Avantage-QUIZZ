@@ -32,10 +32,10 @@ const moduleNames = {
 };
 
 const moduleColors = {
-    'auto': '#6366f1',
-    'loisir': '#06b6d4',
-    'vr': '#f97316',
-    'tracteur': '#22c55e'
+    'auto': '#C41E3A',       // Rouge Avantage Plus
+    'loisir': '#D4AF37',     // Doré Avantage Plus
+    'vr': '#FF9F43',         // Orange pêche
+    'tracteur': '#28A745'    // Vert succès
 };
 
 const MONTH_LABELS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
@@ -306,12 +306,15 @@ function updateProgressChart() {
             datasets: [{
                 label: 'Score (%)',
                 data: scores,
-                borderColor: '#6366f1',
-                backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                borderColor: '#C41E3A',               // Rouge Avantage Plus
+                backgroundColor: 'rgba(196, 30, 58, 0.1)',  // Rouge AP transparent
                 tension: 0.4,
                 fill: true,
                 pointRadius: 5,
-                pointHoverRadius: 7
+                pointHoverRadius: 7,
+                pointBackgroundColor: '#C41E3A',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2
             }]
         },
         options: {
@@ -348,7 +351,7 @@ function updateModuleChart() {
     
     const labels = Object.keys(moduleCounts).map(m => moduleNames[m] || m);
     const data = Object.values(moduleCounts);
-    const colors = Object.keys(moduleCounts).map(m => moduleColors[m] || '#6366f1');
+    const colors = Object.keys(moduleCounts).map(m => moduleColors[m] || '#C41E3A');
     
     if (moduleChart) {
         moduleChart.destroy();

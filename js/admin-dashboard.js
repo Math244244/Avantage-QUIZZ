@@ -671,18 +671,24 @@ async function createProgressChart() {
                     {
                         label: 'Quiz complétés',
                         data: counts,
-                        borderColor: 'rgb(99, 102, 241)',
-                        backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                        borderColor: 'rgb(196, 30, 58)',          // Rouge Avantage Plus
+                        backgroundColor: 'rgba(196, 30, 58, 0.1)',
                         tension: 0.4,
-                        yAxisID: 'y'
+                        yAxisID: 'y',
+                        pointBackgroundColor: 'rgb(196, 30, 58)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2
                     },
                     {
                         label: 'Score moyen (%)',
                         data: avgScores,
-                        borderColor: 'rgb(34, 197, 94)',
-                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        borderColor: 'rgb(212, 175, 55)',        // Doré Avantage Plus
+                        backgroundColor: 'rgba(212, 175, 55, 0.1)',
                         tension: 0.4,
-                        yAxisID: 'y1'
+                        yAxisID: 'y1',
+                        pointBackgroundColor: 'rgb(212, 175, 55)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2
                     }
                 ]
             },
@@ -750,11 +756,11 @@ async function createModulesChart() {
         const data = Object.values(moduleStats).map(s => s.count);
         
         const colors = [
-            'rgba(99, 102, 241, 0.8)',
-            'rgba(34, 197, 94, 0.8)',
-            'rgba(251, 146, 60, 0.8)',
-            'rgba(236, 72, 153, 0.8)',
-            'rgba(14, 165, 233, 0.8)'
+            'rgba(196, 30, 58, 0.9)',     // Rouge Avantage Plus
+            'rgba(212, 175, 55, 0.9)',    // Doré Avantage Plus
+            'rgba(40, 167, 69, 0.9)',     // Vert succès
+            'rgba(255, 159, 67, 0.9)',    // Orange pêche
+            'rgba(139, 20, 41, 0.9)'      // Rouge foncé AP
         ];
         
         // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour chartModules
@@ -825,9 +831,11 @@ async function createActivityChart() {
                 datasets: [{
                     label: 'Utilisateurs actifs',
                     data: data,
-                    backgroundColor: 'rgba(99, 102, 241, 0.8)',
-                    borderColor: 'rgb(99, 102, 241)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(196, 30, 58, 0.8)',  // Rouge Avantage Plus
+                    borderColor: 'rgb(196, 30, 58)',
+                    borderWidth: 2,
+                    borderRadius: 4,
+                    hoverBackgroundColor: 'rgba(196, 30, 58, 1)'
                 }]
             },
             options: {
