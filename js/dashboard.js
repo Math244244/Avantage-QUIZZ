@@ -177,76 +177,55 @@ function createLockedCard(month) {
 }
 
 function createIncompleteCard(month) {
-    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    // ✅ AVANTAGE PLUS: Cartes incomplètes en orange/doré
     const safeMonth = escapeHtml(month);
     
     return `
-        <div class="card-hover relative bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl shadow-sm hover:shadow-md border border-amber-200 flex flex-col items-center justify-center min-h-[260px] cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group overflow-hidden">
-            <!-- Badge à compléter -->
-            <div class="absolute top-3 right-3 bg-amber-500 text-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
-                À compléter
-            </div>
-            
-            <!-- Icône horloge -->
-            <div class="relative mb-4">
-                <div class="relative bg-white p-3.5 rounded-xl shadow-md border-2 border-amber-100">
-                    <svg class="h-8 w-8 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="module-card module-card--incomplete">
+            <div class="module-card-header">
+                <div class="module-card-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
+                <div class="module-card-badge">⚠️ À compléter</div>
             </div>
-            
-            <h3 class="text-xl font-bold text-slate-700 mb-2">${safeMonth}</h3>
-            <span class="text-sm text-amber-600 text-center font-medium mb-3">Mois manqué - Rattrapez-le !</span>
-            
-            <!-- Barre de progression -->
-            <div class="mt-3 w-full bg-amber-100 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-gradient-to-r from-amber-400 to-amber-500 h-2.5 rounded-full" style="width: 0%"></div>
+            <h3 class="module-card-title">${safeMonth}</h3>
+            <p class="module-card-subtitle">Mois manqué - Rattrapez-le !</p>
+            <p class="module-card-progress-label">Progression</p>
+            <div class="module-card-progress-bar">
+                <div class="module-card-progress-fill" style="width: 0%"></div>
             </div>
-            <span class="mt-2 text-xs text-amber-600 font-medium">0% complété</span>
-            
-            <!-- Bouton au hover -->
-            <button class="mt-4 opacity-0 group-hover:opacity-100 transition-all bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded-lg shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
-                Compléter maintenant
-            </button>
+            <span class="text-sm font-semibold text-ap-warning">0% complété</span>
         </div>
     `;
 }
 
 function createActiveCard(month) {
-    // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper les données utilisateur
+    // ✅ AVANTAGE PLUS: Carte active en rouge/doré
     const safeMonth = escapeHtml(month);
     
     return `
-        <div class="card-hover relative bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 p-6 rounded-2xl shadow-xl hover:shadow-2xl border border-indigo-400/30 flex flex-col items-center justify-center min-h-[260px] ring-2 ring-indigo-400/20 cursor-pointer transform transition-all duration-300 hover:scale-[1.02] group overflow-hidden">
-            <!-- Effet de brillance subtil -->
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            
-            <!-- Badge ACTIF -->
-            <span class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-md">
-                ⚡ Actif
-            </span>
-            
-            <!-- Icône stylo -->
-            <div class="relative mb-4">
-                <div class="relative bg-white/15 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/20">
-                    <svg class="h-10 w-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="module-card module-card--active">
+            <div class="module-card-header">
+                <div class="module-card-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
                 </div>
+                <div class="module-card-badge">⚡ Actif</div>
             </div>
-            
-            <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md">${safeMonth}</h3>
-            <p class="text-white/90 text-sm font-medium mb-4 bg-white/10 px-3 py-1 rounded-lg backdrop-blur-sm">🎯 Prêt à être complété</p>
-            
-            <!-- Bouton CTA -->
-            <button class="start-quiz-button w-full bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 group/btn">
-                <span class="flex items-center justify-center gap-2">
-                    Démarrer le quiz
-                    <svg class="h-5 w-5 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </span>
+            <h3 class="module-card-title">${safeMonth}</h3>
+            <p class="module-card-subtitle">Prêt à être complété !</p>
+            <p class="module-card-progress-label">Progression</p>
+            <div class="module-card-progress-bar">
+                <div class="module-card-progress-fill" style="width: 0%"></div>
+            </div>
+            <button class="start-quiz-button btn-primary w-full mt-2 flex items-center justify-center gap-2">
+                <span>Démarrer</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
             </button>
         </div>
     `;
