@@ -1,5 +1,5 @@
 // Dashboard principal - Gestion de l'interface QuizPro
-import { onAuthChange, signInWithGoogle, signOutUser, getCurrentUserUnified, showAdminUIIfAdmin, isDemoMode, deactivateDemoMode } from './auth.js';
+import { onAuthChange, signInWithGoogle, signOutUser, getCurrentUserUnified, showAdminUIIfAdmin } from './auth.js';
 import { startQuiz } from './quiz.js';
 import { 
     getUserProfile, 
@@ -36,6 +36,8 @@ const elements = {
     googleSigninBtn: document.getElementById('google-signin-btn'),
     signoutLink: document.getElementById('signout-link')
 };
+
+let dashboardEventDelegationAttached = false;
 
 // --- FONCTIONS DE NAVIGATION ---
 
@@ -266,12 +268,6 @@ async function loadDashboardData() {
             return;
         }
         
-        // En mode démo, ne pas charger depuis Firestore
-        if (isDemoMode()) {
-            console.log('ℹ️ Mode démo - affichage des données simulées');
-            return;
-        }
-        
         console.log('📊 Chargement des données du dashboard...');
         
         // Charger le profil utilisateur
@@ -357,8 +353,8 @@ async function initializeDashboard() {
         streakBadge.style.display = 'none';
     }
 
-    // Attacher les événements
-    attachDashboardEvents();
+    // Attacher les événements via délégation (une seule fois)
+    initializeDashboardEventDelegation();
     
     // Créer les graphiques
     setTimeout(() => {
@@ -569,58 +565,41 @@ function attachNavigationListeners() {
     console.log('✅ Listeners de navigation attachés');
 }
 
-function attachDashboardEvents() {
-    // Supprimer tous les anciens listeners en clonant les éléments
-    // (alternative: utiliser des event listeners nommés qu'on peut remove)
-    
-    // Boutons "Démarrer le quiz" - Délégation d'événements
-    const oldStartButtons = document.querySelectorAll('.start-quiz-button');
-    oldStartButtons.forEach(btn => {
-        const newBtn = btn.cloneNode(true);
-        btn.parentNode?.replaceChild(newBtn, btn);
-    });
-    
-    document.querySelectorAll('.start-quiz-button').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
+function initializeDashboardEventDelegation() {
+    if (dashboardEventDelegationAttached) {
+        return;
+    }
+
+    document.addEventListener('click', (event) => {
+        const startButton = event.target.closest('.start-quiz-button');
+        if (startButton) {
+            event.preventDefault();
             const activeMonth = monthsData[currentMonthIndex].name;
             elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
             showView('moduleSelection');
             updateActiveNavLink('nav-quiz');
-        });
-    });
+            return;
+        }
 
-    // Boutons "Retour au dashboard"
-    const oldBackButtons = document.querySelectorAll('.back-to-dashboard');
-    oldBackButtons.forEach(btn => {
-        const newBtn = btn.cloneNode(true);
-        btn.parentNode?.replaceChild(newBtn, btn);
-    });
-    
-    document.querySelectorAll('.back-to-dashboard').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
+        const backButton = event.target.closest('.back-to-dashboard');
+        if (backButton) {
+            event.preventDefault();
             showView('dashboard');
             updateActiveNavLink('nav-dashboard');
-        });
+            return;
+        }
+
+        const moduleCard = event.target.closest('.module-card');
+        if (moduleCard) {
+            event.preventDefault();
+            const module = moduleCard.getAttribute('data-module');
+            if (module) {
+                startQuiz(module);
+            }
+        }
     });
 
-    // Cartes de sélection de module
-    const oldModuleCards = document.querySelectorAll('.module-card');
-    oldModuleCards.forEach(card => {
-        const newCard = card.cloneNode(true);
-        card.parentNode?.replaceChild(newCard, card);
-    });
-    
-    document.querySelectorAll('.module-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            e.preventDefault();
-            const module = card.getAttribute('data-module');
-            console.log('🎯 Module sélectionné:', module);
-            // Lancer l'interface du quiz
-            startQuiz(module);
-        });
-    });
+    dashboardEventDelegationAttached = true;
 }
 
 // --- GESTION DE L'AUTHENTIFICATION ---
@@ -688,53 +667,26 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.signoutLink?.addEventListener('click', (e) => {
         e.preventDefault();
         if (confirm('Voulez-vous vraiment vous déconnecter ?')) {
-            // Désactiver le mode démo si actif
-            if (isDemoMode()) {
-                deactivateDemoMode();
-                // Rester dans le SPA et afficher l'écran de connexion immédiatement
-                showView('login');
-                updateActiveNavLink('nav-dashboard');
-            } else {
-                signOutUser();
-            }
+            signOutUser();
         }
     });
 
-    // Vérifier si le mode démo est actif
-    const demoModeActive = isDemoMode();
+    // Mode normal - Afficher l'écran de connexion
+    showView('login');
     
-    if (demoModeActive) {
-        console.log('🎨 MODE DÉMO ACTIF - Chargement du dashboard...');
-        const demoUser = getCurrentUserUnified();
-        if (demoUser) {
-            updateUserProfile(demoUser);
-            // Afficher l'UI admin en mode démo (le user possède role: 'admin')
-            try { showAdminUIIfAdmin(demoUser); } catch (e) { /* no-op */ }
+    // Écouter les changements d'authentification Firebase
+    onAuthChange((user) => {
+        if (user) {
+            console.log('✅ Utilisateur connecté:', user.displayName);
+            updateUserProfile(user);
             showView('dashboard');
             updateActiveNavLink('nav-dashboard');
             initializeDashboard();
         } else {
-            console.error('❌ Mode démo actif mais pas d\'utilisateur trouvé');
+            console.log('👤 Aucun utilisateur connecté');
             showView('login');
         }
-    } else {
-        // Mode normal - Afficher l'écran de connexion
-        showView('login');
-        
-        // Écouter les changements d'authentification Firebase
-        onAuthChange((user) => {
-            if (user) {
-                console.log('✅ Utilisateur connecté:', user.displayName);
-                updateUserProfile(user);
-                showView('dashboard');
-                updateActiveNavLink('nav-dashboard');
-                initializeDashboard();
-            } else {
-                console.log('👤 Aucun utilisateur connecté');
-                showView('login');
-            }
-        });
-    }
+    });
 
     console.log('✅ QuizPro initialisé avec succès');
 });

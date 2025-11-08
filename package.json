@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:css && vite build",
+  "build": "npm run build:css && vite build && node scripts/postbuild.mjs",
     "build:css": "tailwindcss -i ./css/input.css -o ./css/output.css --minify",
     "preview": "vite preview",
     "deploy": "npm run build && firebase deploy",

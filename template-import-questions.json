@@ -1,0 +1,37 @@
+{
+  "module": "auto",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle est la durée standard d'une garantie prolongée automobile?",
+      "options": ["1 an", "2 ans", "3 ans", "5 ans"],
+      "correctAnswer": 2,
+      "explanation": "La garantie prolongée standard est de 3 ans ou 60 000 km, selon la première éventualité."
+    },
+    {
+      "question": "Quel est le kilométrage maximum couvert par une garantie de base?",
+      "options": ["20 000 km", "40 000 km", "60 000 km", "100 000 km"],
+      "correctAnswer": 2,
+      "explanation": "La garantie de base couvre généralement jusqu'à 60 000 km pour la plupart des véhicules."
+    },
+    {
+      "question": "Quelle est la fréquence recommandée pour la rotation des pneus?",
+      "options": ["Tous les 5 000 km", "Tous les 10 000 km", "Tous les 15 000 km", "Tous les 20 000 km"],
+      "correctAnswer": 1,
+      "explanation": "Il est recommandé de faire la rotation des pneus tous les 10 000 km pour une usure uniforme."
+    },
+    {
+      "question": "À quelle pression doit-on gonfler les pneus d'une voiture standard?",
+      "options": ["25 PSI", "32 PSI", "40 PSI", "50 PSI"],
+      "correctAnswer": 1,
+      "explanation": "La pression recommandée pour la plupart des véhicules standards est de 32 PSI."
+    },
+    {
+      "question": "Quelle est la durée de vie moyenne d'une batterie de voiture?",
+      "options": ["2-3 ans", "4-5 ans", "6-7 ans", "8-10 ans"],
+      "correctAnswer": 1,
+      "explanation": "Une batterie de voiture dure généralement entre 4 et 5 ans selon l'utilisation et l'entretien."
+    }
+  ]
+}

@@ -24,6 +24,40 @@ const COLLECTIONS = {
     questions: 'questions'
 };
 
+// Cache en mémoire pour limiter les lectures Firestore répétées
+const cacheStore = new Map();
+
+function buildCacheKey(parts = []) {
+    return parts.filter(Boolean).join('::');
+}
+
+function getCachedValue(key) {
+    const entry = cacheStore.get(key);
+    if (!entry) {
+        return null;
+    }
+    if (Date.now() > entry.expireAt) {
+        cacheStore.delete(key);
+        return null;
+    }
+    return entry.value;
+}
+
+function setCachedValue(key, value, ttlMs = 5 * 60 * 1000) {
+    cacheStore.set(key, {
+        value,
+        expireAt: Date.now() + ttlMs
+    });
+}
+
+function invalidateCache(prefix) {
+    cacheStore.forEach((_, key) => {
+        if (key.startsWith(prefix)) {
+            cacheStore.delete(key);
+        }
+    });
+}
+
 // ===== GESTION DES UTILISATEURS =====
 
 /**
@@ -102,7 +136,10 @@ export async function saveQuizResult(quizData) {
             totalQuestions: quizData.totalQuestions,
             timeElapsed: quizData.timeElapsed,
             answers: quizData.answers,
+            // Champ historique (utilisé par anciens écrans / index existants)
             date: Timestamp.now(),
+            // Nouveau champ normalisé utilisé pour les requêtes récentes
+            completedAt: Timestamp.now(),
             month: quizData.month || new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })
         };
         
@@ -115,6 +152,12 @@ export async function saveQuizResult(quizData) {
         
         // Mettre à jour la progression mensuelle
         await updateMonthlyProgress(user.uid, quizData.month, quizData.score);
+
+    invalidateCache(buildCacheKey(['quizResults', user.uid]));
+    invalidateCache(buildCacheKey(['monthlyResults', user.uid]));
+    invalidateCache(buildCacheKey(['annualProgress', user.uid]));
+    invalidateCache('users');
+    invalidateCache('users-stats');
         
         return resultRef.id;
     } catch (error) {
@@ -127,6 +170,12 @@ export async function saveQuizResult(quizData) {
  * Récupérer tous les résultats d'un utilisateur
  */
 export async function getUserQuizResults(uid, limitCount = 50) {
+    const cacheKey = buildCacheKey(['quizResults', uid, limitCount]);
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         const q = query(
             collection(db, COLLECTIONS.quizResults),
@@ -143,6 +192,7 @@ export async function getUserQuizResults(uid, limitCount = 50) {
         });
         
         console.log(`📊 ${results.length} résultats chargés`);
+        setCachedValue(cacheKey, results);
         return results;
     } catch (error) {
         console.error('❌ Erreur récupération résultats:', error);
@@ -154,6 +204,12 @@ export async function getUserQuizResults(uid, limitCount = 50) {
  * Récupérer les résultats d'un mois spécifique
  */
 export async function getMonthlyResults(uid, month) {
+    const cacheKey = buildCacheKey(['monthlyResults', uid, month]);
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         const q = query(
             collection(db, COLLECTIONS.quizResults),
@@ -169,6 +225,7 @@ export async function getMonthlyResults(uid, month) {
             results.push({ id: doc.id, ...doc.data() });
         });
         
+        setCachedValue(cacheKey, results);
         return results;
     } catch (error) {
         console.error('❌ Erreur récupération résultats mensuels:', error);
@@ -196,6 +253,9 @@ export async function updateMonthlyProgress(uid, month, score) {
         
         await setDoc(progressRef, progressData, { merge: true });
         console.log('✅ Progression mensuelle mise à jour');
+
+        invalidateCache(buildCacheKey(['monthlyResults', uid]));
+        invalidateCache(buildCacheKey(['annualProgress', uid]));
     } catch (error) {
         console.error('❌ Erreur mise à jour progression:', error);
         throw error;
@@ -206,6 +266,12 @@ export async function updateMonthlyProgress(uid, month, score) {
  * Récupérer la progression annuelle
  */
 export async function getAnnualProgress(uid, year = new Date().getFullYear()) {
+    const cacheKey = buildCacheKey(['annualProgress', uid, year]);
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         const q = query(
             collection(db, COLLECTIONS.monthlyProgress),
@@ -221,6 +287,7 @@ export async function getAnnualProgress(uid, year = new Date().getFullYear()) {
         });
         
         console.log('📅 Progression annuelle chargée');
+        setCachedValue(cacheKey, progress);
         return progress;
     } catch (error) {
         console.error('❌ Erreur récupération progression:', error);
@@ -252,6 +319,9 @@ async function updateUserStats(uid, newScore) {
             });
             
             console.log('📊 Statistiques mises à jour');
+
+            invalidateCache('users');
+            invalidateCache('users-stats');
         }
     } catch (error) {
         console.error('❌ Erreur mise à jour statistiques:', error);
@@ -303,6 +373,9 @@ export async function updateStreak(uid) {
             });
             
             console.log(`🔥 Série mise à jour: ${currentStreak} mois`);
+
+            invalidateCache('users');
+            invalidateCache('users-stats');
         }
         
         return currentStreak;
@@ -371,6 +444,12 @@ export async function isCurrentUserAdmin() {
  * ADMIN: Récupérer toutes les questions avec filtres optionnels
  */
 export async function getQuestions(filters = {}) {
+    const cacheKey = buildCacheKey(['questions', JSON.stringify(filters || {})]);
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         let q = collection(db, COLLECTIONS.questions);
         const constraints = [];
@@ -401,6 +480,7 @@ export async function getQuestions(filters = {}) {
         });
         
         console.log(`📚 ${questions.length} questions chargées`);
+        setCachedValue(cacheKey, questions);
         return questions;
     } catch (error) {
         console.error('❌ Erreur récupération questions:', error);
@@ -459,6 +539,9 @@ export async function createQuestion(questionData) {
             adminId: user.uid,
             adminEmail: user.email
         });
+
+        invalidateCache('questions');
+        invalidateCache('questions-stats');
         
         return questionRef.id;
     } catch (error) {
@@ -497,6 +580,9 @@ export async function updateQuestion(questionId, questionData) {
             adminEmail: user.email,
             changes: questionData
         });
+
+        invalidateCache('questions');
+        invalidateCache('questions-stats');
         
         return true;
     } catch (error) {
@@ -530,6 +616,9 @@ export async function deleteQuestion(questionId) {
             adminEmail: user.email,
             deletedData: questionData
         });
+
+        invalidateCache('questions');
+        invalidateCache('questions-stats');
         
         return true;
     } catch (error) {
@@ -594,6 +683,9 @@ export async function importQuestionsFromJSON(jsonData) {
         });
         
         console.log(`✅ Import terminé: ${importedIds.length}/${jsonData.questions.length} questions importées`);
+
+        invalidateCache('questions');
+        invalidateCache('questions-stats');
         
         return {
             success: importedIds.length,
@@ -611,6 +703,12 @@ export async function importQuestionsFromJSON(jsonData) {
  * ADMIN: Récupérer tous les utilisateurs
  */
 export async function getAllUsers(filters = {}) {
+    const cacheKey = buildCacheKey(['users', JSON.stringify(filters || {})]);
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         let q = collection(db, COLLECTIONS.users);
         const constraints = [];
@@ -635,6 +733,7 @@ export async function getAllUsers(filters = {}) {
         });
         
         console.log(`👥 ${users.length} utilisateurs chargés`);
+        setCachedValue(cacheKey, users);
         return users;
     } catch (error) {
         console.error('❌ Erreur récupération utilisateurs:', error);
@@ -671,6 +770,9 @@ export async function updateUserRole(userId, newRole) {
             adminId: user.uid,
             adminEmail: user.email
         });
+
+        invalidateCache('users');
+        invalidateCache('users-stats');
         
         return true;
     } catch (error) {
@@ -717,6 +819,12 @@ async function createAuditLog(logData) {
  * ADMIN: Récupérer les statistiques des questions
  */
 export async function getQuestionsStats() {
+    const cacheKey = 'questions-stats';
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         const questions = await getQuestions();
         
@@ -738,6 +846,7 @@ export async function getQuestionsStats() {
             stats.byYear[q.year] = (stats.byYear[q.year] || 0) + 1;
         });
         
+        setCachedValue(cacheKey, stats, 2 * 60 * 1000);
         return stats;
     } catch (error) {
         console.error('❌ Erreur statistiques questions:', error);
@@ -749,6 +858,12 @@ export async function getQuestionsStats() {
  * ADMIN: Récupérer les statistiques des utilisateurs
  */
 export async function getUsersStats() {
+    const cacheKey = 'users-stats';
+    const cached = getCachedValue(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
     try {
         const users = await getAllUsers();
         
@@ -774,6 +889,7 @@ export async function getUsersStats() {
         
         stats.averageScore = stats.total > 0 ? Math.round(stats.averageScore / stats.total) : 0;
         
+        setCachedValue(cacheKey, stats, 2 * 60 * 1000);
         return stats;
     } catch (error) {
         console.error('❌ Erreur statistiques utilisateurs:', error);

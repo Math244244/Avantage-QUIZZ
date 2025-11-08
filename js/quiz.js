@@ -39,10 +39,13 @@ let timerInterval = null;
 let questionStartTime = null;
 let currentStreak = 0;
 let isPaused = false;
-let pausedTime = 0;
+let totalPausedDuration = 0;
+let pauseStartedAt = null;
 let currentModule = null;
 let currentMonth = null;
 let currentYear = null;
+let hasCurrentQuestionBeenAnswered = false;
+let quizEventDelegationInitialized = false;
 
 // Couleurs par module
 const moduleColors = {
@@ -310,15 +313,19 @@ export async function startQuiz(moduleId) {
         };
         
         // Réinitialiser l'état
-        currentQuestionIndex = 0;
-        userAnswers = [];
-        startTime = Date.now();
-        questionStartTime = Date.now();
-        currentStreak = 0;
+    currentQuestionIndex = 0;
+    userAnswers = [];
+    startTime = Date.now();
+    questionStartTime = Date.now();
+    currentStreak = 0;
+    isPaused = false;
+    totalPausedDuration = 0;
+    pauseStartedAt = null;
+    hasCurrentQuestionBeenAnswered = false;
         
         // Cacher l'écran de chargement et démarrer
-        hideLoadingScreen();
-        showQuizView();
+    hideLoadingScreen();
+    showQuizView();
         renderQuestion();
         startTimer();
         updateScoreDisplay();
@@ -370,7 +377,57 @@ function getOrCreateQuizView() {
         quizView.id = 'quiz-view';
         document.querySelector('main').appendChild(quizView);
     }
+    initializeQuizEventDelegation(quizView);
     return quizView;
+}
+
+function initializeQuizEventDelegation(quizView) {
+    if (quizEventDelegationInitialized || !quizView) {
+        return;
+    }
+
+    quizView.addEventListener('click', (event) => {
+        const optionButton = event.target.closest('.option-button');
+        if (optionButton && !optionButton.disabled) {
+            const optionId = optionButton.dataset.optionId;
+            if (optionId) {
+                handleAnswer(optionId);
+            }
+            return;
+        }
+
+        const nextButton = event.target.closest('#next-question-btn');
+        if (nextButton) {
+            event.preventDefault();
+            nextQuestion();
+            return;
+        }
+
+        const quitButton = event.target.closest('#quit-quiz-btn');
+        if (quitButton) {
+            event.preventDefault();
+            if (confirm('Voulez-vous vraiment quitter le quiz ? Votre progression sera perdue.')) {
+                returnToDashboard();
+            }
+            return;
+        }
+
+        const focusButton = event.target.closest('#focus-mode-btn');
+        if (focusButton) {
+            event.preventDefault();
+            toggleFocusMode();
+            return;
+        }
+
+        const pauseButton = event.target.closest('#pause-btn');
+        if (pauseButton) {
+            event.preventDefault();
+            togglePause();
+            return;
+        }
+    });
+
+    quizEventDelegationInitialized = true;
 }
 
 // Rendre la question actuelle
@@ -378,6 +435,7 @@ function renderQuestion() {
     const question = currentQuiz.questions[currentQuestionIndex];
     const quizView = document.getElementById('quiz-view');
     const colorScheme = moduleColors[currentQuiz.color];
+    hasCurrentQuestionBeenAnswered = false;
     
     quizView.innerHTML = `
         <!-- En-tête du quiz -->
@@ -492,41 +550,18 @@ function renderQuestion() {
             </div>
         </div>
     `;
-
-    // Attacher les événements
-    attachQuestionEvents();
     updateScoreDisplay();
-}
-
-// Attacher les événements aux boutons
-function attachQuestionEvents() {
-    // Options de réponse
-    document.querySelectorAll('.option-button').forEach(button => {
-        button.addEventListener('click', () => handleAnswer(button.dataset.optionId));
-    });
-    
-    // Bouton suivant
-    document.getElementById('next-question-btn')?.addEventListener('click', nextQuestion);
-    
-    // Bouton quitter
-    document.getElementById('quit-quiz-btn')?.addEventListener('click', () => {
-        if (confirm('Voulez-vous vraiment quitter le quiz ? Votre progression sera perdue.')) {
-            returnToDashboard();
-        }
-    });
-    
-    // Bouton focus
-    document.getElementById('focus-mode-btn')?.addEventListener('click', toggleFocusMode);
-    
-    // Bouton pause
-    document.getElementById('pause-btn')?.addEventListener('click', togglePause);
 }
 
 // Gérer la réponse de l'utilisateur
 function handleAnswer(optionId) {
+    if (hasCurrentQuestionBeenAnswered) {
+        return;
+    }
     const question = currentQuiz.questions[currentQuestionIndex];
     const selectedOption = question.options.find(opt => opt.id === optionId);
     const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
+    hasCurrentQuestionBeenAnswered = true;
     
     // Enregistrer la réponse
     userAnswers.push({
@@ -623,7 +658,14 @@ function showResults() {
     try { window.__QUIZ_ACTIVE = false; } catch (e) {}
     
     const score = Math.round((userAnswers.filter(a => a.isCorrect).length / userAnswers.length) * 100);
-    const totalTime = Math.floor((Date.now() - startTime) / 1000);
+    let pausedOffset = totalPausedDuration;
+    if (isPaused && pauseStartedAt) {
+        pausedOffset += Date.now() - pauseStartedAt;
+    }
+    const totalTime = Math.max(0, Math.floor((Date.now() - startTime - pausedOffset) / 1000));
+    isPaused = false;
+    pauseStartedAt = null;
+    totalPausedDuration = 0;
     const minutes = Math.floor(totalTime / 60);
     const seconds = totalTime % 60;
     
@@ -723,16 +765,17 @@ async function saveQuizToFirestore(score, totalTime) {
             return;
         }
         
-        await saveQuizResult(user.uid, {
-            module: currentModule,
-            month: currentMonth,
-            year: currentYear,
-            score: score,
-            totalQuestions: currentQuiz.questions.length,
+        const moduleDetails = moduleConfig[currentModule] || {};
+        await saveQuizResult({
+            moduleId: currentModule,
+            moduleName: moduleDetails.name || currentQuiz.module || currentModule,
+            score,
             correctAnswers: userAnswers.filter(a => a.isCorrect).length,
-            timeSpent: totalTime,
+            totalQuestions: currentQuiz.questions.length,
+            timeElapsed: totalTime,
             answers: userAnswers,
-            completedAt: new Date()
+            month: currentMonth,
+            year: currentYear
         });
         
         console.log('✅ Résultat sauvegardé dans Firestore');
@@ -743,15 +786,24 @@ async function saveQuizToFirestore(score, totalTime) {
 
 // Timer du quiz
 function startTimer() {
+    stopTimer();
     timerInterval = setInterval(() => {
-        if (!isPaused) {
-            const elapsed = Math.floor((Date.now() - startTime - pausedTime) / 1000);
-            const minutes = Math.floor(elapsed / 60);
-            const seconds = elapsed % 60;
-            const timerElement = document.getElementById('quiz-timer');
-            if (timerElement) {
-                timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            }
+        if (startTime === null) {
+            return;
+        }
+
+        let pausedOffset = totalPausedDuration;
+        if (isPaused && pauseStartedAt) {
+            pausedOffset += Date.now() - pauseStartedAt;
+        }
+
+        const elapsedMs = Date.now() - startTime - pausedOffset;
+        const elapsed = Math.max(0, Math.floor(elapsedMs / 1000));
+        const minutes = Math.floor(elapsed / 60);
+        const seconds = elapsed % 60;
+        const timerElement = document.getElementById('quiz-timer');
+        if (timerElement) {
+            timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
         }
     }, 1000);
 }
@@ -761,6 +813,7 @@ function stopTimer() {
         clearInterval(timerInterval);
         timerInterval = null;
     }
+    pauseStartedAt = null;
 }
 
 // Mettre à jour l'affichage du score
@@ -781,14 +834,22 @@ function toggleFocusMode() {
 
 // Pause
 function togglePause() {
-    isPaused = !isPaused;
     const pauseBtn = document.getElementById('pause-btn');
-    if (isPaused) {
-        pausedTime += Date.now();
+    if (!pauseBtn) {
+        return;
+    }
+
+    if (!isPaused) {
+        isPaused = true;
+        pauseStartedAt = Date.now();
         pauseBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Reprendre';
         toast.warning('Quiz en pause. Cliquez sur "Reprendre" pour continuer.', 3000);
     } else {
-        pausedTime = Date.now() - pausedTime;
+        isPaused = false;
+        if (pauseStartedAt) {
+            totalPausedDuration += Date.now() - pauseStartedAt;
+        }
+        pauseStartedAt = null;
         pauseBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Pause';
         toast.success('Quiz repris !', 2000);
     }
@@ -798,6 +859,10 @@ function togglePause() {
 function returnToDashboard() {
     stopTimer();
     try { window.__QUIZ_ACTIVE = false; } catch (e) {}
+    isPaused = false;
+    totalPausedDuration = 0;
+    pauseStartedAt = null;
+    hasCurrentQuestionBeenAnswered = false;
     document.getElementById('quiz-view')?.classList.add('view-hidden');
     document.getElementById('dashboard-view')?.classList.remove('view-hidden');
     

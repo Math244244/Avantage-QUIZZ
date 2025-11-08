@@ -13,8 +13,19 @@ provider.setCustomParameters({
     prompt: 'select_account'
 });
 
+// Prevent multiple simultaneous sign-in attempts
+let signInInProgress = false;
+
 // Sign in with Google
 export async function signInWithGoogle() {
+    // Prevent multiple popup windows
+    if (signInInProgress) {
+        console.warn('⚠️ Connexion déjà en cours, veuillez patienter...');
+        return null;
+    }
+    
+    signInInProgress = true;
+    
     try {
         console.log('🔐 Tentative de connexion Google...');
         const result = await signInWithPopup(auth, provider);
@@ -39,10 +50,21 @@ export async function signInWithGoogle() {
             errorMessage = 'Pop-up bloquée. Autorisez les pop-ups pour ce site.';
         } else if (error.code === 'auth/unauthorized-domain') {
             errorMessage = 'Domaine non autorisé. Configurez Firebase Authentication.';
+        } else if (error.code === 'auth/cancelled-popup-request') {
+            // Silent error - user clicked too fast
+            console.warn('⚠️ Requête de popup annulée (clic multiple)');
+            return null;
         }
         
-        alert(errorMessage);
+        if (error.code !== 'auth/cancelled-popup-request') {
+            alert(errorMessage);
+        }
         throw error;
+    } finally {
+        // Reset flag after 2 seconds to allow retry
+        setTimeout(() => {
+            signInInProgress = false;
+        }, 2000);
     }
 }
 

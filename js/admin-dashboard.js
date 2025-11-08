@@ -2,6 +2,7 @@
 import { db } from './firebase-config.js';
 import { collection, query, getDocs, where, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 import { toast } from './toast.js';
+import { logger } from './logger.js';
 import { isDemoMode } from './auth.js';
 import {
     createStatsSkeleton,
@@ -72,7 +73,7 @@ let chartActivity = null;
  * Initialiser le dashboard admin
  */
 export async function initAdminDashboard() {
-    console.log('📊 Initialisation du dashboard admin avancé');
+    logger.info('📊 Initialisation du dashboard admin avancé');
     
     // Afficher loading
     showLoadingState();
@@ -96,7 +97,7 @@ export async function initAdminDashboard() {
         toast.success('Dashboard chargé avec succès !', 3000);
         
     } catch (error) {
-        console.error('❌ Erreur chargement dashboard:', error);
+    logger.error('❌ Erreur chargement dashboard:', error);
         hideLoadingState();
         toast.error('Erreur lors du chargement du dashboard', 4000);
     }
@@ -109,14 +110,14 @@ async function loadGlobalStats() {
     try {
         // ✅ Mode démo : Utiliser données simulées
         if (isDemoMode()) {
-            console.log('📊 Mode démo : Chargement des statistiques simulées...');
+            logger.info('📊 Mode démo : Chargement des statistiques simulées...');
             globalStats = MOCK_DATA.stats;
             renderGlobalStats();
-            console.log('✅ Statistiques simulées chargées:', globalStats);
+            logger.info('✅ Statistiques simulées chargées:', globalStats);
             return;
         }
         
-        console.log('📈 Chargement des statistiques globales...');
+    logger.info('📈 Chargement des statistiques globales...');
         
         // Compter les utilisateurs
         const usersSnapshot = await getDocs(collection(db, 'users'));
@@ -192,10 +193,10 @@ async function loadGlobalStats() {
         // Afficher les statistiques
         renderGlobalStats();
         
-        console.log('✅ Statistiques globales chargées:', globalStats);
+    logger.info('✅ Statistiques globales chargées:', globalStats);
         
     } catch (error) {
-        console.error('❌ Erreur chargement stats globales:', error);
+    logger.error('❌ Erreur chargement stats globales:', error);
         throw error;
     }
 }
@@ -207,13 +208,13 @@ async function loadTopUsers() {
     try {
         // ✅ Mode démo : Utiliser données simulées
         if (isDemoMode()) {
-            console.log('🏆 Mode démo : Chargement du top 10 simulé...');
+            logger.info('🏆 Mode démo : Chargement du top 10 simulé...');
             renderTopUsers(MOCK_DATA.topUsers);
-            console.log('✅ Top 10 simulé chargé');
+            logger.info('✅ Top 10 simulé chargé');
             return;
         }
         
-        console.log('🏆 Chargement du top 10 utilisateurs...');
+    logger.info('🏆 Chargement du top 10 utilisateurs...');
         
         // Récupérer tous les résultats groupés par utilisateur
         const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
@@ -251,10 +252,10 @@ async function loadTopUsers() {
         // Afficher le top 10
         renderTopUsers(topUsers);
         
-        console.log('✅ Top 10 utilisateurs chargé:', topUsers);
+    logger.info('✅ Top 10 utilisateurs chargé:', topUsers);
         
     } catch (error) {
-        console.error('❌ Erreur chargement top users:', error);
+    logger.error('❌ Erreur chargement top users:', error);
         throw error;
     }
 }
@@ -266,13 +267,13 @@ async function loadRecentActivity() {
     try {
         // ✅ Mode démo : Utiliser données simulées
         if (isDemoMode()) {
-            console.log('📅 Mode démo : Chargement de l\'activité simulée...');
+            logger.info('📅 Mode démo : Chargement de l\'activité simulée...');
             renderRecentActivity(MOCK_DATA.recentActivity);
-            console.log('✅ Activité simulée chargée');
+            logger.info('✅ Activité simulée chargée');
             return;
         }
         
-        console.log('📅 Chargement de l\'activité récente...');
+    logger.info('📅 Chargement de l\'activité récente...');
         
         // Récupérer les 10 derniers quiz complétés
         const q = query(
@@ -298,10 +299,10 @@ async function loadRecentActivity() {
         // Afficher l'activité
         renderRecentActivity(activities);
         
-        console.log('✅ Activité récente chargée:', activities);
+    logger.info('✅ Activité récente chargée:', activities);
         
     } catch (error) {
-        console.error('❌ Erreur chargement activité:', error);
+    logger.error('❌ Erreur chargement activité:', error);
         throw error;
     }
 }
@@ -313,7 +314,7 @@ async function loadModuleStats() {
     try {
         // ✅ Mode démo : Utiliser données simulées
         if (isDemoMode()) {
-            console.log('📊 Mode démo : Chargement des stats modules simulées...');
+            logger.info('📊 Mode démo : Chargement des stats modules simulées...');
             // Transformer les données mockées au format attendu
             const mockStats = {
                 'Auto': { count: 85, totalScore: 6460, avgScore: 76 },
@@ -321,11 +322,11 @@ async function loadModuleStats() {
                 'VR': { count: 54, totalScore: 3942, avgScore: 73 },
                 'Tracteur': { count: 39, totalScore: 3081, avgScore: 79 }
             };
-            console.log('✅ Stats modules simulées chargées:', mockStats);
+            logger.info('✅ Stats modules simulées chargées:', mockStats);
             return mockStats;
         }
         
-        console.log('📊 Chargement des stats par module...');
+    logger.info('📊 Chargement des stats par module...');
         
         const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
         const moduleStats = {};
@@ -351,11 +352,11 @@ async function loadModuleStats() {
             stat.avgScore = Math.round(stat.totalScore / stat.count);
         });
         
-        console.log('✅ Stats par module chargées:', moduleStats);
+    logger.info('✅ Stats par module chargées:', moduleStats);
         return moduleStats;
         
     } catch (error) {
-        console.error('❌ Erreur chargement stats modules:', error);
+    logger.error('❌ Erreur chargement stats modules:', error);
         throw error;
     }
 }
@@ -450,40 +451,49 @@ function renderTopUsers(users) {
     if (!container) return;
     
     if (users.length === 0) {
-        container.innerHTML = `
-            <div class="text-center py-8 text-slate-500">
-                <svg class="w-12 h-12 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
-                <p class="font-medium">Aucun utilisateur</p>
-            </div>
+        const empty = document.createElement('div');
+        empty.className = 'text-center py-8 text-slate-500';
+        empty.innerHTML = `
+            <svg class="w-12 h-12 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <p class="font-medium">Aucun utilisateur</p>
         `;
+        container.replaceChildren(empty);
         return;
     }
-    
-    container.innerHTML = users.map((user, index) => {
+
+    const fragment = document.createDocumentFragment();
+    users.forEach((user, index) => {
         const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`;
-        const bgColor = index === 0 ? 'bg-yellow-50 border-yellow-200' : 
-                       index === 1 ? 'bg-slate-50 border-slate-200' :
-                       index === 2 ? 'bg-orange-50 border-orange-200' : 
-                       'bg-white border-slate-200';
-        
-        return `
-            <div class="flex items-center justify-between p-4 rounded-lg border ${bgColor} hover:shadow-md transition-shadow">
-                <div class="flex items-center gap-4">
-                    <span class="text-2xl font-bold w-8">${medal}</span>
-                    <div>
-                        <h4 class="font-semibold text-slate-900">${user.userName}</h4>
-                        <p class="text-sm text-slate-600">${user.totalQuizzes} quiz complétés</p>
-                    </div>
-                </div>
-                <div class="text-right">
-                    <div class="text-2xl font-bold text-indigo-600">${user.avgScore}%</div>
-                    <div class="text-xs text-slate-500">Score moyen</div>
+        const bgColor = index === 0 ? 'bg-yellow-50 border-yellow-200' :
+            index === 1 ? 'bg-slate-50 border-slate-200' :
+            index === 2 ? 'bg-orange-50 border-orange-200' :
+            'bg-white border-slate-200';
+    const rawUserName = user.userName || user.displayName || user.email || 'Utilisateur';
+    const userName = escapeHtml(rawUserName);
+        const totalQuizzes = Number.isFinite(user.totalQuizzes) ? user.totalQuizzes : 0;
+        const avgScore = Number.isFinite(user.avgScore) ? user.avgScore : 0;
+
+    const card = document.createElement('article');
+        card.className = `flex items-center justify-between p-4 rounded-lg border ${bgColor} hover:shadow-md transition-shadow`;
+        card.innerHTML = `
+            <div class="flex items-center gap-4">
+                <span class="text-2xl font-bold w-8">${escapeHtml(medal)}</span>
+                <div>
+                    <h4 class="font-semibold text-slate-900">${userName}</h4>
+                    <p class="text-sm text-slate-600">${escapeHtml(`${totalQuizzes} quiz complétés`)}</p>
                 </div>
             </div>
+            <div class="text-right">
+                <div class="text-2xl font-bold text-indigo-600">${escapeHtml(`${avgScore}%`)}</div>
+                <div class="text-xs text-slate-500">Score moyen</div>
+            </div>
         `;
-    }).join('');
+        fragment.appendChild(card);
+    });
+
+    container.replaceChildren(fragment);
 }
 
 /**
@@ -494,41 +504,52 @@ function renderRecentActivity(activities) {
     if (!container) return;
     
     if (activities.length === 0) {
-        container.innerHTML = `
-            <div class="text-center py-8 text-slate-500">
-                <svg class="w-12 h-12 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <p class="font-medium">Aucune activité récente</p>
-            </div>
+        const empty = document.createElement('div');
+        empty.className = 'text-center py-8 text-slate-500';
+        empty.innerHTML = `
+            <svg class="w-12 h-12 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="font-medium">Aucune activité récente</p>
         `;
+        container.replaceChildren(empty);
         return;
     }
-    
-    container.innerHTML = activities.map(activity => {
-        const timeAgo = getTimeAgo(activity.completedAt);
-        const scoreColor = activity.score >= 80 ? 'text-green-600' : 
-                          activity.score >= 60 ? 'text-yellow-600' : 
-                          'text-red-600';
-        
-        return `
-            <div class="flex items-center justify-between p-3 hover:bg-slate-50 rounded-lg transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-                        <span class="text-lg font-bold text-indigo-600">${activity.userName.charAt(0).toUpperCase()}</span>
-                    </div>
-                    <div>
-                        <p class="font-medium text-slate-900">${activity.userName}</p>
-                        <p class="text-sm text-slate-600">${activity.module}</p>
-                    </div>
+
+    const fragment = document.createDocumentFragment();
+    activities.forEach(activity => {
+    const rawTimeAgo = getTimeAgo(activity.completedAt);
+    const timeAgo = escapeHtml(rawTimeAgo);
+        const scoreColor = activity.score >= 80 ? 'text-green-600' :
+            activity.score >= 60 ? 'text-yellow-600' :
+            'text-red-600';
+    const rawUserName = activity.userName || 'Utilisateur';
+    const userName = escapeHtml(rawUserName);
+    const moduleName = escapeHtml(activity.module || 'Module');
+        const scoreDisplay = escapeHtml(`${Number.isFinite(activity.score) ? activity.score : 0}%`);
+    const avatarInitial = escapeHtml(rawUserName.charAt(0).toUpperCase());
+
+        const row = document.createElement('article');
+        row.className = 'flex items-center justify-between p-3 hover:bg-slate-50 rounded-lg transition-colors';
+        row.innerHTML = `
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                    <span class="text-lg font-bold text-indigo-600">${avatarInitial}</span>
                 </div>
-                <div class="text-right">
-                    <div class="text-lg font-bold ${scoreColor}">${activity.score}%</div>
-                    <div class="text-xs text-slate-500">${timeAgo}</div>
+                <div>
+                    <p class="font-medium text-slate-900">${userName}</p>
+                    <p class="text-sm text-slate-600">${moduleName}</p>
                 </div>
             </div>
+            <div class="text-right">
+                <div class="text-lg font-bold ${scoreColor}">${scoreDisplay}</div>
+                <div class="text-xs text-slate-500">${timeAgo}</div>
+            </div>
         `;
-    }).join('');
+        fragment.appendChild(row);
+    });
+
+    container.replaceChildren(fragment);
 }
 
 /**
@@ -557,7 +578,7 @@ async function createProgressChart() {
         
         // ✅ Mode démo : Utiliser données simulées
         if (isDemoMode()) {
-            console.log('📈 Mode démo : Création graphique progression simulé...');
+            logger.info('📈 Mode démo : Création graphique progression simulé...');
             
             // Générer 30 jours de données mockées
             labels = [];
@@ -684,7 +705,7 @@ async function createProgressChart() {
         });
         
     } catch (error) {
-        console.error('❌ Erreur création graphique progression:', error);
+    logger.error('❌ Erreur création graphique progression:', error);
     }
 }
 
@@ -738,7 +759,7 @@ async function createModulesChart() {
         });
         
     } catch (error) {
-        console.error('❌ Erreur création graphique modules:', error);
+    logger.error('❌ Erreur création graphique modules:', error);
     }
 }
 
@@ -799,7 +820,7 @@ async function createActivityChart() {
         });
         
     } catch (error) {
-        console.error('❌ Erreur création graphique activité:', error);
+    logger.error('❌ Erreur création graphique activité:', error);
     }
 }
 
@@ -844,7 +865,7 @@ export async function exportToPDF() {
         toast.updateLoadingToast(loadingToast, 'PDF généré avec succès !', 'success');
         
     } catch (error) {
-        console.error('❌ Erreur export PDF:', error);
+        logger.error('❌ Erreur export PDF:', error);
         toast.updateLoadingToast(loadingToast, 'Erreur d\'export PDF', 'error');
         toast.error('Erreur: Assurez-vous que jsPDF est chargé', 4000);
     }
@@ -890,7 +911,7 @@ export async function exportToAdvancedCSV() {
         toast.updateLoadingToast(loadingToast, 'CSV généré avec succès !', 'success');
         
     } catch (error) {
-        console.error('❌ Erreur export CSV:', error);
+        logger.error('❌ Erreur export CSV:', error);
         toast.updateLoadingToast(loadingToast, 'Erreur d\'export CSV', 'error');
         toast.error('Erreur lors de l\'export CSV', 4000);
     }
@@ -921,6 +942,18 @@ async function handlePeriodChange(e) {
     const period = e.target.value;
     toast.info(`Filtrage: ${period}`, 2000);
     // TODO: Filtrer les données selon la période
+}
+
+function escapeHtml(text) {
+    if (text === null || text === undefined) {
+        return '';
+    }
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
 }
 
 /**

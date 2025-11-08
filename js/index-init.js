@@ -1,5 +1,5 @@
 // Initialisation de la page d'accueil (index.html)
-import { signInWithGoogle, activateDemoMode } from './auth.js';
+import { signInWithGoogle } from './auth.js';
 import { showErrorToast, showSuccessToast, showLoadingToast, updateLoadingToast } from './toast.js';
 
 console.log('Initialisation de la page d accueil...');
@@ -8,7 +8,7 @@ console.log('Initialisation de la page d accueil...');
 document.addEventListener('DOMContentLoaded', initIndexPage);
 
 function initIndexPage() {
-    console.log('📄 DOM chargé - configuration des boutons...');
+    console.log('📄 DOM chargé - configuration du bouton de connexion...');
     
     // Bouton Google Sign-In
     const googleBtn = document.getElementById('google-signin-btn');
@@ -17,15 +17,6 @@ function initIndexPage() {
         console.log('✅ Bouton Google configuré');
     } else {
         console.warn('⚠️ Bouton Google non trouvé');
-    }
-    
-    // Bouton Mode Démo
-    const demoBtn = document.getElementById('demo-mode-btn');
-    if (demoBtn) {
-        demoBtn.addEventListener('click', handleDemoMode);
-        console.log('✅ Bouton Mode Démo configuré');
-    } else {
-        console.warn('⚠️ Bouton Mode Démo non trouvé');
     }
 }
 
@@ -68,32 +59,5 @@ async function handleGoogleSignIn() {
     }
 }
 
-/**
- * Handler pour le bouton Mode Démo
- */
-async function handleDemoMode() {
-    console.log('🎭 Clic sur Mode Démo...');
-    
-    const loadingToast = showLoadingToast('Activation du mode démo...');
-    
-    try {
-        const demoUser = await activateDemoMode();
-        
-        console.log('✅ Mode démo activé:', demoUser);
-        
-    // Succès
-    updateLoadingToast(loadingToast, 'Mode démo activé ! Rechargement...', 'success');
-        
-        // Recharger la page pour que le dashboard détecte le mode démo
-        setTimeout(() => {
-            window.location.reload();
-        }, 500);
-        
-    } catch (error) {
-        console.error('❌ Erreur activation mode démo:', error);
-        updateLoadingToast(loadingToast, 'error', 'Impossible d\'activer le mode démo');
-    }
-}
-
 // Export pour tests
-export { handleGoogleSignIn, handleDemoMode };
+export { handleGoogleSignIn };

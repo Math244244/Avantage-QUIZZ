@@ -121,11 +121,17 @@ function initEventListeners() {
     const monthFilter = document.getElementById('filter-month');
     const yearFilter = document.getElementById('filter-year');
     const searchInput = document.getElementById('search-questions');
+    const questionsList = document.getElementById('questions-list');
     
     if (moduleFilter) moduleFilter.addEventListener('change', handleFilterChange);
     if (monthFilter) monthFilter.addEventListener('change', handleFilterChange);
     if (yearFilter) yearFilter.addEventListener('change', handleFilterChange);
     if (searchInput) searchInput.addEventListener('input', handleSearch);
+
+    if (questionsList && !questionsList.dataset.eventsBound) {
+        questionsList.addEventListener('click', handleQuestionsListClick);
+        questionsList.dataset.eventsBound = 'true';
+    }
     
     // Pagination
     const prevBtn = document.getElementById('prev-page-btn');
@@ -133,6 +139,27 @@ function initEventListeners() {
     
     if (prevBtn) prevBtn.addEventListener('click', () => changePage(-1));
     if (nextBtn) nextBtn.addEventListener('click', () => changePage(1));
+}
+
+function handleQuestionsListClick(event) {
+    const actionButton = event.target.closest('.edit-question-btn, .delete-question-btn');
+    if (!actionButton) {
+        return;
+    }
+
+    const questionId = actionButton.dataset.questionId;
+    if (!questionId) {
+        return;
+    }
+
+    if (actionButton.classList.contains('edit-question-btn')) {
+        openEditModal(questionId);
+        return;
+    }
+
+    if (actionButton.classList.contains('delete-question-btn')) {
+        handleDeleteQuestion(questionId);
+    }
 }
 
 /**
@@ -201,15 +228,16 @@ function renderQuestionsList() {
     if (!container) return;
     
     if (currentQuestions.length === 0) {
-        container.innerHTML = `
-            <div class="text-center py-12 text-slate-500">
-                <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                <p class="text-lg font-medium">Aucune question trouvee</p>
-                <p class="text-sm">Creez votre premiere question ou importez un fichier JSON</p>
-            </div>
+        const emptyState = document.createElement('div');
+        emptyState.className = 'text-center py-12 text-slate-500';
+        emptyState.innerHTML = `
+            <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <p class="text-lg font-medium">Aucune question trouvee</p>
+            <p class="text-sm">Creez votre premiere question ou importez un fichier JSON</p>
         `;
+        container.replaceChildren(emptyState);
         return;
     }
     
@@ -217,20 +245,22 @@ function renderQuestionsList() {
     const startIndex = (currentPage - 1) * questionsPerPage;
     const endIndex = startIndex + questionsPerPage;
     const paginatedQuestions = currentQuestions.slice(startIndex, endIndex);
-    
-    container.innerHTML = paginatedQuestions.map(q => renderQuestionCard(q)).join('');
-    
+
+    const fragment = document.createDocumentFragment();
+    paginatedQuestions.forEach(question => {
+        fragment.appendChild(createQuestionCardElement(question));
+    });
+
+    container.replaceChildren(fragment);
+
     // Mettre à jour la pagination
     updatePaginationControls();
-    
-    // Ajouter les event listeners pour les actions
-    addQuestionActionListeners();
 }
 
 /**
- * Rendu d'une carte de question
+ * Créer une carte de question sous forme de noeud DOM
  */
-function renderQuestionCard(question) {
+function createQuestionCardElement(question) {
     const moduleColors = {
         auto: 'indigo',
         loisir: 'cyan',
@@ -250,17 +280,24 @@ function renderQuestionCard(question) {
     
     const monthNames = ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sep', 'Oct', 'Nov', 'Dec'];
     const monthName = monthNames[question.month - 1] || question.month;
+    const createdAt = question.createdAt?.seconds
+        ? new Date(question.createdAt.seconds * 1000)
+        : question.createdAt instanceof Date
+            ? question.createdAt
+            : null;
+    const createdAtDisplay = createdAt ? createdAt.toLocaleDateString('fr-FR') : 'N/A';
     
-    return `
-        <div class="question-card bg-white rounded-xl shadow-md p-6 mb-4 hover:shadow-lg transition-shadow" data-question-id="${question.id}">
+    const template = document.createElement('template');
+    template.innerHTML = `
+        <article class="question-card bg-white rounded-xl shadow-md p-6 mb-4 hover:shadow-lg transition-shadow" data-question-id="${question.id}">
             <div class="flex items-start justify-between mb-4">
                 <div class="flex items-center gap-3">
                     <span class="text-2xl">${icon}</span>
                     <div>
                         <span class="inline-block bg-${color}-100 text-${color}-700 text-xs font-semibold px-3 py-1 rounded-full">
-                            ${question.module.toUpperCase()}
+                            ${escapeHtml(question.module.toUpperCase())}
                         </span>
-                        <span class="ml-2 text-sm text-slate-500">${monthName} ${question.year}</span>
+                        <span class="ml-2 text-sm text-slate-500">${escapeHtml(`${monthName} ${question.year}`)}</span>
                     </div>
                 </div>
                 <div class="flex gap-2">
@@ -276,9 +313,7 @@ function renderQuestionCard(question) {
                     </button>
                 </div>
             </div>
-            
             <h4 class="text-lg font-semibold text-slate-900 mb-4">${escapeHtml(question.question)}</h4>
-            
             <div class="space-y-2 mb-4">
                 ${question.options.map((opt, idx) => `
                     <div class="flex items-start gap-2 text-sm ${idx === question.correctAnswer ? 'font-semibold text-green-700 bg-green-50 p-2 rounded' : 'text-slate-600'}">
@@ -288,39 +323,17 @@ function renderQuestionCard(question) {
                     </div>
                 `).join('')}
             </div>
-            
             <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded">
                 <p class="text-xs font-semibold text-blue-700 mb-1">💡 Explication</p>
                 <p class="text-sm text-blue-900">${escapeHtml(question.explanation)}</p>
             </div>
-            
             <div class="mt-4 pt-4 border-t border-slate-200 text-xs text-slate-500">
-                Creee le: ${question.createdAt ? new Date(question.createdAt.seconds * 1000).toLocaleDateString('fr-FR') : 'N/A'}
-                ${question.createdBy ? ` | Par: ${question.createdBy}` : ''}
+                Creee le: ${escapeHtml(createdAtDisplay)}${question.createdBy ? escapeHtml(` | Par: ${question.createdBy}`) : ''}
             </div>
-        </div>
+        </article>
     `;
-}
 
-/**
- * Ajouter les event listeners pour les actions sur les questions
- */
-function addQuestionActionListeners() {
-    // Boutons Modifier
-    document.querySelectorAll('.edit-question-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const questionId = e.currentTarget.dataset.questionId;
-            openEditModal(questionId);
-        });
-    });
-    
-    // Boutons Supprimer
-    document.querySelectorAll('.delete-question-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const questionId = e.currentTarget.dataset.questionId;
-            handleDeleteQuestion(questionId);
-        });
-    });
+    return template.content.firstElementChild;
 }
 
 /**
@@ -658,16 +671,20 @@ function handleSearch(e) {
     if (!container) return;
     
     if (filtered.length === 0) {
-        container.innerHTML = `
-            <div class="text-center py-12 text-slate-500">
-                <p class="text-lg">Aucun resultat pour "${searchTerm}"</p>
-            </div>
+        const emptyState = document.createElement('div');
+        emptyState.className = 'text-center py-12 text-slate-500';
+        emptyState.innerHTML = `
+            <p class="text-lg">Aucun resultat pour "${escapeHtml(searchTerm)}"</p>
         `;
+        container.replaceChildren(emptyState);
         return;
     }
-    
-    container.innerHTML = filtered.map(q => renderQuestionCard(q)).join('');
-    addQuestionActionListeners();
+
+    const fragment = document.createDocumentFragment();
+    filtered.forEach(question => {
+        fragment.appendChild(createQuestionCardElement(question));
+    });
+    container.replaceChildren(fragment);
 }
 
 /**

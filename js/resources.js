@@ -1,7 +1,7 @@
 // Page Ressources - Gestion de la bibliothèque de documents
 import { db } from './firebase-config.js';
 import { collection, query, orderBy, getDocs, addDoc, deleteDoc, doc, where } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
-import { getCurrentUser, onAuthChange, signOutUser, isDemoMode, getDemoUser } from './auth.js';
+import { getCurrentUser, onAuthChange, signOutUser } from './auth.js';
 import { toast } from './toast.js';
 import {
     createResourceSkeleton,
@@ -33,26 +33,10 @@ const moduleNames = {
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', async () => {
-    // ✅ Mode démo : Vérifier si admin
-    if (isDemoMode()) {
-        const demoUser = getDemoUser();
-        if (demoUser) {
-            updateUserInfo(demoUser);
-            if (demoUser.role === 'admin') {
-                document.getElementById('nav-admin-item')?.classList.remove('hidden');
-                document.getElementById('admin-badge-nav')?.classList.remove('hidden');
-                document.getElementById('admin-section')?.classList.remove('hidden');
-                isAdmin = true;
-            }
-            await loadResources();
-            return;
-        }
-    }
-    
     // Vérifier l'authentification Firebase
     onAuthChange(async (user) => {
         if (!user) {
-            window.location.href = '/login.html';
+            window.location.href = '/index.html';
             return;
         }
         
