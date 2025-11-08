@@ -73,12 +73,12 @@ const setHasCurrentQuestionBeenAnswered = (value) => stateManager.set('hasCurren
 const getQuizEventDelegationInitialized = () => stateManager.get('quizEventDelegationInitialized');
 const setQuizEventDelegationInitialized = (value) => stateManager.set('quizEventDelegationInitialized', value);
 
-// Couleurs par module
+// Couleurs par module - AVANTAGE PLUS
 const moduleColors = {
-    'indigo': { bg: 'bg-indigo-600', text: 'text-indigo-600', border: 'border-indigo-600' },
-    'cyan': { bg: 'bg-cyan-600', text: 'text-cyan-600', border: 'border-cyan-600' },
-    'orange': { bg: 'bg-orange-600', text: 'text-orange-600', border: 'border-orange-600' },
-    'green': { bg: 'bg-green-600', text: 'text-green-600', border: 'border-green-600' }
+    'indigo': { bg: 'bg-ap-red-primary', text: 'text-ap-red-primary', border: 'border-ap-red-primary' }, // Auto -> Rouge AP
+    'cyan': { bg: 'bg-ap-gold', text: 'text-ap-gold', border: 'border-ap-gold' }, // Loisir -> Doré AP
+    'orange': { bg: 'bg-orange-600', text: 'text-orange-600', border: 'border-orange-600' }, // VR -> Orange (OK)
+    'green': { bg: 'bg-green-600', text: 'text-green-600', border: 'border-green-600' } // Tracteur -> Vert (OK)
 };
 
 // Charger les questions depuis Firestore, compatible mois numérique ou texte (rétro-compatibilité)
@@ -386,7 +386,7 @@ function showLoadingScreen(moduleName) {
     quizView.innerHTML = `
         <div class="min-h-screen flex items-center justify-center">
             <div class="text-center">
-                <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-indigo-600 mx-auto mb-6"></div>
+                <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-ap-red-primary mx-auto mb-6"></div>
                         <h2 class="text-2xl font-bold text-slate-900 mb-2">Chargement du quiz ${escapeHtml(moduleName)}</h2>
                 <p class="text-slate-600">Récupération des questions...</p>
             </div>
@@ -504,10 +504,10 @@ function renderQuestion() {
                             Pause
                         </button>
                         <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            <span id="quiz-score" class="text-sm font-bold text-indigo-600">Score: 0%</span>
+                            <span id="quiz-score" class="text-sm font-bold text-ap-red-primary">Score: 0%</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -521,9 +521,9 @@ function renderQuestion() {
                     </div>
                 </div>
                 
-                <!-- Barre de progression -->
-                <div class="mt-4 w-full bg-gray-200 rounded-full h-2">
-                    <div class="${colorScheme.bg} h-2 rounded-full transition-all duration-300" style="width: ${((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100}%"></div>
+                <!-- Barre de progression - DORÉE AVANTAGE PLUS -->
+                <div class="mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                    <div class="h-2 rounded-full transition-all duration-300 progress-bar-shine" style="background: var(--ap-gradient-gold); width: ${((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100}%; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);"></div>
                 </div>
             </div>
         </div>
@@ -559,10 +559,10 @@ function renderQuestion() {
                     <div class="space-y-3">
                         ${question.options.map(option => `
                             <button data-option-id="${escapeHtml(option.id)}" 
-                                    class="option-button w-full text-left px-6 py-5 rounded-xl border-2 border-gray-200 hover:border-${currentQuiz.color}-400 hover:bg-${currentQuiz.color}-50 transition-all duration-200 group">
+                                    class="option-button w-full text-left px-6 py-5 rounded-xl border-2 border-gray-200 hover:border-ap-red-primary hover:bg-ap-red-50 transition-all duration-200 group">
                                 <div class="flex items-center gap-4">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg ${colorScheme.bg} bg-opacity-10 flex items-center justify-center group-hover:bg-opacity-20 transition-colors">
-                                        <span class="text-lg font-bold ${colorScheme.text}">${escapeHtml(option.id)}</span>
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-ap-red-100 flex items-center justify-center group-hover:bg-ap-red-primary group-hover:text-white transition-all">
+                                        <span class="text-lg font-bold text-ap-red-primary group-hover:text-white">${escapeHtml(option.id)}</span>
                                     </div>
                                     <span class="text-lg text-slate-700 group-hover:text-slate-900 font-medium">
                                         ${escapeHtml(option.text)}
@@ -582,7 +582,7 @@ function renderQuestion() {
                 <div id="next-button-area" class="hidden px-8 py-6 border-t border-gray-200">
                     <div class="flex justify-between items-center">
                         <p class="text-sm text-slate-500">Question suivante dans quelques secondes...</p>
-                        <button id="next-question-btn" class="${colorScheme.bg} text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center gap-2">
+                        <button id="next-question-btn" class="bg-ap-red-primary hover:bg-ap-red-dark text-white px-6 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 shadow-ap-md hover:shadow-ap-lg transform hover:-translate-y-1">
                             Question suivante
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -634,7 +634,7 @@ function handleAnswer(optionId) {
     // Désactiver tous les boutons
     document.querySelectorAll('.option-button').forEach(btn => {
         btn.disabled = true;
-        btn.classList.remove('hover:border-indigo-400', 'hover:bg-indigo-50');
+        btn.classList.remove('hover:border-ap-red-primary', 'hover:bg-ap-red-50');
     });
     
     // Afficher le résultat
@@ -762,14 +762,14 @@ function showResults() {
     const quizView = document.getElementById('quiz-view');
     
     quizView.innerHTML = `
-        <div class="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50 py-12 px-4">
+        <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12 px-4">
             <div class="max-w-4xl mx-auto">
                 <!-- Carte de résultat principale -->
-                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
-                    <!-- Header avec score -->
-                    <div class="bg-gradient-to-r from-${currentQuiz.color}-500 to-${currentQuiz.color}-700 px-8 py-12 text-center text-white">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8 border-t-4 border-ap-gold">
+                    <!-- Header avec score - GRADIENT AVANTAGE PLUS -->
+                    <div class="px-8 py-12 text-center text-white" style="background: ${score >= 80 ? 'linear-gradient(135deg, #28A745 0%, #D4AF37 100%)' : 'var(--ap-gradient-primary)'};">
                         <h1 class="text-4xl font-bold mb-4">Quiz Terminé ! 🎉</h1>
-                        <div class="text-8xl font-bold mb-4">${score}%</div>
+                        <div class="text-8xl font-bold mb-4" style="text-shadow: 0 4px 20px rgba(0,0,0,0.2);">${score}%</div>
                         <p class="text-xl opacity-90">${userAnswers.filter(a => a.isCorrect).length} / ${userAnswers.length} bonnes réponses</p>
                         <p class="text-lg opacity-75 mt-2">Temps total : ${minutes}:${seconds.toString().padStart(2, '0')}</p>
                     </div>
@@ -810,10 +810,10 @@ function showResults() {
                     
                     <!-- Boutons d'action -->
                     <div class="px-8 py-6 flex gap-4">
-                        <button id="retry-quiz-btn" class="flex-1 ${colorScheme.bg} text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-all">
+                        <button id="retry-quiz-btn" class="flex-1 bg-ap-red-primary hover:bg-ap-red-dark text-white px-6 py-3 rounded-xl font-semibold transition-all transform hover:-translate-y-1 shadow-ap-md hover:shadow-ap-lg">
                             Refaire le quiz
                         </button>
-                        <button id="return-dashboard-btn" class="flex-1 border-2 border-gray-300 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-50 transition-all">
+                        <button id="return-dashboard-btn" class="flex-1 border-2 border-ap-red-primary text-ap-red-primary px-6 py-3 rounded-xl font-semibold hover:bg-ap-red-50 transition-all">
                             Retour au tableau de bord
                         </button>
                     </div>
@@ -1069,10 +1069,10 @@ function returnToDashboard() {
     
     // Mettre à jour la navigation
     document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('bg-indigo-800', 'text-indigo-100');
-        link.classList.add('text-indigo-300');
+        link.classList.remove('bg-ap-red-dark', 'text-white');
+        link.classList.add('text-white');
     });
-    document.getElementById('nav-dashboard')?.classList.add('bg-indigo-800', 'text-indigo-100');
+    document.getElementById('nav-dashboard')?.classList.add('bg-ap-red-dark', 'text-white');
     
     // Toast de confirmation
     toast.info('Retour au tableau de bord', 2000);

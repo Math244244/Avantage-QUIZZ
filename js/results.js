@@ -621,12 +621,13 @@ function openResultDetails(resultId) {
     modal.appendChild(dialog);
 
     const header = document.createElement('div');
-    header.className = 'px-8 py-6 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white';
+    header.className = 'px-8 py-6 text-white';
+    header.style.background = 'var(--ap-gradient-primary)';
     const title = document.createElement('h2');
     title.className = 'text-2xl font-bold';
     title.textContent = 'Détails du quiz';
     const subtitle = document.createElement('p');
-    subtitle.className = 'text-indigo-100 mt-1';
+    subtitle.className = 'text-white opacity-90 mt-1';
     // ✅ CORRECTION SECTION 4 : Protection XSS - textContent échappe automatiquement
     subtitle.textContent = periodLabel ? `${moduleLabel} - ${periodLabel}` : moduleLabel;
     header.append(title, subtitle);
@@ -654,7 +655,7 @@ function openResultDetails(resultId) {
     };
 
     metricsGrid.append(
-        createMetricCard('Score', `${scoreValue}%`, 'text-indigo-600'),
+        createMetricCard('Score', `${scoreValue}%`, 'text-ap-red-primary'),
         createMetricCard('Bonnes réponses', `${correctAnswersValue}/${totalQuestionsValue}`, 'text-slate-900'),
         createMetricCard('Temps total', timeDisplay, 'text-slate-900')
     );

@@ -508,7 +508,7 @@ function renderTopUsers(users) {
                 </div>
             </div>
             <div class="text-right">
-                <div class="text-2xl font-bold text-indigo-600">${escapeHtml(`${avgScore}%`)}</div>
+                <div class="text-2xl font-bold text-ap-success">${escapeHtml(`${avgScore}%`)}</div>
                 <div class="text-xs text-slate-500">Score moyen</div>
             </div>
         `;

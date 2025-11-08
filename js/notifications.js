@@ -216,10 +216,10 @@ function getOrCreateNotificationsPanel() {
         panel.className = 'hidden fixed top-16 right-4 w-96 max-h-[600px] bg-white rounded-xl shadow-2xl border border-gray-200 z-40 overflow-hidden';
         
         panel.innerHTML = `
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4 text-white">
+            <div class="px-6 py-4 text-white" style="background: var(--ap-gradient-primary);">
                 <div class="flex items-center justify-between mb-2">
                     <h3 class="text-lg font-bold">Notifications</h3>
-                    <button id="close-notifications-btn" class="text-white hover:text-indigo-100 transition-colors">
+                    <button id="close-notifications-btn" class="text-white hover:text-ap-gold transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
@@ -284,7 +284,7 @@ function renderNotificationsList() {
         const timeAgo = getTimeAgo(date);
         
         return `
-            <div class="notification-item ${notification.read ? 'bg-slate-50' : 'bg-indigo-50'} border-b border-gray-200 p-4 hover:bg-slate-100 transition-colors cursor-pointer"
+            <div class="notification-item ${notification.read ? 'bg-slate-50' : 'bg-ap-red-50'} border-b border-gray-200 p-4 hover:bg-slate-100 transition-colors cursor-pointer"
                  data-notification-id="${notification.id}"
                  data-read="${notification.read}">
                 <div class="flex gap-3">
