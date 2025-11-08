@@ -22,6 +22,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/colors-avantage-plus.css">
+    <link rel="stylesheet" href="css/typography-avantage-plus.css">
+    <link rel="stylesheet" href="css/animations-avantage-plus.css">
     <link rel="stylesheet" href="css/sidebar-avantage-plus.css">
     <link rel="stylesheet" href="css/dashboard-avantage-plus.css">
     <link rel="stylesheet" href="css/micro-interactions.css">
@@ -30,9 +33,8 @@
         /* Éviter le flash of unstyled content (FOUC) */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafd;
-            background-image: radial-gradient(#dbeafe 1px, transparent 1px);
-            background-size: 16px 16px;
+            /* Fond Avantage Plus: crème/rose léger */
+            background: linear-gradient(135deg, #FFF4F5 0%, #FFFFFF 50%, #FFF4CC 100%);
             line-height: 1.6;
             letter-spacing: -0.01em;
             /* Masquer pendant le chargement */
@@ -253,7 +255,7 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main class="flex-1 ml-64 h-full overflow-y-auto">
+    <main class="flex-1 ml-64 h-full overflow-y-auto" style="background: linear-gradient(135deg, #FFF4F5 0%, #FFFFFF 50%, #FFF4CC 100%);">
 
         <!-- VUE: CONNEXION -->
         <div id="login-view" class="view-hidden">
