@@ -2,21 +2,228 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+/* ========================================
+   IMPORTS: Système de Design Avantage Plus
+   ======================================== */
+@import url('./colors-avantage-plus.css');
+@import url('./typography-avantage-plus.css');
+@import url('./animations-avantage-plus.css');
+@import url('./dashboard-avantage-plus.css');
+
+/* ========================================
+   GOOGLE FONTS: Inter
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--ap-gray-900);
+    background-color: var(--ap-gray-50);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ap-gray-900);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  /* Focus states accessibles */
+  *:focus-visible {
+    outline: 3px solid var(--ap-gold);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
-.btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-200;
+/* ========================================
+   COMPOSANTS AVANTAGE PLUS
+   ======================================== */
+@layer components {
+  /* Boutons Principaux - Rouge Avantage Plus */
+  .btn-primary {
+    @apply bg-ap-red-primary hover:bg-ap-red-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    box-shadow: var(--ap-shadow-md);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ap-shadow-hover);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  /* Boutons Secondaires */
+  .btn-secondary {
+    @apply bg-white text-ap-red-primary border-2 border-ap-red-primary font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    box-shadow: var(--ap-shadow-sm);
+  }
+
+  .btn-secondary:hover {
+    @apply bg-ap-red-50;
+    box-shadow: var(--ap-shadow-md);
+  }
+
+  /* Boutons Dorés (Premium) */
+  .btn-gold {
+    background: var(--ap-gradient-gold);
+    @apply text-ap-red-dark font-bold py-3 px-6 rounded-lg transition-all duration-300;
+    box-shadow: var(--ap-shadow-gold);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+  }
+
+  /* Cartes */
+  .card {
+    @apply bg-white rounded-2xl p-6;
+    box-shadow: var(--ap-shadow-md);
+    transition: all 0.3s var(--ap-transition-timing);
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ap-shadow-lg);
+  }
+
+  /* Carte avec bordure rouge */
+  .card-primary {
+    @apply card border-t-4 border-ap-red-primary;
+  }
+
+  /* Carte avec bordure dorée */
+  .card-gold {
+    @apply card border-t-4 border-ap-gold;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-primary {
+    @apply badge bg-ap-red-primary text-white;
+  }
+
+  .badge-gold {
+    background: var(--ap-gradient-gold);
+    @apply badge text-ap-red-dark;
+  }
+
+  .badge-success {
+    @apply badge bg-ap-success text-white;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-4 py-3 border-2 border-ap-gray-300 rounded-lg transition-all duration-200;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .input:focus {
+    @apply border-ap-red-primary;
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+  }
+
+  /* Sidebar Item */
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 text-white transition-all duration-300 cursor-pointer;
+  }
+
+  .sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--ap-gold);
+    transform: translateX(5px);
+  }
+
+  .sidebar-item.active {
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 4px solid var(--ap-gold);
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    @apply w-full h-2 bg-ap-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--ap-gradient-gold);
+    transition: width 0.5s ease-out;
+  }
 }
 
-.btn-secondary {
-    @apply bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition duration-200;
-}
+/* ========================================
+   UTILITIES PERSONNALISÉES
+   ======================================== */
+@layer utilities {
+  /* Animations de transition */
+  .transition-smooth {
+    transition: all 0.3s var(--ap-transition-timing);
+  }
 
-.card {
-    @apply bg-white rounded-lg shadow-md p-6;
+  /* Hover lift effect */
+  .hover-lift:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Gradient text */
+  .gradient-text-primary {
+    background: var(--ap-gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-gold {
+    background: var(--ap-gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Scrollbar personnalisée */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--ap-gray-100);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--ap-red-primary);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--ap-red-dark);
+  }
 }

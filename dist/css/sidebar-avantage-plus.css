@@ -1,0 +1,440 @@
+/**
+ * 📐 SIDEBAR AVANTAGE PLUS
+ * ========================
+ * Navigation latérale avec dégradé rouge et effets dorés
+ * 
+ * Créé le: 2025-11-08
+ * Version: 1.0.0
+ */
+
+/* ========================================
+   SIDEBAR CONTAINER
+   ======================================== */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  /* Dégradé rouge plus lumineux et visible */
+  background: linear-gradient(180deg, #C41E3A 0%, #DC1F32 50%, #C41E3A 100%);
+  border-right: 4px solid var(--ap-gold);
+  overflow-y: auto;
+  z-index: var(--ap-z-fixed);
+  transition: all 0.3s var(--ap-ease-smooth);
+  box-shadow: 4px 0 30px rgba(196, 30, 58, 0.5);
+}
+
+/* Scrollbar personnalisée pour sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+/* ========================================
+   LOGO SECTION
+   ======================================== */
+
+.sidebar-logo-container {
+  padding: 32px 24px;
+  text-align: center;
+  border-bottom: 2px solid var(--ap-gold);
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.sidebar-logo-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: var(--ap-gradient-gold);
+  box-shadow: 0 0 10px var(--ap-gold);
+}
+
+.sidebar-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 4px 20px rgba(255, 215, 0, 0.6));
+  animation: logoPulse 3s ease-in-out infinite;
+  transition: transform 0.3s var(--ap-ease-smooth);
+  border: 4px solid var(--ap-gold);
+  border-radius: 50%;
+  background: white;
+  padding: 8px;
+  object-fit: contain;
+}
+
+.sidebar-logo:hover {
+  transform: scale(1.05);
+  animation: none;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.sidebar-brand-text {
+  margin-top: 16px;
+  font-size: var(--ap-text-xl);
+  font-weight: var(--ap-font-extrabold);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px var(--ap-gold);
+  letter-spacing: var(--ap-tracking-wider);
+  text-transform: uppercase;
+}
+
+/* ========================================
+   NAVIGATION ITEMS
+   ======================================== */
+
+.sidebar-nav {
+  padding: 16px 0;
+}
+
+.sidebar-section-title {
+  padding: 16px 24px 8px;
+  font-size: var(--ap-text-xs);
+  font-weight: var(--ap-font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ap-tracking-widest);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  margin: 4px 12px;
+  color: white;
+  text-decoration: none;
+  font-size: var(--ap-text-base);
+  font-weight: var(--ap-font-semibold);
+  transition: all 0.3s var(--ap-ease-smooth);
+  cursor: pointer;
+  border-left: 5px solid transparent;
+  border-radius: 8px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-left-color: var(--ap-gold);
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-item.active {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border-left-color: var(--ap-gold);
+  border-left-width: 5px;
+  font-weight: var(--ap-font-bold);
+  box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.sidebar-item.active .sidebar-item-icon {
+  color: var(--ap-gold);
+  transform: scale(1.1);
+}
+
+.sidebar-item-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s var(--ap-ease-smooth);
+}
+
+.sidebar-item:hover .sidebar-item-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.sidebar-item-text {
+  flex: 1;
+}
+
+.sidebar-item-badge {
+  background: var(--ap-gold);
+  color: var(--ap-red-dark);
+  font-size: var(--ap-text-xs);
+  font-weight: var(--ap-font-bold);
+  padding: 2px 8px;
+  border-radius: 12px;
+  animation: badgePulse 1.5s ease-in-out infinite;
+}
+
+/* ========================================
+   ADMIN BADGE
+   ======================================== */
+
+.sidebar-admin-badge {
+  margin: 0 0 16px 0;
+  padding: 14px 20px;
+  background: var(--ap-gradient-gold);
+  color: var(--ap-red-dark);
+  border-radius: 12px;
+  text-align: center;
+  font-weight: var(--ap-font-black);
+  font-size: var(--ap-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--ap-tracking-widest);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+  animation: shimmerGold 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s var(--ap-ease-smooth);
+  border: 2px solid var(--ap-gold-dark);
+}
+
+.sidebar-admin-badge:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
+}
+
+.sidebar-admin-badge-icon {
+  font-size: 18px;
+}
+
+/* ========================================
+   USER PROFILE SECTION (BAS)
+   ======================================== */
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid var(--ap-gold);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 3px solid var(--ap-gold);
+  transition: all 0.3s var(--ap-ease-smooth);
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.sidebar-user-profile:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  border-color: var(--ap-gold-dark);
+}
+
+.sidebar-user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--ap-gold);
+  object-fit: cover;
+}
+
+.sidebar-user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar-user-name {
+  color: white;
+  font-weight: var(--ap-font-semibold);
+  font-size: var(--ap-text-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-role {
+  color: var(--ap-gold);
+  font-size: var(--ap-text-xs);
+  font-weight: var(--ap-font-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ap-tracking-wide);
+}
+
+/* ========================================
+   MODE SOMBRE TOGGLE (OPTIONNEL)
+   ======================================== */
+
+.sidebar-theme-toggle {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s var(--ap-ease-smooth);
+  margin: 16px auto 0;
+}
+
+.sidebar-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--ap-gold);
+  transform: rotate(180deg);
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -280px;
+    z-index: var(--ap-z-modal);
+  }
+  
+  .sidebar.open {
+    left: 0;
+    box-shadow: 4px 0 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Overlay pour mobile */
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: calc(var(--ap-z-modal) - 1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ap-ease-smooth);
+  }
+  
+  .sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  /* Bouton hamburger */
+  .sidebar-toggle-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    background: var(--ap-gradient-primary);
+    border: 2px solid var(--ap-gold);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: var(--ap-z-sticky);
+    box-shadow: var(--ap-shadow-lg);
+    transition: all 0.3s var(--ap-ease-smooth);
+  }
+  
+  .sidebar-toggle-btn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--ap-shadow-xl);
+  }
+  
+  .sidebar-toggle-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+/* ========================================
+   ANIMATIONS SPÉCIALES
+   ======================================== */
+
+/* Navigation item entrée (stagger) */
+.sidebar-item[data-index="1"] { animation: fadeInLeft 0.4s ease-out 0.1s backwards; }
+.sidebar-item[data-index="2"] { animation: fadeInLeft 0.4s ease-out 0.15s backwards; }
+.sidebar-item[data-index="3"] { animation: fadeInLeft 0.4s ease-out 0.2s backwards; }
+.sidebar-item[data-index="4"] { animation: fadeInLeft 0.4s ease-out 0.25s backwards; }
+.sidebar-item[data-index="5"] { animation: fadeInLeft 0.4s ease-out 0.3s backwards; }
+.sidebar-item[data-index="6"] { animation: fadeInLeft 0.4s ease-out 0.35s backwards; }
+
+/* Ripple effect au click */
+.sidebar-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.sidebar-item:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.sidebar-item:focus-visible {
+  outline: 3px solid var(--ap-gold);
+  outline-offset: -3px;
+  border-radius: 0;
+}
+
+/* Assurer contraste pour lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+

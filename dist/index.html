@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="QuizPro - Formation Continue pour Concessions">
-    <meta name="theme-color" content="#312e81">
+    <meta name="theme-color" content="#C41E3A">
     <title>QuizPro - Tableau de Bord</title>
     
     <!-- PWA -->
@@ -14,20 +14,19 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Preload Critical Resources -->
+    <!-- Preload Critical Resources -->
     <link rel="preload" href="/assets/auth-D3GUYhA_.js" as="script">
     <link rel="dns-prefetch" href="https://firestore.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googleapis.com">
     
-    <!-- CSS -->
+    <!-- CSS -->
     
     <style>
         /* Éviter le flash of unstyled content (FOUC) */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafd;
-            background-image: radial-gradient(#dbeafe 1px, transparent 1px);
-            background-size: 16px 16px;
+            /* Fond Avantage Plus: crème/rose léger */
+            background: linear-gradient(135deg, #FFF4F5 0%, #FFFFFF 50%, #FFF4CC 100%);
             line-height: 1.6;
             letter-spacing: -0.01em;
             /* Masquer pendant le chargement */
@@ -162,86 +161,99 @@
             background: #64748b;
         }
     </style>
-  <script type="module" crossorigin src="/assets/main-BF0umfQ2.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/auth-BXQxSF3z.js">
-  <link rel="modulepreload" crossorigin href="/assets/quiz-service-CAOhUue-.js">
+  <script type="module" crossorigin src="/assets/main-CvV1NUuz.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/auth-BI1mSI3H.js">
+  <link rel="modulepreload" crossorigin href="/assets/quiz-service-DYlgmHZm.js">
   <link rel="modulepreload" crossorigin href="/assets/state-manager-w7-wWzCS.js">
-  <link rel="stylesheet" crossorigin href="/assets/auth-c_1fdMIT.css">
+  <link rel="stylesheet" crossorigin href="/assets/auth-ZiIZE6TF.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CK4vkMb2.css">
 </head>
 <body class="h-full flex">
 
-    <!-- BARRE LATÉRALE DE NAVIGATION -->
-    <nav class="w-64 bg-indigo-900 text-white flex flex-col h-full fixed" aria-label="Navigation principale" role="navigation">
-        <div class="px-6 py-5 border-b border-indigo-800">
-            <h1 class="text-2xl font-bold tracking-tight">QuizPro</h1>
-            <p class="text-sm text-indigo-300">Formation Continue</p>
+    <!-- BARRE LATÉRALE DE NAVIGATION - AVANTAGE PLUS -->
+    <nav class="sidebar" aria-label="Navigation principale" role="navigation">
+        <!-- Logo Avantage Plus -->
+        <div class="sidebar-logo-container">
+            <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
+                 alt="Avantage Plus Logo" 
+                 class="sidebar-logo"
+                 onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <!-- Fallback si logo non trouvé -->
+            <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+                AP
+            </div>
+            <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
         </div>
-        <div class="flex-1 overflow-y-auto">
-            <ul class="py-4" role="menubar" aria-label="Menu de navigation">
-                <li class="px-6 py-3" role="none">
-                    <a href="#" id="nav-dashboard" class="nav-link flex items-center text-indigo-100 bg-indigo-800 rounded-lg px-4 py-2" role="menuitem" aria-current="page">
-                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
-                        Tableau de Bord
-                    </a>
-                </li>
-                <li class="px-6 py-3">
-                    <a href="#" id="nav-quiz" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors" role="menuitem">
-                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V7a2 2 0 00-2-2h-3.34a2 2 0 01-1.789-1.106l-.342-.685A2 2 0 0010.34 3H7a2 2 0 00-2 2v4" /></svg>
-                        Quiz
-                    </a>
-                </li>
-                <li class="px-6 py-3">
-                    <a href="/results.html" id="nav-results" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
-                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
-                        Mes Résultats
-                    </a>
-                </li>
-                <li class="px-6 py-3">
-                    <a href="/resources.html" id="nav-resources" class="nav-link flex items-center text-indigo-300 hover:text-white hover:bg-indigo-800 rounded-lg px-4 py-2 transition-colors">
-                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0l-2.47-2.47m2.47 2.47l2.47-2.47M5 12H4a1 1 0 00-1 1v4a1 1 0 001 1h1m14-5h1a1 1 0 011 1v4a1 1 0 01-1 1h-1M5 12a2 2 0 012-2h10a2 2 0 012 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2" /></svg>
-                        Ressources
-                    </a>
-                </li>
-                <li class="px-6 py-3 hidden" id="nav-admin-item">
-                    <a href="/admin.html" class="nav-link flex items-center text-yellow-300 hover:text-white hover:bg-yellow-600 rounded-lg px-4 py-2 transition-colors">
-                        <svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                        <span class="flex items-center gap-2">
-                            Gestion Admin
-                            <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded-full">🔰</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
+        <!-- Navigation Items -->
+        <div class="sidebar-nav">
+            <a href="#" id="nav-dashboard" class="sidebar-item active" role="menuitem" aria-current="page" data-index="1">
+                <span class="sidebar-item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                </span>
+                <span class="sidebar-item-text">Tableau de Bord</span>
+            </a>
+            
+            <a href="#" id="nav-quiz" class="sidebar-item nav-link" role="menuitem" data-index="2">
+                <span class="sidebar-item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                </span>
+                <span class="sidebar-item-text">Quiz</span>
+            </a>
+            
+            <a href="/results.html" id="nav-results" class="sidebar-item nav-link" data-index="3">
+                <span class="sidebar-item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                </span>
+                <span class="sidebar-item-text">Mes Résultats</span>
+            </a>
+            
+            <a href="/resources.html" id="nav-resources" class="sidebar-item nav-link" data-index="4">
+                <span class="sidebar-item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0l-2.47-2.47m2.47 2.47l2.47-2.47M5 12H4a1 1 0 00-1 1v4a1 1 0 001 1h1m14-5h1a1 1 0 011 1v4a1 1 0 01-1 1h-1M5 12a2 2 0 012-2h10a2 2 0 012 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2" /></svg>
+                </span>
+                <span class="sidebar-item-text">Ressources</span>
+            </a>
+            
+            <!-- Admin Link (hidden by default) -->
+            <a href="/admin.html" id="nav-admin-item" class="sidebar-item nav-link hidden" data-index="5">
+                <span class="sidebar-item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                </span>
+                <span class="sidebar-item-text">Gestion Admin</span>
+                <span class="sidebar-item-badge">ADMIN</span>
+            </a>
         </div>
-        <div class="px-6 py-4 border-t border-indigo-800">
+        <!-- Footer avec Profile -->
+        <div class="sidebar-footer">
             <!-- Badge Admin (masqué par défaut) -->
-            <div id="admin-badge-nav" class="hidden mb-4 bg-yellow-500 text-white text-center py-2 px-4 rounded-lg font-semibold text-sm">
-                🔰 Administrateur
+            <div id="admin-badge-nav" class="sidebar-admin-badge hidden">
+                <span class="sidebar-admin-badge-icon">👑</span>
+                Administrateur
             </div>
             
-            <!-- Toggle Dark Mode -->
-            <button id="theme-toggle" data-theme-toggle class="w-full mb-4 px-4 py-2 bg-indigo-800 hover:bg-indigo-700 rounded-lg text-sm font-medium text-indigo-100 flex items-center justify-center gap-2 transition-colors">
+            <!-- User Profile -->
+            <div id="user-profile" class="sidebar-user-profile">
+                <img id="user-avatar" class="sidebar-user-avatar" src="https://placehold.co/100x100/C41E3A/FFFFFF?text=U" alt="Avatar utilisateur">
+                <div class="sidebar-user-info">
+                    <p id="user-name" class="sidebar-user-name">Chargement...</p>
+                    <button id="signout-link" class="sidebar-user-role" style="background: none; border: none; cursor: pointer;">Déconnexion</button>
+                </div>
+            </div>
+            
+            <!-- Theme Toggle (optionnel) -->
+            <button id="theme-toggle" data-theme-toggle class="sidebar-theme-toggle">
                 <svg id="theme-icon-sun" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                 </svg>
                 <svg id="theme-icon-moon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                 </svg>
-                <span id="theme-text">Mode Sombre</span>
             </button>
-            
-            <div id="user-profile" class="flex items-center">
-                <img id="user-avatar" class="h-10 w-10 rounded-full object-cover" src="https://placehold.co/100x100/667eea/e0e7ff?text=U" alt="Avatar">
-                <div class="ml-3">
-                    <p id="user-name" class="text-sm font-medium text-white">Chargement...</p>
-                    <button id="signout-link" class="text-xs text-indigo-300 hover:text-indigo-100">Déconnexion</button>
-                </div>
-            </div>
         </div>
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main class="flex-1 ml-64 h-full overflow-y-auto">
+    <main class="flex-1 ml-64 h-full overflow-y-auto" style="background: linear-gradient(135deg, #FFF4F5 0%, #FFFFFF 50%, #FFF4CC 100%);">
 
         <!-- VUE: CONNEXION -->
         <div id="login-view" class="view-hidden">
@@ -294,15 +306,16 @@
 
         <!-- VUE: TABLEAU DE BORD -->
         <div id="dashboard-view" class="view-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <!-- Header amélioré -->
-                <header class="mb-10">
+            <div class="dashboard-container">
+                <!-- Header Avantage Plus -->
+                <header class="dashboard-header">
                     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                         <div>
-                            <h2 class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">Tableau de Bord</h2>
-                            <p id="welcome-message" class="text-lg text-slate-600">Bienvenue. Voici votre parcours de formation 2025.</p>
+                            <h2 class="dashboard-title">Tableau de Bord</h2>
+                            <p id="welcome-message" class="dashboard-subtitle">Bienvenue. Voici votre parcours de formation 2025.</p>
                         </div>
-                        <div id="streak-badge" class="group card-hover bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 text-white px-8 py-5 rounded-2xl shadow-xl flex items-center gap-4 cursor-pointer transform hover:scale-105 transition-all duration-300">
+                        <!-- Streak Badge - Rouge/Doré -->
+                        <div id="streak-badge" class="group card-hover bg-ap-gradient-primary text-white px-8 py-5 rounded-2xl shadow-ap-lg flex items-center gap-4 cursor-pointer transform hover:scale-105 transition-all duration-300 border-3 border-ap-gold">
                             <div class="text-5xl animate-pulse group-hover:scale-125 transition-transform">🔥</div>
                             <div>
                                 <div class="text-3xl font-bold" id="streak-count">10</div>
@@ -312,52 +325,50 @@
                     </div>
                 </header>
 
-                <!-- Bloc d'action principal - Version modernisée -->
-                <div class="mb-12 relative overflow-hidden rounded-3xl shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 opacity-95"></div>
-                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJ6TTM0IDM0djJoMnYtMnptMC0ydjJoMnYtMnptMi0ydjJoMnYtMnptLTItMnYyaDJ2LTJ6bTItMnYyaDJ2LTJ6bS0yLTJ2Mmgydi0yem0yLTJ2Mmgydi0yeiIvPjwvZz48L2c+PC9zdmc+')] opacity-10"></div>
-                    <div class="relative px-8 py-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                <!-- Carte Hero Quiz - Rouge/Doré Avantage Plus -->
+                <div class="quiz-hero-card">
+                    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div class="flex-1">
-                            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium mb-4">
+                            <div class="quiz-hero-badge">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
                                 </svg>
                                 <span>Quiz mensuel disponible</span>
                             </div>
-                            <h3 class="text-4xl font-bold text-white mb-3">Quiz de Novembre</h3>
-                            <p class="text-indigo-100 text-lg mb-6">Votre module mensuel est prêt. Relevez le défi et améliorez vos compétences !</p>
-                            <button class="start-quiz-button group bg-white text-indigo-700 font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-3 transform hover:-translate-y-1">
-                                <span class="text-lg">Démarrer le quiz</span>
+                            <h3 class="quiz-hero-title">Quiz de Novembre</h3>
+                            <p class="quiz-hero-description">Votre module mensuel est prêt. Relevez le défi et améliorez vos compétences !</p>
+                            <button class="start-quiz-button quiz-hero-cta">
+                                <span>Démarrer le quiz</span>
                                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </button>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[280px]">
-                            <p class="text-sm text-indigo-200 font-medium mb-3 flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="quiz-hero-progress">
+                            <p class="quiz-hero-progress-label">
+                                <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                 </svg>
                                 Progression Annuelle
                             </p>
                             <div class="bg-white/20 rounded-full h-4 mb-3 overflow-hidden">
-                                <div id="annual-progress-bar" class="bg-gradient-to-r from-green-400 to-emerald-400 h-4 rounded-full transition-all duration-500 shadow-lg" style="width: 0%"></div>
+                                <div id="annual-progress-bar" class="bg-ap-gradient-gold h-4 rounded-full transition-all duration-500 shadow-ap-gold" style="width: 0%"></div>
                             </div>
-                            <p id="annual-progress-text" class="text-2xl font-bold text-white">0/12</p>
-                            <p class="text-xs text-indigo-200 mt-1">modules complétés cette année</p>
+                            <p id="annual-progress-text" class="quiz-hero-progress-value">0/12</p>
+                            <p class="text-xs text-ap-gold mt-1">modules complétés</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Grille des modules mensuels avec titre -->
+                <!-- Grille des modules mensuels - Avantage Plus -->
                 <div class="mb-8">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="modules-section-header">
+                        <svg class="modules-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                         </svg>
-                        Vos Modules 2025
-                    </h3>
-                    <div id="modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <h3 class="modules-section-title">Vos Modules 2025</h3>
+                    </div>
+                    <div id="modules-grid" class="modules-grid">
                         <!-- Les cartes seront générées par JavaScript -->
                     </div>
                 </div>
@@ -531,8 +542,8 @@
         })();
     </script>
 
-    <!-- Firebase & App Scripts -->
-    <!-- Gestionnaires d'erreurs et retry (Section 1 - Architecture) -->
+    <!-- Firebase & App Scripts -->
+    <!-- Gestionnaires d'erreurs et retry (Section 1 - Architecture) -->
     
     <!-- Service Worker: désactivé en localhost pour éviter le cache en dev -->
     <script>
