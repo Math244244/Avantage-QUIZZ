@@ -1,4 +1,33 @@
 // Dashboard principal - Gestion de l'interface QuizPro
+
+// ✅ CORRECTION FOND JAUNE: Forcer le background blanc IMMÉDIATEMENT (avant même le chargement du DOM)
+(function() {
+    'use strict';
+    // Exécuter immédiatement, même si le DOM n'est pas encore chargé
+    if (document.documentElement) {
+        document.documentElement.style.setProperty('background', '#FFFFFF', 'important');
+        document.documentElement.style.setProperty('background-color', '#FFFFFF', 'important');
+        document.documentElement.style.setProperty('background-image', 'none', 'important');
+    }
+    if (document.body) {
+        document.body.style.setProperty('background', '#FFFFFF', 'important');
+        document.body.style.setProperty('background-color', '#FFFFFF', 'important');
+        document.body.style.setProperty('background-image', 'none', 'important');
+    }
+    // Observer pour forcer le blanc dès que main-content existe
+    const observer = new MutationObserver(() => {
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            mainContent.style.setProperty('background', '#FFFFFF', 'important');
+            mainContent.style.setProperty('background-color', '#FFFFFF', 'important');
+            mainContent.style.setProperty('background-image', 'none', 'important');
+        }
+    });
+    if (document.body) {
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+})();
+
 import { onAuthChange, signInWithGoogle, signOutUser, getCurrentUserUnified, showAdminUIIfAdmin } from './auth.js';
 import { startQuiz } from './quiz.js';
 import { 
@@ -56,9 +85,44 @@ function showView(viewId) {
     });
     if (views[viewId]) {
         views[viewId].classList.remove('view-hidden');
+        
+        // ✅ CORRECTION FOND BEIGE/JAUNE: Forcer le background blanc sur main-content
+        forceWhiteBackground();
     } else {
         console.error('❌ Vue non trouvée:', viewId);
     }
+}
+
+// ✅ Fonction dédiée pour forcer le background blanc (réutilisable)
+function forceWhiteBackground() {
+    // Utiliser la fonction globale si elle existe (définie dans index.html)
+    if (window.forceWhiteBackground && window.forceWhiteBackground !== forceWhiteBackground) {
+        window.forceWhiteBackground();
+        return;
+    }
+    
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+        mainContent.style.setProperty('background', '#FFFFFF', 'important');
+        mainContent.style.setProperty('background-color', '#FFFFFF', 'important');
+        mainContent.style.setProperty('background-image', 'none', 'important');
+    }
+    
+    // ✅ Forcer aussi sur body et html pour être sûr
+    document.body.style.setProperty('background', '#FFFFFF', 'important');
+    document.body.style.setProperty('background-color', '#FFFFFF', 'important');
+    document.body.style.setProperty('background-image', 'none', 'important');
+    
+    document.documentElement.style.setProperty('background', '#FFFFFF', 'important');
+    document.documentElement.style.setProperty('background-color', '#FFFFFF', 'important');
+    document.documentElement.style.setProperty('background-image', 'none', 'important');
+    
+    // ✅ Supprimer toutes les classes Tailwind qui pourraient ajouter un background
+    if (mainContent) {
+        mainContent.classList.remove('bg-slate-100', 'bg-gray-100', 'bg-yellow-50', 'bg-amber-50', 'bg-ap-red-50');
+    }
+    document.body.classList.remove('bg-slate-100', 'bg-gray-100', 'bg-yellow-50', 'bg-amber-50', 'bg-ap-red-50');
+    document.documentElement.classList.remove('bg-slate-100', 'bg-gray-100', 'bg-yellow-50', 'bg-amber-50', 'bg-ap-red-50');
 }
 
 function updateActiveNavLink(navId) {
@@ -304,6 +368,9 @@ async function initializeDashboard() {
         console.error("❌ L'élément 'modules-grid' est introuvable.");
         return;
     }
+    
+    // ✅ CORRECTION FOND BEIGE/JAUNE: Forcer le background blanc au chargement
+    forceWhiteBackground();
     
         // Charger les données Firebase en premier
         await loadDashboardData();
@@ -705,6 +772,27 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.log('👤 Aucun utilisateur connecté');
             showView('login');
+        }
+    });
+
+    // ✅ CORRECTION FOND BEIGE/JAUNE: Forcer le background blanc quand l'utilisateur revient sur l'onglet
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            // L'utilisateur revient sur l'onglet
+            forceWhiteBackground();
+        }
+    });
+
+    // ✅ CORRECTION FOND BEIGE/JAUNE: Forcer aussi au focus de la fenêtre
+    window.addEventListener('focus', () => {
+        forceWhiteBackground();
+    });
+
+    // ✅ CORRECTION FOND BEIGE/JAUNE: Forcer aussi au pageshow (retour navigateur)
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            // Page chargée depuis le cache
+            forceWhiteBackground();
         }
     });
 

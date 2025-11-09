@@ -127,8 +127,8 @@
   /* Dégradé vertical - Sidebar */
   --ap-gradient-sidebar: linear-gradient(180deg, #8B1429 0%, #C41E3A 100%);
   
-  /* Dégradé carte - Backgrounds subtils */
-  --ap-gradient-card: linear-gradient(to bottom, #FFFFFF 0%, #F7FAFC 100%);
+  /* Dégradé carte - Backgrounds subtils (BLANC PUR) */
+  --ap-gradient-card: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%);
   
   /* Dégradé anthracite - Cartes premium, badges */
   --ap-gradient-accent: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
@@ -136,7 +136,7 @@
   
   /* Dégradé argent - Effets métalliques */
   --ap-gradient-silver: linear-gradient(135deg, #E2E8F0 0%, #C0C7D0 100%);
-  --ap-gradient-silver-shine: linear-gradient(135deg, #F7FAFC 0%, #E2E8F0 50%, #C0C7D0 100%);
+  --ap-gradient-silver-shine: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 50%, #C0C7D0 100%);
   
   /* Dégradé actif - Boutons principaux */
   --ap-gradient-active: linear-gradient(to right, #E63946 0%, #C41E3A 100%);

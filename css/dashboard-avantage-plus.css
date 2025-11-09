@@ -14,6 +14,17 @@
 .dashboard-container {
   min-height: 100vh;
   padding: 40px;
+  /* ✅ FORCER LE BACKGROUND BLANC - Pas de transition */
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+}
+
+#dashboard-view {
+  /* ✅ FORCER LE BACKGROUND BLANC sur la vue dashboard */
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  background-image: none !important;
 }
 
 .dashboard-header {

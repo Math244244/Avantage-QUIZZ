@@ -29,12 +29,84 @@
     <link rel="stylesheet" href="css/dashboard-avantage-plus.css">
     <link rel="stylesheet" href="css/micro-interactions.css">
     
+    <!-- ✅ SCRIPT CRITIQUE: Forcer le background blanc IMMÉDIATEMENT (avant tout le reste) -->
+    <script>
+        (function() {
+            // Forcer le background blanc AVANT que le CSS ne soit chargé
+            document.documentElement.style.backgroundColor = '#FFFFFF';
+            document.documentElement.style.backgroundImage = 'none';
+            document.body && (document.body.style.backgroundColor = '#FFFFFF');
+            document.body && (document.body.style.backgroundImage = 'none');
+            
+            // Fonction pour forcer le background blanc (appelée immédiatement et à chaque changement)
+            function forceWhiteBg() {
+                const mainContent = document.getElementById('main-content');
+                if (mainContent) {
+                    mainContent.style.setProperty('background', '#FFFFFF', 'important');
+                    mainContent.style.setProperty('background-color', '#FFFFFF', 'important');
+                    mainContent.style.setProperty('background-image', 'none', 'important');
+                }
+                document.body && document.body.style.setProperty('background', '#FFFFFF', 'important');
+                document.body && document.body.style.setProperty('background-color', '#FFFFFF', 'important');
+                document.body && document.body.style.setProperty('background-image', 'none', 'important');
+                document.documentElement.style.setProperty('background', '#FFFFFF', 'important');
+                document.documentElement.style.setProperty('background-color', '#FFFFFF', 'important');
+            }
+            
+            // Appeler immédiatement
+            forceWhiteBg();
+            
+            // Appeler dès que le DOM est disponible
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceWhiteBg);
+            } else {
+                forceWhiteBg();
+            }
+            
+            // Appeler à chaque changement de visibilité
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden) forceWhiteBg();
+            });
+            
+            // Exposer la fonction globalement pour qu'elle soit appelée par dashboard.js
+            window.forceWhiteBackground = forceWhiteBg;
+        })();
+    </script>
+    
     <style>
+        /* ✅ CSS CRITIQUE: Forcer le background blanc AVANT le chargement JavaScript - PRIORITÉ MAXIMALE */
+        html, body, #main-content, .dashboard-container, #dashboard-view, main[role="main"] {
+            background: #FFFFFF !important;
+            background-color: #FFFFFF !important;
+            background-image: none !important;
+            transition: none !important; /* Désactiver les transitions pour éviter le flash */
+        }
+        
+        /* ✅ Supprimer TOUTES les classes Tailwind qui pourraient ajouter du jaune/beige */
+        .bg-slate-100, .bg-gray-100, .bg-yellow-50, .bg-amber-50, .bg-ap-red-50,
+        .bg-gradient-to-br, .bg-gradient-to-r, .bg-gradient-to-l,
+        [style*="background: linear-gradient"], [style*="background:radial-gradient"] {
+            background: #FFFFFF !important;
+            background-color: #FFFFFF !important;
+            background-image: none !important;
+        }
+        
+        /* ✅ Désactiver les transitions de background pour éviter le flash jaune */
+        * {
+            transition-property: transform, opacity, box-shadow !important;
+            transition-duration: 0.3s !important;
+        }
+        
+        /* ✅ Exception: Ne pas désactiver les transitions sur les backgrounds */
+        html, body, #main-content, main, .dashboard-container {
+            transition: none !important;
+        }
+        
         /* Éviter le flash of unstyled content (FOUC) */
         body {
             font-family: 'Inter', sans-serif;
             /* Fond Avantage Plus: Blanc pur */
-            background: #FFFFFF;
+            background: #FFFFFF !important;
             line-height: 1.6;
             letter-spacing: -0.01em;
             /* Masquer pendant le chargement */
@@ -264,7 +336,7 @@
 
         <!-- VUE: CONNEXION -->
         <div id="login-view" class="view-hidden">
-            <div class="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-ap-red-50 via-white to-ap-gold-pale">
+            <div class="min-h-screen flex items-center justify-center px-4 bg-white">
                 <div class="max-w-md w-full">
                     <!-- Logo animé -->
                     <div class="text-center mb-8 animate-fade-in">
