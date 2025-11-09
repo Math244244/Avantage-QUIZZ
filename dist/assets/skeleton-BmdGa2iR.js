@@ -109,5 +109,5 @@ function d(t=5){const s=[];for(let e=0;e<t;e++)s.push(`
                 <div class="skeleton-text h-10 w-24 bg-white/30 rounded mb-2"></div>
                 <div class="skeleton-text h-4 w-32 bg-white/30 rounded"></div>
             </div>
-        `);return s.join("")}function r(t,s){const e=document.getElementById(t);e&&(e.innerHTML=s)}export{n as a,l as b,v as c,o as d,i as e,a as f,d as g,r as s};
-//# sourceMappingURL=skeleton-bh2HAV7A.js.map
+        `);return s.join("")}function r(t,s){const e=document.getElementById(t);e&&(e.innerHTML=s)}export{v as a,n as b,o as c,l as d,i as e,a as f,d as g,r as s};
+//# sourceMappingURL=skeleton-BmdGa2iR.js.map

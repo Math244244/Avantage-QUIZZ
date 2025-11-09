@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/micro-interactions.css">
+    <link rel="stylesheet" href="css/results-layout-enhanced.css">
     <style>
         .view-hidden { display: none; }
         .fade-in { animation: fadeIn 0.3s ease-in; }
@@ -99,24 +100,24 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main class="flex-1 ml-64 min-h-screen overflow-y-auto">
-        <div class="max-w-7xl mx-auto px-6 py-8">
+    <main class="flex-1 ml-64 min-h-screen overflow-y-auto" style="background: linear-gradient(135deg, #FFF4F5 0%, #FFFFFF 50%, #FFF4CC 100%);">
+        <div class="results-container-enhanced">
         
-        <!-- En-tête -->
-        <div class="mb-8 fade-in">
-            <h1 class="text-4xl font-bold text-slate-900 mb-2">📊 Mes Résultats</h1>
-            <p class="text-slate-600 text-lg">Suivez votre progression et analysez vos performances</p>
+        <!-- En-tête ENHANCED -->
+        <div class="results-header-enhanced animate-fade-in-up">
+            <h1>📊 Mes Résultats</h1>
+            <p class="text-slate-700 text-xl font-medium">Suivez votre progression et analysez vos performances</p>
         </div>
 
-        <!-- Statistiques globales -->
-        <div id="global-stats" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <!-- Sera rempli dynamiquement -->
+        <!-- Statistiques globales ENHANCED -->
+        <div id="global-stats" class="stats-grid-enhanced">
+            <!-- Sera rempli dynamiquement avec classes stat-card-enhanced + animate-fade-in-up -->
         </div>
 
-        <!-- Filtres -->
-        <div class="bg-white rounded-xl shadow-md p-6 mb-8 fade-in">
-            <h2 class="text-xl font-bold text-slate-900 mb-4">🔍 Filtres</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <!-- Filtres ENHANCED -->
+        <div class="filters-card-enhanced animate-fade-in-up" style="animation-delay: 0.5s;">
+            <h2>🔍 Filtres</h2>
+            <div class="filters-grid-enhanced">
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-2">Module</label>
                     <select id="filter-module" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ap-red-primary focus:border-transparent transition-all">
@@ -153,39 +154,39 @@
             </div>
         </div>
 
-        <!-- Graphiques -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Graphiques ENHANCED -->
+        <div class="charts-grid-enhanced">
             <!-- Progression -->
-            <div class="bg-white rounded-xl shadow-md p-6 fade-in">
-                <h2 class="text-xl font-bold text-slate-900 mb-4">📈 Évolution des scores</h2>
-                <canvas id="progress-chart" height="250"></canvas>
+            <div class="chart-card-enhanced animate-fade-in-up" style="animation-delay: 0.6s;">
+                <h2>📈 Évolution des scores</h2>
+                <canvas id="progress-chart"></canvas>
             </div>
             
             <!-- Répartition par module -->
-            <div class="bg-white rounded-xl shadow-md p-6 fade-in">
-                <h2 class="text-xl font-bold text-slate-900 mb-4">📊 Répartition par module</h2>
-                <canvas id="module-chart" height="250"></canvas>
+            <div class="chart-card-enhanced animate-fade-in-up" style="animation-delay: 0.7s;">
+                <h2>📊 Répartition par module</h2>
+                <canvas id="module-chart"></canvas>
             </div>
         </div>
 
-        <!-- Historique des quiz -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden fade-in border-t-4 border-ap-gold">
-            <div class="px-6 py-4 text-white" style="background: var(--ap-gradient-primary); border-bottom: 2px solid var(--ap-gold);">
-                <h2 class="text-2xl font-bold">📋 Historique complet</h2>
+        <!-- Historique des quiz ENHANCED -->
+        <div class="history-card-enhanced animate-fade-in-up" style="animation-delay: 0.8s;">
+            <div class="history-header-enhanced">
+                <h2>📋 Historique complet</h2>
             </div>
             
             <div id="results-loading" class="p-12 text-center">
                 <div class="animate-spin rounded-full h-12 w-12 border-b-4 border-ap-red-primary mx-auto mb-4"></div>
-                <p class="text-slate-600">Chargement de vos résultats...</p>
+                <p class="text-slate-600 font-medium">Chargement de vos résultats...</p>
             </div>
 
             <div id="results-container" class="hidden">
-                <div id="results-list" class="divide-y divide-gray-200">
-                    <!-- Sera rempli dynamiquement -->
+                <div id="results-list" class="history-list-enhanced">
+                    <!-- Sera rempli dynamiquement avec classes result-card-enhanced -->
                 </div>
                 
-                <!-- Pagination -->
-                <div id="pagination" class="px-6 py-4 bg-slate-50 border-t border-gray-200 flex items-center justify-between">
+                <!-- Pagination ENHANCED -->
+                <div id="pagination" class="pagination-enhanced">
                     <button id="prev-page-btn" class="px-4 py-2 border border-gray-300 rounded-lg text-slate-700 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                         Précédent
                     </button>
@@ -196,22 +197,22 @@
                 </div>
             </div>
 
-            <div id="no-results" class="hidden p-12 text-center">
-                <svg class="w-20 h-20 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div id="no-results" class="hidden empty-state-enhanced">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
-                <h3 class="text-xl font-bold text-slate-700 mb-2">Aucun résultat</h3>
-                <p class="text-slate-500 mb-4">Vous n'avez pas encore complété de quiz</p>
-                <a href="dashboard.html" class="inline-block bg-ap-red-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-ap-red-dark transition-colors">
+                <h3>Aucun résultat</h3>
+                <p>Vous n'avez pas encore complété de quiz</p>
+                <a href="/" class="inline-block bg-ap-red-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-ap-red-dark transition-all transform hover:-translate-y-1 shadow-lg">
                     Commencer un quiz
                 </a>
             </div>
         </div>
 
-        <!-- Bouton export -->
-        <div class="mt-8 text-center">
-            <button id="export-results-btn" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all inline-flex items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Bouton export ENHANCED -->
+        <div class="mt-8 text-center animate-fade-in-up" style="animation-delay: 0.9s;">
+            <button id="export-results-btn" class="export-btn-enhanced">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
                 Exporter en CSV

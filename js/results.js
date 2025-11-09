@@ -216,58 +216,58 @@ function updateGlobalStats() {
     const safeAvgTime = escapeHtml(formatTime(avgTime));
     
     statsContainer.innerHTML = `
-        <div class="bg-white rounded-xl shadow-md p-6 fade-in hover:shadow-lg transition-all">
+        <div class="stat-card-enhanced animate-fade-in-up">
             <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-ap-red-100 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-14 h-14 rounded-xl bg-ap-red-100 flex items-center justify-center">
+                    <svg class="w-7 h-7 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm text-slate-500 font-medium">Quiz complétés</p>
-                    <p class="text-3xl font-bold text-ap-red-primary">${totalQuizzes}</p>
+                    <p class="text-sm text-slate-600 font-semibold mb-1">Quiz complétés</p>
+                    <p class="text-4xl font-extrabold text-ap-red-primary">${totalQuizzes}</p>
                 </div>
             </div>
         </div>
         
-        <div class="bg-white rounded-xl shadow-md p-6 fade-in hover:shadow-lg transition-all">
+        <div class="stat-card-enhanced animate-fade-in-up">
             <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-ap-success-light flex items-center justify-center">
-                    <svg class="w-6 h-6 text-ap-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-14 h-14 rounded-xl bg-ap-success-light flex items-center justify-center">
+                    <svg class="w-7 h-7 text-ap-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm text-slate-500 font-medium">Score moyen</p>
-                    <p class="text-3xl font-bold text-ap-success">${avgScore}%</p>
+                    <p class="text-sm text-slate-600 font-semibold mb-1">Score moyen</p>
+                    <p class="text-4xl font-extrabold text-ap-success">${avgScore}%</p>
                 </div>
             </div>
         </div>
         
-        <div class="bg-white rounded-xl shadow-md p-6 fade-in hover:shadow-lg transition-all">
+        <div class="stat-card-enhanced animate-fade-in-up">
             <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-ap-gold-light flex items-center justify-center">
-                    <svg class="w-6 h-6 text-ap-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-14 h-14 rounded-xl bg-ap-gold-light flex items-center justify-center">
+                    <svg class="w-7 h-7 text-ap-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm text-slate-500 font-medium">Questions répondues</p>
-                    <p class="text-3xl font-bold text-ap-gold-dark">${totalCorrect}/${totalQuestions}</p>
+                    <p class="text-sm text-slate-600 font-semibold mb-1">Questions répondues</p>
+                    <p class="text-4xl font-extrabold text-ap-gold-dark">${totalCorrect}/${totalQuestions}</p>
                 </div>
             </div>
         </div>
         
-        <div class="bg-white rounded-xl shadow-md p-6 fade-in hover:shadow-lg transition-all">
+        <div class="stat-card-enhanced animate-fade-in-up">
             <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-ap-warning-light flex items-center justify-center">
-                    <svg class="w-6 h-6 text-ap-warning-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-14 h-14 rounded-xl bg-ap-warning-light flex items-center justify-center">
+                    <svg class="w-7 h-7 text-ap-warning-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm text-slate-500 font-medium">Temps moyen</p>
-                    <p class="text-3xl font-bold text-ap-warning-dark">${safeAvgTime}</p>
+                    <p class="text-sm text-slate-600 font-semibold mb-1">Temps moyen</p>
+                    <p class="text-4xl font-extrabold text-ap-warning-dark">${safeAvgTime}</p>
                 </div>
             </div>
         </div>
@@ -517,7 +517,7 @@ function renderResults() {
 
 function createResultCardElement(result) {
     const card = document.createElement('article');
-    card.className = 'p-6 hover:bg-slate-50 transition-colors';
+    card.className = 'result-card-enhanced';
     card.dataset.resultId = result.id;
 
     const date = result.completedAt instanceof Date ? result.completedAt : null;
