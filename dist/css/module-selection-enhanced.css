@@ -1,0 +1,89 @@
+/* ========================================
+   MODULE SELECTION - CARTES AGRANDIES (+40%)
+   Design: Professionnel et Premium
+   ======================================== */
+
+/* Conteneur grille responsive amélioré */
+.module-selection-grid-enhanced {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem; /* 40px au lieu de 32px */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Cartes modules - Taille augmentée de 40% */
+.module-card-enhanced {
+    min-height: 420px; /* +40% de ~300px */
+    padding: 2.5rem 2rem; /* +25% */
+    border-radius: 1.75rem; /* 28px au lieu de 24px */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Icônes plus grandes */
+.module-card-enhanced .bg-white\/20 {
+    padding: 1.75rem !important; /* +40% de 1.25rem */
+}
+
+.module-card-enhanced svg {
+    width: 4rem !important; /* 64px au lieu de 48px */
+    height: 4rem !important;
+}
+
+/* Titres modules plus gros */
+.module-card-enhanced h3 {
+    font-size: 2rem !important; /* 32px au lieu de 24px */
+    font-weight: 800 !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.02em;
+}
+
+/* Sous-titres */
+.module-card-enhanced p {
+    font-size: 1.125rem !important; /* 18px au lieu de 14px */
+    margin-bottom: 1.5rem !important;
+}
+
+/* Bouton "Commencer" */
+.module-card-enhanced .border-t {
+    padding-top: 1.5rem !important;
+    margin-top: 1.5rem !important;
+}
+
+.module-card-enhanced span {
+    font-size: 1.125rem !important;
+}
+
+/* Hover effect amélioré */
+.module-card-enhanced:hover {
+    transform: translateY(-16px) scale(1.03); /* Plus prononcé */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid responsive optimisé */
+@media (min-width: 640px) {
+    .module-selection-grid-enhanced {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .module-selection-grid-enhanced {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 au lieu de 4x1 */
+        gap: 3rem; /* 48px */
+    }
+}
+
+@media (min-width: 1400px) {
+    .module-selection-grid-enhanced {
+        grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur très grand écran */
+    }
+}
+
+/* Amélioration visuelle badges */
+.module-card-enhanced .absolute.top-0 {
+    width: 10rem !important;
+    height: 10rem !important;
+}
+
