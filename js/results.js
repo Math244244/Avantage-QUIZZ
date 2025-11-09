@@ -297,18 +297,39 @@ function updateProgressChart() {
     const recentResults = [...filteredResults].reverse().slice(-10);
     console.log('📊 recentResults:', recentResults);
     
-    // Fallback si pas de données
+    // Fallback si pas de données - VERSION AMÉLIORÉE
     if (recentResults.length === 0) {
         console.warn('⚠️ Aucune donnée pour le graphique de progression');
-        ctx.parentElement.innerHTML = `
-            <div class="flex flex-col items-center justify-center h-64 text-slate-400">
-                <svg class="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                </svg>
-                <p class="text-lg font-medium">Aucune donnée disponible</p>
-                <p class="text-sm mt-1">Complétez des quiz pour voir votre évolution</p>
-            </div>
-        `;
+        console.log('📊 allResults.length:', allResults.length);
+        console.log('📊 filteredResults.length:', filteredResults.length);
+        
+        // Remplacer tout le conteneur parent par un message clair
+        const chartCard = ctx.closest('.bg-white');
+        if (chartCard) {
+            chartCard.innerHTML = `
+                <div class="p-8 flex flex-col items-center justify-center" style="min-height: 350px;">
+                    <div class="w-24 h-24 bg-ap-red-50 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-12 h-12 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-3">📈 Évolution des scores</h3>
+                    <p class="text-xl font-semibold text-ap-red-primary mb-2">Aucune donnée à afficher</p>
+                    <p class="text-slate-600 text-center max-w-md mb-4">
+                        ${allResults.length === 0 
+                            ? 'Complétez votre premier quiz pour voir votre progression ici!' 
+                            : 'Aucun résultat ne correspond aux filtres sélectionnés. Essayez de réinitialiser les filtres.'}
+                    </p>
+                    ${allResults.length === 0 
+                        ? `<a href="/" class="mt-4 px-6 py-3 bg-ap-red-primary text-white rounded-lg hover:bg-ap-red-dark transition-all font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            Commencer un quiz
+                        </a>`
+                        : `<button onclick="document.getElementById('reset-filters-btn').click()" class="mt-4 px-6 py-3 bg-ap-red-primary text-white rounded-lg hover:bg-ap-red-dark transition-all font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            Réinitialiser les filtres
+                        </button>`}
+                </div>
+            `;
+        }
         return;
     }
     
@@ -386,19 +407,38 @@ function updateModuleChart() {
     
     console.log('📊 moduleCounts:', moduleCounts);
     
-    // Fallback si pas de données
+    // Fallback amélioré si pas de données
     if (Object.keys(moduleCounts).length === 0) {
         console.warn('⚠️ Aucune donnée pour le graphique de modules');
-        ctx.parentElement.innerHTML = `
-            <div class="flex flex-col items-center justify-center h-64 text-slate-400">
-                <svg class="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-                </svg>
-                <p class="text-lg font-medium">Aucune donnée disponible</p>
-                <p class="text-sm mt-1">Complétez des quiz pour voir la répartition</p>
-            </div>
-        `;
+        console.log('📊 allResults.length:', allResults.length);
+        console.log('📊 filteredResults.length:', filteredResults.length);
+        
+        const chartCard = ctx.closest('.bg-white');
+        if (chartCard) {
+            chartCard.innerHTML = `
+                <div class="p-8 flex flex-col items-center justify-center" style="min-height: 350px;">
+                    <div class="w-24 h-24 bg-ap-gold-light rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-12 h-12 text-ap-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-3">📊 Répartition par module</h3>
+                    <p class="text-xl font-semibold text-ap-gold-dark mb-2">Aucune donnée à afficher</p>
+                    <p class="text-slate-600 text-center max-w-md mb-4">
+                        ${allResults.length === 0 
+                            ? 'Complétez des quiz dans différents modules pour voir la répartition!' 
+                            : 'Aucun résultat ne correspond aux filtres. Essayez de modifier vos critères.'}
+                    </p>
+                    ${allResults.length === 0 
+                        ? `<a href="/" class="mt-4 px-6 py-3 bg-ap-gradient-gold text-ap-red-dark rounded-lg hover:shadow-lg transition-all font-bold shadow-md transform hover:-translate-y-1">
+                            Découvrir les modules
+                        </a>`
+                        : `<button onclick="document.getElementById('reset-filters-btn').click()" class="mt-4 px-6 py-3 bg-ap-gradient-gold text-ap-red-dark rounded-lg hover:shadow-lg transition-all font-bold shadow-md transform hover:-translate-y-1">
+                            Réinitialiser les filtres
+                        </button>`}
+                </div>
+            `;
+        }
         return;
     }
     

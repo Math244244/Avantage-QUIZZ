@@ -398,7 +398,7 @@ function renderPaginationControls() {
             ${paginationState.hasMore ? `
                 <button 
                     id="load-more-users-btn" 
-                    class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                    class="px-6 py-3 bg-ap-red-primary text-white rounded-lg hover:bg-ap-red-dark transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-1"
                     ${paginationState.isLoading ? 'disabled' : ''}
                 >
                     ${paginationState.isLoading ? `
