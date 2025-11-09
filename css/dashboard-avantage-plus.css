@@ -306,7 +306,7 @@
    ======================================== */
 
 .module-card--completed {
-  background: linear-gradient(135deg, #FAFBFC 0%, #E2E8F0 100%);
+  background: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 100%);
   border-color: var(--ap-silver);
   box-shadow: var(--ap-shadow-silver);
 }
@@ -339,7 +339,7 @@
    ======================================== */
 
 .module-card--active {
-  background: linear-gradient(135deg, #FAFBFC 0%, #E2E8F0 100%);
+  background: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 100%);
   border-color: var(--ap-silver);
   box-shadow: 0 0 0 3px rgba(192, 199, 208, 0.2), 0 4px 16px rgba(192, 199, 208, 0.25);
   position: relative;
@@ -376,7 +376,7 @@
    ======================================== */
 
 .module-card--locked {
-  background: linear-gradient(135deg, #F1F3F5 0%, #DEE2E6 100%);
+  background: linear-gradient(135deg, #EDF0F5 0%, #E4E9F0 100%);
   border-color: var(--ap-gray-300);
   opacity: 0.7;
   cursor: not-allowed;
@@ -406,7 +406,7 @@
    ======================================== */
 
 .module-card--incomplete {
-  background: linear-gradient(135deg, #FAFBFC 0%, #E2E8F0 100%);
+  background: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 100%);
   border-color: rgba(113, 128, 150, 0.3);
   box-shadow: 0 2px 8px rgba(113, 128, 150, 0.08);
 }

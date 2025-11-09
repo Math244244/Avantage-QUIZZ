@@ -42,10 +42,10 @@
   /* Blanc pur - Couleur du logo */
   --ap-white: #FFFFFF;
   
-  /* Gris clairs - Backgrounds */
-  --ap-gray-50: #F8F9FA;
-  --ap-gray-100: #F1F3F5;
-  --ap-gray-200: #E9ECEF;
+  /* Gris clairs - Backgrounds ULTRA FROIDS (bleu glacial) */
+  --ap-gray-50: #F4F6F9;
+  --ap-gray-100: #EBF0F7;
+  --ap-gray-200: #E1E8F2;
   --ap-gray-300: #DEE2E6;
   
   /* Gris moyens - Borders et désactivé */
@@ -76,16 +76,16 @@
   --ap-accent-light-rgb: 113, 128, 150;
   
   /* Perle/Argent pâle - Backgrounds subtils */
-  --ap-accent-pale: #E2E8F0;
-  --ap-accent-pale-rgb: 226, 232, 240;
+  --ap-accent-pale: #E8EDF4;
+  --ap-accent-pale-rgb: 232, 237, 244;
   
   /* Argent métallique - Accents premium, badges */
   --ap-silver: #C0C7D0;
   --ap-silver-rgb: 192, 199, 208;
   
-  /* Platine - Highlights, reflets */
-  --ap-platinum: #F7FAFC;
-  --ap-platinum-rgb: 247, 250, 252;
+  /* Platine - Highlights, reflets - FROID */
+  --ap-platinum: #F5F8FB;
+  --ap-platinum-rgb: 245, 248, 251;
   
   
   /* ========================================
