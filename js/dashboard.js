@@ -177,7 +177,7 @@ function createLockedCard(month) {
 }
 
 function createIncompleteCard(month) {
-    // ✅ AVANTAGE PLUS: Cartes incomplètes en orange/doré
+    // ✅ AVANTAGE PLUS: Cartes incomplètes en argent/anthracite
     const safeMonth = escapeHtml(month);
     
     return `
@@ -196,7 +196,7 @@ function createIncompleteCard(month) {
             <div class="module-card-progress-bar">
                 <div class="module-card-progress-fill" style="width: 0%"></div>
             </div>
-            <span class="text-sm font-semibold text-ap-warning">0% complété</span>
+            <span class="text-sm font-semibold text-ap-accent-medium">0% complété</span>
         </div>
     `;
 }

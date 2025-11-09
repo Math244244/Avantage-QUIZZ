@@ -428,7 +428,7 @@ function renderGlobalStats() {
         </div>
         
         <!-- Score Moyen -->
-        <div class="bg-ap-gradient-gold rounded-xl p-6 text-white shadow-ap-gold-lg hover:shadow-ap-gold transition-all">
+        <div class="bg-ap-gradient-silver rounded-xl p-6 text-white shadow-ap-silver-lg hover:shadow-ap-silver transition-all" style="background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -447,7 +447,7 @@ function renderGlobalStats() {
         </div>
         
         <!-- Total Questions -->
-        <div class="bg-gradient-to-br from-ap-warning to-ap-warning-dark rounded-xl p-6 text-white shadow-lg hover:shadow-xl transition-all">
+        <div class="bg-ap-gradient-accent rounded-xl p-6 text-white shadow-ap-accent-lg hover:shadow-ap-accent transition-all" style="background: linear-gradient(135deg, #718096 0%, #4A5568 100%);">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

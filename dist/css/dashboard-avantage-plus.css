@@ -402,34 +402,34 @@
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "INCOMPLET" (ORANGE)
+   CARTE MODULE - ÉTAT "INCOMPLET" (ARGENT/ANTHRACITE)
    ======================================== */
 
 .module-card--incomplete {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 100%);
-  border-color: rgba(255, 159, 67, 0.4);
-  box-shadow: 0 2px 8px rgba(255, 159, 67, 0.08);
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--ap-accent-pale) 100%);
+  border-color: rgba(113, 128, 150, 0.3);
+  box-shadow: 0 2px 8px rgba(113, 128, 150, 0.08);
 }
 
 .module-card--incomplete .module-card-icon {
-  background: linear-gradient(135deg, #FFD4A3 0%, var(--ap-warning) 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--ap-accent-pale) 0%, var(--ap-accent-light) 100%);
+  color: var(--ap-accent);
 }
 
 .module-card--incomplete .module-card-badge {
-  background: rgba(255, 159, 67, 0.12);
-  color: #CC6B2C;
-  border: 1px solid rgba(255, 159, 67, 0.3);
+  background: rgba(113, 128, 150, 0.12);
+  color: var(--ap-accent);
+  border: 1px solid rgba(113, 128, 150, 0.3);
   font-weight: 600;
 }
 
 .module-card--incomplete .module-card-progress-fill {
-  background: linear-gradient(90deg, var(--ap-warning) 0%, #FFD4A3 100%);
+  background: linear-gradient(90deg, var(--ap-accent-light) 0%, var(--ap-accent-pale) 100%);
 }
 
 .module-card--incomplete:hover {
-  border-color: var(--ap-warning);
-  box-shadow: 0 6px 20px rgba(255, 159, 67, 0.15);
+  border-color: var(--ap-accent-light);
+  box-shadow: 0 6px 20px rgba(113, 128, 150, 0.15);
   transform: translateY(-4px);
 }
 
