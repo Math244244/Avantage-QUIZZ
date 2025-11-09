@@ -729,12 +729,17 @@ function openResultDetails(resultId) {
 
     const dialog = document.createElement('div');
     dialog.className = 'bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto flex flex-col';
+    // ✅ CORRECTION ACCESSIBILITÉ : Attributs ARIA pour modal
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    dialog.setAttribute('aria-labelledby', 'modal-title-' + resultId);
     modal.appendChild(dialog);
 
     const header = document.createElement('div');
     header.className = 'px-8 py-6 text-white';
     header.style.background = 'var(--ap-gradient-primary)';
     const title = document.createElement('h2');
+    title.id = 'modal-title-' + resultId;
     title.className = 'text-2xl font-bold';
     title.textContent = 'Détails du quiz';
     const subtitle = document.createElement('p');

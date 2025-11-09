@@ -50,6 +50,17 @@ function createToastElement(message, type) {
     const toast = document.createElement('div');
     toast.className = `toast toast-${type} transform translate-x-full transition-all duration-300`;
     
+    // ✅ CORRECTION ACCESSIBILITÉ : Live regions pour toasts
+    // error = alert (assertive), autres = status (polite)
+    if (type === 'error') {
+        toast.setAttribute('role', 'alert');
+        toast.setAttribute('aria-live', 'assertive');
+    } else {
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+    }
+    toast.setAttribute('aria-atomic', 'true');
+    
     const config = getToastConfig(type);
     
     toast.innerHTML = `
@@ -60,8 +71,8 @@ function createToastElement(message, type) {
             <div class="flex-1">
                 <p class="text-sm font-medium text-slate-900">${escapeHtml(message)}</p>
             </div>
-            <button class="toast-close flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button class="toast-close flex-shrink-0 text-slate-400 hover:text-slate-600 transition-colors" aria-label="Fermer la notification">
+                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
