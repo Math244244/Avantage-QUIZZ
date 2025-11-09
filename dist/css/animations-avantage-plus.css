@@ -702,3 +702,54 @@
   perspective: 1000px;
 }
 
+/* ========================================
+   ♿ ACCESSIBILITÉ: PREFERS-REDUCED-MOTION
+   ======================================== */
+/**
+ * Respect des préférences utilisateur pour réduire les animations
+ * WCAG 2.1 Critère 2.3.3 (Niveau AAA)
+ * 
+ * Si l'utilisateur a activé "Réduire les mouvements" dans son OS:
+ * - Désactive toutes les animations non essentielles
+ * - Réduit les transitions à un minimum
+ * - Préserve les animations critiques pour l'UX
+ */
+@media (prefers-reduced-motion: reduce) {
+  /* Désactiver toutes les animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Exceptions: conserver les animations critiques */
+  /* Loading spinners (essentiels pour le feedback) */
+  .spinner,
+  [role="status"],
+  [role="progressbar"] {
+    animation-duration: 1s !important;
+  }
+  
+  /* Transitions de focus (essentielles pour accessibilité) */
+  :focus,
+  :focus-visible {
+    transition-duration: 0.15s !important;
+  }
+  
+  /* Désactiver hover transforms (peuvent causer nausées) */
+  .module-card:hover,
+  .card-hover:hover,
+  .transform:hover {
+    transform: none !important;
+  }
+  
+  /* Désactiver les parallax et effets complexes */
+  .parallax,
+  .gpu-accelerated {
+    transform: none !important;
+  }
+}
+

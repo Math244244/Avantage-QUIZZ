@@ -657,6 +657,14 @@ function toggleTheme() {
     document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', newTheme);
     updateThemeButton(newTheme);
+    
+    // ✅ CORRECTION ACCESSIBILITÉ : Mettre à jour aria-pressed
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        const isDark = newTheme === 'dark';
+        themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        themeBtn.setAttribute('aria-label', isDark ? 'Désactiver le mode sombre' : 'Activer le mode sombre');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

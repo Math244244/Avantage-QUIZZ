@@ -563,7 +563,7 @@ function createResultCardElement(result) {
                     <p class="text-sm text-slate-500 mb-1">Temps</p>
                     <p class="text-slate-700 font-semibold">${timeDisplay}</p>
                 </div>
-                <button class="result-details-btn px-4 py-2 bg-ap-red-primary text-white rounded-lg hover:bg-ap-red-dark transition-all transform hover:-translate-y-0.5 font-medium shadow-sm hover:shadow-md" data-result-id="${result.id}">
+                <button class="result-details-btn px-4 py-2 bg-ap-red-primary text-white rounded-lg hover:bg-ap-red-dark transition-all transform hover:-translate-y-0.5 font-medium shadow-sm hover:shadow-md" data-result-id="${result.id}" aria-label="Voir les détails du quiz ${moduleLabel} - ${periodLabel}">
                     Détails
                 </button>
             </div>

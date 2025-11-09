@@ -12,10 +12,10 @@
         .file-icon { transition: transform 0.2s; }
         .file-card:hover .file-icon { transform: scale(1.1); }
     </style>
-  <script type="module" crossorigin src="/assets/resources-Cm9dWPd9.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/auth-DqsDStis.js">
+  <script type="module" crossorigin src="/assets/resources-MlDuR1yn.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/auth-BWu0cJ0L.js">
   <link rel="modulepreload" crossorigin href="/assets/skeleton-BmdGa2iR.js">
-  <link rel="stylesheet" crossorigin href="/assets/auth-xAwrA69u.css">
+  <link rel="stylesheet" crossorigin href="/assets/auth-DzMbz4O2.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex bg-gradient-to-br from-slate-50 to-slate-100">
@@ -235,20 +235,20 @@
             <form id="upload-form" class="p-8">
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-2">Titre du document *</label>
+                        <label for="doc-title" class="block text-sm font-medium text-slate-700 mb-2">Titre du document *</label>
                         <input type="text" id="doc-title" required 
                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-2">Description</label>
+                        <label for="doc-description" class="block text-sm font-medium text-slate-700 mb-2">Description</label>
                         <textarea id="doc-description" rows="3" 
                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
                     </div>
                     
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-2">Catégorie *</label>
+                            <label for="doc-category" class="block text-sm font-medium text-slate-700 mb-2">Catégorie *</label>
                             <select id="doc-category" required 
                                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                                 <option value="">Sélectionner...</option>
@@ -261,7 +261,7 @@
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-2">Module *</label>
+                            <label for="doc-module" class="block text-sm font-medium text-slate-700 mb-2">Module *</label>
                             <select id="doc-module" required 
                                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                                 <option value="">Sélectionner...</option>
@@ -275,7 +275,7 @@
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-2">Fichier ou URL *</label>
+                        <label for="doc-url" class="block text-sm font-medium text-slate-700 mb-2">Fichier ou URL *</label>
                         <input type="text" id="doc-url" placeholder="https://..." required 
                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                         <p class="text-xs text-slate-500 mt-1">URL vers le document (Google Drive, Dropbox, etc.)</p>
