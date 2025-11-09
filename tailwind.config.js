@@ -17,11 +17,18 @@ module.exports = {
           '100': '#FFE5E8',
           '200': '#FFCCD1',
         },
-        'ap-gold': {
-          DEFAULT: '#FFD700',
-          'dark': '#FFA500',
-          'light': '#FFF4CC',
+        'ap-accent': {
+          DEFAULT: '#2D3748',
+          'medium': '#4A5568',
+          'light': '#718096',
+          'pale': '#E2E8F0',
         },
+        'ap-silver': {
+          DEFAULT: '#C0C7D0',
+          'dark': '#A0AEC0',
+          'light': '#E2E8F0',
+        },
+        'ap-platinum': '#F7FAFC',
         'ap-gray': {
           '50': '#F8F9FA',
           '100': '#F1F3F5',
@@ -42,10 +49,13 @@ module.exports = {
       backgroundImage: {
         'ap-gradient-primary': 'linear-gradient(135deg, #C41E3A 0%, #8B1429 100%)',
         'ap-gradient-sidebar': 'linear-gradient(180deg, #8B1429 0%, #C41E3A 100%)',
-        'ap-gradient-card': 'linear-gradient(to bottom, #FFFFFF 0%, #FFF4F5 100%)',
-        'ap-gradient-gold': 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+        'ap-gradient-card': 'linear-gradient(to bottom, #FFFFFF 0%, #F7FAFC 100%)',
+        'ap-gradient-accent': 'linear-gradient(135deg, #2D3748 0%, #1A202C 100%)',
+        'ap-gradient-accent-soft': 'linear-gradient(135deg, #4A5568 0%, #2D3748 100%)',
+        'ap-gradient-silver': 'linear-gradient(135deg, #E2E8F0 0%, #C0C7D0 100%)',
+        'ap-gradient-silver-shine': 'linear-gradient(135deg, #F7FAFC 0%, #E2E8F0 50%, #C0C7D0 100%)',
         'ap-gradient-active': 'linear-gradient(to right, #E63946 0%, #C41E3A 100%)',
-        'ap-gradient-success': 'linear-gradient(135deg, #28A745 0%, #FFD700 100%)',
+        'ap-gradient-success': 'linear-gradient(135deg, #28A745 0%, #4A5568 100%)',
       },
       boxShadow: {
         'ap-sm': '0 2px 4px rgba(196, 30, 58, 0.08)',
@@ -53,7 +63,10 @@ module.exports = {
         'ap-lg': '0 8px 30px rgba(196, 30, 58, 0.15)',
         'ap-xl': '0 12px 40px rgba(196, 30, 58, 0.2)',
         'ap-hover': '0 10px 30px rgba(196, 30, 58, 0.25)',
-        'ap-gold': '0 4px 20px rgba(255, 215, 0, 0.3)',
+        'ap-silver': '0 4px 15px rgba(192, 199, 208, 0.3)',
+        'ap-silver-lg': '0 8px 25px rgba(192, 199, 208, 0.4)',
+        'ap-accent': '0 4px 15px rgba(45, 55, 72, 0.15)',
+        'ap-accent-lg': '0 8px 25px rgba(45, 55, 72, 0.2)',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],

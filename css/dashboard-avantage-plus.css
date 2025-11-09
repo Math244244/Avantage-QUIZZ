@@ -46,7 +46,7 @@
   box-shadow: 0 12px 40px rgba(196, 30, 58, 0.2);
   position: relative;
   overflow: hidden;
-  border: 3px solid var(--ap-gold);
+  border: 3px solid var(--ap-silver);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -57,7 +57,7 @@
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(192, 199, 208, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   animation: floatGlow 6s ease-in-out infinite;
 }
@@ -74,21 +74,21 @@
 .quiz-hero-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 50px rgba(196, 30, 58, 0.3);
-  border-color: var(--ap-gold-dark);
+  border-color: var(--ap-platinum);
 }
 
 .quiz-hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(244, 229, 194, 0.3);
-  color: var(--ap-gold-light);
+  background: rgba(226, 232, 240, 0.3);
+  color: var(--ap-platinum);
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 16px;
-  border: 2px solid rgba(212, 175, 55, 0.5);
+  border: 2px solid rgba(192, 199, 208, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   backdrop-filter: blur(10px);
@@ -128,8 +128,8 @@
 .quiz-hero-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  background: var(--ap-gold);
-  color: var(--ap-red-dark);
+  background: var(--ap-silver);
+  color: var(--ap-accent);
 }
 
 .quiz-hero-progress {
@@ -140,12 +140,12 @@
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 16px;
-  border: 2px solid rgba(212, 175, 55, 0.5);
+  border: 2px solid rgba(192, 199, 208, 0.5);
   backdrop-filter: blur(10px);
 }
 
 .quiz-hero-progress-label {
-  color: #F4E5C2;
+  color: var(--ap-accent-pale);
   font-size: var(--ap-text-xs);
   font-weight: var(--ap-font-bold);
   text-transform: uppercase;
@@ -302,19 +302,19 @@
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "COMPLÉTÉ" (VERT/OR)
+   CARTE MODULE - ÉTAT "COMPLÉTÉ" (VERT/ARGENT)
    ======================================== */
 
 .module-card--completed {
-  background: linear-gradient(135deg, #FFFFFF 0%, var(--ap-gold-light) 100%);
-  border-color: var(--ap-gold);
-  box-shadow: var(--ap-shadow-gold);
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--ap-accent-pale) 100%);
+  border-color: var(--ap-silver);
+  box-shadow: var(--ap-shadow-silver);
 }
 
 .module-card--completed .module-card-icon {
-  background: var(--ap-gradient-gold-soft);
-  color: var(--ap-red-dark);
-  box-shadow: var(--ap-shadow-gold);
+  background: var(--ap-gradient-silver);
+  color: var(--ap-accent);
+  box-shadow: var(--ap-shadow-silver);
 }
 
 .module-card--completed .module-card-badge {
@@ -330,34 +330,34 @@
 
 .module-card--completed:hover {
   border-color: rgba(40, 167, 69, 0.3);
-  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.12);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.12), var(--ap-shadow-silver);
   transform: translateY(-4px);
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "ACTIF" (ROUGE/OR)
+   CARTE MODULE - ÉTAT "ACTIF" (ROUGE/ARGENT)
    ======================================== */
 
 .module-card--active {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFFBF5 100%);
-  border-color: var(--ap-gold);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15), 0 4px 16px rgba(212, 175, 55, 0.2);
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--ap-platinum) 100%);
+  border-color: var(--ap-silver);
+  box-shadow: 0 0 0 3px rgba(192, 199, 208, 0.2), 0 4px 16px rgba(192, 199, 208, 0.25);
   position: relative;
 }
 
 .module-card--active .module-card-icon {
-  background: var(--ap-gradient-gold);
-  color: var(--ap-red-dark);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  background: var(--ap-gradient-silver-shine);
+  color: var(--ap-accent);
+  box-shadow: 0 4px 15px rgba(192, 199, 208, 0.4);
   animation: iconPulseGold 2s ease-in-out infinite;
 }
 
 .module-card--active .module-card-badge {
-  background: var(--ap-gradient-gold);
-  color: var(--ap-red-dark);
-  border: 1.5px solid rgba(184, 134, 11, 0.4);
+  background: var(--ap-gradient-silver);
+  color: var(--ap-accent);
+  border: 1.5px solid rgba(192, 199, 208, 0.5);
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 12px rgba(192, 199, 208, 0.3);
   animation: pulseGoldSubtle 2s ease-in-out infinite;
 }
 
@@ -366,8 +366,8 @@
 }
 
 .module-card--active:hover {
-  border-color: var(--ap-gold-dark);
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2), 0 8px 30px rgba(212, 175, 55, 0.3);
+  border-color: var(--ap-platinum);
+  box-shadow: 0 0 0 4px rgba(192, 199, 208, 0.25), 0 8px 30px rgba(192, 199, 208, 0.35);
   transform: translateY(-4px) scale(1.01);
 }
 

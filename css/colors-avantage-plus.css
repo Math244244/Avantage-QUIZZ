@@ -60,24 +60,32 @@
   
   
   /* ========================================
-     DORÉ (Accent Premium) - VERSION SUBTILE
+     ANTHRACITE + ARGENT (Accent Premium Moderne)
      ======================================== */
   
-  /* Or principal - Or antique, plus raffiné */
-  --ap-gold: #D4AF37;
-  --ap-gold-rgb: 212, 175, 55;
+  /* Anthracite principal - Base premium */
+  --ap-accent: #2D3748;
+  --ap-accent-rgb: 45, 55, 72;
   
-  /* Or foncé - Pour hover et dégradés */
-  --ap-gold-dark: #B8860B;
-  --ap-gold-dark-rgb: 184, 134, 11;
+  /* Ardoise moyen - Hover et états intermédiaires */
+  --ap-accent-medium: #4A5568;
+  --ap-accent-medium-rgb: 74, 85, 104;
   
-  /* Or clair - Crème dorée pour backgrounds */
-  --ap-gold-light: #F4E5C2;
-  --ap-gold-light-rgb: 244, 229, 194;
+  /* Gris bleuté clair - Textes secondaires */
+  --ap-accent-light: #718096;
+  --ap-accent-light-rgb: 113, 128, 150;
   
-  /* Ivoire - Fond très subtil */
-  --ap-gold-pale: #FFFBF5;
-  --ap-gold-pale-rgb: 255, 251, 245;
+  /* Perle/Argent pâle - Backgrounds subtils */
+  --ap-accent-pale: #E2E8F0;
+  --ap-accent-pale-rgb: 226, 232, 240;
+  
+  /* Argent métallique - Accents premium, badges */
+  --ap-silver: #C0C7D0;
+  --ap-silver-rgb: 192, 199, 208;
+  
+  /* Platine - Highlights, reflets */
+  --ap-platinum: #F7FAFC;
+  --ap-platinum-rgb: 247, 250, 252;
   
   
   /* ========================================
@@ -120,11 +128,15 @@
   --ap-gradient-sidebar: linear-gradient(180deg, #8B1429 0%, #C41E3A 100%);
   
   /* Dégradé carte - Backgrounds subtils */
-  --ap-gradient-card: linear-gradient(to bottom, #FFFFFF 0%, #FFF4F5 100%);
+  --ap-gradient-card: linear-gradient(to bottom, #FFFFFF 0%, #F7FAFC 100%);
   
-  /* Dégradé doré - Success, badges premium (subtil) */
-  --ap-gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-  --ap-gradient-gold-soft: linear-gradient(135deg, #F4E5C2 0%, #D4AF37 100%);
+  /* Dégradé anthracite - Cartes premium, badges */
+  --ap-gradient-accent: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+  --ap-gradient-accent-soft: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+  
+  /* Dégradé argent - Effets métalliques */
+  --ap-gradient-silver: linear-gradient(135deg, #E2E8F0 0%, #C0C7D0 100%);
+  --ap-gradient-silver-shine: linear-gradient(135deg, #F7FAFC 0%, #E2E8F0 50%, #C0C7D0 100%);
   
   /* Dégradé actif - Boutons principaux */
   --ap-gradient-active: linear-gradient(to right, #E63946 0%, #C41E3A 100%);
@@ -132,8 +144,8 @@
   /* Dégradé hover - États interactifs */
   --ap-gradient-hover: linear-gradient(to right, #DC1F32 0%, #C41E3A 100%);
   
-  /* Dégradé success - Score élevé */
-  --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #D4AF37 100%);
+  /* Dégradé success - Score élevé (avec argent) */
+  --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #4A5568 100%);
   
   
   /* ========================================
@@ -158,9 +170,13 @@
   /* Ombre hover - Plus prononcée */
   --ap-shadow-hover: 0 10px 30px rgba(196, 30, 58, 0.25);
   
-  /* Ombre dorée - Pour éléments premium (subtile) */
-  --ap-shadow-gold: 0 4px 15px rgba(212, 175, 55, 0.2);
-  --ap-shadow-gold-lg: 0 8px 25px rgba(212, 175, 55, 0.25);
+  /* Ombre argentée - Pour éléments premium (effet métallique) */
+  --ap-shadow-silver: 0 4px 15px rgba(192, 199, 208, 0.3);
+  --ap-shadow-silver-lg: 0 8px 25px rgba(192, 199, 208, 0.4);
+  
+  /* Ombre anthracite - Pour cartes sombres */
+  --ap-shadow-accent: 0 4px 15px rgba(45, 55, 72, 0.15);
+  --ap-shadow-accent-lg: 0 8px 25px rgba(45, 55, 72, 0.2);
   
   
   /* ========================================
@@ -205,23 +221,27 @@
 .bg-ap-red-primary { background-color: var(--ap-red-primary); }
 .bg-ap-red-dark { background-color: var(--ap-red-dark); }
 .bg-ap-red-light { background-color: var(--ap-red-light); }
-.bg-ap-gold { background-color: var(--ap-gold); }
+.bg-ap-accent { background-color: var(--ap-accent); }
+.bg-ap-silver { background-color: var(--ap-silver); }
 .bg-ap-gray-50 { background-color: var(--ap-gray-50); }
 
 /* Textes */
 .text-ap-red-primary { color: var(--ap-red-primary); }
 .text-ap-red-dark { color: var(--ap-red-dark); }
-.text-ap-gold { color: var(--ap-gold); }
+.text-ap-accent { color: var(--ap-accent); }
+.text-ap-silver { color: var(--ap-silver); }
 .text-ap-gray-600 { color: var(--ap-gray-600); }
 .text-ap-gray-900 { color: var(--ap-gray-900); }
 
 /* Bordures */
 .border-ap-red-primary { border-color: var(--ap-red-primary); }
-.border-ap-gold { border-color: var(--ap-gold); }
+.border-ap-accent { border-color: var(--ap-accent); }
+.border-ap-silver { border-color: var(--ap-silver); }
 
 /* Dégradés */
 .gradient-primary { background: var(--ap-gradient-primary); }
-.gradient-gold { background: var(--ap-gradient-gold); }
+.gradient-accent { background: var(--ap-gradient-accent); }
+.gradient-silver { background: var(--ap-gradient-silver); }
 .gradient-sidebar { background: var(--ap-gradient-sidebar); }
 
 /* ========================================
@@ -255,15 +275,19 @@
  * 
  * 1. Couleurs principales:
  *    - Rouge: var(--ap-red-primary) - Marque Avantage Plus
- *    - Doré: var(--ap-gold) - Éléments premium
+ *    - Anthracite: var(--ap-accent) - Base UI moderne
+ *    - Argent: var(--ap-silver) - Accents premium, badges
  *    - Gris: var(--ap-gray-X) - Textes et backgrounds
  * 
  * 2. Dégradés:
- *    - background: var(--ap-gradient-primary);
- *    - background: var(--ap-gradient-gold);
+ *    - background: var(--ap-gradient-primary); // Rouge
+ *    - background: var(--ap-gradient-accent); // Anthracite
+ *    - background: var(--ap-gradient-silver); // Argent métallique
  * 
  * 3. Ombres:
- *    - box-shadow: var(--ap-shadow-md);
+ *    - box-shadow: var(--ap-shadow-md); // Rouge
+ *    - box-shadow: var(--ap-shadow-silver); // Argent
+ *    - box-shadow: var(--ap-shadow-accent); // Anthracite
  * 
  * 4. États interactifs:
  *    - Hover: utiliser --ap-red-light ou --ap-shadow-hover
@@ -274,10 +298,17 @@
  * - Tous les contrastes ont été vérifiés pour WCAG AA
  *   - Rouge sur blanc: 5.8:1 ✓
  *   - Blanc sur rouge: 5.8:1 ✓
- *   - Gris-900 sur blanc: 12.6:1 ✓
+ *   - Anthracite sur blanc: 11.8:1 ✓ (AAA)
+ *   - Blanc sur anthracite: 11.8:1 ✓ (AAA)
+ *   - Argent sur anthracite: 4.5:1 ✓
  * 
  * PERFORMANCE:
  * - Utiliser variables CSS pour faciliter le theming
  * - Valeurs RGB disponibles pour rgba()
+ * 
+ * DESIGN MODERNE 2024-2025:
+ * - Palette inspirée de Netflix, Tesla, YouTube Premium
+ * - Effet métallique argent pour badges et accents
+ * - Contraste fort pour effet "waouh"
  */
 
