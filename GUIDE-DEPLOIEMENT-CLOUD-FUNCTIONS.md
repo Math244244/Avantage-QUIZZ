@@ -164,6 +164,15 @@ Les Cloud Functions vérifient :
 
 ## 🐛 Dépannage
 
+### Erreur: "An unexpected error has occurred"
+Cette erreur générique peut avoir plusieurs causes. Voir `TROUBLESHOOTING-CLOUD-FUNCTIONS.md` pour un guide complet.
+
+**Solutions rapides:**
+1. Réinstaller les dépendances : `cd functions && npm install && cd ..`
+2. Mettre à jour Firebase CLI : `npm install -g firebase-tools@latest`
+3. Vérifier les logs détaillés : `firebase deploy --only functions --debug`
+4. Activer les APIs Google Cloud nécessaires dans la console
+
 ### Erreur: "Function not found"
 - Vérifier que la fonction est déployée : `firebase functions:list`
 - Vérifier le nom de la fonction dans le code client
@@ -175,6 +184,9 @@ Les Cloud Functions vérifient :
 ### Erreur: "Module not found"
 - Exécuter `npm install` dans le dossier `functions`
 - Vérifier que `package.json` contient toutes les dépendances
+
+### Erreur: "Runtime Node.js 18 was decommissioned"
+- ✅ **DÉJÀ CORRIGÉ** : Runtime mis à jour vers Node.js 20 dans `firebase.json` et `functions/package.json`
 
 ---
 
