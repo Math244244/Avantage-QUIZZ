@@ -1,6 +1,7 @@
 // Dashboard Admin Avancé - Statistiques globales et analytics
-import { db } from './firebase-config.js';
+import { db, functions } from './firebase-config.js';
 import { collection, query, getDocs, where, orderBy, limit, Timestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+import { httpsCallable } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js';
 import { toast } from './toast.js';
 import { logger } from './logger.js';
 import { isDemoMode } from './auth.js';
@@ -113,6 +114,7 @@ export async function initAdminDashboard() {
 
 /**
  * Charger les statistiques globales
+ * ✅ P1-2: Utilise Cloud Function si disponible, sinon fallback sur code client
  */
 async function loadGlobalStats() {
     try {
@@ -129,14 +131,32 @@ async function loadGlobalStats() {
             return;
         }
         
-    logger.info('📈 Chargement des statistiques globales...');
-        
-        // ✅ P1 OPTIMISATION: Utiliser les services existants qui optimisent déjà les requêtes
-        const { getUsersStats } = await import('./firestore-service.js');
-        const { getQuestionsStats } = await import('./firestore-service.js');
+        logger.info('📈 Chargement des statistiques globales...');
         
         // ✅ P0 CRITIQUE: Récupérer le clientId pour isolation multi-tenant
         const clientId = await getCurrentClientId();
+        
+        // ✅ P1-2: Essayer d'utiliser la Cloud Function en premier
+        try {
+            const getGlobalStatsFunction = httpsCallable(functions, 'getGlobalStats');
+            const result = await getGlobalStatsFunction({ clientId });
+            
+            if (result.data && result.data.success) {
+                logger.info('✅ Statistiques chargées via Cloud Function');
+                globalStats = result.data.stats;
+                stateManager.set('globalStats', globalStats);
+                renderGlobalStats();
+                return;
+            }
+        } catch (cloudFunctionError) {
+            // Si la Cloud Function n'est pas disponible ou échoue, utiliser le fallback
+            logger.warn('⚠️ Cloud Function non disponible, utilisation du fallback:', cloudFunctionError.message);
+        }
+        
+        // ✅ FALLBACK: Utiliser le code client existant si Cloud Function non disponible
+        // ✅ P1 OPTIMISATION: Utiliser les services existants qui optimisent déjà les requêtes
+        const { getUsersStats } = await import('./firestore-service.js');
+        const { getQuestionsStats } = await import('./firestore-service.js');
         
         // ✅ P1 OPTIMISATION: Utiliser getUsersStats() qui calcule déjà les stats utilisateurs efficacement
         const usersStats = await getUsersStats();
@@ -202,10 +222,10 @@ async function loadGlobalStats() {
         // Afficher les statistiques
         renderGlobalStats();
         
-    logger.info('✅ Statistiques globales chargées:', globalStats);
+        logger.info('✅ Statistiques globales chargées (fallback):', globalStats);
         
     } catch (error) {
-    logger.error('❌ Erreur chargement stats globales:', error);
+        logger.error('❌ Erreur chargement stats globales:', error);
         throw error;
     }
 }
@@ -298,6 +318,7 @@ async function loadRecentActivity() {
 
 /**
  * Charger les statistiques par module
+ * ✅ P1-2: Utilise Cloud Function si disponible, sinon fallback sur code client
  */
 async function loadModuleStats() {
     try {
@@ -315,10 +336,26 @@ async function loadModuleStats() {
             return mockStats;
         }
         
-    logger.info('📊 Chargement des stats par module...');
+        logger.info('📊 Chargement des stats par module...');
         
         // ✅ P0 CRITIQUE: Filtrer par clientId
         const clientId = await getCurrentClientId();
+        
+        // ✅ P1-2: Essayer d'utiliser la Cloud Function en premier
+        try {
+            const getModuleStatsFunction = httpsCallable(functions, 'getModuleStats');
+            const result = await getModuleStatsFunction({ clientId });
+            
+            if (result.data && result.data.success) {
+                logger.info('✅ Stats par module chargées via Cloud Function');
+                return result.data.moduleStats;
+            }
+        } catch (cloudFunctionError) {
+            // Si la Cloud Function n'est pas disponible ou échoue, utiliser le fallback
+            logger.warn('⚠️ Cloud Function non disponible, utilisation du fallback:', cloudFunctionError.message);
+        }
+        
+        // ✅ FALLBACK: Utiliser le code client existant si Cloud Function non disponible
         const resultsQuery = query(collection(db, 'quizResults'), where('clientId', '==', clientId));
         const resultsSnapshot = await getDocs(resultsQuery);
         const moduleStats = {};
@@ -344,11 +381,11 @@ async function loadModuleStats() {
             stat.avgScore = Math.round(stat.totalScore / stat.count);
         });
         
-    logger.info('✅ Stats par module chargées:', moduleStats);
+        logger.info('✅ Stats par module chargées (fallback):', moduleStats);
         return moduleStats;
         
     } catch (error) {
-    logger.error('❌ Erreur chargement stats modules:', error);
+        logger.error('❌ Erreur chargement stats modules:', error);
         throw error;
     }
 }
