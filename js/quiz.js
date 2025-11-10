@@ -723,8 +723,9 @@ function showResults() {
         return;
     }
     
-    const correctCount = userAnswers.filter(a => a.isCorrect).length;
-    const score = Math.round((correctCount / userAnswers.length) * 100);
+    // ✅ P0 CRITIQUE: Utiliser la fonction de calcul de score testable
+    const { calculateScore: calculateQuizScore } = await import('./utils/quiz-scoring.js');
+    const score = calculateQuizScore(userAnswers);
     
     // ✅ CORRECTION SECTION 2 : Validation du score calculé
     if (isNaN(score) || score < 0 || score > 100) {
@@ -1010,12 +1011,15 @@ document.addEventListener('visibilitychange', () => {
 });
 
 // Mettre à jour l'affichage du score
-function updateScoreDisplay() {
+async function updateScoreDisplay() {
     // ✅ CORRECTION SECTION 5 : Utiliser StateManager
     const userAnswers = getUserAnswers();
     if (userAnswers.length === 0) return;
     
-    const score = Math.round((userAnswers.filter(a => a.isCorrect).length / userAnswers.length) * 100);
+    // ✅ P0 CRITIQUE: Utiliser la fonction de calcul de score testable
+    const { calculateScore } = await import('./utils/quiz-scoring.js');
+    const score = calculateScore(userAnswers);
+    
     const scoreElement = document.getElementById('quiz-score');
     if (scoreElement) {
         scoreElement.textContent = `Score: ${score}%`;

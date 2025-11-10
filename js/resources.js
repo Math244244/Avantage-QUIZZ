@@ -5,6 +5,8 @@ import { getCurrentUser, onAuthChange, signOutUser } from './auth.js';
 import { toast } from './toast.js';
 // ✅ CORRECTION SECTION 4 : Protection XSS
 import { escapeHtml } from './security.js';
+// ✅ P0 CRITIQUE: Import pour validation stricte du clientId
+import { getCurrentClientId } from './client-manager.js';
 import {
     createResourceSkeleton,
     showSkeleton,
@@ -108,7 +110,13 @@ async function loadResources() {
             showSkeleton('resources-container', createResourceSkeleton(6));
         }
         
-        const q = query(collection(db, 'resources'), orderBy('createdAt', 'desc'));
+        // ✅ P0 CRITIQUE: Filtrer par clientId pour isolation multi-tenant
+        const clientId = await getCurrentClientId();
+        const q = query(
+            collection(db, 'resources'), 
+            where('clientId', '==', clientId),
+            orderBy('createdAt', 'desc')
+        );
         const querySnapshot = await getDocs(q);
         
         allResources = [];
@@ -289,12 +297,15 @@ async function handleUpload(e) {
         console.log('📤 Ajout d\'une nouvelle ressource...');
         
         const user = getCurrentUser();
+        // ✅ P0 CRITIQUE: Ajouter clientId pour isolation multi-tenant
+        const clientId = await getCurrentClientId();
         await addDoc(collection(db, 'resources'), {
             title,
             description,
             category,
             module,
             url,
+            clientId: clientId, // ✅ P0 CRITIQUE: Isolation multi-tenant
             downloads: 0,
             createdAt: new Date(),
             createdBy: user.uid

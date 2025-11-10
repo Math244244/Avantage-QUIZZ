@@ -8,6 +8,8 @@ import { isDemoMode } from './auth.js';
 import { escapeHtml } from './security.js';
 // ✅ CORRECTION SECTION 5 : StateManager - Centralisation des variables globales
 import { stateManager } from './state-manager.js';
+// ✅ P0 CRITIQUE: Import pour validation stricte du clientId
+import { getCurrentClientId } from './client-manager.js';
 import {
     createStatsSkeleton,
     createChartSkeleton,
@@ -129,12 +131,17 @@ async function loadGlobalStats() {
         
     logger.info('📈 Chargement des statistiques globales...');
         
-        // Compter les utilisateurs
-        const usersSnapshot = await getDocs(collection(db, 'users'));
+        // ✅ P0 CRITIQUE: Récupérer le clientId pour isolation multi-tenant
+        const clientId = await getCurrentClientId();
+        
+        // Compter les utilisateurs (filtrés par clientId)
+        const usersQuery = query(collection(db, 'users'), where('clientId', '==', clientId));
+        const usersSnapshot = await getDocs(usersQuery);
         globalStats.totalUsers = usersSnapshot.size;
         
-        // Compter les quiz complétés
-        const quizzesSnapshot = await getDocs(collection(db, 'quizResults'));
+        // Compter les quiz complétés (filtrés par clientId)
+        const quizzesQuery = query(collection(db, 'quizResults'), where('clientId', '==', clientId));
+        const quizzesSnapshot = await getDocs(quizzesQuery);
         globalStats.totalQuizzes = quizzesSnapshot.size;
         
         // Calculer le score moyen
@@ -146,12 +153,14 @@ async function loadGlobalStats() {
             ? Math.round(totalScore / quizzesSnapshot.size) 
             : 0;
         
-        // Compter les questions
-        const questionsSnapshot = await getDocs(collection(db, 'questions'));
+        // Compter les questions (filtrées par clientId)
+        const questionsQuery = query(collection(db, 'questions'), where('clientId', '==', clientId));
+        const questionsSnapshot = await getDocs(questionsQuery);
         globalStats.totalQuestions = questionsSnapshot.size;
         
-        // Compter les ressources
-        const resourcesSnapshot = await getDocs(collection(db, 'resources'));
+        // Compter les ressources (filtrées par clientId)
+        const resourcesQuery = query(collection(db, 'resources'), where('clientId', '==', clientId));
+        const resourcesSnapshot = await getDocs(resourcesQuery);
         globalStats.totalResources = resourcesSnapshot.size;
         
         // Utilisateurs actifs aujourd'hui
@@ -347,7 +356,10 @@ async function loadModuleStats() {
         
     logger.info('📊 Chargement des stats par module...');
         
-        const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+        // ✅ P0 CRITIQUE: Filtrer par clientId
+        const clientId = await getCurrentClientId();
+        const resultsQuery = query(collection(db, 'quizResults'), where('clientId', '==', clientId));
+        const resultsSnapshot = await getDocs(resultsQuery);
         const moduleStats = {};
         
         resultsSnapshot.forEach(doc => {
@@ -622,7 +634,10 @@ async function createProgressChart() {
             const thirtyDaysAgo = new Date();
             thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
             
-            const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+            // ✅ P0 CRITIQUE: Filtrer par clientId
+            const clientId = await getCurrentClientId();
+            const resultsQuery = query(collection(db, 'quizResults'), where('clientId', '==', clientId));
+            const resultsSnapshot = await getDocs(resultsQuery);
             const dailyData = {};
             
             // Initialiser les 30 derniers jours
@@ -923,8 +938,10 @@ export async function exportToAdvancedCSV() {
     const loadingToast = toast.showLoadingToast('Génération du CSV...');
     
     try {
-        // Récupérer toutes les données
-        const resultsSnapshot = await getDocs(collection(db, 'quizResults'));
+        // ✅ P0 CRITIQUE: Filtrer par clientId
+        const clientId = await getCurrentClientId();
+        const resultsQuery = query(collection(db, 'quizResults'), where('clientId', '==', clientId));
+        const resultsSnapshot = await getDocs(resultsQuery);
         
         const headers = ['Date', 'Utilisateur', 'Module', 'Mois', 'Année', 'Score (%)', 'Bonnes réponses', 'Total questions', 'Temps (s)'];
         const rows = [];

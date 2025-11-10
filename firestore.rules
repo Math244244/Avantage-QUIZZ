@@ -16,48 +16,64 @@ service cloud.firestore {
       return isAuthenticated() && request.auth.uid == userId;
     }
     
+    // ✅ P0 CRITIQUE: Helper pour récupérer le clientId de l'utilisateur actuel
+    function getCurrentUserClientId() {
+      let userDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
+      return userDoc.data.get('clientId', 'default');
+    }
+    
+    // ✅ P0 CRITIQUE: Helper pour vérifier que deux utilisateurs sont du même client
+    function sameClient(userId) {
+      let currentUserDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
+      let targetUserDoc = get(/databases/$(database)/documents/users/$(userId));
+      return currentUserDoc.data.clientId == targetUserDoc.data.clientId;
+    }
+    
     // Collection: users
     match /users/{userId} {
-      // Helper: Récupérer le clientId de l'utilisateur
-      function getUserClientId() {
-        let userDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
-        return userDoc.data.get('clientId', 'default');
-      }
+      // ✅ P0 CRITIQUE: Lecture - Isolation multi-tenant stricte
+      // L'utilisateur peut lire son propre profil OU les admins peuvent lire les utilisateurs du même client uniquement
+      allow get: if isOwner(userId) || 
+                    (isAdmin() && sameClient(userId)) ||
+                    (isAuthenticated() && resource.data.clientId == getCurrentUserClientId());
       
-      // Lecture: l'utilisateur peut lire son propre profil, les admins peuvent tout lire
-      // ✅ CORRECTION SECTION 1 : Les admins peuvent lire tous les utilisateurs, mais les users ne voient que leur client
-      allow get: if isOwner(userId) || isAdmin() || 
-                    (isAuthenticated() && resource.data.clientId == getUserClientId());
-      allow list: if isAdmin();
+      // ✅ P0 CRITIQUE: Liste - Seulement les utilisateurs du même client
+      allow list: if isAdmin() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: l'utilisateur peut mettre à jour son propre profil (sauf le rôle et clientId)
-      // Les admins peuvent tout créer/modifier
-      // ✅ CORRECTION SECTION 1 : Empêcher la modification du clientId par les users
+      // ✅ P0 CRITIQUE: Écriture - Isolation multi-tenant stricte
+      // L'utilisateur peut mettre à jour son propre profil (sauf le rôle et clientId)
+      // Les admins peuvent créer/modifier uniquement les utilisateurs du même client
       allow create, update: if (isOwner(userId) && 
-                                  request.resource.data.clientId == getUserClientId() &&
+                                  request.resource.data.clientId == getCurrentUserClientId() &&
                                   (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'clientId']))) ||
-                             isAdmin();
+                             (isAdmin() && sameClient(userId) &&
+                                  request.resource.data.clientId == getCurrentUserClientId());
       
       // Empêcher les users de modifier leur propre rôle
       allow update: if isOwner(userId) && 
                        (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['role'])) ||
-                       isAdmin();
+                       (isAdmin() && sameClient(userId));
       
-      // Suppression: seulement les admins
-      allow delete: if isAdmin();
+      // ✅ P0 CRITIQUE: Suppression - Seulement les admins du même client
+      allow delete: if isAdmin() && sameClient(userId);
     }
     
     // Collection: questions (SANS champ difficulty)
     match /questions/{questionId} {
-      // Lecture: tous les utilisateurs authentifiés
-      allow get: if isAuthenticated();
-      allow list: if isAuthenticated();
+      // ✅ P0 CRITIQUE: Lecture - Seulement les utilisateurs du même client
+      allow get: if isAuthenticated() && 
+                    resource.data.clientId == getCurrentUserClientId();
+      allow list: if isAuthenticated() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: seulement les admins
-      allow create, update, delete: if isAdmin();
+      // ✅ P0 CRITIQUE: Écriture - Seulement les admins du même client
+      allow create, update, delete: if isAdmin() && 
+                                        request.resource.data.clientId == getCurrentUserClientId();
       
       // Validation des données lors de la création/modification
       allow create, update: if isAdmin() &&
+        request.resource.data.clientId == getCurrentUserClientId() &&
         request.resource.data.question is string &&
         request.resource.data.question.size() >= 10 &&
         request.resource.data.options is list &&
@@ -75,23 +91,19 @@ service cloud.firestore {
     
     // Collection: quizResults
     match /quizResults/{resultId} {
-      // Helper: Récupérer le clientId de l'utilisateur
-      function getUserClientId() {
-        let userDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
-        return userDoc.data.get('clientId', 'default');
-      }
+      // ✅ P0 CRITIQUE: Lecture - Isolation multi-tenant stricte
+      // Seulement ses propres résultats OU même client (pour admins client)
+      allow get: if isOwner(resource.data.userId) || 
+                    (isAuthenticated() && sameClient(resource.data.userId));
       
-      // Lecture: l'utilisateur peut lire ses propres résultats du même client, les admins peuvent tout lire
-      allow get: if (isOwner(resource.data.userId) && resource.data.clientId == getUserClientId()) || isAdmin();
-      allow list: if isAdmin() || 
-                     (isAuthenticated() && request.query.limitToClient == true);
+      // ✅ P0 CRITIQUE: Liste - Seulement les résultats du même client
+      allow list: if isAuthenticated() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: l'utilisateur peut créer ses propres résultats avec son clientId
-      // ✅ CORRECTION SECTION 2 : Validation des données côté serveur
-      // ✅ CORRECTION SECTION 1 : Validation du clientId pour isolation
+      // ✅ P0 CRITIQUE: Écriture - Validation stricte du clientId
       allow create: if isAuthenticated() && 
                    request.resource.data.userId == request.auth.uid &&
-                   request.resource.data.clientId == getUserClientId() &&
+                   request.resource.data.clientId == getCurrentUserClientId() &&
                    // Validation du score (0-100, entier)
                    request.resource.data.score is int &&
                    request.resource.data.score >= 0 &&
@@ -107,51 +119,54 @@ service cloud.firestore {
                    request.resource.data.moduleId is string &&
                    request.resource.data.moduleId in ['auto', 'loisir', 'vr', 'tracteur'];
       
-      // Modification/Suppression: seulement les admins
-      allow update, delete: if isAdmin();
+      // ✅ P0 CRITIQUE: Modification/Suppression - Seulement les admins du même client
+      allow update, delete: if isAdmin() && sameClient(resource.data.userId);
     }
     
     // Collection: monthlyProgress
     match /monthlyProgress/{progressId} {
-      // Helper: Récupérer le clientId de l'utilisateur
-      function getUserClientId() {
-        let userDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
-        return userDoc.data.get('clientId', 'default');
-      }
+      // ✅ P0 CRITIQUE: Lecture - Isolation multi-tenant stricte
+      // Seulement sa propre progression OU même client (pour admins)
+      allow get: if isOwner(resource.data.userId) || 
+                    (isAuthenticated() && sameClient(resource.data.userId));
       
-      // Lecture: l'utilisateur peut lire sa propre progression du même client, les admins peuvent tout lire
-      allow get: if (isAuthenticated() && resource.data.clientId == getUserClientId()) || isAdmin();
-      allow list: if isAdmin() || 
-                     (isAuthenticated() && request.query.limitToClient == true);
+      // ✅ P0 CRITIQUE: Liste - Seulement la progression du même client
+      allow list: if isAuthenticated() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: l'utilisateur peut créer/modifier sa propre progression avec son clientId
-      // ✅ CORRECTION SECTION 1 : Validation du clientId pour isolation
+      // ✅ P0 CRITIQUE: Écriture - Validation stricte du clientId
       allow create, update: if isAuthenticated() && 
                                request.resource.data.userId == request.auth.uid &&
-                               request.resource.data.clientId == getUserClientId();
+                               request.resource.data.clientId == getCurrentUserClientId();
       
-      // Suppression: seulement les admins
-      allow delete: if isAdmin();
+      // ✅ P0 CRITIQUE: Suppression - Seulement les admins du même client
+      allow delete: if isAdmin() && sameClient(resource.data.userId);
     }
     
     // Collection: resources
     match /resources/{resourceId} {
-      // Lecture: tous les utilisateurs authentifiés peuvent lire les ressources
-      allow get: if isAuthenticated();
-      allow list: if isAuthenticated();
+      // ✅ P0 CRITIQUE: Lecture - Seulement les utilisateurs du même client
+      allow get: if isAuthenticated() && 
+                    resource.data.clientId == getCurrentUserClientId();
+      allow list: if isAuthenticated() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: seulement les admins
-      allow create, update, delete: if isAdmin();
+      // ✅ P0 CRITIQUE: Écriture - Seulement les admins du même client
+      allow create, update, delete: if isAdmin() && 
+                                        request.resource.data.clientId == getCurrentUserClientId();
     }
     
     // Collection: importLogs (logs d'import JSON)
     match /importLogs/{logId} {
-      // Lecture: seulement les admins
-      allow get: if isAdmin();
-      allow list: if isAdmin();
+      // ✅ P0 CRITIQUE: Lecture - Seulement les admins du même client
+      allow get: if isAdmin() && 
+                    resource.data.clientId == getCurrentUserClientId();
+      allow list: if isAdmin() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: seulement les admins
-      allow create: if isAdmin();
+      // ✅ P0 CRITIQUE: Écriture - Seulement les admins du même client
+      allow create: if isAdmin() && 
+                      request.resource.data.clientId == getCurrentUserClientId();
       
       // Modification/Suppression: interdite (logs immuables)
       allow update, delete: if false;
@@ -159,12 +174,15 @@ service cloud.firestore {
     
     // Collection: auditLogs (logs d'actions admin)
     match /auditLogs/{logId} {
-      // Lecture: seulement les admins
-      allow get: if isAdmin();
-      allow list: if isAdmin();
+      // ✅ P0 CRITIQUE: Lecture - Seulement les admins du même client
+      allow get: if isAdmin() && 
+                    resource.data.clientId == getCurrentUserClientId();
+      allow list: if isAdmin() && 
+                     request.query.where('clientId', '==', getCurrentUserClientId());
       
-      // Écriture: seulement les admins
-      allow create: if isAdmin();
+      // ✅ P0 CRITIQUE: Écriture - Seulement les admins du même client
+      allow create: if isAdmin() && 
+                      request.resource.data.clientId == getCurrentUserClientId();
       
       // Modification/Suppression: interdite (logs immuables)
       allow update, delete: if false;

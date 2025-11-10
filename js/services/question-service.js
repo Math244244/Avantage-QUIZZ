@@ -21,6 +21,7 @@ import {
     Timestamp
 } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 import { safeFirestoreRead, safeFirestoreWrite } from '../rate-limiter.js';
+import { getCurrentClientId } from '../client-manager.js';
 import { buildCacheKey, getCachedValue, setCachedValue, invalidateCache } from './cache-service.js';
 import { createAuditLog, createImportLog } from './audit-service.js';
 
@@ -39,8 +40,10 @@ export async function getQuestions(filters = {}) {
     }
 
     try {
+        // ✅ P0 CRITIQUE: Filtrer par clientId pour isolation multi-tenant
+        const clientId = await getCurrentClientId();
         let q = collection(db, COLLECTIONS.questions);
-        const constraints = [];
+        const constraints = [where('clientId', '==', clientId)];
         
         if (filters.module) {
             constraints.push(where('module', '==', filters.module));
@@ -54,9 +57,7 @@ export async function getQuestions(filters = {}) {
         
         constraints.push(orderBy('createdAt', 'desc'));
         
-        if (constraints.length > 0) {
-            q = query(q, ...constraints);
-        }
+        q = query(q, ...constraints);
         
         const querySnapshot = await safeFirestoreRead(() => getDocs(q));
         const questions = [];
@@ -83,8 +84,10 @@ export async function getQuestions(filters = {}) {
  */
 export async function getQuestionsPaginated(filters = {}, pageSize = 20, lastDoc = null) {
     try {
+        // ✅ P0 CRITIQUE: Filtrer par clientId pour isolation multi-tenant
+        const clientId = await getCurrentClientId();
         let q = collection(db, COLLECTIONS.questions);
-        const constraints = [];
+        const constraints = [where('clientId', '==', clientId)];
         
         if (filters.module) {
             constraints.push(where('module', '==', filters.module));
@@ -99,9 +102,7 @@ export async function getQuestionsPaginated(filters = {}, pageSize = 20, lastDoc
         constraints.push(orderBy('createdAt', 'desc'));
         constraints.push(limit(pageSize + 1)); // +1 pour détecter s'il y a plus de résultats
         
-        if (constraints.length > 0) {
-            q = query(q, ...constraints);
-        }
+        q = query(q, ...constraints);
         
         // Si on a un document de départ, commencer après
         if (lastDoc) {
@@ -164,6 +165,9 @@ export async function createQuestion(questionData) {
             throw new Error('Mois invalide');
         }
         
+        // ✅ P0 CRITIQUE: Ajouter clientId pour isolation multi-tenant
+        const clientId = await getCurrentClientId();
+        
         const newQuestion = {
             question: questionData.question.trim(),
             options: questionData.options.map(opt => opt.trim()),
@@ -172,6 +176,7 @@ export async function createQuestion(questionData) {
             module: questionData.module,
             month: parseInt(questionData.month),
             year: questionData.year || new Date().getFullYear(),
+            clientId: clientId, // ✅ P0 CRITIQUE: Isolation multi-tenant
             createdAt: Timestamp.now(),
             createdBy: user.uid,
             updatedAt: Timestamp.now()

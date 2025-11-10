@@ -379,21 +379,22 @@ async function initializeDashboard() {
         let completedCount = 0;
 
         // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
+        // ✅ P0 CRITIQUE: Utiliser la fonction de statut testable
+        const { getMonthlyQuizStatus } = await import('./utils/quiz-scoring.js');
+        
         const currentMonthsData = stateManager.get('monthsData');
         currentMonthsData.forEach((month, index) => {
         let cardHtml = '';
-        if (index < currentMonthIndex) {
-            // Mois passés : vérifier s'ils sont complétés ou non
-            if (month.score !== null) {
-                cardHtml = createCompletedCard(month.name, month.score);
-                completedCount++;
-            } else {
-                // Mois passé mais non complété - afficher comme "à compléter"
-                cardHtml = createIncompleteCard(month.name);
-            }
-        } else if (index === currentMonthIndex) {
+        const status = getMonthlyQuizStatus(index, currentMonthIndex, month.score);
+        
+        if (status === 'completed') {
+            cardHtml = createCompletedCard(month.name, month.score);
+            completedCount++;
+        } else if (status === 'active') {
             cardHtml = createActiveCard(month.name);
-        } else {
+        } else if (status === 'incomplete') {
+            cardHtml = createIncompleteCard(month.name);
+        } else if (status === 'locked') {
             cardHtml = createLockedCard(month.name);
         }
         elements.modulesGrid.innerHTML += cardHtml;
