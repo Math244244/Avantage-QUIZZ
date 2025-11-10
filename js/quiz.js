@@ -710,7 +710,7 @@ function nextQuestion() {
 }
 
 // Afficher les résultats finaux
-function showResults() {
+async function showResults() {
     // ✅ CORRECTION SECTION 5 : Utiliser StateManager
     stopTimer();
     try { window.__QUIZ_ACTIVE = false; } catch (e) {}

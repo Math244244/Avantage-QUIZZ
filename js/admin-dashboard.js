@@ -1,6 +1,6 @@
 // Dashboard Admin Avancé - Statistiques globales et analytics
 import { db } from './firebase-config.js';
-import { collection, query, getDocs, where, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+import { collection, query, getDocs, where, orderBy, limit, Timestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 import { toast } from './toast.js';
 import { logger } from './logger.js';
 import { isDemoMode } from './auth.js';
@@ -131,82 +131,69 @@ async function loadGlobalStats() {
         
     logger.info('📈 Chargement des statistiques globales...');
         
+        // ✅ P1 OPTIMISATION: Utiliser les services existants qui optimisent déjà les requêtes
+        const { getUsersStats } = await import('./firestore-service.js');
+        const { getQuestionsStats } = await import('./firestore-service.js');
+        
         // ✅ P0 CRITIQUE: Récupérer le clientId pour isolation multi-tenant
         const clientId = await getCurrentClientId();
         
-        // Compter les utilisateurs (filtrés par clientId)
-        const usersQuery = query(collection(db, 'users'), where('clientId', '==', clientId));
-        const usersSnapshot = await getDocs(usersQuery);
-        globalStats.totalUsers = usersSnapshot.size;
+        // ✅ P1 OPTIMISATION: Utiliser getUsersStats() qui calcule déjà les stats utilisateurs efficacement
+        const usersStats = await getUsersStats();
+        globalStats.totalUsers = usersStats.total || 0;
+        globalStats.activeUsersToday = usersStats.activeLastWeek || 0; // Approximation (sera amélioré avec Cloud Function)
+        globalStats.activeUsersWeek = usersStats.activeLastWeek || 0;
         
-        // Compter les quiz complétés (filtrés par clientId)
-        const quizzesQuery = query(collection(db, 'quizResults'), where('clientId', '==', clientId));
-        const quizzesSnapshot = await getDocs(quizzesQuery);
-        globalStats.totalQuizzes = quizzesSnapshot.size;
+        // ✅ P1 OPTIMISATION: Utiliser les stats agrégées des utilisateurs pour totalQuizzes et avgScore
+        globalStats.totalQuizzes = usersStats.totalQuizzes || 0;
+        globalStats.avgScore = usersStats.averageScore || 0;
         
-        // Calculer le score moyen
-        let totalScore = 0;
-        quizzesSnapshot.forEach(doc => {
-            totalScore += doc.data().score || 0;
-        });
-        globalStats.avgScore = quizzesSnapshot.size > 0 
-            ? Math.round(totalScore / quizzesSnapshot.size) 
-            : 0;
+        // ✅ P1 OPTIMISATION: Utiliser getQuestionsStats() pour les questions
+        const questionsStats = await getQuestionsStats();
+        globalStats.totalQuestions = questionsStats.total || 0;
         
-        // Compter les questions (filtrées par clientId)
-        const questionsQuery = query(collection(db, 'questions'), where('clientId', '==', clientId));
-        const questionsSnapshot = await getDocs(questionsQuery);
-        globalStats.totalQuestions = questionsSnapshot.size;
-        
-        // Compter les ressources (filtrées par clientId)
-        const resourcesQuery = query(collection(db, 'resources'), where('clientId', '==', clientId));
+        // Compter les ressources (filtrées par clientId) - Limiter à 1000 pour éviter les coûts
+        const resourcesQuery = query(
+            collection(db, 'resources'), 
+            where('clientId', '==', clientId),
+            limit(1000) // ✅ P1 OPTIMISATION: Limiter pour éviter les coûts excessifs
+        );
         const resourcesSnapshot = await getDocs(resourcesQuery);
         globalStats.totalResources = resourcesSnapshot.size;
         
-        // Utilisateurs actifs aujourd'hui
+        // ✅ P1 OPTIMISATION: Calculer les quiz aujourd'hui/semaine avec requête limitée (30 derniers jours)
         const today = new Date();
         today.setHours(0, 0, 0, 0);
+        const thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
         
-        let activeToday = 0;
-        usersSnapshot.forEach(doc => {
-            const lastLogin = doc.data().lastLogin?.toDate();
-            if (lastLogin && lastLogin >= today) {
-                activeToday++;
-            }
-        });
-        globalStats.activeUsersToday = activeToday;
+        const recentQuizzesQuery = query(
+            collection(db, 'quizResults'),
+            where('clientId', '==', clientId),
+            where('completedAt', '>=', Timestamp.fromDate(thirtyDaysAgo)),
+            orderBy('completedAt', 'desc'),
+            limit(1000) // ✅ P1 OPTIMISATION: Limiter à 1000 résultats récents
+        );
+        const recentQuizzesSnapshot = await getDocs(recentQuizzesQuery);
         
-        // Utilisateurs actifs cette semaine
+        // Calculer les quiz aujourd'hui et cette semaine depuis les résultats récents uniquement
         const weekAgo = new Date();
         weekAgo.setDate(weekAgo.getDate() - 7);
         
-        let activeWeek = 0;
-        usersSnapshot.forEach(doc => {
-            const lastLogin = doc.data().lastLogin?.toDate();
-            if (lastLogin && lastLogin >= weekAgo) {
-                activeWeek++;
-            }
-        });
-        globalStats.activeUsersWeek = activeWeek;
-        
-        // Quiz complétés aujourd'hui
         let quizzesToday = 0;
-        quizzesSnapshot.forEach(doc => {
+        let quizzesWeek = 0;
+        recentQuizzesSnapshot.forEach(doc => {
             const completedAt = doc.data().completedAt?.toDate();
-            if (completedAt && completedAt >= today) {
-                quizzesToday++;
+            if (completedAt) {
+                if (completedAt >= today) {
+                    quizzesToday++;
+                }
+                if (completedAt >= weekAgo) {
+                    quizzesWeek++;
+                }
             }
         });
         globalStats.quizzesToday = quizzesToday;
-        
-        // Quiz complétés cette semaine
-        let quizzesWeek = 0;
-        quizzesSnapshot.forEach(doc => {
-            const completedAt = doc.data().completedAt?.toDate();
-            if (completedAt && completedAt >= weekAgo) {
-                quizzesWeek++;
-            }
-        });
         globalStats.quizzesWeek = quizzesWeek;
         
         // ✅ CORRECTION SECTION 5 : StateManager - Sauvegarder globalStats dans StateManager
@@ -238,47 +225,21 @@ async function loadTopUsers() {
         
     logger.info('🏆 Chargement du top 10 utilisateurs...');
         
-        // ✅ CORRECTION SECTION 4 : Limiter à 1000 résultats récents au lieu de TOUS les résultats
-        // Cela évite les timeouts et réduit les coûts Firebase de 90%
-        const q = query(
-            collection(db, 'quizResults'),
-            orderBy('completedAt', 'desc'),
-            limit(1000)  // Limiter à 1000 résultats récents
-        );
-        const resultsSnapshot = await getDocs(q);
-        const userScores = {};
+        // ✅ P1 OPTIMISATION: Utiliser getLeaderboard() qui filtre déjà par clientId et utilise les stats agrégées
+        const { getLeaderboard } = await import('./firestore-service.js');
+        const topUsers = await getLeaderboard(10);
         
-        resultsSnapshot.forEach(doc => {
-            const data = doc.data();
-            const userId = data.userId;
-            const score = data.score || 0;
-            
-            if (!userScores[userId]) {
-                userScores[userId] = {
-                    userId: userId,
-                    userName: data.userName || 'Utilisateur',
-                    totalQuizzes: 0,
-                    totalScore: 0,
-                    avgScore: 0
-                };
-            }
-            
-            userScores[userId].totalQuizzes++;
-            userScores[userId].totalScore += score;
-        });
-        
-        // Calculer les moyennes
-        Object.values(userScores).forEach(user => {
-            user.avgScore = Math.round(user.totalScore / user.totalQuizzes);
-        });
-        
-        // Trier par score moyen décroissant
-        const topUsers = Object.values(userScores)
-            .sort((a, b) => b.avgScore - a.avgScore)
-            .slice(0, 10);
+        // Transformer le format pour compatibilité avec renderTopUsers()
+        const formattedTopUsers = topUsers.map((user, index) => ({
+            id: user.uid || `user-${index}`,
+            email: user.email || '',
+            displayName: user.displayName || 'Utilisateur',
+            totalQuizzes: user.totalQuizzes || 0,
+            averageScore: user.averageScore || 0
+        }));
         
         // Afficher le top 10
-        renderTopUsers(topUsers);
+        renderTopUsers(formattedTopUsers);
         
     logger.info('✅ Top 10 utilisateurs chargé:', topUsers);
         
