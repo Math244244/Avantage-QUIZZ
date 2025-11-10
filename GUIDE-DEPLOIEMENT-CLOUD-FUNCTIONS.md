@@ -89,7 +89,7 @@ npm install -g firebase-tools
 
 ### Node.js
 
-Les Cloud Functions nécessitent **Node.js 18** (configuré dans `functions/package.json`).
+Les Cloud Functions nécessitent **Node.js 20** (configuré dans `functions/package.json`).
 
 ---
 
