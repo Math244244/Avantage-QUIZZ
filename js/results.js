@@ -14,6 +14,7 @@ import {
     showSkeleton,
     hideSkeleton
 } from './skeleton.js';
+import { showEmptyState } from './empty-states.js';
 
 // État
 let allResults = [];
@@ -181,15 +182,64 @@ async function loadResults(userId) {
     }
 }
 
+// Restaurer la structure HTML si elle a été remplacée par un état vide
+function restoreResultsContainerStructure() {
+    const container = document.getElementById('results-container');
+    if (!container) return;
+    
+    // Vérifier si la structure existe déjà
+    if (document.getElementById('results-list')) return;
+    
+    // Restaurer la structure HTML
+    container.innerHTML = `
+        <div id="results-list" class="history-list-enhanced">
+            <!-- Sera rempli dynamiquement avec classes result-card-enhanced -->
+        </div>
+        
+        <!-- Pagination ENHANCED -->
+        <div id="pagination" class="pagination-enhanced">
+            <button id="prev-page-btn" class="px-4 py-2 border border-gray-300 rounded-lg text-slate-700 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                Précédent
+            </button>
+            <span id="page-info" class="text-sm text-slate-600">Page 1 sur 1</span>
+            <button id="next-page-btn" class="px-4 py-2 border border-gray-300 rounded-lg text-slate-700 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                Suivant
+            </button>
+        </div>
+    `;
+    
+    // Réattacher les event listeners de pagination (les anciens sont supprimés avec innerHTML)
+    const prevBtn = document.getElementById('prev-page-btn');
+    const nextBtn = document.getElementById('next-page-btn');
+    if (prevBtn && !prevBtn.dataset.eventsBound) {
+        prevBtn.addEventListener('click', () => changePage(-1));
+        prevBtn.dataset.eventsBound = 'true';
+    }
+    if (nextBtn && !nextBtn.dataset.eventsBound) {
+        nextBtn.addEventListener('click', () => changePage(1));
+        nextBtn.dataset.eventsBound = 'true';
+    }
+    
+    // Réattacher l'event listener pour results-list
+    const resultsList = document.getElementById('results-list');
+    if (resultsList && !resultsList.dataset.eventsBound) {
+        resultsList.addEventListener('click', handleResultsListClick);
+        resultsList.dataset.eventsBound = 'true';
+    }
+}
+
 // Mettre à jour l'interface complète
 function updateUI() {
     if (filteredResults.length === 0) {
-        document.getElementById('results-container')?.classList.add('hidden');
         showNoResults();
         return;
     }
 
     document.getElementById('no-results')?.classList.add('hidden');
+    
+    // Restaurer la structure HTML si nécessaire
+    restoreResultsContainerStructure();
+    
     updateGlobalStats();
     updateCharts();
     renderResults();
@@ -876,8 +926,20 @@ function openResultDetails(resultId) {
 // Afficher message si aucun résultat
 function showNoResults() {
     document.getElementById('results-loading')?.classList.add('hidden');
-    document.getElementById('no-results')?.classList.remove('hidden');
-    document.getElementById('results-container')?.classList.add('hidden');
+    document.getElementById('no-results')?.classList.add('hidden');
+    
+    // Utiliser le composant empty-states pour un rendu professionnel
+    const container = document.getElementById('results-container');
+    if (container) {
+        container.classList.remove('hidden');
+        showEmptyState('results-container', 'noResults', {
+            action: {
+                text: '🎯 Commencer un quiz',
+                show: true,
+                href: '/'
+            }
+        });
+    }
 }
 
 // Afficher erreur

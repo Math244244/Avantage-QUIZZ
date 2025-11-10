@@ -12,6 +12,7 @@ import {
     showSkeleton,
     hideSkeleton
 } from './skeleton.js';
+import { showEmptyState } from './empty-states.js';
 
 // État
 let allResources = [];
@@ -148,16 +149,31 @@ async function loadResources() {
     }
 }
 
+// Restaurer la structure HTML si elle a été remplacée par un état vide
+function restoreResourcesContainerStructure() {
+    const container = document.getElementById('resources-container');
+    if (!container) return;
+    
+    // Vérifier si le conteneur a déjà la bonne structure (grid)
+    if (container.classList.contains('grid')) return;
+    
+    // Restaurer la structure HTML avec les classes nécessaires
+    container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+}
+
 // Afficher les ressources
 function renderResources() {
     const container = document.getElementById('resources-container');
-    container.classList.remove('hidden');
     
     if (filteredResources.length === 0) {
         showNoResources();
         return;
     }
     
+    // Restaurer la structure HTML si nécessaire
+    restoreResourcesContainerStructure();
+    
+    container.classList.remove('hidden');
     document.getElementById('no-resources')?.classList.add('hidden');
     
     // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper toutes les données utilisateur
@@ -356,8 +372,15 @@ window.deleteResource = async function(resourceId) {
 
 // Afficher message si aucune ressource
 function showNoResources() {
-    document.getElementById('resources-container')?.classList.add('hidden');
-    document.getElementById('no-resources')?.classList.remove('hidden');
+    document.getElementById('resources-loading')?.classList.add('hidden');
+    document.getElementById('no-resources')?.classList.add('hidden');
+    
+    // Utiliser le composant empty-states pour un rendu professionnel
+    const container = document.getElementById('resources-container');
+    if (container) {
+        container.classList.remove('hidden');
+        showEmptyState('resources-container', 'noResources');
+    }
 }
 
 // Déconnexion
