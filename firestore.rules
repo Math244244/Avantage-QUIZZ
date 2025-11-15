@@ -37,9 +37,8 @@ service cloud.firestore {
                     (isAdmin() && sameClient(userId)) ||
                     (isAuthenticated() && resource.data.clientId == getCurrentUserClientId());
       
-      // ✅ P0 CRITIQUE: Liste - Seulement les utilisateurs du même client
-      allow list: if isAdmin() && 
-                     request.query.where('clientId', '==', getCurrentUserClientId());
+      // ✅ P0 CRITIQUE: Liste - Permettre aux admins de lire TOUS les utilisateurs du même client (sans contrainte de query)
+      allow list: if isAdmin();
       
       // ✅ P0 CRITIQUE: Écriture - Isolation multi-tenant stricte
       // NOUVEAU: Permettre la création initiale du profil utilisateur

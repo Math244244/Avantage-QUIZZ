@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
+    <!-- CSS -->
     
     <style>
         body {
@@ -38,12 +38,12 @@
             animation: fadeIn 0.3s ease-out;
         }
     </style>
-  <script type="module" crossorigin src="/assets/admin-Bw3Q7s3v.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-CO1fend8.js">
-  <link rel="modulepreload" crossorigin href="/assets/quiz-MXwz6Ea-.js">
-  <link rel="modulepreload" crossorigin href="/assets/services-B8oy3dvD.js">
-  <link rel="modulepreload" crossorigin href="/assets/admin-MwW8t9Ay.js">
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-Da1vdbyN.css">
+  <script type="module" crossorigin src="/assets/admin-CBlk-u-D.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-DcCry55Y.js">
+  <link rel="modulepreload" crossorigin href="/assets/quiz-wkAEpZ0d.js">
+  <link rel="modulepreload" crossorigin href="/assets/services-Wk7Cm1E-.js">
+  <link rel="modulepreload" crossorigin href="/assets/admin-BeieRlaV.js">
+  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-B_2YNU4E.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex">
@@ -57,21 +57,19 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
-            <picture>
-                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
-                <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
-                     alt="Avantage Plus Logo" 
-                     class="sidebar-logo"
-                     width="150"
-                     height="150"
-                     decoding="async"
-                     onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            </picture>
-            <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+            <!-- Logo de l'entreprise -->
+            <img src="/assets/logo-avantage-plus-white-on-red-CbsdVyyy.png" 
+                 alt="Avantage Plus Logo" 
+                 class="sidebar-logo"
+                 width="150"
+                 height="150"
+                 decoding="async"
+                 onerror="this.onerror=null; this.style.display='none'; const fallback = this.nextElementSibling; if(fallback) fallback.style.display='flex';">
+            <!-- Fallback si logo non trouvé -->
+            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900; width: 150px; height: 150px;">
                 AP
             </div>
-            <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
+            <p class="sidebar-brand-text">QUIZPRO</p>
         </div>
         <!-- Navigation Items -->
         <div class="sidebar-nav">
@@ -126,9 +124,14 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main role="main" id="main-content" class="flex-1 ml-64 p-8">
+    <main role="main" id="main-content" style="flex: 1; margin: 0; padding: 0;">
 
-    <div class="min-h-screen bg-white">
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="/assets/Bandeau%20AVEX-D3dr9lkU.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
+
+    <div class="min-h-screen bg-white" style="padding: 40px;">
         <!-- Header - GRADIENT AVANTAGE PLUS -->
         <header class="shadow-ap-lg" style="background: var(--ap-gradient-primary); border-bottom: 3px solid var(--ap-gold);">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -574,7 +577,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    <!-- Scripts Firebase & App -->
+    <!-- Scripts Firebase & App -->
 
 </main>
 </body>

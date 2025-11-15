@@ -61,8 +61,8 @@ export function getMonthlyQuizStatus(monthIndex, currentMonthIndex, monthScore =
         // Mois passé
         return monthScore !== null ? 'completed' : 'incomplete';
     } else if (monthIndex === currentMonthIndex) {
-        // Mois actuel
-        return 'active';
+        // ✅ FIX: Mois actuel - vérifier si complété
+        return monthScore !== null ? 'completed' : 'active';
     } else {
         // Mois futur
         return 'locked';

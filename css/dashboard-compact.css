@@ -1,0 +1,362 @@
+/**
+ * 📦 DASHBOARD COMPACT MODE
+ * ==========================
+ * Styles ultra-compacts pour afficher 12 cartes + Hero Card sur une seule page
+ * Version: MAXIMUM COMPRESSION
+ */
+
+/* ========================================
+   LAYOUT COMPACT
+   ======================================== */
+
+/* ✅ BANNIÈRE: Compacte mais full-width */
+.brand-banner {
+  margin-left: 0 !important;
+  width: 100% !important;
+  /* ✅ PAS de overflow: hidden pour ne pas couper */
+}
+
+.banner-image {
+  width: 100% !important;
+  height: auto !important; /* ✅ CRITIQUE: Auto pour garder proportions */
+  max-height: 100px !important; /* ✅ Limite maximale pour mode compact */
+  object-fit: contain !important; /* ✅ CONTAIN pour voir toute l'image */
+  object-position: center center !important; /* ✅ Centré */
+}
+
+.dashboard-header {
+  padding: 12px 40px !important; /* ✅ Padding restauré */
+}
+
+.dashboard-title {
+  font-size: 1.25rem !important;
+  margin-bottom: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.dashboard-subtitle {
+  font-size: 0.75rem !important;
+  margin-top: 2px !important;
+}
+
+.dashboard-content {
+  padding: 12px 40px !important;
+}
+
+/* Réduire le streak badge */
+#streak-badge {
+  padding: 6px 10px !important;
+}
+
+#streak-badge svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+#streak-count {
+  font-size: 0.875rem !important;
+}
+
+#streak-label {
+  font-size: 0.65rem !important;
+}
+
+/* ========================================
+   HERO CARD COMPACT
+   ======================================== */
+
+.quiz-hero-card {
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  margin-bottom: 8px !important;
+  gap: 12px !important;
+  min-height: auto !important;
+  max-height: 85px !important;
+}
+
+/* Supprimer la ligne diagonale pour un look épuré */
+.quiz-hero-card::before,
+.quiz-hero-card::after {
+  display: none !important;
+}
+
+.quiz-hero-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px !important;
+}
+
+.quiz-hero-icon svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.quiz-hero-title {
+  font-size: 1.1rem !important;
+  margin: 0 0 2px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.quiz-hero-subtitle {
+  font-size: 0.7rem !important;
+  margin: 0 0 6px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.quiz-hero-btn {
+  padding: 5px 12px !important;
+  border-radius: 6px !important;
+  font-size: 0.75rem !important;
+}
+
+.quiz-hero-btn svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.quiz-hero-progress {
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  min-width: 160px !important;
+  max-width: 160px !important;
+}
+
+.quiz-hero-progress-header {
+  margin-bottom: 2px !important;
+}
+
+.quiz-hero-progress-label {
+  font-size: 0.55rem !important;
+}
+
+.quiz-hero-progress-value {
+  font-size: 1.1rem !important;
+}
+
+.quiz-hero-progress-text {
+  font-size: 0.65rem !important;
+  margin: 2px 0 6px 0 !important;
+}
+
+.quiz-hero-progress-bar-container {
+  height: 5px !important;
+}
+
+.quiz-hero-badge {
+  padding: 3px 8px !important;
+  font-size: 0.55rem !important;
+  top: 8px !important;
+  right: 8px !important;
+}
+
+/* ========================================
+   SECTION HEADER COMPACT
+   ======================================== */
+
+.modules-section-header {
+  gap: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+.modules-section-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.modules-section-title {
+  font-size: 0.9rem !important;
+}
+
+/* ========================================
+   GRILLE COMPACT
+   ======================================== */
+
+.modules-grid {
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+/* ========================================
+   CARTES MENSUELLES COMPACT
+   ======================================== */
+
+.module-card,
+.module-card--completed,
+.module-card--active,
+.module-card--incomplete,
+.module-card--locked {
+  padding: 10px !important;
+  border-radius: 8px !important;
+  min-height: 105px !important;
+  max-height: 105px !important;
+}
+
+.module-card-icon {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 7px !important;
+  font-size: 16px !important;
+  margin-bottom: 6px !important;
+}
+
+.module-card-badge {
+  padding: 2px 7px !important;
+  border-radius: 10px !important;
+  font-size: 8px !important;
+  margin-bottom: 6px !important;
+  gap: 2px !important;
+}
+
+.module-card-title {
+  font-size: 0.9rem !important;
+  margin-bottom: 2px !important;
+  line-height: 1.1 !important;
+}
+
+.module-card-subtitle {
+  font-size: 0.65rem !important;
+  margin-bottom: 6px !important;
+  line-height: 1.1 !important;
+}
+
+.module-card-progress-label {
+  font-size: 8px !important;
+  margin-bottom: 3px !important;
+}
+
+.module-card-progress-bar {
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+.module-card-progress-fill {
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+/* ========================================
+   OPTIMISATION VERTICALE
+   ======================================== */
+
+/* Réduire l'espace du header sombre */
+.dashboard-header .flex {
+  gap: 4px !important;
+}
+
+/* Forcer la hauteur maximale du container */
+.dashboard-container {
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+#dashboard-view {
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+/* Assurer que le main content ne déborde pas */
+#main-content {
+  overflow-y: auto !important;
+  max-height: 100vh !important;
+}
+
+/* Réduire tous les espacements pour les cartes mensuelles */
+.module-card--completed::before,
+.module-card--active::before {
+  height: 3px !important;
+}
+
+/* ========================================
+   GRILLE À 4 COLONNES
+   ======================================== */
+
+.modules-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.quiz-hero-card {
+  grid-column: 1 / -1 !important; /* S'étend sur toutes les 4 colonnes */
+}
+
+/* ========================================
+   COULEURS SÉMANTIQUES (ROUGE / BLEU / VERT)
+   ======================================== */
+
+/* BLEU VIF = État Neutre/Informatif (En Attente) - "Ce que je peux faire" */
+.module-card--incomplete .module-card-icon {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3B82F6 !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.module-card--incomplete .module-card-icon svg {
+  stroke: #3B82F6 !important;
+}
+
+/* VERT FLASH = État Complété (Succès) - "Ce que j'ai réussi" */
+.module-card--completed .module-card-badge {
+  background: #D1FAE5 !important;
+  color: #065F46 !important;
+  border: 1px solid #10B981 !important;
+  font-weight: 700 !important;
+}
+
+.module-card--completed .module-card-icon {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #10B981 !important;
+  border: 2px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.module-card--completed .module-card-icon svg {
+  stroke: #10B981 !important;
+  stroke-width: 3 !important;
+}
+
+.module-card--completed .module-card-progress-fill {
+  background: #10B981 !important;
+}
+
+/* GRIS = État Verrouillé (Désactivé) */
+.module-card--locked .module-card-icon {
+  background: rgba(156, 163, 175, 0.1) !important;
+  color: #9CA3AF !important;
+  border-color: rgba(156, 163, 175, 0.3) !important;
+}
+
+.module-card--locked .module-card-icon svg {
+  stroke: #9CA3AF !important;
+}
+
+/* ROUGE = État Actif (En Cours) - "Ce que je fais maintenant" */
+.module-card--active .module-card-icon svg {
+  stroke: #FFFFFF !important;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (min-width: 1024px) {
+  .modules-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modules-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modules-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+

@@ -1,0 +1,250 @@
+/**
+ * 🎯 MODULE SELECTION - GRILLE 2X2 ÉLÉGANTE
+ * =========================================
+ * Design professionnel et chic pour la sélection des modules de quiz
+ * Palette sémantique : Rouge (Auto), Bleu Gris (Loisir), Anthracite (VR), Vert (Tracteur)
+ */
+
+/* ========================================
+   CONTENEUR PRINCIPAL ET GRILLE 2X2
+   ======================================== */
+
+.module-selection-grid-enhanced {
+  display: grid !important;
+  /* 2 colonnes de largeur égale */
+  grid-template-columns: repeat(2, 1fr) !important;
+  /* Espacement généreux pour la "respiration" */
+  gap: 32px !important;
+  /* Padding autour de la grille */
+  padding: 40px !important;
+  /* Limite la largeur maximale pour ne pas étirer sur grands écrans */
+  max-width: 1000px !important;
+  /* Centre la grille horizontalement */
+  margin: 0 auto !important;
+  /* Transition fluide */
+  transition: all 0.3s ease !important;
+}
+
+/* ========================================
+   CARTES DE MODULES - BASE COMMUNE
+   ======================================== */
+
+.module-card-enhanced {
+  /* Disposition interne */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 32px !important;
+  /* Forme et bordure */
+  border-radius: 16px !important;
+  border: 2px solid transparent !important;
+  /* Hauteur minimale pour cohérence */
+  min-height: 280px !important;
+  max-height: none !important;
+  /* Ombre subtile */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  /* Transitions fluides */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  /* Curseur */
+  cursor: pointer !important;
+  /* Position relative pour les effets */
+  position: relative !important;
+  overflow: hidden !important;
+  /* Pas de width fixe */
+  width: auto !important;
+}
+
+.module-card-enhanced:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Supprimer les effets de lumière trop voyants */
+.module-card-enhanced > div[class*="absolute"] {
+  display: none !important;
+}
+
+/* ========================================
+   CONTENU DES CARTES
+   ======================================== */
+
+.module-card-enhanced .flex.flex-col.items-center {
+  /* Alignement à gauche au lieu de centré */
+  align-items: flex-start !important;
+  width: 100%;
+}
+
+/* Icône du module */
+.module-card-enhanced .bg-white\/20 {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Titre du module */
+.module-card-enhanced h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Sous-titre (description) */
+.module-card-enhanced p {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Container du bouton */
+.module-card-enhanced .mt-auto {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Bouton "Commencer" */
+.module-card-enhanced .mt-auto span {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.module-card-enhanced:hover .mt-auto span {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  gap: 16px;
+}
+
+/* Remplacer -> par icône chevron */
+.module-card-enhanced .mt-auto span svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+/* ========================================
+   PALETTE SÉMANTIQUE - AUTO (ROUGE VIF)
+   ======================================== */
+
+.module-card-enhanced[data-module="auto"] {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 50%, #991B1B 100%) !important;
+  border-color: #991B1B;
+}
+
+.module-card-enhanced[data-module="auto"]:hover {
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.4);
+  border-color: #DC2626;
+}
+
+/* ========================================
+   PALETTE SÉMANTIQUE - LOISIR (BLEU GRIS LUMINEUX)
+   ======================================== */
+
+.module-card-enhanced[data-module="loisir"] {
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #2563EB 100%) !important;
+  border-color: #2563EB;
+}
+
+.module-card-enhanced[data-module="loisir"]:hover {
+  box-shadow: 0 12px 32px rgba(96, 165, 250, 0.4);
+  border-color: #60A5FA;
+}
+
+/* ========================================
+   PALETTE SÉMANTIQUE - VR (GRIS ANTHRACITE CHIC)
+   ======================================== */
+
+.module-card-enhanced[data-module="vr"] {
+  background: linear-gradient(135deg, #4B5563 0%, #374151 50%, #1F2937 100%) !important;
+  border-color: #1F2937;
+}
+
+.module-card-enhanced[data-module="vr"]:hover {
+  box-shadow: 0 12px 32px rgba(75, 85, 99, 0.5);
+  border-color: #4B5563;
+}
+
+/* ========================================
+   PALETTE SÉMANTIQUE - TRACTEUR (VERT DYNAMIQUE)
+   ======================================== */
+
+.module-card-enhanced[data-module="tracteur"] {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 50%, #15803D 100%) !important;
+  border-color: #15803D;
+}
+
+.module-card-enhanced[data-module="tracteur"]:hover {
+  box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4);
+  border-color: #22C55E;
+}
+
+/* ========================================
+   HEADER DE LA PAGE
+   ======================================== */
+
+#module-selection-title {
+  color: #C41E3A !important;
+  font-size: 3rem !important;
+  margin-bottom: 12px !important;
+}
+
+#module-selection-view h2:nth-of-type(2) {
+  color: #1F2937 !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+#module-selection-view p {
+  color: #4B5563 !important;
+  font-size: 1.125rem !important;
+}
+
+/* Bouton retour */
+#module-selection-view button[type="button"]:first-of-type {
+  color: #6B7280 !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+#module-selection-view button[type="button"]:first-of-type:hover {
+  color: #C41E3A !important;
+  background: rgba(196, 30, 58, 0.05) !important;
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .module-selection-grid-enhanced {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .module-card-enhanced {
+    min-height: 240px;
+    padding: 24px;
+  }
+  
+  #module-selection-title {
+    font-size: 2rem !important;
+  }
+}
+

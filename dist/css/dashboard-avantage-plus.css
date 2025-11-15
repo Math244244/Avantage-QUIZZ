@@ -13,36 +13,65 @@
 
 .dashboard-container {
   min-height: 100vh;
-  padding: 40px;
-  /* ✅ FORCER LE BACKGROUND BLANC - Pas de transition */
-  background: #FFFFFF !important;
-  background-color: #FFFFFF !important;
+  padding: 0;
+  margin: 0;
+  /* ✅ FOND GRIS TRÈS CLAIR pour "respiration" visuelle */
+  background: #F9FAFB !important;
+  background-color: #F9FAFB !important;
   background-image: none !important;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  /* ✅ S'assurer qu'il n'y a pas de padding qui crée un espace */
+  padding-top: 0;
+}
+
+.dashboard-content {
+  padding: 24px 40px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 #dashboard-view {
-  /* ✅ FORCER LE BACKGROUND BLANC sur la vue dashboard */
-  background: #FFFFFF !important;
-  background-color: #FFFFFF !important;
+  /* ✅ FOND GRIS TRÈS CLAIR sur la vue dashboard */
+  background: #F9FAFB !important;
+  background-color: #F9FAFB !important;
   background-image: none !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .dashboard-header {
-  margin-bottom: 40px;
+  margin: 0;
+  margin-top: -5px; /* ✅ Remonte le header pour coller au bandeau */
+  padding: 20px 40px;
+  background: #1F2937;
+  border-bottom: 1px solid #374151;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  /* ✅ Le header s'étend sur toute la largeur du conteneur main (pas de position absolute) */
 }
 
 .dashboard-title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  color: #C41E3A;
-  margin-bottom: 8px;
+  color: #F9FAFB;
+  margin-bottom: 4px;
   letter-spacing: -0.025em;
 }
 
 .dashboard-subtitle {
   font-size: var(--ap-text-lg);
-  color: var(--ap-gray-600);
+  color: #F9FAFB;
   font-weight: var(--ap-font-medium);
+  opacity: 0.9;
 }
 
 /* ========================================
@@ -148,15 +177,15 @@
   top: 32px;
   right: 40px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.2);
+  background: #FEE2E2;
   padding: 20px;
   border-radius: 16px;
-  border: 2px solid rgba(192, 199, 208, 0.5);
-  backdrop-filter: blur(10px);
+  border: none;
+  backdrop-filter: none;
 }
 
 .quiz-hero-progress-label {
-  color: var(--ap-accent-pale);
+  color: #B91C1C;
   font-size: var(--ap-text-xs);
   font-weight: var(--ap-font-bold);
   text-transform: uppercase;
@@ -165,7 +194,7 @@
 }
 
 .quiz-hero-progress-value {
-  color: white;
+  color: #B91C1C;
   font-size: var(--ap-text-4xl);
   font-weight: var(--ap-font-black);
   line-height: 1;
@@ -178,8 +207,10 @@
 .modules-section-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .modules-section-icon {
@@ -189,16 +220,17 @@
 }
 
 .modules-section-title {
-  font-size: var(--ap-text-2xl);
+  font-size: var(--ap-text-xl);
   font-weight: var(--ap-font-bold);
   color: var(--ap-gray-900);
 }
 
 .modules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 32px;
-  margin-bottom: 40px;
+  /* ✅ Grille fixe à 4 colonnes (3 lignes × 4 = 12 cartes) */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 /* ========================================
@@ -313,135 +345,281 @@
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "COMPLÉTÉ" (VERT/ARGENT)
+   CARTE MODULE - ÉTAT "COMPLÉTÉ" (VERT VIF)
    ======================================== */
 
 .module-card--completed {
-  background: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 100%);
-  border-color: var(--ap-silver);
-  box-shadow: var(--ap-shadow-silver);
+  background: linear-gradient(135deg, #28A745 0%, #1E7E34 50%, #155724 100%);
+  border: 3px solid #1E7E34;
+  box-shadow: 0 4px 16px rgba(40, 167, 69, 0.25), 0 0 0 1px rgba(40, 167, 69, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card--completed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #C0C7D0 0%, #A0AEC0 100%);
+  transform: scaleX(1);
 }
 
 .module-card--completed .module-card-icon {
-  background: var(--ap-gradient-silver);
-  color: var(--ap-accent);
-  box-shadow: var(--ap-shadow-silver);
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .module-card--completed .module-card-badge {
-  background: rgba(40, 167, 69, 0.08);
-  color: #1E7E34;
-  border: 1.5px solid rgba(40, 167, 69, 0.2);
-  font-weight: 600;
+  background: rgba(192, 199, 208, 0.25);
+  color: #C0C7D0;
+  border: 2px solid rgba(192, 199, 208, 0.4);
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(192, 199, 208, 0.3);
+}
+
+.module-card--completed .module-card-title {
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.module-card--completed .module-card-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.module-card--completed .module-card-progress-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.module-card--completed .module-card-progress-bar {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .module-card--completed .module-card-progress-fill {
-  background: var(--ap-gradient-success);
+  background: linear-gradient(90deg, #C0C7D0 0%, #A0AEC0 100%);
+  box-shadow: 0 0 10px rgba(192, 199, 208, 0.5);
 }
 
 .module-card--completed:hover {
-  border-color: rgba(40, 167, 69, 0.3);
-  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.12), var(--ap-shadow-silver);
-  transform: translateY(-4px);
+  border-color: #C0C7D0;
+  box-shadow: 0 8px 30px rgba(40, 167, 69, 0.4), 0 0 0 2px rgba(192, 199, 208, 0.3);
+  transform: translateY(-8px) scale(1.02);
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "ACTIF" (ROUGE/ARGENT)
+   CARTE MODULE - ÉTAT "ACTIF" (ROUGE AVANTAGE PLUS)
    ======================================== */
 
 .module-card--active {
-  background: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 100%);
-  border-color: var(--ap-silver);
-  box-shadow: 0 0 0 3px rgba(192, 199, 208, 0.2), 0 4px 16px rgba(192, 199, 208, 0.25);
+  background: linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%);
+  border: 3px solid #8B1429;
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.3), 0 4px 20px rgba(196, 30, 58, 0.4);
   position: relative;
+  overflow: hidden;
+  animation: pulseActiveCard 2s ease-in-out infinite;
+}
+
+.module-card--active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #C0C7D0 0%, #A0AEC0 100%);
+  transform: scaleX(1);
+  animation: shimmer 2s infinite;
 }
 
 .module-card--active .module-card-icon {
-  background: var(--ap-gradient-silver-shine);
-  color: var(--ap-accent);
-  box-shadow: 0 4px 15px rgba(192, 199, 208, 0.4);
-  animation: iconPulseGold 2s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: iconPulseRed 2s ease-in-out infinite;
 }
 
 .module-card--active .module-card-badge {
-  background: var(--ap-gradient-silver);
-  color: var(--ap-accent);
-  border: 1.5px solid rgba(192, 199, 208, 0.5);
+  background: rgba(192, 199, 208, 0.25);
+  color: #C0C7D0;
+  border: 2px solid rgba(192, 199, 208, 0.5);
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(192, 199, 208, 0.3);
-  animation: pulseGoldSubtle 2s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(192, 199, 208, 0.4);
+  animation: pulseSilverBadge 2s ease-in-out infinite;
+}
+
+.module-card--active .module-card-title {
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.module-card--active .module-card-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.module-card--active .module-card-progress-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.module-card--active .module-card-progress-bar {
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .module-card--active .module-card-progress-fill {
-  background: linear-gradient(to right, #E63946 0%, #C41E3A 100%);
+  background: linear-gradient(90deg, #C0C7D0 0%, #A0AEC0 100%);
+  box-shadow: 0 0 12px rgba(192, 199, 208, 0.6);
 }
 
 .module-card--active:hover {
-  border-color: var(--ap-platinum);
-  box-shadow: 0 0 0 4px rgba(192, 199, 208, 0.25), 0 8px 30px rgba(192, 199, 208, 0.35);
-  transform: translateY(-4px) scale(1.01);
+  border-color: #C0C7D0;
+  box-shadow: 0 0 0 4px rgba(192, 199, 208, 0.4), 0 8px 40px rgba(196, 30, 58, 0.5);
+  transform: translateY(-8px) scale(1.03);
+}
+
+@keyframes pulseActiveCard {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.3), 0 4px 20px rgba(196, 30, 58, 0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.4), 0 6px 30px rgba(196, 30, 58, 0.5); }
+}
+
+@keyframes iconPulseRed {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1) rotate(5deg); }
+}
+
+@keyframes pulseSilverBadge {
+  0%, 100% { box-shadow: 0 4px 12px rgba(192, 199, 208, 0.4); }
+  50% { box-shadow: 0 6px 18px rgba(192, 199, 208, 0.6); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "VERROUILLÉ" (GRIS)
+   CARTE MODULE - ÉTAT "VERROUILLÉ" (BLANC AVEC OPACITÉ)
    ======================================== */
 
 .module-card--locked {
-  background: linear-gradient(135deg, #EDF0F5 0%, #E4E9F0 100%);
-  border-color: var(--ap-gray-300);
-  opacity: 0.7;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  opacity: 0.8;
   cursor: not-allowed;
+  position: relative;
+  filter: none;
+}
+
+.module-card--locked::before {
+  display: none;
 }
 
 .module-card--locked .module-card-icon {
-  background: var(--ap-gray-300);
-  color: var(--ap-gray-600);
+  background: rgba(156, 163, 175, 0.1);
+  color: #9CA3AF;
+  box-shadow: none;
+  border: 2px solid rgba(156, 163, 175, 0.2);
 }
 
 .module-card--locked .module-card-badge {
-  background: var(--ap-gray-400);
-  color: white;
+  background: #F3F4F6;
+  color: #6B7280;
+  border: none;
+  backdrop-filter: none;
+}
+
+.module-card--locked .module-card-title {
+  color: #9CA3AF;
+}
+
+.module-card--locked .module-card-subtitle {
+  color: #9CA3AF;
+}
+
+.module-card--locked .module-card-progress-label {
+  color: #9CA3AF;
+}
+
+.module-card--locked .module-card-progress-bar {
+  background: #E5E7EB;
 }
 
 .module-card--locked .module-card-progress-fill {
-  background: var(--ap-gray-400);
+  background: #9CA3AF;
 }
 
 .module-card--locked:hover {
   transform: none;
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  filter: none;
 }
 
 /* ========================================
-   CARTE MODULE - ÉTAT "INCOMPLET" (ARGENT/ANTHRACITE)
+   CARTE MODULE - ÉTAT "INCOMPLET" (BLANC MODERNE AVEC OMBRE)
    ======================================== */
 
 .module-card--incomplete {
-  background: linear-gradient(135deg, #F5F8FB 0%, #E8EDF4 100%);
-  border-color: rgba(113, 128, 150, 0.3);
-  box-shadow: 0 2px 8px rgba(113, 128, 150, 0.08);
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.module-card--incomplete::before {
+  display: none;
 }
 
 .module-card--incomplete .module-card-icon {
-  background: linear-gradient(135deg, var(--ap-accent-pale) 0%, var(--ap-accent-light) 100%);
-  color: var(--ap-accent);
+  background: rgba(59, 130, 246, 0.1);
+  color: #3B82F6;
+  box-shadow: none;
+  border: 2px solid rgba(59, 130, 246, 0.2);
 }
 
 .module-card--incomplete .module-card-badge {
-  background: rgba(113, 128, 150, 0.12);
-  color: var(--ap-accent);
-  border: 1px solid rgba(113, 128, 150, 0.3);
-  font-weight: 600;
+  background: #FEE2E2;
+  color: #B91C1C;
+  border: none;
+  font-weight: 700;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.module-card--incomplete .module-card-title {
+  color: #1F2937;
+  text-shadow: none;
+  font-weight: 700;
+}
+
+.module-card--incomplete .module-card-subtitle {
+  color: #6B7280;
+}
+
+.module-card--incomplete .module-card-progress-label {
+  color: #6B7280;
+}
+
+.module-card--incomplete .module-card-progress-bar {
+  background: #E5E7EB;
 }
 
 .module-card--incomplete .module-card-progress-fill {
-  background: linear-gradient(90deg, var(--ap-accent-light) 0%, var(--ap-accent-pale) 100%);
+  background: #3B82F6;
+  box-shadow: none;
 }
 
 .module-card--incomplete:hover {
-  border-color: var(--ap-accent-light);
-  box-shadow: 0 6px 20px rgba(113, 128, 150, 0.15);
-  transform: translateY(-4px);
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.01);
 }
 
 /* ========================================

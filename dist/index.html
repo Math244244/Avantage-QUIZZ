@@ -14,11 +14,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Preload Critical Resources -->
+    <!-- Preload Critical Resources -->
     <link rel="dns-prefetch" href="https://firestore.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googleapis.com">
     
-    <!-- CSS -->
+    <!-- CSS -->
     
     <!-- ✅ SCRIPT CRITIQUE: Forcer le background blanc IMMÉDIATEMENT (avant tout le reste) -->
     <script>
@@ -65,21 +65,18 @@
     </script>
     
     <style>
-        /* ✅ CSS CRITIQUE: Forcer le background blanc AVANT le chargement JavaScript - PRIORITÉ MAXIMALE */
-        html, body, #main-content, .dashboard-container, #dashboard-view, main[role="main"] {
-            background: #FFFFFF !important;
-            background-color: #FFFFFF !important;
+        /* ✅ CSS CRITIQUE: Forcer le background gris très clair AVANT le chargement JavaScript - PRIORITÉ MAXIMALE */
+        html, body, #main-content, main[role="main"] {
+            background: #F9FAFB !important;
+            background-color: #F9FAFB !important;
             background-image: none !important;
             transition: none !important; /* Désactiver les transitions pour éviter le flash */
         }
         
-        /* ✅ Supprimer TOUTES les classes Tailwind qui pourraient ajouter du jaune/beige */
-        .bg-slate-100, .bg-gray-100, .bg-yellow-50, .bg-amber-50, .bg-ap-red-50,
-        .bg-gradient-to-br, .bg-gradient-to-r, .bg-gradient-to-l,
-        [style*="background: linear-gradient"], [style*="background:radial-gradient"] {
-            background: #FFFFFF !important;
-            background-color: #FFFFFF !important;
-            background-image: none !important;
+        /* ✅ Forcer le fond gris très clair pour les éléments de base */
+        .bg-slate-100, .bg-gray-100 {
+            background: #F9FAFB !important;
+            background-color: #F9FAFB !important;
         }
         
         /* ✅ Désactiver les transitions de background pour éviter le flash jaune */
@@ -232,18 +229,18 @@
             background: #64748b;
         }
     </style>
-  <script type="module" crossorigin src="/assets/main-BRz1ijU6.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-CO1fend8.js">
-  <link rel="modulepreload" crossorigin href="/assets/quiz-MXwz6Ea-.js">
-  <link rel="modulepreload" crossorigin href="/assets/services-B8oy3dvD.js">
-  <link rel="modulepreload" crossorigin href="/assets/admin-MwW8t9Ay.js">
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-Da1vdbyN.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-DaFhL-Ce.css">
+  <script type="module" crossorigin src="/assets/main-CWysatLD.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-DcCry55Y.js">
+  <link rel="modulepreload" crossorigin href="/assets/quiz-wkAEpZ0d.js">
+  <link rel="modulepreload" crossorigin href="/assets/services-Wk7Cm1E-.js">
+  <link rel="modulepreload" crossorigin href="/assets/admin-BeieRlaV.js">
+  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-B_2YNU4E.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-Dgxt_Yxo.css">
 </head>
-<body class="h-full flex">
+<body class="h-full" style="margin: 0; padding: 0; overflow-x: hidden; display: flex;">
 
     <!-- Skip to main content (Accessibilité) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-ap-red-primary focus:text-white focus:rounded-lg focus:font-bold focus:shadow-xl focus:ring-4 focus:ring-ap-gold">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-ap-red-primary focus:text-white focus:rounded-lg focus:font-bold focus:shadow-xl focus:ring-4 focus:ring-ap-silver">
         Aller au contenu principal
     </a>
 
@@ -251,22 +248,19 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
-            <picture>
-                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
-                <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
-                     alt="Avantage Plus Logo" 
-                     class="sidebar-logo"
-                     width="150"
-                     height="150"
-                     decoding="async"
-                     onerror="this.onerror=null; this.style.display='none'; const fallback = this.parentElement.nextElementSibling; if(fallback) fallback.style.display='flex';">
-            </picture>
+            <!-- Logo de l'entreprise -->
+            <img src="/assets/logo-avantage-plus-white-on-red-CbsdVyyy.png" 
+                 alt="Avantage Plus Logo" 
+                 class="sidebar-logo"
+                 width="150"
+                 height="150"
+                 decoding="async"
+                 onerror="this.onerror=null; this.style.display='none'; const fallback = this.nextElementSibling; if(fallback) fallback.style.display='flex';">
             <!-- Fallback si logo non trouvé -->
-            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900; width: 150px; height: 150px;">
                 AP
             </div>
-            <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
+            <p class="sidebar-brand-text">QUIZPRO</p>
         </div>
         <!-- Navigation Items -->
         <div class="sidebar-nav">
@@ -337,48 +331,58 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main role="main" id="main-content" class="flex-1 ml-64 h-full overflow-y-auto" style="background: #FFFFFF;">
+    <main role="main" id="main-content" class="h-full overflow-y-auto" style="background: #F9FAFB; flex: 1; position: relative; padding: 0; margin: 0;">
 
         <!-- VUE: CONNEXION -->
         <div id="login-view" class="view-hidden">
-            <div class="min-h-screen flex items-center justify-center px-4 bg-white">
-                <div class="max-w-md w-full">
+            <div class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style="background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 50%, #F8F9FA 100%);">
+                <!-- Effets de fond décoratifs -->
+                <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-ap-red-primary/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+                    <div class="absolute bottom-0 left-0 w-96 h-96 bg-ap-silver/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-ap-red-primary/3 rounded-full blur-2xl"></div>
+                </div>
+                
+                <div class="max-w-md w-full relative z-10">
                     <!-- Logo animé -->
-                    <div class="text-center mb-8 animate-fade-in">
-                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl shadow-xl mb-6 transform hover:scale-110 transition-transform duration-300" style="background: var(--ap-gradient-primary);">
-                            <svg aria-hidden="true" class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="text-center mb-8 animate-fade-in" style="animation: fadeInUp 0.6s ease-out;">
+                        <div class="inline-flex items-center justify-center w-24 h-24 rounded-3xl shadow-2xl mb-6 transform hover:scale-110 transition-all duration-300 relative" style="background: var(--ap-gradient-primary); box-shadow: 0 20px 60px rgba(196, 30, 58, 0.3);">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent"></div>
+                            <svg aria-hidden="true" class="w-12 h-12 text-white relative z-10 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                             </svg>
                         </div>
-                        <h1 class="text-5xl font-bold mb-3 gradient-text-primary">QuizPro</h1>
-                        <p class="text-xl text-slate-600 font-medium">by Avantage Plus</p>
+                        <h1 class="text-6xl font-black mb-3 gradient-text-primary" style="background: linear-gradient(135deg, #C41E3A 0%, #C0C7D0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: 0 2px 20px rgba(196, 30, 58, 0.2);">QuizPro</h1>
+                        <p class="text-xl text-slate-700 font-semibold">by Avantage Plus</p>
                     </div>
                     
                     <!-- Carte de connexion -->
-                    <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 border border-slate-200">
-                        <div class="space-y-6">
+                    <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl p-10 border-2 border-white/50 relative overflow-hidden" style="box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15), 0 0 0 1px rgba(196, 30, 58, 0.1); animation: fadeInUp 0.8s ease-out 0.2s both;">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-ap-red-primary via-ap-silver to-ap-red-primary"></div>
+                        <div class="space-y-6 relative z-10">
                             <div>
-                                <h2 class="text-3xl font-bold text-slate-900 mb-2">Bienvenue 👋</h2>
-                                <p class="text-slate-600">Connectez-vous pour accéder à vos modules de formation et suivre votre progression.</p>
+                                <h2 class="text-3xl font-black text-slate-900 mb-3">Bienvenue 👋</h2>
+                                <p class="text-slate-600 text-lg">Connectez-vous pour accéder à vos modules de formation et suivre votre progression.</p>
                             </div>
                             
-                            <button id="google-signin-btn" class="group w-full btn-primary text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1" aria-label="Se connecter avec Google" style="background: var(--ap-gradient-primary);">
-                                <svg aria-hidden="true" class="w-6 h-6 group-hover:rotate-12 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                            <button id="google-signin-btn" class="group w-full btn-primary text-white font-bold py-5 px-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden" aria-label="Se connecter avec Google" style="background: var(--ap-gradient-primary); box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);">
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                                <svg aria-hidden="true" class="w-7 h-7 group-hover:rotate-12 transition-transform duration-300 relative z-10" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                                     <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
                                     <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                                     <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                                 </svg>
-                                <span class="text-lg">Connexion avec Google</span>
+                                <span class="text-lg relative z-10">Connexion avec Google</span>
                             </button>
                             
                         </div>
                     </div>
                     
                     <!-- Footer info -->
-                    <div class="mt-8 text-center">
-                        <p class="text-sm text-slate-500">
-                            <svg aria-hidden="true" class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="mt-8 text-center" style="animation: fadeInUp 1s ease-out 0.4s both;">
+                        <p class="text-sm text-slate-600 font-medium flex items-center justify-center gap-2">
+                            <svg aria-hidden="true" class="w-5 h-5 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                             </svg>
                             Connexion sécurisée par Firebase
@@ -389,17 +393,24 @@
         </div>
 
         <!-- VUE: TABLEAU DE BORD -->
-        <div id="dashboard-view" class="view-hidden">
-            <div class="dashboard-container">
-                <!-- Header Avantage Plus -->
+        <div id="dashboard-view" class="view-hidden" style="margin: 0; padding: 0; width: 100%; height: 100%;">
+            <div class="dashboard-container" style="margin: 0; padding: 0; width: 100%; height: 100%;">
+                
+                <!-- Bannière de Marque Avantage Plus -->
+                <div class="brand-banner">
+                    <img src="/assets/Bandeau%20AVEX-D3dr9lkU.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+                </div>
+                
+                
+                <!-- Header Avantage Plus - Fond Sombre (Cadre en L) -->
                 <header class="dashboard-header">
                     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                         <div>
                             <h2 class="dashboard-title">Tableau de Bord</h2>
                             <p id="welcome-message" class="dashboard-subtitle">Bienvenue. Voici votre parcours de formation 2025.</p>
                         </div>
-                        <!-- Streak Badge - Rouge/Doré -->
-                        <div id="streak-badge" class="group card-hover bg-ap-gradient-primary text-white px-8 py-5 rounded-2xl shadow-ap-lg flex items-center gap-4 cursor-pointer transform hover:scale-105 transition-all duration-300 border-3 border-ap-gold">
+                        <!-- Streak Badge - Adapté pour fond sombre -->
+                        <div id="streak-badge" class="group card-hover bg-white/10 backdrop-blur-sm text-white px-8 py-5 rounded-2xl shadow-lg flex items-center gap-4 cursor-pointer transform hover:scale-105 transition-all duration-300 border border-white/20">
                             <div class="text-5xl animate-pulse group-hover:scale-125 transition-transform">🔥</div>
                             <div>
                                 <div class="text-3xl font-bold" id="streak-count">10</div>
@@ -409,51 +420,20 @@
                     </div>
                 </header>
 
-                <!-- Carte Hero Quiz - Rouge/Doré Avantage Plus -->
-                <div class="quiz-hero-card">
-                    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-8">
-                        <div class="flex-1">
-                            <div class="quiz-hero-badge">
-                                <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Quiz mensuel disponible</span>
-                            </div>
-                            <h3 class="quiz-hero-title">Quiz de Novembre</h3>
-                            <p class="quiz-hero-description">Votre module mensuel est prêt. Relevez le défi et améliorez vos compétences !</p>
-                            <button class="start-quiz-button quiz-hero-cta">
-                                <span>Démarrer le quiz</span>
-                                <svg aria-hidden="true" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                </svg>
-                            </button>
+                <!-- Zone de Contenu (Gris Clair) -->
+                <div class="dashboard-content">
+                    <!-- Grille des modules mensuels - Avantage Plus -->
+                    <div class="mb-8">
+                        <div class="modules-section-header">
+                            <svg aria-hidden="true" class="modules-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <h3 class="modules-section-title">Vos Modules 2025</h3>
                         </div>
-                        <div class="quiz-hero-progress">
-                            <p class="quiz-hero-progress-label">
-                                <svg aria-hidden="true" class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                                </svg>
-                                Progression Annuelle
-                            </p>
-                            <div class="bg-white/20 rounded-full h-4 mb-3 overflow-hidden">
-                                <div id="annual-progress-bar" class="bg-ap-gradient-gold h-4 rounded-full transition-all duration-500 shadow-ap-gold" style="width: 0%"></div>
-                            </div>
-                            <p id="annual-progress-text" class="quiz-hero-progress-value">0/12</p>
-                            <p class="text-xs text-ap-gold mt-1">modules complétés</p>
+                        <div id="modules-grid" class="modules-grid">
+                            <!-- La Hero Card sera générée en première position par JavaScript -->
+                            <!-- Les autres cartes seront générées par JavaScript -->
                         </div>
-                    </div>
-                </div>
-
-                <!-- Grille des modules mensuels - Avantage Plus -->
-                <div class="mb-8">
-                    <div class="modules-section-header">
-                        <svg aria-hidden="true" class="modules-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        <h3 class="modules-section-title">Vos Modules 2025</h3>
-                    </div>
-                    <div id="modules-grid" class="modules-grid">
-                        <!-- Les cartes seront générées par JavaScript -->
                     </div>
                 </div>
             </div>
@@ -475,101 +455,44 @@
                     <p class="text-xl text-slate-600">Choisissez votre domaine d'expertise et démarrez votre évaluation</p>
                 </div>
 
-                <!-- Grille de sélection des 4 modules - DESIGN SIMPLIFIÉ ET COLORÉ -->
-                <div class="module-selection-grid-enhanced">
-                <!-- Module AUTO - Rouge Avantage Plus VIF -->
-                <button type="button" data-module="auto" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #C41E3A !important; min-height: 320px; border: 3px solid #8B1429;" aria-label="Commencer le module Auto (AT-AVE-AVEX)">
-                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
-                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
-                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
-                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.9 1.14a1.5 1.5 0 0 0-1.38-.83L6.48.31a1.5 1.5 0 0 0-1.38.83L.03 13.6a1.5 1.5 0 0 0 1.34 2.14l.84-.21a3 3 0 0 0 1.98-.94l.21-.21c.21-.21.46-.37.71-.52h.23c.31.2.66.33 1.04.33h7.94c.38 0 .73-.13 1.04-.33h.23c.25.15.5.31.71.52l.21.21a3 3 0 0 0 1.98.94l.84.21a1.5 1.5 0 0 0 1.34-2.14L18.9 1.14ZM6.6 9.38c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Zm10.8 0c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">Auto</h3>
-                        <p class="text-base text-white/95 mb-6 font-semibold">AT-AVE-AVEX</p>
-                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
-                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
-                                Commencer
-                                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </button>
+                <!-- Grille de sélection des 4 modules - GRILLE 2X2 STYLE TABLEAU DE BORD -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 40px auto; padding: 0 20px;">
+                    <!-- Module AUTO -->
+                    <button type="button" data-module="auto" style="background: #FFFFFF; border-radius: 16px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1; transition: all 0.2s ease-out;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.07)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)';">
+                        <svg style="width: 64px; height: 64px; color: #DC2626; margin-bottom: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                        </svg>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1F2937; margin-bottom: 4px;">Auto</h3>
+                        <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0;">AT-AVE-AVEX</p>
+                    </button>
                     
-                <!-- Module LOISIR - Doré Avantage Plus VIF -->
-                <button type="button" data-module="loisir" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #D4AF37 !important; min-height: 320px; border: 3px solid #B8941F;" aria-label="Commencer le module Loisir (VTT, Motoneige)">
-                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
-                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
-                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
-                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">Loisir</h3>
-                        <p class="text-base text-white/95 mb-6 font-semibold">VTT, Motoneige</p>
-                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
-                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
-                                Commencer
-                                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </button>
+                    <!-- Module LOISIR -->
+                    <button type="button" data-module="loisir" style="background: #FFFFFF; border-radius: 16px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1; transition: all 0.2s ease-out;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.07)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)';">
+                        <svg style="width: 64px; height: 64px; color: #3B82F6; margin-bottom: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z M12 6c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6z"/>
+                        </svg>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1F2937; margin-bottom: 4px;">Loisir</h3>
+                        <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0;">VTT, Motoneige</p>
+                    </button>
                     
-                <!-- Module VR - Orange VIF -->
-                <button type="button" data-module="vr" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #FF9F43 !important; min-height: 320px; border: 3px solid #E67E22;" aria-label="Commencer le module VR (Véhicules Récréatifs)">
-                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
-                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
-                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
-                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 8.69V6c0-1.1-.9-2-2-2h-3.32c-.4-.68-1.04-1.23-1.79-1.58L12 2 8.11 2.42C7.36 2.77 6.72 3.32 6.32 4H3c-1.1 0-2 .9-2 2v2.69A5.006 5.006 0 0 0 0 13v5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h18v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-5a5.006 5.006 0 0 0-1-3.31Z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">VR</h3>
-                        <p class="text-base text-white/95 mb-6 font-semibold">Véhicules Récréatifs</p>
-                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
-                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
-                                Commencer
-                                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </button>
+                    <!-- Module VR -->
+                    <button type="button" data-module="vr" style="background: #FFFFFF; border-radius: 16px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1; transition: all 0.2s ease-out;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.07)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)';">
+                        <svg style="width: 64px; height: 64px; color: #6366F1; margin-bottom: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 8.69V6c0-1.1-.9-2-2-2h-3.32c-.4-.68-1.04-1.23-1.79-1.58L12 2 8.11 2.42C7.36 2.77 6.72 3.32 6.32 4H3c-1.1 0-2 .9-2 2v2.69A5.006 5.006 0 0 0 0 13v5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h18v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-5a5.006 5.006 0 0 0-1-3.31Z"/>
+                        </svg>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1F2937; margin-bottom: 4px;">VR</h3>
+                        <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0;">Véhicules Récréatifs</p>
+                    </button>
                     
-                <!-- Module TRACTEUR - Vert VIF -->
-                <button type="button" data-module="tracteur" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #28A745 !important; min-height: 320px; border: 3px solid #1E7E34;" aria-label="Commencer le module Tracteur (Équipement Agricole)">
-                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
-                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
-                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
-                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2ZM5 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2Z"/>
-                                    <path d="M19 8h-1V7c0-1.1-.9-2-2-2h-2c0-1.1-.9-2-2-2H8C6.9 3 6 3.9 6 5v1H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM8 5h8v3H8V5zm11 14H5v-2h14v2zm0-5H5V8h14v6z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">Tracteur</h3>
-                        <p class="text-base text-white/95 mb-6 font-semibold">Équipement Agricole</p>
-                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
-                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
-                                Commencer
-                                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </button>
+                    <!-- Module TRACTEUR -->
+                    <button type="button" data-module="tracteur" style="background: #FFFFFF; border-radius: 16px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1; transition: all 0.2s ease-out;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.07)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)';">
+                        <svg style="width: 64px; height: 64px; color: #10B981; margin-bottom: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2ZM5 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2Z"/>
+                            <path d="M19 8h-1V7c0-1.1-.9-2-2-2h-2c0-1.1-.9-2-2-2H8C6.9 3 6 3.9 6 5v1H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM8 5h8v3H8V5zm11 14H5v-2h14v2zm0-5H5V8h14v6z"/>
+                        </svg>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1F2937; margin-bottom: 4px;">Tracteur</h3>
+                        <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0;">Équipement Agricole</p>
+                    </button>
                 </div>
             </div>
         </div>
@@ -632,8 +555,8 @@
         })();
     </script>
 
-    <!-- Firebase & App Scripts -->
-    <!-- Gestionnaires d'erreurs et retry (Section 1 - Architecture) -->
+    <!-- Firebase & App Scripts -->
+    <!-- Gestionnaires d'erreurs et retry (Section 1 - Architecture) -->
     
     <!-- Service Worker: désactivé en localhost pour éviter le cache en dev -->
     <script>

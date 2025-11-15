@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Résultats - QuizPro 2025</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .view-hidden { display: none; }
         .fade-in { animation: fadeIn 0.3s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
-  <script type="module" crossorigin src="/assets/micro-interactions-CO1fend8.js"></script>
+  <script type="module" crossorigin src="/assets/micro-interactions-DcCry55Y.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
-  <script type="module" crossorigin src="/assets/quiz-MXwz6Ea-.js"></script>
-  <script type="module" crossorigin src="/assets/services-B8oy3dvD.js"></script>
+  <script type="module" crossorigin src="/assets/quiz-wkAEpZ0d.js"></script>
+  <script type="module" crossorigin src="/assets/services-Wk7Cm1E-.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <script type="module" crossorigin src="/assets/admin-MwW8t9Ay.js"></script>
+  <script type="module" crossorigin src="/assets/admin-BeieRlaV.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-  <script type="module" crossorigin src="/assets/resources-BwAOLOsg.js"></script>
-  <script type="module" crossorigin src="/assets/results-Bs8aZbNa.js"></script>
+  <script type="module" crossorigin src="/assets/resources-eHI7K7sF.js"></script>
+  <script type="module" crossorigin src="/assets/results-DcV8uWTs.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-Da1vdbyN.css">
-  <link rel="stylesheet" crossorigin href="/assets/results-E1KV1rf4.css">
+  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-B_2YNU4E.css">
+  <link rel="stylesheet" crossorigin href="/assets/results-DqCbTT01.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex bg-gradient-to-br from-slate-50 to-slate-100">
@@ -48,21 +48,19 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
-            <picture>
-                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
-                <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
-                     alt="Avantage Plus Logo" 
-                     class="sidebar-logo"
-                     width="150"
-                     height="150"
-                     decoding="async"
-                     onerror="this.onerror=null; this.style.display='none'; const fallback = this.parentElement.nextElementSibling; if(fallback) fallback.style.display='flex';">
-            </picture>
-            <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+            <!-- Logo de l'entreprise -->
+            <img src="/assets/logo-avantage-plus-white-on-red-CbsdVyyy.png" 
+                 alt="Avantage Plus Logo" 
+                 class="sidebar-logo"
+                 width="150"
+                 height="150"
+                 decoding="async"
+                 onerror="this.onerror=null; this.style.display='none'; const fallback = this.nextElementSibling; if(fallback) fallback.style.display='flex';">
+            <!-- Fallback si logo non trouvé -->
+            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900; width: 150px; height: 150px;">
                 AP
             </div>
-            <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
+            <p class="sidebar-brand-text">QUIZPRO</p>
         </div>
         <!-- Navigation Items -->
         <div class="sidebar-nav">
@@ -129,8 +127,14 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main role="main" id="main-content" class="flex-1 ml-64 min-h-screen overflow-y-auto" style="background: #FFFFFF !important;">
-        <div class="results-container-enhanced">
+    <main role="main" id="main-content" style="flex: 1; background: #FFFFFF !important; margin: 0; padding: 0;">
+        
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="/assets/Bandeau%20AVEX-D3dr9lkU.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
+        
+        <div class="results-container-enhanced" style="padding-left: 40px; padding-right: 40px;">
         
         <!-- En-tête ENHANCED -->
         <div class="results-header-enhanced animate-fade-in-up">
@@ -250,6 +254,6 @@
         </div>
 
     </main>
-
+
 </body>
 </html>

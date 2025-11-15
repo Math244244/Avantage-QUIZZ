@@ -147,12 +147,20 @@
   /* Dégradé success - Score élevé (avec argent) */
   --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #4A5568 100%);
   
-  /* Dégradé doré - Barre de progression, badges premium */
-  --ap-gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
-  --ap-gold: #D4AF37;
-  --ap-gold-dark: #B8941F;
-  --ap-gold-light: #E8D5A3;
-  --ap-shadow-gold: 0 0 10px rgba(212, 175, 55, 0.5);
+  /* Dégradé argent - Barre de progression, badges premium (remplace doré) */
+  --ap-gradient-gold: linear-gradient(135deg, #C0C7D0 0%, #A0AEC0 100%); /* DÉPRÉCIÉ: Utiliser --ap-gradient-silver */
+  --ap-gold: #C0C7D0; /* DÉPRÉCIÉ: Utiliser --ap-silver */
+  --ap-gold-dark: #A0AEC0; /* DÉPRÉCIÉ: Utiliser #A0AEC0 */
+  --ap-gold-light: #E2E8F0; /* DÉPRÉCIÉ: Utiliser --ap-accent-pale */
+  --ap-shadow-gold: 0 0 10px rgba(192, 199, 208, 0.5); /* DÉPRÉCIÉ: Utiliser --ap-shadow-silver */
+  
+  /* Bleu vif - Nouvelle couleur d'accent pour progrès et icônes */
+  --ap-blue: #3B82F6;
+  --ap-blue-dark: #2563EB;
+  --ap-blue-light: #60A5FA;
+  --ap-blue-pale: #DBEAFE;
+  --ap-gradient-blue: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  --ap-shadow-blue: 0 0 10px rgba(59, 130, 246, 0.3);
   
   
   /* ========================================

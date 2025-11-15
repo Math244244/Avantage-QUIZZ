@@ -14,8 +14,8 @@
 .results-header-enhanced {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 3px solid var(--ap-gold);
-    background: linear-gradient(135deg, var(--ap-red-50) 0%, var(--ap-gold-pale) 100%);
+    border-bottom: 3px solid var(--ap-silver);
+    background: linear-gradient(135deg, var(--ap-red-50) 0%, var(--ap-accent-pale) 100%);
     padding: 2rem;
     border-radius: 1.5rem;
     box-shadow: var(--ap-shadow-md);
@@ -40,12 +40,12 @@
 }
 
 .stat-card-enhanced {
-    background: white;
-    border-radius: 1rem;
-    padding: 1.75rem 1.5rem;
-    box-shadow: var(--ap-shadow-sm);
-    border: 2px solid transparent;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 1.25rem;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(196, 30, 58, 0.1);
+    border: 3px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
@@ -56,20 +56,58 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 5px;
     background: var(--ap-gradient-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transform: scaleX(1);
+    transition: transform 0.4s ease;
+}
+
+/* Couleurs par type de statistique */
+.stat-card-enhanced[data-stat-type="completed"]::before {
+    background: linear-gradient(90deg, #28A745 0%, #1E7E34 100%);
+}
+
+.stat-card-enhanced[data-stat-type="average"]::before {
+    background: linear-gradient(90deg, #C0C7D0 0%, #A0AEC0 100%);
+}
+
+.stat-card-enhanced[data-stat-type="answered"]::before {
+    background: linear-gradient(90deg, #C41E3A 0%, #8B1429 100%);
+}
+
+.stat-card-enhanced[data-stat-type="time"]::before {
+    background: linear-gradient(90deg, #4A5568 0%, #2D3748 100%);
 }
 
 .stat-card-enhanced:hover::before {
-    transform: scaleX(1);
+    height: 6px;
+    box-shadow: 0 2px 8px rgba(196, 30, 58, 0.3);
 }
 
 .stat-card-enhanced:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--ap-shadow-lg);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(196, 30, 58, 0.15), 0 0 0 2px rgba(196, 30, 58, 0.2);
     border-color: var(--ap-red-light);
+}
+
+/* Icône dans la carte */
+.stat-card-enhanced .stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(196, 30, 58, 0.1) 0%, rgba(196, 30, 58, 0.05) 100%);
+    color: var(--ap-red-primary);
+    transition: all 0.3s ease;
+}
+
+.stat-card-enhanced:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(196, 30, 58, 0.2) 0%, rgba(196, 30, 58, 0.1) 100%);
+    box-shadow: 0 4px 12px rgba(196, 30, 58, 0.2);
 }
 
 /* Filtres - Layout amélioré */
@@ -118,7 +156,7 @@
     border-radius: 1.25rem;
     padding: 2rem;
     box-shadow: var(--ap-shadow-md);
-    border: 2px solid var(--ap-gold-light);
+    border: 2px solid var(--ap-silver);
     transition: all 0.3s ease;
     min-height: 400px;
     display: flex;
@@ -150,14 +188,14 @@
     border-radius: 1.25rem;
     overflow: hidden;
     box-shadow: var(--ap-shadow-lg);
-    border: 3px solid var(--ap-gold);
+    border: 3px solid var(--ap-silver);
     margin-bottom: 2rem;
 }
 
 .history-header-enhanced {
     background: var(--ap-gradient-primary);
     padding: 1.75rem 2rem;
-    border-bottom: 3px solid var(--ap-gold);
+    border-bottom: 3px solid #F59E0B;
 }
 
 .history-header-enhanced h2 {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ressources - QuizPro 2025</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         .view-hidden { display: none; }
         .fade-in { animation: fadeIn 0.3s ease-in; }
@@ -12,27 +12,27 @@
         .file-icon { transition: transform 0.2s; }
         .file-card:hover .file-icon { transform: scale(1.1); }
     </style>
-  <script type="module" crossorigin src="/assets/micro-interactions-CO1fend8.js"></script>
+  <script type="module" crossorigin src="/assets/micro-interactions-DcCry55Y.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
-  <script type="module" crossorigin src="/assets/quiz-MXwz6Ea-.js"></script>
-  <script type="module" crossorigin src="/assets/services-B8oy3dvD.js"></script>
+  <script type="module" crossorigin src="/assets/quiz-wkAEpZ0d.js"></script>
+  <script type="module" crossorigin src="/assets/services-Wk7Cm1E-.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <script type="module" crossorigin src="/assets/admin-MwW8t9Ay.js"></script>
+  <script type="module" crossorigin src="/assets/admin-BeieRlaV.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-  <script type="module" crossorigin src="/assets/resources-BwAOLOsg.js"></script>
+  <script type="module" crossorigin src="/assets/resources-eHI7K7sF.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-Da1vdbyN.css">
+  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-B_2YNU4E.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex bg-gradient-to-br from-slate-50 to-slate-100">
@@ -46,21 +46,19 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
-            <picture>
-                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
-                <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
-                     alt="Avantage Plus Logo" 
-                     class="sidebar-logo"
-                     width="150"
-                     height="150"
-                     decoding="async"
-                     onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            </picture>
-            <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+            <!-- Logo de l'entreprise -->
+            <img src="/assets/logo-avantage-plus-white-on-red-CbsdVyyy.png" 
+                 alt="Avantage Plus Logo" 
+                 class="sidebar-logo"
+                 width="150"
+                 height="150"
+                 decoding="async"
+                 onerror="this.onerror=null; this.style.display='none'; const fallback = this.nextElementSibling; if(fallback) fallback.style.display='flex';">
+            <!-- Fallback si logo non trouvé -->
+            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900; width: 150px; height: 150px;">
                 AP
             </div>
-            <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
+            <p class="sidebar-brand-text">QUIZPRO</p>
         </div>
         <!-- Navigation Items -->
         <div class="sidebar-nav">
@@ -127,8 +125,14 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main role="main" id="main-content" class="flex-1 ml-64 min-h-screen overflow-y-auto">
-        <div class="max-w-7xl mx-auto px-6 py-8">
+    <main role="main" id="main-content" style="flex: 1; margin: 0; padding: 0;">
+        
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="/assets/Bandeau%20AVEX-D3dr9lkU.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
+        
+        <div class="max-w-7xl mx-auto" style="padding: 40px;">
         
         <!-- En-tête -->
         <div class="mb-8 fade-in">
@@ -239,12 +243,26 @@
             <!-- Sera rempli dynamiquement -->
         </div>
 
-        <div id="no-resources" class="hidden text-center py-12">
-            <svg aria-hidden="true" class="w-20 h-20 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <h3 class="text-xl font-bold text-slate-700 mb-2">Aucune ressource disponible</h3>
-            <p class="text-slate-500">Les ressources seront bientôt disponibles</p>
+        <div id="no-resources" class="hidden text-center py-16 px-6">
+            <div class="max-w-md mx-auto">
+                <!-- Illustration SVG améliorée -->
+                <div class="mb-8 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-ap-red-100 to-ap-gold-pale rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                    </div>
+                    <svg aria-hidden="true" class="w-32 h-32 mx-auto relative z-10 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 4px 12px rgba(196, 30, 58, 0.2));">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-black text-slate-900 mb-3" style="background: linear-gradient(135deg, #C41E3A 0%, #D4AF37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Aucune ressource disponible</h3>
+                <p class="text-lg text-slate-600 mb-6 font-medium">Les documents et ressources seront ajoutés prochainement</p>
+                <div class="flex items-center justify-center gap-2 text-sm text-slate-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Revenez bientôt pour découvrir nos guides et tutoriels</span>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -318,6 +336,6 @@
         </div>
     </div>
     </main>
-
+
 </body>
 </html>

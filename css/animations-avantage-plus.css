@@ -31,25 +31,39 @@
    ANIMATIONS GLOBALES
    ======================================== */
 
-/* Pulse Doré Subtil - Pour badges actifs */
-@keyframes pulseGoldSubtle {
+/* Pulse Argent Subtil - Pour badges actifs */
+@keyframes pulseSilverSubtle {
   0%, 100% {
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 12px rgba(192, 199, 208, 0.25);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 20px rgba(192, 199, 208, 0.4);
     transform: scale(1.02);
   }
 }
 
-/* Pulse Doré pour Icône */
-@keyframes iconPulseGold {
+/* Shimmer - Effet de brillance pour barres de progression */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Pulse Argent pour Icône */
+@keyframes iconPulseSilver {
   0%, 100% {
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 15px rgba(192, 199, 208, 0.3);
   }
   50% {
-    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 6px 25px rgba(192, 199, 208, 0.5);
   }
 }
 
@@ -63,11 +77,11 @@
   }
 }
 
-/* Fade In Up */
+/* Fade In Up - Amélioré */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -110,6 +124,7 @@
     transform: translateX(0);
   }
 }
+
 
 /* Scale In */
 @keyframes scaleIn {
@@ -431,18 +446,18 @@
   animation: badgePulse 1.5s ease-in-out infinite;
 }
 
-/* Shimmer badge (gold) */
-@keyframes shimmerGold {
+/* Shimmer badge (silver) */
+@keyframes shimmerSilver {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 10px rgba(192, 199, 208, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 20px rgba(192, 199, 208, 0.6);
   }
 }
 
 .badge-shimmer {
-  animation: shimmerGold 2s ease-in-out infinite;
+  animation: shimmerSilver 2s ease-in-out infinite;
 }
 
 /* ========================================

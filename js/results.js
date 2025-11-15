@@ -266,10 +266,10 @@ function updateGlobalStats() {
     const safeAvgTime = escapeHtml(formatTime(avgTime));
     
     statsContainer.innerHTML = `
-        <div class="stat-card-enhanced animate-fade-in-up">
+        <div class="stat-card-enhanced animate-fade-in-up" data-stat-type="completed" style="animation-delay: 0.1s;">
             <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-xl bg-ap-red-100 flex items-center justify-center">
-                    <svg class="w-7 h-7 text-ap-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="stat-icon">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
@@ -280,10 +280,10 @@ function updateGlobalStats() {
             </div>
         </div>
         
-        <div class="stat-card-enhanced animate-fade-in-up">
+        <div class="stat-card-enhanced animate-fade-in-up" data-stat-type="average" style="animation-delay: 0.2s;">
             <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-xl bg-ap-success-light flex items-center justify-center">
-                    <svg class="w-7 h-7 text-ap-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="stat-icon">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
                 </div>
@@ -294,10 +294,10 @@ function updateGlobalStats() {
             </div>
         </div>
         
-        <div class="stat-card-enhanced animate-fade-in-up">
+        <div class="stat-card-enhanced animate-fade-in-up" data-stat-type="answered" style="animation-delay: 0.3s;">
             <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-xl bg-ap-gold-light flex items-center justify-center">
-                    <svg class="w-7 h-7 text-ap-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="stat-icon">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                     </svg>
                 </div>
@@ -308,10 +308,10 @@ function updateGlobalStats() {
             </div>
         </div>
         
-        <div class="stat-card-enhanced animate-fade-in-up">
+        <div class="stat-card-enhanced animate-fade-in-up" data-stat-type="time" style="animation-delay: 0.4s;">
             <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-xl bg-ap-warning-light flex items-center justify-center">
-                    <svg class="w-7 h-7 text-ap-warning-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="stat-icon">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>

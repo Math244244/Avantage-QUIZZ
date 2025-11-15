@@ -31,21 +31,19 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
-            <picture>
-                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
-                <img src="assets/images/logos/logo-avantage-plus-red-transparent.png" 
-                     alt="Avantage Plus Logo" 
-                     class="sidebar-logo"
-                     width="150"
-                     height="150"
-                     decoding="async"
-                     onerror="this.onerror=null; this.style.display='none'; const fallback = this.parentElement.nextElementSibling; if(fallback) fallback.style.display='flex';">
-            </picture>
-            <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+            <!-- Logo de l'entreprise -->
+            <img src="assets/images/logos/logo-avantage-plus-white-on-red.png" 
+                 alt="Avantage Plus Logo" 
+                 class="sidebar-logo"
+                 width="150"
+                 height="150"
+                 decoding="async"
+                 onerror="this.onerror=null; this.style.display='none'; const fallback = this.nextElementSibling; if(fallback) fallback.style.display='flex';">
+            <!-- Fallback si logo non trouvé -->
+            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900; width: 150px; height: 150px;">
                 AP
             </div>
-            <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
+            <p class="sidebar-brand-text">QUIZPRO</p>
         </div>
         <!-- Navigation Items -->
         <div class="sidebar-nav">
@@ -112,8 +110,14 @@
     </nav>
 
     <!-- CONTENU PRINCIPAL -->
-    <main role="main" id="main-content" class="flex-1 ml-64 min-h-screen overflow-y-auto" style="background: #FFFFFF !important;">
-        <div class="results-container-enhanced">
+    <main role="main" id="main-content" style="flex: 1; background: #FFFFFF !important; margin: 0; padding: 0;">
+        
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="assets/images/logos/Bandeau AVEX.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
+        
+        <div class="results-container-enhanced" style="padding-left: 40px; padding-right: 40px;">
         
         <!-- En-tête ENHANCED -->
         <div class="results-header-enhanced animate-fade-in-up">

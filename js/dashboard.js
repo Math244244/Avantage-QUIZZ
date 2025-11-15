@@ -5,21 +5,21 @@
     'use strict';
     // Exécuter immédiatement, même si le DOM n'est pas encore chargé
     if (document.documentElement) {
-        document.documentElement.style.setProperty('background', '#FFFFFF', 'important');
-        document.documentElement.style.setProperty('background-color', '#FFFFFF', 'important');
+        document.documentElement.style.setProperty('background', '#F9FAFB', 'important');
+        document.documentElement.style.setProperty('background-color', '#F9FAFB', 'important');
         document.documentElement.style.setProperty('background-image', 'none', 'important');
     }
     if (document.body) {
-        document.body.style.setProperty('background', '#FFFFFF', 'important');
-        document.body.style.setProperty('background-color', '#FFFFFF', 'important');
+        document.body.style.setProperty('background', '#F9FAFB', 'important');
+        document.body.style.setProperty('background-color', '#F9FAFB', 'important');
         document.body.style.setProperty('background-image', 'none', 'important');
     }
     // Observer pour forcer le blanc dès que main-content existe
     const observer = new MutationObserver(() => {
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
-            mainContent.style.setProperty('background', '#FFFFFF', 'important');
-            mainContent.style.setProperty('background-color', '#FFFFFF', 'important');
+            mainContent.style.setProperty('background', '#F9FAFB', 'important');
+            mainContent.style.setProperty('background-color', '#F9FAFB', 'important');
             mainContent.style.setProperty('background-image', 'none', 'important');
         }
     });
@@ -227,7 +227,7 @@ function createLockedCard(month) {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <div class="module-card-badge">🔒 Verrouillé</div>
+                <div class="module-card-badge">VERROUILLÉ</div>
             </div>
             <h3 class="module-card-title">${safeMonth}</h3>
             <p class="module-card-subtitle">Disponible le 1er du mois</p>
@@ -252,7 +252,7 @@ function createIncompleteCard(month) {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
-                <div class="module-card-badge">⚠️ À compléter</div>
+                <div class="module-card-badge">À COMPLÉTER</div>
             </div>
             <h3 class="module-card-title">${safeMonth}</h3>
             <p class="module-card-subtitle">Mois manqué - Rattrapez-le !</p>
@@ -277,7 +277,7 @@ function createActiveCard(month) {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
                 </div>
-                <div class="module-card-badge">⚡ Actif</div>
+                <div class="module-card-badge">EN COURS</div>
             </div>
             <h3 class="module-card-title">${safeMonth}</h3>
             <p class="module-card-subtitle">Prêt à être complété !</p>
@@ -291,6 +291,47 @@ function createActiveCard(month) {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
             </button>
+        </div>
+    `;
+}
+
+function createHeroCard(month, completedCount) {
+    // ✅ HERO CARD: Carte principale avec progression annuelle intégrée
+    const safeMonth = escapeHtml(month);
+    const annualProgressPercent = (completedCount / 12) * 100;
+    
+    return `
+        <div class="module-card module-card--active" style="grid-column: 1 / -1;">
+            <div class="module-card-header">
+                <div class="module-card-icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                </div>
+                <div class="module-card-badge">QUIZ MENSUEL DISPONIBLE</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 24px; align-items: flex-start;">
+                <div style="flex: 1;">
+                    <h3 class="module-card-title">Quiz de ${safeMonth}</h3>
+                    <p class="module-card-subtitle">Votre module mensuel est prêt. Relevez le défi et améliorez vos compétences !</p>
+                    <button class="start-quiz-button btn-primary w-full mt-4 flex items-center justify-center gap-2" style="max-width: 300px;">
+                        <span>Démarrer le quiz</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div style="min-width: 200px; text-align: center; background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 16px;">
+                    <p style="color: #F9FAFB; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">
+                        Progression Annuelle
+                    </p>
+                    <div style="background: rgba(255, 255, 255, 0.2); border-radius: 9999px; height: 16px; margin-bottom: 12px; overflow: hidden;">
+                        <div id="annual-progress-bar" style="background: #FFFFFF; height: 100%; border-radius: 9999px; transition: width 0.5s; width: ${annualProgressPercent}%;"></div>
+                    </div>
+                    <p id="annual-progress-text" style="color: #FFFFFF; font-size: 2rem; font-weight: 900; line-height: 1; margin-bottom: 4px;">${completedCount}/12</p>
+                    <p style="color: #F9FAFB; font-size: 0.75rem; margin: 0;">modules complétés</p>
+                </div>
+            </div>
         </div>
     `;
 }
@@ -332,6 +373,7 @@ async function loadDashboardData() {
         
         // Charger la progression annuelle
         const progress = await getAnnualProgress(user.uid);
+        console.log('📊 Progression annuelle récupérée:', progress);
         
         // Mettre à jour monthsData avec les vraies données
         // ✅ CORRECTION SECTION 2 : Normaliser le format du mois pour garantir la correspondance
@@ -342,6 +384,7 @@ async function loadDashboardData() {
             // Normaliser le format du mois pour garantir la correspondance
             const monthKey = normalizeMonthFormat(month.name, currentYear);
             if (progress[monthKey]) {
+                console.log(`✅ Mois ${month.name} (${monthKey}): score = ${progress[monthKey].score}`);
                 return {
                     name: month.name,
                     score: progress[monthKey].score
@@ -349,6 +392,7 @@ async function loadDashboardData() {
             }
             return month;
         });
+        stateManager.set('monthsData', monthsData); // ✅ Sauvegarder dans le StateManager
         
         // Mettre à jour le streak
         const streak = await updateStreak(user.uid);
@@ -363,7 +407,8 @@ async function loadDashboardData() {
     }
 }
 
-async function initializeDashboard() {
+// ✅ Exporter pour permettre le rechargement depuis d'autres modules
+export async function initializeDashboard() {
     if (!elements.modulesGrid) {
         console.error("❌ L'élément 'modules-grid' est introuvable.");
         return;
@@ -379,31 +424,57 @@ async function initializeDashboard() {
         let completedCount = 0;
 
         // ✅ CORRECTION SECTION 5 : StateManager - Utiliser StateManager pour monthsData
-        // ✅ P0 CRITIQUE: Utiliser la fonction de statut testable
+        // ✅ HERO CARD: Créer la Hero Card pour le mois actif en première position
         const { getMonthlyQuizStatus } = await import('./utils/quiz-scoring.js');
         
         const currentMonthsData = stateManager.get('monthsData');
-        currentMonthsData.forEach((month, index) => {
-        let cardHtml = '';
-        const status = getMonthlyQuizStatus(index, currentMonthIndex, month.score);
+        let heroCardInserted = false;
+        let activeMonthName = '';
         
-        if (status === 'completed') {
-            cardHtml = createCompletedCard(month.name, month.score);
-            completedCount++;
-        } else if (status === 'active') {
-            cardHtml = createActiveCard(month.name);
-        } else if (status === 'incomplete') {
-            cardHtml = createIncompleteCard(month.name);
-        } else if (status === 'locked') {
-            cardHtml = createLockedCard(month.name);
+        // D'abord, compter les complétés et identifier le mois actuel
+        currentMonthsData.forEach((month, index) => {
+            const status = getMonthlyQuizStatus(index, currentMonthIndex, month.score);
+            console.log(`📅 Mois ${month.name} (index=${index}): status=${status}, score=${month.score}`);
+            if (status === 'completed') {
+                completedCount++;
+            }
+            // ✅ FIX: Toujours afficher la Hero Card pour le mois ACTUEL (index === currentMonthIndex)
+            if (index === currentMonthIndex && !heroCardInserted) {
+                activeMonthName = month.name;
+            }
+        });
+        
+        // ✅ FIX: Insérer la Hero Card pour le mois actuel (même si complété)
+        if (activeMonthName && !heroCardInserted) {
+            const heroCardHtml = createHeroCard(activeMonthName, completedCount);
+            elements.modulesGrid.innerHTML = heroCardHtml;
+            heroCardInserted = true;
+        } else {
+            elements.modulesGrid.innerHTML = '';
         }
-        elements.modulesGrid.innerHTML += cardHtml;
-    });
+        
+        // Générer toutes les 12 cartes mensuelles (incluant le mois actuel)
+        currentMonthsData.forEach((month, index) => {
+            let cardHtml = '';
+            const status = getMonthlyQuizStatus(index, currentMonthIndex, month.score);
+            
+            // ✅ Afficher TOUTES les cartes (12 mois) incluant le mois actuel
+            if (status === 'active') {
+                cardHtml = createActiveCard(month.name);
+            } else if (status === 'completed') {
+                cardHtml = createCompletedCard(month.name, month.score);
+            } else if (status === 'incomplete') {
+                cardHtml = createIncompleteCard(month.name);
+            } else if (status === 'locked') {
+                cardHtml = createLockedCard(month.name);
+            }
+            if (cardHtml) {
+                elements.modulesGrid.innerHTML += cardHtml;
+            }
+        });
 
-    // Mettre à jour la barre de progression annuelle
-    const annualProgressPercent = (completedCount / 12) * 100;
-    elements.annualProgressBar.style.width = `${annualProgressPercent}%`;
-    elements.annualProgressText.textContent = `${completedCount}/12`;
+    // La barre de progression annuelle est maintenant dans la Hero Card
+    // Mise à jour via l'ID dans la Hero Card
 
     // Mettre à jour le badge de série
     const streak = calculateStreak();

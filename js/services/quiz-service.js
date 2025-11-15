@@ -245,10 +245,18 @@ export async function updateMonthlyProgress(uid, month, score) {
         };
         
         await safeFirestoreWrite(() => setDoc(progressRef, progressData, { merge: true }));
-        console.log('✅ Progression mensuelle mise à jour');
+        console.log('✅ Progression mensuelle mise à jour:', { 
+            userId: uid, 
+            month: normalizedMonth, 
+            score: score,
+            progressId 
+        });
 
+        // ✅ CRITIQUE: Invalider le cache de manière exhaustive
         invalidateCache(buildCacheKey(['monthlyResults', uid]));
         invalidateCache(buildCacheKey(['annualProgress', uid, year]));
+        invalidateCache(buildCacheKey(['annualProgress', uid])); // Sans l'année aussi
+        console.log('🗑️ Cache invalidé pour:', { uid, year });
     } catch (error) {
         console.error('❌ Erreur mise à jour progression:', error);
         throw error;

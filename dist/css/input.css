@@ -9,6 +9,8 @@
 @import url('./typography-avantage-plus.css');
 @import url('./animations-avantage-plus.css');
 @import url('./dashboard-avantage-plus.css');
+@import url('./dashboard-compact.css');
+@import url('./module-selection-elegant.css');
 
 /* ========================================
    GOOGLE FONTS: Inter
@@ -20,9 +22,9 @@
    ======================================== */
 @layer base {
   /* ✅ CSS CRITIQUE: Forcer le background blanc sur TOUS les éléments de base - PRIORITÉ ABSOLUE */
-  html, body, #main-content, .dashboard-container, #dashboard-view, main, main[role="main"] {
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
+  html, body, #main-content, main, main[role="main"] {
+    background: #F9FAFB !important;
+    background-color: #F9FAFB !important;
     background-image: none !important;
     transition: none !important; /* Désactiver les transitions sur background pour éviter le flash */
   }
@@ -36,13 +38,32 @@
     transition: none !important;
   }
   
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
   body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--ap-gray-900);
-    /* ✅ FOND 100% BLANC PUR - Sans aucun dégradé */
-    background-color: #FFFFFF !important;
+    /* ✅ FOND GRIS TRÈS CLAIR pour "respiration" visuelle */
+    background-color: #F9FAFB !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: border-box;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -193,6 +214,31 @@
     height: 100%;
     background: var(--ap-gradient-gold);
     transition: width 0.5s ease-out;
+  }
+
+  /* Brand Banner - Bannière de Marque */
+  :root {
+    --dashboard-horizontal-padding: 40px;
+  }
+
+  .brand-banner {
+    width: calc(100% + (var(--dashboard-horizontal-padding) * 2));
+    /* ✅ PAS de height ou max-height - laisse l'image déterminer la hauteur */
+    /* ✅ PAS de overflow: hidden - pour ne pas couper l'image */
+    padding: 0;
+    margin: 0 calc(var(--dashboard-horizontal-padding) * -1) 0; /* ✅ Supprimé margin-bottom pour coller au header */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+  }
+
+  .banner-image {
+    width: 100%; /* ✅ Prend toute la largeur */
+    height: auto; /* ✅ CRITIQUE: Hauteur automatique pour garder les proportions */
+    object-fit: contain; /* ✅ CONTAIN pour voir TOUTE l'image sans rogner */
+    object-position: center center; /* ✅ Centré */
+    display: block;
+    box-sizing: border-box;
   }
 }
 

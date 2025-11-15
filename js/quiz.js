@@ -384,7 +384,12 @@ export async function startQuiz(moduleId) {
 // Écran de chargement
 function showLoadingScreen(moduleName) {
     const quizView = getOrCreateQuizView();
+    // ✅ FIX: Préserver le bandeau en l'ajoutant avant le contenu
     quizView.innerHTML = `
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="assets/images/logos/Bandeau AVEX.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
         <div class="min-h-screen flex items-center justify-center">
             <div class="text-center">
                 <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-ap-red-primary mx-auto mb-6"></div>
@@ -415,6 +420,14 @@ function getOrCreateQuizView() {
     if (!quizView) {
         quizView = document.createElement('div');
         quizView.id = 'quiz-view';
+        quizView.style.cssText = 'margin: 0; padding: 0; width: 100%; height: 100%;';
+        
+        // ✅ Ajouter la bannière de marque Avantage Plus au début de la vue quiz
+        const banner = document.createElement('div');
+        banner.className = 'brand-banner';
+        banner.innerHTML = `<img src="assets/images/logos/Bandeau AVEX.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">`;
+        quizView.appendChild(banner);
+        
         document.querySelector('main').appendChild(quizView);
     }
     initializeQuizEventDelegation(quizView);
@@ -482,6 +495,10 @@ function renderQuestion() {
     setHasCurrentQuestionBeenAnswered(false);
     
     quizView.innerHTML = `
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="assets/images/logos/Bandeau AVEX.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
         <!-- En-tête du quiz -->
         <div class="bg-white border-b border-gray-200 shadow-sm">
             <div class="max-w-5xl mx-auto px-6 py-4">
@@ -522,9 +539,12 @@ function renderQuestion() {
                     </div>
                 </div>
                 
-                <!-- Barre de progression - ROUGE AVANTAGE PLUS PROFESSIONNEL -->
-                <div class="mt-4 w-full bg-gray-300 rounded-full h-4 overflow-hidden border-2 border-gray-700 shadow-inner" style="background-color: #D1D5DB !important; border-color: #374151 !important;">
-                    <div id="quiz-progress-bar" class="h-full rounded-full transition-all duration-500 ease-out" style="background: linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%) !important; width: ${Math.max(0, Math.min(100, ((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100))}%; box-shadow: 0 2px 6px rgba(196, 30, 58, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);"></div>
+                <!-- Barre de progression - ROUGE AVANTAGE PLUS PROFESSIONNEL AVEC ANIMATIONS -->
+                <div class="mt-4 w-full bg-gray-300 rounded-full h-5 overflow-hidden border-2 border-gray-700 shadow-lg relative" style="background-color: #D1D5DB !important; border-color: #374151 !important; box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1);">
+                    <div id="quiz-progress-bar" class="h-full rounded-full transition-all duration-600 ease-out relative overflow-hidden" style="background: linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%) !important; width: ${Math.max(0, Math.min(100, ((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100))}%; box-shadow: 0 2px 8px rgba(196, 30, 58, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" style="animation: shimmer 2s infinite; transform: translateX(-100%);"></div>
+                    </div>
+                    <div id="quiz-progress-percent" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 pointer-events-none" style="z-index: 10;">${Math.round(((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100)}%</div>
                 </div>
             </div>
         </div>
@@ -612,11 +632,19 @@ function updateProgressBar() {
     const progressPercent = Math.max(0, Math.min(100, ((currentQuestionIndex + 1) / totalQuestions) * 100));
     
     const progressBar = document.getElementById('quiz-progress-bar');
+    const progressPercentElement = document.getElementById('quiz-progress-percent');
+    
     if (progressBar) {
         progressBar.style.width = `${progressPercent}%`;
         // ✅ CORRECTION: Forcer le style rouge pour garantir la visibilité
         progressBar.style.background = 'linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%)';
         progressBar.style.setProperty('background', 'linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%)', 'important');
+        
+        // Mettre à jour le pourcentage affiché
+        if (progressPercentElement) {
+            progressPercentElement.textContent = `${Math.round(progressPercent)}%`;
+        }
+        
         console.log(`📊 Barre de progression mise à jour: ${progressPercent.toFixed(1)}% (Question ${currentQuestionIndex + 1}/${totalQuestions})`);
     }
 }
@@ -790,6 +818,10 @@ async function showResults() {
     const quizView = document.getElementById('quiz-view');
     
     quizView.innerHTML = `
+        <!-- Bannière de Marque Avantage Plus -->
+        <div class="brand-banner">
+            <img src="assets/images/logos/Bandeau AVEX.png" alt="Protection Mécanique Exceptionnelle - Avantage Plus" class="banner-image">
+        </div>
         <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12 px-4">
             <div class="max-w-4xl mx-auto">
                 <!-- Carte de résultat principale -->
@@ -1114,6 +1146,28 @@ function returnToDashboard() {
     // Toast de confirmation
     toast.info('Retour au tableau de bord', 2000);
     
-    // Recharger le dashboard pour mettre à jour les stats
-    setTimeout(() => window.location.reload(), 500);
+    // ✅ FIX: Recharger les données du dashboard (sans reload) pour afficher la progression à jour
+    setTimeout(async () => {
+        try {
+            console.log('🔄 Début rechargement dashboard après quiz...');
+            
+            // ✅ CRITIQUE: Invalider TOUT le cache avant de recharger pour forcer la lecture depuis Firestore
+            const { invalidateByDataType } = await import('./services/cache-service.js');
+            invalidateByDataType('annualProgress');
+            invalidateByDataType('monthlyProgress');
+            invalidateByDataType('quizResults');
+            console.log('🗑️ Cache invalidé');
+            
+            // ✅ Recharger le dashboard avec les nouvelles données
+            const { initializeDashboard } = await import('./dashboard.js');
+            if (typeof initializeDashboard === 'function') {
+                await initializeDashboard();
+                console.log('✅ Dashboard rechargé après quiz');
+            }
+        } catch (error) {
+            console.error('❌ Erreur rechargement dashboard:', error);
+            // Fallback: recharger la page si l'import échoue
+            window.location.reload();
+        }
+    }, 1500); // ✅ Augmenté de 500ms à 1500ms pour laisser le temps à Firestore d'écrire
 }
