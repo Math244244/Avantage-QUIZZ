@@ -20,6 +20,7 @@
     "test:e2e:report": "playwright show-report",
     "lighthouse": "lhci autorun",
     "lighthouse:report": "start lighthouse-reports/index.html",
+    "convert:webp": "node scripts/convert-images-to-webp.js",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
     "format": "prettier . --write",

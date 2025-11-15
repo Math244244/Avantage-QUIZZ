@@ -31,10 +31,17 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <img src="assets/images/logos/logo-avantage-plus-red-transparent.png" 
-                 alt="Avantage Plus Logo" 
-                 class="sidebar-logo"
-                 onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
+            <picture>
+                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
+                <img src="assets/images/logos/logo-avantage-plus-red-transparent.png" 
+                     alt="Avantage Plus Logo" 
+                     class="sidebar-logo"
+                     width="150"
+                     height="150"
+                     decoding="async"
+                     onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            </picture>
             <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
                 AP
             </div>

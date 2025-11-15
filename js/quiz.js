@@ -367,6 +367,7 @@ export async function startQuiz(moduleId) {
         renderQuestion();
         startTimer();
         updateScoreDisplay();
+        updateProgressBar(); // ✅ CORRECTION: Mettre à jour la barre de progression au démarrage
         
         // Toast de succès
         updateLoadingToast(loadingToast, `${questions.length} questions chargées !`, 'success');
@@ -521,9 +522,9 @@ function renderQuestion() {
                     </div>
                 </div>
                 
-                <!-- Barre de progression - DORÉE AVANTAGE PLUS -->
-                <div class="mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                    <div class="h-2 rounded-full transition-all duration-300 progress-bar-shine" style="background: var(--ap-gradient-gold); width: ${((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100}%; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);"></div>
+                <!-- Barre de progression - ROUGE AVANTAGE PLUS PROFESSIONNEL -->
+                <div class="mt-4 w-full bg-gray-300 rounded-full h-4 overflow-hidden border-2 border-gray-700 shadow-inner" style="background-color: #D1D5DB !important; border-color: #374151 !important;">
+                    <div id="quiz-progress-bar" class="h-full rounded-full transition-all duration-500 ease-out" style="background: linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%) !important; width: ${Math.max(0, Math.min(100, ((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100))}%; box-shadow: 0 2px 6px rgba(196, 30, 58, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);"></div>
                 </div>
             </div>
         </div>
@@ -594,6 +595,30 @@ function renderQuestion() {
         </div>
     `;
     updateScoreDisplay();
+    updateProgressBar();
+}
+
+// Mettre à jour la barre de progression
+function updateProgressBar() {
+    const currentQuiz = getCurrentQuiz();
+    if (!currentQuiz || !currentQuiz.questions || currentQuiz.questions.length === 0) {
+        return;
+    }
+    
+    const currentQuestionIndex = getCurrentQuestionIndex();
+    const totalQuestions = currentQuiz.questions.length;
+    
+    // Calculer le pourcentage (sécurisé)
+    const progressPercent = Math.max(0, Math.min(100, ((currentQuestionIndex + 1) / totalQuestions) * 100));
+    
+    const progressBar = document.getElementById('quiz-progress-bar');
+    if (progressBar) {
+        progressBar.style.width = `${progressPercent}%`;
+        // ✅ CORRECTION: Forcer le style rouge pour garantir la visibilité
+        progressBar.style.background = 'linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%)';
+        progressBar.style.setProperty('background', 'linear-gradient(135deg, #C41E3A 0%, #A01A2E 50%, #8B1429 100%)', 'important');
+        console.log(`📊 Barre de progression mise à jour: ${progressPercent.toFixed(1)}% (Question ${currentQuestionIndex + 1}/${totalQuestions})`);
+    }
 }
 
 // Gérer la réponse de l'utilisateur
@@ -704,6 +729,8 @@ function nextQuestion() {
     const newIndex = getCurrentQuestionIndex();
     if (newIndex < currentQuiz.questions.length) {
         renderQuestion();
+        // ✅ CORRECTION: Mettre à jour la barre de progression explicitement
+        updateProgressBar();
     } else {
         showResults();
     }

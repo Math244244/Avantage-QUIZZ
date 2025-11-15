@@ -5,12 +5,22 @@
  * @param {string} str - Chaîne à échapper
  * @returns {string} Chaîne sécurisée
  */
+const HTML_ESCAPE_MAP = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '`': '&#x60;'
+};
+
+const HTML_ESCAPE_REGEX = /[&<>"'`]/g;
+
 export function sanitizeHTML(str) {
-    if (!str || typeof str !== 'string') return '';
+    if (str === null || str === undefined) return '';
     
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
+    const value = String(str);
+    return value.replace(HTML_ESCAPE_REGEX, char => HTML_ESCAPE_MAP[char] || char);
 }
 
 /**

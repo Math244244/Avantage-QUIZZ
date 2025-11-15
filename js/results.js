@@ -416,7 +416,8 @@ function updateProgressChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true, // ✅ CORRECTION: Éviter les colonnes infinies
+            aspectRatio: 1.5, // Ratio largeur/hauteur fixe
             plugins: {
                 legend: {
                     display: false
@@ -452,7 +453,9 @@ function updateModuleChart() {
     // Compter les quiz par module
     const moduleCounts = {};
     filteredResults.forEach(r => {
-        moduleCounts[r.module] = (moduleCounts[r.module] || 0) + 1;
+        // ✅ CORRECTION: Utiliser moduleId (champ Firestore) au lieu de module
+        const moduleId = r.moduleId || r.module || 'auto'; // Fallback pour rétro-compatibilité
+        moduleCounts[moduleId] = (moduleCounts[moduleId] || 0) + 1;
     });
     
     console.log('📊 moduleCounts:', moduleCounts);
@@ -517,10 +520,17 @@ function updateModuleChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true, // ✅ CORRECTION: Éviter les colonnes infinies
+            aspectRatio: 1, // Ratio 1:1 pour graphique circulaire
             plugins: {
                 legend: {
-                    position: 'bottom'
+                    position: 'bottom',
+                    labels: {
+                        padding: 15,
+                        font: {
+                            size: 12
+                        }
+                    }
                 }
             }
         }
@@ -577,7 +587,9 @@ function createResultCardElement(result) {
 
     const scoreColor = result.score >= 80 ? 'text-green-600' : result.score >= 60 ? 'text-yellow-600' : 'text-red-600';
     // ✅ CORRECTION SECTION 4 : Protection XSS - Échapper toutes les données utilisateur
-    const moduleLabel = escapeHtml(moduleNames[result.module] || result.module || 'Module');
+    // ✅ CORRECTION: Utiliser moduleId au lieu de module
+    const moduleId = result.moduleId || result.module || 'auto';
+    const moduleLabel = escapeHtml(moduleNames[moduleId] || moduleId || 'Module');
     const monthLabelRaw = result.month ? String(result.month).trim() : '';
     const yearLabelRaw = result.year ? String(result.year).trim() : '';
     const periodLabel = escapeHtml([monthLabelRaw, yearLabelRaw].filter(Boolean).join(' ').trim());

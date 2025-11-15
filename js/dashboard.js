@@ -662,11 +662,13 @@ function initializeDashboardEventDelegation() {
             return;
         }
 
-        const moduleCard = event.target.closest('.module-card');
+        // ✅ CORRECTION: Support des nouvelles cartes module-card-professional ET module-card
+        const moduleCard = event.target.closest('.module-card, .module-card-professional, [data-module]');
         if (moduleCard) {
             event.preventDefault();
             const module = moduleCard.getAttribute('data-module');
             if (module) {
+                console.log('🎯 Module sélectionné:', module);
                 startQuiz(module);
             }
         }

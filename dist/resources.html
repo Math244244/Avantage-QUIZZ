@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ressources - QuizPro 2025</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         .view-hidden { display: none; }
         .fade-in { animation: fadeIn 0.3s ease-in; }
@@ -12,27 +12,27 @@
         .file-icon { transition: transform 0.2s; }
         .file-card:hover .file-icon { transform: scale(1.1); }
     </style>
-  <script type="module" crossorigin src="/assets/micro-interactions-D_8Ux4Hy.js"></script>
+  <script type="module" crossorigin src="/assets/micro-interactions-CO1fend8.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
-  <script type="module" crossorigin src="/assets/quiz-CJ_Na2QZ.js"></script>
-  <script type="module" crossorigin src="/assets/services-Xx4j0R6D.js"></script>
+  <script type="module" crossorigin src="/assets/quiz-MXwz6Ea-.js"></script>
+  <script type="module" crossorigin src="/assets/services-B8oy3dvD.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <script type="module" crossorigin src="/assets/admin-DIKPm6mi.js"></script>
+  <script type="module" crossorigin src="/assets/admin-MwW8t9Ay.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-  <script type="module" crossorigin src="/assets/resources-QLFnHRW1.js"></script>
+  <script type="module" crossorigin src="/assets/resources-BwAOLOsg.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-BFjCaGVY.css">
+  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-Da1vdbyN.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex bg-gradient-to-br from-slate-50 to-slate-100">
@@ -46,10 +46,17 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
-                 alt="Avantage Plus Logo" 
-                 class="sidebar-logo"
-                 onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
+            <picture>
+                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
+                <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
+                     alt="Avantage Plus Logo" 
+                     class="sidebar-logo"
+                     width="150"
+                     height="150"
+                     decoding="async"
+                     onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            </picture>
             <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
                 AP
             </div>
@@ -311,6 +318,6 @@
         </div>
     </div>
     </main>
-
+
 </body>
 </html>

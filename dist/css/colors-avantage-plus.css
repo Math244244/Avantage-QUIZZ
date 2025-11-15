@@ -147,6 +147,13 @@
   /* Dégradé success - Score élevé (avec argent) */
   --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #4A5568 100%);
   
+  /* Dégradé doré - Barre de progression, badges premium */
+  --ap-gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+  --ap-gold: #D4AF37;
+  --ap-gold-dark: #B8941F;
+  --ap-gold-light: #E8D5A3;
+  --ap-shadow-gold: 0 0 10px rgba(212, 175, 55, 0.5);
+  
   
   /* ========================================
      OMBRES (Box Shadows)

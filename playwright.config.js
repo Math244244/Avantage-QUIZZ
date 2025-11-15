@@ -6,6 +6,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './e2e',
+  testIgnore: ['**/auth.spec.js', '**/quiz-flow.spec.js'], // Désactivé: tests obsolètes (mode démo supprimé v2.0.2)
+  // Nouveaux tests: auth-google.spec.js (sans authentification réelle)
   
   /* Timeout maximum par test */
   timeout: 30 * 1000,

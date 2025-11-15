@@ -1,0 +1,58 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Aller au contenu principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Navigation principale" [ref=e3]:
+    - paragraph [ref=e5]:
+      - text: QuizPro
+      - text: by Avantage Plus
+    - generic [ref=e6]:
+      - menuitem "Tableau de Bord" [ref=e7] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e11]: Tableau de Bord
+      - menuitem "Quiz" [ref=e12] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Quiz
+      - link "Mes Résultats" [ref=e17] [cursor=pointer]:
+        - /url: /results.html
+        - img [ref=e19]
+        - generic [ref=e21]: Mes Résultats
+      - link "Ressources" [ref=e22] [cursor=pointer]:
+        - /url: /resources.html
+        - img [ref=e24]
+        - generic [ref=e26]: Ressources
+      - link "Gestion Admin ADMIN" [ref=e27] [cursor=pointer]:
+        - /url: /admin.html
+        - img [ref=e29]
+        - generic [ref=e32]: Gestion Admin
+        - generic [ref=e33]: ADMIN
+    - generic [ref=e34]:
+      - generic [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]: 👑
+        - text: Administrateur
+      - generic [ref=e37] [cursor=pointer]:
+        - img "Avatar utilisateur" [ref=e38]
+        - generic [ref=e39]:
+          - paragraph [ref=e40]: Chargement...
+          - button "Déconnexion" [ref=e41]
+      - button "Activer le mode sombre" [ref=e42] [cursor=pointer]:
+        - img [ref=e43]
+  - main [ref=e45]:
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - img [ref=e51]
+        - heading "QuizPro" [level=1] [ref=e53]
+        - paragraph [ref=e54]: by Avantage Plus
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - heading "Bienvenue 👋" [level=2] [ref=e58]
+          - paragraph [ref=e59]: Connectez-vous pour accéder à vos modules de formation et suivre votre progression.
+        - button "Se connecter avec Google" [ref=e60] [cursor=pointer]:
+          - img [ref=e61]
+          - generic [ref=e66]: Connexion avec Google
+      - paragraph [ref=e68]:
+        - img [ref=e69]
+        - text: Connexion sécurisée par Firebase
+```

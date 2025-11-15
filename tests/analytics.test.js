@@ -193,11 +193,15 @@ describe('Analytics', () => {
         });
     });
     
-    describe('setUserProperties()', () => {
+    describe('setAnalyticsUserProperties()', () => {
         it('devrait définir les propriétés utilisateur', async () => {
-            const { setUserProperties } = await import('../js/analytics.js');
+            // Mock window et navigator pour éviter les erreurs
+            global.window = { location: { pathname: '/' } };
+            global.navigator = { serviceWorker: {} };
             
-            setUserProperties({ email: 'test@example.com' });
+            const { setAnalyticsUserProperties } = await import('../js/analytics.js');
+            
+            setAnalyticsUserProperties({ email: 'test@example.com' });
             
             expect(mockSetUserProperties).toHaveBeenCalledWith(
                 expect.anything(),

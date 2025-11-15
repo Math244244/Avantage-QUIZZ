@@ -14,12 +14,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/assets/auth-D3GUYhA_.js" as="script">
+    <!-- Preload Critical Resources -->
     <link rel="dns-prefetch" href="https://firestore.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googleapis.com">
     
-    <!-- CSS -->
+    <!-- CSS -->
     
     <!-- ✅ SCRIPT CRITIQUE: Forcer le background blanc IMMÉDIATEMENT (avant tout le reste) -->
     <script>
@@ -233,12 +232,12 @@
             background: #64748b;
         }
     </style>
-  <script type="module" crossorigin src="/assets/main-h4TfvKZs.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-D_8Ux4Hy.js">
-  <link rel="modulepreload" crossorigin href="/assets/quiz-CJ_Na2QZ.js">
-  <link rel="modulepreload" crossorigin href="/assets/services-Xx4j0R6D.js">
-  <link rel="modulepreload" crossorigin href="/assets/admin-DIKPm6mi.js">
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-BFjCaGVY.css">
+  <script type="module" crossorigin src="/assets/main-BRz1ijU6.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-CO1fend8.js">
+  <link rel="modulepreload" crossorigin href="/assets/quiz-MXwz6Ea-.js">
+  <link rel="modulepreload" crossorigin href="/assets/services-B8oy3dvD.js">
+  <link rel="modulepreload" crossorigin href="/assets/admin-MwW8t9Ay.js">
+  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-Da1vdbyN.css">
   <link rel="stylesheet" crossorigin href="/assets/main-DaFhL-Ce.css">
 </head>
 <body class="h-full flex">
@@ -252,12 +251,19 @@
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
         <!-- Logo Avantage Plus -->
         <div class="sidebar-logo-container">
-            <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
-                 alt="Avantage Plus Logo" 
-                 class="sidebar-logo"
-                 onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <!-- ✅ P1-4: Image optimisée avec WebP et dimensions pour éviter layout shift -->
+            <picture>
+                <source srcset="assets/images/logos/logo-avantage-plus-red-transparent.webp" type="image/webp">
+                <img src="/assets/logo-avantage-plus-red-transparent-DgGYNm5A.png" 
+                     alt="Avantage Plus Logo" 
+                     class="sidebar-logo"
+                     width="150"
+                     height="150"
+                     decoding="async"
+                     onerror="this.onerror=null; this.style.display='none'; const fallback = this.parentElement.nextElementSibling; if(fallback) fallback.style.display='flex';">
+            </picture>
             <!-- Fallback si logo non trouvé -->
-            <div class="sidebar-logo" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
+            <div class="sidebar-logo sidebar-logo-fallback" style="display: none; background: var(--ap-red-primary); border-radius: 50%; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 900;">
                 AP
             </div>
             <p class="sidebar-brand-text">QuizPro<br><span style="font-size: 0.6em; opacity: 0.8;">by Avantage Plus</span></p>
@@ -469,90 +475,96 @@
                     <p class="text-xl text-slate-600">Choisissez votre domaine d'expertise et démarrez votre évaluation</p>
                 </div>
 
-                <!-- Grille de sélection des 4 modules - Version AGRANDIE (+40%) -->
+                <!-- Grille de sélection des 4 modules - DESIGN SIMPLIFIÉ ET COLORÉ -->
                 <div class="module-selection-grid-enhanced">
-                <button type="button" data-module="auto" class="module-card module-card-enhanced group relative overflow-hidden p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-ap-gold cursor-pointer text-left w-full" style="background: linear-gradient(135deg, #C41E3A 0%, #8B1429 100%);" aria-label="Commencer le module Auto (AT-AVE-AVEX)">
-                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <div class="relative flex flex-col items-center text-center h-full justify-between">
-                        <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-2 border-ap-gold">
-                            <svg aria-hidden="true" class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.14a1.5 1.5 0 0 0-1.38-.83L6.48.31a1.5 1.5 0 0 0-1.38.83L.03 13.6a1.5 1.5 0 0 0 1.34 2.14l.84-.21a3 3 0 0 0 1.98-.94l.21-.21c.21-.21.46-.37.71-.52h.23c.31.2.66.33 1.04.33h7.94c.38 0 .73-.13 1.04-.33h.23c.25.15.5.31.71.52l.21.21a3 3 0 0 0 1.98.94l.84.21a1.5 1.5 0 0 0 1.34-2.14L18.9 1.14ZM6.6 9.38c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Zm10.8 0c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Z"/></svg>
+                <!-- Module AUTO - Rouge Avantage Plus VIF -->
+                <button type="button" data-module="auto" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #C41E3A !important; min-height: 320px; border: 3px solid #8B1429;" aria-label="Commencer le module Auto (AT-AVE-AVEX)">
+                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
+                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
+                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
+                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.9 1.14a1.5 1.5 0 0 0-1.38-.83L6.48.31a1.5 1.5 0 0 0-1.38.83L.03 13.6a1.5 1.5 0 0 0 1.34 2.14l.84-.21a3 3 0 0 0 1.98-.94l.21-.21c.21-.21.46-.37.71-.52h.23c.31.2.66.33 1.04.33h7.94c.38 0 .73-.13 1.04-.33h.23c.25.15.5.31.71.52l.21.21a3 3 0 0 0 1.98.94l.84.21a1.5 1.5 0 0 0 1.34-2.14L18.9 1.14ZM6.6 9.38c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Zm10.8 0c-.66 0-1.2-.54-1.2-1.2s.54-1.2 1.2-1.2 1.2.54 1.2 1.2-.54 1.2-1.2 1.2Z"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="flex-1 text-white">
-                            <h3 class="text-2xl font-bold mb-2">Auto</h3>
-                            <p class="text-sm text-white mb-4 opacity-90">AT-AVE-AVEX</p>
-                        </div>
-                        <div class="w-full pt-4 border-t border-white/20">
-                            <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">Auto</h3>
+                        <p class="text-base text-white/95 mb-6 font-semibold">AT-AVE-AVEX</p>
+                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
+                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
                                 Commencer
                                 <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </span>
                         </div>
                     </div>
                 </button>
                     
-                <button type="button" data-module="loisir" class="module-card module-card-enhanced group relative overflow-hidden p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-ap-silver cursor-pointer text-left w-full" style="background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);" aria-label="Commencer le module Loisir (VTT, Motoneige)">
-                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <div class="relative flex flex-col items-center text-center h-full justify-between">
-                        <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-2 border-white/50">
-                            <svg aria-hidden="true" class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="m21.35 6.6-3.8-3.8c-.34-.34-.8-.53-1.28-.53s-.94.19-1.28.53L12 5.8 9.03 2.83c-.34-.34-.8-.53-1.28-.53s-.94.19-1.28.53l-3.8 3.8c-.34.34-.53.8-.53 1.28s.19.94.53 1.28L5.8 12l-3.03 3.03c-.34.34-.53.8-.53 1.28s.19.94.53 1.28l3.8 3.8c.34.34.8.53 1.28.53s.94-.19 1.28-.53L12 18.2l2.97 2.97c.34.34.8.53 1.28.53s.94-.19 1.28-.53l3.8-3.8c.34.34.53-.8.53-1.28s-.19-.94-.53-1.28L18.2 12l3.15-3.12c.34-.34.53-.8.53-1.28s-.19-.94-.53-1.28ZM12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3Z"/></svg>
+                <!-- Module LOISIR - Doré Avantage Plus VIF -->
+                <button type="button" data-module="loisir" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #D4AF37 !important; min-height: 320px; border: 3px solid #B8941F;" aria-label="Commencer le module Loisir (VTT, Motoneige)">
+                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
+                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
+                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
+                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="flex-1 text-white">
-                            <h3 class="text-2xl font-bold mb-2">Loisir</h3>
-                            <p class="text-sm text-white mb-4 opacity-90">VTT, Motoneige</p>
-                        </div>
-                        <div class="w-full pt-4 border-t border-white/20">
-                            <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">Loisir</h3>
+                        <p class="text-base text-white/95 mb-6 font-semibold">VTT, Motoneige</p>
+                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
+                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
                                 Commencer
                                 <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </span>
                         </div>
                     </div>
                 </button>
                     
-                <button type="button" data-module="vr" class="module-card module-card-enhanced group relative overflow-hidden p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-ap-silver cursor-pointer text-left w-full" style="background: linear-gradient(135deg, #718096 0%, #4A5568 100%);" aria-label="Commencer le module VR (Véhicules Récréatifs)">
-                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <div class="relative flex flex-col items-center text-center h-full justify-between">
-                        <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-2 border-white/50">
-                            <svg aria-hidden="true" class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8.69V6c0-1.1-.9-2-2-2h-3.32c-.4-.68-1.04-1.23-1.79-1.58L12 2 8.11 2.42C7.36 2.77 6.72 3.32 6.32 4H3c-1.1 0-2 .9-2 2v2.69A5.006 5.006 0 0 0 0 13v5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h18v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-5a5.006 5.006 0 0 0-1-3.31Z"/></svg>
+                <!-- Module VR - Orange VIF -->
+                <button type="button" data-module="vr" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #FF9F43 !important; min-height: 320px; border: 3px solid #E67E22;" aria-label="Commencer le module VR (Véhicules Récréatifs)">
+                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
+                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
+                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
+                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 8.69V6c0-1.1-.9-2-2-2h-3.32c-.4-.68-1.04-1.23-1.79-1.58L12 2 8.11 2.42C7.36 2.77 6.72 3.32 6.32 4H3c-1.1 0-2 .9-2 2v2.69A5.006 5.006 0 0 0 0 13v5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h18v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-5a5.006 5.006 0 0 0-1-3.31Z"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="flex-1 text-white">
-                            <h3 class="text-2xl font-bold mb-2">VR</h3>
-                            <p class="text-sm text-white mb-4 opacity-90">Véhicules Récréatifs</p>
-                        </div>
-                        <div class="w-full pt-4 border-t border-white/20">
-                            <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">VR</h3>
+                        <p class="text-base text-white/95 mb-6 font-semibold">Véhicules Récréatifs</p>
+                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
+                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
                                 Commencer
                                 <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </span>
                         </div>
                     </div>
                 </button>
                     
-                <button type="button" data-module="tracteur" class="module-card module-card-enhanced group relative overflow-hidden p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-ap-silver cursor-pointer text-left w-full" style="background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);" aria-label="Commencer le module Tracteur (Équipement Agricole)">
-                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <div class="relative flex flex-col items-center text-center h-full justify-between">
-                        <div class="bg-white/20 backdrop-blur-sm p-5 rounded-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-2 border-white/50">
-                            <svg aria-hidden="true" class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2ZM5 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2Z"/></svg>
+                <!-- Module TRACTEUR - Vert VIF -->
+                <button type="button" data-module="tracteur" class="module-card module-card-enhanced group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer w-full" style="background: #28A745 !important; min-height: 320px; border: 3px solid #1E7E34;" aria-label="Commencer le module Tracteur (Équipement Agricole)">
+                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-8 text-center">
+                        <div class="mb-6 transform group-hover:scale-110 transition-all duration-300">
+                            <div class="bg-white/30 p-6 rounded-2xl border-3 border-white/50">
+                                <svg aria-hidden="true" class="w-16 h-16 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2ZM5 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2Z"/>
+                                    <path d="M19 8h-1V7c0-1.1-.9-2-2-2h-2c0-1.1-.9-2-2-2H8C6.9 3 6 3.9 6 5v1H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM8 5h8v3H8V5zm11 14H5v-2h14v2zm0-5H5V8h14v6z"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="flex-1 text-white">
-                            <h3 class="text-2xl font-bold mb-2">Tracteur</h3>
-                            <p class="text-sm text-white mb-4 opacity-90">Équipement Agricole</p>
-                        </div>
-                        <div class="w-full pt-4 border-t border-white/20">
-                            <span class="text-white font-semibold flex items-center justify-center gap-2 group-hover:gap-4 transition-all">
+                        <h3 class="text-3xl font-black text-white mb-2 drop-shadow-md">Tracteur</h3>
+                        <p class="text-base text-white/95 mb-6 font-semibold">Équipement Agricole</p>
+                        <div class="mt-auto w-full pt-4 border-t-2 border-white/40">
+                            <span class="inline-flex items-center gap-2 text-white font-bold text-base px-6 py-3 bg-white/25 rounded-xl border-2 border-white/50 group-hover:bg-white/35 transition-all duration-300">
                                 Commencer
                                 <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </span>
                         </div>
@@ -620,8 +632,8 @@
         })();
     </script>
 
-    <!-- Firebase & App Scripts -->
-    <!-- Gestionnaires d'erreurs et retry (Section 1 - Architecture) -->
+    <!-- Firebase & App Scripts -->
+    <!-- Gestionnaires d'erreurs et retry (Section 1 - Architecture) -->
     
     <!-- Service Worker: désactivé en localhost pour éviter le cache en dev -->
     <script>

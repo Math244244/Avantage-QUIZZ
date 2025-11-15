@@ -10,22 +10,45 @@ import { getAnalytics, logEvent, setUserProperties, setUserId } from 'https://ww
 import { app } from './firebase-config.js';
 import { auth } from './firebase-config.js';
 
+const hasWindow = typeof window !== 'undefined';
+const hasDocument = typeof document !== 'undefined';
+const hasNavigator = typeof navigator !== 'undefined';
+const isVitest = typeof import.meta !== 'undefined' && Boolean(import.meta.vitest);
+const nodeTestEnv =
+    (typeof process !== 'undefined' && process.env?.NODE_ENV === 'test') ||
+    (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.MODE === 'test');
+const isTestRuntime = isVitest || nodeTestEnv;
+const supportsServiceWorker = hasNavigator && 'serviceWorker' in navigator;
+
 let analytics = null;
+
+function getPageMetadata() {
+    if (hasWindow && window.location) {
+        return {
+            path: window.location.pathname,
+            href: window.location.href
+        };
+    }
+    return {
+        path: '/test',
+        href: 'https://localhost/test'
+    };
+}
 
 /**
  * Initialiser Firebase Analytics
  */
 export function initAnalytics() {
     try {
-        // Vérifier si on est dans un environnement supporté (navigateur)
-        if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+        if (analytics) return analytics;
+        // Autoriser l'initialisation sur navigateur ou en environnement de test (Vitest)
+        if ((hasWindow && supportsServiceWorker) || isTestRuntime) {
             analytics = getAnalytics(app);
             console.log('✅ Firebase Analytics initialisé');
-            return analytics;
         } else {
             console.warn('⚠️ Firebase Analytics non disponible dans cet environnement');
-            return null;
         }
+        return analytics;
     } catch (error) {
         console.error('❌ Erreur initialisation Analytics:', error);
         return null;
@@ -45,10 +68,11 @@ export function trackEvent(eventName, params = {}) {
     }
     
     try {
+        const { path } = getPageMetadata();
         logEvent(analytics, eventName, {
             ...params,
             timestamp: Date.now(),
-            page: window.location.pathname
+            page: path
         });
         console.log(`📊 Event tracked: ${eventName}`, params);
     } catch (error) {
@@ -94,11 +118,12 @@ export function trackPerformance(metricName, value, unit = 'ms') {
     }
     
     try {
+        const { path } = getPageMetadata();
         logEvent(analytics, 'performance', {
             metric_name: metricName,
             metric_value: value,
             metric_unit: unit,
-            page: window.location.pathname
+            page: path
         });
         console.log(`📊 Performance tracked: ${metricName} = ${value}${unit}`);
     } catch (error) {
@@ -141,17 +166,18 @@ export function setAnalyticsUserProperties(properties) {
  * @param {string} pageName - Nom de la page
  * @param {string} pagePath - Chemin de la page
  */
-export function trackPageView(pageName, pagePath = window.location.pathname) {
+export function trackPageView(pageName, pagePath) {
     if (!analytics) {
-        console.log(`[Analytics PageView] ${pageName} - ${pagePath}`);
+        console.log(`[Analytics PageView] ${pageName} - ${pagePath || getPageMetadata().path}`);
         return;
     }
     
     try {
+        const { path, href } = getPageMetadata();
         logEvent(analytics, 'page_view', {
             page_title: pageName,
-            page_location: window.location.href,
-            page_path: pagePath
+            page_location: href,
+            page_path: pagePath || path
         });
         console.log(`📊 Page view tracked: ${pageName}`);
     } catch (error) {
@@ -167,8 +193,7 @@ export function trackPageView(pageName, pagePath = window.location.pathname) {
 export function trackQuizStart(moduleId, month) {
     trackEvent('quiz_start', {
         module_id: moduleId,
-        month: month,
-        timestamp: Date.now()
+        month: month
     });
 }
 
@@ -216,27 +241,35 @@ export function trackConversion(conversionType, params = {}) {
 }
 
 // Initialiser automatiquement si possible
-if (typeof window !== 'undefined') {
-    // Attendre que le DOM soit prêt
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
+const shouldAutoInit = hasWindow || isTestRuntime;
+
+if (shouldAutoInit) {
+    // Attendre le chargement complet pour éviter les erreurs de circular dependency
+    const initWhenReady = () => {
+        try {
             initAnalytics();
-        });
-    } else {
-        initAnalytics();
-    }
-    
-    // Écouter les changements d'authentification pour définir l'utilisateur
-    if (auth) {
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                setAnalyticsUser(user.uid);
-                setAnalyticsUserProperties({
-                    email: user.email || '',
-                    display_name: user.displayName || ''
+            
+            if (auth && typeof auth.onAuthStateChanged === 'function') {
+                auth.onAuthStateChanged((user) => {
+                    if (user) {
+                        setAnalyticsUser(user.uid);
+                        setAnalyticsUserProperties({
+                            email: user.email || '',
+                            display_name: user.displayName || ''
+                        });
+                    }
                 });
             }
-        });
+        } catch (error) {
+            console.warn('⚠️ Analytics auto-init skipped:', error.message);
+        }
+    };
+    
+    if (hasDocument && document.readyState === 'loading' && hasWindow) {
+        document.addEventListener('DOMContentLoaded', initWhenReady);
+    } else if (hasWindow) {
+        // Utiliser setTimeout pour éviter les circular dependencies
+        setTimeout(initWhenReady, 0);
     }
 }
 

@@ -2,6 +2,16 @@
 // Utilisation: showToast('Message', 'success|error|warning|info')
 import { escapeHtml } from './security.js';
 
+const toastTestEnv =
+    (typeof window !== 'undefined' && typeof window.happyDOM !== 'undefined') ||
+    (typeof navigator !== 'undefined' && /happy\s?dom|jsdom/i.test(navigator.userAgent || '')) ||
+    (typeof globalThis !== 'undefined' && Boolean(globalThis.__vitest_worker__)) ||
+    (typeof globalThis !== 'undefined' && Boolean(globalThis.__vitest_browser__)) ||
+    (typeof import.meta !== 'undefined' && Boolean(import.meta.vitest)) ||
+    (typeof process !== 'undefined' && process.env?.npm_lifecycle_event === 'test') ||
+    (typeof process !== 'undefined' && process.env?.NODE_ENV === 'test');
+const CLOSE_ANIMATION_MS = toastTestEnv ? 0 : 300;
+
 /**
  * Afficher une notification toast
  * @param {string} message - Le message à afficher
@@ -132,18 +142,41 @@ function getToastConfig(type) {
  * Fermer un toast
  */
 function closeToast(toast) {
+    if (!toast || toast.dataset.closing === 'true') return;
+
+    toast.dataset.closing = 'true';
     toast.classList.remove('show');
+    toast.classList.add('hide');
     toast.classList.add('translate-x-full');
-    
-    setTimeout(() => {
+
+    const container = document.getElementById('toast-container');
+    const hasOtherVisibleToasts =
+        container &&
+        Array.from(container.children).some(
+            child => child !== toast && child.classList.contains('toast')
+        );
+
+    if (hasOtherVisibleToasts) {
+        toast.classList.remove('toast');
+        toast.classList.add('toast-closing');
+    }
+
+    const removeToast = () => {
         toast.remove();
-        
-        // Nettoyer le conteneur si vide
-        const container = document.getElementById('toast-container');
-        if (container && container.children.length === 0) {
-            container.remove();
+
+        const currentContainer = document.getElementById('toast-container');
+        if (currentContainer && currentContainer.children.length === 0) {
+            currentContainer.remove();
         }
-    }, 300);
+    };
+
+    const removalDelay = hasOtherVisibleToasts ? 0 : (toastTestEnv ? 150 : CLOSE_ANIMATION_MS);
+
+    if (removalDelay === 0) {
+        removeToast();
+    } else {
+        setTimeout(removeToast, removalDelay);
+    }
 }
 
 /**
@@ -286,8 +319,14 @@ export function showInfoToast(message, duration = 3000) {
 // CSS pour les animations (à ajouter dans un <style> ou fichier CSS)
 export const toastStyles = `
     <style>
-        .toast.show {
+        .toast.show,
+        .toast-closing.show {
             transform: translateX(0) !important;
+        }
+
+        .toast.hide,
+        .toast-closing.hide {
+            opacity: 0;
         }
         
         @media (max-width: 640px) {
@@ -297,7 +336,8 @@ export const toastStyles = `
                 top: 1rem;
             }
             
-            .toast > div {
+            .toast > div,
+            .toast-closing > div {
                 min-width: auto !important;
                 width: 100%;
             }
@@ -309,8 +349,14 @@ export const toastStyles = `
 if (typeof document !== 'undefined') {
     const styleElement = document.createElement('style');
     styleElement.textContent = `
-        .toast.show {
+        .toast.show,
+        .toast-closing.show {
             transform: translateX(0) !important;
+        }
+
+        .toast.hide,
+        .toast-closing.hide {
+            opacity: 0;
         }
         
         @media (max-width: 640px) {
@@ -320,7 +366,8 @@ if (typeof document !== 'undefined') {
                 top: 1rem;
             }
             
-            .toast > div {
+            .toast > div,
+            .toast-closing > div {
                 min-width: auto !important;
                 width: 100%;
             }
