@@ -263,7 +263,7 @@ function renderQuestionsList() {
  */
 function createQuestionCardElement(question) {
     const moduleColors = {
-        auto: 'indigo',
+        auto: 'red',
         loisir: 'cyan',
         vr: 'orange',
         tracteur: 'green'
@@ -302,7 +302,7 @@ function createQuestionCardElement(question) {
                     </div>
                 </div>
                 <div class="flex gap-2">
-                    <button class="edit-question-btn text-indigo-600 hover:text-indigo-800 p-2 rounded hover:bg-indigo-50 transition" data-question-id="${question.id}" title="Modifier">
+                    <button class="edit-question-btn text-ap-red-primary hover:text-ap-red-dark p-2 rounded hover:bg-ap-red-50 transition" data-question-id="${question.id}" title="Modifier">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                         </svg>
@@ -763,7 +763,7 @@ function renderStats(stats) {
             <h3 class="text-xl font-bold text-slate-900 mb-4">📊 Statistiques des Questions</h3>
             
             <div class="mb-6">
-                <p class="text-3xl font-bold text-indigo-600 mb-1">${stats.total}</p>
+                <p class="text-3xl font-bold text-ap-red-primary mb-1">${stats.total}</p>
                 <p class="text-sm text-slate-600">questions au total</p>
             </div>
             
@@ -778,7 +778,7 @@ function renderStats(stats) {
                                 <span class="font-semibold">${count} (${percentage}%)</span>
                             </div>
                             <div class="bg-slate-200 rounded-full h-2">
-                                <div class="bg-indigo-600 rounded-full h-2 transition-all" style="width: ${percentage}%"></div>
+                                <div class="bg-ap-red-primary rounded-full h-2 transition-all" style="width: ${percentage}%"></div>
                             </div>
                         </div>
                     `;
@@ -797,7 +797,7 @@ function showLoading(containerId) {
     
     container.innerHTML = `
         <div class="text-center py-12">
-            <svg class="animate-spin h-12 w-12 mx-auto text-indigo-600" fill="none" viewBox="0 0 24 24">
+            <svg class="animate-spin h-12 w-12 mx-auto text-ap-red-primary" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
