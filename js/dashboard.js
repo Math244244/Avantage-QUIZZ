@@ -127,13 +127,13 @@ function forceWhiteBackground() {
 
 function updateActiveNavLink(navId) {
     document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('bg-indigo-800', 'text-indigo-100');
-        link.classList.add('text-indigo-300');
+        link.classList.remove('bg-ap-accent', 'text-white');
+        link.classList.add('text-ap-silver');
     });
     const activeLink = document.getElementById(navId);
     if (activeLink) {
-        activeLink.classList.add('bg-indigo-800', 'text-indigo-100');
-        activeLink.classList.remove('text-indigo-300');
+        activeLink.classList.add('bg-ap-accent', 'text-white');
+        activeLink.classList.remove('text-ap-silver');
     }
 }
 
