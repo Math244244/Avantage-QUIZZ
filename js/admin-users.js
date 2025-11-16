@@ -468,7 +468,7 @@ function renderUserCard(user) {
                             <p class="text-sm text-slate-600 truncate">${safeEmail}</p>
                         </div>
                         <div class="flex gap-2 flex-shrink-0 ml-4">
-                            <button class="edit-user-btn text-indigo-600 hover:text-indigo-800 p-2 rounded hover:bg-indigo-50 transition" data-user-id="${user.uid}" data-user-email="${user.email}" data-user-role="${user.role || 'user'}" title="Modifier">
+                            <button class="edit-user-btn text-ap-red-primary hover:text-ap-red-dark p-2 rounded hover:bg-ap-red-50 transition" data-user-id="${user.uid}" data-user-email="${user.email}" data-user-role="${user.role || 'user'}" title="Modifier">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                                 </svg>
@@ -515,11 +515,11 @@ function renderUserStats(user) {
     return `
         <div class="mt-4 pt-4 border-t border-slate-200 grid grid-cols-3 gap-4 text-center">
             <div>
-                <p class="text-2xl font-bold text-indigo-600">${averageScore}%</p>
+                <p class="text-2xl font-bold text-ap-red-primary">${averageScore}%</p>
                 <p class="text-xs text-slate-600">Score moyen</p>
             </div>
             <div>
-                <p class="text-2xl font-bold text-purple-600">${totalQuizzes}</p>
+                <p class="text-2xl font-bold text-ap-accent">${totalQuizzes}</p>
                 <p class="text-xs text-slate-600">Quiz completes</p>
             </div>
             <div>
@@ -569,11 +569,11 @@ function openEditRoleModal(userId, userEmail, currentRole) {
             </div>
             
             <div class="mb-6">
-                <p class="text-slate-700 font-medium mb-3">Role actuel: <span class="text-indigo-600">${currentRole === 'admin' ? 'Admin' : 'User'}</span></p>
+                <p class="text-slate-700 font-medium mb-3">Role actuel: <span class="text-ap-red-primary">${currentRole === 'admin' ? 'Admin' : 'User'}</span></p>
                 
                 <p class="text-sm font-semibold text-slate-700 mb-2">Modifier le role:</p>
                 <div class="space-y-3">
-                    <label class="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-indigo-500 transition ${currentRole !== 'admin' ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200'}">
+                    <label class="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-ap-red-primary transition ${currentRole !== 'admin' ? 'border-ap-red-primary bg-ap-red-50' : 'border-slate-200'}">
                         <input type="radio" name="role" value="user" ${currentRole !== 'admin' ? 'checked' : ''} class="mt-1">
                         <div>
                             <p class="font-semibold text-slate-900">👤 User (Utilisateur standard)</p>
@@ -581,7 +581,7 @@ function openEditRoleModal(userId, userEmail, currentRole) {
                         </div>
                     </label>
                     
-                    <label class="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-yellow-500 transition ${currentRole === 'admin' ? 'border-yellow-500 bg-yellow-50' : 'border-slate-200'}">
+                    <label class="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-ap-red-primary transition ${currentRole === 'admin' ? 'border-ap-red-primary bg-ap-red-50' : 'border-slate-200'}">
                         <input type="radio" name="role" value="admin" ${currentRole === 'admin' ? 'checked' : ''} class="mt-1">
                         <div>
                             <p class="font-semibold text-slate-900">🔰 Admin (Administrateur)</p>
@@ -601,7 +601,7 @@ function openEditRoleModal(userId, userEmail, currentRole) {
                 <button id="cancel-role-btn" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-3 px-6 rounded-lg transition">
                     Annuler
                 </button>
-                <button id="save-role-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition">
+                <button id="save-role-btn" class="flex-1 bg-ap-red-primary hover:bg-ap-red-dark text-white font-semibold py-3 px-6 rounded-lg transition">
                     Enregistrer
                 </button>
             </div>
@@ -737,9 +737,9 @@ function renderStats(stats) {
             <h3 class="text-xl font-bold text-slate-900 mb-6">📊 Statistiques Globales</h3>
             
             <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="text-center p-4 bg-indigo-50 rounded-lg">
-                    <p class="text-3xl font-bold text-indigo-600 mb-1">${stats.total}</p>
-                    <p class="text-sm text-indigo-700 font-medium">Utilisateurs</p>
+                <div class="text-center p-4 bg-ap-red-50 rounded-lg">
+                    <p class="text-3xl font-bold text-ap-red-primary mb-1">${stats.total}</p>
+                    <p class="text-sm text-ap-red-dark font-medium">Utilisateurs</p>
                 </div>
                 <div class="text-center p-4 bg-yellow-50 rounded-lg">
                     <p class="text-3xl font-bold text-yellow-600 mb-1">${stats.admins}</p>
@@ -760,12 +760,12 @@ function renderStats(stats) {
                 
                 <div class="pt-4 border-t border-slate-200">
                     <p class="text-sm text-slate-600 mb-1">Score moyen global:</p>
-                    <p class="text-2xl font-bold text-purple-600">${stats.averageScore}%</p>
+                    <p class="text-2xl font-bold text-ap-red-primary">${stats.averageScore}%</p>
                 </div>
                 
                 <div>
                     <p class="text-sm text-slate-600 mb-1">Total quiz completes:</p>
-                    <p class="text-2xl font-bold text-indigo-600">${stats.totalQuizzes}</p>
+                    <p class="text-2xl font-bold text-ap-accent">${stats.totalQuizzes}</p>
                 </div>
             </div>
         </div>
@@ -781,7 +781,7 @@ function showLoading(containerId) {
     
     container.innerHTML = `
         <div class="text-center py-12">
-            <svg class="animate-spin h-12 w-12 mx-auto text-indigo-600" fill="none" viewBox="0 0 24 24">
+            <svg class="animate-spin h-12 w-12 mx-auto text-ap-red-primary" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
