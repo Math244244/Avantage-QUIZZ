@@ -207,7 +207,7 @@ export function showToastWithAction(message, type, actionText, actionCallback) {
             </div>
             <div class="flex-1">
                 <p class="text-sm font-medium text-slate-900 mb-2">${escapeHtml(message)}</p>
-                <button class="toast-action text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors">
+                <button class="toast-action text-sm font-semibold text-ap-red-primary hover:text-ap-red-dark transition-colors">
                     ${escapeHtml(actionText)}
                 </button>
             </div>
@@ -245,9 +245,9 @@ export function showLoadingToast(message) {
     toast.setAttribute('data-loading', 'true');
     
     toast.innerHTML = `
-        <div class="flex items-center gap-3 bg-white rounded-lg shadow-lg border-l-4 border-indigo-500 p-4 min-w-[320px] max-w-md">
+        <div class="flex items-center gap-3 bg-white rounded-lg shadow-lg border-l-4 border-ap-red-primary p-4 min-w-[320px] max-w-md">
             <div class="flex-shrink-0">
-                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-ap-red-primary"></div>
             </div>
             <div class="flex-1">
                 <p class="text-sm font-medium text-slate-900">${escapeHtml(message)}</p>

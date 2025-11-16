@@ -24,7 +24,7 @@ const categoryNames = {
     'guides': { name: 'Guides', icon: '📖', color: 'blue' },
     'manuels': { name: 'Manuels', icon: '📋', color: 'green' },
     'reglements': { name: 'Règlements', icon: '🛡️', color: 'orange' },
-    'formulaires': { name: 'Formulaires', icon: '📝', color: 'purple' },
+    'formulaires': { name: 'Formulaires', icon: '📝', color: 'red' },
     'videos': { name: 'Vidéos', icon: '🎥', color: 'red' }
 };
 
@@ -227,11 +227,11 @@ function renderResources() {
                     
                     <div class="flex gap-2">
                         <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" 
-                           class="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium text-center text-sm">
+                           class="flex-1 bg-ap-red-primary text-white px-4 py-2 rounded-lg hover:bg-ap-red-dark transition-colors font-medium text-center text-sm">
                             📥 Télécharger
                         </a>
                         <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" 
-                           class="px-4 py-2 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors font-medium text-center text-sm">
+                           class="px-4 py-2 border-2 border-ap-red-primary text-ap-red-primary rounded-lg hover:bg-ap-red-50 transition-colors font-medium text-center text-sm">
                             👁️
                         </a>
                     </div>
