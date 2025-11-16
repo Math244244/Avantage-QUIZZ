@@ -854,23 +854,28 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('✅ Utilisateur connecté:', user.displayName);
             updateUserProfile(user);
             
-            // ✅ CORRECTION NAVIGATION: Vérifier le hash dans l'URL pour afficher la bonne vue
-            const hash = window.location.hash;
-            if (hash === '#quiz') {
-                // Utilisateur arrive depuis un autre page avec /#quiz → Afficher sélection modules
-                showView('moduleSelection');
-                updateActiveNavLink('nav-quiz');
-                // Mettre à jour le titre avec le mois actif
-                const monthsData = stateManager.get('monthsData') || [];
-                const activeMonth = monthsData[currentMonthIndex]?.name || 'ce mois';
-                elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
-            } else {
-                // Affichage normal du dashboard
-                showView('dashboard');
-                updateActiveNavLink('nav-dashboard');
-            }
+            // Toujours afficher le dashboard d'abord
+            showView('dashboard');
+            updateActiveNavLink('nav-dashboard');
             
-            initializeDashboard();
+            // Initialiser le dashboard (charge les données)
+            initializeDashboard().then(() => {
+                // ✅ CORRECTION NAVIGATION: Après chargement, vérifier le hash pour afficher la bonne vue
+                const hash = window.location.hash;
+                if (hash === '#quiz') {
+                    // Utilisateur arrive depuis une autre page avec /#quiz → Afficher sélection modules
+                    const monthsData = stateManager.get('monthsData') || [];
+                    const activeMonth = monthsData[currentMonthIndex]?.name || 'ce mois';
+                    if (elements.moduleSelectionTitle) {
+                        elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
+                    }
+                    showView('moduleSelection');
+                    updateActiveNavLink('nav-quiz');
+                }
+            }).catch(error => {
+                console.error('❌ Erreur initialisation dashboard:', error);
+                // En cas d'erreur, rester sur le dashboard
+            });
         } else {
             console.log('👤 Aucun utilisateur connecté');
             showView('login');
