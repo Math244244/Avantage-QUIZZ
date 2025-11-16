@@ -147,12 +147,15 @@
   /* Dégradé success - Score élevé (avec argent) */
   --ap-gradient-success: linear-gradient(135deg, #28A745 0%, #4A5568 100%);
   
-  /* Dégradé argent - Barre de progression, badges premium (remplace doré) */
-  --ap-gradient-gold: linear-gradient(135deg, #C0C7D0 0%, #A0AEC0 100%); /* DÉPRÉCIÉ: Utiliser --ap-gradient-silver */
-  --ap-gold: #C0C7D0; /* DÉPRÉCIÉ: Utiliser --ap-silver */
-  --ap-gold-dark: #A0AEC0; /* DÉPRÉCIÉ: Utiliser #A0AEC0 */
-  --ap-gold-light: #E2E8F0; /* DÉPRÉCIÉ: Utiliser --ap-accent-pale */
-  --ap-shadow-gold: 0 0 10px rgba(192, 199, 208, 0.5); /* DÉPRÉCIÉ: Utiliser --ap-shadow-silver */
+  /* ⚠️ VARIABLES DÉPRÉCIÉES - NE PLUS UTILISER ⚠️ 
+   * Ces variables ont été supprimées pour nettoyer l'ancien thème "doré/mauve"
+   * Utiliser les variables --ap-silver* à la place
+   */
+  /* --ap-gradient-gold: linear-gradient(135deg, #C0C7D0 0%, #A0AEC0 100%); → Utiliser --ap-gradient-silver */
+  /* --ap-gold: #C0C7D0; → Utiliser --ap-silver */
+  /* --ap-gold-dark: #A0AEC0; → Utiliser #A0AEC0 directement */
+  /* --ap-gold-light: #E2E8F0; → Utiliser --ap-accent-pale */
+  /* --ap-shadow-gold: 0 0 10px rgba(192, 199, 208, 0.5); → Utiliser --ap-shadow-silver */
   
   /* Bleu vif - Nouvelle couleur d'accent pour progrès et icônes */
   --ap-blue: #3B82F6;

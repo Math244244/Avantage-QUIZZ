@@ -90,7 +90,7 @@
 
   /* Focus states accessibles */
   *:focus-visible {
-    outline: 3px solid var(--ap-gold);
+    outline: 3px solid var(--ap-red-primary);
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -126,16 +126,16 @@
     box-shadow: var(--ap-shadow-md);
   }
 
-  /* Boutons Dorés (Premium) */
-  .btn-gold {
-    background: var(--ap-gradient-gold);
-    @apply text-ap-red-dark font-bold py-3 px-6 rounded-lg transition-all duration-300;
-    box-shadow: var(--ap-shadow-gold);
+  /* Boutons Argent (Premium) */
+  .btn-silver {
+    background: var(--ap-gradient-silver);
+    @apply text-ap-accent font-bold py-3 px-6 rounded-lg transition-all duration-300;
+    box-shadow: var(--ap-shadow-silver);
   }
 
-  .btn-gold:hover {
+  .btn-silver:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 6px 25px rgba(192, 199, 208, 0.4);
   }
 
   /* Cartes */
@@ -155,9 +155,9 @@
     @apply card border-t-4 border-ap-red-primary;
   }
 
-  /* Carte avec bordure dorée */
-  .card-gold {
-    @apply card border-t-4 border-ap-gold;
+  /* Carte avec bordure argentée */
+  .card-silver {
+    @apply card border-t-4 border-ap-silver;
   }
 
   /* Badges */
@@ -169,9 +169,9 @@
     @apply badge bg-ap-red-primary text-white;
   }
 
-  .badge-gold {
-    background: var(--ap-gradient-gold);
-    @apply badge text-ap-red-dark;
+  .badge-silver {
+    background: var(--ap-gradient-silver);
+    @apply badge text-ap-accent;
   }
 
   .badge-success {
@@ -196,13 +196,13 @@
 
   .sidebar-item:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-left: 4px solid var(--ap-gold);
+    border-left: 4px solid var(--ap-silver);
     transform: translateX(5px);
   }
 
   .sidebar-item.active {
     background: rgba(255, 255, 255, 0.15);
-    border-left: 4px solid var(--ap-gold);
+    border-left: 4px solid var(--ap-silver);
   }
 
   /* Progress Bar */
@@ -212,7 +212,7 @@
 
   .progress-bar-fill {
     height: 100%;
-    background: var(--ap-gradient-gold);
+    background: var(--ap-gradient-silver);
     transition: width 0.5s ease-out;
   }
 
@@ -264,8 +264,8 @@
     background-clip: text;
   }
 
-  .gradient-text-gold {
-    background: var(--ap-gradient-gold);
+  .gradient-text-silver {
+    background: var(--ap-gradient-silver);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
