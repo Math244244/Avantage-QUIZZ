@@ -126,14 +126,19 @@ function forceWhiteBackground() {
 }
 
 function updateActiveNavLink(navId) {
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('bg-ap-accent', 'text-white');
+    // ✅ CORRECTION NAVIGATION: Retirer la classe 'active' de tous les liens de la sidebar
+    document.querySelectorAll('.sidebar-item').forEach(link => {
+        link.classList.remove('active', 'bg-ap-accent', 'text-white');
         link.classList.add('text-ap-silver');
+        link.removeAttribute('aria-current');
     });
+    
+    // Ajouter la classe 'active' au lien sélectionné
     const activeLink = document.getElementById(navId);
     if (activeLink) {
-        activeLink.classList.add('bg-ap-accent', 'text-white');
+        activeLink.classList.add('active', 'bg-ap-accent', 'text-white');
         activeLink.classList.remove('text-ap-silver');
+        activeLink.setAttribute('aria-current', 'page');
     }
 }
 
