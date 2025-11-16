@@ -5,6 +5,12 @@
  * 
  * Ce fichier sert maintenant de point d'entrée unique qui réexporte toutes les fonctions
  * des services séparés pour maintenir la compatibilité avec le code existant.
+ * 
+ * ⚠️ NOTE PERFORMANCE (Vite Build Warning):
+ * Les warnings Vite sur les dynamic imports de user-service.js et quiz-service.js sont
+ * causés par une dépendance circulaire nécessaire entre ces deux services.
+ * Impact performance: MINEUR (les modules sont déjà chargés via ce barrel export).
+ * Pour résoudre complètement, il faudrait refactoriser l'architecture des services.
  */
 
 // Réexporter toutes les fonctions des services

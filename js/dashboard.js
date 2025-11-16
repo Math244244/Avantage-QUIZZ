@@ -675,11 +675,15 @@ function attachNavigationListeners() {
         if (window.__QUIZ_ACTIVE) {
             const ok = confirm('Un quiz est en cours. Voulez-vous vraiment quitter ?');
             if (ok && target && target.href) {
+                // ⚠️ NOTE PERFORMANCE: Full page reload nécessaire (MPA - fichier HTML séparé)
+                // Optimisation: Les assets sont déjà en cache (Service Worker)
                 window.location.href = target.href;
             }
         } else {
             // Navigation normale vers la page des résultats
             if (target && target.href) {
+                // ⚠️ NOTE PERFORMANCE: Full page reload nécessaire (MPA - fichier HTML séparé)
+                // Optimisation: Les assets sont déjà en cache (Service Worker)
                 window.location.href = target.href;
             }
         }
@@ -692,11 +696,15 @@ function attachNavigationListeners() {
         if (window.__QUIZ_ACTIVE) {
             const ok = confirm('Un quiz est en cours. Voulez-vous vraiment quitter ?');
             if (ok && target && target.href) {
+                // ⚠️ NOTE PERFORMANCE: Full page reload nécessaire (MPA - fichier HTML séparé)
+                // Optimisation: Les assets sont déjà en cache (Service Worker)
                 window.location.href = target.href;
             }
         } else {
             // Navigation normale vers la page des ressources
             if (target && target.href) {
+                // ⚠️ NOTE PERFORMANCE: Full page reload nécessaire (MPA - fichier HTML séparé)
+                // Optimisation: Les assets sont déjà en cache (Service Worker)
                 window.location.href = target.href;
             }
         }

@@ -24,6 +24,7 @@ const CORE_ASSET_SET = new Set(CORE_ASSETS);
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
+    console.log('[SW] Installation...');
     const cache = await caches.open(STATIC_CACHE);
     await cache.addAll(CORE_ASSETS);
 
@@ -35,19 +36,30 @@ self.addEventListener('install', (event) => {
       }
     }
 
-    await self.skipWaiting();
+    // ✅ CORRECTION PERFORMANCE: Ne pas forcer skipWaiting() immédiatement
+    // Attendre que l'utilisateur ferme tous les onglets ou recharge manuellement
+    // Cela évite les rechargements intempestifs et le flicker
+    // Pour forcer la mise à jour, l'utilisateur peut recevoir une notification
+    console.log('[SW] Installation terminée, en attente d\'activation...');
+    // await self.skipWaiting(); // ❌ COMMENTÉ: Causait des rechargements intempestifs
   })());
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
+    console.log('[SW] Activation...');
     const cacheNames = await caches.keys();
     const deletions = cacheNames
       .filter((name) => ![STATIC_CACHE, DYNAMIC_CACHE, API_CACHE, QUESTIONS_CACHE].includes(name))
       .map((name) => caches.delete(name));
 
     await Promise.all(deletions);
-    await self.clients.claim();
+    
+    // ✅ CORRECTION PERFORMANCE: Ne pas forcer clients.claim() immédiatement
+    // Cela évite de prendre le contrôle des pages en cours de navigation (cause du flicker)
+    // Le nouveau SW s'activera naturellement lors de la prochaine navigation
+    console.log('[SW] Activation terminée, anciens caches nettoyés');
+    // await self.clients.claim(); // ❌ COMMENTÉ: Causait le flicker lors des navigations
   })());
 });
 

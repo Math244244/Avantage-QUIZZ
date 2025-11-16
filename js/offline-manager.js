@@ -34,18 +34,26 @@ class OfflineManager {
      */
     async checkConnection() {
         try {
-            // Tenter une requête légère vers Firebase
-            const response = await fetch('https://firestore.googleapis.com', { 
+            // ✅ CORRECTION PERFORMANCE: Vérifier la connexion avec timeout et ressource légère
+            // Utiliser une icône statique de l'app au lieu de l'API Firestore (plus fiable)
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+            
+            const response = await fetch('/manifest.json', { 
                 method: 'HEAD',
-                mode: 'no-cors',
-                cache: 'no-cache'
+                cache: 'no-cache',
+                signal: controller.signal
             });
             
-            if (!this.isOnline) {
+            clearTimeout(timeoutId);
+            
+            // Si la requête réussit et qu'on était offline, passer en ligne
+            if (!this.isOnline && response.ok) {
                 this.handleOnline();
             }
         } catch (error) {
-            if (this.isOnline) {
+            // En cas d'erreur (timeout, réseau), passer offline si on était online
+            if (this.isOnline && (error.name === 'AbortError' || error.message.includes('Failed to fetch'))) {
                 this.handleOffline();
             }
         }
