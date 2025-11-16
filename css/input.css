@@ -299,14 +299,14 @@
 /* Desktop: Compenser la sidebar fixe (280px) */
 @media (min-width: 769px) {
   #main-content {
-    margin-left: 280px;
+    margin-left: 280px !important;
   }
 }
 
 /* Mobile & Tablette: Pleine largeur, sidebar en overlay */
 @media (max-width: 768px) {
   #main-content {
-    margin-left: 0;
+    margin-left: 0 !important;
     width: 100%;
   }
 }

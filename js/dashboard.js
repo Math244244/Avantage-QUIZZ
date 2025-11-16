@@ -848,8 +848,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (user) {
             console.log('✅ Utilisateur connecté:', user.displayName);
             updateUserProfile(user);
-            showView('dashboard');
-            updateActiveNavLink('nav-dashboard');
+            
+            // ✅ CORRECTION NAVIGATION: Vérifier le hash dans l'URL pour afficher la bonne vue
+            const hash = window.location.hash;
+            if (hash === '#quiz') {
+                // Utilisateur arrive depuis un autre page avec /#quiz → Afficher sélection modules
+                showView('moduleSelection');
+                updateActiveNavLink('nav-quiz');
+                // Mettre à jour le titre avec le mois actif
+                const monthsData = stateManager.get('monthsData') || [];
+                const activeMonth = monthsData[currentMonthIndex]?.name || 'ce mois';
+                elements.moduleSelectionTitle.textContent = `Quiz de ${activeMonth}`;
+            } else {
+                // Affichage normal du dashboard
+                showView('dashboard');
+                updateActiveNavLink('nav-dashboard');
+            }
+            
             initializeDashboard();
         } else {
             console.log('👤 Aucun utilisateur connecté');
