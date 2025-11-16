@@ -291,3 +291,22 @@
     background: var(--ap-red-dark);
   }
 }
+
+/* ========================================
+   LAYOUT RESPONSIVE - MAIN CONTENT
+   ======================================== */
+
+/* Desktop: Compenser la sidebar fixe (280px) */
+@media (min-width: 769px) {
+  #main-content {
+    margin-left: 280px;
+  }
+}
+
+/* Mobile & Tablette: Pleine largeur, sidebar en overlay */
+@media (max-width: 768px) {
+  #main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

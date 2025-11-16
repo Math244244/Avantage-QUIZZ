@@ -24,7 +24,7 @@
   z-index: var(--ap-z-fixed);
   transition: all 0.3s var(--ap-ease-smooth);
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
-  position: relative;
+  /* ✅ CORRECTION: Supprimer position: relative pour garder sidebar fixe et hors du flux */
 }
 
 .sidebar::before {
