@@ -12,35 +12,45 @@
         .file-icon { transition: transform 0.2s; }
         .file-card:hover .file-icon { transform: scale(1.1); }
     </style>
-  <script type="module" crossorigin src="/assets/micro-interactions-B30Iqapx.js"></script>
+  <script type="module" crossorigin src="/assets/sidebar-mobile-BvaTxjQg.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
-  <script type="module" crossorigin src="/assets/quiz-CT_T8PGH.js"></script>
-  <script type="module" crossorigin src="/assets/services-C8kBvepO.js"></script>
+  <script type="module" crossorigin src="/assets/quiz-CYw5ErGI.js"></script>
+  <script type="module" crossorigin src="/assets/services-B-eWKyQT.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <script type="module" crossorigin src="/assets/admin-BrAXV1ch.js"></script>
+  <script type="module" crossorigin src="/assets/admin-D-hgMwqY.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-  <script type="module" crossorigin src="/assets/resources-CDPznhyi.js"></script>
+  <script type="module" crossorigin src="/assets/resources-C4XQBHIS.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
   <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-EO3-EJdz.css">
+  <link rel="stylesheet" crossorigin href="/assets/sidebar-mobile-C6tguhGn.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex bg-gradient-to-br from-slate-50 to-slate-100">
     
     <!-- Skip to main content (Accessibilité) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-ap-red-primary focus:text-white focus:rounded-lg focus:font-bold focus:shadow-xl focus:ring-4 focus:ring-ap-gold">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 flex:bg-ap-red-primary focus:text-white focus:rounded-lg focus:font-bold focus:shadow-xl focus:ring-4 focus:ring-ap-gold">
         Aller au contenu principal
     </a>
+
+    <!-- 📱 BOUTON HAMBURGER MOBILE -->
+    <button id="sidebar-toggle-btn" class="sidebar-toggle-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+
+    <!-- 📱 OVERLAY MOBILE (ferme la sidebar au clic) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
     
     <!-- BARRE LATÉRALE DE NAVIGATION - AVANTAGE PLUS -->
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
@@ -337,5 +347,6 @@
     </div>
     </main>
 
+    <!-- 📱 Sidebar Mobile Manager -->
 </body>
 </html>

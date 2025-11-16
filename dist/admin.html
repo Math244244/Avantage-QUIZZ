@@ -38,12 +38,12 @@
             animation: fadeIn 0.3s ease-out;
         }
     </style>
-  <script type="module" crossorigin src="/assets/admin-D2szFaiK.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/micro-interactions-B30Iqapx.js">
-  <link rel="modulepreload" crossorigin href="/assets/quiz-CT_T8PGH.js">
-  <link rel="modulepreload" crossorigin href="/assets/services-C8kBvepO.js">
-  <link rel="modulepreload" crossorigin href="/assets/admin-BrAXV1ch.js">
-  <link rel="stylesheet" crossorigin href="/assets/micro-interactions-EO3-EJdz.css">
+  <script type="module" crossorigin src="/assets/admin-BPFHUbF8.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/sidebar-mobile-BvaTxjQg.js">
+  <link rel="modulepreload" crossorigin href="/assets/quiz-CYw5ErGI.js">
+  <link rel="modulepreload" crossorigin href="/assets/services-B-eWKyQT.js">
+  <link rel="modulepreload" crossorigin href="/assets/admin-D-hgMwqY.js">
+  <link rel="stylesheet" crossorigin href="/assets/sidebar-mobile-C6tguhGn.css">
   <link rel="stylesheet" crossorigin href="/assets/skeleton-BNBe2cdg.css">
 </head>
 <body class="h-full flex">
@@ -52,6 +52,16 @@
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-ap-red-primary focus:text-white focus:rounded-lg focus:font-bold focus:shadow-xl focus:ring-4 focus:ring-ap-gold">
         Aller au contenu principal
     </a>
+
+    <!-- 📱 BOUTON HAMBURGER MOBILE -->
+    <button id="sidebar-toggle-btn" class="sidebar-toggle-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+
+    <!-- 📱 OVERLAY MOBILE (ferme la sidebar au clic) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
     <!-- BARRE LATÉRALE DE NAVIGATION - AVANTAGE PLUS -->
     <nav class="sidebar" aria-label="Navigation principale" role="navigation">
@@ -578,6 +588,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <!-- Scripts Firebase & App -->
+
+    <!-- 📱 Sidebar Mobile Manager -->
 
 </main>
 </body>
