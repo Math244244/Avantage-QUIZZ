@@ -1,4 +1,5 @@
 # 📘 RAPPORT COMPLET DE TRANSFERT DE CONNAISSANCES
+
 ## Application AVANTAGE QUIZZ (QuizPro)
 
 **Date**: 15 Novembre 2025  
@@ -47,6 +48,7 @@
 **Objectif**: Formation continue obligatoire sur les produits Avantage Plus  
 **Fréquence**: 1 quiz par mois par module  
 **Modules disponibles**:
+
 - 🚗 **Auto** (AT-AVE-AVEX)
 - 🏔️ **Loisir** (VTT, Motoneige)
 - 🚐 **VR** (Véhicules Récréatifs)
@@ -55,27 +57,32 @@
 ### 1.3 Caractéristiques Principales
 
 #### ✅ PWA (Progressive Web App)
+
 - Installable sur mobile et desktop
 - Fonctionne hors ligne (mode offline partiel)
 - Notifications push (à venir)
 - Expérience native sur mobile
 
 #### ✅ Multi-tenant (en cours de migration)
+
 - Support pour plusieurs clients (entreprises)
 - Isolation des données par `clientId`
 - Gestion des permissions par client
 
 #### ✅ Authentification Google
+
 - Connexion via compte Google (OAuth 2.0)
 - Pas de gestion de mots de passe
 - Sécurisé par Firebase Authentication
 
 #### ✅ Temps Réel
+
 - Synchronisation instantanée des résultats
 - Leaderboard en temps réel
 - Notifications de progression
 
 #### ✅ Interface Moderne
+
 - Design system Avantage Plus (rouge #C41E3A, gris anthracite)
 - Tailwind CSS pour le styling
 - Animations fluides et micro-interactions
@@ -225,20 +232,20 @@ const stateManager = new StateManager();
   currentQuiz: null,
   currentQuestionIndex: 0,
   userAnswers: [],
-  
+
   // User state
   currentUser: null,
   userProfile: null,
   clientId: null,
-  
+
   // Dashboard state
   monthsData: [],
   annualProgress: {},
-  
+
   // Admin state
   globalStats: null,
   topUsers: [],
-  
+
   // UI state
   isLoading: false,
   error: null
@@ -246,6 +253,7 @@ const stateManager = new StateManager();
 ```
 
 **Avantages**:
+
 - État centralisé et traçable
 - Pas de variables globales éparpillées
 - Système de subscription pour réactivité
@@ -259,57 +267,57 @@ const stateManager = new StateManager();
 
 #### Languages et Frameworks
 
-| Technologie | Version | Usage |
-|------------|---------|-------|
-| **HTML5** | - | Structure sémantique |
-| **CSS3** | - | Styling (via Tailwind) |
-| **JavaScript** | ES6+ | Logique applicative |
-| **Tailwind CSS** | 3.3.5 | Framework CSS utility-first |
-| **Vite** | 7.1.12 | Build tool & dev server |
+| Technologie      | Version | Usage                       |
+| ---------------- | ------- | --------------------------- |
+| **HTML5**        | -       | Structure sémantique        |
+| **CSS3**         | -       | Styling (via Tailwind)      |
+| **JavaScript**   | ES6+    | Logique applicative         |
+| **Tailwind CSS** | 3.3.5   | Framework CSS utility-first |
+| **Vite**         | 7.1.12  | Build tool & dev server     |
 
 #### Bibliothèques JavaScript
 
-| Bibliothèque | Version | Usage |
-|-------------|---------|-------|
-| **Firebase SDK** | 10.7.1 | Backend-as-a-Service |
-| **Chart.js** | 4.4.0 | Graphiques (dashboard admin) |
-| **jsPDF** | 2.5.1 | Export PDF (admin) |
+| Bibliothèque     | Version | Usage                        |
+| ---------------- | ------- | ---------------------------- |
+| **Firebase SDK** | 10.7.1  | Backend-as-a-Service         |
+| **Chart.js**     | 4.4.0   | Graphiques (dashboard admin) |
+| **jsPDF**        | 2.5.1   | Export PDF (admin)           |
 
 #### Outils de Développement
 
-| Outil | Version | Usage |
-|-------|---------|-------|
-| **Vitest** | 4.0.6 | Tests unitaires |
-| **Playwright** | 1.56.1 | Tests E2E |
-| **ESLint** | 9.39.1 | Linting JavaScript |
-| **Prettier** | 3.6.2 | Formatage code |
-| **Husky** | 9.1.7 | Git hooks |
-| **Lighthouse CI** | 0.15.1 | Audit performance |
+| Outil             | Version | Usage              |
+| ----------------- | ------- | ------------------ |
+| **Vitest**        | 4.0.6   | Tests unitaires    |
+| **Playwright**    | 1.56.1  | Tests E2E          |
+| **ESLint**        | 9.39.1  | Linting JavaScript |
+| **Prettier**      | 3.6.2   | Formatage code     |
+| **Husky**         | 9.1.7   | Git hooks          |
+| **Lighthouse CI** | 0.15.1  | Audit performance  |
 
 ### 3.2 Backend (Firebase)
 
 #### Services Firebase
 
-| Service | Usage | Coût |
-|---------|-------|------|
-| **Authentication** | Connexion Google | Gratuit (< 10k users) |
-| **Cloud Firestore** | Base de données NoSQL | Pay-as-you-go |
-| **Cloud Functions** | Agrégation statistiques | Pay-as-you-go |
-| **Firebase Hosting** | Hébergement statique | Gratuit (10 GB) |
-| **Realtime Database** | Future implémentation | Pay-as-you-go |
+| Service               | Usage                   | Coût                  |
+| --------------------- | ----------------------- | --------------------- |
+| **Authentication**    | Connexion Google        | Gratuit (< 10k users) |
+| **Cloud Firestore**   | Base de données NoSQL   | Pay-as-you-go         |
+| **Cloud Functions**   | Agrégation statistiques | Pay-as-you-go         |
+| **Firebase Hosting**  | Hébergement statique    | Gratuit (10 GB)       |
+| **Realtime Database** | Future implémentation   | Pay-as-you-go         |
 
 #### Configuration Firestore
 
 ```javascript
 // firebase-config.js
 const firebaseConfig = {
-  apiKey: "AIzaSyD8w7Em_xdMGplscfGLrnM72vmm4z5ZTr0",
-  authDomain: "avantage-quizz.firebaseapp.com",
-  databaseURL: "https://avantage-quizz-default-rtdb.firebaseio.com",
-  projectId: "avantage-quizz",
-  storageBucket: "avantage-quizz.firebasestorage.app",
-  messagingSenderId: "919472910099",
-  appId: "1:919472910099:web:e17d4c1cdc7a04c6cab4e6"
+  apiKey: 'AIzaSyD8w7Em_xdMGplscfGLrnM72vmm4z5ZTr0',
+  authDomain: 'avantage-quizz.firebaseapp.com',
+  databaseURL: 'https://avantage-quizz-default-rtdb.firebaseio.com',
+  projectId: 'avantage-quizz',
+  storageBucket: 'avantage-quizz.firebasestorage.app',
+  messagingSenderId: '919472910099',
+  appId: '1:919472910099:web:e17d4c1cdc7a04c6cab4e6',
 };
 ```
 
@@ -326,7 +334,7 @@ export default defineConfig({
     port: 3200,
     strictPort: true,
     open: true,
-    cors: true
+    cors: true,
   },
   build: {
     outDir: 'dist',
@@ -336,7 +344,7 @@ export default defineConfig({
         main: 'index.html',
         admin: 'admin.html',
         results: 'results.html',
-        resources: 'resources.html'
+        resources: 'resources.html',
       },
       output: {
         manualChunks: (id) => {
@@ -345,22 +353,24 @@ export default defineConfig({
           if (id.includes('quiz')) return 'quiz';
           if (id.includes('firebase')) return 'vendor-firebase';
           // ...
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });
 ```
 
 #### PWA (Progressive Web App)
 
 **Service Worker** (`service-worker.js`):
+
 - Cache statique (HTML, CSS, JS)
 - Cache dynamique (API responses)
 - Stratégie: **Network First, Cache Fallback**
 - Versions: Gestion automatique des mises à jour
 
 **Manifest** (`manifest.json`):
+
 ```json
 {
   "name": "Avantage QUIZZ",
@@ -512,6 +522,7 @@ Avantage QUIZZ/
 ### 4.2 Modules JavaScript Clés
 
 #### 4.2.1 firebase-config.js
+
 **Rôle**: Initialisation Firebase
 
 ```javascript
@@ -523,6 +534,7 @@ export const functions = getFunctions(app);
 ```
 
 #### 4.2.2 auth.js
+
 **Rôle**: Authentification
 
 ```javascript
@@ -535,6 +547,7 @@ export async function showAdminUIIfAdmin(userProfile)
 ```
 
 #### 4.2.3 state-manager.js
+
 **Rôle**: Gestion d'état centralisé
 
 ```javascript
@@ -547,6 +560,7 @@ class StateManager {
 ```
 
 #### 4.2.4 firestore-service.js
+
 **Rôle**: Point d'entrée des services Firestore
 
 ```javascript
@@ -557,6 +571,7 @@ export { getQuestions, createQuestion, ... } from './services/question-service.j
 ```
 
 #### 4.2.5 quiz.js
+
 **Rôle**: Système de quiz complet
 
 ```javascript
@@ -570,6 +585,7 @@ async function saveResults()
 ```
 
 #### 4.2.6 dashboard.js
+
 **Rôle**: Interface tableau de bord
 
 ```javascript
@@ -583,4 +599,3 @@ function showModuleSelection(month, year)
 ---
 
 **(Cette documentation continue dans les sections suivantes...)**
-

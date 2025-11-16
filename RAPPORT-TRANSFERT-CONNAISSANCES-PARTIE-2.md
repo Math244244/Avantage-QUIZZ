@@ -23,33 +23,35 @@
 ```
 
 **Code**:
+
 ```javascript
 // js/auth.js
 async function signInWithGoogle() {
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({ prompt: 'select_account' });
-    
-    const result = await signInWithPopup(auth, provider);
-    const user = result.user;
-    
-    // Créer profil utilisateur
-    await createOrUpdateUser(user);
-    
-    return user;
+  const provider = new GoogleAuthProvider();
+  provider.setCustomParameters({ prompt: 'select_account' });
+
+  const result = await signInWithPopup(auth, provider);
+  const user = result.user;
+
+  // Créer profil utilisateur
+  await createOrUpdateUser(user);
+
+  return user;
 }
 ```
 
 **Gestion de l'état d'authentification**:
+
 ```javascript
 onAuthChange((user) => {
-    if (user) {
-        // User connecté → Charger dashboard
-        showView('dashboard');
-        loadDashboardData();
-    } else {
-        // User déconnecté → Afficher login
-        showView('login');
-    }
+  if (user) {
+    // User connecté → Charger dashboard
+    showView('dashboard');
+    loadDashboardData();
+  } else {
+    // User déconnecté → Afficher login
+    showView('login');
+  }
 });
 ```
 
@@ -58,6 +60,7 @@ onAuthChange((user) => {
 #### Vue d'ensemble
 
 Le dashboard affiche:
+
 1. **Bannière de marque** Avantage Plus
 2. **Badge de série** (streak) avec animation flamme 🔥
 3. **Grille de 12 cartes mensuelles** (Janvier → Décembre)
@@ -66,35 +69,38 @@ Le dashboard affiche:
 #### Cartes Mensuelles
 
 **États possibles**:
+
 - ✅ **Complété** (score affiché, fond vert)
 - 🔒 **Verrouillé** (mois futur, icône cadenas)
 - ⏳ **En attente** (mois actuel/passé non complété)
 
 **Code génération**:
+
 ```javascript
 function generateModuleCards() {
-    const currentMonth = getCurrentMonthIndex(); // 0-11
-    const currentYear = getCurrentYear(); // 2025
-    
-    MONTH_NAMES.forEach((monthName, index) => {
-        const monthData = getMonthlyProgress(index);
-        
-        const card = createCard({
-            month: monthName,
-            score: monthData?.score,
-            isCompleted: monthData?.completed,
-            isCurrentMonth: index === currentMonth,
-            isLocked: index > currentMonth
-        });
-        
-        modulesGrid.appendChild(card);
+  const currentMonth = getCurrentMonthIndex(); // 0-11
+  const currentYear = getCurrentYear(); // 2025
+
+  MONTH_NAMES.forEach((monthName, index) => {
+    const monthData = getMonthlyProgress(index);
+
+    const card = createCard({
+      month: monthName,
+      score: monthData?.score,
+      isCompleted: monthData?.completed,
+      isCurrentMonth: index === currentMonth,
+      isLocked: index > currentMonth,
     });
+
+    modulesGrid.appendChild(card);
+  });
 }
 ```
 
 #### Hero Card (Mois Actuel)
 
 **Caractéristiques**:
+
 - Taille 2x (prend 2 colonnes sur desktop)
 - Gradient animé
 - Bouton CTA "Commencer le Quiz"
@@ -105,6 +111,7 @@ function generateModuleCards() {
 #### Architecture du Quiz
 
 **Étapes**:
+
 1. **Sélection module** (Auto/Loisir/VR/Tracteur)
 2. **Chargement questions** depuis Firestore
 3. **Affichage questions** une par une
@@ -117,31 +124,32 @@ function generateModuleCards() {
 
 ```javascript
 async function loadQuizFromFirestore(moduleId, monthNumber, year) {
-    // Requête Firestore avec filtres
-    const q = query(
-        collection(db, 'questions'),
-        where('module', '==', moduleId),
-        where('month', '==', monthNumber),
-        where('year', '==', year),
-        where('clientId', '==', clientId)  // Multi-tenant
-    );
-    
-    const snapshot = await getDocs(q);
-    const questions = snapshot.docs.map(doc => ({
-        id: doc.id,
-        question: doc.data().question,
-        options: doc.data().options,
-        correctAnswer: doc.data().correctAnswer,
-        explanation: doc.data().explanation
-    }));
-    
-    return questions;
+  // Requête Firestore avec filtres
+  const q = query(
+    collection(db, 'questions'),
+    where('module', '==', moduleId),
+    where('month', '==', monthNumber),
+    where('year', '==', year),
+    where('clientId', '==', clientId) // Multi-tenant
+  );
+
+  const snapshot = await getDocs(q);
+  const questions = snapshot.docs.map((doc) => ({
+    id: doc.id,
+    question: doc.data().question,
+    options: doc.data().options,
+    correctAnswer: doc.data().correctAnswer,
+    explanation: doc.data().explanation,
+  }));
+
+  return questions;
 }
 ```
 
 #### Interface Quiz
 
 **Composants**:
+
 - **Header**: Chronomètre, boutons Pause/Focus/Quitter
 - **Progress Bar**: Visualisation progression (ex: "3/10")
 - **Question Card**: Question + 4 options (A, B, C, D)
@@ -149,64 +157,66 @@ async function loadQuizFromFirestore(moduleId, monthNumber, year) {
 - **Combo System**: Multiplicateur de points (x2, x3, x5)
 
 **Gestion des réponses**:
+
 ```javascript
 function handleAnswer(selectedOption) {
-    const currentQuestion = getCurrentQuiz().questions[getCurrentQuestionIndex()];
-    const isCorrect = selectedOption === currentQuestion.correctAnswer;
-    
-    // Arrêter le chronomètre de la question
-    const timeSpent = Date.now() - getQuestionStartTime();
-    
-    // Feedback visuel
-    if (isCorrect) {
-        updateComboStreak(+1);
-        showFeedback('Correct!', 'success');
-    } else {
-        resetComboStreak();
-        showFeedback('Incorrect', 'error');
-        showExplanation(currentQuestion.explanation);
-    }
-    
-    // Sauvegarder réponse
-    saveUserAnswer({
-        questionId: currentQuestion.id,
-        selectedOption,
-        isCorrect,
-        timeSpent
-    });
-    
-    // Question suivante ou résultats
-    if (hasNextQuestion()) {
-        nextQuestion();
-    } else {
-        showResults();
-    }
+  const currentQuestion = getCurrentQuiz().questions[getCurrentQuestionIndex()];
+  const isCorrect = selectedOption === currentQuestion.correctAnswer;
+
+  // Arrêter le chronomètre de la question
+  const timeSpent = Date.now() - getQuestionStartTime();
+
+  // Feedback visuel
+  if (isCorrect) {
+    updateComboStreak(+1);
+    showFeedback('Correct!', 'success');
+  } else {
+    resetComboStreak();
+    showFeedback('Incorrect', 'error');
+    showExplanation(currentQuestion.explanation);
+  }
+
+  // Sauvegarder réponse
+  saveUserAnswer({
+    questionId: currentQuestion.id,
+    selectedOption,
+    isCorrect,
+    timeSpent,
+  });
+
+  // Question suivante ou résultats
+  if (hasNextQuestion()) {
+    nextQuestion();
+  } else {
+    showResults();
+  }
 }
 ```
 
 #### Calcul du Score
 
 **Formule**:
+
 ```javascript
 function calculateScore() {
-    const correctAnswers = getUserAnswers().filter(a => a.isCorrect).length;
-    const totalQuestions = getCurrentQuiz().questions.length;
-    
-    // Score brut (0-100)
-    const baseScore = Math.round((correctAnswers / totalQuestions) * 100);
-    
-    // Bonus combo (optionnel)
-    const comboBonus = calculateComboBonus();
-    
-    // Score final
-    const finalScore = Math.min(baseScore + comboBonus, 100);
-    
-    return {
-        score: finalScore,
-        correctAnswers,
-        totalQuestions,
-        comboBonus
-    };
+  const correctAnswers = getUserAnswers().filter((a) => a.isCorrect).length;
+  const totalQuestions = getCurrentQuiz().questions.length;
+
+  // Score brut (0-100)
+  const baseScore = Math.round((correctAnswers / totalQuestions) * 100);
+
+  // Bonus combo (optionnel)
+  const comboBonus = calculateComboBonus();
+
+  // Score final
+  const finalScore = Math.min(baseScore + comboBonus, 100);
+
+  return {
+    score: finalScore,
+    correctAnswers,
+    totalQuestions,
+    comboBonus,
+  };
 }
 ```
 
@@ -214,37 +224,37 @@ function calculateScore() {
 
 ```javascript
 async function saveResults() {
-    const user = getCurrentUser();
-    const quiz = getCurrentQuiz();
-    const scoreData = calculateScore();
-    
-    const result = {
-        userId: user.uid,
-        userEmail: user.email,
-        clientId: await getCurrentClientId(),
-        moduleId: quiz.moduleId,
-        moduleName: moduleConfig[quiz.moduleId].name,
-        month: quiz.month,
-        year: quiz.year,
-        score: scoreData.score,
-        correctAnswers: scoreData.correctAnswers,
-        totalQuestions: scoreData.totalQuestions,
-        timeElapsed: calculateElapsedTime(),
-        answers: getUserAnswers(),
-        completedAt: Timestamp.now()
-    };
-    
-    // Sauvegarder dans Firestore
-    await saveQuizResult(result);
-    
-    // Mettre à jour progression mensuelle
-    await updateMonthlyProgress(user.uid, quiz.month, quiz.year, scoreData.score);
-    
-    // Mettre à jour statistiques utilisateur
-    await updateUserStats(user.uid, scoreData.score);
-    
-    // Mettre à jour série
-    await updateStreak(user.uid);
+  const user = getCurrentUser();
+  const quiz = getCurrentQuiz();
+  const scoreData = calculateScore();
+
+  const result = {
+    userId: user.uid,
+    userEmail: user.email,
+    clientId: await getCurrentClientId(),
+    moduleId: quiz.moduleId,
+    moduleName: moduleConfig[quiz.moduleId].name,
+    month: quiz.month,
+    year: quiz.year,
+    score: scoreData.score,
+    correctAnswers: scoreData.correctAnswers,
+    totalQuestions: scoreData.totalQuestions,
+    timeElapsed: calculateElapsedTime(),
+    answers: getUserAnswers(),
+    completedAt: Timestamp.now(),
+  };
+
+  // Sauvegarder dans Firestore
+  await saveQuizResult(result);
+
+  // Mettre à jour progression mensuelle
+  await updateMonthlyProgress(user.uid, quiz.month, quiz.year, scoreData.score);
+
+  // Mettre à jour statistiques utilisateur
+  await updateUserStats(user.uid, scoreData.score);
+
+  // Mettre à jour série
+  await updateStreak(user.uid);
 }
 ```
 
@@ -253,6 +263,7 @@ async function saveResults() {
 #### Affichage
 
 **Sections**:
+
 1. **Score principal** (gros chiffre avec animation)
 2. **Détails** (bonnes réponses, temps passé)
 3. **Graphique radar** des compétences par module
@@ -262,18 +273,21 @@ async function saveResults() {
 #### Graphiques (Chart.js)
 
 **Radar des compétences**:
+
 ```javascript
 new Chart(ctx, {
-    type: 'radar',
-    data: {
-        labels: ['Auto', 'Loisir', 'VR', 'Tracteur'],
-        datasets: [{
-            label: 'Vos scores',
-            data: [85, 92, 78, 88],
-            backgroundColor: 'rgba(196, 30, 58, 0.2)',
-            borderColor: '#C41E3A'
-        }]
-    }
+  type: 'radar',
+  data: {
+    labels: ['Auto', 'Loisir', 'VR', 'Tracteur'],
+    datasets: [
+      {
+        label: 'Vos scores',
+        data: [85, 92, 78, 88],
+        backgroundColor: 'rgba(196, 30, 58, 0.2)',
+        borderColor: '#C41E3A',
+      },
+    ],
+  },
 });
 ```
 
@@ -284,6 +298,7 @@ new Chart(ctx, {
 #### Onglet Dashboard
 
 **Statistiques affichées**:
+
 - Total utilisateurs
 - Utilisateurs actifs (aujourd'hui, cette semaine)
 - Total quiz complétés
@@ -292,21 +307,25 @@ new Chart(ctx, {
 - Total ressources
 
 **Graphiques**:
+
 1. **Évolution 30 jours** (ligne)
 2. **Répartition par module** (doughnut)
 3. **Activité 7 jours** (barres)
 
 **Top 10 utilisateurs**:
+
 - Classement par nombre de quiz complétés
 - Avatar, nom, score moyen, total quiz
 
 **Activité récente**:
+
 - 20 derniers quiz complétés
 - Nom utilisateur, module, score, date
 
 #### Onglet Questions
 
 **Fonctionnalités**:
+
 - ✅ Créer question (formulaire)
 - ✅ Importer questions depuis JSON
 - ✅ Lister questions (pagination, filtres)
@@ -315,6 +334,7 @@ new Chart(ctx, {
 - ✅ Statistiques (par module, mois, difficulté)
 
 **Formulaire création**:
+
 ```javascript
 {
   module: 'auto' | 'loisir' | 'vr' | 'tracteur',
@@ -328,6 +348,7 @@ new Chart(ctx, {
 ```
 
 **Import JSON**:
+
 ```json
 [
   {
@@ -350,6 +371,7 @@ new Chart(ctx, {
 #### Onglet Utilisateurs
 
 **Fonctionnalités**:
+
 - ✅ Créer utilisateur (email/password temporaire)
 - ✅ Lister utilisateurs (filtres: rôle, statut)
 - ✅ Modifier rôle (user ↔ admin)
@@ -357,6 +379,7 @@ new Chart(ctx, {
 - ⏳ Désactiver utilisateur (à venir)
 
 **Création utilisateur**:
+
 ```javascript
 {
   displayName: string,
@@ -371,50 +394,54 @@ new Chart(ctx, {
 #### Système de Série (Streak)
 
 **Logique**:
+
 - +1 jour si quiz complété aujourd'hui
 - Réinitialisation si aucun quiz depuis 2 jours
 - Affichage badge 🔥 avec animation pulse
 
 **Calcul**:
+
 ```javascript
 async function updateStreak(userId) {
-    const userProfile = await getUserProfile(userId);
-    const lastQuizDate = userProfile.lastQuizDate;
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    
-    if (!lastQuizDate) {
-        // Premier quiz
-        return { currentStreak: 1 };
-    }
-    
-    const daysSinceLastQuiz = Math.floor((today - lastQuizDate) / (1000 * 60 * 60 * 24));
-    
-    if (daysSinceLastQuiz === 0) {
-        // Déjà fait aujourd'hui
-        return { currentStreak: userProfile.currentStreak };
-    } else if (daysSinceLastQuiz === 1) {
-        // Jour consécutif
-        const newStreak = userProfile.currentStreak + 1;
-        return {
-            currentStreak: newStreak,
-            longestStreak: Math.max(newStreak, userProfile.longestStreak)
-        };
-    } else {
-        // Série interrompue
-        return { currentStreak: 1 };
-    }
+  const userProfile = await getUserProfile(userId);
+  const lastQuizDate = userProfile.lastQuizDate;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (!lastQuizDate) {
+    // Premier quiz
+    return { currentStreak: 1 };
+  }
+
+  const daysSinceLastQuiz = Math.floor((today - lastQuizDate) / (1000 * 60 * 60 * 24));
+
+  if (daysSinceLastQuiz === 0) {
+    // Déjà fait aujourd'hui
+    return { currentStreak: userProfile.currentStreak };
+  } else if (daysSinceLastQuiz === 1) {
+    // Jour consécutif
+    const newStreak = userProfile.currentStreak + 1;
+    return {
+      currentStreak: newStreak,
+      longestStreak: Math.max(newStreak, userProfile.longestStreak),
+    };
+  } else {
+    // Série interrompue
+    return { currentStreak: 1 };
+  }
 }
 ```
 
 #### Combo System (Quiz)
 
 **Mécanisme**:
+
 - 3 bonnes réponses consécutives = x2
 - 5 bonnes réponses consécutives = x3
 - 7+ bonnes réponses consécutives = x5
 
 **Affichage**:
+
 - Badge "COMBO x2" avec animation
 - Particules de célébration
 
@@ -427,6 +454,7 @@ async function updateStreak(userId) {
 #### Collection: `users/`
 
 **Structure**:
+
 ```javascript
 {
   uid: string,                    // ID Firebase Auth
@@ -447,12 +475,14 @@ async function updateStreak(userId) {
 ```
 
 **Index**:
+
 - `clientId` (simple)
 - `clientId + role` (composite)
 
 #### Collection: `questions/`
 
 **Structure**:
+
 ```javascript
 {
   clientId: string,               // ID client
@@ -473,6 +503,7 @@ async function updateStreak(userId) {
 ```
 
 **Index Firestore requis**:
+
 ```javascript
 // firestore.indexes.json
 {
@@ -494,6 +525,7 @@ async function updateStreak(userId) {
 #### Collection: `quizResults/`
 
 **Structure**:
+
 ```javascript
 {
   userId: string,                 // UID utilisateur
@@ -521,6 +553,7 @@ async function updateStreak(userId) {
 ```
 
 **Index**:
+
 - `clientId + userId + completedAt` (composite)
 - `clientId + moduleId + completedAt` (composite)
 
@@ -529,6 +562,7 @@ async function updateStreak(userId) {
 **Document ID**: `{userId}_{month}_{year}`
 
 **Structure**:
+
 ```javascript
 {
   userId: string,
@@ -546,6 +580,7 @@ async function updateStreak(userId) {
 #### Collection: `resources/`
 
 **Structure**:
+
 ```javascript
 {
   clientId: string,
@@ -565,6 +600,7 @@ async function updateStreak(userId) {
 #### Collection: `auditLogs/`
 
 **Structure**:
+
 ```javascript
 {
   clientId: string,
@@ -583,6 +619,7 @@ async function updateStreak(userId) {
 **Fichier**: `firestore.rules`
 
 **Principes**:
+
 1. **Authentification obligatoire** pour toute lecture/écriture
 2. **Isolation multi-tenant** via `clientId`
 3. **Permissions basées sur rôles** (user vs admin)
@@ -594,61 +631,61 @@ async function updateStreak(userId) {
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    
+
     // Helper functions
     function isAuthenticated() {
       return request.auth != null;
     }
-    
+
     function isAdmin() {
-      return isAuthenticated() && 
+      return isAuthenticated() &&
              get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
     }
-    
+
     function isOwner(userId) {
       return isAuthenticated() && request.auth.uid == userId;
     }
-    
+
     function getCurrentUserClientId() {
       let userDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
       return userDoc.data.get('clientId', 'default');
     }
-    
+
     function sameClient(userId) {
       let currentUserDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
       let targetUserDoc = get(/databases/$(database)/documents/users/$(userId));
       return currentUserDoc.data.clientId == targetUserDoc.data.clientId;
     }
-    
+
     // Collection: users
     match /users/{userId} {
       // Lecture: soi-même OU admin du même client
       allow get: if isOwner(userId) || (isAdmin() && sameClient(userId));
       allow list: if isAdmin();
-      
+
       // Création: soi-même (signup)
-      allow create: if isOwner(userId) && 
+      allow create: if isOwner(userId) &&
                        request.resource.data.email is string &&
                        request.resource.data.clientId is string;
-      
+
       // Mise à jour: soi-même (sauf role/clientId) OU admin
-      allow update: if (isOwner(userId) && 
+      allow update: if (isOwner(userId) &&
                           !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'clientId'])) ||
                        (isAdmin() && sameClient(userId));
-      
+
       // Suppression: admin seulement
       allow delete: if isAdmin() && sameClient(userId);
     }
-    
+
     // Collection: questions
     match /questions/{questionId} {
       // Lecture: tous utilisateurs authentifiés
       allow get, list: if isAuthenticated();
-      
+
       // Écriture: admin seulement, même client
-      allow create, update, delete: if isAdmin() && 
+      allow create, update, delete: if isAdmin() &&
                                         request.resource.data.clientId == getCurrentUserClientId();
-      
+
       // Validation des données
       allow create, update: if isAdmin() &&
         request.resource.data.question is string &&
@@ -660,31 +697,31 @@ service cloud.firestore {
         request.resource.data.correctAnswer <= 3 &&
         request.resource.data.module in ['auto', 'loisir', 'vr', 'tracteur'];
     }
-    
+
     // Collection: quizResults
     match /quizResults/{resultId} {
       // Lecture: soi-même OU admin
-      allow get: if isAuthenticated() && 
+      allow get: if isAuthenticated() &&
                     (resource.data.userId == request.auth.uid || isAdmin());
       allow list: if isAuthenticated();
-      
+
       // Création: soi-même, validation stricte
-      allow create: if isAuthenticated() && 
+      allow create: if isAuthenticated() &&
                        request.resource.data.userId == request.auth.uid &&
                        request.resource.data.score is int &&
                        request.resource.data.score >= 0 &&
                        request.resource.data.score <= 100;
-      
+
       // Mise à jour/suppression: admin seulement
       allow update, delete: if isAdmin() && sameClient(resource.data.userId);
     }
-    
+
     // Collection: monthlyProgress
     match /monthlyProgress/{progressId} {
-      allow get: if isAuthenticated() && 
+      allow get: if isAuthenticated() &&
                     (resource.data.userId == request.auth.uid || isAdmin());
       allow list: if isAuthenticated();
-      allow create, update: if isAuthenticated() && 
+      allow create, update: if isAuthenticated() &&
                                request.resource.data.userId == request.auth.uid;
       allow delete: if isAdmin() && sameClient(resource.data.userId);
     }
@@ -695,4 +732,3 @@ service cloud.firestore {
 ---
 
 **(Suite dans la Partie 3...)**
-

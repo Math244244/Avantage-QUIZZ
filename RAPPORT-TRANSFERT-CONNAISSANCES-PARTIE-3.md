@@ -15,22 +15,23 @@
  * @returns {string} Texte sécurisé
  */
 export function escapeHtml(text) {
-    if (typeof text !== 'string') return text;
-    
-    const map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;',
-        '/': '&#x2F;'
-    };
-    
-    return text.replace(/[&<>"'/]/g, char => map[char]);
+  if (typeof text !== 'string') return text;
+
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+    '/': '&#x2F;',
+  };
+
+  return text.replace(/[&<>"'/]/g, (char) => map[char]);
 }
 ```
 
 **Utilisation**:
+
 ```javascript
 // TOUJOURS échapper avant d'injecter dans le DOM
 element.innerHTML = escapeHtml(userInput);
@@ -40,6 +41,7 @@ questionText.innerHTML = escapeHtml(currentQuestion.question);
 ```
 
 **Endroits critiques**:
+
 - Questions de quiz
 - Noms d'utilisateurs
 - Résultats de recherche
@@ -55,41 +57,42 @@ questionText.innerHTML = escapeHtml(currentQuestion.question);
 
 ```javascript
 class RateLimiter {
-    constructor(maxRequests = 100, windowMs = 60000) {
-        this.maxRequests = maxRequests;  // 100 requêtes
-        this.windowMs = windowMs;        // par minute
-        this.requests = [];
+  constructor(maxRequests = 100, windowMs = 60000) {
+    this.maxRequests = maxRequests; // 100 requêtes
+    this.windowMs = windowMs; // par minute
+    this.requests = [];
+  }
+
+  checkLimit() {
+    const now = Date.now();
+    const windowStart = now - this.windowMs;
+
+    // Nettoyer anciennes requêtes
+    this.requests = this.requests.filter((time) => time > windowStart);
+
+    if (this.requests.length >= this.maxRequests) {
+      throw new Error('Rate limit exceeded. Veuillez patienter.');
     }
-    
-    checkLimit() {
-        const now = Date.now();
-        const windowStart = now - this.windowMs;
-        
-        // Nettoyer anciennes requêtes
-        this.requests = this.requests.filter(time => time > windowStart);
-        
-        if (this.requests.length >= this.maxRequests) {
-            throw new Error('Rate limit exceeded. Veuillez patienter.');
-        }
-        
-        this.requests.push(now);
-    }
+
+    this.requests.push(now);
+  }
 }
 
 // Wrapper pour lectures Firestore
 export async function safeFirestoreRead(operation) {
-    readLimiter.checkLimit();
-    return await operation();
+  readLimiter.checkLimit();
+  return await operation();
 }
 
 // Wrapper pour écritures Firestore
 export async function safeFirestoreWrite(operation) {
-    writeLimiter.checkLimit();
-    return await operation();
+  writeLimiter.checkLimit();
+  return await operation();
 }
 ```
 
 **Utilisation**:
+
 ```javascript
 // Au lieu de:
 const doc = await getDoc(userRef);
@@ -106,56 +109,56 @@ const doc = await safeFirestoreRead(() => getDoc(userRef));
 
 ```javascript
 class ErrorHandler {
-    constructor() {
-        this.errorLog = [];
-        this.maxLogSize = 100;
-        this.setupGlobalErrorHandlers();
+  constructor() {
+    this.errorLog = [];
+    this.maxLogSize = 100;
+    this.setupGlobalErrorHandlers();
+  }
+
+  setupGlobalErrorHandlers() {
+    // Erreurs JavaScript non capturées
+    window.addEventListener('error', (event) => {
+      this.handleError(event.error, 'Uncaught Error');
+    });
+
+    // Promesses rejetées non gérées
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handleError(event.reason, 'Unhandled Promise Rejection');
+    });
+  }
+
+  handleError(error, context = 'Unknown') {
+    console.error(`❌ [${context}]:`, error);
+
+    // Logger l'erreur
+    this.logError(error, context);
+
+    // Afficher notification utilisateur
+    this.notifyUser(error);
+
+    // Reporter à Firebase Analytics (optionnel)
+    this.reportToAnalytics(error, context);
+  }
+
+  logError(error, context) {
+    this.errorLog.push({
+      message: error.message,
+      stack: error.stack,
+      context,
+      timestamp: new Date().toISOString(),
+    });
+
+    // Limiter taille du log
+    if (this.errorLog.length > this.maxLogSize) {
+      this.errorLog.shift();
     }
-    
-    setupGlobalErrorHandlers() {
-        // Erreurs JavaScript non capturées
-        window.addEventListener('error', (event) => {
-            this.handleError(event.error, 'Uncaught Error');
-        });
-        
-        // Promesses rejetées non gérées
-        window.addEventListener('unhandledrejection', (event) => {
-            this.handleError(event.reason, 'Unhandled Promise Rejection');
-        });
-    }
-    
-    handleError(error, context = 'Unknown') {
-        console.error(`❌ [${context}]:`, error);
-        
-        // Logger l'erreur
-        this.logError(error, context);
-        
-        // Afficher notification utilisateur
-        this.notifyUser(error);
-        
-        // Reporter à Firebase Analytics (optionnel)
-        this.reportToAnalytics(error, context);
-    }
-    
-    logError(error, context) {
-        this.errorLog.push({
-            message: error.message,
-            stack: error.stack,
-            context,
-            timestamp: new Date().toISOString()
-        });
-        
-        // Limiter taille du log
-        if (this.errorLog.length > this.maxLogSize) {
-            this.errorLog.shift();
-        }
-    }
-    
-    notifyUser(error) {
-        import('./toast.js').then(({ toast }) => {
-            toast.error('Une erreur est survenue. Veuillez réessayer.');
-        });
-    }
+  }
+
+  notifyUser(error) {
+    import('./toast.js').then(({ toast }) => {
+      toast.error('Une erreur est survenue. Veuillez réessayer.');
+    });
+  }
 }
 ```
 
@@ -173,57 +176,58 @@ class ErrorHandler {
  * @param {number} delayMs - Délai entre tentatives (défaut: 1000ms)
  */
 export async function withFirestoreRetry(operation, maxRetries = 3, delayMs = 1000) {
-    let lastError;
-    
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-        try {
-            return await operation();
-        } catch (error) {
-            lastError = error;
-            console.warn(`⚠️ Tentative ${attempt}/${maxRetries} échouée:`, error.message);
-            
-            // Ne pas retry pour certaines erreurs
-            if (isNonRetryableError(error)) {
-                throw error;
-            }
-            
-            // Attendre avant de réessayer (exponential backoff)
-            if (attempt < maxRetries) {
-                const delay = delayMs * Math.pow(2, attempt - 1);
-                await sleep(delay);
-            }
-        }
+  let lastError;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await operation();
+    } catch (error) {
+      lastError = error;
+      console.warn(`⚠️ Tentative ${attempt}/${maxRetries} échouée:`, error.message);
+
+      // Ne pas retry pour certaines erreurs
+      if (isNonRetryableError(error)) {
+        throw error;
+      }
+
+      // Attendre avant de réessayer (exponential backoff)
+      if (attempt < maxRetries) {
+        const delay = delayMs * Math.pow(2, attempt - 1);
+        await sleep(delay);
+      }
     }
-    
-    throw lastError;
+  }
+
+  throw lastError;
 }
 
 function isNonRetryableError(error) {
-    const nonRetryableCodes = [
-        'permission-denied',
-        'unauthenticated',
-        'invalid-argument',
-        'not-found'
-    ];
-    return nonRetryableCodes.includes(error.code);
+  const nonRetryableCodes = [
+    'permission-denied',
+    'unauthenticated',
+    'invalid-argument',
+    'not-found',
+  ];
+  return nonRetryableCodes.includes(error.code);
 }
 ```
 
 **Utilisation**:
+
 ```javascript
 // Wrapper automatique
-const questions = await withFirestoreRetry(() => 
-    getDocs(questionsQuery)
-);
+const questions = await withFirestoreRetry(() => getDocs(questionsQuery));
 ```
 
 ### 7.4 Protection CSRF
 
 **Firebase gère automatiquement**:
+
 - Tokens anti-CSRF dans Authentication
 - Validation origin/referrer
 
 **Bonnes pratiques appliquées**:
+
 - Pas d'opérations sensibles en GET
 - Validation `request.auth` dans règles Firestore
 - Headers CORS configurés dans `firebase.json`
@@ -234,22 +238,22 @@ const questions = await withFirestoreRetry(() =>
 
 ```javascript
 function validateQuizResult(result) {
-    // Score valide
-    if (typeof result.score !== 'number' || result.score < 0 || result.score > 100) {
-        throw new Error('Score invalide');
-    }
-    
-    // Nombre de questions cohérent
-    if (result.correctAnswers > result.totalQuestions) {
-        throw new Error('Données incohérentes');
-    }
-    
-    // Temps réaliste (min 1 seconde par question)
-    if (result.timeElapsed < result.totalQuestions) {
-        throw new Error('Temps suspect');
-    }
-    
-    return true;
+  // Score valide
+  if (typeof result.score !== 'number' || result.score < 0 || result.score > 100) {
+    throw new Error('Score invalide');
+  }
+
+  // Nombre de questions cohérent
+  if (result.correctAnswers > result.totalQuestions) {
+    throw new Error('Données incohérentes');
+  }
+
+  // Temps réaliste (min 1 seconde par question)
+  if (result.timeElapsed < result.totalQuestions) {
+    throw new Error('Temps suspect');
+  }
+
+  return true;
 }
 ```
 
@@ -276,6 +280,7 @@ Firebase est conçu pour exposer la clé API côté client. La sécurité repose
 3. **Restrictions API**: Configurées dans Google Cloud Console
 
 **Restrictions API recommandées**:
+
 ```
 Google Cloud Console → APIs & Services → Credentials
 → Sélectionner la clé API
@@ -289,11 +294,11 @@ Google Cloud Console → APIs & Services → Credentials
 
 ### 8.1 Environnements
 
-| Environnement | URL | Usage |
-|--------------|-----|-------|
-| **Développement** | `http://localhost:3200` | Dev local |
-| **Staging** | Preview Channels Firebase | Tests pré-prod |
-| **Production** | `https://avantage-quizz.web.app` | Production |
+| Environnement     | URL                              | Usage          |
+| ----------------- | -------------------------------- | -------------- |
+| **Développement** | `http://localhost:3200`          | Dev local      |
+| **Staging**       | Preview Channels Firebase        | Tests pré-prod |
+| **Production**    | `https://avantage-quizz.web.app` | Production     |
 
 ### 8.2 Build Process
 
@@ -302,19 +307,23 @@ Google Cloud Console → APIs & Services → Credentials
 **Fichier**: `vite.config.js`
 
 **Étapes du build**:
+
 ```bash
 npm run build
 ```
 
 1. **Compilation Tailwind CSS**:
+
    ```bash
    tailwindcss -i ./css/input.css -o ./css/output.css --minify
    ```
 
 2. **Build Vite**:
+
    ```bash
    vite build
    ```
+
    - Bundling JavaScript (ES modules → compatible navigateurs)
    - Minification (Terser)
    - Code-splitting automatique
@@ -326,6 +335,7 @@ npm run build
    - Génération `dist/index.html` optimisé
 
 **Output** (répertoire `dist/`):
+
 ```
 dist/
 ├── index.html
@@ -354,12 +364,7 @@ dist/
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "**/*.md"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "**/*.md"],
     "rewrites": [
       {
         "source": "**",
@@ -369,17 +374,21 @@ dist/
     "headers": [
       {
         "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=7200"
-        }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+          }
+        ]
       },
       {
         "source": "**/*.@(js|css)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=604800"
-        }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
       }
     ]
   },
@@ -397,12 +406,14 @@ dist/
 #### Commandes de Déploiement
 
 **Déploiement complet**:
+
 ```bash
 npm run deploy
 # Équivalent à: npm run build && firebase deploy
 ```
 
 **Déploiement sélectif**:
+
 ```bash
 firebase deploy --only hosting          # Hosting uniquement
 firebase deploy --only firestore:rules  # Règles Firestore
@@ -410,6 +421,7 @@ firebase deploy --only functions        # Cloud Functions
 ```
 
 **Preview Channel** (staging):
+
 ```bash
 firebase hosting:channel:deploy staging
 # URL: https://avantage-quizz--staging-xyz.web.app
@@ -432,21 +444,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run tests
         run: npm test
-      
+
       - name: Build
         run: npm run build
-      
+
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -467,6 +479,7 @@ firebase deploy --only functions
 ```
 
 **Fonctions déployées**:
+
 - `getGlobalStats`: Agrégation statistiques globales
 - `getModuleStats`: Statistiques par module
 
@@ -498,12 +511,13 @@ console.log(result.data.stats);
 ```json
 {
   "dependencies": {
-    "firebase": "^12.5.0"  // SDK Firebase complet
+    "firebase": "^12.5.0" // SDK Firebase complet
   }
 }
 ```
 
 **Modules Firebase utilisés**:
+
 - `firebase/app`: Core
 - `firebase/auth`: Authentication
 - `firebase/firestore`: Cloud Firestore
@@ -517,34 +531,34 @@ console.log(result.data.stats);
 {
   "devDependencies": {
     // Build Tools
-    "vite": "^7.1.12",           // Build tool moderne
-    "tailwindcss": "^3.3.5",     // Framework CSS
-    
+    "vite": "^7.1.12", // Build tool moderne
+    "tailwindcss": "^3.3.5", // Framework CSS
+
     // Testing
-    "vitest": "^4.0.6",          // Tests unitaires
-    "@vitest/ui": "^4.0.6",      // UI pour Vitest
-    "@vitest/coverage-v8": "^4.0.6",  // Coverage
-    "@playwright/test": "^1.56.1",    // Tests E2E
+    "vitest": "^4.0.6", // Tests unitaires
+    "@vitest/ui": "^4.0.6", // UI pour Vitest
+    "@vitest/coverage-v8": "^4.0.6", // Coverage
+    "@playwright/test": "^1.56.1", // Tests E2E
     "@testing-library/dom": "^10.4.1", // Testing utilities
-    "happy-dom": "^20.0.10",     // DOM léger pour tests
-    "jsdom": "^27.1.0",          // DOM complet pour tests
-    
+    "happy-dom": "^20.0.10", // DOM léger pour tests
+    "jsdom": "^27.1.0", // DOM complet pour tests
+
     // Code Quality
-    "eslint": "^9.39.1",         // Linting
-    "eslint-config-prettier": "^9.1.2",  // ESLint + Prettier
-    "prettier": "^3.6.2",        // Formatage
-    "husky": "^9.1.7",           // Git hooks
-    "lint-staged": "^15.5.2",    // Lint pré-commit
-    
+    "eslint": "^9.39.1", // Linting
+    "eslint-config-prettier": "^9.1.2", // ESLint + Prettier
+    "prettier": "^3.6.2", // Formatage
+    "husky": "^9.1.7", // Git hooks
+    "lint-staged": "^15.5.2", // Lint pré-commit
+
     // Performance
-    "@lhci/cli": "^0.15.1",      // Lighthouse CI
-    "lighthouse": "^12.8.2",     // Audits performance
-    
+    "@lhci/cli": "^0.15.1", // Lighthouse CI
+    "lighthouse": "^12.8.2", // Audits performance
+
     // Backend
     "firebase-admin": "^13.6.0", // Admin SDK (scripts)
-    
+
     // Utils
-    "http-server": "^14.1.1"     // Serveur local simple
+    "http-server": "^14.1.1" // Serveur local simple
   }
 }
 ```
@@ -554,27 +568,27 @@ console.log(result.data.stats);
 ```json
 {
   "scripts": {
-    "dev": "vite",                        // Dev server
+    "dev": "vite", // Dev server
     "build": "npm run build:css && vite build && node scripts/postbuild.mjs",
     "build:css": "tailwindcss -i ./css/input.css -o ./css/output.css --minify",
-    "preview": "vite preview",            // Preview build local
+    "preview": "vite preview", // Preview build local
     "deploy": "npm run build && firebase deploy",
-    
-    "test": "vitest",                     // Tests unitaires (watch)
-    "test:ui": "vitest --ui",             // UI interactive
-    "test:run": "vitest run",             // Tests une fois
+
+    "test": "vitest", // Tests unitaires (watch)
+    "test:ui": "vitest --ui", // UI interactive
+    "test:run": "vitest run", // Tests une fois
     "test:coverage": "vitest run --coverage",
-    
-    "test:e2e": "playwright test",        // Tests E2E
+
+    "test:e2e": "playwright test", // Tests E2E
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug",
     "test:e2e:report": "playwright show-report",
-    
-    "lighthouse": "lhci autorun",         // Audit Lighthouse
+
+    "lighthouse": "lhci autorun", // Audit Lighthouse
     "lighthouse:report": "start lighthouse-reports/index.html",
-    
+
     "convert:webp": "node scripts/convert-images-to-webp.js",
-    
+
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
     "format": "prettier . --write",
@@ -586,16 +600,22 @@ console.log(result.data.stats);
 ### 9.4 CDN (Externes)
 
 **Google Fonts**:
+
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 ```
 
 **Chart.js** (admin):
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
 ```
 
 **jsPDF** (admin):
+
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 ```
@@ -607,6 +627,7 @@ console.log(result.data.stats);
 ### 10.1 Prérequis
 
 **Logiciels requis**:
+
 - **Node.js**: Version 20.x ou supérieure
 - **npm**: Version 10.x ou supérieure
 - **Git**: Pour version control
@@ -614,6 +635,7 @@ console.log(result.data.stats);
 - **Compte Google Cloud**: Pour Cloud Functions
 
 **Vérifier versions**:
+
 ```bash
 node --version   # v20.x.x
 npm --version    # 10.x.x
@@ -697,15 +719,16 @@ firebase deploy --only functions
 **Fichier**: `js/firebase-config.js`
 
 **Configuration actuelle** (déjà dans le code):
+
 ```javascript
 const firebaseConfig = {
-  apiKey: "AIzaSyD8w7Em_xdMGplscfGLrnM72vmm4z5ZTr0",
-  authDomain: "avantage-quizz.firebaseapp.com",
-  databaseURL: "https://avantage-quizz-default-rtdb.firebaseio.com",
-  projectId: "avantage-quizz",
-  storageBucket: "avantage-quizz.firebasestorage.app",
-  messagingSenderId: "919472910099",
-  appId: "1:919472910099:web:e17d4c1cdc7a04c6cab4e6"
+  apiKey: 'AIzaSyD8w7Em_xdMGplscfGLrnM72vmm4z5ZTr0',
+  authDomain: 'avantage-quizz.firebaseapp.com',
+  databaseURL: 'https://avantage-quizz-default-rtdb.firebaseio.com',
+  projectId: 'avantage-quizz',
+  storageBucket: 'avantage-quizz.firebasestorage.app',
+  messagingSenderId: '919472910099',
+  appId: '1:919472910099:web:e17d4c1cdc7a04c6cab4e6',
 };
 ```
 
@@ -769,6 +792,7 @@ git commit -m "feat: Ajouter fonctionnalité X"
 ```
 
 **Convention de commits**:
+
 - `feat:` Nouvelle fonctionnalité
 - `fix:` Correction de bug
 - `docs:` Documentation
@@ -790,24 +814,28 @@ Créer Pull Request sur GitHub → Review → Merge
 #### Nommage
 
 **Variables/Fonctions** (camelCase):
+
 ```javascript
 const currentUser = getCurrentUser();
-async function loadQuizData() { }
+async function loadQuizData() {}
 ```
 
 **Classes** (PascalCase):
+
 ```javascript
-class StateManager { }
-class ErrorHandler { }
+class StateManager {}
+class ErrorHandler {}
 ```
 
 **Constantes** (UPPER_SNAKE_CASE):
+
 ```javascript
 const MAX_RETRY_ATTEMPTS = 3;
 const DEFAULT_CLIENT_ID = 'default';
 ```
 
 **Fichiers** (kebab-case):
+
 ```
 state-manager.js
 firebase-config.js
@@ -829,12 +857,12 @@ let currentQuiz = null;
 
 // 4. Fonctions principales (exportées)
 export async function startQuiz(moduleId) {
-    // ...
+  // ...
 }
 
 // 5. Fonctions utilitaires (privées)
 function validateQuizData(data) {
-    // ...
+  // ...
 }
 
 // 6. Initialisation
@@ -844,6 +872,7 @@ initializeQuizSystem();
 #### Commentaires
 
 **JSDoc pour fonctions publiques**:
+
 ```javascript
 /**
  * Charge les questions depuis Firestore
@@ -854,11 +883,12 @@ initializeQuizSystem();
  * @throws {Error} Si aucune question trouvée
  */
 export async function loadQuestions(moduleId, monthNumber, year) {
-    // ...
+  // ...
 }
 ```
 
 **Commentaires inline**:
+
 ```javascript
 // ✅ Bonne pratique: Expliquer le "pourquoi"
 // Attendre 2 secondes pour éviter rate limit Firebase
@@ -874,6 +904,7 @@ counter++;
 #### Console Logs
 
 **Convention** (émojis pour filtrage rapide):
+
 ```javascript
 console.log('✅ Opération réussie');
 console.warn('⚠️ Attention: valeur suspecte');
@@ -890,11 +921,13 @@ firebase emulators:start
 ```
 
 **Avantages**:
+
 - Tester sans toucher production
 - Données de test réinitialisables
 - Gratuit (pas de coûts Firebase)
 
 **Configuration** (`.firebaserc`):
+
 ```json
 {
   "projects": {
@@ -911,19 +944,21 @@ firebase emulators:start
 #### Chrome DevTools
 
 **Breakpoints**:
+
 - `debugger;` dans le code
 - Ou breakpoints visuels dans DevTools
 
 **Network Tab**:
+
 - Inspecter requêtes Firestore
 - Vérifier temps de réponse
 - Identifier requêtes lentes
 
 **Performance Tab**:
+
 - Profiling JavaScript
 - Identifier bottlenecks
 
 ---
 
 **(Suite dans la Partie 4...)**
-

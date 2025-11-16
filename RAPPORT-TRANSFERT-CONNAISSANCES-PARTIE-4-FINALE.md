@@ -13,19 +13,15 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    environment: 'happy-dom',  // DOM léger pour tests
+    environment: 'happy-dom', // DOM léger pour tests
     globals: true,
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
       include: ['js/**/*.js'],
-      exclude: [
-        'js/firebase-config.js',
-        'js/**/*.spec.js',
-        'node_modules/**'
-      ]
-    }
-  }
+      exclude: ['js/firebase-config.js', 'js/**/*.spec.js', 'node_modules/**'],
+    },
+  },
 });
 ```
 
@@ -38,31 +34,31 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { StateManager } from '../js/state-manager.js';
 
 describe('StateManager', () => {
-    let stateManager;
-    
-    beforeEach(() => {
-        stateManager = new StateManager();
+  let stateManager;
+
+  beforeEach(() => {
+    stateManager = new StateManager();
+  });
+
+  it('should set and get values', () => {
+    stateManager.set('testKey', 'testValue');
+    expect(stateManager.get('testKey')).toBe('testValue');
+  });
+
+  it('should notify subscribers on change', (done) => {
+    stateManager.subscribe('testKey', (newValue) => {
+      expect(newValue).toBe('newValue');
+      done();
     });
-    
-    it('should set and get values', () => {
-        stateManager.set('testKey', 'testValue');
-        expect(stateManager.get('testKey')).toBe('testValue');
-    });
-    
-    it('should notify subscribers on change', (done) => {
-        stateManager.subscribe('testKey', (newValue) => {
-            expect(newValue).toBe('newValue');
-            done();
-        });
-        
-        stateManager.set('testKey', 'newValue');
-    });
-    
-    it('should reset state correctly', () => {
-        stateManager.set('currentQuiz', { id: 1 });
-        stateManager.resetQuiz();
-        expect(stateManager.get('currentQuiz')).toBeNull();
-    });
+
+    stateManager.set('testKey', 'newValue');
+  });
+
+  it('should reset state correctly', () => {
+    stateManager.set('currentQuiz', { id: 1 });
+    stateManager.resetQuiz();
+    expect(stateManager.get('currentQuiz')).toBeNull();
+  });
 });
 ```
 
@@ -88,23 +84,21 @@ export default defineConfig({
   testDir: './e2e',
   timeout: 30 * 1000,
   retries: process.env.CI ? 2 : 0,
-  
+
   use: {
     baseURL: 'http://localhost:3200',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure'
+    video: 'retain-on-failure',
   },
-  
-  projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } }
-  ],
-  
+
+  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+
   webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3200',
-    reuseExistingServer: !process.env.CI
-  }
+    reuseExistingServer: !process.env.CI,
+  },
 });
 ```
 
@@ -116,29 +110,29 @@ export default defineConfig({
 import { test, expect } from '@playwright/test';
 
 test.describe('Authentication Flow', () => {
-    test('should display login page', async ({ page }) => {
-        await page.goto('/');
-        
-        // Vérifier présence du bouton de connexion
-        const loginBtn = page.locator('#google-signin-btn');
-        await expect(loginBtn).toBeVisible();
-        await expect(loginBtn).toContainText('Connexion avec Google');
-    });
-    
-    test('should show dashboard after login', async ({ page }) => {
-        // Note: Test sans vraie authentification Google
-        // Utiliser mock ou compte de test
-        
-        await page.goto('/');
-        // ... simulate login ...
-        
-        // Vérifier redirection vers dashboard
-        await expect(page).toHaveURL(/.*dashboard/);
-        
-        // Vérifier affichage des cartes mensuelles
-        const modulesGrid = page.locator('#modules-grid');
-        await expect(modulesGrid).toBeVisible();
-    });
+  test('should display login page', async ({ page }) => {
+    await page.goto('/');
+
+    // Vérifier présence du bouton de connexion
+    const loginBtn = page.locator('#google-signin-btn');
+    await expect(loginBtn).toBeVisible();
+    await expect(loginBtn).toContainText('Connexion avec Google');
+  });
+
+  test('should show dashboard after login', async ({ page }) => {
+    // Note: Test sans vraie authentification Google
+    // Utiliser mock ou compte de test
+
+    await page.goto('/');
+    // ... simulate login ...
+
+    // Vérifier redirection vers dashboard
+    await expect(page).toHaveURL(/.*dashboard/);
+
+    // Vérifier affichage des cartes mensuelles
+    const modulesGrid = page.locator('#modules-grid');
+    await expect(modulesGrid).toBeVisible();
+  });
 });
 ```
 
@@ -156,6 +150,7 @@ npm run test:e2e:report       # Voir rapport
 **Checklist complète** dans `GUIDE-TEST.md`
 
 **Sections principales**:
+
 1. ✅ Authentification (login, logout)
 2. ✅ Dashboard (cartes, navigation)
 3. ✅ Quiz (chargement, réponses, score)
@@ -174,27 +169,29 @@ module.exports = {
   ci: {
     collect: {
       url: ['http://localhost:3200'],
-      numberOfRuns: 3
+      numberOfRuns: 3,
     },
     assert: {
       assertions: {
         'categories:performance': ['error', { minScore: 0.85 }],
-        'categories:accessibility': ['error', { minScore: 0.90 }],
+        'categories:accessibility': ['error', { minScore: 0.9 }],
         'categories:best-practices': ['error', { minScore: 0.85 }],
-        'categories:seo': ['error', { minScore: 0.85 }]
-      }
-    }
-  }
+        'categories:seo': ['error', { minScore: 0.85 }],
+      },
+    },
+  },
 };
 ```
 
 **Commandes**:
+
 ```bash
 npm run lighthouse              # Run audit
 npm run lighthouse:report       # Voir rapport HTML
 ```
 
 **Cibles de performance**:
+
 - Performance: > 85
 - Accessibility: > 90
 - Best Practices: > 85
@@ -209,23 +206,25 @@ npm run lighthouse:report       # Voir rapport HTML
 #### Code-Splitting (Vite)
 
 **Configuration** (`vite.config.js`):
+
 ```javascript
 manualChunks: (id) => {
   // Séparer code admin du code principal
   if (id.includes('admin')) return 'admin';
-  
+
   // Séparer Firebase des autres vendors
   if (id.includes('firebase')) return 'vendor-firebase';
-  
+
   // Séparer code quiz
   if (id.includes('quiz')) return 'quiz';
-  
+
   // Services communs
   if (id.includes('services/')) return 'services';
-}
+};
 ```
 
 **Résultat**:
+
 - `main-*.js`: ~50 KB (page d'accueil)
 - `admin-*.js`: ~120 KB (chargé uniquement sur admin)
 - `vendor-firebase-*.js`: ~200 KB (mis en cache)
@@ -233,11 +232,13 @@ manualChunks: (id) => {
 #### Lazy Loading
 
 **Images**:
+
 ```html
-<img loading="lazy" decoding="async" src="logo.png" alt="Logo">
+<img loading="lazy" decoding="async" src="logo.png" alt="Logo" />
 ```
 
 **Scripts**:
+
 ```javascript
 // Import dynamique
 const { launchConfetti } = await import('./confetti.js');
@@ -246,25 +247,30 @@ const { launchConfetti } = await import('./confetti.js');
 #### Caching
 
 **Service Worker** (stratégie par type):
+
 - HTML: **Network First**
 - CSS/JS: **Cache First**
 - Images: **Stale While Revalidate**
 - API Firestore: **Network First avec Cache Fallback**
 
 **Headers de cache** (Firebase Hosting):
+
 ```json
 {
   "source": "**/*.@(js|css)",
-  "headers": [{
-    "key": "Cache-Control",
-    "value": "max-age=604800"  // 7 jours
-  }]
+  "headers": [
+    {
+      "key": "Cache-Control",
+      "value": "max-age=604800" // 7 jours
+    }
+  ]
 }
 ```
 
 #### Optimisation Firestore
 
 **1. Index composites**:
+
 ```javascript
 // firestore.indexes.json
 {
@@ -278,23 +284,21 @@ const { launchConfetti } = await import('./confetti.js');
 ```
 
 **2. Pagination**:
+
 ```javascript
 async function getQuestionsPaginated(pageSize = 20, lastDoc = null) {
-    let q = query(
-        collection(db, 'questions'),
-        orderBy('createdAt', 'desc'),
-        limit(pageSize)
-    );
-    
-    if (lastDoc) {
-        q = query(q, startAfter(lastDoc));
-    }
-    
-    return await getDocs(q);
+  let q = query(collection(db, 'questions'), orderBy('createdAt', 'desc'), limit(pageSize));
+
+  if (lastDoc) {
+    q = query(q, startAfter(lastDoc));
+  }
+
+  return await getDocs(q);
 }
 ```
 
 **3. Cloud Functions** (réduction lectures):
+
 ```javascript
 // Au lieu de 1000+ lectures client
 const allUsers = await getDocs(collection(db, 'users'));
@@ -310,13 +314,14 @@ const stats = await getGlobalStats({ clientId });
 
 **Core Web Vitals**:
 
-| Métrique | Valeur Actuelle | Cible |
-|----------|-----------------|-------|
-| **LCP** (Largest Contentful Paint) | ~1.8s | < 2.5s ✅ |
-| **FID** (First Input Delay) | ~50ms | < 100ms ✅ |
-| **CLS** (Cumulative Layout Shift) | ~0.05 | < 0.1 ✅ |
+| Métrique                           | Valeur Actuelle | Cible      |
+| ---------------------------------- | --------------- | ---------- |
+| **LCP** (Largest Contentful Paint) | ~1.8s           | < 2.5s ✅  |
+| **FID** (First Input Delay)        | ~50ms           | < 100ms ✅ |
+| **CLS** (Cumulative Layout Shift)  | ~0.05           | < 0.1 ✅   |
 
 **Autres métriques**:
+
 - **First Contentful Paint**: ~1.2s (cible < 1.8s) ✅
 - **Time to Interactive**: ~2.5s (cible < 3.8s) ✅
 - **Speed Index**: ~2.0s (cible < 3.4s) ✅
@@ -333,16 +338,17 @@ const perf = getPerformance(app);
 
 // Tracer opération longue
 export async function traceQuizLoad() {
-    const t = trace(perf, 'quiz_load');
-    t.start();
-    
-    // ... chargement quiz ...
-    
-    t.stop();
+  const t = trace(perf, 'quiz_load');
+  t.start();
+
+  // ... chargement quiz ...
+
+  t.stop();
 }
 ```
 
 **Métriques automatiques**:
+
 - Temps de chargement page
 - Latence réseau
 - Temps de réponse Firestore
@@ -356,11 +362,11 @@ import { getAnalytics, logEvent } from 'firebase/analytics';
 const analytics = getAnalytics(app);
 
 export function trackQuizComplete(moduleId, score) {
-    logEvent(analytics, 'quiz_complete', {
-        module: moduleId,
-        score: score,
-        timestamp: Date.now()
-    });
+  logEvent(analytics, 'quiz_complete', {
+    module: moduleId,
+    score: score,
+    timestamp: Date.now(),
+  });
 }
 ```
 
@@ -375,15 +381,18 @@ export function trackQuizComplete(moduleId, score) {
 **Statut**: ⚠️ **EN COURS** (migration en cours)
 
 **Description**:
+
 - Le champ `clientId` existe dans la plupart des collections
 - Certaines requêtes ne filtrent pas encore par `clientId`
 - Risque de fuite de données entre clients
 
 **Impact**:
+
 - **BLOQUANT** pour production multi-client réelle
 - OK pour single-client (client par défaut)
 
 **Solution en cours**:
+
 1. ✅ Ajout `clientId` dans toutes les collections
 2. ⏳ Migration données existantes
 3. ⏳ Mise à jour de toutes les requêtes
@@ -396,17 +405,20 @@ export function trackQuizComplete(moduleId, score) {
 **Statut**: ⚠️ **PARTIELLEMENT CORRIGÉ**
 
 **Description**:
+
 - Fonction `escapeHtml()` implémentée
 - Appliquée dans `quiz.js` et `admin-dashboard.js`
 - **Manquant dans**: `dashboard.js`, `results.js`, autres fichiers
 
 **Solution**:
+
 ```javascript
 // Appliquer systématiquement avant injection dans DOM
 element.innerHTML = escapeHtml(userInput);
 ```
 
 **TODO**:
+
 - Audit complet de tous les `innerHTML`
 - Remplacer par `textContent` quand possible
 - Utiliser `escapeHtml()` sinon
@@ -416,11 +428,13 @@ element.innerHTML = escapeHtml(userInput);
 **Statut**: ⏳ **À IMPLÉMENTER**
 
 **Impact**:
+
 - Risque de régression lors de modifications
 - Pas de CI/CD automatisé
 - Tests manuels chronophages
 
 **Solution**:
+
 1. Écrire tests unitaires (Vitest) pour:
    - `state-manager.js`
    - `auth.js`
@@ -438,32 +452,33 @@ element.innerHTML = escapeHtml(userInput);
 **Actuel**: Cache natif Firebase (limité)
 
 **Amélioration**:
+
 ```javascript
 // Cache en mémoire avec TTL
 class CacheService {
-    constructor() {
-        this.cache = new Map();
-        this.ttl = 5 * 60 * 1000; // 5 minutes
+  constructor() {
+    this.cache = new Map();
+    this.ttl = 5 * 60 * 1000; // 5 minutes
+  }
+
+  set(key, value) {
+    this.cache.set(key, {
+      value,
+      expiry: Date.now() + this.ttl,
+    });
+  }
+
+  get(key) {
+    const item = this.cache.get(key);
+    if (!item) return null;
+
+    if (Date.now() > item.expiry) {
+      this.cache.delete(key);
+      return null;
     }
-    
-    set(key, value) {
-        this.cache.set(key, {
-            value,
-            expiry: Date.now() + this.ttl
-        });
-    }
-    
-    get(key) {
-        const item = this.cache.get(key);
-        if (!item) return null;
-        
-        if (Date.now() > item.expiry) {
-            this.cache.delete(key);
-            return null;
-        }
-        
-        return item.value;
-    }
+
+    return item.value;
+  }
 }
 ```
 
@@ -474,13 +489,13 @@ class CacheService {
 ```javascript
 // Précharger questions du mois suivant
 async function prefetchNextMonth() {
-    const currentMonth = getCurrentMonthIndex();
-    const nextMonth = (currentMonth + 1) % 12;
-    
-    // En arrière-plan, sans bloquer UI
-    requestIdleCallback(async () => {
-        await loadQuizFromFirestore('auto', nextMonth, 2025);
-    });
+  const currentMonth = getCurrentMonthIndex();
+  const nextMonth = (currentMonth + 1) % 12;
+
+  // En arrière-plan, sans bloquer UI
+  requestIdleCallback(async () => {
+    await loadQuizFromFirestore('auto', nextMonth, 2025);
+  });
 }
 ```
 
@@ -489,13 +504,14 @@ async function prefetchNextMonth() {
 **Actuel**: PNG/JPG
 
 **Migration vers WebP**:
+
 - Script disponible: `scripts/convert-images-to-webp.js`
 - Réduction taille: ~30-40%
 
 ```html
 <picture>
-    <source srcset="logo.webp" type="image/webp">
-    <img src="logo.png" alt="Logo">
+  <source srcset="logo.webp" type="image/webp" />
+  <img src="logo.png" alt="Logo" />
 </picture>
 ```
 
@@ -504,42 +520,44 @@ async function prefetchNextMonth() {
 #### Règles Firestore
 
 **Vérifier régulièrement**:
+
 ```bash
 firebase deploy --only firestore:rules
 ```
 
 **Test des règles**:
+
 - Firebase Console → Firestore → Rules → Playground
 - Simuler requêtes avec différents utilisateurs
 
 #### Rate Limiting
 
 **Monitoring**:
+
 - Surveiller métriques Firebase Console
 - Alertes si > 1000 requêtes/min par utilisateur
 
 **Ajuster limites**:
+
 ```javascript
 // js/rate-limiter.js
-const readLimiter = new RateLimiter(100, 60000);  // 100/min
-const writeLimiter = new RateLimiter(50, 60000);  // 50/min
+const readLimiter = new RateLimiter(100, 60000); // 100/min
+const writeLimiter = new RateLimiter(50, 60000); // 50/min
 ```
 
 #### Logs d'Audit
 
 **Vérifier régulièrement**:
+
 ```javascript
 // Query admin logs
 const logs = await getDocs(
-    query(
-        collection(db, 'auditLogs'),
-        orderBy('timestamp', 'desc'),
-        limit(100)
-    )
+  query(collection(db, 'auditLogs'), orderBy('timestamp', 'desc'), limit(100))
 );
 ```
 
 **Actions suspectes à surveiller**:
+
 - Création massive de questions
 - Suppression d'utilisateurs
 - Modifications de rôles
@@ -553,6 +571,7 @@ const logs = await getDocs(
 #### P0 - CRITIQUE (IMMÉDIAT)
 
 **1. Finaliser Isolation Multi-Tenant**
+
 - ⏳ Migrer toutes les données existantes
 - ⏳ Ajouter filtres `clientId` partout
 - ⏳ Tests d'isolation complets
@@ -560,6 +579,7 @@ const logs = await getDocs(
 - **Bloquant pour**: Production multi-client
 
 **2. Compléter Protection XSS**
+
 - ⏳ Audit de tous les `innerHTML`
 - ⏳ Appliquer `escapeHtml()` systématiquement
 - **Effort**: 3-5 jours
@@ -568,6 +588,7 @@ const logs = await getDocs(
 #### P1 - IMPORTANT
 
 **3. Tests Automatisés**
+
 - ⏳ Tests unitaires (coverage > 80%)
 - ⏳ Tests E2E (flux critiques)
 - ⏳ CI/CD GitHub Actions
@@ -575,6 +596,7 @@ const logs = await getDocs(
 - **Bloquant pour**: Maintenance à long terme
 
 **4. Pagination Admin**
+
 - ⏳ Liste utilisateurs (max 1000 → paginer)
 - ⏳ Liste quiz (max 1000 → paginer)
 - **Effort**: 3-5 jours
@@ -585,6 +607,7 @@ const logs = await getDocs(
 #### P2 - AMÉLIORATIONS
 
 **5. Mode Offline Complet**
+
 - ⏳ Sync Queue pour quiz hors ligne
 - ⏳ Cache questions localement
 - ⏳ Indicateur connexion
@@ -592,6 +615,7 @@ const logs = await getDocs(
 - **Impact**: Expérience mobile améliorée
 
 **6. Notifications Push (PWA)**
+
 - ⏳ Service Worker notifications
 - ⏳ Rappels quiz mensuel
 - ⏳ Notifications résultats
@@ -599,6 +623,7 @@ const logs = await getDocs(
 - **Impact**: Engagement utilisateur
 
 **7. Export PDF Résultats**
+
 - ⏳ Génération PDF côté client (jsPDF)
 - ⏳ Template professionnel
 - ⏳ Logo Avantage Plus
@@ -606,6 +631,7 @@ const logs = await getDocs(
 - **Impact**: Feature demandée clients
 
 **8. Partage Social**
+
 - ⏳ Partage scores sur LinkedIn
 - ⏳ Badges de réussite
 - ⏳ Open Graph tags
@@ -617,6 +643,7 @@ const logs = await getDocs(
 #### P3 - VISION
 
 **9. Badges & Achievements**
+
 - ⏳ Système de badges (10 quiz, 100 quiz, etc.)
 - ⏳ Trophées (streak 30 jours, score parfait)
 - ⏳ Page profil avec showcase
@@ -624,6 +651,7 @@ const logs = await getDocs(
 - **Impact**: Gamification avancée
 
 **10. Leaderboard Temps Réel**
+
 - ⏳ Classement par client
 - ⏳ Classement global
 - ⏳ Mise à jour temps réel (Realtime Database)
@@ -631,6 +659,7 @@ const logs = await getDocs(
 - **Impact**: Compétition saine
 
 **11. Questions Adaptatives**
+
 - ⏳ Difficulté dynamique selon performance
 - ⏳ Algorithme de sélection intelligent
 - ⏳ Machine Learning (TensorFlow.js)
@@ -638,6 +667,7 @@ const logs = await getDocs(
 - **Impact**: Apprentissage personnalisé
 
 **12. Intégration LMS**
+
 - ⏳ API REST pour systèmes externes
 - ⏳ SCORM compliance
 - ⏳ SSO (Single Sign-On)
@@ -645,6 +675,7 @@ const logs = await getDocs(
 - **Impact**: Entreprise-ready
 
 **13. Dashboard Analytics Avancé**
+
 - ⏳ Rapports exportables (PDF, Excel)
 - ⏳ Graphiques interactifs (D3.js)
 - ⏳ Prédictions (tendances, scores)
@@ -654,6 +685,7 @@ const logs = await getDocs(
 ### 15.4 Améliorations Techniques Continues
 
 #### Performance
+
 - ✅ Code-splitting (fait)
 - ✅ Lazy loading (fait)
 - ⏳ Image optimization (WebP)
@@ -661,12 +693,14 @@ const logs = await getDocs(
 - ⏳ Preconnect DNS
 
 #### Accessibilité
+
 - ⏳ Audit WCAG 2.1 complet
 - ⏳ Screen reader testing
 - ⏳ Keyboard navigation améliorée
 - ⏳ High contrast mode
 
 #### Internationalization (i18n)
+
 - ⏳ Support multi-langues (FR, EN)
 - ⏳ Fichiers de traduction JSON
 - ⏳ Date/time localization
@@ -678,6 +712,7 @@ const logs = await getDocs(
 ### 16.1 Documentation Projet
 
 **Fichiers principaux**:
+
 - `README.md`: Vue d'ensemble
 - `ARCHITECTURE.md`: Architecture technique
 - `CAHIER-DES-CHARGES-COMPLET.md`: Spécifications complètes
@@ -685,6 +720,7 @@ const logs = await getDocs(
 - `FIREBASE-DEPLOYMENT.md`: Guide déploiement
 
 **Rapports d'audit**:
+
 - `AUDIT-COMPLET-FINAL.md`
 - `RAPPORT-VALIDATION-P1-5-ETATS-VIDES.md`
 - `RAPPORT-SUCCES-P1-2-CLOUD-FUNCTIONS.md`
@@ -692,18 +728,21 @@ const logs = await getDocs(
 ### 16.2 Documentation Externe
 
 **Firebase**:
+
 - [Firebase Documentation](https://firebase.google.com/docs)
 - [Firestore Security Rules](https://firebase.google.com/docs/firestore/security/rules-structure)
 - [Firebase Authentication](https://firebase.google.com/docs/auth)
 - [Cloud Functions](https://firebase.google.com/docs/functions)
 
 **Frontend**:
+
 - [Vite Documentation](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [Vitest](https://vitest.dev/)
 - [Playwright](https://playwright.dev/)
 
 **PWA**:
+
 - [Progressive Web Apps](https://web.dev/progressive-web-apps/)
 - [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 - [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)
@@ -713,6 +752,7 @@ const logs = await getDocs(
 **Éditeur recommandé**: Visual Studio Code
 
 **Extensions VSCode**:
+
 - Firebase (Firebase official)
 - Tailwind CSS IntelliSense
 - ESLint
@@ -721,6 +761,7 @@ const logs = await getDocs(
 - Playwright Test for VSCode
 
 **Configuration VSCode** (`.vscode/settings.json`):
+
 ```json
 {
   "editor.formatOnSave": true,
@@ -735,17 +776,21 @@ const logs = await getDocs(
 ### 16.4 Contacts & Support
 
 **Projet Firebase**:
+
 - Console: https://console.firebase.google.com/project/avantage-quizz
 - Project ID: `avantage-quizz`
 
 **URLs**:
+
 - Production: https://avantage-quizz.web.app
 - Admin: https://avantage-quizz.web.app/admin.html
 
 **Repository Git** (si applicable):
+
 - GitHub: (à remplir)
 
 **Contact développeur initial**:
+
 - (à remplir)
 
 ---
@@ -827,7 +872,8 @@ A: Mode démo supprimé en v2.0.2. Utiliser compte Google test.
 A: Vérifier règles Firestore + rôle utilisateur
 
 **Q: Comment ajouter un nouveau module (ex: Marine)?**
-A: 
+A:
+
 1. Ajouter dans `moduleConfig` (`js/quiz.js`)
 2. Ajouter bouton dans `module-selection-view` (`index.html`)
 3. Créer questions avec `module: 'marine'`
@@ -873,6 +919,7 @@ A:
 ### Message au Nouveau Développeur
 
 Ce projet est **bien structuré** et **documenté**. Prenez le temps de:
+
 - Lire cette documentation complètement
 - Explorer le code progressivement
 - Tester en local avant toute modification
@@ -904,31 +951,36 @@ Le code est **modulaire** et **extensible**. Chaque ajout de fonctionnalité doi
 ### B. Conventions de Nommage
 
 **Collections Firestore**:
+
 - Plural: `users`, `questions`, `quizResults`
 - camelCase pour champs: `userId`, `createdAt`
 
 **Fichiers JavaScript**:
+
 - kebab-case: `firebase-config.js`, `state-manager.js`
 
 **Classes**:
+
 - PascalCase: `StateManager`, `ErrorHandler`
 
 **Fonctions**:
+
 - camelCase: `loadQuizData()`, `calculateScore()`
 
 **Constantes**:
+
 - UPPER_SNAKE_CASE: `MAX_QUESTIONS`, `DEFAULT_CLIENT_ID`
 
 ### C. Codes d'Erreur Firestore
 
-| Code | Signification |
-|------|---------------|
-| `permission-denied` | Règles Firestore bloquent l'accès |
-| `unauthenticated` | Utilisateur non connecté |
-| `not-found` | Document/collection inexistant |
-| `already-exists` | Document existe déjà (conflit) |
-| `resource-exhausted` | Quota Firestore dépassé |
-| `unavailable` | Service Firebase temporairement indisponible |
+| Code                 | Signification                                |
+| -------------------- | -------------------------------------------- |
+| `permission-denied`  | Règles Firestore bloquent l'accès            |
+| `unauthenticated`    | Utilisateur non connecté                     |
+| `not-found`          | Document/collection inexistant               |
+| `already-exists`     | Document existe déjà (conflit)               |
+| `resource-exhausted` | Quota Firestore dépassé                      |
+| `unavailable`        | Service Firebase temporairement indisponible |
 
 ### D. Structure Type d'un Service
 
@@ -948,29 +1000,26 @@ const COLLECTION_NAME = 'examples';
  * @returns {Promise<Array>} Liste des exemples
  */
 export async function getExamples(filters = {}) {
-    try {
-        const clientId = await getCurrentClientId();
-        
-        let q = query(
-            collection(db, COLLECTION_NAME),
-            where('clientId', '==', clientId)
-        );
-        
-        // Appliquer filtres additionnels
-        if (filters.type) {
-            q = query(q, where('type', '==', filters.type));
-        }
-        
-        const snapshot = await safeFirestoreRead(() => getDocs(q));
-        
-        return snapshot.docs.map(doc => ({
-            id: doc.id,
-            ...doc.data()
-        }));
-    } catch (error) {
-        console.error('❌ Erreur récupération exemples:', error);
-        throw error;
+  try {
+    const clientId = await getCurrentClientId();
+
+    let q = query(collection(db, COLLECTION_NAME), where('clientId', '==', clientId));
+
+    // Appliquer filtres additionnels
+    if (filters.type) {
+      q = query(q, where('type', '==', filters.type));
     }
+
+    const snapshot = await safeFirestoreRead(() => getDocs(q));
+
+    return snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+  } catch (error) {
+    console.error('❌ Erreur récupération exemples:', error);
+    throw error;
+  }
 }
 ```
 
@@ -990,4 +1039,3 @@ export async function getExamples(filters = {}) {
 **Propriété**: Avantage Plus  
 **Confidentialité**: Document interne  
 **Usage**: Transfert de connaissances développeurs autorisés uniquement
-
