@@ -1,0 +1,188 @@
+{
+  "module": "hasard-route",
+  "month": 6,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelles sont les exclusions générales du programme Hasard de Route ?",
+      "options": ["Aucune exclusion", "10 catégories exclusions : conditions préexistantes, pertes non signalées 60 jours, dommages hors Canada/USA, pneus/roues non recommandés, défauts fabricant, accidents/collisions, pertes consécutives, fraude, utilisation hors-route/malveillance, vandalisme/force majeure", "3 exclusions", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le programme a 10 catégories d'exclusions générales incluant : préexistants, non signalés 60 jours, hors territoire, pneus non recommandés, défauts fabricant, accidents, pertes consécutives, fraude, hors-route, vandalisme."
+    },
+    {
+      "question": "Les conditions préexistantes sont-elles couvertes ?",
+      "options": ["Oui, toutes conditions", "NON, toute condition PRÉEXISTANTE ou dommage survenu AVANT Date entrée vigueur = EXCLU", "Selon la déclaration", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Toute condition PRÉEXISTANTE ou tout dommage survenu AVANT la Date d'entrée en vigueur du contrat de service est EXCLU de la couverture."
+    },
+    {
+      "question": "Quel est le délai maximum pour signaler une perte à l'Administrateur ?",
+      "options": ["30 jours", "Toute perte NON signalée dans les 60 jours suivant date incident = EXCLUE", "90 jours", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "Toute perte qui n'est PAS signalée à l'Administrateur dans les 60 jours suivant la date de l'incident est EXCLUE de la couverture."
+    },
+    {
+      "question": "Comment expliquer importance délai 60 jours signalement à client négligent ?",
+      "options": ["Être flexible", "Expliquer IMPORTANCE : délai 60 jours = limite raisonnable vérification état dommage authentique (preuves fraîches). Au-delà 60 jours = impossible vérifier cause/date réelle = réclamation REFUSÉE. Signaler IMMÉDIATEMENT dommages protège droits", "L'ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige insistance : délai 60 jours = vérification état authentique preuves fraîches, au-delà = impossible vérifier cause date = refus, signalement immédiat protège droits réclamation."
+    },
+    {
+      "question": "Les dommages survenus hors Canada/USA sont-ils couverts ?",
+      "options": ["Oui, mondial", "NON, tout dommage survenu HORS CANADA ou ÉTATS-UNIS CONTINENTAUX = EXCLU", "Seulement Amérique Nord", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage survenu en DEHORS du Canada ou des États-Unis CONTINENTAUX est EXCLU de la couverture (limite géographique stricte)."
+    },
+    {
+      "question": "Un client voyage au Mexique. Les dommages y sont-ils couverts ?",
+      "options": ["Oui, Amérique Nord", "NON COUVERT : Mexique = hors Canada/USA continentaux = EXCLU. Programme couvre SEULEMENT Canada + USA continentaux", "Selon la durée", "Essayer quand même"],
+      "correctAnswer": 1,
+      "explanation": "Le Mexique est HORS de la zone de couverture (Canada + USA continentaux seulement). Tout dommage au Mexique est EXCLU du programme Hasard de Route."
+    },
+    {
+      "question": "Comment conseiller un client qui voyage fréquemment USA/Mexique ?",
+      "options": ["Couvrir tous voyages", "Expliquer CLAIREMENT : USA = couvert (continentaux), Mexique = EXCLU. Recommander assurance voyage séparée Mexique (protections spécifiques). Hasard de Route = Canada/USA seulement. Clarté géographique évite réclamations refusées", "Promettre couverture", "Selon la destination"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté géographique : USA couvert (continentaux), Mexique exclu, recommander assurance voyage séparée Mexique, Hasard de Route Canada/USA seulement, évite réclamations refusées."
+    },
+    {
+      "question": "Les défauts de fabrication sont-ils couverts ?",
+      "options": ["Oui, tous défauts", "NON, dommages couverts par garanties FABRICANT + dommages résultant DÉFAUT fabricant = EXCLUS", "Selon le fabricant", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage couvert par les garanties émises par le FABRICANT + tout dommage résultant d'un DÉFAUT du fabricant sont EXCLUS de la couverture."
+    },
+    {
+      "question": "Les pertes ou dommages résultant d'accident/collision sont-ils couverts ?",
+      "options": ["Oui, petits accidents", "NON, toute perte ou dommage résultant ACCIDENT et/ou COLLISION = EXCLU", "Selon la gravité", "Couvert par assurance"],
+      "correctAnswer": 1,
+      "explanation": "Toute perte ou dommage résultant d'un ACCIDENT et/ou d'une COLLISION est EXCLU de la couverture Hasard de Route (responsabilité assurance principale)."
+    },
+    {
+      "question": "Comment expliquer exclusion accidents/collisions à client confus différence hasards vs accidents ?",
+      "options": ["C'est compliqué", "Expliquer DISTINCTION : Hasards routiers = conditions route anormales (nids-poule, débris) utilisation NORMALE. Accident/collision = impact AUTRE véhicule/objet fixe. Hasard de Route = hasards SEULEMENT, accidents = assurance principale. Clarifier différence évite confusion", "Ignorer distinction", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige distinction claire : Hasards = conditions route anormales utilisation normale, Accident/collision = impact autre véhicule/objet, Hasard de Route = hasards seulement, accidents = assurance, clarté évite confusion."
+    },
+    {
+      "question": "Les dommages consécutifs sont-ils couverts ?",
+      "options": ["Oui, tous dommages", "NON, toute perte/dommage CONSÉCUTIF (incluant perte, dommage ou blessure personnes/biens résultant défaillance composant ou réparation) = EXCLU", "Selon le lien", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Toute perte ou dommage CONSÉCUTIF, y compris mais non limité à perte, dommage ou blessure de personnes ou biens résultant défaillance composant ou réparation effectuée = EXCLU."
+    },
+    {
+      "question": "Que se passe-t-il si le client commet un acte frauduleux ?",
+      "options": ["Avertissement", "Toute perte lorsque client ou personne en son nom PRÊTE FAUX SERMENTS ou COMMET ACTE FRAUDULEUX = EXCLU + peut annuler contrat", "Selon la gravité", "Pardon possible"],
+      "correctAnswer": 1,
+      "explanation": "Toute perte lorsque le client ou toute personne en son nom prête FAUX SERMENTS ou commet un ACTE FRAUDULEUX en lien avec demande de service/remboursement = EXCLU (peut annuler contrat)."
+    },
+    {
+      "question": "Comment expliquer gravité fraude à un client tentant fausses déclarations ?",
+      "options": ["Être souple", "Expliquer CONSÉQUENCES : fraude/faux serments = ANNULATION contrat complet (perte totale protection), réclamation REFUSÉE, poursuites légales possibles. Intégrité OBLIGATOIRE. Honnêteté protège droits client. Zéro tolérance fraude", "Avertir seulement", "Selon l'ampleur"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté conséquences : fraude = annulation contrat total perte protection, réclamation refusée, poursuites possibles, intégrité obligatoire, honnêteté protège droits, zéro tolérance."
+    },
+    {
+      "question": "Quels types d'utilisation véhicule sont exclus ?",
+      "options": ["Aucune exclusion", "EXCLUS : utilisation hors-route, mauvaise utilisation, mauvais traitements, manque entretien, désalignement, problèmes suspension, chantier construction, routes non entretenues, malveillance, déneigement, remorquage commercial, vol, incendie", "Seulement hors-route", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Exclusions utilisation : hors-route, mauvaise utilisation, mauvais traitements, manque entretien approprié, désalignement, problèmes suspension, chantier construction, routes non entretenues, malveillance, déneigement, remorquage commercial, vol, incendie."
+    },
+    {
+      "question": "Un client avec pickup utilisé pour déneigement commercial. Admissible Hasard de Route ?",
+      "options": ["Oui, pickup couvert", "NON ADMISSIBLE : utilisation déneigement = EXCLU explicitement. Dommages résultant activité commerciale déneigement = non couverts", "Selon la fréquence", "Si déclaré"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage résultant d'une utilisation à des fins de DÉNEIGEMENT est EXCLU explicitement. Un véhicule utilisé pour déneigement commercial n'est pas admissible aux réclamations."
+    },
+    {
+      "question": "Comment conseiller un client entrepreneur (utilisation chantier construction) ?",
+      "options": ["Vendre quand même", "Expliquer EXCLUSIONS : utilisation chantier construction + routes non entretenues = EXCLU. Hasard de Route = routes publiques entretenues. Recommander assurance commerciale spécialisée entrepreneurs (couverture adaptée). Transparence évite litiges", "Ignorer utilisation", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté : chantier construction + routes non entretenues = exclu, Hasard de Route = routes publiques entretenues, recommander assurance commerciale spécialisée, transparence évite litiges."
+    },
+    {
+      "question": "Les dommages causés par manque d'entretien sont-ils couverts ?",
+      "options": ["Oui, selon le dommage", "NON, dommages résultant MANQUE ENTRETIEN APPROPRIÉ = EXCLUS", "Sur approbation", "Si entretien récent"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage résultant de MANQUE D'ENTRETIEN APPROPRIÉ du véhicule est EXCLU de la couverture (entretien régulier requis)."
+    },
+    {
+      "question": "Les dommages causés par collision avec trottoir/terre-plein sont-ils couverts ?",
+      "options": ["Oui, hasards routiers", "NON, dommages causés par COLLISION avec trottoir ou terre-plein = EXCLUS (SAUF roues accidentellement frottées contre trottoir = couverture Cosmétique roues)", "Selon la gravité", "Tous couverts"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage causé par COLLISION avec un trottoir ou terre-plein est EXCLU (EXCEPTION : roues accidentellement frottées contre trottoir/nid-poule = couverture Cosmétique roues)."
+    },
+    {
+      "question": "Comment expliquer distinction frottement vs collision trottoir à un client ?",
+      "options": ["C'est pareil", "Expliquer DISTINCTION : Frottement accidentel = roue effleure trottoir stationnement (léger, cosmétique) = COUVERT Cosmétique roues. Collision = impact violent trottoir/terre-plein (vitesse, dommages structurels) = EXCLU. Sévérité impact détermine admissibilité", "Ignorer nuance", "Selon le dommage"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige distinction : Frottement = effleurement léger cosmétique stationnement (couvert Cosmétique), Collision = impact violent vitesse structurel (exclu), sévérité détermine admissibilité."
+    },
+    {
+      "question": "Les dommages causés par actes de guerre ou terrorisme sont-ils couverts ?",
+      "options": ["Oui, force majeure", "NON, dommages causés par accidents, vandalisme, événements FORCE MAJEURE, actes GUERRE ou TERRORISME = EXCLUS", "Selon le contexte", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage causé par accidents, vandalisme, événements de FORCE MAJEURE, actes de GUERRE ou de TERRORISME est EXCLU de la couverture."
+    },
+    {
+      "question": "Ce contrat peut-il être transféré à un nouvel acheteur ?",
+      "options": ["Non, non transférable", "OUI, contrat PEUT être transféré à acheteur PRIVÉ ultérieur véhicule (concessionnaires EXCLUS) pour Durée restante période initiale", "Seulement famille", "Selon l'Administrateur"],
+      "correctAnswer": 1,
+      "explanation": "OUI, ce contrat PEUT être transféré par le client à un acheteur PRIVÉ ultérieur du véhicule pour la Durée restante de la période initiale (concessionnaires sont EXCLUS)."
+    },
+    {
+      "question": "Quels sont les frais pour transférer le contrat ?",
+      "options": ["Gratuit", "99$ plus taxes applicables", "199$ plus taxes", "150$ fixe"],
+      "correctAnswer": 1,
+      "explanation": "Pour effectuer le transfert du contrat : frais de 99$ plus les taxes applicables doivent être payés (avec formulaire transfert + preuve vente véhicule)."
+    },
+    {
+      "question": "Quel est le délai pour transférer le contrat après vente véhicule ?",
+      "options": ["60 jours", "Dans les 30 jours suivant vente véhicule (documentation preuve vente + chèque 99$+taxes + formulaire transfert)", "90 jours", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "Pour que le transfert soit effectué : dans les 30 jours suivant la vente du véhicule, envoyer documentation preuve vente + chèque 99$+taxes + formulaire transfert dûment rempli signé."
+    },
+    {
+      "question": "Comment valoriser transférabilité contrat à client vendant véhicule dans 2 ans ?",
+      "options": ["Minimiser", "Démontrer VALEUR : contrat transférable = augmente valeur revente véhicule (protection hasards routiers restante = argument vente majeur). Acheteur potentiel paie plus pour véhicule avec protection. Frais 99$ transfert = investissement minime ROI revente", "C'est compliqué", "Selon l'acheteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser : contrat transférable = augmente valeur revente (protection restante = argument vente), acheteur paie plus, frais 99$ = investissement minime ROI revente majeur."
+    },
+    {
+      "question": "Quelle est la période d'annulation sans pénalité ?",
+      "options": ["30 jours", "Annulation dans les 10 jours suivant Date entrée vigueur = remboursement prix achat total (moins indemnités payées)", "15 jours", "Aucune annulation"],
+      "correctAnswer": 1,
+      "explanation": "Si contrat annulé dans les 10 jours suivant Date entrée vigueur : remboursement du prix d'achat TOTAL, moins le montant de toute indemnité(s) payée(s) ou à payer."
+    },
+    {
+      "question": "Peut-on annuler le contrat après 10 jours ?",
+      "options": ["Oui, toujours", "NON, IMPOSSIBLE annuler contrat après 10 jours (SAUF cas Perte Totale, vol non récupéré, ou saisie véhicule)", "Oui, moyennant frais", "Selon la raison"],
+      "correctAnswer": 1,
+      "explanation": "Le client NE PEUT PAS annuler ce contrat APRÈS 10 jours suivant Date entrée vigueur (EXCEPTIONS : Perte Totale, véhicule volé non récupéré, ou véhicule saisi)."
+    },
+    {
+      "question": "Quels sont les frais d'annulation après 10 jours (si Perte Totale) ?",
+      "options": ["Gratuit", "Remboursement au prorata (hors prime vente) moins frais traitement 199$ plus taxes, moins indemnités payées", "99$ seulement", "Aucun remboursement"],
+      "correctAnswer": 1,
+      "explanation": "Après 10 jours (si Perte Totale/vol/saisie) : remboursement au prorata du coût (hors prime vente), moins frais traitement annulation 199$+taxes, moins toute indemnité payée/à payer."
+    },
+    {
+      "question": "Comment expliquer politique annulation stricte après 10 jours à client mécontent ?",
+      "options": ["Être flexible", "Expliquer LOGIQUE : période 10 jours = délai raisonnable évaluation (lecture complète termes). Après 10 jours = engagement ferme (protection active). Annulation après = SEULEMENT cas exceptionnels (Perte Totale). Politique standard industrie protège intégrité programme", "Faire exception", "Selon la raison"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : période 10 jours = délai raisonnable évaluation termes, après = engagement ferme protection active, annulation seulement exceptionnels (Perte Totale), politique standard industrie intégrité."
+    },
+    {
+      "question": "Un client a Perte Totale jour 180. Quel remboursement s'il a utilisé 500$ réclamations ?",
+      "options": ["Remboursement complet", "Calculer au prorata : (Prix contrat - prime vente) × jours restants / jours totaux - 199$ frais - 500$ réclamations payées", "Aucun remboursement", "Selon l'assurance"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige calcul prorata : (coût contrat - prime vente) × temps restant / temps total - frais 199$+taxes - réclamations 500$ payées = remboursement final si admissible."
+    },
+    {
+      "question": "Un collègue dit \"Client peut annuler n'importe quand sans frais\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : annulation SEULEMENT 10 premiers jours (remboursement complet - indemnités). Après 10 jours = IMPOSSIBLE (sauf Perte Totale, frais 199$). Fausse promesse = litige client mécontent. Correction protège réputation + intégrité", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : annulation seulement 10 jours (complet - indemnités), après = impossible (sauf Perte Totale frais 199$), fausse promesse = litige, correction protège réputation intégrité."
+    }
+  ]
+}
+

@@ -1,0 +1,140 @@
+{
+  "module": "avex",
+  "month": 12,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quel est le récapitulatif complet des tarifs AVEX Véhicules Récents (≤5 ans/≤80k km) ?",
+      "options": ["3 termes", "5 termes: 12 mois/20k km (1675$), 24 mois/40k km (1775$), 36 mois/60k km (1875$), 48 mois/80k km (2075$), 60 mois/100k km (2175$). Couverture 17 composants + 9 inclusions TOUS termes", "Un seul", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "AVEX Véhicules Récents (≤5 ans/≤80k km): 5 termes disponibles de 1675$ (12 mois/20k) à 2175$ (60 mois/100k). TOUS termes = 17 composants complets + 9 inclusions exceptionnelles."
+    },
+    {
+      "question": "Quel est le récapitulatif complet des tarifs AVEX Véhicules Usagés (≤10 ans/≤160k km) ?",
+      "options": ["3 termes", "5 termes: 12 mois/20k km (1875$), 24 mois/40k km (1975$), 36 mois/60k km (2075$), 48 mois/80k km (2275$), 60 mois/100k km (2375$). Couverture IDENTIQUE Récent (17 composants + 9 inclusions)", "Un seul", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "AVEX Véhicules Usagés (≤10 ans/≤160k km): 5 termes disponibles de 1875$ (12 mois/20k) à 2375$ (60 mois/100k). Couverture IDENTIQUE Récent (17 composants + 9 inclusions), seul tarif diffère (+200$/terme)."
+    },
+    {
+      "question": "Quel est le récapitulatif complet des 8 options AVEX disponibles ?",
+      "options": ["5 options", "8 options: 1) Suspension A+ (300$), 2) Couverture complémentaire (200$), 3) Protection garantie (300$, termes 36+ mois), 4) Remboursement partiel (300$, termes 36+ mois), 5) Km ouvert (100$, Récent seulement), 6) Utilisation spécialisée (200$), 7) Réparation ouverte (300$, Récent seulement), 8) Modèles sélectifs (400$, 12 marques)", "3 options", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "AVEX offre 8 options personnalisation: Suspension A+ 300$, Couverture compl. 200$, Protection garantie 300$ (36+), Remboursement partiel 300$ (36+), Km ouvert 100$ (Récent), Utilisation spéc. 200$, Réparation ouverte 300$ (Récent), Modèles sélectifs 400$ (12 marques)."
+    },
+    {
+      "question": "Quelles sont les 12 marques couvertes par Option Modèles sélectifs (400$) ?",
+      "options": ["Toutes les marques", "12 marques luxe/performance: Alfa Romeo, Audi, BMW, Jaguar, Landrover, Lexus, Maserati, Mercedes-Benz, Mini, Porsche, Smart, Tesla", "Seulement allemandes", "5 marques"],
+      "correctAnswer": 1,
+      "explanation": "Option Modèles sélectifs (400$) couvre 12 marques luxe/performance: Alfa Romeo, Audi, BMW, Jaguar, Landrover, Lexus, Maserati, Mercedes-Benz, Mini, Porsche, Smart, Tesla."
+    },
+    {
+      "question": "Quel est le récapitulatif des 9 éléments INCLUS sans frais AVEX ?",
+      "options": ["3 éléments", "9 inclusions exceptionnelles: 1) Haute Technologie (composant 21), 2) Véhicule Hybride/Électrique (23-24), 3) 0$ Franchise (Centre Autorisé), 4) Véhicule VGA (composant 6), 5) Service Routier (25), 6) Garantie Transférable, 7) Traction intégrale, 8) Véhicule Courtoisie (26), 9) Frais Diagnostic Payé (2h)", "5 éléments", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "9 inclusions EXCEPTIONNELLES AVEX sans frais: Haute Technologie, Hybride/Électrique, 0$ Franchise, VGA, Service Routier, Transférable, Traction intégrale, Courtoisie, Diagnostic Payé. Valeur 5000$+ si achat séparé."
+    },
+    {
+      "question": "Quel est le package optimal pour BMW X5 2022 (3 ans/55k km) suspension pneumatique grand rouleur protection maximale ?",
+      "options": ["Base seulement", "Package COMPLET optimal: AVEX Récent 60 mois (2175$) + Modèles sélectifs 400$ (BMW obligatoire) + Suspension A+ 300$ (pneumatique) + Km ouvert 100$ (grand rouleur) + Réparation ouverte 300$ (haute valeur) + Couverture compl. 200$ + Protection garantie 300$ (terme 60) = 3775$ TOTAL protection maximale absolue luxe", "Minimum", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Package optimal BMW X5 pneumatique grand rouleur: Base 2175$ + 7 options (Modèles sélectifs 400$, Suspension A+ 300$, Km ouvert 100$, Réparation ouverte 300$, Couverture compl. 200$, Protection garantie 300$) = 3775$ protection totale."
+    },
+    {
+      "question": "Quel est le package optimal pour Tesla Model 3 2023 (2 ans/38k km) protection complète ?",
+      "options": ["Non compatible", "Package optimal Tesla: AVEX Récent 60 mois (2175$) + Modèles sélectifs 400$ (Tesla obligatoire) + Réparation ouverte 300$ (haute valeur électrique) + Couverture compl. 200$ + Protection garantie 300$ (terme 60) + Remboursement partiel 300$ (terme 60, si aucune réclamation) = 3675$ TOTAL. Véhicule électrique/Batterie/Haute-tech/Aide conduite INCLUS = valeur exceptionnelle", "Pas adapté", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Package optimal Tesla: Base 2175$ + 5 options (Modèles sélectifs 400$ obligatoire, Réparation ouverte 300$, Couverture compl. 200$, Protection garantie 300$, Remboursement partiel 300$) = 3675$. Systèmes électriques/batterie/haute-tech INCLUS."
+    },
+    {
+      "question": "Quel est le package minimal recommandé pour Honda Civic 2023 (2 ans/40k km) usage standard budget modéré ?",
+      "options": ["Base seule", "Package minimal recommandé: AVEX Récent 60 mois (2175$) + Couverture complémentaire 200$ + Protection garantie 300$ (terme 60) = 2675$ TOTAL. Protection excellente fiabilité Honda, options essentielles, prix raisonnable. Pas besoin Modèles sélectifs/Km ouvert/Réparation ouverte (marque standard/usage standard)", "Toutes les options", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Package minimal recommandé Civic standard: Base 2175$ + 2 options essentielles (Couverture compl. 200$, Protection garantie 300$) = 2675$ optimal. Marque fiable, usage standard, options pertinentes seulement."
+    },
+    {
+      "question": "Quel est le package optimal pour F-150 2020 diesel (5 ans/95k km) usage commercial grand rouleur ?",
+      "options": ["Non admissible", "Package optimal F-150 diesel commercial: AVEX Usagé 60 mois (2375$, admissible ≤10 ans/160k) + Utilisation spécialisée 200$ (diesel/commercial) + Couverture compl. 200$ + Remboursement partiel 300$ (terme 60, si aucune réclamation) = 3075$ TOTAL protection diesel commercial. NOTE: 95k km > Récent (≤80k), donc Tarif Usagé", "Seulement base", "Selon l'usage"],
+      "correctAnswer": 1,
+      "explanation": "Package optimal F-150 diesel commercial: Usagé 2375$ (95k km > Récent 80k km) + 3 options (Utilisation spéc. 200$, Couverture compl. 200$, Remboursement partiel 300$) = 3075$ protection diesel commercial adaptée."
+    },
+    {
+      "question": "Comment calculer ROI AVEX pour client hésitant terme 60 mois (2175$) ?",
+      "options": ["Pas de calcul", "Calcul ROI démonstrable 4 points: 1) Terme 60 mois (2175$) = 36$/mois = 1,20$/jour, 2) UNE réparation majeure (moteur 10k$, transmission 7k$) justifie 100% coût, 3) Protection 17 composants (valeur réparations potentielles 50k$+), 4) 9 inclusions (Service Routier 500$, Haute-tech 2000$+, etc.). ROI exceptionnel démontrable, protection vs coût minime", "C'est subjectif", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration ROI concrète: 36$/mois = 1,20$/jour minime, une réparation majeure justifie 100%, protection 17 composants (50k$+ valeur), 9 inclusions (3000$+), ROI exceptionnel démontrable."
+    },
+    {
+      "question": "Quels sont les 3 numéros de contact essentiels AVEX à communiquer au client ?",
+      "options": ["Un seul", "3 contacts essentiels: 1) Réclamations/Urgences: 1-866-666-0181 (24/7), 2) Courriel: info@garantieavantageplus.ca, 3) Service Routier: 1-888-668-6082. Insister numéro 1 = PRIORITÉ contact AVANT toute réparation", "Deux numéros", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "3 contacts ESSENTIELS: 1-866-666-0181 (réclamations 24/7 PRIORITÉ), info@garantieavantageplus.ca (courriel), 1-888-668-6082 (Service Routier). Insister contact Administrateur AVANT réparation = OBLIGATOIRE."
+    },
+    {
+      "question": "Quel est le message final de clôture optimal lors vente AVEX ?",
+      "options": ["Signature vite", "Message clôture professionnel 6 points: 1) FÉLICITER décision sage (protection investissement majeur), 2) RÉCAPITULER couverture (17 composants + 9 inclusions + options choisies), 3) RAPPELER processus réclamation simple (1-866-666-0181), 4) SOULIGNER disponibilité support futur (questions, assistance), 5) DEMANDER conservation documentation (contrat, factures entretien), 6) REMERCIER confiance. Clôture positive professionnelle = satisfaction début relation", "Remercier vite", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clôture complète positive: félicitations décision, récapitulation couverture complète, rappel processus simple, disponibilité support, conservation documentation, remerciements confiance = satisfaction début relation optimale."
+    },
+    {
+      "question": "Comment gérer situation où client AVEX a panne majeure (moteur 12k$) couverte dans première année ?",
+      "options": ["Gérer routine", "Gestion proactive excellence 6 étapes: 1) Assistance immédiate processus réclamation (accompagnement), 2) Suivi régulier progrès réparation (mises à jour), 3) Vérification satisfaction gestion réclamation, 4) Après réparation: appel satisfaction (expérience complète), 5) Valoriser protection AVEX (économie 12k$!), 6) Demander témoignage (expérience réelle protection). Excellence service = fidélité + témoignage puissant", "Laisser Administrateur gérer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige excellence service réclamation majeure: assistance processus, suivi régulier, vérification satisfaction, appel post-réparation, valorisation économie réalisée, demande témoignage = fidélité + référence puissante."
+    },
+    {
+      "question": "Quelle est la check-list finale vérification AVANT remise documents AVEX client ?",
+      "options": ["Aucune vérification", "Check-list finale 8 points: 1) ✓ Informations véhicule exactes (VIN, année, km), 2) ✓ Tarification correcte (Récent vs Usagé), 3) ✓ Terme sélectionné approprié, 4) ✓ Options cochées correctement, 5) ✓ Prix total calculé exact, 6) ✓ Signatures complètes (propriétaire + distributeur), 7) ✓ Coordonnées contact complètes, 8) ✓ Copie remise client + copie conservée. Vérification = professionnalisme zéro erreur", "Signature suffit", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige check-list finale rigoureuse: vérification infos véhicule, tarification, terme, options, prix, signatures, coordonnées, copies = zéro erreur professionnalisme total protection tous."
+    },
+    {
+      "question": "Comment développer programme formation continue excellence ventes AVEX ?",
+      "options": ["Formation initiale suffit", "Programme formation continue 6 modules annuels: 1) Révision produit complète (mises à jour), 2) Études cas réels (succès + défis), 3) Techniques vente consultative avancées, 4) Gestion objections sophistiquées, 5) Nouveaux produits/options (évolutions), 6) Éthique/intégrité rappels (non négociables). Formation continue = excellence maintenue évolution marché", "Pas nécessaire", "Selon les résultats"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige formation continue structurée: révisions produit, études cas réels, techniques avancées, objections sophistiquées, nouveautés, éthique rappels = excellence maintenue adaptation marché évolutif."
+    },
+    {
+      "question": "Quelle est la synthèse complète valeur AVEX pour présentation finale client ?",
+      "options": ["Juste le prix", "Synthèse valeur complète 7 points: 1) 17 composants majeurs couverts (moteur à électronique moderne), 2) 9 inclusions exceptionnelles GRATUITES (valeur 5000$+), 3) Franchise 0$ Centres Autorisés (économie 150$/réparation), 4) Couverture jusqu'à 10 ans/160k km (extension maximale), 5) 8 options personnalisation disponibles, 6) Processus réclamation simple transparent (24/7), 7) Garantie transférable (augmente valeur revente). VALEUR EXCEPTIONNELLE COMPLÈTE", "Seulement composants", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige synthèse valeur COMPLÈTE: 17 composants + 9 inclusions gratuites (5000$+) + franchise 0$ + durée maximale 10 ans/160k + 8 options + processus simple 24/7 + transférable = VALEUR EXCEPTIONNELLE."
+    },
+    {
+      "question": "Comment mesurer excellence service client AVEX post-vente ?",
+      "options": ["Pas de mesure", "Mesure excellence 6 KPIs: 1) Taux satisfaction sondages (cible 95%+), 2) Net Promoter Score (cible 70+), 3) Taux rétention clients (achats futurs cible 80%+), 4) Nombre références/témoignages générés (cible 30%+), 5) Taux annulation 10 jours (cible <5%, indicateur transparence), 6) Temps réponse questions clients (cible <24h). KPIs = excellence mesurable amélioration continue", "Satisfaction suffit", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige mesure excellence: 6 KPIs (satisfaction 95%+, NPS 70+, rétention 80%+, références 30%+, annulation <5%, réponse <24h) = excellence mesurable objectifs amélioration continue."
+    },
+    {
+      "question": "Quelle est la philosophie professionnelle ultime vente AVEX ?",
+      "options": ["Maximiser ventes", "Philosophie professionnelle 5 piliers: 1) INTÉRÊT CLIENT PRIORITÉ ABSOLUE (recommandations basées besoins réels, pas commission), 2) TRANSPARENCE TOTALE (couverture ET exclusions claires), 3) ÉDUCATION CLIENT (compréhension complète avant achat), 4) SERVICE EXCELLENCE (support continu post-vente), 5) INTÉGRITÉ NON NÉGOCIABLE (éthique JAMAIS compromise). Philosophie = succès durable réputation excellence", "Ventes maximales", "Selon les objectifs"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme ULTIME exige philosophie: intérêt client TOUJOURS priorité, transparence totale, éducation complète, service excellence continu, intégrité NON NÉGOCIABLE JAMAIS = succès durable réputation excellence fidélité."
+    },
+    {
+      "question": "Comment créer expérience client AVEX mémorable exceptionnelle du début à la fin ?",
+      "options": ["Vente standard", "Expérience exceptionnelle 8 étapes: 1) ACCUEIL chaleureux (établir confiance), 2) ÉCOUTE active besoins (comprendre vraiment), 3) ÉDUCATION complète (17 composants + 9 inclusions + options), 4) RECOMMANDATION personnalisée (basée besoins réels), 5) TRANSPARENCE totale (couverture ET exclusions), 6) FACILITATION décision (ROI, comparaisons, réponses complètes), 7) LIVRAISON professionnelle (révision complète, organisation), 8) SUIVI post-vente (disponibilité, support continu). Expérience MÉMORABLE = fidélité + références", "Processus minimal", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme ULTIME exige expérience mémorable 8 étapes: accueil chaleureux, écoute active, éducation complète, recommandation personnalisée, transparence totale, facilitation décision, livraison professionnelle, suivi continu = expérience exceptionnelle fidélité références."
+    },
+    {
+      "question": "Quel est le message de conclusion ultime pour formation complète AVEX ?",
+      "options": ["Bonne chance", "Message conclusion formation 6 points: 1) AVEX = produit EXCEPTIONNEL (17 composants + 9 inclusions), 2) VOUS = ambassadeurs professionnels (représentez qualité), 3) INTÉGRITÉ = fondation NON NÉGOCIABLE (transparence totale toujours), 4) CLIENTS = priorité absolue (intérêt client > commission), 5) EXCELLENCE = standard quotidien (formation continue, amélioration), 6) SUCCÈS = résultat intégrité + excellence (fidélité + réputation + performance). VOUS ÊTES PRÊTS EXCELLENCE!", "Vendez bien", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme ULTIME conclusion formation: produit exceptionnel, ambassadeurs professionnels, intégrité fondation, clients priorité absolue, excellence standard, succès = intégrité + excellence. VOUS ÊTES PRÊTS POUR EXCELLENCE AVEX!"
+    },
+    {
+      "question": "Quelle est la vision long terme succès programme AVEX pour organisation ?",
+      "options": ["Ventes maximales", "Vision long terme succès 6 objectifs: 1) CLIENTS satisfaits fidèles (taux rétention 80%+), 2) RÉPUTATION excellence marché (références bouche-à-oreille), 3) ÉQUIPE experts confiants (formation continue excellence), 4) DIFFÉRENCIATION compétitive (AVEX argument vente véhicules), 5) REVENUS durables croissants (volume + qualité), 6) PARTENARIAT solide Administrateur (relation professionnelle). Vision holistique = succès durable croissance", "Volume court terme", "Selon l'année"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme ULTIME vision long terme: clients satisfaits fidèles, réputation excellence, équipe experts, différenciation compétitive, revenus durables, partenariat solide = succès holistique durable croissance continue."
+    },
+    {
+      "question": "Quelle est la promesse ultime AVEX au client final ?",
+      "options": ["Garantie basique", "Promesse AVEX ultime 5 engagements: 1) PROTECTION exceptionnelle 17 composants majeurs (moteur à électronique moderne), 2) TRANQUILLITÉ esprit totale (franchise 0$, processus simple, support 24/7), 3) VALEUR inégalée (9 inclusions gratuites, options personnalisation), 4) TRANSPARENCE complète (couverture ET exclusions claires, contrat écrit prime), 5) SERVICE excellence (Centres Autorisés, assistance continue). AVEX = PROTECTION EXCEPTIONNELLE TRANQUILLITÉ TOTALE", "Couverture standard", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme ULTIME promesse AVEX: protection exceptionnelle 17 composants, tranquillité esprit totale, valeur inégalée 9 inclusions, transparence complète, service excellence = AVEX PROTECTION EXCEPTIONNELLE TRANQUILLITÉ TOTALE CLIENT."
+    }
+  ]
+}
+

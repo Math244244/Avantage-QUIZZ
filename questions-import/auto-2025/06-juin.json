@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 6,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le remboursement pour remorquage est de combien par réclamation ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Remorquage accorde un remboursement allant jusqu'à 75$ CAD pour le remorquage si la réparation est couverte et autorisée."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AX-2 ?",
+      "options": ["2 000$", "3 000$", "4 000$", "5 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AX-2 est de 4 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les capteurs système d'ignition sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 17", "Section 18"],
+      "correctAnswer": 3,
+      "explanation": "La section 18 - Système d'allumage plus + couvre les capteurs système d'ignition, la bobine d'induction et le capteur de détonation."
+    },
+    {
+      "question": "Un client avec un Audi Q5 2019 de 95 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Audi ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "Audi fait partie de la Catégorie C incluant BMW, Fiat, Jaguar, Landrover, Mercedes, Mini, Porsche, Smart, Volkswagen, Volvo, Alpha Roméo et Maserati."
+    },
+    {
+      "question": "Combien de sections le programme AT couvre-t-il au total ?",
+      "options": ["11 sections", "12 sections", "16 sections", "18 sections"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT couvre les sections 1 à 16 selon la description du programme."
+    },
+    {
+      "question": "Combien coûte l'option 2 x 5000$ pour le programme AT ?",
+      "options": ["100$", "125$", "150$", "200$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 2 x 5000$ coûte 150$ pour le programme AT avec condition de véhicule de 10 ans et moins et 200 000 km et moins."
+    },
+    {
+      "question": "Le capteur de densité de l'air est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 18"],
+      "correctAnswer": 2,
+      "explanation": "La section 17 - Système d'alimentation couvre le capteur de densité de l'air et le capteur de position d'accélérateur."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AX-2 ?",
+      "options": ["140 000 km", "200 000 km", "225 000 km", "280 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-2 s'applique aux véhicules ayant 225 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "L'interrupteur du régulateur de vitesse est couvert dans quelle section ?",
+      "options": ["Section 11", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre l'interrupteur du régulateur de vitesse ainsi que de nombreux autres interrupteurs électriques."
+    },
+    {
+      "question": "Comment expliquer à un client la valeur de l'option Remboursement de prime ?",
+      "options": ["Ce n'est pas utile", "Si aucune réclamation, remboursement partiel de la prime (max 2 000$) à l'expiration", "C'est trop cher", "C'est automatique"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement de prime (300$) permet un remboursement partiel (max 2 000$) si aucune réclamation n'est faite, offrant une tranquillité d'esprit."
+    },
+    {
+      "question": "Le programme AT PLUS couvre-t-il le remboursement de location de véhicule ?",
+      "options": ["Non, pas couvert", "Oui, 30$ par jour jusqu'à 7 jours maximum", "Oui, 50$ par jour jusqu'à 10 jours", "Oui, illimité"],
+      "correctAnswer": 1,
+      "explanation": "La section 26 couvre la location de remplacement à 30$ par jour jusqu'à 7 jours maximum pour la durée du programme si réparation autorisée."
+    },
+    {
+      "question": "Le moteur du ventilateur de la chaufferette est couvert dans quelle section ?",
+      "options": ["Section 15", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 - Climatisation Plus+ couvre le moteur du ventilateur de la chaufferette avant et arrière / soufflerie."
+    },
+    {
+      "question": "Quelle est la franchise du programme AVE ?",
+      "options": ["0$", "100$", "125$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVE a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "L'actuateur de turbo est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 7", "Section 17", "Section 21"],
+      "correctAnswer": 3,
+      "explanation": "La section 21 - Motopropulseur Compréhensive couvre l'actuateur de turbo et le solénoïde d'arbre à came variable."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AX-3 ?",
+      "options": ["8 ans", "10 ans", "12 ans", "15 ans"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-3 s'applique aux véhicules âgés de 12 ans et moins ayant 200 000 km et moins."
+    },
+    {
+      "question": "Le solénoïde du démarreur est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 12", "Section 15"],
+      "correctAnswer": 2,
+      "explanation": "La section 12 - Accessoires Essentiels couvre le solénoïde du démarreur ainsi que le démarreur et l'alternateur."
+    },
+    {
+      "question": "Un client hésite à prendre une garantie prolongée car il n'en a jamais eu de problème. Comment le rassurez-vous ?",
+      "options": ["Lui dire qu'il va certainement avoir des problèmes", "Expliquer que c'est une protection financière préventive contre l'imprévu, comme une assurance", "Insister lourdement", "Baisser le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer la valeur de la tranquillité d'esprit et de la protection financière sans créer de peur inutile."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AT ?",
+      "options": ["2 000$", "3 000$", "4 000$", "5 000$"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AT a un montant maximum par réclamation de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "L'interrupteur du ventilateur de la chaufferette est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 16", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre l'interrupteur du ventilateur de la chaufferette ainsi que de nombreux autres interrupteurs."
+    },
+    {
+      "question": "Combien coûte l'option A.V.N. pour le programme AVE ?",
+      "options": ["75$", "100$", "150$", "200$"],
+      "correctAnswer": 2,
+      "explanation": "L'option A.V.N. (Haute Technologie) coûte 150$ pour le programme AVE avec condition de véhicule de 8 ans et moins et 140 000 km et moins."
+    },
+    {
+      "question": "L'option Diesel est-elle obligatoire pour le programme AP ?",
+      "options": ["Non, pas disponible", "Oui, coûte 75$", "Oui, mais incluse sans frais (0$)", "Non, optionnelle"],
+      "correctAnswer": 2,
+      "explanation": "L'option Diesel est incluse sans frais dans le programme AP selon les options disponibles."
+    },
+    {
+      "question": "Les interrupteurs de haute et basse pression de climatisation sont couverts dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 16", "Section 19"],
+      "correctAnswer": 2,
+      "explanation": "La section 16 - Climatisation Plus+ couvre les interrupteurs de haute et basse pression ainsi que le moteur du ventilateur."
+    },
+    {
+      "question": "Un client mécontent du délai d'autorisation de réparation se plaint. Comment gérez-vous la situation ?",
+      "options": ["L'ignorer", "Reconnaître sa frustration, expliquer le processus et offrir de faire un suivi", "Blâmer l'Administrateur", "Lui offrir un remboursement non autorisé"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'écouter le client, expliquer le processus d'évaluation nécessaire et offrir un suivi proactif."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AT ?",
+      "options": ["140 000 km", "180 000 km", "200 000 km", "225 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT s'applique aux véhicules ayant 200 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "La colonne de direction est couverte dans quelle section ?",
+      "options": ["Section 9", "Section 12", "Section 13", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre la colonne de direction, l'axe de secteur denté et les axes principaux."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AT si le véhicule a 11 ans ?",
+      "options": ["2 termes (12, 24 mois)", "3 termes (12, 24, 36 mois)", "4 termes (12, 24, 36, 48 mois)", "5 termes"],
+      "correctAnswer": 1,
+      "explanation": "Si le véhicule a 11 ou 12 ans et 200 000 km et moins, le programme AT est disponible pour 12, 24 ou 36 mois seulement."
+    },
+    {
+      "question": "Le solénoïde d'arbre à came variable est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 18", "Section 21"],
+      "correctAnswer": 3,
+      "explanation": "La section 21 - Motopropulseur Compréhensive couvre le solénoïde d'arbre à came variable et l'actuateur de turbo."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AX-2 ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-2 a une limite de kilométrage de 20 000 km par année selon les détails financiers."
+    },
+    {
+      "question": "Le boîtier du filtreur à l'huile est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 10", "Section 19", "Section 21"],
+      "correctAnswer": 3,
+      "explanation": "La section 21 - Motopropulseur Compréhensive couvre le boîtier du filtreur à l'huile ainsi que les supports de moteur et transmission."
+    },
+    {
+      "question": "Un nouveau client demande des références d'autres clients satisfaits. Comment répondez-vous professionnellement ?",
+      "options": ["Refuser pour protéger la confidentialité", "Partager des témoignages généraux ou diriger vers des avis en ligne", "Donner numéros de clients sans permission", "Inventer des témoignages"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme respecte la confidentialité tout en rassurant le client via témoignages anonymisés ou avis publics vérifiables."
+    }
+  ]
+}
+

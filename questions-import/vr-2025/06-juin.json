@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 6,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le lave-vaisselle est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 21 - Appareils de Lux (installé par fabricant)", "Oui, composant 15", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 21 - Appareils de Lux couvre lave-vaisselle, laveuse / sécheuse, compacteur de déchets, machine à glaçon (si installé par fabricant)."
+    },
+    {
+      "question": "Un VR avec compteur kilométrique remplacé est-il admissible ?",
+      "options": ["Oui, automatiquement", "Oui, si compteur remplacé pendant garantie, Administrateur peut exiger preuve du kilométrage réel", "Non, jamais", "Avec option"],
+      "correctAnswer": 1,
+      "explanation": "Si le compteur a été remplacé pendant la durée de la garantie, l'Administrateur se réserve le droit d'exiger toute preuve nécessaire pour déterminer le kilométrage réel (section 5.7)."
+    },
+    {
+      "question": "La laveuse / sécheuse est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 21 - Appareils de Lux (installé par fabricant)", "Oui, composant 15", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 21 - Appareils de Lux couvre laveuse / sécheuse, lave-vaisselle, aspirateur centrale, foyer électrique (si installé par fabricant)."
+    },
+    {
+      "question": "Quel est le montant maximum cumulatif pour le programme aVR-Plus ?",
+      "options": ["10 000$", "20 000$", "50 000$", "Valeur du véhicule"],
+      "correctAnswer": 3,
+      "explanation": "Le programme aVR-Plus offre un montant maximum cumulatif (total du contrat) égal à la valeur du véhicule (section Description du programme)."
+    },
+    {
+      "question": "Le foyer électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 21 - Appareils de Lux (installé par fabricant)", "Oui, composant 17", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 21 - Appareils de Lux couvre foyer électrique, panneau solaire, barbecue, système d'entrée électrique (si installé par fabricant)."
+    },
+    {
+      "question": "Comment expliquer la différence de limite cumulée entre aVR-Plus et aVR ?",
+      "options": ["Aucune différence", "aVR-Plus: cumulatif = valeur véhicule. aVR: cumulatif = 10 000$ max", "C'est le même", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : aVR-Plus (cumulatif = valeur véhicule) vs aVR (cumulatif = 10 000$ max total du contrat)."
+    },
+    {
+      "question": "Le moteur et assemblage de télésiège de mobilité sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 21 - Appareils de Lux (installé par fabricant)", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 21 - Appareils de Lux couvre moteur et assemblage de télésiège de mobilité, commandes et assemblages de rampes électrique ou hydraulique."
+    },
+    {
+      "question": "Les réparations pour améliorer les performances du véhicule sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation pour améliorer performances, résoudre pertes compression ou réduire consommation huile exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation pour améliorer les performances du véhicule, résoudre les pertes de compression ou réduire la consommation excessive d'huile est exclue (section 5.6)."
+    },
+    {
+      "question": "Les commandes et assemblages de rampes électrique ou hydraulique sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 21 - Appareils de Lux (installé par fabricant)", "Oui, composant 20", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 21 - Appareils de Lux couvre commandes et assemblages de rampes électrique ou hydraulique, régulateurs et télésiège de mobilité (si installé par fabricant)."
+    },
+    {
+      "question": "Un VR avec informations d'admissibilité falsifiées par le distributeur est-il couvert ?",
+      "options": ["Oui, automatiquement", "Non, si informations falsifiées ou mal indiquées, Administrateur peut exiger preuve", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si les informations concernant l'admissibilité sont falsifiées ou mal indiquées, l'Administrateur peut exiger toute preuve pour déterminer le kilométrage réel (section 5.7)."
+    },
+    {
+      "question": "Le téléviseur et cinéma maison sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 22 - Système de divertissement (si installé par fabricant)", "Oui, tous", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 - Système de divertissement couvre téléviseur et cinéma maison, écrans tactiles, antenne de télévision/satellite (si installé par fabricant)."
+    },
+    {
+      "question": "Comment gérer un client qui a fait réparer pendant la période d'attente ?",
+      "options": ["Rembourser", "Expliquer poliment exclusion (section 5.8): période d'attente 15 jours, réparations non couvertes", "Céder", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que pannes survenues avant date de livraison ou pendant période d'attente (15 jours) sont exclues (section 5.8)."
+    },
+    {
+      "question": "L'antenne et manivelle de télévision moteur ou électronique sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 22 - Système de divertissement (si installé par fabricant)", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 - Système de divertissement couvre antenne et manivelle de télévision et / ou satellite – moteur ou électronique (si installé par fabricant)."
+    },
+    {
+      "question": "Les pannes déjà couvertes par la garantie manufacturier sont-elles remboursées ?",
+      "options": ["Oui, double remboursement", "Non, si pièce déjà couverte par garantie manufacturier originale/prolongée ou rappel, exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation si cette pièce est déjà couverte par la garantie de manufacturier originale/prolongée ou visé par un rappel du manufacturier est exclue (section 5.9)."
+    },
+    {
+      "question": "Le lecteur CD, DVD ou Blue ray et système stéréo sont-ils couverts ?",
+      "options": ["Oui, avec haut-parleurs", "Oui, composant 22 - système stéréo (haut-parleurs exclus si installé par fabricant)", "Non, exclus", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 - Système de divertissement couvre lecteur CD, DVD ou Blue ray et système stéréo (haut-parleurs exclus) si installé par fabricant."
+    },
+    {
+      "question": "Un VR avec odomètre non fonctionnel est-il admissible ?",
+      "options": ["Oui, avec déclaration", "Non, si lecture du compteur kilométrique non fonctionnelle, réparation exclue", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation si la lecture du compteur kilométrique du véhicule n'est pas fonctionnelle est exclue (section 5.7)."
+    },
+    {
+      "question": "L'ensemble Bluetooth avec microphone et contrôle vocal sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 22 - Système de divertissement (si installé par fabricant)", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 couvre ensemble Bluetooth qui comprend : le microphone, contrôle de commande du téléphone mains libres et contrôle de commande vocale (si installé par fabricant)."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien à un client négligent ?",
+      "options": ["Ce n'est pas important", "Obligatoire, preuve d'entretien peut être demandée à tout moment, sinon risque de refus réclamation", "Optionnel", "Seulement pour neufs"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que preuve d'entretien peut être demandée à tout moment et manque d'entretien peut entraîner refus réclamation (section 5.4 et 6.2)."
+    },
+    {
+      "question": "Les caméras et sondes de sonar avant et assistance de stationnement sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 22 - Système de divertissement (si installé par fabricant)", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 couvre les caméras et / ou sonde de sonar avant et / ou sonde d'avertisseur de collision et / ou assistance de stationnement (si installé par fabricant)."
+    },
+    {
+      "question": "Un distributeur n'a pas payé le contrat à l'Administrateur. Le contrat est-il valide ?",
+      "options": ["Oui, toujours valide", "Non, si Distributeur n'a pas payé à l'Administrateur, réparation exclue (sauf exception)", "Oui, avec retard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation si le Distributeur Autorisé n'a pas payé à l'Administrateur le contrat du programme de garantie est exclue (sauf exception accordée) (section 5.10)."
+    },
+    {
+      "question": "L'ensemble système de navigation incluant le panneau de console est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 22 - Système de divertissement (si installé par fabricant)", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 - Système de divertissement couvre ensemble système de navigation incluant le panneau de console (si installé par fabricant)."
+    },
+    {
+      "question": "Comment gérer un client frustré d'une réparation nécessaire une deuxième fois ?",
+      "options": ["Rembourser automatiquement", "Expliquer poliment exclusion (section 5.11): réparation nécessaire 2e fois dans 3 mois/5000km exclue", "Céder", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que réparation nécessaire une deuxième fois dans un délai de 3 mois ou 5000km est exclue (section 5.11)."
+    },
+    {
+      "question": "Les mises à jour et programmation du système de navigation GPS sont-elles couvertes ?",
+      "options": ["Oui, toujours", "Oui, si l'assemblage du système est nécessaire et est autorisé à être remplacé", "Non, jamais", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 couvre mises à jour et programmation du système de navigation GPS (si l'assemblage du système est nécessaire et est autorisé à être remplacé)."
+    },
+    {
+      "question": "Un VR tracteur d'équipement lourd est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tracteurs, véhicules et camions d'équipement lourd exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ne couvrira PAS les tracteurs, véhicules et camions d'équipement lourd, ambulances, camions de pompiers (section 10.a)."
+    },
+    {
+      "question": "Les haut-parleurs du système stéréo sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, haut-parleurs exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 22 - Système de divertissement couvre lecteur CD, DVD et système stéréo mais les haut-parleurs sont spécifiquement exclus."
+    },
+    {
+      "question": "Comment expliquer les termes disponibles pour aVR-Plus Section A à un client ?",
+      "options": ["Un seul terme", "6 termes disponibles: 12/20k km, 24/40k km, 36/60k km, 48/80k km, 60/100k km, 72/120k km", "Seulement 12 mois", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer les 6 termes disponibles pour aVR-Plus Section A (Motorisé) avec durées et kilométrages spécifiques."
+    },
+    {
+      "question": "Les antennes des systèmes électriques sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, antennes, enceintes / haut-parleurs exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les antennes, enceintes / haut-parleurs sont exclus des systèmes électriques (sauf antenne TV/satellite composant 22 si installée par fabricant) (section 4.2)."
+    },
+    {
+      "question": "Un client satisfait veut recommander vos services. Comment maximiser cette opportunité ?",
+      "options": ["Ignorer", "Remercier, lui demander de partager son expérience avec contacts, offrir carte référence", "Demander argent", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage à cultiver les recommandations en remerciant chaleureusement, facilitant le partage d'expérience positive et offrant carte référence."
+    },
+    {
+      "question": "Le barillet d'ignition est-il couvert ?",
+      "options": ["Oui, tous", "Non, barillet d'ignition exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques sont exclus : barillet d'ignition, le klaxon, écrous, bouchons, boulons (section 4.2)."
+    },
+    {
+      "question": "Un VR ambulance est-il admissible au programme ?",
+      "options": ["Oui, automatiquement", "Non, ambulances, camions de pompiers, véhicules de remorquage et de police exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ne couvrira PAS les ambulances, camions de pompiers, véhicules de remorquage, véhicules de police ou véhicules installés avec un « police pack » (section 10.a)."
+    }
+  ]
+}
+

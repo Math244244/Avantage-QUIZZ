@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 12,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le propriétaire doit-il faire approuver les réparations avant de commencer les travaux ?",
+      "options": ["Non, pas nécessaire", "Oui, obligatoire avant de commencer", "Seulement si plus de 1000$", "Non, après suffit"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire doit faire approuver les réparations par l'Administrateur avant de commencer les travaux selon la section 6.1 - Obligations."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AT ?",
+      "options": ["2 000$", "4 000$", "5 000$", "6 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AT est de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les palettes de changement de vitesse sont-elles couvertes ?",
+      "options": ["Oui, section 2", "Oui, section 3", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les palettes, pédales et sélecteurs de vitesse sont exclus des pièces du cadre et véhicule selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Un client avec un Mazda CX-5 2019 de 115 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Mazda ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Mazda fait partie de la Catégorie B incluant Buick, Cadillac, Chrysler, Chevrolet, Dodge, Ford, GMC, Hummer, Lincoln, Saturn et Subaru."
+    },
+    {
+      "question": "Quelle est la principale différence entre les programmes AX-2 et AX-3 ?",
+      "options": ["AX-3 couvre 1 section supplémentaire et offre des montants supérieurs", "AX-2 est plus cher", "AX-3 couvre moins de sections", "Aucune différence"],
+      "correctAnswer": 0,
+      "explanation": "AX-3 couvre les sections 1-12 (vs 1-11), montant total 6 000$ (vs 4 000$) et maximum par réclamation 3 000$ (vs 1 500$)."
+    },
+    {
+      "question": "Combien coûte l'option Turbo/Surcompresseur pour le programme AX-3 ?",
+      "options": ["25$", "45$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Turbo/Surcompresseur coûte 45$ pour le programme AX-3 selon les options disponibles."
+    },
+    {
+      "question": "Les sélecteurs de vitesse sont-ils couverts ?",
+      "options": ["Oui, section 2", "Oui, section 3", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les sélecteurs de vitesse, pédales et palettes sont exclus des pièces du cadre et véhicule selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AVE ?",
+      "options": ["8 ans", "10 ans", "12 ans", "15 ans"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVE s'applique aux véhicules âgés de 10 ans et moins ayant 200 000 km et moins."
+    },
+    {
+      "question": "Les sièges du véhicule sont-ils couverts ?",
+      "options": ["Oui, section 15", "Oui, section 20", "Non, exclus", "Oui, seulement moteurs électriques (section 15)"],
+      "correctAnswer": 3,
+      "explanation": "Les sièges et châssis des sièges sont exclus (section 4.3), mais l'interrupteur et moteurs de réglage électrique sont couverts (section 15)."
+    },
+    {
+      "question": "Comment conclure professionnellement une vente de garantie prolongée ?",
+      "options": ["Presser le client pour signature immédiate", "Récapituler la couverture, répondre aux dernières questions et assurer un suivi post-vente", "Partir dès la signature", "Minimiser les exclusions"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de récapituler, clarifier, rassurer le client et promettre un suivi pour garantir sa satisfaction."
+    },
+    {
+      "question": "Le programme AP a-t-il une franchise ?",
+      "options": ["Non, aucune franchise", "Oui, 100$", "Oui, 125$", "Oui, 150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Les attaches de porte sont-elles couvertes ?",
+      "options": ["Oui, section 12", "Oui, section 15", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les attaches, charnières, loquets, serrures et poignées de porte sont exclus selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Quelle est la franchise du programme AT ?",
+      "options": ["0$", "100$", "125$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Les charnières de porte sont-elles couvertes ?",
+      "options": ["Oui, section 12", "Oui, section 15", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les charnières, attaches, loquets, serrures et poignées de porte sont exclus selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AT PLUS ?",
+      "options": ["3 termes", "4 termes", "5 termes", "6 termes"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS est disponible pour 5 termes : 12, 24, 36, 48 ou 60 mois selon la durée du contrat."
+    },
+    {
+      "question": "Les loquets de porte sont-ils couverts ?",
+      "options": ["Oui, section 12", "Oui, section 15", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les loquets, attaches, charnières, serrures et poignées de porte sont exclus selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Un client hésite car il a peur de ne jamais utiliser la garantie. Comment le rassurer professionnellement ?",
+      "options": ["Lui garantir qu'il aura des problèmes", "Expliquer que c'est une assurance tranquillité d'esprit et mentionner l'option Remboursement de prime", "Minimiser les coûts de réparation", "Forcer la vente"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer le concept d'assurance (prévention) et à mentionner l'option Remboursement de prime disponible."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AX-2 ?",
+      "options": ["140 000 km", "200 000 km", "225 000 km", "280 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-2 s'applique aux véhicules ayant 225 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Les serrures de porte sont-elles couvertes ?",
+      "options": ["Oui, section 12", "Oui, section 15", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les serrures, attaches, charnières, loquets et poignées de porte sont exclus selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Combien coûte l'option 0$ de Franchise pour le programme AT PLUS ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 0$ de Franchise coûte 100$ pour le programme AT PLUS selon les options disponibles."
+    },
+    {
+      "question": "Les poignées de porte sont-elles couvertes ?",
+      "options": ["Oui, section 12", "Oui, section 15", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les poignées, attaches, charnières, loquets et serrures de porte sont exclus selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Un nouveau client nerveux signe le contrat. Que faites-vous après la signature ?",
+      "options": ["Partir rapidement", "Le rassurer, expliquer les prochaines étapes et donner vos coordonnées pour questions", "Vendre autre chose", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme post-vente exige de rassurer le client, expliquer le processus d'activation et rester disponible pour questions."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AVE ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Kilométrage illimité par défaut"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AVE a un kilométrage illimité par défaut dans la grille tarifaire selon les détails financiers."
+    },
+    {
+      "question": "Les arrêts de portes sont-ils couverts ?",
+      "options": ["Oui, section 12", "Oui, section 15", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les arrêts de portes font partie des pièces du cadre et carrosserie exclues selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Combien coûte l'option Kilométrage illimité pour le programme AT ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Kilométrage illimité coûte 100$ pour le programme AT avec condition de véhicule de 8 ans et moins et 140 000 km et moins."
+    },
+    {
+      "question": "Les fenêtres du véhicule sont-elles couvertes ?",
+      "options": ["Oui, section 15", "Oui, section 20", "Non, exclues", "Oui, seulement moteur lève-glaces (section 15)"],
+      "correctAnswer": 3,
+      "explanation": "Les fenêtres et vitres sont exclues (section 4.3), mais le moteur des lève-glaces électriques est couvert (section 15)."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AX-1 ?",
+      "options": ["500$", "1 000$", "1 500$", "2 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-1 a un montant maximum par réclamation de 1 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les vitres du véhicule sont-elles couvertes ?",
+      "options": ["Oui, section 15", "Oui, section 20", "Non, exclues", "Oui, avec option bris de glace"],
+      "correctAnswer": 2,
+      "explanation": "Les vitres, fenêtres et régulateur de vitres sont exclus selon la section 4.3, sauf le moteur de lève-glaces (section 15)."
+    },
+    {
+      "question": "Comment maintenir une relation professionnelle avec un client après la vente ?",
+      "options": ["Ne plus jamais le contacter", "Faire un suivi courtois, être disponible pour questions et offrir un service continu", "Le harceler pour plus de ventes", "L'oublier"],
+      "correctAnswer": 1,
+      "explanation": "L'excellence professionnelle exige un suivi post-vente, disponibilité continue et construction d'une relation à long terme basée sur la confiance."
+    },
+    {
+      "question": "Le régulateur de vitres est-il couvert ?",
+      "options": ["Oui, section 15", "Oui, section 20", "Non, exclu", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Le régulateur de vitres est exclu selon la section 4.3, mais le moteur des lève-glaces électriques est couvert (section 15)."
+    }
+  ]
+}
+

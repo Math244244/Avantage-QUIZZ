@@ -1,0 +1,188 @@
+{
+  "module": "avex",
+  "month": 1,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Combien de composants sont couverts dans le programme AVEX ?",
+      "options": ["10 composants", "17 composants (1 à 10 + 12 à 27, excluant 11 optionnel)", "27 composants", "Tous les composants"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVEX couvre les composants 1 à 10 + 12 à 27 (le composant 11 Suspension A+ est optionnel 300$). Total de 17 composants de base couverts."
+    },
+    {
+      "question": "Comment expliquer la couverture exceptionnelle du programme AVEX à un client ?",
+      "options": ["C'est basique", "Expliquer: 17 composants couverts (moteur, transmission, électricité, freins, etc.), max 10k$/réparation, franchise 0$ Centre Autorisé, inclusions exceptionnelles", "C'est limité", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser la couverture: 17 composants majeurs, protection 10k$/réparation, franchise 0$ si Centre Autorisé, nombreuses inclusions sans frais."
+    },
+    {
+      "question": "Quel est le maximum par réclamation dans le programme AVEX ?",
+      "options": ["5 000$", "10 000$ par réclamation", "20 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVEX offre un maximum de 10 000$ par réclamation (sauf option Réparation ouverte 300$ pour véhicules récents qui élimine cette limite)."
+    },
+    {
+      "question": "Quelle est la limite totale du contrat AVEX ?",
+      "options": ["10 000$", "Valeur Juste Marchande du Véhicule", "20 000$", "Illimitée"],
+      "correctAnswer": 1,
+      "explanation": "La limite totale du contrat AVEX est la Valeur Juste Marchande du Véhicule au moment de la réparation (évaluation selon calcul valeur d'occasion)."
+    },
+    {
+      "question": "Quelle est la franchise si la réparation est effectuée dans un Centre Autorisé Avantage Plus ?",
+      "options": ["50$", "0$ (aucune franchise)", "150$", "250$"],
+      "correctAnswer": 1,
+      "explanation": "Si la réparation est autorisée et effectuée dans un Centre de Réparation Autorisé Avantage Plus, la franchise est de 0$ (aucune franchise)."
+    },
+    {
+      "question": "Comment présenter l'avantage de la franchise 0$ à un client ?",
+      "options": ["Minimiser", "Expliquer: franchise 0$ si Centre Autorisé = aucun débours client pour réparations couvertes, tranquillité totale, économie jusqu'à 150$/réparation", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: franchise 0$ Centre Autorisé = aucun coût pour client, économie potentielle 150$/réparation, tranquillité esprit totale."
+    },
+    {
+      "question": "Quelle est la franchise si la réparation est effectuée ailleurs qu'un Centre Autorisé ?",
+      "options": ["0$", "150$ de franchise", "250$", "300$"],
+      "correctAnswer": 1,
+      "explanation": "Si la réparation est effectuée ailleurs qu'un Centre de Réparation Autorisé Avantage Plus, une franchise de 150$ s'applique."
+    },
+    {
+      "question": "Quels véhicules sont admissibles à la Tarification Véhicules Récents ?",
+      "options": ["Tous les véhicules", "Véhicules de 5 ans et 80 000 km et moins", "Véhicules de 3 ans", "Seulement neufs"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification Véhicules Récents s'applique aux véhicules de 5 ans ET 80 000 km et moins. Les deux critères doivent être respectés."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour la Tarification Véhicules Récents ?",
+      "options": ["3 termes", "5 termes (12, 24, 36, 48, 60 mois avec km correspondants)", "Un seul terme", "7 termes"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification Véhicules Récents offre 5 termes: 12 mois (20 000 km), 24 mois (40 000 km), 36 mois (60 000 km), 48 mois (80 000 km), 60 mois (100 000 km)."
+    },
+    {
+      "question": "Comment expliquer les termes de la Tarification Véhicules Récents à un client ?",
+      "options": ["C'est compliqué", "Expliquer: 5 choix de termes (12 à 60 mois), double protection (temps ET km), plus le terme est long, meilleur le ratio coût/protection", "Un seul terme", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement: 5 options termes, double protection temps ET km, terme long = meilleur ROI, flexibilité selon besoins."
+    },
+    {
+      "question": "Quel est le coût du terme 60 mois pour un véhicule récent ?",
+      "options": ["1 675$", "2 175$ (60 mois ou 100 000 km)", "2 375$", "1 875$"],
+      "correctAnswer": 1,
+      "explanation": "Pour la Tarification Véhicules Récents, le terme 60 mois (ou 100 000 km) coûte 2 175$ (meilleur ratio coût/protection sur 5 ans)."
+    },
+    {
+      "question": "Quels véhicules sont admissibles à la Tarification Véhicules Usagés ?",
+      "options": ["Seulement récents", "Véhicules jusqu'à 10 ans et 160 000 km", "Véhicules de 5 ans", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification Véhicules Usagés s'applique aux véhicules jusqu'à 10 ans ET 160 000 km. Couvre une large gamme de véhicules plus anciens."
+    },
+    {
+      "question": "Comment expliquer la différence entre Tarification Récents et Usagés ?",
+      "options": ["C'est pareil", "Récents: ≤5 ans/80k km (1675$-2175$). Usagés: ≤10 ans/160k km (1875$-2375$). Mêmes termes, tarifs adaptés à l'âge/km", "C'est compliqué", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté: Récents = équipements neufs (prix avantageux), Usagés = équipements plus anciens (tarifs ajustés), même couverture exceptionnelle."
+    },
+    {
+      "question": "Quel est le coût du terme 24 mois pour un véhicule usagé ?",
+      "options": ["1 775$", "1 975$ (24 mois ou 40 000 km)", "1 875$", "2 075$"],
+      "correctAnswer": 1,
+      "explanation": "Pour la Tarification Véhicules Usagés, le terme 24 mois (ou 40 000 km) coûte 1 975$ (200$ de plus que tarif véhicule récent)."
+    },
+    {
+      "question": "Un véhicule de 4 ans avec 75 000 km est-il admissible à la Tarification Véhicules Récents ?",
+      "options": ["Non, trop vieux", "Oui, satisfait les 2 critères : ≤5 ans (4 ans OK) ET ≤80 000 km (75k OK)", "Seulement Usagés", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le véhicule (4 ans, 75k km) satisfait les deux critères Tarification Récents: ≤5 ans ET ≤80 000 km. Admissible aux 5 termes à tarif avantageux."
+    },
+    {
+      "question": "Comment justifier le coût du programme AVEX à un client avec véhicule haute valeur ?",
+      "options": ["C'est cher", "Expliquer ROI: 17 composants couverts, une réparation majeure (moteur/transmission) = 5k$-15k$+, programme = protection investissement 40k$-100k$+", "Minimiser", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI: couverture exceptionnelle 17 composants, réparation majeure unique peut coûter 5k$-15k$+, protection actif majeur."
+    },
+    {
+      "question": "Combien d'éléments sont INCLUS sans frais supplémentaires dans le programme AVEX ?",
+      "options": ["3 éléments", "9 éléments inclus (Haute Techno, Hybride/Électrique, 0$ Franchise, VGA, Service Routier, Transférable, Traction intégrale, Courtoisie, Diagnostic)", "5 éléments", "Aucun"],
+      "correctAnswer": 1,
+      "explanation": "9 éléments exceptionnels inclus SANS frais: Haute Technologie, Hybride/Électrique, 0$ Franchise, VGA, Service Routier, Transférable, Traction intégrale, Véhicule Courtoisie, Frais Diagnostic Payé."
+    },
+    {
+      "question": "Comment présenter les 9 inclusions du programme AVEX à un client ?",
+      "options": ["Pas important", "Expliquer valeur ajoutée: 9 inclusions sans frais (Haute Techno, Hybride, 0$ franchise, Service Routier, etc.), valeur 1000$+ si achat séparé", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: 9 inclusions exceptionnelles sans frais (valeur potentielle 1000$+), couverture complète tous types véhicules modernes."
+    },
+    {
+      "question": "La couverture Haute Technologie est-elle incluse ou optionnelle ?",
+      "options": ["Optionnelle 500$", "INCLUSE sans frais supplémentaires", "Non disponible", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "La couverture Haute Technologie est INCLUSE sans frais supplémentaires dans le programme AVEX (composant 21: GPS, écrans, Bluetooth, etc.)."
+    },
+    {
+      "question": "La couverture Véhicule Hybride et Électrique est-elle incluse ?",
+      "options": ["Optionnelle 800$", "INCLUSE sans frais supplémentaires", "Non disponible", "Seulement essence"],
+      "correctAnswer": 1,
+      "explanation": "La couverture Véhicule Hybride et Électrique est INCLUSE sans frais dans AVEX (composants 23-24: moteur électrique, batterie protection limitée 1 an/20k km)."
+    },
+    {
+      "question": "Comment expliquer la valeur des inclusions Hybride/Électrique à un client avec véhicule moderne ?",
+      "options": ["Minimiser", "Expliquer: couverture Hybride/Électrique incluse = protection moteur électrique, batterie (1 an/20k km au-delà garantie fabricant), valeur exceptionnelle véhicules modernes", "Pas important", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: inclusion Hybride/Électrique = protection composants coûteux (moteur électrique, batterie), adapté véhicules modernes/futurs."
+    },
+    {
+      "question": "Le Service Routier est-il inclus dans le programme AVEX ?",
+      "options": ["Optionnel 300$", "INCLUS sans frais (composant 25: remorquage 75 km, démarrage, carburant, déverrouillage, 3 appels/an)", "Non disponible", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le Service Routier est INCLUS sans frais (composant 25): assistance 24/7, remorquage 75 km, démarrage, carburant (10L), déverrouillage, treuillage, 3 appels/an."
+    },
+    {
+      "question": "La garantie AVEX est-elle transférable ?",
+      "options": ["Non, jamais", "OUI, transférable INCLUS sans frais (aucun frais transfert)", "Avec frais 200$", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "La garantie AVEX est TRANSFÉRABLE sans frais supplémentaires. Transfert gratuit à nouveau propriétaire (demande dans 15 jours, aucuns frais)."
+    },
+    {
+      "question": "Comment présenter l'avantage de la garantie transférable à un client ?",
+      "options": ["Pas important", "Expliquer: garantie transférable = augmente valeur revente véhicule, argument vente puissant, aucun frais transfert, attractif acheteurs", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer bénéfice: garantie transférable augmente valeur revente, différencie véhicule, argument vente majeur, aucuns frais."
+    },
+    {
+      "question": "La couverture Traction intégrale est-elle incluse ?",
+      "options": ["Optionnelle 400$", "INCLUSE sans frais (composant 6: boîte transfert, actionneur, blocage moyeu 4x4)", "Non disponible", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "La couverture Traction intégrale est INCLUSE sans frais (composant 6: ensemble boîte transfert, actionneur, blocage moyeu 4x4, joints, anneaux)."
+    },
+    {
+      "question": "Le Véhicule de Courtoisie est-il inclus ?",
+      "options": ["Optionnel 500$", "INCLUS sans frais (composant 26: 50$/jour max 7 jours si réparation couverte)", "Non disponible", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le Véhicule de Courtoisie est INCLUS sans frais (composant 26): remboursement 50$/jour maximum 7 jours si réparation couverte (factures requises sous 30 jours)."
+    },
+    {
+      "question": "Les Frais Diagnostic sont-ils payés dans le programme AVEX ?",
+      "options": ["Non, jamais", "OUI, INCLUS: 2 heures diagnostic payées taux main-d'œuvre si vérifié et autorisé Centre Autorisé", "Avec franchise", "Selon le garage"],
+      "correctAnswer": 1,
+      "explanation": "Les Frais Diagnostic sont INCLUS: indemnité standard 2 heures diagnostic payée au taux main-d'œuvre si véhicule vérifié et autorisé dans Centre Autorisé (section 7.12)."
+    },
+    {
+      "question": "Comment maximiser la satisfaction lors de la présentation des inclusions AVEX ?",
+      "options": ["Lire vite", "Expliquer chaque inclusion (9 éléments): valeur concrète, exemples utilisation, comparaison si achat séparé (1000$+), souligner caractère exceptionnel", "Minimiser", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige présentation détaillée: chaque inclusion avec valeur concrète, exemples réels, comparaison coûts séparés, valorisation caractère exceptionnel AVEX."
+    },
+    {
+      "question": "Un véhicule de 6 ans avec 90 000 km est-il admissible à la Tarification Véhicules Récents ?",
+      "options": ["Oui, automatiquement", "Non, dépasse critère âge (>5 ans). Admissible Tarification Usagés (≤10 ans ET ≤160k km)", "Seulement avec option", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le véhicule (6 ans) dépasse critère Tarification Récents (≤5 ans). Admissible Tarification Usagés (≤10 ans ET ≤160k km) avec termes 12-60 mois disponibles."
+    },
+    {
+      "question": "Un collègue promet à un client que \"tout est couvert, 100% du véhicule\". Comment réagissez-vous ?",
+      "options": ["L'encourager", "Intervenir immédiatement: corriger avec transparence (17 composants couverts détaillés, exclusions claires section 3-4), protéger client fausses attentes", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention: corriger fausses promesses, expliquer couverture réelle (17 composants), exclusions transparentes, protéger client et réputation."
+    }
+  ]
+}
+

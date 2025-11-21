@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 7,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Comment expliquer le processus d'annulation dans les 10 premiers jours ?",
+      "options": ["Impossible", "Propriétaire demande annulation au Distributeur, Administrateur non responsable des remboursements/frais", "Automatique", "Contacter Administrateur"],
+      "correctAnswer": 1,
+      "explanation": "Dans les 10 premiers jours, le Propriétaire demande annulation au Distributeur. L'Administrateur n'est pas responsable des remboursements/frais (section 11.2.a)."
+    },
+    {
+      "question": "Un tracteur de 3 ans avec 900 heures veut un terme 60 mois. Quelle allocation totale d'heures avec option 2x ?",
+      "options": ["2500 heures", "5000 heures (60 mois = 2500h standard × 2 avec option 2x)", "3000 heures", "6000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Terme 60 mois = 2500 heures standard. Avec option 2x allocation heures (250$), allocation doublée : 2500h × 2 = 5000 heures total pour le terme."
+    },
+    {
+      "question": "Un client veut annuler après 20 jours. Quelles sont les conditions ?",
+      "options": ["Toujours possible", "Possible seulement si véhicule déclaré perte totale ou volé (avec preuves)", "Impossible", "Avec frais 200$"],
+      "correctAnswer": 1,
+      "explanation": "Après 10 jours, annulation possible seulement si véhicule déclaré perte totale ou volé (preuves requises : déclaration assureur + certificat immatriculation) (section 11.2.b)."
+    },
+    {
+      "question": "Comment calculer le coût annuel moyen d'heures autorisées avec l'option 2x ?",
+      "options": ["500h/an", "1000h/an (option 2x double allocation standard de 500h/an à 1000h/an)", "750h/an", "1500h/an"],
+      "correctAnswer": 1,
+      "explanation": "Allocation standard = 500 heures/an. Avec option 2x allocation heures (250$), allocation annuelle doublée : 500h/an × 2 = 1000 heures/an."
+    },
+    {
+      "question": "Comment expliquer le calcul du remboursement en cas d'annulation après 10 jours ?",
+      "options": ["100% remboursé", "Calculé au prorata (temps/heures utilisés) moins réclamations payées, basé sur prix payé par Distributeur", "50% remboursé", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement sera calculé au prorata en utilisant une partie du prix payé par le Distributeur à l'Administrateur, en fonction du temps et des heures utilisés, moins réclamations (section 11.2.b)."
+    },
+    {
+      "question": "Un tracteur de 5 ans avec 2 100 heures veut terme 48 mois. Heures totales disponibles avec option 2x ?",
+      "options": ["2000 heures", "4000 heures (48 mois = 2000h standard × 2 avec option 2x)", "3000 heures", "5000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Terme 48 mois = 2000 heures standard. Avec option 2x allocation heures (250$), allocation doublée : 2000h × 2 = 4000 heures total."
+    },
+    {
+      "question": "La banque peut-elle demander annulation si le tracteur a été repris ?",
+      "options": ["Non, jamais", "Oui, si véhicule repris et montant prêt impayé (preuves requises)", "Seulement avec accord propriétaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La banque/institution financière peut demander annulation si véhicule repris et montant prêt impayé (preuves requises : date/heures reprise) (section 11.2.b.ii)."
+    },
+    {
+      "question": "Comment justifier le coût de l'option 2x allocation heures (250$) à un agriculteur ?",
+      "options": ["C'est cher", "Expliquer: 250$ pour doubler heures (500h→1000h/an), permet saison longue sans souci dépassement, rentabilité excellente", "Pas nécessaire", "Négocier"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer la rentabilité : 250$ pour éliminer souci dépassement heures, permet utilisation intensive sans limitation, excellent ROI."
+    },
+    {
+      "question": "Le contrat écrit prime-t-il sur toute entente verbale ?",
+      "options": ["Non, verbal équivalent", "Oui, le présent contrat constitue la totalité de l'entente et prime sur toute entente verbale", "Selon le cas", "Égaux"],
+      "correctAnswer": 1,
+      "explanation": "Le présent contrat constitue la totalité et l'intégralité de l'entente et prime sur toute entente verbale ou écrite intervenue avant sa signature (section 12.1)."
+    },
+    {
+      "question": "Un tracteur de 6 ans avec 3 200 heures veut terme 36 mois. Heures totales disponibles avec option 2x ?",
+      "options": ["1500 heures", "3000 heures (36 mois = 1500h standard × 2 avec option 2x)", "2000 heures", "4000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Terme 36 mois Tarification B = 1500 heures standard. Avec option 2x allocation heures (250$), allocation doublée : 1500h × 2 = 3000 heures total."
+    },
+    {
+      "question": "Toute disposition conflictuelle avec la Loi est-elle automatiquement modifiée ?",
+      "options": ["Non, invalide", "Oui, toute disposition en conflit avec Loi protection consommateur est automatiquement modifiée pour conformité", "Selon le cas", "Ignorée"],
+      "correctAnswer": 1,
+      "explanation": "Toute disposition en conflit avec la Loi sur la protection du consommateur est automatiquement considérée comme modifiée afin de devenir conforme (section 12.2)."
+    },
+    {
+      "question": "Comment expliquer l'option 2x allocation heures en termes concrets d'utilisation annuelle ?",
+      "options": ["Compliqué", "Standard: 500h/an (10h/semaine, 50 semaines). Avec option 2x: 1000h/an (20h/semaine, 50 semaines). Idéal usage intensif", "Pas important", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer concrètement : standard 500h/an (≈10h/semaine), option 2x 1000h/an (≈20h/semaine), parfait usage intensif."
+    },
+    {
+      "question": "Le propriétaire accepte-t-il les dispositions prévues par le programme ?",
+      "options": ["Non", "Oui, J'accepte et comprends les dispositions prévues par le présent programme et j'accepte les conditions qui s'appliquent", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire déclare : J'accepte et comprends les dispositions prévues par le présent programme de garantie et j'accepte les conditions qui s'appliquent (fin du contrat)."
+    },
+    {
+      "question": "Un équipement de construction de 7 ans avec 3 800 heures veut terme 24 mois. Heures disponibles avec option 2x ?",
+      "options": ["1000 heures", "2000 heures (24 mois = 1000h standard × 2 avec option 2x)", "1500 heures", "3000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Terme 24 mois = 1000 heures standard. Avec option 2x allocation heures (250$), allocation doublée : 1000h × 2 = 2000 heures total."
+    },
+    {
+      "question": "Où le propriétaire et le distributeur doivent-ils signer ?",
+      "options": ["Une seule page", "Sur d'autres pages (IMPORTANT – SIGNATURES DU PROPRIÉTAIRE ET DU DISTRIBUTEUR SUR D'AUTRES PAGES)", "N'importe où", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le contrat mentionne : IMPORTANT – SIGNATURES DU PROPRIÉTAIRE ET DU DISTRIBUTEUR SUR D'AUTRES PAGES (section signature)."
+    },
+    {
+      "question": "Comment évaluer si un client a besoin de l'option 2x allocation heures ?",
+      "options": ["Toujours nécessaire", "Calculer heures/an actuelles (heures÷âge). Si >500h/an OU usage intensif prévu, recommander option 2x (1000h/an)", "Jamais nécessaire", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige calcul usage actuel (heures÷âge) et évaluation usage futur. Si >500h/an ou intensification prévue, recommander option 2x."
+    },
+    {
+      "question": "Comment gérer un client qui veut modifier les termes du contrat verbalement ?",
+      "options": ["Accepter", "Expliquer poliment que contrat écrit constitue totalité entente et prime sur toute entente verbale", "Promettre", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que le contrat écrit constitue la totalité et l'intégralité de l'entente et prime sur toute entente verbale (section 12.1)."
+    },
+    {
+      "question": "Un tracteur de 4 ans avec 2 200 heures a eu usage intensif (550h/an). Quelle option recommander ?",
+      "options": ["Aucune", "Option 2x allocation heures (250$) car usage actuel 550h/an > standard 500h/an", "Seulement franchise", "Toutes les options"],
+      "correctAnswer": 1,
+      "explanation": "Calcul : 2200h÷4 ans = 550h/an. Usage actuel (550h/an) dépasse standard (500h/an). Recommander option 2x allocation heures (250$) pour couvrir usage intensif."
+    },
+    {
+      "question": "Comment expliquer qu'une disposition conflictuelle est automatiquement modifiée ?",
+      "options": ["Ignorer", "Expliquer que toute disposition en conflit avec Loi protection consommateur est automatiquement modifiée pour conformité", "Refuser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que toute disposition en conflit avec la Loi sur la protection du consommateur est automatiquement modifiée pour conformité (section 12.2)."
+    },
+    {
+      "question": "Un équipement de 6 ans avec 1 800 heures a eu usage modéré (300h/an). Besoin option 2x ?",
+      "options": ["Oui, obligatoire", "Non, usage actuel 300h/an < standard 500h/an. Option 2x non nécessaire sauf si intensification prévue", "Toujours nécessaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Calcul : 1800h÷6 ans = 300h/an. Usage actuel (300h/an) bien en-dessous standard (500h/an). Option 2x non nécessaire sauf si client prévoit intensifier usage."
+    },
+    {
+      "question": "Qui est désigné comme Administrateur ?",
+      "options": ["Une seule société", "Les Produits Avantage Plus Inc. OU 9112-3158 QUÉBEC INC. faisant affaires sous le nom Les Produits Avantage Plus", "Trois sociétés", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur désigne la société Les Produits Avantage Plus Inc. OU désigne la société 9112-3158 QUÉBEC INC. faisant affaires sous le nom Les Produits Avantage Plus (section 1)."
+    },
+    {
+      "question": "Comment présenter la valeur globale du package complet ATC-AU à un client avec tracteur 500 HP usage très intensif ?",
+      "options": ["C'est cher", "Package complet 1400$: HP 250$+2x heures 250$+Pas franchise 250$+Remb vérif 150$+Aucune limite 500$ = protection maximale tracteur haute valeur", "Minimiser", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter package complet avec détails : chaque option et sa valeur, total 1400$ pour protection maximale équipement haute valeur/usage intensif."
+    },
+    {
+      "question": "Quelle est l'adresse de l'Administrateur ?",
+      "options": ["Montréal", "2700 Boul. des Entreprises Local 102, Terrebonne (Québec) J6X 4J8", "Québec", "Laval"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur est situé au 2700 Boul. des Entreprises Local 102, Terrebonne (Québec) J6X 4J8 (section 1 - Définitions)."
+    },
+    {
+      "question": "Un tracteur de 3 ans avec 1 650 heures a eu usage élevé (550h/an). Terme 48 mois prévu. Heures nécessaires ?",
+      "options": ["2000h suffisant", "4000h requis (usage 550h/an × 4 ans futurs = 2200h, besoin option 2x: 48 mois = 2000h × 2 = 4000h)", "3000h suffisant", "5000h requis"],
+      "correctAnswer": 1,
+      "explanation": "Usage actuel : 1650h÷3 = 550h/an. Projection terme 48 mois (4 ans) : 550h/an × 4 = 2200h nécessaires. Standard 2000h insuffisant, option 2x requis (4000h)."
+    },
+    {
+      "question": "Quel est le numéro de téléphone de l'Administrateur ?",
+      "options": ["1-800-666-0181", "450-666-0181 ou 1-866-666-0181", "514-666-0181", "438-666-0181"],
+      "correctAnswer": 1,
+      "explanation": "Le numéro de téléphone de l'Administrateur est 450-666-0181 (ou 1-866-666-0181 pour les réclamations) selon la section 1 et section 7."
+    },
+    {
+      "question": "Comment calculer rapidement si un client a besoin de l'option 2x allocation heures ?",
+      "options": ["Pas de formule", "Formule: (Heures actuelles÷Âge en années). Si résultat >500h/an, recommander option 2x. Projeter aussi usage futur selon terme choisi", "Toujours nécessaire", "Selon le prix"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige formule simple : Heures÷Âge. Si >500h/an OU si (heures/an × années terme futur) > allocation standard, recommander option 2x."
+    },
+    {
+      "question": "Quelle est l'adresse courriel de l'Administrateur ?",
+      "options": ["admin@garantieavantageplus.ca", "info@garantieavantageplus.ca", "contact@garantieavantageplus.ca", "service@garantieavantageplus.ca"],
+      "correctAnswer": 1,
+      "explanation": "L'adresse courriel de l'Administrateur est info@garantieavantageplus.ca (section 1 - Définitions et section 7)."
+    },
+    {
+      "question": "Un équipement de 8 ans avec 4 200 heures a eu usage élevé (525h/an). Terme 36 mois Tarif B prévu. Allocation suffisante ?",
+      "options": ["Oui, 1500h suffit", "Non, projection 525h/an × 3 ans = 1575h > standard 1500h. Recommander option 2x (3000h)", "Oui, largement", "Impossible"],
+      "correctAnswer": 1,
+      "explanation": "Usage actuel : 4200h÷8 = 525h/an. Projection terme 36 mois (3 ans) : 525h/an × 3 = 1575h nécessaires > standard 1500h. Option 2x requis (3000h)."
+    },
+    {
+      "question": "Qu'est-ce qu'un Distributeur Autorisé ?",
+      "options": ["N'importe qui", "Commerçant titulaire d'un permis autorisé à vendre des garanties par l'entremise du portail de l'Administrateur", "Tous les garages", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un Distributeur Autorisé désigne tous les commerçants titulaires d'un permis autorisé à vendre des garanties par l'entremise du portail de l'Administrateur (section 1)."
+    },
+    {
+      "question": "Un collègue demande de mentir sur les heures d'utilisation d'un tracteur. Comment réagissez-vous ?",
+      "options": ["Mentir pour l'aider", "Refuser fermement, expliquer conséquences graves (section 5.7: Administrateur peut exiger preuves), protéger client et entreprise", "Ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige refus ferme : falsification heures = fraude grave, conséquences section 5.7 (Administrateur peut exiger preuves), protéger tous."
+    }
+  ]
+}
+

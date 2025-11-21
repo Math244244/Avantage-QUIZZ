@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 7,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Les tubes, tubulures, tuyauterie et boyaux (non mentionnés) sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, tubes, tubulures, tuyauterie et boyaux (non mentionnés) exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les tubes, tubulures, tuyauterie et boyaux (non mentionnées), courroies (non mentionnées) et tout le matériel de l'atelier sont exclus (section 4.2)."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour aVR-Plus Section B (Habitacle) ?",
+      "options": ["3 termes", "4 termes", "5 termes: 24, 36, 48, 60, 72 mois", "6 termes"],
+      "correctAnswer": 2,
+      "explanation": "Le programme aVR-Plus Section B (Habitacle) offre 5 termes : 24 mois, 36 mois, 48 mois, 60 mois et 72 mois."
+    },
+    {
+      "question": "Le volant est-il couvert ?",
+      "options": ["Oui, toujours", "Non, volant exclu (pièces du cadre, carrosserie)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, la carrosserie et du véhicule incluant le volant, les miroirs, les fenêtres, vitre et régulateur de vitres sont exclus (section 4.3)."
+    },
+    {
+      "question": "Comment expliquer les termes disponibles pour aVR à un client avec VR plus âgé ?",
+      "options": ["Un seul terme", "aVR Section A: 12/20k, 24/40k, 36/60k km. aVR Section B: 12, 24, 36 mois", "Seulement 12 mois", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer les termes aVR : Section A (Motorisé) 3 termes, Section B (Habitacle) 3 termes avec durées spécifiques."
+    },
+    {
+      "question": "Les miroirs sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, miroirs exclus (pièces du cadre, carrosserie)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, la carrosserie et du véhicule incluant le volant, les miroirs, les fenêtres sont exclus (section 4.3)."
+    },
+    {
+      "question": "Un VR autobus est-il admissible au programme ?",
+      "options": ["Oui, automatiquement", "Non, autobus et véhicules de déneigement exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ne couvrira PAS les autobus et véhicules de déneigement selon la section 10.a - Véhicules exclus."
+    },
+    {
+      "question": "Le régulateur de vitres est-il couvert ?",
+      "options": ["Oui, toujours", "Non, régulateur de vitres exclu (pièces du cadre, carrosserie)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, la carrosserie et du véhicule incluant les fenêtres, vitre et régulateur de vitres sont exclus (section 4.3)."
+    },
+    {
+      "question": "Comment gérer un client qui veut transférer sa garantie ?",
+      "options": ["Refuser", "Expliquer processus: seul propriétaire peut transférer, envoyer infos dans 15 jours, aucuns frais", "C'est impossible", "Facturer 100$"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer : seul propriétaire peut transférer, demande dans 15 jours avec infos complètes, aucuns frais (section 11.1)."
+    },
+    {
+      "question": "Les sièges et châssis des sièges sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, sièges et châssis des sièges exclus (pièces du cadre, carrosserie)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, la carrosserie et du véhicule incluant les sièges et châssis des sièges sont exclus (section 4.3)."
+    },
+    {
+      "question": "Des frais sont-ils appliqués aux transferts de garantie ?",
+      "options": ["Oui, 50$", "Non, aucun frais ne sera appliqué aux transferts", "Oui, 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Aucun frais ne sera appliqué aux transferts de garantie selon la section 11.1.a."
+    },
+    {
+      "question": "Les attaches, charnières, loquets et serrures de porte sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, arrêts de ports, attaches, charnières, loquet, serrure et poignées de porte exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, carrosserie incluant arrêts de ports, attaches, charnières, loquet, serrure et poignées de porte sont exclus (section 4.3)."
+    },
+    {
+      "question": "Un distributeur ou centre de réparation peut-il recevoir un transfert de garantie ?",
+      "options": ["Oui, automatiquement", "Non, un Distributeur Autorisé ou Centre de Réparation Autorisé non éligible aux transferts", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un Distributeur Autorisé ou un Centre de Réparation Autorisé n'est pas éligible aux transferts de garantie (section 11.1.a)."
+    },
+    {
+      "question": "Le dispositif de frein à main et câble sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dispositif de frein à main et câble exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, carrosserie et du véhicule incluant dispositif de frein à main et câble, pédales, palettes et sélecteurs de vitesse sont exclus (section 4.3)."
+    },
+    {
+      "question": "Quel délai pour envoyer une demande de transfert à l'Administrateur ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "Les demandes de transfert doivent être envoyées à l'Administrateur dans les quinze (15) premiers jours suivant la nouvelle propriété (section 11.1.a)."
+    },
+    {
+      "question": "Les pneus et valves de pneus sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, pneus et valves de pneus, roues, jantes et enjoliveurs exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, carrosserie incluant pneus et valves de pneus, roues, jantes et l'enjoliveurs et tous les réservoirs de fluides sont exclus (section 4.3)."
+    },
+    {
+      "question": "Comment expliquer le processus d'annulation dans les 10 premiers jours ?",
+      "options": ["Impossible", "Propriétaire demande annulation au Distributeur, Administrateur non responsable des remboursements/frais", "Automatique", "Contacter Administrateur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer : dans les 10 premiers jours, demande au Distributeur, Administrateur non responsable remboursements/frais (section 11.2.a)."
+    },
+    {
+      "question": "Les réservoirs de fluides sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, tous les réservoirs de fluides exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, carrosserie et du véhicule incluant tous les réservoirs de fluides sont exclus (section 4.3)."
+    },
+    {
+      "question": "Un client veut annuler après 20 jours. Quelles sont les conditions ?",
+      "options": ["Toujours possible", "Possible seulement si véhicule déclaré perte totale ou volé (avec preuves)", "Impossible", "Avec frais 200$"],
+      "correctAnswer": 1,
+      "explanation": "Après 10 jours, annulation possible seulement si véhicule déclaré perte totale ou volé (preuves requises : déclaration assureur + certificat immatriculation) (section 11.2.b)."
+    },
+    {
+      "question": "Les adhésifs, moulages et chrome sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, adhésifs, moulages, chrome, garnitures, ornementations exclus (pièces esthétiques)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les pièces esthétiques ou cosmétiques incluant adhésifs, moulages, chrome, garnitures, ornementations, rembourrages sont exclus (section 4.4)."
+    },
+    {
+      "question": "Comment expliquer le calcul du remboursement en cas d'annulation après 10 jours ?",
+      "options": ["100% remboursé", "Calculé au prorata (temps/km utilisés) moins réclamations payées, basé sur prix payé par Distributeur", "50% remboursé", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer : remboursement calculé au prorata (temps/km utilisés) moins réclamations payées, basé sur prix payé par Distributeur à Administrateur (section 11.2.b)."
+    },
+    {
+      "question": "Le peinture et les panneaux sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, peinture, panneaux, caoutchouc ou revêtement de caoutchouc, tapis exclus (pièces esthétiques)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les pièces esthétiques ou cosmétiques incluant le peinture, les panneaux, caoutchouc ou revêtement de caoutchouc, tapis sont exclus (section 4.4)."
+    },
+    {
+      "question": "La banque peut-elle demander annulation si le VR a été repris ?",
+      "options": ["Non, jamais", "Oui, si VR repris et montant prêt impayé (preuves requises)", "Seulement avec accord propriétaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La banque/institution financière peut demander annulation si VR repris et montant prêt impayé (preuves requises : date/kilométrage reprise) (section 11.2.b.ii)."
+    },
+    {
+      "question": "Les moulures d'étanchéités et autocollants sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, moulures d'étanchéités, autocollants, plastiques exclus (pièces esthétiques)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les pièces esthétiques ou cosmétiques incluant moulures d'étanchéités, autocollants, les plastiques sont exclus (section 4.4)."
+    },
+    {
+      "question": "Comment gérer un client qui veut modifier les termes du contrat verbalement ?",
+      "options": ["Accepter", "Expliquer poliment que contrat écrit constitue totalité entente et prime sur toute entente verbale", "Promettre", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que le contrat écrit constitue la totalité et l'intégralité de l'entente et prime sur toute entente verbale (section 12.1)."
+    },
+    {
+      "question": "Le dégivreur arrière est-il couvert ?",
+      "options": ["Oui, toujours", "Non, réparations liées au dégivreur arrière exclues", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au dégivreur arrière sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un VR altéré ou modifié est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicule altéré ou modifié par rapport à installation d'usine exclu (exception possible)", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule altéré ou modifié par rapport à l'installation d'usine d'origine est exclu. Le Distributeur peut demander une exception avant vente (section 10.f)."
+    },
+    {
+      "question": "Le système d'embrayage manuel et double embrayage sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, système d'embrayage manuel et double embrayage exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système d'embrayage manuel et ou double embrayage (y compris le disque, la plaque de pression, le volant d'inertie) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Comment expliquer qu'une disposition conflictuelle est automatiquement modifiée ?",
+      "options": ["Ignorer", "Expliquer que toute disposition en conflit avec Loi protection consommateur est automatiquement modifiée pour conformité", "Refuser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que toute disposition en conflit avec la Loi sur la protection du consommateur est automatiquement modifiée pour conformité (section 12.2)."
+    },
+    {
+      "question": "Le système de surveillance de la pression des pneus est-il couvert ?",
+      "options": ["Oui, toujours", "Non, système de surveillance de la pression des pneus exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système de surveillance de la pression des pneus sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un collègue demande de mentir pour couvrir une erreur. Comment réagissez-vous ?",
+      "options": ["Mentir pour l'aider", "Refuser poliment, expliquer importance d'intégrité, suggérer d'assumer responsabilité", "Le dénoncer publiquement", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser poliment, expliquer les conséquences du mensonge et encourager l'honnêteté et la prise de responsabilité."
+    }
+  ]
+}
+

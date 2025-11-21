@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 9,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quels véhicules couvre le programme ATC-AU (Agricultural Tractors and Compact Utility) ?",
+      "options": ["Seulement tracteurs", "Tracteurs agricoles, tracteurs utilitaires compacts, tracteurs à gazon < 250 HP (ou option jusqu'à 600 HP)", "Tout", "Seulement camions"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-AU couvre les tracteurs agricoles, tracteurs utilitaires compacts et tracteurs à gazon avec puissance < 250 HP. Option HP Limitation permet d'étendre jusqu'à 600 HP (section 2)."
+    },
+    {
+      "question": "Comment expliquer la différence fondamentale entre ATC-AU et ATC-CE ?",
+      "options": ["Aucune différence", "ATC-AU: tracteurs agricoles <250 HP (extensible 600 HP). ATC-CE: équipements construction <250 HP (fixe, pas d'extension)", "Identiques", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : ATC-AU cible agriculture avec possibilité extension (600 HP), ATC-CE cible construction compacte sans extension possible."
+    },
+    {
+      "question": "Quels véhicules couvre le programme ATC-CE (Compact Construction Equipment) ?",
+      "options": ["Seulement tracteurs", "Excavatrice, chargeuses, chariot élévateur, rétrocaveuse, bulldozer, compacteurs, rouleau compresseur avec puissance < 250 HP", "Tout", "Seulement camions"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-CE couvre excavatrice, chargeuses, chariot élévateur, rétrocaveuse, bulldozer, compacteurs et rouleau compresseur avec puissance < 250 HP seulement (section 2)."
+    },
+    {
+      "question": "Un client hésite entre ATC-AU et ATC-CE pour un équipement polyvalent. Comment l'aider ?",
+      "options": ["C'est pareil", "Évaluer usage principal: agriculture/ferme = ATC-AU (extensible HP), construction/excavation = ATC-CE. Vérifier puissance et besoins futurs", "Selon le prix", "Le moins cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer usage principal et besoins futurs : agriculture = ATC-AU (options puissance), construction compacte = ATC-CE (limité 250 HP)."
+    },
+    {
+      "question": "L'option HP Limitation est-elle disponible pour le programme ATC-CE ?",
+      "options": ["Oui, identique à ATC-AU", "Non, ATC-CE ne propose pas d'option HP Limitation, reste fixe à < 250 HP", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation n'est disponible QUE pour le programme ATC-AU. Le programme ATC-CE reste fixé à < 250 HP sans possibilité d'extension (section 2)."
+    },
+    {
+      "question": "Comment expliquer pourquoi ATC-AU offre l'option HP Limitation mais pas ATC-CE ?",
+      "options": ["C'est injuste", "Expliquer: agriculture nécessite tracteurs haute puissance (jusqu'à 600 HP). Construction compacte cible équipements <250 HP (usage différent)", "C'est plus cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer la logique métier : agriculture nécessite haute puissance (champs, remorques), construction compacte cible équipements légers."
+    },
+    {
+      "question": "Quel est le Composant 1 couvert par le programme ?",
+      "options": ["Transmission", "Moteur (avec liste détaillée de sous-composants couverts)", "Suspension", "Électrique"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 1 couvert est le Moteur, incluant une liste détaillée de sous-composants couverts comme bloc moteur, vilebrequin, pistons, etc. (section 2.1)."
+    },
+    {
+      "question": "Un tracteur de 400 HP est-il admissible au programme ATC-AU ?",
+      "options": ["Non, trop puissant", "Oui, avec option HP Limitation (250$) qui couvre de 250 HP à 600 HP maximum", "Non admissible", "Seulement avec autre option"],
+      "correctAnswer": 1,
+      "explanation": "Un tracteur de 400 HP dépasse la limite de base (<250 HP) mais est admissible au programme ATC-AU avec l'option HP Limitation (250$) qui couvre jusqu'à 600 HP."
+    },
+    {
+      "question": "Quels sous-composants du Moteur (Composant 1) sont couverts ?",
+      "options": ["Rien", "Bloc moteur, vilebrequin, pistons, bielles, coussinets, arbres à cames, culasses, soupapes, poussoirs, pompe à huile", "Seulement bloc", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 1 (Moteur) couvre : bloc moteur, vilebrequin, pistons, bielles, coussinets, arbres à cames, culasses, soupapes, poussoirs, pompe à huile (section 2.1)."
+    },
+    {
+      "question": "Comment expliquer le Composant 1 (Moteur) à un client non technique ?",
+      "options": ["C'est compliqué", "Expliquer simplement: couvre tous les composants INTERNES du moteur (bloc, pistons, vilebrequin, etc.), tout ce qui fait tourner le moteur", "Ignorer détails", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à simplifier : Composant 1 = tous les éléments internes qui font fonctionner le moteur, protection complète du cœur mécanique."
+    },
+    {
+      "question": "Quel est le Composant 2 couvert par le programme ?",
+      "options": ["Moteur", "Transmission (avec liste détaillée de sous-composants couverts)", "Suspension", "Électrique"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 2 couvert est la Transmission, incluant une liste détaillée de sous-composants couverts comme boîtier, engrenages, arbre principal, etc. (section 2.2)."
+    },
+    {
+      "question": "Un équipement de construction de 280 HP est-il admissible au programme ATC-CE ?",
+      "options": ["Oui, avec option", "Non, ATC-CE couvre <250 HP seulement, pas d'option HP disponible. 280 HP exclu", "Oui, automatiquement", "Avec supplément"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-CE couvre < 250 HP seulement et n'offre pas d'option HP Limitation. Un équipement de 280 HP n'est pas admissible au programme ATC-CE."
+    },
+    {
+      "question": "Quels sous-composants de la Transmission (Composant 2) sont couverts ?",
+      "options": ["Rien", "Boîtier transmission, tous engrenages internes, arbre principal, arbre secondaire, fourchettes vitesses, chaînes internes, roulements internes", "Seulement boîtier", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 2 (Transmission) couvre : boîtier, tous engrenages internes, arbre principal, arbre secondaire, fourchettes vitesses, chaînes internes, roulements internes (section 2.2)."
+    },
+    {
+      "question": "Comment présenter les 5 composants couverts de façon structurée à un client ?",
+      "options": ["C'est compliqué", "Expliquer les 5 groupes: 1) Moteur (cœur mécanique), 2) Transmission (changement vitesses), 3) Système électrique, 4) Direction assistée, 5) Différentiel/Essieux", "Tout est couvert", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à structurer en 5 groupes clairs avec descriptions simples : chaque composant = système spécifique, couverture complète des éléments critiques."
+    },
+    {
+      "question": "Quel est le Composant 3 couvert par le programme ?",
+      "options": ["Transmission", "Système électrique (avec liste détaillée de sous-composants couverts)", "Suspension", "Freins"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 3 couvert est le Système électrique, incluant une liste détaillée de sous-composants couverts comme alternateur, démarreur, ECM, capteurs, etc. (section 2.3)."
+    },
+    {
+      "question": "Un tracteur agricole de 550 HP est-il admissible au programme ATC-AU ?",
+      "options": ["Non, trop puissant", "Oui, avec option HP Limitation (250$) qui couvre jusqu'à 600 HP maximum. 550 HP est admissible", "Non admissible", "Avec autre programme"],
+      "correctAnswer": 1,
+      "explanation": "Un tracteur de 550 HP est admissible au programme ATC-AU avec l'option HP Limitation (250$) qui couvre jusqu'à 600 HP maximum. 550 HP est dans la plage couverte."
+    },
+    {
+      "question": "Quels sous-composants du Système électrique (Composant 3) sont couverts ?",
+      "options": ["Rien", "Alternateur, démarreur, ECM, modules contrôle, tous capteurs, tous contrôleurs électroniques, tous relais et solénoïdes électriques", "Seulement alternateur", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 3 (Système électrique) couvre : alternateur, démarreur, ECM, modules contrôle, tous capteurs, tous contrôleurs électroniques, relais et solénoïdes électriques (section 2.3)."
+    },
+    {
+      "question": "Comment justifier la valeur de la couverture à un client avec tracteur haute valeur ?",
+      "options": ["C'est cher", "Expliquer protection 5 composants critiques (moteur, transmission, électrique, direction, différentiel), coût réparations majeures (5k$-20k$+), tranquillité esprit", "Minimiser", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer ROI : 5 composants critiques couverts, une seule réparation majeure peut coûter 5k$-20k$+, garantie = protection investissement majeur."
+    },
+    {
+      "question": "Quel est le Composant 4 couvert par le programme ?",
+      "options": ["Transmission", "Direction assistée (avec liste détaillée de sous-composants couverts)", "Suspension", "Freins"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 4 couvert est la Direction assistée, incluant une liste détaillée de sous-composants couverts comme pompe direction, cylindre, vérin, etc. (section 2.4)."
+    },
+    {
+      "question": "Un équipement de construction de 600 HP est-il admissible à un programme ATC ?",
+      "options": ["Oui, ATC-CE avec option", "Non, aucun programme ATC ne couvre 600 HP pour construction (ATC-AU pour agriculture seulement peut aller jusqu'à 600 HP)", "Oui, ATC-AU", "Avec supplément"],
+      "correctAnswer": 1,
+      "explanation": "600 HP dépasse limite ATC-CE (<250 HP, pas d'option). ATC-AU peut couvrir jusqu'à 600 HP mais UNIQUEMENT pour tracteurs agricoles, pas équipements construction."
+    },
+    {
+      "question": "Quels sous-composants de la Direction assistée (Composant 4) sont couverts ?",
+      "options": ["Rien", "Pompe direction assistée, cylindre maître, cylindre esclave, vérin direction, soupape contrôle, valve orbitrol, tous joints tournants", "Seulement pompe", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 4 (Direction assistée) couvre : pompe direction, cylindre maître, cylindre esclave, vérin direction, soupape contrôle, valve orbitrol, tous joints tournants (section 2.4)."
+    },
+    {
+      "question": "Comment expliquer les programmes ATC à un client avec flotte mixte (agriculture + construction) ?",
+      "options": ["Un seul programme", "Évaluer chaque équipement: tracteurs agricoles = ATC-AU (options HP), équipements construction = ATC-CE (<250 HP). 2 programmes adaptés", "C'est pareil", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige évaluation individuelle : ATC-AU pour tracteurs agricoles (flexibilité HP), ATC-CE pour équipements construction compacts, programmes spécialisés adaptés."
+    },
+    {
+      "question": "Quel est le Composant 5 couvert par le programme ?",
+      "options": ["Transmission", "Différentiel et essieux (avec liste détaillée de sous-composants couverts)", "Suspension", "Freins"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 5 couvert est le Différentiel et essieux, incluant une liste détaillée de sous-composants couverts comme boîtier différentiel, engrenages, moyeux, etc. (section 2.5)."
+    },
+    {
+      "question": "Un tracteur agricole de 610 HP est-il admissible au programme ATC-AU ?",
+      "options": ["Oui, avec option", "Non, option HP Limitation couvre JUSQU'À 600 HP maximum. 610 HP dépasse limite et n'est pas admissible", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation couvre jusqu'à 600 HP maximum. Un tracteur de 610 HP dépasse cette limite maximale et n'est pas admissible au programme ATC-AU."
+    },
+    {
+      "question": "Quels sous-composants du Différentiel et essieux (Composant 5) sont couverts ?",
+      "options": ["Rien", "Boîtier différentiel, tous engrenages internes, tous joints de roue internes, moyeux, roulements, tous arbres d'essieu", "Seulement boîtier", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 5 (Différentiel et essieux) couvre : boîtier différentiel, tous engrenages internes, tous joints de roue internes, moyeux, roulements, tous arbres d'essieu (section 2.5)."
+    },
+    {
+      "question": "Comment gérer un client déçu que son équipement 300 HP ne soit pas admissible à ATC-CE ?",
+      "options": ["Mentir", "Expliquer: ATC-CE cible construction compacte <250 HP. Si équipement agricole, évaluer ATC-AU. Sinon, proposer alternatives ou autre programme si disponible", "Forcer la vente", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige honnêteté : expliquer ciblage ATC-CE (compact <250 HP), vérifier si ATC-AU applicable (si usage agricole), proposer alternatives ou autres programmes."
+    },
+    {
+      "question": "Un client demande si le système de freinage est couvert. Que répondez-vous ?",
+      "options": ["Oui, tout est couvert", "Expliquer que 5 composants sont couverts (Moteur, Transmission, Électrique, Direction, Différentiel). Freins non listés = vérifier section Exclusions", "Mentir", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté : expliquer les 5 composants couverts (section 2), freins non listés. Diriger vers section Exclusions pour confirmation des éléments non couverts."
+    },
+    {
+      "question": "Comment maximiser la satisfaction lors de l'explication des composants couverts ?",
+      "options": ["Lire le contrat", "Expliquer en langage simple chaque composant (1-Moteur, 2-Transmission, 3-Électrique, 4-Direction, 5-Différentiel), donner exemples concrets réparations couvertes", "Minimiser détails", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication claire en langage simple de chaque composant avec exemples concrets de réparations couvertes pour compréhension complète."
+    },
+    {
+      "question": "Un client avec équipement 245 HP hésite entre ATC-AU et ATC-CE. Comment l'orienter ?",
+      "options": ["C'est pareil", "Question clé: usage? Agriculture/ferme = ATC-AU (options futures, extensible). Construction = ATC-CE. 245 HP admissible aux deux, choisir selon usage principal", "Le moins cher", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à poser la question clé : usage principal? 245 HP admissible aux deux programmes, choix basé sur usage (agriculture = AU, construction = CE)."
+    },
+    {
+      "question": "Comment expliquer la limite de 600 HP maximum pour ATC-AU ?",
+      "options": ["C'est arbitraire", "Expliquer: 600 HP couvre 95%+ tracteurs agricoles marché. Au-delà = équipements ultra-spécialisés nécessitant programmes commerciaux différents", "C'est injuste", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique marché : 600 HP couvre quasi-totalité tracteurs agricoles standard, au-delà = équipements ultra-spécialisés, autres programmes."
+    }
+  ]
+}
+

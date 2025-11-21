@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 3,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le radiateur est couvert dans quelle section ?",
+      "options": ["Section 16", "Section 17", "Section 19", "Section 23"],
+      "correctAnswer": 2,
+      "explanation": "La section 19 - Système du refroidissement couvre le radiateur (sauf par corrosion), le radiateur de la chaufferette et les sondes thermiques."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AP ?",
+      "options": ["200 000 km", "225 000 km", "280 000 km", "300 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AP s'applique aux véhicules ayant 280 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Les joints universels sont couverts dans quelle section ?",
+      "options": ["Section 4", "Section 7", "Section 9", "Section 12"],
+      "correctAnswer": 3,
+      "explanation": "La section 12 - Accessoires Essentiels couvre les joints universels ainsi que les arbres de transmission."
+    },
+    {
+      "question": "Un client avec un BMW X5 2020 de 95 000 km demande le programme AT PLUS. Dans quelle catégorie se situe ce véhicule ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "BMW fait partie de la Catégorie C incluant Audi, Fiat, Jaguar, Landrover, Mercedes, Mini, Porsche, Smart, Volkswagen, Volvo, Alpha Roméo et Maserati."
+    },
+    {
+      "question": "Combien de sections le programme AX-1 couvre-t-il ?",
+      "options": ["6 sections", "11 sections", "12 sections", "16 sections"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-1 couvre les sections 1 à 11 selon la description du programme."
+    },
+    {
+      "question": "Combien coûte l'option Kilométrage illimité pour le programme AX-2 ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Kilométrage illimité coûte 100$ pour le programme AX-2 avec condition de véhicule de 8 ans et moins et 140 000 km et moins."
+    },
+    {
+      "question": "Le thermostat est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 3,
+      "explanation": "La section 19 - Système du refroidissement couvre le thermostat, le radiateur et les sondes thermiques."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AX-3 ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-3 a une limite de kilométrage de 20 000 km par année selon les détails financiers."
+    },
+    {
+      "question": "Les rotules de suspension sont couvertes dans quelle section ?",
+      "options": ["Section 9", "Section 12", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 - Suspension couvre les rotules, les bras de suspension, la barre stabilisatrice et les embouts de biellette de direction."
+    },
+    {
+      "question": "Comment expliquer professionnellement la franchise à un nouveau client ?",
+      "options": ["C'est une pénalité obligatoire", "C'est votre participation aux frais de réparation, déduite automatiquement du montant autorisé", "C'est un frais administratif", "C'est optionnel"],
+      "correctAnswer": 1,
+      "explanation": "La franchise est la participation du propriétaire déduite automatiquement du montant autorisé (section 8.7). L'option 0$ Franchise est disponible."
+    },
+    {
+      "question": "Le programme AVE a-t-il une limite de kilométrage annuelle ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Kilométrage illimité par défaut"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AVE a un kilométrage illimité par défaut dans la grille tarifaire selon les détails financiers."
+    },
+    {
+      "question": "Le module de contrôle du moteur (ECM) est couvert dans quelle section ?",
+      "options": ["Section 11", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 3,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre le module de contrôle du moteur (ECM) et le module de contrôle de la transmission (TCM)."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AP ?",
+      "options": ["500$", "1 000$", "1 500$", "2 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP a un montant maximum par réclamation de 1 000$ selon les détails financiers."
+    },
+    {
+      "question": "La pompe à eau est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 12", "Section 13", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre la pompe à eau et sa poulie ainsi que la pompe à dépression."
+    },
+    {
+      "question": "Un client vous demande quelle garantie offre le meilleur rapport qualité-prix pour son Honda Accord 2018 de 130 000 km. Que recommandez-vous ?",
+      "options": ["Programme AP", "Programme AX-3", "Programme AT", "Programme AT PLUS"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AT PLUS offre la couverture la plus complète (sections 1-27) et Honda fait partie de la Catégorie A avec véhicule admissible (8 ans et moins, 140 000 km et moins)."
+    },
+    {
+      "question": "Combien coûte l'option 2 x Réclamation pour le programme AX-3 ?",
+      "options": ["150$", "200$", "250$", "300$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 2 x Réclamation coûte 250$ pour le programme AX-3 selon les options disponibles. Cette option est spécifique à AX-3."
+    },
+    {
+      "question": "Les catalyseurs sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 24"],
+      "correctAnswer": 3,
+      "explanation": "La section 24 - Système d'émissions couvre les catalyseurs, la soupape EGR, les capteurs d'oxygène et la soupape PCV."
+    },
+    {
+      "question": "Quelle est la franchise du programme AX-3 ?",
+      "options": ["100$", "125$", "150$", "175$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-3 a une franchise de 125$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Les bras de suspension sont couverts dans quelle section ?",
+      "options": ["Section 7", "Section 9", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 - Suspension couvre les bras de suspension et leurs coussinettes ainsi que les rotules et la barre stabilisatrice."
+    },
+    {
+      "question": "Un collègue vous demande de partager vos meilleures techniques de vente. Comment abordez-vous cette demande ?",
+      "options": ["Refuser pour garder votre avantage", "Partager généreusement en encourageant l'excellence collective", "Demander une compensation", "Donner de fausses informations"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage le partage de connaissances et l'esprit d'équipe pour améliorer les performances globales de la concession."
+    },
+    {
+      "question": "Le programme AT est disponible pour combien de termes si le véhicule a 10 ans et moins ?",
+      "options": ["3 termes", "4 termes", "5 termes", "6 termes"],
+      "correctAnswer": 2,
+      "explanation": "Si le véhicule a 10 ans et moins et 200 000 km et moins, le programme AT est disponible pour 5 termes : 12, 24, 36, 48 ou 60 mois."
+    },
+    {
+      "question": "Le collecteur d'admission est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 12", "Section 13", "Section 17"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre le collecteur d'admission et le collecteur d'échappement."
+    },
+    {
+      "question": "Combien coûte l'option Suspension + pour le programme AT PLUS ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Suspension + coûte 500$ pour le programme AT PLUS et est disponible seulement pour les contrats de 36, 48 et 60 mois."
+    },
+    {
+      "question": "Les pistons d'étriers de freins sont couverts dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Accessoires Essentiels couvre les pistons d'étriers de freins à disque avant et arrière."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AX-3 ?",
+      "options": ["2 000$", "4 000$", "6 000$", "8 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AX-3 est de 6 000$ selon les détails financiers."
+    },
+    {
+      "question": "Le moteur du ventilateur du radiateur est couvert dans quelle section ?",
+      "options": ["Section 15", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 3,
+      "explanation": "La section 19 - Système du refroidissement couvre le moteur du ventilateur du radiateur et l'embrayage hydraulique du ventilateur."
+    },
+    {
+      "question": "Un client demande un délai de paiement pour la garantie. Quelle est la meilleure approche ?",
+      "options": ["Refuser catégoriquement", "Le référer au gérant ou service financier approprié", "Accepter sans autorisation", "Augmenter le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de diriger le client vers le service approprié (gérant ou financement) plutôt que de prendre des décisions hors de votre autorité."
+    },
+    {
+      "question": "L'évaporateur d'air climatisé est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 16", "Section 19", "Section 22"],
+      "correctAnswer": 2,
+      "explanation": "La section 19 - Système du refroidissement couvre l'évaporateur d'air climatisé si ces pièces ont été installées par le manufacturier."
+    },
+    {
+      "question": "Combien coûte l'option Quincaillerie pour le programme AT PLUS ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Quincaillerie coûte 100$ pour le programme AT PLUS et couvre huiles, filtres, écrous, boulons, liquides jusqu'à 100$ total."
+    },
+    {
+      "question": "La courroie de distribution est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 12", "Section 13", "Section 21"],
+      "correctAnswer": 3,
+      "explanation": "La section 21 - Motopropulseur Compréhensive couvre la courroie de distribution et les pignons tendeurs."
+    }
+  ]
+}
+

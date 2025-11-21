@@ -103,7 +103,7 @@ export const validators = {
      * Valide un module
      */
     module: (mod) => {
-        return ['auto', 'loisir', 'vr', 'tracteur'].includes(mod);
+        return ['auto', 'loisir', 'vr', 'tracteur', 'avex', 'hasard-route'].includes(mod);
     },
     
     /**
@@ -178,7 +178,7 @@ export function validateQuestionData(data) {
     
     // Validation module
     if (!validators.module(data.module)) {
-        errors.push('Module invalide (auto, loisir, vr, tracteur)');
+        errors.push('Module invalide (auto, loisir, vr, tracteur, avex, hasard-route)');
     }
     
     // Validation mois

@@ -1,0 +1,188 @@
+{
+  "module": "hasard-route",
+  "month": 3,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Que couvre la protection COSMÉTIQUE DES ROUES ?",
+      "options": ["Tous dommages roues", "Réparation Dommages cosmétiques roues accidentellement rayées contre trottoir ou nid-de-poule", "Seulement bosses", "Remplacement roues"],
+      "correctAnswer": 1,
+      "explanation": "La protection COSMÉTIQUE DES ROUES couvre la réparation des Dommages cosmétiques aux roues survenant lorsque la roue est accidentellement rayée contre un trottoir ou un nid-de-poule."
+    },
+    {
+      "question": "Qu'est-ce qu'un \"Dommage cosmétique\" selon le programme ?",
+      "options": ["Tous égratignures", "Dommages directs et accessoires à FACE EXTÉRIEURE roue couverte ET ne rend PAS roue Hors d'usage", "Seulement peinture", "Selon le technicien"],
+      "correctAnswer": 1,
+      "explanation": "\"Dommages cosmétiques\" signifie : dommages directs et accessoires à la face extérieure d'une roue couverte ET ne rend PAS la roue Hors d'usage (esthétique uniquement)."
+    },
+    {
+      "question": "Combien d'occurrences cosmétique roues sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La protection COSMÉTIQUE DES ROUES couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat."
+    },
+    {
+      "question": "Comment expliquer différence cosmétique roues vs pneu+roue à un client ?",
+      "options": ["C'est pareil", "Expliquer DISTINCTION : Cosmétique roues = dommages ESTHÉTIQUES face extérieure (rayures trottoir), roue FONCTIONNELLE. Pneu+Roue = roue Hors d'usage (non-fonctionnelle). Deux protections COMPLÉMENTAIRES couvrent scénarios différents", "Ignorer", "Selon le dommage"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification distinction : Cosmétique = dommages esthétiques roue fonctionnelle, Pneu+Roue = roue non-fonctionnelle (Hors usage), deux protections complémentaires scénarios différents."
+    },
+    {
+      "question": "Les roues chromées sont-elles couvertes pour cosmétique ?",
+      "options": ["Oui, toutes roues", "NON, dommages roues CHROMÉES ou roues avec SIMULATION CHROME = EXCLUS", "Seulement chrome OEM", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage aux roues CHROMÉES ou aux roues avec SIMULATION DE CHROME est EXCLU de la couverture cosmétique roues."
+    },
+    {
+      "question": "Les enjoliveurs sont-ils couverts pour dommages cosmétiques ?",
+      "options": ["Oui, inclus", "NON, tous dommages ou rayures causés aux ENJOLIVEURS = EXCLUS", "Seulement enjoliveurs OEM", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages ou rayures causés aux ENJOLIVEURS sont EXCLUS de la couverture cosmétique roues."
+    },
+    {
+      "question": "Comment expliquer exclusion roues chromées à client avec Cadillac Escalade roues chrome ?",
+      "options": ["Ignorer", "Expliquer logique : roues chromées = processus réparation complexe/coûteux (galvanoplastie), résultats variables, risque dommages supplémentaires. Exclusion protège contre réparations insatisfaisantes. Recommander prudence stationnement", "Promettre couverture", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : roues chromées = réparation complexe coûteuse (galvanoplastie), résultats variables risque, exclusion évite réparations insatisfaisantes, recommander prudence prévention."
+    },
+    {
+      "question": "Les dommages cosmétiques irréparables sont-ils couverts ?",
+      "options": ["Oui, remplacement", "NON, tout Dommage cosmétiques qui ne peut pas être réparé = EXCLU", "Seulement réparation", "Selon le technicien"],
+      "correctAnswer": 1,
+      "explanation": "Tout Dommage cosmétiques qui ne peut pas être réparé est EXCLU. La couverture cosmétique roues couvre SEULEMENT la réparation (pas le remplacement)."
+    },
+    {
+      "question": "Quel est le remboursement maximum pour CLÉ + TÉLÉCOMMANDE par incident ?",
+      "options": ["500$", "1 250$ par incident", "2 000$ par incident", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour CLÉ + TÉLÉCOMMANDE est jusqu'à 1 250$ par incident (couverture généreuse clés/télécommandes modernes)."
+    },
+    {
+      "question": "Combien d'occurrences CLÉ + TÉLÉCOMMANDE sont couvertes ?",
+      "options": ["1 occurrence", "Occurrences ILLIMITÉES pendant Durée contrat", "3 occurrences", "5 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La protection CLÉ + TÉLÉCOMMANDE couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat."
+    },
+    {
+      "question": "Quelles situations sont couvertes pour remplacement clé/télécommande ?",
+      "options": ["Seulement vol", "Clé ou télécommande PERDUE, VOLÉE ou DÉTRUITE", "Seulement perdue", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La couverture CLÉ + TÉLÉCOMMANDE s'applique si la clé ou télécommande est PERDUE, VOLÉE ou DÉTRUITE (trois situations couvertes)."
+    },
+    {
+      "question": "Comment expliquer valeur couverture 1250$ clé/télécommande à un client ?",
+      "options": ["C'est excessif", "Expliquer RÉALITÉ : clés modernes = transpondeur électronique + télécommande intelligente + programmation concessionnaire. Coût réel 300$-800$ (standard) à 1000$+ (luxe Tesla/BMW). Limite 1250$ = protection essentielle investissement majeur", "Minimiser", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration valeur : clés modernes = technologie complexe coûteuse (transpondeur, programmation), coûts réels 300$-1000$+, limite 1250$ = protection essentielle investissement."
+    },
+    {
+      "question": "Combien de clés/télécommandes MINIMUM requises à livraison pour admissibilité ?",
+      "options": ["1 de chaque", "MINIMUM 2 clés + 2 télécommandes FONCTIONNELLES à livraison véhicule", "3 de chaque", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Pour être admissible : recevoir MINIMUM 2 clés + 2 télécommandes FONCTIONNELLES du Détaillant de Vente Original au moment de la livraison du véhicule."
+    },
+    {
+      "question": "Que doit faire le client avec clés restantes lors d'une réclamation ?",
+      "options": ["Les garder", "Toutes clés et télécommandes DOIVENT être remises au concessionnaire pour INSPECTION", "Seulement l'endommagée", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Lors d'une réclamation clé/télécommande, TOUTES les clés et télécommandes restantes DOIVENT être remises au concessionnaire pour inspection."
+    },
+    {
+      "question": "Pourquoi clé/télécommande perdue DOIT être désactivée avant remplacement ?",
+      "options": ["C'est bureaucratique", "Pour SÉCURITÉ propriétaire véhicule : clés perdues/volées DOIVENT être désactivées par concessionnaire avant remplacement (empêche accès/vol véhicule)", "Selon le client", "Augmenter coût"],
+      "correctAnswer": 1,
+      "explanation": "Pour la SÉCURITÉ du propriétaire : toutes clés/télécommandes perdues, volées ou détruites DOIVENT être désactivées par le concessionnaire avant remplacement (prévention vol véhicule)."
+    },
+    {
+      "question": "Comment expliquer obligation remise toutes clés lors réclamation à client méfiant ?",
+      "options": ["Être flexible", "Expliquer LOGIQUE : inspection toutes clés = vérification admissibilité (2 clés minimum initial), prévention fraude, désactivation clés perdues (sécurité). Protection propriétaire + intégrité programme. Procédure standard sécuritaire", "L'ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : inspection toutes clés = vérification admissibilité/quantité, prévention fraude, désactivation sécurité, protège propriétaire + intégrité programme, procédure standard nécessaire."
+    },
+    {
+      "question": "Quelle est la période d'attente pour réclamation CLÉ + TÉLÉCOMMANDE ?",
+      "options": ["Aucune", "Période attente 90 jours suivant Date entrée vigueur (aucune couverture premiers 90 jours)", "30 jours", "15 jours"],
+      "correctAnswer": 1,
+      "explanation": "Période d'attente 90 jours : aucune couverture CLÉ + TÉLÉCOMMANDE ne sera fournie pendant période de 90 jours suivant la Date d'entrée en vigueur du contrat."
+    },
+    {
+      "question": "Si clé perdue dans premiers 90 jours, que se passe-t-il ?",
+      "options": ["Remboursement quand même", "Remboursement REFUSÉ + couverture SUPPRIMÉE jusqu'à remplacement acheté client (facture payée preuve) puis rétablie", "Attendre 90 jours", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si clé perdue dans 90 premiers jours : remboursement REFUSÉ + couverture SUPPRIMÉE jusqu'à ce que clé remplacement achetée par client (facture payée preuve envoyée) puis couverture rétablie."
+    },
+    {
+      "question": "Comment expliquer période attente 90 jours clés à client frustré perte jour 30 ?",
+      "options": ["Être flexible", "Expliquer LOGIQUE : période 90 jours = prévention fraude (abus réclamations immédiates), standard industrie, protection intégrité programme. Client DOIT remplacer clé ses frais, envoyer facture preuve, couverture rétablie après. Équité tous", "Faire exception", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : période 90 jours = prévention fraude standard industrie, intégrité programme, client remplace ses frais envoie facture preuve, couverture rétablie, équité tous clients."
+    },
+    {
+      "question": "Un client veut remplacer clé usée (non perdue/volée/détruite). Couvert ?",
+      "options": ["Oui, usure couverte", "NON COUVERT : programme couvre clé/télécommande PERDUE, VOLÉE ou DÉTRUITE. Usure normale = NON couverte", "Selon l'usure", "Essayer quand même"],
+      "correctAnswer": 1,
+      "explanation": "Le programme couvre SEULEMENT clé/télécommande PERDUE, VOLÉE ou DÉTRUITE. L'usure normale, dysfonctionnement ou batterie faible = NON couverts."
+    },
+    {
+      "question": "Que couvre la PROTECTION DE L'INTÉRIEUR DU VÉHICULE ?",
+      "options": ["Tout l'intérieur", "Réparation déchirures, entailles, brûlures ACCIDENTELLES sièges rembourrés + nettoyage taches ACCIDENTELLES", "Seulement sièges avant", "Remplacement sièges"],
+      "correctAnswer": 1,
+      "explanation": "La PROTECTION INTÉRIEUR couvre : réparation déchirures, entailles ou brûlures ACCIDENTELLES sur sièges rembourrés + nettoyage taches accidentelles."
+    },
+    {
+      "question": "Combien d'occurrences PROTECTION INTÉRIEUR sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La PROTECTION DE L'INTÉRIEUR DU VÉHICULE couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat."
+    },
+    {
+      "question": "Le programme garantit-il élimination complète des taches ?",
+      "options": ["Oui, garanti", "NON, programme NE GARANTIT PAS qu'une tache sera COMPLÈTEMENT éliminée", "Seulement neuves", "Selon le type tache"],
+      "correctAnswer": 1,
+      "explanation": "Le programme NE GARANTIT PAS qu'une déchirure, entaille ou brûlure pourra être réparée, ni qu'une tache sera COMPLÈTEMENT éliminée (meilleur effort)."
+    },
+    {
+      "question": "Comment expliquer absence garantie élimination complète taches à client exigeant ?",
+      "options": ["Promettre résultat", "Expliquer RÉALITÉ : taches = variables (type liquide, temps absorption, matériau siège). Programme couvre TENTATIVE nettoyage professionnel (meilleur effort), résultat dépend nature tache. Gestion attentes réalistes évite déception", "Garantir résultat", "Selon le nettoyeur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige gestion attentes : taches = variables complexes, programme couvre tentative nettoyage professionnel meilleur effort, résultat dépend nature tache, attentes réalistes évitent déception client."
+    },
+    {
+      "question": "Les dommages préexistants au capitonnage sièges sont-ils couverts ?",
+      "options": ["Oui, tous dommages", "NON, tout dommage PRÉEXISTANT capitonnage sièges au moment achat véhicule = EXCLU", "Selon l'âge véhicule", "Si non visible"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage PRÉEXISTANT au capitonnage des sièges au moment de l'achat du véhicule est EXCLU de la couverture protection intérieur."
+    },
+    {
+      "question": "Le remplacement complet du capitonnage est-il couvert ?",
+      "options": ["Oui, si nécessaire", "NON, remplacement ou restauration capitonnage = EXCLU (seulement RÉPARATION)", "Selon le coût", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Le remplacement ou la restauration du capitonnage est EXCLU. Le programme couvre SEULEMENT la RÉPARATION (pas le remplacement complet)."
+    },
+    {
+      "question": "Un client avec sièges cuir perforé BMW veut savoir si couvert. Que répondre ?",
+      "options": ["Oui, tous sièges", "OUI, sièges cuir BMW couverts : déchirures/brûlures/taches ACCIDENTELLES réparables. MAIS remplacement complet exclu, sièges doivent être ORIGINE (pas aftermarket), dommages préexistants exclus. Clarifier limites dès début", "Non, cuir exclu", "Selon le type cuir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté complète : sièges cuir BMW couverts (réparation accidentelle), MAIS remplacement exclu, sièges origine requis, préexistants exclus, clarification limites évite malentendu."
+    },
+    {
+      "question": "Comment valoriser protection intérieur illimitée à famille avec jeunes enfants ?",
+      "options": ["Minimiser", "Démontrer VALEUR : famille jeunes enfants = risques élevés (boissons renversées, nourriture, crayons, déchirures). Protection illimitée = tranquillité totale, réparations coûteuses (cuir 500$+) couvertes, préserve valeur revente véhicule. ROI majeur", "C'est facultatif", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI famille : enfants = risques élevés dommages, protection illimitée = tranquillité totale, réparations coûteuses couvertes, préserve valeur revente, ROI majeur profil famille."
+    },
+    {
+      "question": "Un collègue dit \"Protection intérieur couvre même vandalisme\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : protection intérieur couvre dommages ACCIDENTELS (utilisation normale), vandalisme = EXCLU (force majeure). Fausse promesse crée litiges. Correction transparence protège client déception + réputation équipe", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : protection couvre accidentel (utilisation normale), vandalisme = EXCLU (force majeure), fausse promesse = litiges, correction protège client déception + réputation."
+    },
+    {
+      "question": "Un client a siège tissu aftermarket (non origine). Couvert protection intérieur ?",
+      "options": ["Oui, tous sièges", "NON COUVERT : déchirure/entaille/brûlure/tache ne concernant PAS siège ORIGINE = EXCLU", "Selon le type", "Si déclaré"],
+      "correctAnswer": 1,
+      "explanation": "Toute réparation d'une déchirure, entaille, brûlure ou nettoyage de tache qui ne concerne PAS un siège D'ORIGINE est EXCLU de la couverture."
+    }
+  ]
+}
+

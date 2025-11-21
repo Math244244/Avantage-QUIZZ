@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 4,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le condenseur de climatisation est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 - Climatisation Plus+ couvre le condenseur, l'accumulateur, le déshydrateur et l'embrayage du compresseur."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AT ?",
+      "options": ["2 000$", "4 000$", "5 000$", "6 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AT est de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les supports de moteur sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 20", "Section 21"],
+      "correctAnswer": 3,
+      "explanation": "La section 21 - Motopropulseur Compréhensive couvre les supports de moteur et transmission, mais seulement lors d'un bris majeur."
+    },
+    {
+      "question": "Un client avec une Hyundai Tucson 2019 de 85 000 km veut la couverture complète. Quelle catégorie pour le programme AT PLUS ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 0,
+      "explanation": "Hyundai fait partie de la Catégorie A incluant Acura, Genesis, Honda, Infiniti, Kia, Lexus, Mitsubishi, Nissan, Scion, Suzuki et Toyota."
+    },
+    {
+      "question": "Combien de sections le programme AX-3 couvre-t-il ?",
+      "options": ["11 sections", "12 sections", "16 sections", "27 sections"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-3 couvre les sections 1 à 12 selon la description du programme."
+    },
+    {
+      "question": "Combien coûte l'option Diesel pour le programme AT PLUS ?",
+      "options": ["75$", "100$", "125$", "150$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Diesel coûte 150$ pour le programme AT PLUS. Si choisie, l'option Turbo doit être ajoutée obligatoirement."
+    },
+    {
+      "question": "Les capteurs de roues ABS sont couverts dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 15"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Freins couvre les capteurs de roues (ABS), l'accumulateur de pression et le système de servofrein."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AX-1 ?",
+      "options": ["8 ans", "10 ans", "12 ans", "15 ans"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-1 s'applique aux véhicules âgés de 12 ans et moins ayant 225 000 km et moins."
+    },
+    {
+      "question": "Le moteur du toit ouvrant est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 22", "Non couvert"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre le moteur du toit ouvrant et son interrupteur, mais le cadre et mécanisme sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment gérer un client frustré par une exclusion de pièce ?",
+      "options": ["Minimiser l'importance de l'exclusion", "Reconnaître sa frustration et expliquer les nombreuses pièces couvertes et options disponibles", "Blâmer l'Administrateur", "Offrir un rabais non autorisé"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'écouter le client, reconnaître ses préoccupations et rediriger vers les avantages (sections couvertes, options disponibles)."
+    },
+    {
+      "question": "Le programme AVE couvre combien de sections ?",
+      "options": ["12 sections", "16 sections", "18 sections", "27 sections"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE couvre les sections 1 à 18 du dépliant AVE selon la description du programme."
+    },
+    {
+      "question": "L'accumulateur de climatisation est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 - Climatisation Plus+ couvre l'accumulateur, le condenseur, le déshydrateur et l'embrayage du compresseur."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement de prime pour le programme AT PLUS ?",
+      "options": ["150$", "200$", "250$", "300$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Remboursement de prime coûte 300$ pour le programme AT PLUS et est disponible seulement pour les contrats de 36, 48 et 60 mois."
+    },
+    {
+      "question": "Les pannes et joints à l'huile du moteur sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 10", "Section 21", "Section 22"],
+      "correctAnswer": 2,
+      "explanation": "La section 21 - Motopropulseur Compréhensive couvre les pannes et joints à l'huile du moteur et de la transmission, sauf par dommages externes."
+    },
+    {
+      "question": "Quelle est la franchise du programme AP ?",
+      "options": ["0$", "100$", "125$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Le capteur de vilebrequin est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 12", "Section 18"],
+      "correctAnswer": 2,
+      "explanation": "La section 12 - Accessoires Essentiels couvre le capteur de vilebrequin et le capteur d'arbre à came."
+    },
+    {
+      "question": "Un client demande quel programme choisir entre AT et AT PLUS pour son Mazda CX-5 2019. Quel est l'argument décisif ?",
+      "options": ["AT est moins cher", "AT PLUS couvre 27 sections vs 16 pour AT avec Service routier + inclus", "Les deux sont identiques", "AT est plus populaire"],
+      "correctAnswer": 1,
+      "explanation": "AT PLUS offre 11 sections supplémentaires (sections 17-27), Service routier + inclus (0$) et couverture jusqu'à la valeur totale du véhicule."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AX-3 ?",
+      "options": ["1 500$", "2 000$", "3 000$", "5 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-3 a un montant maximum par réclamation de 3 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les interrupteurs des clignotants sont couverts dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre les interrupteurs des clignotants, des lève-glaces, des lumières et des sièges électriques."
+    },
+    {
+      "question": "Combien coûte l'option Turbo/Surcompresseur pour le programme AT PLUS ?",
+      "options": ["45$", "50$", "75$", "100$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Turbo/Surcompresseur coûte 75$ pour le programme AT PLUS selon les options disponibles."
+    },
+    {
+      "question": "Le programme AT est-il disponible pour un véhicule de 11 ans ?",
+      "options": ["Non, maximum 10 ans", "Oui, mais seulement pour 12, 24 ou 36 mois", "Oui, pour tous les termes", "Non, véhicule trop vieux"],
+      "correctAnswer": 1,
+      "explanation": "Si le véhicule a 11 ou 12 ans et 200 000 km et moins, le programme AT est disponible pour 12, 24 ou 36 mois seulement."
+    },
+    {
+      "question": "Le module de contrôle de la transmission (TCM) est couvert dans quelle section ?",
+      "options": ["Section 2", "Section 11", "Section 15", "Section 22"],
+      "correctAnswer": 3,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre le module de contrôle de la transmission (TCM) et le module ECM."
+    },
+    {
+      "question": "Un nouveau collègue vous demande conseil pour sa première vente de garantie. Comment l'aidez-vous ?",
+      "options": ["Lui dire de se débrouiller seul", "L'accompagner en expliquant les programmes, conditions et techniques d'argumentation", "Le critiquer pour son manque de connaissance", "Faire la vente à sa place"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage le mentorat et le partage d'expertise pour développer les compétences de l'équipe."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AT PLUS ?",
+      "options": ["100 000 km", "120 000 km", "140 000 km", "200 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS s'applique aux véhicules ayant 140 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Le déshydrateur de climatisation est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 - Climatisation Plus+ couvre le déshydrateur, le condenseur, l'accumulateur et l'embrayage du compresseur."
+    },
+    {
+      "question": "Combien coûte l'option Solde de couverture pour le programme AT PLUS ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Solde de couverture coûte 200$ pour le programme AT PLUS et couvre les composants 1 à 24 si non couverts par la garantie du fabricant."
+    },
+    {
+      "question": "Les embouts de biellette de direction sont couverts dans quelle section ?",
+      "options": ["Section 7", "Section 9", "Section 12", "Section 20"],
+      "correctAnswer": 3,
+      "explanation": "La section 20 - Suspension couvre les embouts de biellette de direction, les rotules et les bras de suspension."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AX-1 ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-1 a une limite de kilométrage de 20 000 km par année selon les détails financiers."
+    },
+    {
+      "question": "Les éléments des sièges chauffants sont couverts dans quelle section ?",
+      "options": ["Section 15", "Section 16", "Section 20", "Section 22"],
+      "correctAnswer": 3,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre les éléments et interrupteurs des sièges chauffants."
+    },
+    {
+      "question": "Un client vous demande de réduire le prix en échange d'espèces non déclarées. Que faites-vous ?",
+      "options": ["Accepter pour conclure la vente", "Refuser catégoriquement et expliquer les conséquences légales", "Demander à votre gérant", "Accepter avec discrétion"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle et la loi exigent de refuser toute transaction non déclarée. C'est illégal et contraire à l'éthique."
+    }
+  ]
+}
+

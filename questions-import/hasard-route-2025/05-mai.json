@@ -1,0 +1,188 @@
+{
+  "module": "hasard-route",
+  "month": 5,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelles sont les DEUX options pour FRANCHISE/REMPLACEMENT PARE-BRISE ?",
+      "options": ["Une seule option", "Option 1 : Remboursement franchise assurance principale OU Option 2 : Remboursement frais remplacement (si pas d'assurance pare-brise)", "Seulement franchise", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "DEUX options disponibles : Option 1 = Remboursement franchise si utilisation assurance principale, OU Option 2 = Remboursement frais remplacement si pas d'assurance pare-brise."
+    },
+    {
+      "question": "Quel est le remboursement TOTAL maximum franchises pare-brise (Option 1) ?",
+      "options": ["500$", "1 000$ remboursement total franchises pendant Durée contrat", "2 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Option 1 : Remboursement total des FRANCHISES jusqu'à 1 000$ pendant toute la Durée du contrat (limite cumulative)."
+    },
+    {
+      "question": "Quel est le remboursement TOTAL maximum frais remplacement (Option 2) ?",
+      "options": ["500$", "1 000$ remboursement maximum frais remplacement pendant Durée contrat", "2 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Option 2 : Remboursement maximum des FRAIS REMPLACEMENT jusqu'à 1 000$ pendant toute la Durée du contrat (limite cumulative)."
+    },
+    {
+      "question": "Combien d'occurrences franchise/remplacement pare-brise sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat (jusqu'à limite 1 000$ total)", "5 occurrences", "2 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "FRANCHISE/REMPLACEMENT PARE-BRISE couvre un nombre ILLIMITÉ d'occurrences pendant Durée contrat (jusqu'à atteindre limite cumulative 1 000$)."
+    },
+    {
+      "question": "Comment expliquer OPTION 1 vs OPTION 2 à un client ?",
+      "options": ["C'est compliqué", "Expliquer DISTINCTION : Option 1 = si ASSURANCE PRINCIPALE couvre pare-brise, programme rembourse FRANCHISE payée (ex: franchise 300$ = remboursement 300$). Option 2 = si AUCUNE assurance pare-brise, programme rembourse COÛT remplacement direct (max 1000$ cumulatif)", "Ignorer différence", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : Option 1 = assurance principale couvre + programme rembourse franchise payée, Option 2 = aucune assurance pare-brise + programme rembourse coût direct, distinction claire."
+    },
+    {
+      "question": "Le client peut-il utiliser les DEUX options (1 et 2) simultanément ?",
+      "options": ["Oui, selon besoin", "NON, une SEULE des options peut être appliquée à cette couverture (choix exclusif)", "Oui, 1000$ chacune", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Une SEULE des options (Option 1 OU Option 2) peut être appliquée à cette couverture. Le client doit choisir l'option appropriée selon sa situation (choix exclusif)."
+    },
+    {
+      "question": "Comment conseiller un client qui hésite entre Option 1 et Option 2 ?",
+      "options": ["Libre choix", "Analyser ASSURANCE PRINCIPALE client : si couverture pare-brise avec franchise (ex: 300$) = recommander OPTION 1 (remboursement franchise = coût zéro). Si AUCUNE couverture pare-brise = recommander OPTION 2 (remboursement direct coût). Optimiser bénéfices", "Option 2 toujours", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à analyser assurance principale : couverture pare-brise avec franchise = Option 1 optimale (coût zéro), aucune couverture = Option 2 optimale (remboursement direct), maximiser bénéfices client."
+    },
+    {
+      "question": "Que fait l'Administrateur si pare-brise EOE/FEO moins cher que OEM ?",
+      "options": ["OEM toujours", "Administrateur se réserve droit rembourser coût pare-brise/vitre selon prix pièces Équipement Origine Équivalent (EOE) OU Fabricants Équipement Origine (FEO)", "EOE toujours", "Selon le concessionnaire"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit de rembourser le coût du pare-brise ou vitre en fonction du prix des pièces EOE (Équipement Origine Équivalent) OU FEO (Fabricants Équipement Origine)."
+    },
+    {
+      "question": "Comment expliquer EOE/FEO à client exigeant pare-brise OEM strict ?",
+      "options": ["Garantir OEM", "Expliquer LOGIQUE : EOE/FEO = pièces QUALITÉ ÉQUIVALENTE OEM (mêmes normes sécurité/ajustement), coût inférieur. Programme optimise coûts (protection plus clients). Si client veut OEM strict = différence coût à sa charge. Transparence choix", "Céder", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : EOE/FEO = qualité équivalente OEM normes sécurité, coût inférieur, programme optimise (protection plus clients), OEM strict = différence coût client, transparence choix."
+    },
+    {
+      "question": "Un client a franchise assurance 250$ et remplacement coûte 800$. Quelle option ?",
+      "options": ["Option 2", "Recommander OPTION 1 : utiliser assurance principale (franchise 250$), programme rembourse 250$ = coût ZÉRO client. Option 2 (800$ direct) = utilise 800$/1000$ limite. Option 1 = optimal", "Les deux", "Selon préférence"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à optimiser : Option 1 = assurance paie 550$ (800-250), programme rembourse 250$ franchise = coût zéro client + économise 550$ limite 1000$. Option 1 optimal."
+    },
+    {
+      "question": "Que couvre REMPLACEMENT PHARES AVANT + FEUX ARRIÈRE + ANTIBROUILLARDS ?",
+      "options": ["Tous dommages lumières", "Réparation OU remplacement phares/feux/antibrouillards endommagés par DÉBRIS route projetés", "Seulement ampoules", "Tout inclus"],
+      "correctAnswer": 1,
+      "explanation": "La couverture couvre réparation OU remplacement des phares avant, feux arrière et/ou phares antibrouillard endommagés par DÉBRIS ROUTE PROJETÉS (pierres, bois, métal, plastique)."
+    },
+    {
+      "question": "Quel est le remboursement TOTAL maximum PHARES/FEUX/ANTIBROUILLARDS ?",
+      "options": ["500$", "1 250$ remboursement maximum pendant Durée contrat", "2 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour PHARES/FEUX/ANTIBROUILLARDS est jusqu'à 1 250$ pendant toute la Durée du contrat (limite cumulative)."
+    },
+    {
+      "question": "Combien d'occurrences phares/feux/antibrouillards sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat (jusqu'à limite 1 250$ total)", "5 occurrences", "2 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "REMPLACEMENT PHARES/FEUX/ANTIBROUILLARDS couvre un nombre ILLIMITÉ d'occurrences pendant Durée contrat (jusqu'à atteindre limite cumulative 1 250$)."
+    },
+    {
+      "question": "Les dommages de nature uniquement cosmétique aux phares sont-ils couverts ?",
+      "options": ["Oui, tous dommages", "NON, tout dommage de nature UNIQUEMENT COSMÉTIQUE = EXCLU (seulement dommages fonctionnels couverts)", "Selon la visibilité", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage de nature UNIQUEMENT COSMÉTIQUE (esthétique sans impact fonctionnalité) est EXCLU. Seulement les dommages fonctionnels (phare brisé/non-fonctionnel) sont couverts."
+    },
+    {
+      "question": "Comment expliquer exclusion dommages cosmétiques phares à client BMW ?",
+      "options": ["Couvrir quand même", "Expliquer DISTINCTION : cosmétique = jaunissement, opacité, éraflures (esthétique), phare FONCTIONNE. Programme couvre dommages FONCTIONNELS (phare brisé/non-fonctionnel débris route). Cosmétique = entretien/usure (exclu). Clarifier fonctionnel vs esthétique", "C'est injuste", "Selon le coût"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige distinction : cosmétique = jaunissement opacité esthétique (phare fonctionne), programme couvre fonctionnel (brisé/non-fonctionnel débris), cosmétique = entretien usure (exclu), clarté critères."
+    },
+    {
+      "question": "Les dommages phares causés par accident sont-ils couverts ?",
+      "options": ["Oui, tous dommages", "NON, dommages causés par intempéries, force majeure, ACCIDENT ou VANDALISME = EXCLUS", "Seulement petits accidents", "Selon l'assurance"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage causé par les intempéries, un cas de force majeure, un ACCIDENT ou un acte de VANDALISME est EXCLU de la couverture phares/feux/antibrouillards."
+    },
+    {
+      "question": "Comment valoriser couverture 1250$ phares à client Tesla (phares LED coûteux) ?",
+      "options": ["Minimiser", "Démontrer VALEUR Tesla : phares LED adaptatifs Tesla = 800$-1200$ CHAQUE phare (technologie avancée). Débris route (gravier autoroute) = risque réel. Limite 1250$ couvre 1 phare complet ou 2 partiels. Protection essentielle investissement Tesla", "C'est facultatif", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer valeur contexte : phares LED Tesla = 800$-1200$ chaque (technologie avancée), débris route risque réel, limite 1250$ = 1-2 phares, protection essentielle investissement."
+    },
+    {
+      "question": "Que couvre REMORQUAGE, LOCATION VÉHICULE OU TRANSPORT ALTERNATIF ?",
+      "options": ["Tous remorquages", "Remorquage vers atelier (si réparation couverte) + Location véhicule (>1 jour) + Transport alternatif (taxi/Uber >1 jour)", "Seulement remorquage", "Assistance routière complète"],
+      "correctAnswer": 1,
+      "explanation": "Trois services : 1) Remorquage vers atelier si réparation couverte, 2) Location véhicule si réparation >1 jour, 3) Transport alternatif (taxi/Uber) si réparation >1 jour."
+    },
+    {
+      "question": "Quel est le remboursement maximum pour remorquage ?",
+      "options": ["100$", "150$ par remorquage", "250$ par remorquage", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour REMORQUAGE est 150$ par remorquage (occurrences illimitées pendant Durée contrat)."
+    },
+    {
+      "question": "Quel est le remboursement maximum location véhicule par jour ?",
+      "options": ["50$", "100$ par jour location véhicule", "150$ par jour", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour LOCATION VÉHICULE est 100$ par jour (si réparation couverte nécessite véhicule reste atelier >1 jour)."
+    },
+    {
+      "question": "Quel est le remboursement maximum transport alternatif (taxi/Uber) par jour ?",
+      "options": ["50$", "60$ par jour transport alternatif (vers et depuis atelier)", "100$ par jour", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour TRANSPORT ALTERNATIF (taxi, Uber, Lyft) est 60$ par jour pour transport vers ET depuis atelier (dépose + reprise véhicule)."
+    },
+    {
+      "question": "Combien d'occurrences remorquage/location/transport sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "REMORQUAGE/LOCATION/TRANSPORT couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat (tant que liées réparations couvertes)."
+    },
+    {
+      "question": "Comment expliquer distinction location véhicule (100$/jour) vs transport alternatif (60$/jour) ?",
+      "options": ["C'est pareil", "Expliquer DISTINCTION : Location = client LOUE véhicule remplacement (plusieurs jours, 100$/jour). Transport alternatif = taxi/Uber SEULEMENT déposer et reprendre véhicule (2 trajets/jour, 60$ total). Selon besoin mobilité + durée réparation", "Ignorer différence", "Selon le choix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : Location = véhicule plusieurs jours (100$/jour), Transport alternatif = 2 trajets uniquement dépose+reprise (60$ total), selon besoin mobilité durée réparation."
+    },
+    {
+      "question": "Le remorquage pour réparation NON couverte est-il remboursé ?",
+      "options": ["Oui, tous remorquages", "NON, remorquage/location/transport PAS liés à réparation/remplacement COUVERT = EXCLUS", "Selon la raison", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Tout remorquage, location ou transport alternatif qui n'est PAS lié à une réparation ou remplacement COUVERT par le contrat = EXCLU."
+    },
+    {
+      "question": "Un client veut location véhicule pour réparation entretien normal (non couvert). Admissible ?",
+      "options": ["Oui, location couverte", "NON ADMISSIBLE : remorquage/location/transport pour maintenance, réparation ou remplacement NON COUVERT = EXCLU", "Selon le coût", "Essayer quand même"],
+      "correctAnswer": 1,
+      "explanation": "Tout remorquage, location ou transport alternatif pour toute maintenance, réparation ou remplacement NON COUVERT par le contrat = EXCLU (seulement réparations couvertes)."
+    },
+    {
+      "question": "Comment valoriser remorquage illimité 150$ à client région éloignée ?",
+      "options": ["Minimiser", "Démontrer VALEUR région éloignée : remorquage atelier = 2$-5$/km. Client 75 km de concessionnaire = 150$-375$ par remorquage. Limite 150$ couvre 30-75 km. Occurrences illimitées = tranquillité totale zones éloignées. ROI majeur", "C'est facultatif", "Selon la distance"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI contexte : remorquage 2$-5$/km, région éloignée 75 km = 150$-375$, limite 150$ = 30-75 km, illimité = tranquillité zones éloignées, ROI majeur."
+    },
+    {
+      "question": "Quelle est l'adresse de l'Administrateur du Programme (Protection Auto Shield Canada) ?",
+      "options": ["Montréal, QC", "1275 North Service Rd. W, Suite 605, Oakville, ON L6M 2W2", "Toronto, ON", "Terrebonne, QC"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur du Programme est Protection Auto Shield Canada, situé au 1275 North Service Rd. W, Suite 605, Oakville, ON L6M 2W2."
+    },
+    {
+      "question": "Quel est le numéro de téléphone du centre de réclamation ?",
+      "options": ["1-866-666-0181", "1-888-406-3002", "1-800-123-4567", "450-666-0181"],
+      "correctAnswer": 1,
+      "explanation": "Le centre de réclamation Protection Hasards Routiers peut être contacté au 1-888-406-3002 (ou par courriel claims@goautoshield.com)."
+    },
+    {
+      "question": "Comment présenter l'Administrateur Auto Shield à un client ?",
+      "options": ["Ignorer détails", "Expliquer PROFESSIONNALISME : Auto Shield Canada = administrateur spécialisé protection hasards routiers, bureau Oakville Ontario, réseau fournisseurs Canada/USA, centre réclamation 7j/7 (1-888-406-3002). Partenaire établi fiable soutien complet", "Minimiser importance", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser administrateur : Auto Shield = spécialisé hasards routiers, bureau Ontario, réseau Canada/USA, centre réclamation 7j/7 accessible, partenaire établi fiable soutien complet."
+    },
+    {
+      "question": "Un collègue dit \"Hasard de Route couvre tous frais réparation peu importe\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : Hasard de Route couvre 10 protections SPÉCIFIQUES (pneus, roues, pare-brise, clés, intérieur, bosses, peinture, phares, remorquage) liées HASARDS ROUTIERS. PAS tous frais réparation. Fausse promesse = litige. Correction protège intégrité", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : Hasard de Route = 10 protections spécifiques hasards routiers PAS tous frais réparation, fausse promesse = litige déception, correction protège client + intégrité équipe."
+    }
+  ]
+}
+

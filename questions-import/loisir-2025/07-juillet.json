@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 7,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le moteur de ventilateur de chauffage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 12 - Chauffage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Chauffage couvre moteur de ventilateur, noyau du radiateur de chauffage, actuateur de porte et interrupteur."
+    },
+    {
+      "question": "Les dommages dus aux liquides sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés liquides contamination/manque/mauvais type exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Dommages directs/indirects causés par liquides contaminés, manque de liquides ou mauvais type de liquide sont exclus (section 4.3)."
+    },
+    {
+      "question": "Le noyau du radiateur de chauffage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 12 - Chauffage", "Oui, section 13", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Chauffage couvre noyau du radiateur de chauffage, actuateur de porte, module de commande et robinet de chauffage."
+    },
+    {
+      "question": "Comment présenter l'option Remboursement partiel à un client fidèle ?",
+      "options": ["Pas utile", "Jusqu'à 1000$ si aucune réclamation + rachat garantie, récompense fidélité", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement partiel (300$) offre jusqu'à 1000$ si aucune réclamation et rachat garantie, excellent pour clients fidèles/réguliers."
+    },
+    {
+      "question": "L'actuateur de porte de chauffage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 12 - Chauffage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Chauffage couvre actuateur de porte de contrôle du mélange d'air, moteur de ventilateur et module de commande."
+    },
+    {
+      "question": "Un client demande si les dommages dus à surcharge sont couverts. Que répondez-vous ?",
+      "options": ["Oui, tous", "Non, dommages dus à surcharge/surbraquage/usage abusif/négligence exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects dus surcharge, surbraquage, usage abusif ou négligence sont exclus (section 4.4)."
+    },
+    {
+      "question": "Le robinet de chauffage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 12 - Chauffage", "Oui, section 13", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Chauffage couvre robinet de chauffage, noyau du radiateur, moteur de ventilateur et interrupteur de ventilateur."
+    },
+    {
+      "question": "Combien coûte l'option Turbo pour Scooters & Motocycles ?",
+      "options": ["50$", "100$", "150$", "200$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Turbo coûte 100$ pour Scooters & Motocycles (requise pour turbo, supercharger, ou injection nitro)."
+    },
+    {
+      "question": "Le module de commande de chauffage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 12 - Chauffage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Chauffage couvre module de commande, capteurs de température, actuateur de porte et interrupteur de ventilateur."
+    },
+    {
+      "question": "Un véhicule avec compteur kilométrique remplacé est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, sauf si déclaration écrite du kilométrage au moment du remplacement", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Véhicule avec compteur remplacé exclu sauf si déclaration écrite du kilométrage exact au moment du remplacement (section 9.2)."
+    },
+    {
+      "question": "Le radiateur du moteur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 13 - Refroidissement", "Oui, section 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Refroidissement couvre radiateur, bouchon de radiateur, ventilateur de refroidissement et pompe à eau."
+    },
+    {
+      "question": "Comment gérer un client qui conteste une exclusion légitime ?",
+      "options": ["Céder immédiatement", "Rester calme, montrer le contrat écrit (section spécifique), rediriger vers couvertures", "Être agressif", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de rester calme, référer au contrat écrit (section spécifique d'exclusion) et rediriger vers les 28 sections couvertes."
+    },
+    {
+      "question": "Le ventilateur de refroidissement est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 13 - Refroidissement", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Refroidissement couvre ventilateur de refroidissement, embrayage de ventilateur, moteur de ventilateur et interrupteur."
+    },
+    {
+      "question": "Les dommages dus à l'eau salée/sable sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés eau salée/sable/contamination exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages causés par eau salée, sable, produits chimiques ou toute contamination sont exclus (section 4.2)."
+    },
+    {
+      "question": "La pompe à eau du moteur est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 13 - Refroidissement", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Refroidissement couvre pompe à eau, radiateur, thermostat et vase d'expansion."
+    },
+    {
+      "question": "Un client demande si les frais de déplacement du mécanicien sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, frais de déplacement/remorquage vers centre non autorisé exclus", "Oui, partiellement", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Frais de déplacement et remorquage vers un centre de réparation non autorisé sont exclus (section 4.6)."
+    },
+    {
+      "question": "Le thermostat du moteur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 13 - Refroidissement", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Refroidissement couvre thermostat, boîtier de thermostat, pompe à eau et capteur de température de liquide."
+    },
+    {
+      "question": "Combien coûte l'option Turbo pour VTT/Côte-à-Côte/Motoneiges ?",
+      "options": ["50$", "100$", "150$", "200$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Turbo coûte 100$ pour VTT, Côte-à-Côte & Motoneiges (requise pour turbo, supercharger ou injection nitro)."
+    },
+    {
+      "question": "Le vase d'expansion est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 13 - Refroidissement", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Refroidissement couvre vase d'expansion, radiateur, bouchon de radiateur et tous les capteurs de température."
+    },
+    {
+      "question": "Un véhicule avec MSRP de 160 000$ CAD est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule MSRP supérieur à 150 000$ CAD exclu", "Oui, avec supplément 500$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule dont le MSRP est supérieur à 150 000$ CAD est exclu du programme selon la section 9.5 - Exclusions de véhicules."
+    },
+    {
+      "question": "Le capteur de température de liquide de refroidissement est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 13 - Refroidissement", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Refroidissement couvre capteur de température de liquide de refroidissement, thermostat et vase d'expansion."
+    },
+    {
+      "question": "Comment expliquer la différence entre Centre Autorisé et non-autorisé ?",
+      "options": ["Aucune différence", "Centre Autorisé: franchise 0$ et couverture garantie. Non-autorisé: franchise appliquée (100$ ou 200$)", "C'est obligatoire", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Centre Autorisé offre franchise 0$ et respect des standards. Non-autorisé applique franchise (100$/200$ selon catégorie) selon section 3."
+    },
+    {
+      "question": "L'alternateur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre alternateur, régulateur de tension, démarreur, solénoïde de démarreur et redresseur."
+    },
+    {
+      "question": "Un client demande annulation car il a vendu véhicule mais n'a pas l'option Protection garantie. Peut-il ?",
+      "options": ["Oui, toujours", "Non, après 10 jours annulation possible uniquement perte totale/vol (sauf Protection garantie)", "Oui, avec frais", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Après 10 jours, annulation possible uniquement si perte totale/vol. Vente ne permet pas annulation SAUF si Protection garantie achetée (section 10.2.b et option 27)."
+    },
+    {
+      "question": "Le démarreur électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre démarreur, solénoïde de démarreur, relais de démarreur et balais de démarreur."
+    },
+    {
+      "question": "Les dommages dus à utilisation de carburant/huile inadéquat sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus utilisation carburant/huile/additifs inappropriés exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects dus utilisation carburant, huile ou additifs inappropriés/non recommandés sont exclus (section 4.3)."
+    },
+    {
+      "question": "Le régulateur de tension est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 13", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre régulateur de tension, alternateur, redresseur et relais de charge."
+    },
+    {
+      "question": "Un client satisfait partage une critique positive en ligne. Comment réagissez-vous ?",
+      "options": ["Ignorer", "Remercier chaleureusement, partager sur réseaux sociaux, lui offrir carte référence", "Demander argent", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage à cultiver les témoignages positifs en remerciant, partageant et facilitant les références futures."
+    },
+    {
+      "question": "Le solénoïde de démarreur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre solénoïde de démarreur, relais de démarreur, démarreur et balais de démarreur."
+    },
+    {
+      "question": "Combien coûte l'option Turbo pour Motomarines & Bateaux ?",
+      "options": ["50$", "100$", "150$", "200$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Turbo coûte 100$ pour Motomarines & Bateaux (requise pour turbo, supercharger ou injection nitro)."
+    }
+  ]
+}
+

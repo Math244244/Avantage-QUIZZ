@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 8,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quel numéro doit-on composer pour aviser l'Administrateur d'une panne ?",
+      "options": ["1-800-666-0181", "1-866-666-0181", "1-888-666-0181", "1-877-666-0181"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire doit composer le 1-866-666-0181 pour aviser l'Administrateur d'une panne selon les procédures de réclamation (section 7)."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AVE ?",
+      "options": ["5 000$", "10 000$", "Valeur totale du véhicule", "Variable selon véhicule"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AVE est la valeur totale du véhicule selon les détails financiers."
+    },
+    {
+      "question": "Le chargeur induction pour portable est couvert dans quelle section ?",
+      "options": ["Section 15", "Section 16", "Section 22", "Section 23"],
+      "correctAnswer": 2,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre le chargeur induction pour portable, les prises USB et le bouton de démarrage moteur."
+    },
+    {
+      "question": "Un client avec un Lexus RX 2019 de 100 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Lexus ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 0,
+      "explanation": "Lexus fait partie de la Catégorie A incluant Acura, Genesis, Honda, Hyundai, Infiniti, Kia, Mitsubishi, Nissan, Scion, Suzuki et Toyota."
+    },
+    {
+      "question": "Quelle est la différence principale entre les programmes AX-1 et AX-3 ?",
+      "options": ["AX-3 couvre 1 section supplémentaire et offre des montants supérieurs", "AX-3 couvre moins de sections", "AX-1 est plus cher", "Aucune différence"],
+      "correctAnswer": 0,
+      "explanation": "AX-3 couvre les sections 1-12 (vs 1-11 pour AX-1), montant total 6 000$ (vs 2 000$) et maximum par réclamation 3 000$ (vs 1 000$)."
+    },
+    {
+      "question": "Combien coûte l'option 0$ de Franchise pour le programme AVE ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 0$ de Franchise coûte 100$ pour le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "Le bouton de démarrage moteur est couvert dans quelle section ?",
+      "options": ["Section 11", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 3,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre le bouton de démarrage moteur et le chargeur induction pour portable."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AX-1 ?",
+      "options": ["1 terme", "2 termes", "3 termes", "5 termes"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-1 est disponible pour 3 termes : 12 mois, 24 mois ou 36 mois selon la durée du contrat."
+    },
+    {
+      "question": "Les socles d'alimentation 12v et 115v sont couverts dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 22", "Non couverts"],
+      "correctAnswer": 2,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre les socles d'alimentation 12v et 115v ainsi que les prises USB."
+    },
+    {
+      "question": "Comment présenter l'option 2 x Réclamation à un client inquiet des coûts de réparation élevés ?",
+      "options": ["Ce n'est pas utile", "Elle double le montant maximum par visite (ex: 6 000$ au lieu de 3 000$ pour AX-3)", "C'est trop cher", "Elle est automatique"],
+      "correctAnswer": 1,
+      "explanation": "L'option 2 x Réclamation offre deux fois le maximum de réparation du programme par visite, idéal pour les réparations majeures potentielles."
+    },
+    {
+      "question": "Le programme AP est-il admissible pour un véhicule de 14 ans ?",
+      "options": ["Non, trop vieux", "Oui, le programme AP couvre les véhicules de 13 à 20 ans", "Non, maximum 12 ans", "Oui, avec exception"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP s'applique aux véhicules âgés de 13 à 20 ans ayant 280 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "La soupape PCV (ventilation positive du carter) est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 24"],
+      "correctAnswer": 3,
+      "explanation": "La section 24 - Système d'émissions couvre la soupape PCV, la soupape EGR, les catalyseurs et les capteurs d'oxygène."
+    },
+    {
+      "question": "Quelle est la condition pour l'option Remboursement de prime ?",
+      "options": ["Disponible pour tous les contrats", "Disponible seulement pour les contrats de 36, 48 et 60 mois", "Disponible seulement pour 12 mois", "Automatique"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement de prime est disponible seulement pour les contrats de 36, 48 et 60 mois (section 3 - Options supplémentaires)."
+    },
+    {
+      "question": "L'interrupteur du dégivreur arrière est-il couvert ?",
+      "options": ["Oui, section 15", "Non, exclu", "Oui, section 16", "Oui, section 19"],
+      "correctAnswer": 1,
+      "explanation": "L'interrupteur du dégivreur arrière fait partie des pièces supplémentaires exclues selon la section 4.5 - Exclusions."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AX-2 ?",
+      "options": ["8 ans", "10 ans", "12 ans", "15 ans"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-2 s'applique aux véhicules âgés de 12 ans et moins ayant 225 000 km et moins."
+    },
+    {
+      "question": "Les câbles de freins sont-ils couverts ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclus", "Oui, section 20"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Freins couvre les câbles de freins et les capteurs de roues (ABS), mais le dispositif de frein à main et câble sont exclus (section 4.3)."
+    },
+    {
+      "question": "Un client demande s'il peut payer la garantie en plusieurs versements sans intérêt. Comment répondez-vous ?",
+      "options": ["Refuser immédiatement", "Le référer au service financier approprié pour explorer les options", "Accepter sans vérifier", "Lui dire que c'est impossible"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à diriger le client vers le service financier qui peut offrir des solutions de paiement appropriées et autorisées."
+    },
+    {
+      "question": "Quel kilométrage maximal pour l'option Kilométrage illimité ?",
+      "options": ["Aucune condition", "140 000 km au moment de l'achat", "200 000 km au moment de l'achat", "225 000 km au moment de l'achat"],
+      "correctAnswer": 1,
+      "explanation": "L'option Kilométrage illimité nécessite un véhicule de 8 ans et moins et 140 000 km et moins au moment de l'achat (section 3 - Options)."
+    },
+    {
+      "question": "L'axe de secteur denté de direction est couvert dans quelle section ?",
+      "options": ["Section 9", "Section 12", "Section 13", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre l'axe de secteur denté ainsi que la colonne de direction et les axes principaux."
+    },
+    {
+      "question": "Combien coûte l'option Quincaillerie pour le programme AVE ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Quincaillerie coûte 100$ pour le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "L'option Solde de couverture est-elle disponible pour le programme AX-1 ?",
+      "options": ["Oui, coûte 100$", "Oui, coûte 200$", "Non, pas disponible", "Oui, incluse"],
+      "correctAnswer": 2,
+      "explanation": "L'option Solde de couverture n'est pas listée dans les options disponibles pour le programme AX-1. Elle est disponible pour AT PLUS et AVE."
+    },
+    {
+      "question": "Le compensateur de freinage est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Freins couvre le compensateur de freinage, l'accumulateur de pression et le boîtier de soupapes."
+    },
+    {
+      "question": "Un collègue fait une erreur qui pourrait coûter cher à l'entreprise. Que faites-vous ?",
+      "options": ["L'ignorer", "En informer discrètement votre supérieur pour correction", "Le ridiculiser devant les clients", "Utiliser ça contre lui"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme et la loyauté envers l'entreprise exigent de signaler les erreurs importantes discrètement pour permettre la correction."
+    },
+    {
+      "question": "Combien de jours maximums pour le remboursement d'hébergement ?",
+      "options": ["3 jours", "4 jours", "5 jours", "7 jours"],
+      "correctAnswer": 1,
+      "explanation": "La section 27 - Hébergement accorde un remboursement jusqu'à 4 jours maximum pour la durée du programme si immobilisé à plus de 300 km."
+    },
+    {
+      "question": "L'option Suspension + couvre-t-elle les ressorts conventionnels ?",
+      "options": ["Oui, tous les ressorts", "Non, seulement systèmes adaptatifs, actifs, cinétiques, double A ou pneumatiques", "Oui, avec supplément", "Non, aucun ressort"],
+      "correctAnswer": 1,
+      "explanation": "L'option Suspension + couvre spécifiquement les systèmes adaptatifs, actifs, cinétiques, double A ou pneumatiques (section 3 - Options)."
+    },
+    {
+      "question": "Le boîtier de soupapes de freins est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Freins couvre le boîtier de soupapes, la pompe hydraulique et l'accumulateur de pression des freins."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour l'option Remboursement de prime ?",
+      "options": ["1 000$", "1 500$", "2 000$", "2 500$"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement ne dépassera pas le montant, avant taxes, de 2 000$ CAD selon la section 3 - Option Remboursement de prime."
+    },
+    {
+      "question": "Les plaquettes de freins sont-elles couvertes ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les plaquettes de freins, disques, tambours et sabots font partie de l'entretien et sont exclus selon la section 4.2 - Exclusions de pièces."
+    },
+    {
+      "question": "Un client demande une réduction de prix en échange d'une bonne évaluation en ligne. Comment réagissez-vous ?",
+      "options": ["Accepter l'échange", "Refuser poliment et expliquer que la qualité du service justifie le prix", "Offrir un rabais important", "Accepter si c'est discret"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de maintenir les prix justes et de ne pas conditionner les évaluations à des avantages financiers."
+    },
+    {
+      "question": "La pompe hydraulique de freins est couverte dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Freins couvre la pompe hydraulique, le maître-cylindre et le système de servofrein."
+    }
+  ]
+}
+

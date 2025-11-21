@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 3,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Les plaquettes et disques de frein sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, plaquette de freins, disques, tambours et sabots exclus (pièces d'usure)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La plaquette de freins, disques de freins, les tambours et sabots de freins sont exclus car pièces d'usure (section 4.2)."
+    },
+    {
+      "question": "Combien coûte l'option Aucune limite par réclamation ?",
+      "options": ["250$", "350$", "400$", "500$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Aucune limite par réclamation coûte 500$ et élimine la limitation de 10 000$ par visite jusqu'au montant cumulatif 20 000$ (section 3)."
+    },
+    {
+      "question": "Les bougies de préchauffage et d'allumage sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, bougies de préchauffage et d'allumage, tringlerie, gicleur exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les bougies de préchauffage et d'allumage, le tringlerie, gicleur et les balais d'essuie-glace sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment présenter l'option Aucune limite par réclamation à un client avec équipement haut de gamme ?",
+      "options": ["Pas nécessaire", "500$ pour éliminer limite 10k$/visite (jusqu'à 20k$ cumulatif), protection maximale équipement haut de gamme", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (500$) élimine la limite par visite, excellente protection pour équipements haut de gamme."
+    },
+    {
+      "question": "Les ampoules, ensembles de phares et capteurs adaptatifs sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, ampoules, ensemble des phares, capteurs et bras adaptatifs de positionnement exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces suivantes pour les systèmes d'éclairage incluant ampoules, ensemble des phares, capteurs et bras adaptatifs sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un tracteur de 9 ans avec 4 800 heures est-il admissible à la Tarification B ?",
+      "options": ["Non, trop vieux", "Oui, Tarification B accepte ≤10 ans et <5 000 heures", "Seulement avec option", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B accepte véhicules de 10 ans et moins avec moins de 5 000 heures. Un tracteur de 9 ans/4 800 heures est admissible."
+    },
+    {
+      "question": "Les batteries, câbles et câblage sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, batteries, câbles et câblage, fusibles et boite de fusible exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant batteries, les câbles et câblage, les fusibles et boite de fusible sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment expliquer les 5 composants couverts à un client ?",
+      "options": ["Seulement moteur", "5 composants: 1-Moteur complet, 2-Groupe motopropulseur, 3-Direction/freinage, 4-Hydrauliques, 5-Électricité/climatisation", "3 composants", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les 5 composants couverts avec leurs pièces spécifiques détaillées (section 2)."
+    },
+    {
+      "question": "Le panneau de tableau de bord est-il couvert ?",
+      "options": ["Oui, toujours", "Non, panneau de tableau de bord exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le panneau de tableau de bord sont exclus (section 4.2)."
+    },
+    {
+      "question": "Les dommages dus à un manque d'entretien sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus accident, collision, mauvaise utilisation, abus ou manque entretien exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à accident, collision, mauvaise utilisation, abus, hasards de la route ou manque d'entretien est exclue (section 5.4)."
+    },
+    {
+      "question": "L'unité de commande électronique (BCM) et les systèmes qu'il contrôle sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, unité de commande électronique (BCM) et systèmes non mentionnés qu'il contrôle exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant l'unité de commande électronique (BCM) et les systèmes non mentionnés qu'il contrôle sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment gérer un client qui a ignoré les signaux d'avertissement et endommagé le moteur ?",
+      "options": ["Rembourser", "Expliquer poliment exclusion (section 5.5): non-respect signaux avertissement qui cause dommages exclu", "Céder", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que non-respect des signaux d'avertissement qui cause dommages est exclu (section 5.5)."
+    },
+    {
+      "question": "Les antennes, enceintes et haut-parleurs sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, antennes, enceintes / haut-parleurs, barillet d'ignition exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant les antennes, enceintes / haut-parleurs, barillet d'ignition sont exclus (section 4.2)."
+    },
+    {
+      "question": "Quelles sont les 5 options disponibles pour le programme ATC-AU ?",
+      "options": ["3 options", "5 options: Remboursement vérification 150$, Pas franchise 250$, 2x heures 250$, HP Limitation 250$, Aucune limite 500$", "2 options", "7 options"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-AU offre 5 options : Remboursement vérification, Pas de franchise, 2x allocation heures, HP Limitation, Aucune limite par réclamation."
+    },
+    {
+      "question": "Les écrous, bouchons, boulons, tubes et tubulures (non mentionnés) sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, écrous, bouchons, boulons, tubes, tubulures, tuyauterie et boyaux (non mentionnés) exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants incluant écrous, bouchons, boulons, tubes, tubulures, tuyauterie et boyaux (non mentionnées) sont exclus (section 4.2)."
+    },
+    {
+      "question": "Quelles sont les 4 options disponibles pour le programme ATC-CE ?",
+      "options": ["2 options", "4 options: Remboursement vérification 150$, Pas franchise 250$, 2x heures 250$, Aucune limite 500$", "5 options", "3 options"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-CE offre 4 options : Remboursement vérification, Pas de franchise, 2x allocation heures, Aucune limite par réclamation (pas HP Limitation)."
+    },
+    {
+      "question": "Le volant est-il couvert ?",
+      "options": ["Oui, toujours", "Non, volant exclu (pièces du cadre, carrosserie)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, la carrosserie et du véhicule incluant le volant, les miroirs, les fenêtres sont exclus (section 4.3)."
+    },
+    {
+      "question": "Comment expliquer pourquoi HP Limitation n'est pas disponible pour ATC-CE ?",
+      "options": ["C'est injuste", "Expliquer: ATC-CE pour construction <250 HP (limite fixe), HP Limitation réservée ATC-AU agricole (besoin tracteurs puissants)", "C'est moins bon", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que ATC-CE est adapté à construction <250 HP (limite appropriée), HP Limitation réservée à usage agricole (tracteurs puissants)."
+    },
+    {
+      "question": "Les sièges et châssis des sièges sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, sièges et châssis des sièges exclus (pièces du cadre, carrosserie)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, la carrosserie et du véhicule incluant les sièges et châssis des sièges sont exclus (section 4.3)."
+    },
+    {
+      "question": "Un tracteur agricole de 5 ans exactement avec 2 500 heures exactement est-il admissible à la Tarification A ?",
+      "options": ["Non, limite dépassée", "Oui, Tarification A accepte 5 ans ET MOINS avec MOINS de 2 500 heures (2 500h exclu)", "Oui, admissible", "Tarification B"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A exige véhicules de 5 ans et moins avec MOINS de 2 500 heures. À exactement 2 500 heures, le véhicule n'est plus admissible à Tarification A."
+    },
+    {
+      "question": "Les pneus et valves de pneus sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, pneus et valves de pneus, roues, jantes et enjoliveurs exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, carrosserie incluant pneus et valves de pneus, roues, jantes et l'enjoliveurs sont exclus (section 4.3)."
+    },
+    {
+      "question": "Comment gérer un client qui compare les prix entre ATC-AU et ATC-CE ?",
+      "options": ["Vendre le plus cher", "Expliquer que tarifs identiques (même limites 10k$/20k$), différence = usage/admissibilité/options (HP Limitation ATC-AU)", "C'est pareil", "Négocier"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que tarifs identiques, différence = type d'usage (agricole vs construction), admissibilité et options (HP Limitation pour ATC-AU)."
+    },
+    {
+      "question": "Les chenilles, pièces attachées et accessoires sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, chenilles, pièces attachées et accessoires (godets, dents, attelages, lames, marteaux) exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces du cadre, carrosserie incluant chenilles, pièces attachées et accessoires (y compris outils engageant le sol comme godets, dents, attelages, lames, marteaux) sont exclus (section 4.3)."
+    },
+    {
+      "question": "Un tracteur de 10 ans exactement avec 5 000 heures exactement est-il admissible à la Tarification B ?",
+      "options": ["Non, limite dépassée", "Oui, Tarification B accepte 10 ans ET MOINS avec MOINS de 5 000 heures (5 000h exclu)", "Oui, admissible", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B exige véhicules de 10 ans et moins avec MOINS de 5 000 heures. À exactement 5 000 heures, le véhicule n'est plus admissible à Tarification B."
+    },
+    {
+      "question": "Les adhésifs, moulages et chrome sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, adhésifs, moulages, chrome, garnitures, ornementations exclus (pièces esthétiques)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les pièces esthétiques ou cosmétiques incluant adhésifs, moulages, chrome, garnitures, ornementations, rembourrages sont exclus (section 4.4)."
+    },
+    {
+      "question": "Comment expliquer les limites d'heures d'utilisation à un client ?",
+      "options": ["Pas de limite", "Expliquer clairement: Tarif A <2 500h, Tarif B <5 000h. Option 2x heures (250$) double l'allocation par année", "Illimité", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les limites d'heures (Tarif A/B) et l'option 2x allocation (250$) pour usage intensif."
+    },
+    {
+      "question": "Le peinture et les panneaux sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, peinture, panneaux, caoutchouc ou revêtement de caoutchouc, tapis exclus (pièces esthétiques)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les pièces esthétiques ou cosmétiques incluant le peinture, les panneaux, caoutchouc ou revêtement de caoutchouc, tapis sont exclus (section 4.4)."
+    },
+    {
+      "question": "Quelle est la valeur totale maximum de toutes les options ATC-AU ?",
+      "options": ["900$", "1150$ (Remboursement 150$ + Pas franchise 250$ + 2x heures 250$ + HP Limitation 250$ + Aucune limite 500$)", "1400$", "1600$"],
+      "correctAnswer": 1,
+      "explanation": "Le total maximum des 5 options ATC-AU : 150$ + 250$ + 250$ + 250$ + 500$ = 1400$ CAD."
+    },
+    {
+      "question": "Le système d'embrayage manuel et double embrayage sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, système d'embrayage manuel et double embrayage (disque, plaque pression, volant inertie) exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système d'embrayage manuel et ou double embrayage (y compris le disque, la plaque de pression, le volant d'inertie) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un collègue recommande de minimiser les exclusions lors de la vente. Comment réagissez-vous ?",
+      "options": ["Suivre le conseil", "Refuser, expliquer importance de transparence (section 1: Exclusions définies), protéger client et réputation", "Ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser, expliquer l'importance de la transparence (Exclusions clairement définies section 1) pour protéger client et réputation."
+    }
+  ]
+}
+

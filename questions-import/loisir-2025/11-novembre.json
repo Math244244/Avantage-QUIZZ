@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le remboursement d'hébergement couvre combien par jour ?",
+      "options": ["50$ par jour", "75$ par jour", "100$ par jour", "150$ par jour"],
+      "correctAnswer": 2,
+      "explanation": "La section 24 rembourse 100$ CAD par jour pour hébergement si le propriétaire se trouve à plus de 300 km de son domicile."
+    },
+    {
+      "question": "Un client demande si les pneus sont couverts. Que répondez-vous ?",
+      "options": ["Oui, tous", "Non, pneus/chenilles/patins/accessoires exclus (pièces d'usure)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Pneus, chenilles, patins, chaussons et tout accessoire sont exclus car considérés pièces d'usure normales (section 4.8 et 4.10)."
+    },
+    {
+      "question": "Quelle est la distance minimale du domicile pour l'hébergement ?",
+      "options": ["100 km", "200 km", "300 km", "500 km"],
+      "correctAnswer": 2,
+      "explanation": "La section 24 exige que le propriétaire se trouve à plus de 300 km de son adresse indiquée au contrat pour être admissible."
+    },
+    {
+      "question": "Comment présenter l'option Maximum jusqu'à la valeur marchande à un client avec véhicule récent ?",
+      "options": ["Pas utile", "Remplace limite 10 000$/réclamation par valeur marchande, protection maximale véhicule neuf/récent", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "L'option Maximum jusqu'à la valeur marchande (400$-500$) remplace la limite 10 000$/réclamation par valeur marchande, excellente pour véhicules neufs/récents."
+    },
+    {
+      "question": "Combien de jours maximum pour l'hébergement ?",
+      "options": ["2 jours", "3 jours", "4 jours", "5 jours"],
+      "correctAnswer": 2,
+      "explanation": "La section 24 limite le remboursement d'hébergement à un maximum de 4 jours pour la durée du programme."
+    },
+    {
+      "question": "Un véhicule sauvage est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule titre sauvage/récupération/reconstruction exclu", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule avec titre sauvage, de récupération ou de reconstruction est exclu du programme (section 9.7)."
+    },
+    {
+      "question": "Quel est le montant maximum total pour hébergement ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement d'hébergement est de 100$/jour × 4 jours max = 400$ maximum pour la durée du programme (section 24)."
+    },
+    {
+      "question": "Les dommages dus à vandalisme sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus vandalisme/vol/dommages intentionnels exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par vandalisme, vol ou dommages intentionnels sont exclus (section 4.2)."
+    },
+    {
+      "question": "Les conditions pour l'hébergement incluent-elles des restrictions ?",
+      "options": ["Aucune restriction", "Oui, doit être lié à pièce couverte, réclamation autorisée et >300 km du domicile", "Illimité", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "La section 24 exige : lié à pièce couverte, réclamation autorisée, propriétaire >300 km de son adresse, et max 4 jours."
+    },
+    {
+      "question": "Comment gérer un client qui refuse de suivre le processus d'autorisation ?",
+      "options": ["Accepter", "Expliquer poliment obligation autorisation AVANT travaux, sinon aucun remboursement (section 4.13)", "Mentir", "Forcer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que numéro d'autorisation est OBLIGATOIRE AVANT travaux, sinon aucun remboursement possible (section 4.13)."
+    },
+    {
+      "question": "Quelle option couvre les systèmes de suspension adaptatifs/actifs/pneumatiques ?",
+      "options": ["Option Turbo", "Option Suspension A+ (300$)", "Option Haut performance", "Option Maximum"],
+      "correctAnswer": 1,
+      "explanation": "L'option No 25 - Suspension A+ (300$) couvre spécifiquement les systèmes adaptatifs, actifs ou de suspension pneumatique installés en usine."
+    },
+    {
+      "question": "Un client demande garantie pour VTT 900cc. Quelle option est nécessaire ?",
+      "options": ["Aucune", "Option Turbo 100$", "Option Haut performance 200$ (801cc à 1200cc)", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "La base couvre jusqu'à 800cc/30kW. L'option Haut performance (200$) est REQUISE pour moteurs de 801cc à 1200cc pour VTT/Côte-à-Côte/Motoneiges."
+    },
+    {
+      "question": "L'option Suspension A+ couvre-t-elle les ressorts conventionnels ?",
+      "options": ["Oui, tous", "Non, seulement systèmes adaptatifs/actifs/pneumatiques installés en usine", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option No 25 - Suspension A+ couvre UNIQUEMENT les systèmes adaptatifs, actifs ou pneumatiques installés en usine, pas les ressorts conventionnels."
+    },
+    {
+      "question": "Les dommages dus à grêle sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés par grêle exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par grêle, collision, accidents ou actes de Dieu sont exclus (section 4.2)."
+    },
+    {
+      "question": "Combien coûte l'option Suspension A+ ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 25 - Suspension A+ coûte 300$ et couvre systèmes adaptatifs/actifs/pneumatiques installés en usine."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien recommandé fabricant à un client négligent ?",
+      "options": ["Ce n'est pas important", "Obligatoire, Documentation vérifiable exigible, Administrateur peut refuser réclamation sans elle", "Optionnel", "Seulement véhicules neufs"],
+      "correctAnswer": 1,
+      "explanation": "Entretien recommandé fabricant OBLIGATOIRE. Documentation vérifiable peut être demandée à tout moment. Non-respect = refus réclamation (section 5.5 et 5.3)."
+    },
+    {
+      "question": "Quelle option est requise pour véhicule avec turbo/supercharger/nitro ?",
+      "options": ["Option Haut performance", "Option Turbo (100$)", "Option Suspension A+", "Option Maximum"],
+      "correctAnswer": 1,
+      "explanation": "L'option No 26 - Turbo (100$) est REQUISE pour tout véhicule équipé de turbo, supercharger ou injection nitro (section 26)."
+    },
+    {
+      "question": "Un client demande si l'entretien de routine est couvert. Que répondez-vous ?",
+      "options": ["Oui, tout", "Non, entretien routine/préventif/changement huile/filtres/bougies exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout entretien de routine/préventif, changement huile, filtres, bougies, courroies d'entretien, nettoyage est exclu (section 4.1)."
+    },
+    {
+      "question": "Combien coûte l'option Turbo ?",
+      "options": ["50$", "100$", "150$", "200$"],
+      "correctAnswer": 1,
+      "explanation": "L'option No 26 - Turbo coûte 100$ et est requise pour véhicules équipés de turbo, supercharger ou injection nitro."
+    },
+    {
+      "question": "Un véhicule avec compteur kilométrique trafiqué est-il admissible ?",
+      "options": ["Oui, si déclaré", "Non, véhicules avec compteur trafiqué/non-fonctionnel exclus", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Véhicule sans compteur fonctionnel ou trafiqué est exclu. Exception si déclaration écrite du kilométrage au moment du remplacement (section 9.2)."
+    },
+    {
+      "question": "L'option Turbo couvre-t-elle l'injection nitro ?",
+      "options": ["Non, seulement turbo", "Oui, couvre turbo, supercharger ET injection nitro", "Non, option séparée", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option No 26 - Turbo (100$) couvre turbo, supercharger ET injection nitro selon la section 26."
+    },
+    {
+      "question": "Comment gérer un client qui veut modifier conditions du contrat ?",
+      "options": ["Accepter verbalement", "Expliquer que contrat écrit prime sur toute entente verbale, aucune modification possible", "Promettre", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que le contrat écrit constitue l'intégralité de l'entente et prime sur toute entente verbale (section 11.1)."
+    },
+    {
+      "question": "Quelle option permet annulation/crédit en cas de perte totale/vol/vente ?",
+      "options": ["Option Turbo", "Option Suspension A+", "Option Protection de garantie (300$)", "Option Remboursement"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 27 - Protection de garantie (300$) permet annulation et crédit jusqu'à 2000$ en cas de perte totale/vol/vente."
+    },
+    {
+      "question": "Un client demande si les fluides sont couverts. Que répondez-vous ?",
+      "options": ["Oui, tous", "Non, liquides/huiles/fluides/réfrigérant exclus sauf lors d'un bris majeur", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les liquides, huiles, fluides et réfrigérant sont exclus sauf lors d'un bris majeur autorisé (section 4.1)."
+    },
+    {
+      "question": "L'option Protection de garantie couvre combien en crédit ?",
+      "options": ["1000$", "1500$", "Jusqu'à 2000$ (750$ franchise + 1250$ nouvelle garantie)", "2500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Protection de garantie offre crédit jusqu'à 750$ (franchise assureur) + crédit max 1250$ dans la nouvelle garantie = 2000$ total."
+    },
+    {
+      "question": "Les dommages dus à feu sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés par feu exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par feu, collision, accidents ou actes de Dieu sont exclus (section 4.2)."
+    },
+    {
+      "question": "Combien coûte l'option Protection de garantie ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 27 - Protection de garantie coûte 300$ et offre crédit jusqu'à 2000$ en cas de perte totale/vol/vente."
+    },
+    {
+      "question": "Comment expliquer la valeur de l'option Protection de garantie à un client hésitant ?",
+      "options": ["Pas utile", "300$ pour protection jusqu'à 2000$, flexibilité totale (perte totale/vol/vente), ROI excellent", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI : 300$ investis = jusqu'à 2000$ crédit, flexibilité totale (perte totale/vol/vente), sécurité financière."
+    },
+    {
+      "question": "Un client demande garantie pour bateau 500hp. Est-il admissible au programme de base ?",
+      "options": ["Oui, automatiquement", "Non, base couvre jusqu'à 400hp. Non admissible au-delà", "Oui, avec option", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Motomarines & Bateaux couvre véhicules avec puissance totale jusqu'à 400hp. Au-delà de 400hp, véhicule non admissible."
+    },
+    {
+      "question": "Un collègue vend une garantie avec fausses informations. Comment réagissez-vous ?",
+      "options": ["L'imiter pour vendre", "Signaler au gérant, protéger le client, expliquer conséquences légales/réputation", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler les pratiques trompeuses pour protéger le client et l'entreprise, et d'expliquer conséquences légales/réputation."
+    }
+  ]
+}
+

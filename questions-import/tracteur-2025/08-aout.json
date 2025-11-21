@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 8,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Qu'est-ce qu'un Centre de Réparation Autorisé ?",
+      "options": ["N'importe quel garage", "Établissement légal autorisé avec taux horaire et marge bénéficiaire convenus avec l'Administrateur, non détenu par l'Administrateur", "Seulement concessionnaires", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Un Centre de Réparation Autorisé désigne un établissement légal autorisé avec taux horaire et marge convenus, non détenu ni géré par l'Administrateur (section 1)."
+    },
+    {
+      "question": "Comment présenter l'ensemble du programme ATC de façon complète à un nouveau client ?",
+      "options": ["C'est compliqué", "2 programmes (AU <250HP extensible 600HP/CE <250HP fixe), 5 composants détaillés, Tarif A/B, max 10k$/visite, 20k$ cumulatif, franchise 250$ (ou 0$), 4-5 options", "C'est cher", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter l'ensemble complet : programmes détaillés, composants, tarifications, limites, franchise modulable, options adaptées."
+    },
+    {
+      "question": "Le Centre de Réparation Autorisé est-il détenu par l'Administrateur ?",
+      "options": ["Oui, toujours", "Non, le Centre n'est ni détenu ni géré par l'Administrateur", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Centre de Réparation Autorisé n'est ni détenu ni géré par l'Administrateur (section 1 - Définitions)."
+    },
+    {
+      "question": "Un tracteur de 4 ans avec 1 600 heures veut terme 60 mois. Usage futur prévu 400h/an. Besoin option 2x ?",
+      "options": ["Oui, obligatoire", "Non, projection 400h/an × 5 ans = 2000h < standard 2500h. Option 2x non nécessaire", "Toujours nécessaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Projection terme 60 mois (5 ans) : 400h/an × 5 = 2000h nécessaires < standard 2500h. Option 2x non nécessaire pour ce profil d'utilisation modérée."
+    },
+    {
+      "question": "Qu'est-ce qu'une Panne selon le programme ?",
+      "options": ["Seulement accident", "Défaillance d'un composant du véhicule dans l'exécution de la fonction pour laquelle il a été construit, sans égard aux causes", "Seulement usure", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Une Panne désigne la défaillance d'un composant dans l'exécution de la fonction pour laquelle il a été construit, sans égard aux causes de la défaillance (section 1)."
+    },
+    {
+      "question": "Comment calculer les heures nécessaires pour un terme donné basé sur l'usage historique ?",
+      "options": ["Pas de formule", "Formule: (Heures actuelles÷Âge) × Années du terme choisi = Heures nécessaires. Comparer à allocation standard du terme", "Impossible", "Selon le cas"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige calcul précis : (Heures÷Âge) = heures/an. Multiplier par années du terme = besoin projeté. Comparer à allocation standard pour recommander option 2x."
+    },
+    {
+      "question": "Que désignent les Composants Couverts ?",
+      "options": ["Tout le véhicule", "Pièces spécifiées couvertes pour réparation si termes et conditions suivis, détaillées et non admissibles à tous programmes", "Seulement moteur", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les Composants Couverts désignent les pièces spécifiées couvertes pour réparation si termes et conditions suivis. Composantes détaillées et non admissibles à tous programmes (section 1)."
+    },
+    {
+      "question": "Un équipement de 7 ans avec 3 500 heures veut terme 36 mois Tarif B. Usage prévu 600h/an. Quelle option ?",
+      "options": ["Aucune", "Option 2x allocation heures (250$) car projection 600h/an × 3 ans = 1800h > standard 1500h", "Pas nécessaire", "Toutes"],
+      "correctAnswer": 1,
+      "explanation": "Usage prévu : 600h/an × 3 ans (terme 36 mois) = 1800h nécessaires > standard 1500h Tarif B. Option 2x requis (3000h) pour couvrir usage intensif prévu."
+    },
+    {
+      "question": "Que désignent les Exclusions ?",
+      "options": ["Rien", "Ce qui n'est pas couvert : pièces non couvertes, réparations et raisons jugées inéligibles, aucun remboursement autorisé", "Tout est couvert", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les Exclusions désignent ce qui n'est pas couvert : pièces, réparations et raisons jugées inéligibles à l'autorisation, pour lesquelles aucun remboursement ne sera autorisé (section 1)."
+    },
+    {
+      "question": "Comment expliquer les coordonnées de contact de l'Administrateur à un client ?",
+      "options": ["Pas nécessaire", "Expliquer clairement: 1-866-666-0181 (réclamations) ou info@garantieavantageplus.ca, disponible pour questions/pannes", "C'est sur le contrat", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement les coordonnées : 1-866-666-0181 ou info@garantieavantageplus.ca, disponibles pour questions et en cas de panne."
+    },
+    {
+      "question": "Qui est désigné comme Propriétaire du véhicule ?",
+      "options": ["N'importe qui", "Le signataire indiqué comme propriétaire dans la section Identification du propriétaire", "Le conducteur", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du véhicule désigne le signataire indiqué comme propriétaire du véhicule dans la section Identification du propriétaire (section 1)."
+    },
+    {
+      "question": "Un tracteur de 5 ans avec 2 400 heures veut terme 48 mois. Usage futur 500h/an. Allocation suffisante ?",
+      "options": ["Non, insuffisant", "Oui, projection 500h/an × 4 ans = 2000h = exactement standard terme 48 mois. Option 2x non obligatoire mais recommandée pour marge", "Largement suffisant", "Option 2x obligatoire"],
+      "correctAnswer": 1,
+      "explanation": "Projection : 500h/an × 4 ans = 2000h = exactement standard. Option 2x non obligatoire mais recommandée pour marge de sécurité si usage peut augmenter."
+    },
+    {
+      "question": "Quelle est la Période d'attente du programme ?",
+      "options": ["7 jours", "Les premier quinze (15) jours suivant la date de livraison indiquée sur la garantie", "30 jours", "Aucune"],
+      "correctAnswer": 1,
+      "explanation": "La Période d'attente désigne les premier quinze (15) jours suivant la date de livraison indiquée sur la garantie (section 1 - Définitions)."
+    },
+    {
+      "question": "Comment évaluer la pertinence de l'option 2x pour un client avec usage variable ?",
+      "options": ["Impossible", "Calculer usage max anticipé (saison haute). Si max prévu >500h/an OU projection dépasse allocation, recommander option 2x pour sécurité", "Jamais nécessaire", "Toujours nécessaire"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'évaluer usage max anticipé (saisons hautes). Si pic prévu >500h/an ou projection sur terme dépasse allocation, recommander option 2x."
+    },
+    {
+      "question": "L'Administrateur accepte-t-il de payer les coûts de réparation dès réception du paiement ?",
+      "options": ["Non, jamais", "Oui, dès réception du paiement du programme par le Distributeur, accepte de payer coûts de réparation éligibles après Période d'attente", "Immédiatement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Dès réception du paiement par le Distributeur à l'Administrateur, l'Administrateur accepte de payer les coûts de réparation éligibles après la Période d'attente (section 1)."
+    },
+    {
+      "question": "Un équipement de 6 ans avec 2 700 heures veut terme 24 mois. Usage prévu 550h/an. Quelle recommandation ?",
+      "options": ["Standard suffit", "Option 2x requis: projection 550h/an × 2 ans = 1100h > standard 1000h. Option 2x = 2000h donne marge confortable", "Pas nécessaire", "Impossible"],
+      "correctAnswer": 1,
+      "explanation": "Projection : 550h/an × 2 ans = 1100h > standard 1000h (terme 24 mois). Option 2x requis (2000h) pour couvrir usage + marge sécurité confortable."
+    },
+    {
+      "question": "Quels coûts l'Administrateur accepte-t-il de payer ?",
+      "options": ["Seulement pièces", "Coûts de réparation éligibles incluant la main-d'œuvre et les taxes nécessaires", "Seulement main-d'œuvre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur accepte de payer les coûts de réparation éligibles pour la Panne des Composants Couverts, y compris la main-d'œuvre et les taxes nécessaires (section 1)."
+    },
+    {
+      "question": "Comment présenter l'option 2x allocation heures à un client avec saisons agricoles variables ?",
+      "options": ["Pas utile", "Expliquer: 250$ double heures (500h→1000h/an), élimine stress dépassement saisons intenses, flexibilité totale usage variable", "C'est automatique", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer la flexibilité : 250$ pour éliminer stress dépassement, permet adaptation aux saisons variables, tranquillité totale."
+    },
+    {
+      "question": "La durée de couverture coïncide-t-elle avec les modalités du programme choisi ?",
+      "options": ["Non, différent", "Oui, la durée de la couverture coïncidera conformément aux modalités du programme indiqué à la première page", "Aléatoire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La durée de la couverture coïncidera, conformément aux modalités du programme indiqué à la première page de la garantie choisie par le Propriétaire (section 1)."
+    },
+    {
+      "question": "Un tracteur de 3 ans avec 1 350 heures a eu usage standard (450h/an). Terme 60 mois prévu mais intensification future possible. Recommandation ?",
+      "options": ["Standard suffit", "Recommander option 2x (250$) pour flexibilité: usage actuel 450h/an OK, mais option 2x donne 5000h si intensification (vs 2500h standard)", "Pas nécessaire", "Obligatoire"},
+      "correctAnswer": 1,
+      "explanation": "Usage actuel 450h/an < standard. Mais terme long (60 mois) + possibilité intensification future = recommander option 2x (250$) pour flexibilité totale (5000h vs 2500h)."
+    },
+    {
+      "question": "L'Administrateur est-il tenu responsable des déclarations du Distributeur ?",
+      "options": ["Oui, toujours", "Non, ne sera pas tenu responsable de toute déclaration/engagement allégué fait par le Distributeur", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de toute déclaration ou engagement allégué fait par le Distributeur Autorisé au nom de l'Administrateur (section 1)."
+    },
+    {
+      "question": "Comment justifier l'option 2x allocation heures même si l'usage actuel est modéré ?",
+      "options": ["Impossible", "Expliquer: usage futur peut changer (expansion, nouvelles cultures, saisons longues). 250$ = assurance flexibilité, évite souci dépassement", "Pas recommandé", "Selon le prix"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer l'assurance : usage peut évoluer, 250$ = investissement flexibilité totale, évite complications futures, tranquillité long terme."
+    },
+    {
+      "question": "Quelle responsabilité supérieure l'Administrateur n'assume-t-il PAS ?",
+      "options": ["Toutes responsabilités", "Toute responsabilité supérieure à celle prévue par la présente garantie", "Aucune limite", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de toute responsabilité supérieure à celle prévue par la présente garantie (section 1)."
+    },
+    {
+      "question": "Un équipement de 9 ans avec 4 400 heures veut terme 12 mois. Usage prévu 600h/an. Quelle option ?",
+      "options": ["Standard suffit", "Option 2x requis: projection 600h/an × 1 an = 600h > standard 500h. Option 2x = 1000h couvre largement", "Pas nécessaire", "Impossible"],
+      "correctAnswer": 1,
+      "explanation": "Projection : 600h/an × 1 an = 600h > standard 500h (terme 12 mois). Option 2x requis (1000h) pour couvrir usage intensif même sur terme court."
+    },
+    {
+      "question": "Pour quoi les renseignements recueillis sont-ils utilisés ?",
+      "options": ["Publicité seulement", "Déterminer admissibilité au programme, maintenir la garantie et traiter demandes de réclamation", "Vente", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les renseignements recueillis sont utilisés pour déterminer l'admissibilité au programme, pour maintenir la garantie ainsi que pour traiter les demandes de réclamation (section 1)."
+    },
+    {
+      "question": "Comment expliquer les limites de responsabilité de l'Administrateur concernant le Distributeur ?",
+      "options": ["Tout est couvert", "Expliquer: Administrateur non responsable déclarations/engagements Distributeur, responsabilité limitée aux termes du contrat écrit", "Administrateur responsable de tout", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : Administrateur non responsable des déclarations du Distributeur, responsabilité limitée aux termes du contrat écrit (section 1)."
+    },
+    {
+      "question": "Un tracteur de 2 ans avec 900 heures veut terme 60 mois. Usage prévu 450h/an constant. Allocation standard suffisante ?",
+      "options": ["Non, insuffisant", "Oui, projection 450h/an × 5 ans = 2250h < standard 2500h. Option 2x non nécessaire mais peut être proposée pour marge", "Insuffisant", "Option 2x obligatoire"],
+      "correctAnswer": 1,
+      "explanation": "Projection : 450h/an × 5 ans = 2250h < standard 2500h (terme 60 mois). Allocation standard suffisante. Option 2x peut être proposée pour marge sécurité."
+    },
+    {
+      "question": "Le propriétaire comprend-il qu'un contrat non payé peut ne pas être honoré ?",
+      "options": ["Non", "Oui, le Propriétaire comprend que si contrat non payé par Distributeur, Administrateur ne s'engage pas à honorer (sauf exception)", "Toujours honoré", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire comprend que si le contrat n'a pas été payé par le Distributeur suivant sa date de facturation, l'Administrateur ne s'engage pas à honorer (sauf exception) (section 1)."
+    },
+    {
+      "question": "Comment maximiser la valeur perçue lors de la recommandation de l'option 2x allocation heures ?",
+      "options": ["Minimiser", "Expliquer valeur concrète: 250$ = jusqu'à 1250h supplémentaires (500h/an×2.5 ans moyen), coût 0.20$/h supplémentaire, ROI excellent", "C'est cher", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI : 250$ pour doubler allocation (jusqu'à 1250h+ supplémentaires selon terme), coût ~0.20$/h, valeur exceptionnelle."
+    },
+    {
+      "question": "Un client satisfait avec tracteur usage intensif revient 5 ans après. Comment maximiser renouvellement ?",
+      "options": ["Vendre vite", "Remercier fidélité exceptionnelle (5 ans!), analyser historique heures (confirmer besoin 2x), proposer terme long+options adaptées, demander témoignage détaillé", "Vendre minimum", "Ignorer historique"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation fidélité, analyse historique usage (prouver valeur option 2x si utilisée), recommandations basées données réelles, cultiver témoignage puissant."
+    }
+  ]
+}
+

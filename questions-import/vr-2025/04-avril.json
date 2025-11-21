@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 4,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le moteur du toit ouvrant est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 10 - Électricité", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre moteur du toit ouvrant, interrupteur du toit ouvrant, moteur d'essuie-glace avant et arrière."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour location automobile par jour ?",
+      "options": ["25$ par jour", "50$ par jour", "75$ par jour", "100$ par jour"],
+      "correctAnswer": 1,
+      "explanation": "Un remboursement de 50$ CAD par jour – sept (7) jours maximums si réparation implique composants 1 à 5 seulement et est autorisée (Protection incluse)."
+    },
+    {
+      "question": "Le régulateur de voltage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 10 - Électricité", "Oui, composant 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre régulateur de voltage, alternateur, démarreur et solénoïde des soupapes de transmission."
+    },
+    {
+      "question": "Combien de jours maximum pour la location d'automobile de remplacement ?",
+      "options": ["3 jours", "5 jours", "7 jours", "10 jours"],
+      "correctAnswer": 2,
+      "explanation": "La location d'automobile de remplacement est remboursée à 50$/jour pour un maximum de sept (7) jours pour la durée du programme (Protection incluse)."
+    },
+    {
+      "question": "Les modules de contrôle du moteur (ECM) et de la transmission (TCM) sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 10 - Électricité", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre module de contrôle du moteur (ECM) et module de contrôle de la transmission (TCM)."
+    },
+    {
+      "question": "La location automobile est-elle couverte pour toutes les réparations ?",
+      "options": ["Oui, toutes", "Non, seulement si réparation implique composants 1 à 5", "Oui, avec option", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "La location d'automobile de remplacement est remboursée seulement si la réparation implique les composants 1 à 5 (Protection incluse)."
+    },
+    {
+      "question": "Les éléments et interrupteurs des sièges chauffants sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 10 - Électricité", "Oui, composant 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre élément et interrupteur des sièges chauffant, interrupteur de réglage de sièges électriques et solénoïde hayon."
+    },
+    {
+      "question": "Comment expliquer les protections incluses à un client ?",
+      "options": ["Pas importantes", "Remorquage 500$/an, Service routier 50$/an, Réparation appel 200$/an, Location auto 50$/jour×7, Hébergement 100$/nuit×4", "C'est optionnel", "Trop compliqué"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les 5 protections incluses avec montants spécifiques pour démontrer la valeur complète du programme."
+    },
+    {
+      "question": "Les prises USB et audio auxiliaire sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 10 - Électricité", "Oui, composant 22", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre prise USB, prise audio auxiliaire, socle d'alimentation 12v et 115v, chargeur induction et bouton démarrage moteur."
+    },
+    {
+      "question": "Un client demande si les joints sont couverts. Que répondez-vous ?",
+      "options": ["Oui, tous", "Oui, mais seulement lors d'un bris d'une pièce mécanique majeur", "Non, jamais", "Avec option"],
+      "correctAnswer": 1,
+      "explanation": "Tous les joints d'étanchéité et les bagues sont inclus seulement lors d'un bris d'une pièce mécanique majeur (composant 11)."
+    },
+    {
+      "question": "Le brûleur de cuisinière/four est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 12 - Cuisinière / Four", "Oui, composant 13", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 12 - Cuisinière / Four couvre brûleur, les connexions, connecteurs, panneau de commande, four à convection et système d'ignition."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour hébergement par nuit ?",
+      "options": ["50$ par nuit", "75$ par nuit", "100$ par nuit", "150$ par nuit"],
+      "correctAnswer": 2,
+      "explanation": "Un remboursement de 100$ CAD par nuit – 4 nuits maximum si réparation couverte, propriétaire à 300 km de son adresse et réparation sur plusieurs jours (Protection incluse)."
+    },
+    {
+      "question": "Le four à micro-onde est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 12 - Cuisinière / Four", "Oui, composant 22", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 12 - Cuisinière / Four couvre four à micro-onde, four à convection, moteur hotte, circuits imprimer et thermostat."
+    },
+    {
+      "question": "Quelle est la distance minimale du domicile pour l'hébergement ?",
+      "options": ["100 km", "200 km", "300 km", "500 km"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement d'hébergement s'applique si le propriétaire du véhicule est à 300 km de son adresse indiquée dans le programme (Protection incluse)."
+    },
+    {
+      "question": "Le système d'ignition poêle & four est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 12 - Cuisinière / Four", "Oui, composant 14", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 12 - Cuisinière / Four couvre système d'ignition poêle & four, thermocouple, thermostat, soupapes et circuits imprimer."
+    },
+    {
+      "question": "Comment gérer un client qui demande remboursement pour hébergement sans respecter les conditions ?",
+      "options": ["Rembourser", "Expliquer conditions: réparation couverte, autorisée, >300 km, max 4 nuits, dates correspondantes", "Céder", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer les conditions clairement : réparation couverte/autorisée, >300 km domicile, max 4 nuits, dates correspondant à réparation."
+    },
+    {
+      "question": "Le compresseur de réfrigérateur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 13 - Réfrigérateur", "Oui, composant 7", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 13 - Réfrigérateur couvre compresseur, condenseur, congélateur, connecteurs, panneau de commande et démarreur électrique / ignition."
+    },
+    {
+      "question": "Combien de nuits maximum pour le remboursement d'hébergement ?",
+      "options": ["2 nuits", "3 nuits", "4 nuits", "5 nuits"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement d'hébergement est limité à un maximum de 4 nuits pour la durée du programme (Protection incluse)."
+    },
+    {
+      "question": "Les joints et scellent du réfrigérateur sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, joint et scellent exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 13 - Réfrigérateur couvre plusieurs pièces mais les joints et scellent sont spécifiquement exclus (section 2)."
+    },
+    {
+      "question": "Un VR avec MSRP de 160 000$ CAD est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule MSRP supérieur à 150 000$ CAD exclu", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule sport ou de luxe haute performance dont le MSRP est supérieur à 150 000$ CAD est exclu (section 10.g)."
+    },
+    {
+      "question": "Le thermostat de réfrigérateur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 13 - Réfrigérateur", "Oui, composant 12", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 13 - Réfrigérateur couvre thermostat, thermocouple, circuits imprimer, interrupteurs et soupapes."
+    },
+    {
+      "question": "Les dommages dus à un accident sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, réparation due à accident, collision, mauvaise utilisation ou abus exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à accident, collision, mauvaise utilisation, abus ou hasards de la route est exclue (section 5.4)."
+    },
+    {
+      "question": "Les canalisations du système d'alimentation en gaz propane sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 14 - Système d'alimentation en gaz propane", "Oui, composant 12", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 14 - Système d'alimentation en gaz propane couvre canalisations, régulateurs, soupape de sûreté et les connecteurs."
+    },
+    {
+      "question": "Comment expliquer l'exclusion des véhicules modifiés à un client ?",
+      "options": ["Accepter", "Expliquer poliment exclusion (section 10.f), suggérer contacter représentant pour évaluer exception possible", "Refuser sèchement", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer l'exclusion (véhicules altérés/modifiés) puis suggérer de contacter représentant Administrateur pour demander exception."
+    },
+    {
+      "question": "Les régulateurs de gaz propane sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 14 - Système d'alimentation en gaz propane", "Oui, composant 13", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 14 - Système d'alimentation en gaz propane couvre régulateurs, canalisations, soupape de sûreté et les connecteurs."
+    },
+    {
+      "question": "Un VR de location à court terme (18 mois) est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule location à court terme (contrat <24 mois) exclu", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule utilisé comme véhicule de location à court terme (qui a un contrat de location ou un bail de moins de 24 mois) est exclu (section 10.b)."
+    },
+    {
+      "question": "La pompe du système de l'eau fraîche est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 15 - Système de l'eau fraîche & d'évacuation", "Oui, composant 16", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 15 - Système de l'eau fraîche & d'évacuation couvre pompe, compresseur, les connecteurs, joints, canalisations, plomberie et soupapes."
+    },
+    {
+      "question": "Un client demande si les réparations esthétiques sont couvertes. Que répondez-vous ?",
+      "options": ["Oui, toutes", "Non, toutes les pièces esthétiques ou cosmétiques exclues", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les pièces esthétiques ou cosmétiques à inclure adhésifs, moulages, chrome, garnitures, peinture, panneaux sont exclues (section 4.4)."
+    },
+    {
+      "question": "Les réservoirs d'eau sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 15 - Système de l'eau fraîche & d'évacuation", "Oui, composant 16", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 15 - Système de l'eau fraîche & d'évacuation couvre réservoirs, toilette, douche, lavabo, pompe, canalisations et soupapes."
+    },
+    {
+      "question": "Un collègue réussit une vente avec des fausses promesses. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Signaler ou discuter avec lui de l'importance d'honnêteté pour protéger clients et réputation", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler pratiques trompeuses ou discuter avec le collègue pour protéger les clients et la réputation de l'entreprise."
+    }
+  ]
+}
+

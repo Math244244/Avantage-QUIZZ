@@ -1,0 +1,188 @@
+{
+  "module": "hasard-route",
+  "month": 1,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Combien de catégories de tarification existe-t-il dans le programme Hasard de Route ?",
+      "options": ["2 catégories", "4 catégories (Standard, Highline, Super Highline, Super Highline +)", "3 catégories", "5 catégories"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Hasard de Route offre 4 catégories de tarification basées sur la marque du véhicule : Standard, Highline, Super Highline, et Super Highline +."
+    },
+    {
+      "question": "Quelles marques sont incluses dans la catégorie STANDARD ?",
+      "options": ["Toutes les marques", "Chevrolet, Chrysler, Dodge, Ford, GMC, Honda, Hyundai, Jeep, Fiat, Kia, Mazda, Mitsubishi, Nissan, Subaru, Toyota, Volkswagen", "Seulement américaines", "Seulement japonaises"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie STANDARD inclut 16 marques : Chevrolet, Chrysler, Dodge, Ford, GMC, Honda, Hyundai, Jeep, Fiat, Kia, Mazda, Mitsubishi, Nissan, Subaru, Toyota, Volkswagen."
+    },
+    {
+      "question": "Quel est le prix du terme 60 mois pour la catégorie STANDARD ?",
+      "options": ["770$", "927$", "1201$", "1797$"],
+      "correctAnswer": 1,
+      "explanation": "Pour la catégorie STANDARD, le terme 60 mois coûte 927$. Les termes varient de 770$ (12 mois) à 1026$ (84 mois)."
+    },
+    {
+      "question": "Quelles marques sont incluses dans la catégorie HIGHLINE ?",
+      "options": ["Marques allemandes", "Acura, Alfa Romeo, Cadillac, Genesis, Infiniti, Lexus, Lincoln, Mini, Polestar, Vinfast, Volvo", "Seulement Lexus", "Toutes les marques"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie HIGHLINE inclut 11 marques de luxe : Acura, Alfa Romeo, Cadillac, Genesis, Infiniti, Lexus, Lincoln, Mini, Polestar, Vinfast, Volvo."
+    },
+    {
+      "question": "Comment expliquer les 4 catégories de tarification à un client ?",
+      "options": ["C'est compliqué", "Expliquer : tarification basée MARQUE véhicule (coûts pièces/réparations variables). Standard = marques volume, Highline = luxe entrée, Super Highline = luxe premium, Super Highline + = ultra-luxe/électrique. Équitable selon réalité marché", "C'est arbitraire", "Selon le prix véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication logique : tarification reflète coûts réels pièces/réparations selon marque (volume vs luxe vs ultra-luxe), système équitable basé réalité marché."
+    },
+    {
+      "question": "Quelles marques sont incluses dans la catégorie SUPER HIGHLINE ?",
+      "options": ["Toutes allemandes", "Audi, BMW, Jaguar, Karma, Land Rover, Lotus, Maserati, Mercedes-Benz, Porsche, Rivian", "Seulement BMW", "5 marques"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie SUPER HIGHLINE inclut 10 marques luxe premium : Audi, BMW, Jaguar, Karma, Land Rover, Lotus, Maserati, Mercedes-Benz, Porsche, Rivian."
+    },
+    {
+      "question": "Quel est le prix du terme 84 mois pour la catégorie SUPER HIGHLINE ?",
+      "options": ["1026$", "1309$", "1900$", "2490$"],
+      "correctAnswer": 2,
+      "explanation": "Pour la catégorie SUPER HIGHLINE, le terme 84 mois coûte 1900$. C'est le terme le plus long disponible avec protection maximale 7 ans."
+    },
+    {
+      "question": "Quelles marques sont incluses dans la catégorie SUPER HIGHLINE + ?",
+      "options": ["Toutes électriques", "Bentley, Rolls Royce, Tesla", "Seulement Tesla", "10 marques"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie SUPER HIGHLINE + inclut seulement 3 marques ultra-luxe/électrique premium : Bentley, Rolls Royce, Tesla."
+    },
+    {
+      "question": "Comment justifier le coût de la catégorie SUPER HIGHLINE + à un client Tesla ?",
+      "options": ["C'est cher", "Expliquer : Tesla = véhicule haute technologie, pare-brise/phares/roues très coûteux (2x-3x standard), tarification 2490$ (84 mois) reflète coûts réels pièces premium Tesla. Protection essentielle investissement majeur", "Minimiser", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration valeur : Tesla = technologie avancée, pièces très coûteuses (pare-brise panoramique, phares LED complexes), tarification reflète réalité coûts, protection essentielle."
+    },
+    {
+      "question": "Combien de termes sont disponibles dans chaque catégorie ?",
+      "options": ["5 termes", "7 termes (12, 24, 36, 48, 60, 72, 84 mois)", "3 termes", "10 termes"],
+      "correctAnswer": 1,
+      "explanation": "Chaque catégorie (Standard, Highline, Super Highline, Super Highline +) offre 7 termes : 12, 24, 36, 48, 60, 72, 84 mois. Protection jusqu'à 7 ans."
+    },
+    {
+      "question": "Quelle est la limite maximale de remboursement TOTAL du programme Hasard de Route ?",
+      "options": ["10 000$", "15 000$ (incluant toutes améliorations optionnelles)", "20 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement total maximal dans le cadre du programme Hasard de Route est limité à 15 000$, incluant toutes les améliorations optionnelles."
+    },
+    {
+      "question": "Comment présenter la valeur du terme 84 mois à un client ?",
+      "options": ["C'est long", "Expliquer : terme 84 mois (7 ans) = protection MAXIMALE long terme, meilleur ratio coût/protection, couvre période critique post-garantie fabricant, tranquillité totale. Ex : Standard 1026$/84 mois = 12$/mois protection complète", "Pas nécessaire", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser terme long : 84 mois = protection maximale 7 ans, meilleur ROI (12$/mois Standard), couvre période critique, tranquillité totale long terme."
+    },
+    {
+      "question": "Quelles sont les 10 protections principales couvertes par le programme Hasard de Route ?",
+      "options": ["5 protections", "10 protections : 1) Pneu+Roue, 2) Cosmétique roues, 3) Clé+Télécommande, 4) Protection intérieur, 5) Réparation bosses sans peinture, 6) Peinture+Éraflures, 7) Réparation pare-brise, 8) Franchise/Remplacement pare-brise, 9) Phares/Feux, 10) Remorquage/Location", "3 protections", "15 protections"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Hasard de Route couvre 10 protections spécifiques : Pneu+Roue, Cosmétique roues, Clé+Télécommande, Protection intérieur, Bosses sans peinture, Peinture+Éraflures, Réparation pare-brise, Franchise/Remplacement pare-brise, Phares/Feux, Remorquage/Location."
+    },
+    {
+      "question": "Comment expliquer le concept \"Hasards routiers\" à un client ?",
+      "options": ["Accidents seulement", "Expliquer : Hasards routiers = conditions présentes sur route/autoroute publique qui ne devraient pas s'y trouver (nids-de-poule, clous, verre, débris routiers). Protection contre imprévus quotidiens conduite normale", "C'est vague", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté : Hasards routiers = conditions anormales route publique (nids-de-poule, débris), protection contre dommages imprévus conduite quotidienne normale."
+    },
+    {
+      "question": "Qu'est-ce qu'un composant \"Hors d'usage\" selon le programme ?",
+      "options": ["Légèrement endommagé", "Pneu perforé/endommagé au point devenu dangereux OU roue ne peut plus maintenir joint avec pneu", "Seulement crevaison", "Selon le technicien"],
+      "correctAnswer": 1,
+      "explanation": "\"Hors d'usage\" signifie : pneu perforé/endommagé devenu dangereux OU roue incapable maintenir joint avec pneu. Critère sécurité et fonctionnalité."
+    },
+    {
+      "question": "Les services sont-ils disponibles partout dans le monde ?",
+      "options": ["Oui, mondial", "NON, services UNIQUEMENT disponibles au Canada et États-Unis continentaux", "Seulement Canada", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Les services du programme Hasard de Route sont UNIQUEMENT disponibles au Canada et aux États-Unis continentaux. Aucune couverture internationale ailleurs."
+    },
+    {
+      "question": "Comment expliquer la restriction géographique (Canada/USA) à un client qui voyage ?",
+      "options": ["Ignorer", "Expliquer : couverture Canada/USA continentaux (réseau fournisseurs établi, normes qualité contrôlées). Si voyage international, assurance voyage séparée recommandée pour autres protections", "C'est limitatif", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique : couverture Canada/USA = réseau fournisseurs établi contrôlé, normes qualité, si voyage international recommander assurance voyage complémentaire."
+    },
+    {
+      "question": "Le Titulaire du Contrat doit-il maintenir une assurance automobile ?",
+      "options": ["Non, optionnel", "OUI, Titulaire DOIT maintenir Police d'Assurance Principale en vigueur pendant TOUTE Durée contrat", "Seulement première année", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Titulaire du Contrat DOIT maintenir sa Police d'Assurance Principale valide en vigueur pendant TOUTE la Durée du contrat Hasard de Route (condition obligatoire)."
+    },
+    {
+      "question": "Comment expliquer l'exigence d'assurance principale à un client ?",
+      "options": ["C'est bureaucratique", "Expliquer : assurance principale = condition obligatoire (vérification propriété véhicule, couvertures complémentaires). Hasard de Route complète assurance (pas remplace), travaillent ensemble protection totale", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : assurance principale obligatoire (vérification propriété, couvertures complémentaires), Hasard de Route = complément (pas remplacement), protection synergique totale."
+    },
+    {
+      "question": "Les véhicules de quel poids total sont EXCLUS du programme ?",
+      "options": ["Aucune limite", "Tout véhicule poids total excédant 6 350 kg / 14 000 lb NON admissible", "10 000 lb", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule ayant un poids total excédant 6 350 kg / 14 000 lb n'est pas admissible à la couverture du programme Hasard de Route (limite poids)."
+    },
+    {
+      "question": "Comment gérer un client avec Ford F-350 dually (poids 15 000 lb) qui veut Hasard de Route ?",
+      "options": ["Accepter", "Expliquer NON admissible : poids 15 000 lb dépasse limite 14 000 lb (camions lourds exclus). Exprimer regrets, expliquer programme ciblé véhicules standards/légers, proposer alternatives si disponibles", "Vendre quand même", "Ignorer limite"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté : F-350 dually dépasse limite poids (15k > 14k lb), non admissible, expliquer ciblage véhicules standards, exprimer regrets, proposer alternatives."
+    },
+    {
+      "question": "Quelle est la limite âge maximum véhicule + durée couverture ?",
+      "options": ["15 ans", "L'âge fabrication véhicule + Durée couverture peut atteindre MAXIMUM 19 ans", "25 ans", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "L'âge de fabrication du véhicule, ajouté à la Durée de la couverture, peut atteindre un maximum de 19 ans (limite combinée âge+terme)."
+    },
+    {
+      "question": "Un véhicule 2016 peut-il souscrire un terme 84 mois en 2025 ?",
+      "options": ["Oui, automatiquement", "Calculer : 2016 = 9 ans en 2025. Terme 84 mois (7 ans) = fin 2032 = véhicule 16 ans. 16 < 19 ans = ADMISSIBLE", "Non, trop vieux", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige calcul : véhicule 2016 = 9 ans (2025), terme 84 mois = +7 ans = 16 ans total à fin contrat. 16 ans < limite 19 ans = ADMISSIBLE."
+    },
+    {
+      "question": "Comment expliquer la limite 19 ans (âge+terme) à un client ?",
+      "options": ["C'est arbitraire", "Expliquer logique : limite 19 ans = équilibre protection véhicules âgés + disponibilité pièces/fournisseurs. Au-delà 19 ans, pièces rares/coûteuses, fournisseurs limités. Limite raisonnable réalité marché", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique : limite 19 ans (âge+terme) = disponibilité pièces/fournisseurs, au-delà = pièces rares coûteuses, limite raisonnable basée réalité marché."
+    },
+    {
+      "question": "Ce contrat de service est-il renouvelable ?",
+      "options": ["Oui, automatiquement", "NON, ce Contrat de service n'est PAS renouvelable et est limité à la Durée achetée", "Oui, moyennant frais", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Ce Contrat de service Hasard de Route n'est PAS renouvelable et est strictement limité à la Durée (terme) que le client a achetée initialement."
+    },
+    {
+      "question": "Comment expliquer la non-renouvellement du contrat à un client satisfait ?",
+      "options": ["C'est négatif", "Expliquer : contrat non renouvelable (limite durée achetée), encourage sélection terme optimal DÈS ACHAT (84 mois = protection maximale 7 ans). Si satisfait à expiration, nouveau contrat possible UNIQUEMENT si admissibilité (âge 19 ans)", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer : non renouvelable encourage choix terme optimal initial (84 mois = max), si satisfait post-expiration, nouveau contrat possible seulement si critères admissibilité respectés."
+    },
+    {
+      "question": "Quand peut-on acheter le programme Hasard de Route ?",
+      "options": ["N'importe quand", "CE CONTRAT NE PEUT ÊTRE ACHETÉ QU'AU MOMENT DE L'ACHAT OU LA LOCATION DU VÉHICULE", "Première année", "Selon le concessionnaire"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT : Ce Contrat de service Hasard de Route NE PEUT être acheté QU'AU MOMENT de l'achat ou la location du véhicule. Aucun achat ultérieur possible."
+    },
+    {
+      "question": "Comment expliquer la restriction achat au moment vente véhicule ?",
+      "options": ["C'est restrictif", "Expliquer logique : achat moment vente = vérification état initial véhicule (pas dommages préexistants), évaluation admissibilité complète. Protection dès livraison. Après impossible (vérification état impossible). Décision importante MAINTENANT", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication logique : achat moment vente seul = vérification état initial (pas préexistants), évaluation admissibilité, protection dès début, après impossible, importance décision immédiate informée."
+    },
+    {
+      "question": "Un client hésite entre Standard 60 mois (927$) et 84 mois (1026$). Comment conseiller ?",
+      "options": ["Le moins cher", "Démontrer ROI : différence 99$ pour 2 ans protection additionnelle = 4,13$/mois supplémentaire. Terme 84 mois = meilleur ratio coût/protection (12,26$/mois vs 15,45$/mois), couverture maximale 7 ans. Recommander FORTEMENT 84 mois", "C'est pareil", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration ROI : 99$ différence = 4$/mois pour 2 ans additionnels, meilleur ratio mensuel terme 84, couverture maximale 7 ans, recommander fortement terme long."
+    },
+    {
+      "question": "Un collègue dit \"Hasard de Route couvre tous dommages véhicule\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : Hasard de Route couvre 10 protections SPÉCIFIQUES (pneus, roues, pare-brise, clés, etc.), PAS tous dommages. Protections hasards routiers quotidiens. Corriger fausses attentes client, transparence totale", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : Hasard de Route = 10 protections spécifiques ciblées (pas couverture totale), corriger fausses promesses protège client déception, transparence obligatoire."
+    }
+  ]
+}
+

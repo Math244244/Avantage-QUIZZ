@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 4,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le système de surveillance de la pression des pneus est-il couvert ?",
+      "options": ["Oui, toujours", "Non, système de surveillance de la pression des pneus exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système de surveillance de la pression des pneus sont exclus (section 4.5)."
+    },
+    {
+      "question": "Quelle est la valeur totale maximum de toutes les options ATC-CE ?",
+      "options": ["900$", "1000$", "1150$ (Remboursement 150$ + Pas franchise 250$ + 2x heures 250$ + Aucune limite 500$)", "1400$"],
+      "correctAnswer": 2,
+      "explanation": "Le total maximum des 4 options ATC-CE : 150$ + 250$ + 250$ + 500$ = 1150$ CAD (pas d'option HP Limitation pour ATC-CE)."
+    },
+    {
+      "question": "Le système des dispositifs de sécurité et coussins gonflables sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, système des dispositifs de sécurité et coussins gonflables exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système des dispositifs de sécurité et le système des coussins gonflables sont exclus (section 4.5)."
+    },
+    {
+      "question": "Comment expliquer l'ensemble du programme ATC à un nouveau client ?",
+      "options": ["C'est compliqué", "2 programmes (AU/CE) <250 HP, 5 composants détaillés, Tarif A/B selon âge/heures, max 10k$/visite, 20k$ cumulatif, franchise 250$ (ou 0$), options", "C'est cher", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter l'ensemble : 2 programmes, composants détaillés, tarifications, limites claires, franchise modulable, options adaptées."
+    },
+    {
+      "question": "Les réparations liées à des fuites de liquide ou d'air sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparations liées à fuites de liquide/air (transpiration ou humidité mineures) exclues", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées à des fuites de liquide ou d'air (y compris la transpiration ou l'humidité mineures) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un tracteur de 4 ans avec 2 400 heures est-il admissible à un terme de 60 mois Tarification A ?",
+      "options": ["Non, trop vieux", "Oui, Tarification A (≤5 ans, <2 500h) offre termes 12-60 mois", "Seulement 36 mois", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A (≤5 ans, <2 500 heures) offre tous les termes de 12 à 60 mois. Un tracteur de 4 ans/2 400 heures est admissible au terme 60 mois."
+    },
+    {
+      "question": "Les frais environnementaux et de traitement des déchets sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, frais environnementaux et traitement des déchets (soupape de purge, système urée) exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les frais environnementaux et de traitement des déchets y compris la soupape de purge, la cartouche de vapeur, le solénoïde d'évent et le système urée (pour diesels) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un tracteur de 8 ans avec 4 000 heures est-il admissible à un terme de 48 mois Tarification B ?",
+      "options": ["Oui, automatiquement", "Non, Tarification B offre seulement termes 12-36 mois (48 et 60 non disponibles)", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B offre termes de 12 mois, 24 mois et 36 mois seulement. Les termes de 48 et 60 mois ne sont pas disponibles pour Tarification B."
+    },
+    {
+      "question": "Les réparations endommagées par friction ou usure sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par friction, usure, accumulation de carbone ou corrosion exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation endommagée par la friction, l'usure, l'accumulation de carbone ou la corrosion (y compris corrosion câbles/connecteurs) est exclue (section 5.2)."
+    },
+    {
+      "question": "Comment expliquer les termes disponibles selon la tarification ?",
+      "options": ["Tous pareils", "Tarification A: 12-60 mois (5 termes). Tarification B: 12-36 mois seulement (3 termes, 48-60 non disponibles)", "Un seul terme", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : Tarification A offre 5 termes (12-60 mois), Tarification B offre 3 termes (12-36 mois seulement)."
+    },
+    {
+      "question": "Les réparations endommagées par contamination ou manque de lubrifiants sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par contamination, manque de lubrifiants ou qualité des lubrifiants exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation endommagée par la rouille, la contamination, le manque de lubrifiants ou la qualité des lubrifiants est exclue (section 5.2)."
+    },
+    {
+      "question": "Quels sont les termes disponibles pour Tarification A ?",
+      "options": ["12-36 mois", "12-60 mois : 12/500h, 24/1000h, 36/1500h, 48/2000h, 60/2500h", "12-48 mois", "Tous"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A offre 5 termes : 12 mois/500h, 24 mois/1000h, 36 mois/1500h, 48 mois/2000h, 60 mois/2500h."
+    },
+    {
+      "question": "Les réparations endommagées par surchauffe du moteur sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par pré-allumage du moteur ou surchauffe exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation endommagée par le pré-allumage du moteur ou la surchauffe du moteur ou de tout autre Composant Couvert est exclue (section 5.2)."
+    },
+    {
+      "question": "Comment expliquer les heures d'utilisation autorisées selon les termes ?",
+      "options": ["Illimitées", "500h/an standard (12 mois=500h, 24=1000h, 36=1500h, 48=2000h, 60=2500h). Option 2x heures (250$) double", "1000h/an", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer : 500 heures/an standard (augmente avec terme), option 2x heures (250$) double l'allocation par année."
+    },
+    {
+      "question": "Les réparations endommagées par une pièce non couverte sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par une pièce non couverte (mécanique ou esthétique) exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à une pièce non couverte, mécanique ou esthétique, est exclue (section 5.3)."
+    },
+    {
+      "question": "Quels sont les termes disponibles pour Tarification B ?",
+      "options": ["12-60 mois", "12-36 mois seulement : 12/500h, 24/1000h, 36/1500h (48 et 60 non disponibles)", "12-24 mois", "Tous"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B offre 3 termes seulement : 12 mois/500h, 24 mois/1000h, 36 mois/1500h. Termes de 48 et 60 mois ne sont pas disponibles."
+    },
+    {
+      "question": "Les réparations pour améliorer les performances sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation pour améliorer performances, résoudre pertes compression ou réduire consommation huile exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation pour améliorer les performances du véhicule, résoudre les pertes de compression ou réduire la consommation excessive d'huile est exclue (section 5.6)."
+    },
+    {
+      "question": "Comment gérer un client qui hésite entre Tarification A et B ?",
+      "options": ["Vendre Tarif A", "Évaluer âge/heures tracteur: ≤5 ans/<2500h→Tarif A (5 termes, jusqu'à 60 mois). >5 ans→Tarif B (3 termes, jusqu'à 36 mois)", "C'est pareil", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer admissibilité (âge/heures) pour recommander tarif adapté : Tarif A (plus de choix termes) vs Tarif B (termes limités)."
+    },
+    {
+      "question": "Un tracteur avec compteur d'heures non fonctionnel est-il admissible ?",
+      "options": ["Oui, avec déclaration", "Non, si lecture du compteur non fonctionnelle, réparation exclue", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation si la lecture du compteur kilométrique du véhicule n'est pas fonctionnelle est exclue (section 5.7)."
+    },
+    {
+      "question": "L'entretien et les pièces d'entretien recommandés sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, entretien et pièces d'entretien (mise au point, ajustements, alignements) exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'entretien et pièces d'entretien recommandés incluant mise au point, ajustements et réglages, alignements et équilibrage des roues sont exclus (section 4.1)."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien à un client négligent ?",
+      "options": ["Ce n'est pas important", "Obligatoire, preuve d'entretien peut être demandée à tout moment, manque d'entretien peut entraîner refus réclamation", "Optionnel", "Seulement pour neufs"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que preuve d'entretien peut être demandée à tout moment et manque d'entretien peut entraîner refus de réclamation (section 5.4 et 6.2)."
+    },
+    {
+      "question": "Le remplissage de tous les liquides et les liquides eux-mêmes sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, remplissage de tous les liquides (huiles, liquides de refroidissement, réfrigérants, additifs, fréon, carburant) exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'entretien et pièces d'entretien incluant le remplissage de tous les liquides (huiles, liquides de refroidissement, réfrigérants, additifs, fréon, carburant) sont exclus (section 4.1)."
+    },
+    {
+      "question": "L'Administrateur peut-il demander la preuve d'entretien ?",
+      "options": ["Non, jamais", "Oui, preuve d'entretien et codes d'anomalie peuvent être demandés à tout moment", "Seulement pour neufs", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La preuve d'entretien et les informations de code d'anomalie peuvent être demandées par l'Administrateur à tout moment pendant la durée de la garantie (section 6.2)."
+    },
+    {
+      "question": "Un tracteur avec compteur d'heures remplacé est-il admissible ?",
+      "options": ["Oui, automatiquement", "Oui, si compteur remplacé pendant garantie, Administrateur peut exiger preuve des heures réelles", "Non, jamais", "Avec option"],
+      "correctAnswer": 1,
+      "explanation": "Si le compteur a été remplacé pendant la durée de la garantie, l'Administrateur se réserve le droit d'exiger toute preuve nécessaire pour déterminer les heures réelles (section 5.7)."
+    },
+    {
+      "question": "L'Administrateur peut-il faire inspecter le tracteur ?",
+      "options": ["Non, jamais", "Oui, se réserve le droit de faire inspecter le véhicule dans un Centre de Réparation Autorisé", "Seulement avec accord", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit de faire inspecter le véhicule dans un Centre de Réparation Autorisé (section 6.2)."
+    },
+    {
+      "question": "De quoi le propriétaire est-il responsable concernant les indicateurs d'entretien ?",
+      "options": ["Rien", "S'assurer que tous les indicateurs d'entretien du véhicule sont en état de fonctionnement", "Seulement le compteur", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Il est de la responsabilité du Propriétaire du Véhicule de s'assurer que tous les indicateurs d'entretien du véhicule sont en état de fonctionnement (section 6.2)."
+    },
+    {
+      "question": "Comment gérer un client qui refuse de fournir la preuve d'entretien ?",
+      "options": ["Accepter", "Expliquer poliment que preuve peut être demandée à tout moment, refus peut entraîner refus réclamation", "Ignorer", "Forcer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que preuve d'entretien peut être demandée à tout moment et refus peut entraîner refus de réclamation (section 6.2)."
+    },
+    {
+      "question": "Quelle est la première étape en cas de panne ?",
+      "options": ["Réparer directement", "Communiquer avec l'Administrateur par téléphone (1-866-666-0181) ou courriel (info@garantieavantageplus.ca) pour aviser de la Panne", "Attendre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "En cas de Panne, le Propriétaire doit communiquer avec l'Administrateur par téléphone (1-866-666-0181) ou courriel pour aviser l'Administrateur de la Panne (section 7)."
+    },
+    {
+      "question": "Un collègue demande de mentir pour couvrir une erreur. Comment réagissez-vous ?",
+      "options": ["Mentir pour l'aider", "Refuser poliment, expliquer importance d'intégrité, suggérer d'assumer responsabilité", "Le dénoncer publiquement", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser poliment, expliquer les conséquences du mensonge et encourager l'honnêteté et la prise de responsabilité."
+    },
+    {
+      "question": "Que fait l'agent de l'Administrateur après le contact du propriétaire ?",
+      "options": ["Autorise directement", "Dirige le Propriétaire vers un Centre de Réparation Autorisé où agent soumettra évaluation à l'Administrateur", "Refuse", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'agent de l'Administrateur dirigera le Propriétaire vers un Centre de Réparation Autorisé où un agent soumettra une évaluation (aux frais du propriétaire) à l'Administrateur (section 7)."
+    }
+  ]
+}
+

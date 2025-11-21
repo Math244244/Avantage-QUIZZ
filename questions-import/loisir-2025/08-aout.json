@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 8,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le redresseur électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre redresseur, alternateur, régulateur de tension et stator."
+    },
+    {
+      "question": "Un client demande si les frais de location d'outils spécialisés sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, frais de location d'outils/équipement spécial exclus", "Oui, jusqu'à 200$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout frais de location d'outils ou d'équipement spécial pour effectuer les réparations est exclu (section 4.7)."
+    },
+    {
+      "question": "Le stator est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre stator, rotor, redresseur et régulateur de tension."
+    },
+    {
+      "question": "Comment présenter l'option Utilisation en motocross à un client avec une moto dual-sport ?",
+      "options": ["Pas nécessaire", "Requise pour usage motocross/dual-sport, 400$ pour Scooters/Motos", "Optionnelle", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "L'option Utilisation en motocross ou dual-sport (400$) est REQUISE pour Scooters & Motocycles utilisés en motocross/dual-sport."
+    },
+    {
+      "question": "Le rotor électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre rotor, stator, alternateur et redresseur."
+    },
+    {
+      "question": "Un véhicule avec modification du système ECM est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules altérés/modifiés exclus sauf exception approuvée", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Véhicules altérés/modifiés (échappement, ECM, suspension, etc.) sont exclus. Exception possible via représentant Administrateur (section 9.4)."
+    },
+    {
+      "question": "Le relais de charge est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 14 - Électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre relais de charge, régulateur de tension et alternateur."
+    },
+    {
+      "question": "Les dommages dus à corrosion/rouille sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés corrosion/rouille/détérioration exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par corrosion, rouille ou détérioration normale sont exclus (section 4.9)."
+    },
+    {
+      "question": "Les balais de démarreur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 14 - Électrique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Électrique couvre balais de démarreur, démarreur, solénoïde de démarreur et relais de démarreur."
+    },
+    {
+      "question": "Comment gérer un client qui pense que \"tout\" est couvert ?",
+      "options": ["Confirmer", "Expliquer 28 sections couvertes, montrer exclusions (section 4), souligner franchise 0$ Centre Autorisé", "Mentir", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'être transparent : 28 sections couvertes (détaillées), exclusions claires (section 4), franchise 0$ Centre Autorisé."
+    },
+    {
+      "question": "Le module de commande du moteur (ECM) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 14", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre ECM, TCM, BCM, PCM, tous les modules de commande OEM et capteurs."
+    },
+    {
+      "question": "Un client demande garantie pour un véhicule avec MSRP inconnu. Comment procédez-vous ?",
+      "options": ["Accepter automatiquement", "Vérifier MSRP officiel fabricant pour confirmer < 150 000$ CAD", "Refuser directement", "Estimer"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule dont MSRP > 150 000$ CAD est exclu. Il faut vérifier MSRP officiel fabricant avant acceptation (section 9.5)."
+    },
+    {
+      "question": "Le module de commande de transmission (TCM) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre TCM, ECM, PCM, tous les modules de commande OEM et capteurs électroniques."
+    },
+    {
+      "question": "Combien coûte l'option Suspension A+ ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Suspension A+ coûte 300$ et couvre systèmes adaptatifs/actifs/pneumatiques installés en usine."
+    },
+    {
+      "question": "Le module de contrôle de carrosserie (BCM) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 14", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre BCM, ECM, TCM, PCM et tous les modules de commande installés en usine (OEM)."
+    },
+    {
+      "question": "Les dommages dus à modification de logiciel sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus modifications ECM/TCM/logiciel exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Véhicules altérés/modifiés incluant modifications ECM/TCM/logiciel sont exclus sauf exception approuvée (section 9.4)."
+    },
+    {
+      "question": "Le capteur de position du vilebrequin est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur de position du vilebrequin, capteur d'arbre à cames et tous les capteurs électroniques."
+    },
+    {
+      "question": "Un client demande si les frais de diagnostic électronique sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, temps diagnostic/inspection sans réparation exclu (section 4.5)", "Oui, jusqu'à 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Temps consacré au diagnostic, inspection ou dépose d'assemblage sans réparation de pièces couvertes est exclu (section 4.5)."
+    },
+    {
+      "question": "Le capteur de débit massique d'air est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur de débit massique d'air, capteur MAF/MAP et tous les capteurs électroniques du moteur."
+    },
+    {
+      "question": "Comment expliquer la période d'attente de 30 jours/200 km à un client pressé ?",
+      "options": ["Elle n'existe pas", "Obligatoire pour prévenir fraude: 30 jours ET 200 km (ou 20h) depuis livraison. Les DEUX conditions", "Peut être contournée", "Optionnelle"],
+      "correctAnswer": 1,
+      "explanation": "Période d'attente 30 jours ET 200 km (20h) OBLIGATOIRE depuis livraison. LES DEUX conditions doivent être remplies (section 2)."
+    },
+    {
+      "question": "Le capteur d'oxygène (O2) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur d'oxygène, capteur O2/lambda et tous les capteurs électroniques du moteur."
+    },
+    {
+      "question": "Un véhicule avec usage compétition/course est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule usage compétition/course/piste exclu", "Oui, avec supplément 500$", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule ayant servi à compétition, course, véhicule de piste/presse est exclu du programme (section 9.6)."
+    },
+    {
+      "question": "Le capteur de pression absolue du collecteur (MAP) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur MAP, MAF et tous les capteurs de pression/débit du moteur."
+    },
+    {
+      "question": "Comment gérer un client agressif qui veut parler au gérant ?",
+      "options": ["Refuser", "Rester calme, écouter, tenter de résoudre, si nécessaire diriger vers gérant avec résumé professionnel", "Être agressif", "Raccrocher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de rester calme, écouter activement, tenter de résoudre, et si nécessaire, diriger vers superviseur avec contexte professionnel."
+    },
+    {
+      "question": "Le capteur de position du papillon (TPS) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 17", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur de position du papillon, TPS et tous les capteurs du système de contrôle du moteur."
+    },
+    {
+      "question": "Les dommages dus à pneus/chenilles inappropriés sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés pneus/chenilles inappropriés/non recommandés exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects causés par pneus, chenilles ou accessoires inappropriés/non recommandés sont exclus (section 4.3)."
+    },
+    {
+      "question": "Le capteur de pression de carburant est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 16", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur de pression de carburant et tous les capteurs du système de gestion du moteur."
+    },
+    {
+      "question": "Un client demande annulation après 20 jours avec protection garantie. Peut-il ?",
+      "options": ["Non, jamais", "Oui, l'option Protection garantie permet annulation même après 10 jours en cas de vente", "Non, uniquement perte totale", "Avec frais 200$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Protection de garantie (300$) permet annulation et crédit même après 10 jours, incluant en cas de vente (section 27)."
+    },
+    {
+      "question": "Le capteur de vitesse du véhicule est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 15 - Électronique", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électronique couvre capteur de vitesse du véhicule, capteurs de vitesse de roue et tous les capteurs électroniques."
+    },
+    {
+      "question": "Un collègue demande de mentir pour lui. Comment réagissez-vous professionnellement ?",
+      "options": ["Mentir pour l'aider", "Refuser poliment, expliquer importance d'intégrité, suggérer d'assumer responsabilité", "Le dénoncer publiquement", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser poliment, expliquer les conséquences du mensonge et encourager l'honnêteté."
+    }
+  ]
+}
+

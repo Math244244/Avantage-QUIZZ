@@ -65,7 +65,7 @@ let MOCK_QUESTIONS = loadDemoQuestions();
 
 const MOCK_STATS = {
     total: 240,
-    byModule: { auto: 85, loisir: 62, vr: 54, tracteur: 39 },
+    byModule: { auto: 85, loisir: 62, vr: 54, tracteur: 39, avex: 45, 'hasard-route': 38 },
     recent: 12
 };
 

@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 9,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle est la distance minimale d'immobilisation pour être admissible au remboursement d'hébergement ?",
+      "options": ["100 km", "200 km", "300 km", "500 km"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement d'hébergement (section 27) s'applique si le propriétaire est immobilisé à plus de 300 km de son adresse indiquée au contrat."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AP ?",
+      "options": ["500$", "1 000$", "1 500$", "2 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP a un montant maximum par réclamation de 1 000$ selon les détails financiers."
+    },
+    {
+      "question": "L'accumulateur de pression des freins est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Freins couvre l'accumulateur de pression des freins, le boîtier de soupapes et la pompe hydraulique."
+    },
+    {
+      "question": "Un client avec un Nissan Rogue 2020 de 105 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Nissan ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 0,
+      "explanation": "Nissan fait partie de la Catégorie A incluant Acura, Genesis, Honda, Hyundai, Infiniti, Kia, Lexus, Mitsubishi, Scion, Suzuki et Toyota."
+    },
+    {
+      "question": "Quel programme offre la couverture la plus complète disponible ?",
+      "options": ["Programme AT", "Programme AX-3", "Programme AT PLUS", "Programme AVE"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS couvre les sections 1 à 27, offrant la couverture la plus complète de tous les programmes."
+    },
+    {
+      "question": "Combien coûte l'option Solde de couverture pour le programme AVE ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Solde de couverture coûte 200$ pour le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "L'interrupteur de réglage de sièges électriques est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 20", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre l'interrupteur de réglage de sièges électriques, mais les engrenages sont exclus."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AT ?",
+      "options": ["140 000 km", "180 000 km", "200 000 km", "225 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT s'applique aux véhicules ayant 200 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Le module de délai de lave-glace est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre le module de délai de lave-glace ainsi que la pompe de lave-glace avant et arrière."
+    },
+    {
+      "question": "Comment expliquer la différence entre le programme AT et AT PLUS à un client indécis ?",
+      "options": ["Ils sont identiques", "AT PLUS couvre 11 sections supplémentaires (17-27), Service routier + inclus et valeur totale du véhicule", "AT est meilleur", "AT PLUS coûte moins cher"],
+      "correctAnswer": 1,
+      "explanation": "AT PLUS offre sections 1-27 (vs 1-16), Service routier + inclus (0$), couverture jusqu'à valeur totale du véhicule et plus d'options disponibles."
+    },
+    {
+      "question": "Le programme AVE a-t-il une franchise ?",
+      "options": ["Non, aucune franchise", "Oui, 100$", "Oui, 125$", "Oui, 150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVE a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Les disques de freins sont-ils couverts ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les disques de freins, plaquettes, tambours et sabots font partie de l'entretien et sont exclus selon la section 4.2 - Exclusions."
+    },
+    {
+      "question": "Quelle est la condition d'admissibilité pour l'option Solde de couverture ?",
+      "options": ["Aucune condition", "Le véhicule doit être sous garantie du fabricant", "Véhicule de 5 ans et moins", "Véhicule neuf seulement"],
+      "correctAnswer": 1,
+      "explanation": "L'option Solde de couverture nécessite que le véhicule soit sous garantie du fabricant pour s'appliquer (section 3 - Options)."
+    },
+    {
+      "question": "Le cylindre des roues est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Accessoires Essentiels couvre le cylindre des roues et les roulements des roues."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AT si celui-ci a 10 ans et moins ?",
+      "options": ["8 ans", "10 ans avec tous les termes disponibles", "12 ans", "15 ans"],
+      "correctAnswer": 1,
+      "explanation": "Si le véhicule a 10 ans et moins et 200 000 km et moins, le programme AT est disponible pour 12, 24, 36, 48 ou 60 mois."
+    },
+    {
+      "question": "Les interrupteurs des verrouillages de portières sont couverts dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 20", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre les interrupteurs des verrouillages de portières et l'activateur de verrouillage."
+    },
+    {
+      "question": "Un client mécontent menace de laisser une mauvaise évaluation en ligne si vous ne baissez pas le prix. Comment réagissez-vous ?",
+      "options": ["Céder immédiatement", "Rester professionnel, expliquer la valeur et accepter que le client fasse son choix", "Menacer le client en retour", "Offrir un rabais important"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de maintenir ses principes, d'expliquer calmement la valeur offerte et de respecter la décision du client sans céder au chantage."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AX-2 ?",
+      "options": ["1 000$", "1 500$", "2 000$", "3 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-2 a un montant maximum par réclamation de 1 500$ selon les détails financiers."
+    },
+    {
+      "question": "Les tambours de freins sont-ils couverts ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclus", "Oui, section 20"],
+      "correctAnswer": 2,
+      "explanation": "Les tambours de freins, disques, plaquettes et sabots font partie de l'entretien et sont exclus selon la section 4.2 - Exclusions."
+    },
+    {
+      "question": "Combien coûte l'option 2 x Réclamation pour le programme AVE ?",
+      "options": ["150$", "200$", "250$", "300$"],
+      "correctAnswer": 3,
+      "explanation": "L'option 2 x Réclamation coûte 300$ pour le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "L'option 2 x Réclamation est-elle disponible pour le programme AX-1 ?",
+      "options": ["Oui, coûte 150$", "Oui, coûte 250$", "Non, pas disponible", "Oui, incluse"],
+      "correctAnswer": 2,
+      "explanation": "L'option 2 x Réclamation n'est pas listée dans les options disponibles pour le programme AX-1. Elle est disponible pour AX-3, AT PLUS et AVE."
+    },
+    {
+      "question": "Les pistons d'étriers de freins sont couverts dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - Accessoires Essentiels couvre les pistons d'étriers de freins à disque avant et arrière."
+    },
+    {
+      "question": "Un collègue vous demande de falsifier la date de livraison pour aider un client. Que faites-vous ?",
+      "options": ["Accepter pour aider", "Refuser catégoriquement car c'est illégal et contraire à l'éthique", "Demander une compensation", "Accepter discrètement"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle et la loi exigent de refuser toute falsification de documents. C'est illégal et pourrait avoir des conséquences graves."
+    },
+    {
+      "question": "Combien de sections le programme AX-2 couvre-t-il ?",
+      "options": ["6 sections", "11 sections", "12 sections", "16 sections"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-2 couvre les sections 1 à 11 selon la description du programme."
+    },
+    {
+      "question": "Le système de servofrein est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Freins couvre le système de servofrein, le maître-cylindre et les cylindres de roues."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AP ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP a une limite de kilométrage de 20 000 km pour le terme de 12 mois selon la durée du contrat."
+    },
+    {
+      "question": "L'option Remboursement de prime est-elle disponible pour le programme AX-2 ?",
+      "options": ["Oui, coûte 200$", "Oui, coûte 300$", "Non, pas disponible", "Oui, incluse"],
+      "correctAnswer": 2,
+      "explanation": "L'option Remboursement de prime n'est pas listée dans les options disponibles pour le programme AX-2. Elle est disponible pour AT PLUS et AVE."
+    },
+    {
+      "question": "Les sabots de freins sont-ils couverts ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les sabots de freins, plaquettes, disques et tambours font partie de l'entretien et sont exclus selon la section 4.2 - Exclusions."
+    },
+    {
+      "question": "Comment gérer un client qui compare agressivement vos prix avec un concurrent ?",
+      "options": ["Critiquer le concurrent", "Écouter, reconnaître sa recherche et expliquer votre valeur ajoutée (couverture, service, options)", "Baisser immédiatement le prix", "Être agressif en retour"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rester calme, valoriser la démarche du client et expliquer objectivement vos avantages sans dénigrer la concurrence."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour la location de véhicule pendant toute la durée du programme ?",
+      "options": ["150$", "180$", "210$", "240$"],
+      "correctAnswer": 2,
+      "explanation": "La section 26 accorde 30$ par jour jusqu'à 7 jours maximum, soit 210$ maximum pour la durée du programme (30$ × 7 jours)."
+    }
+  ]
+}
+

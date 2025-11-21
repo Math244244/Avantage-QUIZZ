@@ -1,0 +1,146 @@
+{
+  "module": "avex",
+  "month": 10,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Un client dit \"je vais y penser\" après présentation AVEX. Quelle meilleure approche de suivi ?",
+      "options": ["Abandonner", "Approche consultative suivi 5 étapes: 1) Respecter temps réflexion, 2) Offrir répondre questions supplémentaires, 3) Laisser documentation complète (brochure, coordonnées), 4) Proposer appel suivi 24-48h (non pressant), 5) Souligner disponibilité totale. Respect + disponibilité = confiance", "Pression immédiate", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige respect temps réflexion: offrir support questions, documentation complète, suivi non pressant 24-48h, disponibilité totale. Respect + support = conversion qualité durable."
+    },
+    {
+      "question": "Comment expliquer processus réclamation AVEX de façon simple mémorable ?",
+      "options": ["C'est compliqué", "Méthode \"5C\" mémorable: 1) CONTACTER Administrateur (1-866-666-0181), 2) CENTRE Autorisé dirigé, 3) CONTRÔLE évaluation soumise, 4) CONFIRMATION autorisation écrite, 5) COUVERTURE réparation effectuée. Simple, clair, mémorable", "Lire contrat", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à simplifier mémorablement: méthode \"5C\" (Contacter, Centre, Contrôle, Confirmation, Couverture) = processus simple clair mémorable client."
+    },
+    {
+      "question": "Un client avec véhicule Tarif Usagé demande si \"moins de services disponibles\". Que répondre ?",
+      "options": ["Oui, limités", "Corriger FERMEMENT: Services ABSOLUMENT IDENTIQUES Récent/Usagé: 1) 17 composants couverts, 2) 9 inclusions (Service Routier, Courtoisie, Hébergement, etc.), 3) Franchise 0$ Centre Autorisé, 4) Processus identique, 5) Support identique. ZÉRO différence services, seul tarif ajusté", "Confirmer différence", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction forte: services/couverture/processus ABSOLUMENT IDENTIQUES Récent/Usagé (17 composants, 9 inclusions, franchise 0$, etc.), seul tarif reflète âge/km, égalité totale."
+    },
+    {
+      "question": "Comment présenter Option Protection garantie (300$) pour maximiser valeur perçue ?",
+      "options": ["Pas utile", "Présenter 4 bénéfices concrets: 1) Si perte totale/vol = crédit jusqu'à 1000$ (égal franchise assurance) sur nouvelle garantie, 2) Crédit max 2000$ total avec garantie, 3) Protection investissement garantie si malheur, 4) Termes 36+ mois seulement. 300$ = assurance sur assurance, tranquillité totale", "C'est cher", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: Option 300$ = \"assurance sur assurance\" (crédit 1000$-2000$ si perte totale/vol), protection investissement garantie, tranquillité totale situations malheureuses."
+    },
+    {
+      "question": "Un client avec usage commercial veut savoir si couverture différente. Que répondre ?",
+      "options": ["Oui, limitée", "Expliquer: Couverture IDENTIQUE usage commercial/personnel (17 composants complets). Ajout Option Utilisation spécialisée (200$) recommandée usage commercial (adaptation couverture sollicitation supérieure), mais couverture BASE identique", "C'est différent", "Selon l'usage"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté: couverture BASE identique (17 composants) usage commercial/personnel, Option Utilisation spécialisée 200$ recommandée commercial (adaptation sollicitation), base identique."
+    },
+    {
+      "question": "Comment gérer client qui veut garantie pour véhicule 5 ans exactement et 80 500 km ?",
+      "options": ["Tarif Récent", "Tarif USAGÉ car 80 500 km DÉPASSE limite Récent (≤80 000 km), même si âge = limite exacte (≤5 ans). Critères CUMULATIFS stricts: âge ≤5 ans ET km ≤80 000 km TOUS DEUX requis. 80 500 km exclu Récent, admissible Usagé", "Non admissible", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige précision critères stricts: Tarif Récent = âge ≤5 ans ET km ≤80 000 km (strictement), 80 500 km dépasse limite (même 500 km), Tarif Usagé applicable (≤10 ans/160k km)."
+    },
+    {
+      "question": "Un client demande si peut changer Centre Autorisé après approbation. Que répondre ?",
+      "options": ["Non, impossible", "Expliquer processus: Autorisation émise = Centre spécifique avec taux horaire/marge convenus. Changement Centre = nouvelle évaluation/autorisation requise. Recommander FORTEMENT utiliser Centre Autorisé initial (franchise 0$, diagnostic remboursé, processus optimisé). Changement possible mais complique processus", "Oui, librement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer: autorisation = Centre spécifique (taux convenus), changement = nouvelle procédure complète, recommander fortement Centre initial (avantages majeurs franchise 0$/diagnostic), changement complique."
+    },
+    {
+      "question": "Comment expliquer différence entre Option Réparation ouverte (300$) et limite standard 10k$ ?",
+      "options": ["Pas de différence", "Expliquer clairement: Standard = limite 10 000$/réparation (protection excellente majorité cas). Option Réparation ouverte (300$) = ÉLIMINE limite/réparation (jusqu'à Juste Valeur Marchande), pour véhicules haute valeur/réparations potentielles majeures dépassant 10k$ (moteur/transmission haut de gamme). 300$ = tranquillité totale véhicules coûteux", "C'est pareil", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté: standard 10k$/réparation = excellent majorité cas, Option 300$ élimine limite (pour haute valeur/réparations potentielles >10k$), recommander véhicules coûteux/haut de gamme."
+    },
+    {
+      "question": "Un client veut savoir combien temps prend processus autorisation typique. Que répondre ?",
+      "options": ["1 semaine", "Expliquer délais réalistes: 1) Contact Administrateur = immédiat (24/7), 2) Direction Centre Autorisé = même journée, 3) Évaluation Centre soumise = 24-48h généralement, 4) Autorisation Administrateur = 24-48h après réception évaluation. Total typique 2-4 jours ouvrables cas standard. Urgences traitées priorité", "24 heures", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige réalisme délais: contact immédiat, évaluation 24-48h, autorisation 24-48h = total typique 2-4 jours ouvrables cas standard, urgences prioritaires, délais raisonnables transparents."
+    },
+    {
+      "question": "Comment présenter Service Routier INCLUS pour maximiser valeur perçue ?",
+      "options": ["Minimiser", "Valoriser 6 bénéfices concrets: 1) Assistance 24/7 Canada/USA, 2) Remorquage 75 km Centre Autorisé, 3) Démarrage-secours, 4) Crevaison, 5) Livraison carburant 10L, 6) Treuillage/déverrouillage. Valeur 100$-150$/an séparé (CAA/AAA) = 500$-750$ économie terme 60 mois INCLUS gratuit", "Pas important", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation maximale: 6 services concrets 24/7, valeur équivalente CAA/AAA 100$-150$/an, économie potentielle 500$-750$ (terme 60 mois) INCLUS gratuit = différenciateur majeur."
+    },
+    {
+      "question": "Un client dit \"J'ai déjà CAA, pas besoin Service Routier\". Comment répondre ?",
+      "options": ["Accepter", "Expliquer COMPLÉMENTARITÉ: 1) Service Routier AVEX INCLUS (aucun coût additionnel), 2) Remorquage direct Centre Autorisé (processus réclamation simplifié), 3) Double protection (utiliser CAA si Service Routier épuisé 3 appels/an), 4) Aucun coût = valeur ajoutée pure. Ne remplace pas CAA, complète", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer complémentarité: Service Routier INCLUS gratuit (aucun coût additionnel), remorquage direct Centre Autorisé (simplifie processus), double protection disponible, valeur ajoutée pure."
+    },
+    {
+      "question": "Comment expliquer Option Kilométrage ouvert (100$) pour grand rouleur 50k km/an ?",
+      "options": ["Pas nécessaire", "Démontrer ROI exceptionnel: 1) Standard terme 60 mois = 100 000 km (limite atteinte 2 ans pour 50k/an), 2) Option 100$ = km ILLIMITÉS pendant 60 mois COMPLETS (250k km+ possible), 3) 100$ pour 150k km+ supplémentaires = 0,67$ par 1000 km, 4) ROI exceptionnel grand rouleur. Option ESSENTIELLE usage intensif", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration ROI exceptionnel: 100$ pour km illimités (vs limite 100k km atteinte rapidement 50k/an), coût 0,67$/1000 km supplémentaires, ROI extraordinaire grand rouleur."
+    },
+    {
+      "question": "Un client demande si AVEX couvre véhicules électriques. Comment valoriser couverture ?",
+      "options": ["Partiellement", "Valoriser ÉNORMÉMENT: 1) Véhicule électrique COMPLET INCLUS (composant 23: moteur, onduleur, refroidissement, convertisseur, freinage régénératif), 2) Batterie extension 1 an/20k km INCLUSE (composant 24), 3) Haute-tech avancée INCLUSE (21), 4) Aide conduite sophistiquée INCLUSE (22). AVEX = IDÉAL véhicules électriques, couverture la PLUS COMPLÈTE marché", "Basique", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation MAXIMALE véhicules électriques: couverture complète systèmes électriques + batterie + haute-tech + aide conduite INCLUS, AVEX = couverture la plus complète marché électrique."
+    },
+    {
+      "question": "Comment gérer objection \"garantie fabricant couvre déjà, pourquoi AVEX ?\" ?",
+      "options": ["Abandonner", "Réponse 4 points valeur: 1) Garantie fabricant LIMITÉE temps (3-5 ans) ET composants (souvent groupe motopropulseur seulement), 2) AVEX ÉTEND protection (jusqu'à 10 ans/160k km) + ÉLARGIT couverture (17 composants vs 8-12 fabricant), 3) AVEX débute APRÈS fabricant (continuation seamless), 4) 9 inclusions exceptionnelles (haute-tech, hybride, service routier) NON couvertes fabricant. AVEX = COMPLÉMENT essentiel", "Minimiser", "Selon le fabricant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration valeur complémentaire: garantie fabricant limitée (temps/composants), AVEX étend+élargit (jusqu'à 10 ans/160k km, 17 composants), continuation seamless, inclusions exceptionnelles non couvertes fabricant."
+    },
+    {
+      "question": "Un client avec Lexus RX 2021 (4 ans, 70k km) demande si besoin garantie pour marque fiable. Réponse ?",
+      "options": ["Pas nécessaire", "Réponse consultative 4 points: 1) Lexus = fiabilité excellente (reconnu), MAIS électronique moderne sophistiquée (haute-tech, aide conduite) = coûteuse si panne (3k$-10k$+), 2) AVEX couvre systèmes complexes modernes (composants 20-22) INCLUS, 3) Option Modèles sélectifs (400$) pour Lexus = tarification adaptée marque luxe, 4) Fiabilité ≠ invulnérabilité, protection = tranquillité. Recommander AVEX même marques fiables", "Refuser vente", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer: fiabilité excellente (reconnu) mais systèmes modernes complexes coûteux si panne, AVEX couvre électronique sophistiquée, marques fiables = investissements élevés à protéger."
+    },
+    {
+      "question": "Comment expliquer Option Remboursement partiel (300$) pour maximiser intérêt ?",
+      "options": ["Pas intéressant", "Présenter 5 bénéfices attractifs: 1) 300$ investissement pour possibilité récupération 2000$ fin contrat (ROI potentiel 667%), 2) Récompense BON entretien (si aucune réclamation), 3) \"Win-win\": si réclamations = protection reçue, si aucune = remboursement 2000$, 4) Incitation entretien préventif responsable, 5) Termes 36+ mois seulement. Option INTELLIGENTE", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige présentation attractive: 300$ pour 2000$ potentiel (ROI 667%), récompense entretien, scénario \"win-win\" (protection ou remboursement), incitation responsabilité, option intelligente."
+    },
+    {
+      "question": "Un client demande pourquoi franchise 0$ SEULEMENT Centre Autorisé. Comment expliquer logique ?",
+      "options": ["C'est arbitraire", "Expliquer logique business 4 points: 1) Centres Autorisés = taux horaire/marge convenus Administrateur (contrôle coûts), 2) Logiciels temps travail standard (Mitchell/All-Data) = temps maximum défini, 3) Relation établie = processus simplifié efficace, 4) Contrôle qualité/coûts permet franchise 0$ (économie transférée client). Système gagnant-gagnant-gagnant (client-centre-administrateur)", "C'est injuste", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique: Centres Autorisés = taux/temps/marges convenus (contrôle coûts) + processus optimisé = permet franchise 0$ (économie transférée client), système équitable efficient."
+    },
+    {
+      "question": "Comment présenter AVEX à un jeune acheteur premier véhicule (budget serré) ?",
+      "options": ["Trop cher pour lui", "Approche adaptée jeune acheteur 5 points: 1) Expliquer risque financier panne majeure (8k$-15k$ = catastrophique budget serré), 2) Démontrer coût mensuel raisonnable (ex: 60 mois 2175$ = 36$/mois = 2 cafés/jour), 3) Protection = budget prévisible (vs surprise coûteuse), 4) Options minimales possibles (base excellent), 5) Tranquillité esprit = priceless jeune propriétaire. AVEX = SÉCURITÉ financière essentielle", "Décourager", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche adaptée: expliquer risque catastrophique budget serré (panne majeure), coût mensuel raisonnable (36$/mois), budget prévisible, options minimales OK, sécurité financière essentielle jeune."
+    },
+    {
+      "question": "Un client demande combien de réclamations clients AVEX font en moyenne. Comment répondre professionnellement ?",
+      "options": ["Inventer chiffres", "Réponse professionnelle honnête: 1) Ne pas inventer statistiques non vérifiées, 2) Expliquer: majorité clients n'ont AUCUNE ou peu réclamations (véhicules fiables + bon entretien), 3) MAIS une SEULE réclamation majeure (moteur, transmission 5k$-15k$) justifie coût AVEX, 4) Garantie = ASSURANCE tranquillité esprit (espoir ne jamais utiliser, protection si besoin). Honnêteté = confiance", "Mentir", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté: ne pas inventer statistiques, expliquer majorité aucune/peu réclamations (bon entretien), une majeure justifie coût, garantie = assurance tranquillité, honnêteté = confiance durable."
+    },
+    {
+      "question": "Comment gérer client mécontent d'exclusion spécifique (ex: embrayage) ?",
+      "options": ["Défendre rigidement", "Approche empathique 4 étapes: 1) ÉCOUTER frustration (valider émotion), 2) EXPLIQUER logique exclusion (embrayage = pièce usure durée vie variable selon conduite, coûts modérés vs transmission interne coûteuse COUVERTE), 3) SOULIGNER ce qui EST couvert (transmission interne complète), 4) RESPECTER si décision négative. Empathie + transparence + respect", "Argumenter fortement", "Minimiser préoccupation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie: écouter frustration (valider), expliquer logique exclusion transparente (usure variable vs composants coûteux couverts), souligner couverture positive, respecter décision. Empathie + transparence."
+    },
+    {
+      "question": "Un collègue vend systématiquement terme 12 mois (commission rapide) au lieu recommander terme long optimal. Comment réagir ?",
+      "options": ["L'imiter", "Intervenir professionnellement: 1) Expliquer que recommandation doit être basée MEILLEUR INTÉRÊT CLIENT (protection long terme, ROI optimal terme long), pas commission court terme, 2) Terme court = mauvais ROI client (ratio coût/protection défavorable), 3) Client insatisfait terme court = réputation ternie entreprise, 4) Signaler direction si récurrent. INTÉRÊT CLIENT toujours priorité", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention: recommandations basées MEILLEUR INTÉRÊT CLIENT (terme long = ROI optimal), pas commission court terme, terme court = mauvais ROI + réputation, signaler si récurrent."
+    },
+    {
+      "question": "Comment maximiser satisfaction client APRÈS vente AVEX ?",
+      "options": ["Vente terminée", "Approche service après-vente 6 étapes: 1) Appel suivi 1 semaine (répondre questions post-achat), 2) Rappel importance conservation Documentation vérifiable, 3) Rappel coordonnées Administrateur (1-866-666-0181), 4) Offrir assistance si questions futures, 5) Suivi annuel (satisfaction, rappel couverture), 6) Demander référence si satisfaction. Service continu = fidélité + références", "Aucun suivi", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige service après-vente: suivi 1 semaine (questions), rappels importants (documentation, coordonnées), assistance continue offerte, suivi annuel, demande référence = fidélité durable + références qualité."
+    },
+    {
+      "question": "Un client demande si peut annuler AVEX dans 10 jours \"juste pour essayer\". Comment répondre éthiquement ?",
+      "options": ["Encourager", "Réponse éthique transparente: 1) OUI, annulation possible 10 premiers jours directement avec Distributeur (section 10.2.a), 2) MAIS acheter garantie = décision sérieuse (protection long terme), pas \"essai\", 3) Encourager réflexion complète AVANT achat (poser toutes questions maintenant), 4) Si incertitude = prendre temps nécessaire décision informée. Vente responsable > vente rapide", "Encourager annulation", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige vente responsable: confirmer droit annulation 10 jours, mais encourager décision réfléchie AVANT achat (questions complètes), incertitude = prendre temps, vente qualité > vente rapide."
+    }
+  ]
+}
+

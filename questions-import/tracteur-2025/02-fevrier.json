@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 2,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le boîtier de différentiel avant/arrière, arbre et pignons sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Groupe motopropulseur", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Groupe motopropulseur couvre boîtier de différentiel avant/arrière, arbre, pignons, bagues et essieux."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement vérification ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement frais de vérification coûte 150$ et rembourse les frais si la réparation a été approuvée et réalisée dans un Centre Autorisé (section 3)."
+    },
+    {
+      "question": "Les bras de levage et plateau cyclique (swashplate) sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Groupe motopropulseur", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Groupe motopropulseur couvre bras de levage, plateau cyclique (swashplate), cylindres et tous les joints liés à la réparation."
+    },
+    {
+      "question": "Un tracteur agricole de 4 ans avec 2 000 heures est-il admissible à la Tarification A ?",
+      "options": ["Non, trop vieux", "Oui, Tarification A accepte ≤5 ans et <2 500 heures", "Seulement avec option", "Admissible Tarification B"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A accepte véhicules de 5 ans et moins avec moins de 2 500 heures. Un tracteur de 4 ans/2 000 heures est admissible."
+    },
+    {
+      "question": "L'ensemble de direction assistée avec tiges, arbre et cylindres est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 3 - Système de direction et de freinage", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 - Système de direction et de freinage couvre ensemble de direction assistée comprenant les tiges, l'arbre et les cylindres."
+    },
+    {
+      "question": "Comment expliquer la différence entre ATC-AU et ATC-CE à un client ?",
+      "options": ["Aucune différence", "ATC-AU: Agricole/Utilité <250 HP, option 600 HP. ATC-CE: Construction <250 HP, exclut camions benne/bouteurs", "C'est pareil", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : ATC-AU (agricole, option HP 600) vs ATC-CE (construction, exclusions spécifiques)."
+    },
+    {
+      "question": "Les rotules et roulements de roue sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 3 - Système de direction et de freinage", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 - Système de direction et de freinage couvre rotules, roulements de roue, tirants et assemblage universel des joints."
+    },
+    {
+      "question": "Quelle est la puissance maximale de base admissible pour les programmes ATC ?",
+      "options": ["100 HP", "150 HP", "250 HP (185 kW)", "500 HP"],
+      "correctAnswer": 2,
+      "explanation": "Les programmes ATC-AU et ATC-CE s'appliquent aux véhicules ayant une puissance de moteur inférieure à 250 HP (185 kW) (Description et Admissibilité)."
+    },
+    {
+      "question": "L'ensemble de l'arbre de frein et maître-cylindre de frein sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 3 - Système de direction et de freinage", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 - Système de direction et de freinage couvre ensemble de l'arbre de frein, maître-cylindre de frein, régulateur de vitesse."
+    },
+    {
+      "question": "Les dommages dus à un accident sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, réparation due à accident, collision, mauvaise utilisation ou abus exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à accident, collision, mauvaise utilisation, abus ou hasards de la route est exclue (section 5.4)."
+    },
+    {
+      "question": "Le contrôle d'embrayage de prise de force (PTO) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 3 - Système de direction et de freinage", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 - Système de direction et de freinage couvre régulateur de vitesse, contrôle d'embrayage de prise de force et tous les joints liés."
+    },
+    {
+      "question": "Combien coûte l'option 2x allocation d'heures par année ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 3,
+      "explanation": "L'option 2x allocation heures par année coûte 250$ et double l'utilisation horaire autorisée indiquée sur le programme, par année du terme (section 3)."
+    },
+    {
+      "question": "La pompe et boîtier hydrauliques, engrenages et conduites sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 4 - Hydrauliques", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Hydrauliques couvre pompe et boîtier hydrauliques, engrenages et conduites, pompe axiale et vannes de commande."
+    },
+    {
+      "question": "Comment expliquer l'option 2x allocation heures à un client avec usage intensif ?",
+      "options": ["Pas nécessaire", "250$ pour doubler l'utilisation horaire autorisée par année, idéal pour usage intensif/agricole saison longue", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (250$) double les heures autorisées par année, parfaite pour usage intensif ou saison agricole longue."
+    },
+    {
+      "question": "Les vannes de commande auxiliaires et directionnelles sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 4 - Hydrauliques", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Hydrauliques couvre pompe axiale, vannes de commande auxiliaires et directionnelles, soupape centrale, cylindre et adaptateur."
+    },
+    {
+      "question": "Un équipement de construction bouteur est-il admissible au programme ATC-CE ?",
+      "options": ["Oui, automatiquement", "Non, camions à benne et bouteurs exclus du programme ATC-CE", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-CE (Équipement de Construction) exclut spécifiquement les camions à benne et les bouteurs (section 2 - Exclusions spécifiques)."
+    },
+    {
+      "question": "Les cylindres hydrauliques, ressorts et joints toriques sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 4 - Hydrauliques", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Hydrauliques couvre cylindre et adaptateur, ressorts, joints toriques et tous les autres joints et joints liés à la réparation."
+    },
+    {
+      "question": "Les réparations effectuées hors Canada/USA sont-elles couvertes ?",
+      "options": ["Oui, partout", "Non, toute panne à l'extérieur du Canada ou zone continentale USA exclue", "Oui, avec supplément", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Toute Panne qui se produit à l'extérieur du Canada ou de la zone continentale des États-Unis est exclue (section 10.f)."
+    },
+    {
+      "question": "L'alternateur, rotor et démarreur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Électricité et climatisation", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Électricité et climatisation couvre alternateur, rotor, démarreur, ensemble de commutateur de démarrage et carte de commande."
+    },
+    {
+      "question": "Comment gérer un client qui veut réparer sans contacter l'Administrateur ?",
+      "options": ["Accepter", "Expliquer processus obligatoire: contacter 1-866-666-0181 ou info@garantieavantageplus.ca AVANT réparation", "Ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer le processus obligatoire : contacter Administrateur AVANT réparation pour obtenir autorisation (section 7)."
+    },
+    {
+      "question": "La carte de commande, relais d'unité et contrôleur de relais sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Électricité et climatisation", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Électricité et climatisation couvre carte de commande, relais d'unité, contrôleur de relais, capteurs de commutateur de moteur."
+    },
+    {
+      "question": "Combien coûte l'option HP Limitation pour ATC-AU ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 3,
+      "explanation": "L'option HP Limitation (ATC-AU) coûte 250$ et permet de couvrir des véhicules jusqu'à 600 HP maximum (section 3)."
+    },
+    {
+      "question": "Les capteurs de pompe hydraulique et régulateurs de capteurs sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Électricité et climatisation", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Électricité et climatisation couvre capteurs de commutateur de moteur, capteurs de pompe hydraulique, régulateurs de capteurs."
+    },
+    {
+      "question": "L'option HP Limitation est-elle disponible pour le programme ATC-CE ?",
+      "options": ["Oui, tous programmes", "Non, disponible uniquement pour ATC-AU (Agricultural / Utility)", "Oui, avec supplément", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation (250$) est disponible uniquement pour les tracteurs ATC-AU (Agricultural / Utility) jusqu'à 600 HP maximum (section 3)."
+    },
+    {
+      "question": "Le moteur et faisceau de câblage électrique du groupe motopropulseur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Électricité et climatisation", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Électricité et climatisation couvre moteur et faisceau de câblage électrique du groupe motopropulseur."
+    },
+    {
+      "question": "Comment expliquer l'option HP Limitation à un client avec gros tracteur agricole 500 HP ?",
+      "options": ["Non applicable", "250$ pour couvrir tracteur ATC-AU jusqu'à 600 HP (au lieu de limite 250 HP de base)", "C'est inclus", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (250$) permet de couvrir les tracteurs agricoles jusqu'à 600 HP au lieu de la limite 250 HP de base."
+    },
+    {
+      "question": "Le compresseur et poulie de climatisation sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Ensemble (HVAC)", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Ensemble (HVAC) couvre compresseur et poulie de climatisation, condenseur, sécheur, noyau de chauffage et moteur de soufflante."
+    },
+    {
+      "question": "Un tracteur agricole de 350 HP est-il admissible au programme ATC-AU de base ?",
+      "options": ["Oui, automatiquement", "Non, base <250 HP. Nécessite option HP Limitation 250$ (couvre jusqu'à 600 HP)", "Non admissible", "Avec autre option"],
+      "correctAnswer": 1,
+      "explanation": "Le programme de base ATC-AU couvre <250 HP. Pour 350 HP, il faut l'option HP Limitation (250$) qui couvre jusqu'à 600 HP maximum."
+    },
+    {
+      "question": "Le panneau de commande de la température de la cabine est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 5 - Ensemble (HVAC)", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Ensemble (HVAC) couvre condenseur, sécheur, noyau de chauffage, moteur de soufflante et panneau de commande de la température de la cabine."
+    },
+    {
+      "question": "Un collègue vend une garantie avec fausses informations d'admissibilité. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Signaler au gérant, protéger le client, expliquer conséquences (section 5.7: Administrateur peut exiger preuves)", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler les pratiques frauduleuses (falsification admissibilité) pour protéger le client et l'entreprise (conséquences section 5.7)."
+    }
+  ]
+}
+

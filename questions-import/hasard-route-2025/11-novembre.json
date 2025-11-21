@@ -1,0 +1,164 @@
+{
+  "module": "hasard-route",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quels véhicules Bentley sont admissibles au programme Hasard de Route ?",
+      "options": ["Tous Bentley", "Tous Bentley MSRP ≤150 000$ CAD = catégorie Super Highline +. MSRP >150 000$ = non admissible (exception Détaillant possible avant vente)", "Seulement certains modèles", "Selon l'année"],
+      "correctAnswer": 1,
+      "explanation": "Bentley (catégorie Super Highline +) : tous modèles MSRP ≤150 000$ CAD admissibles automatiquement. MSRP >150 000$ = non admissible standard (exception possible Détaillant avant vente, frais supplémentaires)."
+    },
+    {
+      "question": "Un client achète Tesla Model S Plaid (MSRP 140 000$). Quelle catégorie et tarif 60 mois ?",
+      "options": ["Highline", "Catégorie Super Highline + (Tesla), tarif 60 mois = 2 362$", "Super Highline", "Standard"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige précision : Tesla = catégorie Super Highline + (quelle que soit le modèle), tarif 60 mois = 2 362$ (modèles ≤150k$ MSRP admissibles)."
+    },
+    {
+      "question": "Comment justifier tarif Super Highline + (2362$) vs Standard (927$) à client Tesla sceptique ?",
+      "options": ["Pas justifiable", "Démontrer COÛTS RÉELS TESLA : Pare-brise panoramique Tesla = 2000$-2500$ (vs 400$-600$ standard), Phares LED adaptatifs = 1200$ CHAQUE (vs 300$ standard), Roues 20\" spécialisées = 800$ (vs 300$ standard), Clé intelligente = 800$ (vs 400$ standard). Tarif 2362$ = 4-5 réclamations seulement. ROI excellent véhicule haute technologie", "Minimiser différence", "Rabais"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration coûts réels Tesla : pare-brise 2000$-2500$, phares 1200$ chaque, roues 800$, clés 800$ (vs standard 3x-5x moins), tarif 2362$ = 4-5 réclamations seulement, ROI excellent technologie."
+    },
+    {
+      "question": "Quel est l'avantage PRINCIPAL du programme Hasard de Route pour véhicules LUXE ?",
+      "options": ["Prestige", "Avantage FINANCIER MAJEUR : pièces luxe = coûts 3x-5x supérieurs standard (pare-brise, phares, roues, clés). UNE SEULE réclamation majeure (pare-brise Tesla 2500$) paie programme COMPLET (2362$). Protection essentielle investissement majeur. ROI potentiel exceptionnel", "Service VIP", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser ROI luxe : pièces 3x-5x plus coûteuses, 1 seule réclamation majeure (pare-brise Tesla 2500$) paie programme complet (2362$), protection essentielle investissement, ROI potentiel exceptionnel."
+    },
+    {
+      "question": "Un client Volkswagen Jetta 2024 (catégorie Standard) hésite entre terme 36 mois et 84 mois. Que conseiller ?",
+      "options": ["36 mois suffisant", "Recommander FORTEMENT 84 mois : Différence = 847$ (36 mois) vs 1026$ (84 mois) = 179$ pour 48 mois ADDITIONNELS protection = 3,73$/mois supplémentaire. Ratio mensuel : 84 mois = 12,21$/mois vs 36 mois = 23,53$/mois. Économie 11,32$/mois + 4 ans protection additionnelle. ROI évident", "Selon le budget", "36 mois"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration ROI : différence 179$ = 3,73$/mois pour 48 mois additionnels, ratio 84 mois (12,21$/mois) vs 36 mois (23,53$/mois) = économie 11,32$/mois + 4 ans additionnels, ROI évident."
+    },
+    {
+      "question": "Comment expliquer la période d'attente 90 jours protection CLÉ + TÉLÉCOMMANDE à client frustré ?",
+      "options": ["Ignorer frustration", "Démontrer EMPATHIE + LOGIQUE : \"Comprends frustration perte clé jour 30. Période 90 jours = standard industrie prévention abus (réclamations immédiates post-achat). Protège intégrité programme + coûts (bénéficie TOUS clients long terme). Client remplace clé ses frais, envoie facture preuve = couverture rétablie immédiatement. Équité collective\"", "Faire exception", "Blâmer assureur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie + fermeté : comprendre frustration sincèrement, période 90 jours = standard industrie prévention abus, protège intégrité coûts (bénéfice tous), client remplace envoie facture = rétablissement, équité collective."
+    },
+    {
+      "question": "Un client a utilisé 1800$ sur limite 2000$ Peinture+Éraflures (mois 40/84). Que dire ?",
+      "options": ["Rien", "Information PROACTIVE : \"Vous avez utilisé 1800$ sur limite 2000$ peinture (200$ restants). Occurrences illimitées mais limite cumulative. Toutes autres 9 protections (pneus, pare-brise, clés, etc.) continuent NORMALEMENT illimitées. Gérer prioriser éraflures restantes importantes visibles. Autres protections = pleine capacité\"", "Attendre épuisement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à information proactive transparente : utilisé 1800$/2000$ (200$ restants), occurrences illimitées limite cumulative, autres 9 protections continuent normalement illimitées, gérer prioriser restant, transparence gestion."
+    },
+    {
+      "question": "Comment gérer un client ayant atteint limite 15 000$ totale (mois 70/84) ?",
+      "options": ["Aucune action", "Approche RELATIONNELLE : 1) Féliciter utilisation maximale (ROI exceptionnel), 2) Confirmer contrat termine (limite atteinte), 3) Expliquer aucun remboursement prorata (limite épuisée = fin), 4) Proposer nouveau contrat véhicule suivant (si admissible), 5) Remercier fidélité. Gestion positive fin contrat", "Ignorer", "Offrir extension"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige gestion positive : féliciter utilisation maximale ROI exceptionnel, confirmer fin contrat (limite atteinte), expliquer aucun remboursement (épuisement), proposer nouveau contrat futur, remercier fidélité, relationnel positif."
+    },
+    {
+      "question": "Un client demande \"Quelle est LA protection la plus utilisée du programme ?\" Que répondre ?",
+      "options": ["Toutes égales", "Répondre STATISTIQUES RÉELLES (si disponibles) : \"Statistiquement : 1) PNEU + ROUE (40-50% réclamations - routes Québec/gravier fréquent), 2) RÉPARATION PARE-BRISE (25-30% - éclats pierres autoroutes), 3) CLÉ + TÉLÉCOMMANDE (10-15% - pertes courantes). Votre profil utilisation (trajets, région, famille) détermine protections plus utiles VOUS\"", "Pneus seulement", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à données + personnalisation : statistiques réelles (pneus 40-50%, pare-brise 25-30%, clés 10-15%), expliquer raisons (routes gravier autoroutes), personnaliser profil client (trajets région famille)."
+    },
+    {
+      "question": "Comment expliquer différence entre protection COSMÉTIQUE ROUES et PNEU + ROUE ?",
+      "options": ["Même chose", "Clarification DISTINCTION : COSMÉTIQUE ROUES = dommages ESTHÉTIQUES face extérieure (rayures trottoir stationnement), roue FONCTIONNE, réparation visuelle (illimité). PNEU + ROUE = roue HORS D'USAGE (non-fonctionnelle), pneu crevé dangereux, remplacement/réparation fonctionnel (illimité). Deux protections COMPLÉMENTAIRES scénarios différents (esthétique vs fonctionnel)", "Ignorer nuance", "Selon le dommage"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige distinction claire : Cosmétique = esthétique face extérieure roue fonctionnelle (réparation visuelle), Pneu+Roue = roue non-fonctionnelle pneu dangereux (remplacement fonctionnel), deux complémentaires scénarios (esthétique vs fonctionnel)."
+    },
+    {
+      "question": "Un client jeune famille (2 enfants 3 et 5 ans) hésite acheter Hasard de Route. Quels arguments personnalisés ?",
+      "options": ["Arguments génériques", "Arguments PERSONNALISÉS FAMILLE : 1) PROTECTION INTÉRIEUR illimitée = essentiel enfants (boissons renversées, nourriture, crayons, déchirures sièges - réparations 300$-500$ chaque), 2) CLÉ + TÉLÉCOMMANDE (1250$) = enfants jouent clés (pertes fréquentes), 3) COSMÉTIQUE ROUES = stationnement garderies/écoles (frottements trottoirs), 4) Coût 12$/mois Standard = moins couches journée. ROI majeur profil famille", "Ignorer contexte", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à personnalisation profil : intérieur illimité essentiel enfants (boissons nourriture déchirures 300$-500$), clés 1250$ (enfants jouent pertes), cosmétique roues (garderies trottoirs), coût 12$/mois < couches, ROI majeur famille."
+    },
+    {
+      "question": "Un client conducteur longs trajets autoroute (50 000 km/an) hésite. Quels arguments personnalisés ?",
+      "options": ["Arguments génériques", "Arguments PERSONNALISÉS AUTOROUTE : 1) PARE-BRISE réparation + franchise/remplacement (1000$) = essentiel autoroute (projections pierres camions fréquentes), 2) PNEU + ROUE illimité = kilométrage élevé usure débris (2-3 pneus/an potentiel 600$-900$), 3) PHARES/FEUX (1250$) = débris impacts fréquents, 4) REMORQUAGE (150$) = panne éloignement domicile. Profil haute utilisation = ROI exceptionnel", "Ignorer kilométrage", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à personnalisation kilométrage : pare-brise réparation+remplacement essentiel (projections pierres camions), pneus illimité (2-3/an 600$-900$), phares débris impacts, remorquage éloignement, haute utilisation = ROI exceptionnel."
+    },
+    {
+      "question": "Comment gérer objection \"Mon assurance auto couvre déjà pare-brise franchise 0$\" ?",
+      "options": ["Abandonner", "Réponse COMPLÉMENTARITÉ : \"Excellent couverture pare-brise assurance (franchise 0$). Hasard de Route = 9 AUTRES protections (pneus illimité, clés 1250$, intérieur illimité, bosses, peinture, phares, remorquage) NON couvertes assurance. Pare-brise = 1/10 protections. Investissement 12$/mois Standard = 9 protections additionnelles + remorquage/location. Complémentaire (pas redondant)\"", "Accepter objection", "Réduire prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige repositionnement complémentarité : assurance pare-brise = excellent, Hasard de Route = 9 autres protections non couvertes assurance (pneus clés intérieur bosses peinture phares remorquage), 12$/mois = 9 protections additionnelles, complémentaire."
+    },
+    {
+      "question": "Un client région montagneuse (Charlevoix, Gaspésie) hésite. Quels arguments géographiques personnalisés ?",
+      "options": ["Arguments génériques", "Arguments GÉOGRAPHIQUES : 1) PNEU + ROUE illimité = ESSENTIEL régions montagneuses (routes gravier, nids-poule fréquents, projections pierres virages - 3-4 pneus/an potentiel 900$-1200$), 2) PARE-BRISE = routes graviers camions forestiers (projections constantes), 3) REMORQUAGE 150$ = éloignement services (75-100 km concessionnaire = 200$-300$ remorquage réel). Géographie = ROI majeur protection indispensable", "Ignorer région", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à personnalisation géographique : pneus illimité essentiel montagnes (gravier nids-poule 3-4/an 900$-1200$), pare-brise graviers camions, remorquage éloignement (75-100 km = 200$-300$ réel), géographie = ROI majeur indispensable."
+    },
+    {
+      "question": "Comment expliquer limite 5 cm (2 pouces) bosses sans peinture à client avec bosse 7 cm ?",
+      "options": ["Couvrir quand même", "Explication TECHNIQUE + ALTERNATIVE : \"Bosse 7 cm dépasse limite 5 cm (2 pouces). Logique : technique PDR (sans peinture) efficace SEULEMENT petites bosses ≤5 cm (risque endommager peinture au-delà). Bosse 7 cm = nécessite PEINTURE. BONNE NOUVELLE : programme couvre PEINTURE + ÉRAFLURES (2000$ total contrat). Votre bosse = admissible protection peinture (pas bosses sans peinture). Protection existe alternative\"", "Faire exception", "Refuser net"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication technique + alternative : 7 cm > limite 5 cm, logique PDR efficace ≤5 cm (risque peinture au-delà), bosse 7 cm = nécessite peinture, bonne nouvelle = peinture+éraflures 2000$ couvre, alternative existe."
+    },
+    {
+      "question": "Un client dit \"J'ai entendu dire que les réclamations sont souvent refusées\". Comment répondre professionnellement ?",
+      "options": ["Nier", "Réponse TRANSPARENTE + DONNÉES : \"Compréhensible inquiétude. Transparence : réclamations refusées = généralement 3 raisons : 1) Dommages EXCLUS contrat (accidents, hors-route, négligence - 40-50% refus), 2) Autorisation préalable NON obtenue (20-30% refus), 3) Preuves insuffisantes/contradictoires (10-15% refus). Réclamations ADMISSIBLES + autorisées préalablement + preuves = taux approbation 95%+. Respect termes + processus = protection garantie\"", "Blâmer clients", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence + données : inquiétude compréhensible, refus = 3 raisons (exclus 40-50%, pas autorisation 20-30%, preuves insuffisantes 10-15%), réclamations admissibles + autorisées + preuves = approbation 95%+, respect = garantie."
+    },
+    {
+      "question": "Comment expliquer exclusion véhicules ALTÉRÉS/MODIFIÉS à client passionné modifications ?",
+      "options": ["Jugement", "Explication RESPECTUEUSE + LOGIQUE : \"Respecte passion modifications (personnalisation véhicule). Programme Hasard de Route = ciblé véhicules ORIGINE usine (vérification admissibilité pièces standards). Modifications (suspensions, échappement, ECM, pneus surdimensionnés) = changent profil risques + disponibilité pièces. Véhicules modifiés = assurances SPÉCIALISÉES modifications (couverture adaptée). Recommander courtier spécialisé. Respect passion + transparence limites\"", "Refuser durement", "Accepter quand même"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige respect + logique : respecter passion modifications (personnalisation), programme ciblé origine (admissibilité pièces standards), modifications = changent risques + disponibilité, véhicules modifiés = assurances spécialisées adaptées, respect + transparence."
+    },
+    {
+      "question": "Un client achète véhicule d'occasion 2019 avec 95 000 km. Admissible Hasard de Route ?",
+      "options": ["Non, trop vieux", "OUI ADMISSIBLE : aucune limite kilométrage/âge véhicule achat (sauf limite combinée âge+terme ≤19 ans). Véhicule 2019 (6 ans en 2025) = peut souscrire terme 84 mois (fin 2032 = 13 ans véhicule < 19 ans limite). Kilométrage 95k km = aucun impact admissibilité. Protection disponible véhicules occasion", "Selon le kilométrage", "Seulement neufs"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté admissibilité : aucune limite km/âge achat (sauf combinée âge+terme ≤19 ans), 2019 = 6 ans peut terme 84 (13 ans fin < 19), kilométrage aucun impact, protection disponible occasion."
+    },
+    {
+      "question": "Comment calculer admissibilité limite 19 ans pour véhicule 2015 voulant terme 84 mois en 2025 ?",
+      "options": ["Compliqué", "Calcul STRUCTURÉ : Étape 1 : Âge véhicule achat = 2025 - 2015 = 10 ans. Étape 2 : Terme souhaité = 84 mois = 7 ans. Étape 3 : Âge fin contrat = 10 ans + 7 ans = 17 ans. Étape 4 : Comparaison limite = 17 ans < 19 ans = ADMISSIBLE. Formule : (Année achat - Année fabrication) + (Terme mois ÷ 12) ≤ 19 ans", "Refuser", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige calcul structuré enseigné : âge achat (2025-2015 = 10), terme (84 mois = 7 ans), âge fin (10+7 = 17), comparaison (17 < 19 = admissible), formule claire enseignable."
+    },
+    {
+      "question": "Un client retraité (70 ans) conduite limitée (10 000 km/an) hésite. Que conseiller ?",
+      "options": ["Pas besoin", "Arguments PERSONNALISÉS RETRAITÉ : 1) Hasards routiers = IMPRÉVISIBLES âge/kilométrage (nid-poule, débris = aléatoires), 2) Revenu fixe retraite = budget serré, protection 12$/mois Standard prévient dépenses imprévues (pare-brise 600$ = impact majeur budget fixe), 3) Terme 84 mois = couvre période conservation probable véhicule retraite (7 ans), 4) Tranquillité esprit = valeur immatérielle retraite. Protection budget fixe essentielle", "Terme court", "Inutile"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à personnalisation retraité : hasards imprévisibles âge/km (aléatoires), revenu fixe budget serré = protection prévient imprévus (pare-brise 600$ = impact majeur), terme 84 = période conservation probable, tranquillité esprit valeur, protection budget fixe."
+    },
+    {
+      "question": "Comment gérer un client ayant eu mauvaise expérience programme similaire autre compagnie (réclamations refusées) ?",
+      "options": ["Ignorer historique", "Approche EMPATHIE + DIFFÉRENCIATION : \"Désolé mauvaise expérience passée (frustration compréhensible). Différences Hasard de Route Auto Shield : 1) Termes ÉCRITS CLAIRS (10 protections définies, limites transparentes), 2) Processus autorisation STRUCTURÉ (24-48h, communication transparente), 3) Centre réclamation dédié 7j/7, 4) Taux satisfaction clients (si données disponibles). Offrir période réflexion + révision contrat ensemble. Reconquérir confiance transparence\"", "Dénigrer concurrent", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie + différenciation : désolé expérience (frustration compréhensible), différences Auto Shield (termes clairs, processus structuré transparent, centre 7j/7, satisfaction), offrir réflexion + révision ensemble, reconquérir confiance transparence."
+    },
+    {
+      "question": "Un client demande \"Puis-je voir un exemple de réclamation approuvée autre client ?\". Que répondre ?",
+      "options": ["Refuser", "Réponse CONFIDENTIALITÉ + ALTERNATIVE : \"Excellente question (due diligence). Confidentialité clients = obligation légale (impossible montrer réclamations réelles autres clients). ALTERNATIVE : créer SCÉNARIO FICTIF détaillé basé réclamations typiques : Exemple : Client Honda Civic, éclat pare-brise autoroute (pierre camion), photo soumise, autorisation 48h, réparation 125$ atelier agréé, paiement direct Administrateur. Processus transparent démontré scénario réaliste\"", "Montrer dossiers", "Ignorer demande"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige confidentialité + alternative : excellente question (diligence), confidentialité = obligation légale (impossible montrer réelles), alternative = scénario fictif détaillé basé typiques (Honda éclat autorisation 48h réparation 125$ paiement direct)."
+    },
+    {
+      "question": "Comment former employés à gérer objections clients efficacement (sans pression) ?",
+      "options": ["Formation minimale", "Formation OBJECTIONS STRUCTURÉE : 1) Écoute ACTIVE sans interruption (client exprime inquiétudes complètes), 2) Validation préoccupation (\"comprends inquiétude\"), 3) Question clarification (\"qu'est-ce qui vous préoccupe exactement ?\"), 4) Réponse CIBLÉE données/exemples (pas arguments génériques), 5) Alternative/solution (pas insistance), 6) Respect décision finale. Jeux rôles 10 objections courantes. Compétence conversationnelle = résultats", "Sur le tas", "Selon l'expérience"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige formation structurée objections : écoute active sans interruption, validation préoccupation, question clarification, réponse ciblée données exemples, alternative (pas insistance), respect décision, jeux rôles 10 objections, compétence conversationnelle."
+    },
+    {
+      "question": "Un client dit \"Je vais y penser\" après présentation. Quelle est la MEILLEURE réponse professionnelle ?",
+      "options": ["Insister immédiatement", "Réponse PROFESSIONNELLE RESPECTUEUSE : \"Absolument, décision importante (investissement 1000$+). Je vous remets brochure détaillée + mes coordonnées. Questions ultérieures = n'hésitez pas contacter. Proposition : je vous rappelle courtoisie dans 2-3 jours (moment tranquille clarifier questions). Aucune pression, votre réflexion respectée. Merci considération.\" Respect + suivi structuré = professionnalisme conversion", "Pression immédiate", "Rabais urgence"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige respect + suivi structuré : absolument décision importante, brochure + coordonnées, rappel courtoisie 2-3 jours (clarifier questions), aucune pression réflexion respectée, merci considération, respect + suivi = conversion durable."
+    },
+    {
+      "question": "Comment mesurer performance vente Hasard de Route équipe (sans créer pression malsaine) ?",
+      "options": ["Quotas stricts", "Système MESURE ÉQUILIBRÉ : 1) Taux présentation (100% clients = obligation présenter), 2) Taux conversion (objectif raisonnable 25-35%, pas pression 100%), 3) Satisfaction clients post-vente (NPS), 4) Taux réclamations approuvées clients (qualité ventes), 5) Formation continue (compétence). Focus QUALITÉ ventes (pas quantité forcée). Professionnalisme = résultats durables", "Commissions agressives", "Aucune mesure"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige mesure équilibrée : taux présentation 100% (obligation), conversion raisonnable 25-35% (pas pression 100%), satisfaction NPS, réclamations approuvées (qualité), formation continue, focus qualité (pas quantité forcée), professionnalisme durable."
+    },
+    {
+      "question": "Un collègue utilise tactiques pression agressive (\"offre expire aujourd'hui\") vente Hasard de Route. Comment intervenir ?",
+      "options": ["Ignorer", "Intervention MANAGÉRIALE FERME : 1) Discussion privée immédiate (pas devant clients/équipe), 2) Expliquer dommages réputation + juridiques (fausses urgences = pratiques déloyales), 3) Révision formation éthique vente (respect client = priorité), 4) Avertissement formel (récidive = conséquences), 5) Suivi comportement 30 jours. Protection réputation concessionnaire + conformité légale. Tolérance zéro pratiques déloyales", "Laisser faire", "Encourager résultats"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité managériale exige intervention ferme : discussion privée immédiate, expliquer dommages réputation juridiques (pratiques déloyales), révision formation éthique (respect priorité), avertissement formel récidive, suivi 30 jours, protection réputation conformité, tolérance zéro."
+    }
+  ]
+}
+

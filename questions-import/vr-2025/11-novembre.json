@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le propriétaire peut-il demander la rectification de renseignements personnels inexacts ?",
+      "options": ["Non, jamais", "Oui, peut demander rectification de renseignements personnels inexacts, incomplets ou équivoques", "Seulement avec autorisation", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire peut demander que soient rectifiés les renseignements personnels inexacts, incomplets ou équivoques (section 1)."
+    },
+    {
+      "question": "Comment expliquer les droits du propriétaire concernant ses renseignements personnels ?",
+      "options": ["Aucun droit", "Expliquer: peut demander confirmation/copie, demander rectification, retirer consentement (avec restrictions possibles)", "Aucun accès", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les 3 droits : confirmation/copie, rectification, retrait de consentement (avec conditions)."
+    },
+    {
+      "question": "Le propriétaire peut-il retirer son consentement à l'utilisation de ses renseignements ?",
+      "options": ["Non, jamais", "Oui, peut retirer consentement (sous réserve de conditions, retrait pourrait entraîner rupture du service)", "Toujours sans conséquence", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire peut retirer son consentement à l'utilisation ou communication de ses renseignements, sous réserve de conditions, retrait pourrait entraîner rupture du service (section 1)."
+    },
+    {
+      "question": "Un VR motorisé de 10 ans exactement avec 100 000 km exactement est-il admissible au programme aVR-Plus ?",
+      "options": ["Non, trop vieux", "Oui, aVR-Plus Section A accepte véhicules de 10 ans ET MOINS et 100 000 km ET MOINS", "Non, limite dépassée", "Admissible au aVR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus Section A accepte véhicules de 10 ans et moins ayant 100 000 km et moins. Un VR exactement à ces limites est admissible."
+    },
+    {
+      "question": "Les renseignements personnels peuvent-ils être conservés à l'extérieur du Québec ?",
+      "options": ["Non, jamais", "Oui, possibilité que renseignements soient conservés ou communiqués à l'extérieur du Québec (systèmes informatiques)", "Toujours au Québec", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "En raison de l'utilisation de systèmes informatiques, il est possible que les renseignements personnels soient conservés ou communiqués à l'extérieur du Québec (section 1)."
+    },
+    {
+      "question": "Comment gérer un client qui s'inquiète de la conservation de ses données hors Québec ?",
+      "options": ["Minimiser", "Expliquer poliment nécessité systèmes informatiques, rassurer sur mesures de sécurité, rappeler droits (confirmation/rectification)", "Mentir", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer la nécessité des systèmes informatiques, rassurer sur sécurité et rappeler les droits du propriétaire (section 1)."
+    },
+    {
+      "question": "À qui le propriétaire doit-il s'adresser pour exercer ses droits concernant ses renseignements ?",
+      "options": ["Au Distributeur", "À la personne responsable dont les coordonnées sont affichées sur le site Internet de l'Administrateur", "Au Centre de Réparation", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Pour l'exercice de ses droits, le Propriétaire doit s'adresser à la personne responsable dont les coordonnées sont affichées sur le site Internet de l'Administrateur (section 1)."
+    },
+    {
+      "question": "Un VR habitacle (roulotte) de 10 ans exactement est-il admissible au programme aVR-Plus Section B ?",
+      "options": ["Non, trop vieux", "Oui, aVR-Plus Section B accepte véhicules de 10 ans ET MOINS", "Non, limite dépassée", "Admissible au aVR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus Section B (Habitacle) accepte véhicules de 10 ans et moins. Un habitacle exactement à 10 ans est admissible."
+    },
+    {
+      "question": "L'Administrateur est-il tenu responsable des déclarations du Distributeur ?",
+      "options": ["Oui, toujours", "Non, ne sera pas tenu responsable de toute déclaration/engagement allégué fait par le Distributeur", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de toute déclaration ou engagement allégué fait par le Distributeur Autorisé au nom de l'Administrateur (section 1)."
+    },
+    {
+      "question": "Comment expliquer les limites de responsabilité de l'Administrateur concernant le Distributeur ?",
+      "options": ["Tout est couvert", "Expliquer: Administrateur non responsable déclarations/engagements Distributeur, responsabilité limitée aux termes du contrat écrit", "Administrateur responsable de tout", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : Administrateur non responsable des déclarations du Distributeur, responsabilité limitée aux termes du contrat écrit (section 1)."
+    },
+    {
+      "question": "Quelle responsabilité supérieure l'Administrateur n'assume-t-il PAS ?",
+      "options": ["Toutes responsabilités", "Toute responsabilité supérieure à celle prévue par la présente garantie", "Aucune limite", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de toute responsabilité supérieure à celle prévue par la présente garantie (section 1)."
+    },
+    {
+      "question": "Un VR motorisé de 15 ans exactement avec 150 000 km exactement est-il admissible au programme aVR ?",
+      "options": ["Non, trop vieux", "Oui, aVR Section A accepte véhicules de 15 ans ET MOINS et 150 000 km ET MOINS", "Non, limite dépassée", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR Section A (Motorisé) accepte véhicules de 15 ans et moins ayant 150 000 km et moins. Un VR exactement à ces limites est admissible."
+    },
+    {
+      "question": "Pour quoi les renseignements recueillis sont-ils utilisés ?",
+      "options": ["Publicité seulement", "Déterminer admissibilité au programme, maintenir la garantie et traiter demandes de réclamation", "Vente", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les renseignements recueillis sont utilisés pour déterminer l'admissibilité au programme, pour maintenir la garantie ainsi que pour traiter les demandes de réclamation (section 1)."
+    },
+    {
+      "question": "Comment gérer un client qui demande à qui ses renseignements sont communiqués ?",
+      "options": ["Tout le monde", "Expliquer: renseignements communiqués à l'Administrateur pour admissibilité/maintien/réclamations, accès limité au nécessaire", "Personne", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : renseignements communiqués à l'Administrateur pour les besoins du programme, accès limité aux fonctions nécessaires (section 1)."
+    },
+    {
+      "question": "Quel programme offre le montant maximum cumulatif le plus élevé ?",
+      "options": ["aVR", "aVR-Plus (cumulatif = valeur du véhicule vs aVR cumulatif = 10 000$)", "Les deux pareils", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus offre montant maximum cumulatif = valeur du véhicule. Le programme aVR offre montant maximum cumulatif = 10 000$ (section Description)."
+    },
+    {
+      "question": "L'Administrateur est-il désigné comme une société ou deux sociétés ?",
+      "options": ["Une seule", "Deux: Les Produits Avantage Plus Inc. OU 9112-3158 QUÉBEC INC. faisant affaires sous le nom Les Produits Avantage Plus", "Trois sociétés", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur désigne la société Les Produits Avantage Plus Inc. OU désigne la société 9112-3158 QUÉBEC INC. faisant affaires sous le nom Les Produits Avantage Plus (section 1)."
+    },
+    {
+      "question": "Comment expliquer la différence de montant maximum par réclamation entre aVR-Plus et aVR ?",
+      "options": ["Aucune différence", "aVR-Plus: 10 000$ max/réclamation. aVR: 5 000$ max/réclamation. Choix selon besoins et valeur VR", "Les deux pareils", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : aVR-Plus 10 000$ max vs aVR 5 000$ max par réclamation, choix selon besoins/valeur VR."
+    },
+    {
+      "question": "Quelle est l'adresse de l'Administrateur ?",
+      "options": ["Montréal", "2700 Boul. des Entreprises Local 102, Terrebonne (Québec) J6X 4J8", "Québec", "Laval"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur est situé au 2700 Boul. des Entreprises Local 102, Terrebonne (Québec) J6X 4J8 (section 1 - Définitions)."
+    },
+    {
+      "question": "Quel est le numéro de téléphone de l'Administrateur ?",
+      "options": ["1-800-666-0181", "450-666-0181 ou 1-866-666-0181", "514-666-0181", "438-666-0181"],
+      "correctAnswer": 1,
+      "explanation": "Le numéro de téléphone de l'Administrateur est 450-666-0181 (ou 1-866-666-0181 pour les réclamations) selon la section 1 et section 7."
+    },
+    {
+      "question": "Comment expliquer les coordonnées de contact de l'Administrateur à un client ?",
+      "options": ["Pas nécessaire", "Expliquer clairement: 1-866-666-0181 (réclamations) ou info@garantieavantageplus.ca, disponible pour questions/pannes", "C'est sur le contrat", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement les coordonnées : 1-866-666-0181 ou info@garantieavantageplus.ca, disponibles pour questions et en cas de panne."
+    },
+    {
+      "question": "Quelle est l'adresse courriel de l'Administrateur ?",
+      "options": ["admin@garantieavantageplus.ca", "info@garantieavantageplus.ca", "contact@garantieavantageplus.ca", "service@garantieavantageplus.ca"],
+      "correctAnswer": 1,
+      "explanation": "L'adresse courriel de l'Administrateur est info@garantieavantageplus.ca (section 1 - Définitions et section 7)."
+    },
+    {
+      "question": "Qu'est-ce qu'un Distributeur Autorisé ?",
+      "options": ["N'importe qui", "Commerçant titulaire d'un permis autorisé à vendre des garanties par l'entremise du portail de l'Administrateur", "Tous les garages", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un Distributeur Autorisé désigne tous les commerçants titulaires d'un permis autorisé à vendre des garanties par l'entremise du portail de l'Administrateur (section 1)."
+    },
+    {
+      "question": "Comment expliquer ce qu'est un Centre de Réparation Autorisé à un client ?",
+      "options": ["N'importe quel garage", "Établissement légal autorisé avec taux horaire et marge bénéficiaire convenus avec l'Administrateur, non détenu par l'Administrateur", "Seulement concessionnaires", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer : établissement légal autorisé avec tarifs convenus, indépendant de l'Administrateur, garantit qualité et tarifs négociés."
+    },
+    {
+      "question": "Le Centre de Réparation Autorisé est-il détenu par l'Administrateur ?",
+      "options": ["Oui, toujours", "Non, le Centre n'est ni détenu ni géré par l'Administrateur", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Centre de Réparation Autorisé n'est ni détenu ni géré par l'Administrateur (section 1 - Définitions)."
+    },
+    {
+      "question": "Qu'est-ce qu'une Panne selon le programme ?",
+      "options": ["Seulement accident", "Défaillance d'un composant du véhicule dans l'exécution de la fonction pour laquelle il a été construit, sans égard aux causes", "Seulement usure", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Une Panne désigne la défaillance d'un composant du véhicule dans l'exécution de la fonction pour laquelle il a été construit, sans égard aux causes de la défaillance (section 1)."
+    },
+    {
+      "question": "Comment expliquer la définition de Panne à un client ?",
+      "options": ["Seulement bris majeur", "Défaillance d'un composant couvert dans l'exécution de sa fonction, quelle que soit la cause (sauf exclusions)", "Seulement accident", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : panne = défaillance d'un composant couvert dans l'exécution de sa fonction, causes variées (sauf exclusions spécifiques)."
+    },
+    {
+      "question": "Que désignent les Composants Couverts ?",
+      "options": ["Tout le véhicule", "Pièces spécifiées couvertes pour réparation si termes et conditions suivis, détaillées et non admissibles à tous programmes", "Seulement moteur", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les Composants Couverts désignent les pièces spécifiées couvertes pour réparation si termes et conditions suivis. Les composantes sont détaillées et non admissibles à tous programmes (section 1)."
+    },
+    {
+      "question": "Un client demande si toutes les pièces sont couvertes. Que répondez-vous ?",
+      "options": ["Oui, tout", "Non, seulement Composants Couverts spécifiés (sections 2), détaillés selon programme choisi (Motorisé/Habitacle)", "Seulement mécanique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : seuls les Composants Couverts spécifiés (sections 2) sont couverts, détails selon programme (Motorisé 1-22, Habitacle 12-22)."
+    },
+    {
+      "question": "Que désignent les Exclusions ?",
+      "options": ["Rien", "Ce qui n'est pas couvert : pièces non couvertes, réparations et raisons jugées inéligibles, aucun remboursement autorisé", "Tout est couvert", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les Exclusions désignent ce qui n'est pas couvert : pièces non couvertes, réparations et raisons jugées inéligibles à l'autorisation, pour lesquelles aucun remboursement ne sera autorisé (section 1)."
+    },
+    {
+      "question": "Un collègue recommande de minimiser les exclusions lors de la vente. Comment réagissez-vous ?",
+      "options": ["Suivre le conseil", "Refuser, expliquer importance de transparence (section 1: Exclusions définies), protéger client et réputation", "Ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser, expliquer l'importance de la transparence (Exclusions clairement définies section 1) pour protéger client et réputation."
+    }
+  ]
+}
+

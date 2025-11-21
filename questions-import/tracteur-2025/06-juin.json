@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 6,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le propriétaire peut-il déclarer un nombre illimité de réclamations ?",
+      "options": ["Non, limité à 5", "Oui, nombre illimité mais limites: max 10k$/visite et 20k$ cumulatif", "Seulement 10", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire peut déclarer un nombre illimité de réclamations pendant la durée du programme, mais Administrateur responsable jusqu'à max visite/cumulatif (section 9)."
+    },
+    {
+      "question": "Comment expliquer les limites de réclamations à un client ?",
+      "options": ["Limité à 5", "Expliquer: nombre illimité de réclamations possible, seules limites sont 10k$/visite et 20k$ cumulatif (ou option Aucune limite)", "Seulement 10", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rassurer : réclamations illimitées possibles, seules limites sont max/visite (10k$) et cumulatif (20k$), sauf avec option Aucune limite."
+    },
+    {
+      "question": "Quelles sont les 3 limites maximales de réparation de l'Administrateur ?",
+      "options": ["Une seule limite", "3 limites: Max par visite/cumulatif (programme), Prix véhicule (sans taxes), Prix sur contrat vente Distributeur", "Deux limites", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas responsable de plus que le moindre des : max par visite/cumulatif (programme), prix véhicule, prix sur contrat vente (section 9)."
+    },
+    {
+      "question": "Un tracteur agricole de 3 ans avec 1 800 heures usage intensif est-il admissible ?",
+      "options": ["Non, trop d'heures", "Oui, Tarification A (≤5 ans, <2 500h). Recommander option 2x heures (250$) si usage très intensif", "Tarification B seulement", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Tarification A accepte ≤5 ans, <2 500h. Un tracteur 3 ans/1 800h est admissible. Pour usage intensif, recommander option 2x heures (250$) pour doubler allocation."
+    },
+    {
+      "question": "Les véhicules de la promenade ou commerciaux sont-ils admissibles ?",
+      "options": ["Oui, automatiquement", "Non, véhicules de la promenade ou commerciales exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Le programme de garantie ne couvrira PAS les véhicules de la promenade ou commerciales (section 10.a)."
+    },
+    {
+      "question": "Comment expliquer l'option 2x allocation heures à un agriculteur avec longue saison ?",
+      "options": ["Pas nécessaire", "250$ pour doubler heures autorisées/an (ex: 12 mois=500h→1000h, 24 mois=1000h→2000h), idéal saison agricole intense", "C'est automatique", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer concrètement : 250$ double les heures par année (500h→1000h/an), parfait pour saison agricole intense ou usage intensif."
+    },
+    {
+      "question": "Les ambulances et camions de pompiers sont-ils admissibles ?",
+      "options": ["Oui, automatiquement", "Non, ambulances, camions de pompiers, véhicules de remorquage et de police exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ne couvrira PAS les ambulances, camions de pompiers, véhicules de remorquage, véhicules de police ou véhicules installés avec un « police pack » (section 10.b)."
+    },
+    {
+      "question": "Un équipement de construction de 7 ans avec 3 500 heures est-il admissible ?",
+      "options": ["Non, trop vieux", "Oui, Tarification B (≤10 ans, <5 000h), termes 12-36 mois disponibles", "Seulement Tarification A", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Tarification B accepte ≤10 ans, <5 000h. Un équipement 7 ans/3 500h est admissible à Tarification B avec termes 12-36 mois."
+    },
+    {
+      "question": "Un tracteur de location à court terme (18 mois) est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule location à court terme (contrat <24 mois) exclu", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule utilisé comme véhicule de location à court terme (qui a un contrat de location ou un bail de moins de 24 mois) est exclu (section 10.c)."
+    },
+    {
+      "question": "Comment expliquer l'option Aucune limite par réclamation à un client avec équipement haut de gamme ?",
+      "options": ["Pas utile", "500$ pour éliminer limite 10k$/visite (jusqu'à 20k$ cumulatif), tranquillité esprit pour réparations majeures équipement coûteux", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (500$) élimine la limite 10k$/visite, offrant tranquillité d'esprit pour réparations majeures sur équipements coûteux."
+    },
+    {
+      "question": "Un tracteur repris par la banque est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule repris par banque/institution financière exclu", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule qui a été repris par la banque, l'institution financière ou retourné au Distributeur Autorisé est exclu (section 10.d)."
+    },
+    {
+      "question": "Quelle combinaison d'options recommander à un client avec tracteur 450 HP usage très intensif ?",
+      "options": ["Aucune", "HP Limitation 250$ (obligatoire), 2x heures 250$ (intensif), Pas franchise 250$, Aucune limite 500$ = 1250$ total protection maximale", "Seulement HP", "Une seule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à recommander package complet adapté : HP Limitation (obligatoire 450 HP), 2x heures (intensif), Pas franchise, Aucune limite = protection maximale."
+    },
+    {
+      "question": "Un tracteur déclaré perte totale est-il encore couvert ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule déclaré perte totale, perte partielle ou volé exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule déclaré perte totale, perte partielle ou volé est exclu du programme (section 10.e)."
+    },
+    {
+      "question": "Comment calculer le total d'heures disponibles avec l'option 2x allocation sur un terme 36 mois ?",
+      "options": ["1500 heures", "3000 heures (36 mois = 1500h standard, avec option 2x = 3000h total)", "2000 heures", "4500 heures"],
+      "correctAnswer": 1,
+      "explanation": "Terme 36 mois = 1500 heures standard. Avec option 2x allocation heures (250$), les heures sont doublées : 1500h × 2 = 3000 heures total."
+    },
+    {
+      "question": "Les pannes à l'extérieur du Canada/USA sont-elles couvertes ?",
+      "options": ["Oui, partout", "Non, toute panne à l'extérieur du Canada ou zone continentale USA exclue", "Oui, avec supplément", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Toute Panne qui se produit à l'extérieur du Canada ou de la zone continentale des États-Unis est exclue (section 10.f)."
+    },
+    {
+      "question": "Comment expliquer la valeur du package complet d'options à un client hésitant ?",
+      "options": ["C'est cher", "Expliquer ROI: protection équipement coûteux (valeur >80k$), élimination soucis (franchise 0$, heures doublées, limite/visite éliminée)", "Minimiser", "Négocier"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer le ROI : protection actif majeur, élimination totale soucis opérationnels, tranquillité d'esprit complète."
+    },
+    {
+      "question": "Un tracteur altéré ou modifié est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicule altéré ou modifié par rapport à installation d'usine exclu (exception possible)", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule altéré ou modifié par rapport à l'installation d'usine d'origine est exclu. Le Distributeur peut demander une exception avant vente (section 10.g)."
+    },
+    {
+      "question": "Un tracteur de 4 ans avec 1 200 heures a-t-il besoin de l'option 2x allocation heures pour un terme 60 mois ?",
+      "options": ["Oui, obligatoire", "Dépend de l'usage futur: 2500h standard sur 60 mois = 500h/an. Si usage >500h/an prévu, recommander option 2x", "Non, jamais", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'évaluer usage futur prévu : 60 mois = 2500h standard (500h/an). Si client prévoit >500h/an, recommander option 2x (1000h/an)."
+    },
+    {
+      "question": "Le Distributeur peut-il demander une exception pour un véhicule modifié ?",
+      "options": ["Non, jamais", "Oui, peut demander exception avant vente en contactant représentant Administrateur", "Seulement après vente", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Distributeur Autorisé peut demander une exception à ces exclusions avant d'avoir vendu la garantie en contactant son représentant désigné de l'Administrateur (section 10.g)."
+    },
+    {
+      "question": "Comment gérer un client qui veut une garantie pour un tracteur avec réglage ECM modifié ?",
+      "options": ["Accepter automatiquement", "Expliquer exclusion (section 10.g), suggérer au Distributeur de contacter représentant Administrateur AVANT vente pour demander exception", "Refuser directement", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer l'exclusion véhicules modifiés puis suggérer au Distributeur de contacter représentant Administrateur AVANT vente pour demander exception."
+    },
+    {
+      "question": "Si une exception est approuvée, qui est responsable des frais supplémentaires ?",
+      "options": ["L'Administrateur", "Le Distributeur Autorisé est responsable de tous les frais supplémentaires encourus", "Le propriétaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si une exception est approuvée, elle sera indiquée sur le contrat. Le Distributeur Autorisé est responsable de tous les frais supplémentaires encourus en raison de ces exceptions (section 10.g)."
+    },
+    {
+      "question": "Comment calculer les heures annuelles moyennes d'un tracteur pour recommander les options ?",
+      "options": ["Pas important", "Diviser heures totales par âge en années. Si résultat >500h/an et terme long prévu, recommander option 2x allocation", "Toujours option 2x", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de calculer usage annuel moyen (heures÷âge) pour évaluer si >500h/an. Si oui et terme long prévu, recommander option 2x allocation."
+    },
+    {
+      "question": "Seul le propriétaire peut-il transférer la garantie ?",
+      "options": ["Non, tout le monde", "Oui, seul le Propriétaire du Véhicule peut transférer la garantie à un nouveau propriétaire", "Le Distributeur aussi", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Seul le Propriétaire du Véhicule peut transférer la garantie à un nouveau propriétaire (section 11.1.a)."
+    },
+    {
+      "question": "Comment expliquer les termes et heures disponibles pour chaque tarification ?",
+      "options": ["Compliqué", "Tarif A: 5 termes (12/500h à 60/2500h). Tarif B: 3 termes (12/500h à 36/1500h). Option 2x double chaque allocation", "Un seul terme", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les options : Tarif A (5 termes), Tarif B (3 termes), allocation heures progressive, option 2x disponible."
+    },
+    {
+      "question": "Quel délai pour envoyer une demande de transfert à l'Administrateur ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "Les demandes de transfert doivent être envoyées à l'Administrateur dans les quinze (15) premiers jours suivant la nouvelle propriété (section 11.1.a)."
+    },
+    {
+      "question": "Quelle est la stratégie d'options optimale pour un client avec tracteur 220 HP usage standard ?",
+      "options": ["Toutes les options", "Remboursement vérification 150$ + Pas franchise 250$ = 400$ (pas besoin HP Limitation <250 HP, ni 2x heures si usage standard)", "Aucune option", "Seulement franchise"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à recommander options pertinentes : 220 HP (pas besoin HP Limitation), usage standard (pas 2x heures), prioriser confort (Remboursement/Franchise)."
+    },
+    {
+      "question": "Des frais sont-ils appliqués aux transferts de garantie ?",
+      "options": ["Oui, 50$", "Non, aucun frais ne sera appliqué aux transferts", "Oui, 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Aucun frais ne sera appliqué aux transferts de garantie (section 11.1.a)."
+    },
+    {
+      "question": "Un Distributeur ou Centre de Réparation peut-il recevoir un transfert de garantie ?",
+      "options": ["Oui, automatiquement", "Non, un Distributeur Autorisé ou Centre de Réparation Autorisé non éligible aux transferts", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un Distributeur Autorisé ou un Centre de Réparation Autorisé n'est pas éligible aux transferts de garantie (section 11.1.a)."
+    },
+    {
+      "question": "Comment maximiser la satisfaction lors de la recommandation d'options ?",
+      "options": ["Vendre toutes", "Évaluer: 1) Puissance (HP Limitation si besoin), 2) Usage/heures (2x si intensif), 3) Confort (Remboursement/Franchise), 4) Protection (Aucune limite)", "Vendre minimum", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige évaluation méthodique en 4 étapes : puissance, usage/heures, confort souhaité, niveau protection, pour recommandations personnalisées pertinentes."
+    },
+    {
+      "question": "Un client satisfait avec tracteur revient 4 ans après pour renouveler. Comment maximiser cette opportunité ?",
+      "options": ["Vendre rapidement", "Remercier fidélité, évaluer satisfaction (4 ans!), vérifier heures usage (adapter options), proposer terme long, demander témoignage/référence", "Vendre le moins cher", "Ignorer historique"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de valoriser fidélité, analyser historique usage (adapter options), reconnaître qualité entretien, proposer terme adapté, cultiver témoignage/références."
+    }
+  ]
+}
+

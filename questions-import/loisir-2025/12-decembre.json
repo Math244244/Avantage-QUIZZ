@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 12,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle option permet remboursement si aucune réclamation et rachat garantie ?",
+      "options": ["Option Turbo", "Option Protection garantie", "Option Remboursement partiel (300$)", "Option Suspension A+"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 28 - Remboursement partiel (300$) offre jusqu'à 1000$ si aucune réclamation et rachat d'une garantie."
+    },
+    {
+      "question": "Un client demande si les courroies sont couvertes. Que répondez-vous ?",
+      "options": ["Oui, toutes", "Non, courroies d'entretien/serpentine/accessoires exclues (pièces d'usure)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les courroies d'entretien, courroies serpentine et courroies d'accessoires sont exclues car pièces d'usure normales (section 4.1)."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement partiel ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 28 - Remboursement partiel coûte 300$ et offre jusqu'à 1000$ si aucune réclamation et rachat garantie."
+    },
+    {
+      "question": "Comment présenter l'ensemble du programme loisir à un nouveau client ?",
+      "options": ["C'est compliqué", "28 sections couvertes, franchise 0$ Centre Autorisé, max 10 000$/réclamation, options personnalisables, 3 catégories véhicules", "C'est cher", "Pas besoin"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter avantages clairs : 28 sections, franchise 0$ Centre Autorisé, max 10 000$, options personnalisables, 3 catégories."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour l'option Remboursement partiel ?",
+      "options": ["500$", "750$", "1000$", "1500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Remboursement partiel ne dépassera pas 1000$ CAD avant taxes selon la section 28."
+    },
+    {
+      "question": "Un véhicule ayant servi de véhicule d'essai est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules d'essai/presse/exposition exclus", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule ayant servi de véhicule d'essai, de presse ou d'exposition est exclu du programme (section 9.6)."
+    },
+    {
+      "question": "Les conditions pour le Remboursement partiel incluent-elles des restrictions ?",
+      "options": ["Aucune restriction", "Oui, aucune réclamation durant la garantie ET rachat d'une garantie", "Illimité", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "La section 28 exige : aucune réclamation durant toute la période de garantie ET rachat d'une garantie pour être admissible."
+    },
+    {
+      "question": "Les dommages dus à négligence sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages directs/indirects dus négligence/manque entretien exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects/accessoires dus à négligence, manque d'entretien ou mauvaise réparation sont exclus (section 4.4)."
+    },
+    {
+      "question": "Comment expliquer le processus d'autorisation à un nouveau client ?",
+      "options": ["Pas nécessaire", "Obligatoire: contacter Administrateur AVANT travaux, obtenir numéro d'autorisation écrit avec montant, sinon aucun remboursement", "Optionnel", "Après réparation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : numéro d'autorisation OBLIGATOIRE AVANT travaux (format imprimé avec montant), sinon aucun remboursement (section 4.13 et 6)."
+    },
+    {
+      "question": "Quelle est la période d'attente en kilomètres (ou heures) ?",
+      "options": ["100 km ou 10h", "150 km ou 15h", "200 km ou 20h", "250 km ou 25h"],
+      "correctAnswer": 2,
+      "explanation": "La période d'attente est de 30 jours ET 200 km (ou 20h). Les DEUX conditions doivent être remplies (section 2)."
+    },
+    {
+      "question": "Un client demande garantie pour motomarine usage location courte durée. Est-elle admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules location <24 mois exclus", "Oui, avec supplément 300$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule de location à court terme ou ayant contrat de location/crédit-bail de moins de 24 mois est exclu (section 9.3)."
+    },
+    {
+      "question": "Les filtres à air sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, filtres (air/huile/carburant) exclus sauf lors d'un bris majeur", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les filtres (air, huile, carburant) sont exclus de la couverture sauf lors d'un bris majeur autorisé (section 4.1)."
+    },
+    {
+      "question": "Comment gérer un client qui conteste la limite de 10 000$/réclamation ?",
+      "options": ["Négocier", "Expliquer limite claire, suggérer option Maximum jusqu'à valeur marchande (400$-500$)", "Céder", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer la limite 10 000$/réclamation (section 3) et suggérer l'option Maximum jusqu'à valeur marchande pour protection accrue."
+    },
+    {
+      "question": "Les bougies d'allumage sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, bougies d'allumage/d'incandescence exclues (pièces d'entretien)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Bougies d'allumage, bougies d'incandescence sont exclues car considérées pièces d'entretien de routine (section 4.1)."
+    },
+    {
+      "question": "Un client demande si les modifications apportées au véhicule après achat affectent la garantie. Que répondez-vous ?",
+      "options": ["Non, aucun impact", "Oui, véhicules altérés/modifiés exclus sauf exception approuvée par représentant Administrateur", "Seulement si majeures", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Véhicules altérés/modifiés (échappement, ECM, suspension, etc.) sont exclus. Exception possible via représentant Administrateur (section 9.4)."
+    },
+    {
+      "question": "Quelle est la franchise pour un Centre de Réparation Autorisé ?",
+      "options": ["50$", "100$", "0$ (aucune franchise)", "Selon le véhicule"],
+      "correctAnswer": 2,
+      "explanation": "Aucune franchise ne s'applique si les réparations sont effectuées dans un Centre de Réparation Autorisé (section 3)."
+    },
+    {
+      "question": "Les chenilles sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, chenilles/pneus/patins exclus (pièces d'usure)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Chenilles, pneus, patins et chaussons sont exclus car considérés pièces d'usure normales (section 4.8)."
+    },
+    {
+      "question": "Comment expliquer les 3 catégories de véhicules du programme loisir ?",
+      "options": ["Une seule catégorie", "Catégorie 1: Scooters/Motos (750cc/30kW), Catégorie 2: VTT/Motoneige (800cc/30kW), Catégorie 3: Motomarines/Bateaux (400hp)", "Selon le prix", "Toutes identiques"],
+      "correctAnswer": 1,
+      "explanation": "Catégorie 1: Scooters/Motocycles (750cc/30kW base), Catégorie 2: VTT/Côte-à-Côte/Motoneiges (800cc/30kW base), Catégorie 3: Motomarines/Bateaux (400hp base)."
+    },
+    {
+      "question": "Quelle est la franchise pour un Centre de Réparation Non-Autorisé (catégorie 1) ?",
+      "options": ["0$", "50$", "100$", "200$"],
+      "correctAnswer": 2,
+      "explanation": "Une franchise de 100$ CAD s'applique pour catégorie 1 (Scooters/Motocycles) si réparations dans Centre Non-Autorisé (section 3)."
+    },
+    {
+      "question": "Un client demande transfert de garantie. Des frais s'appliquent-ils ?",
+      "options": ["Oui, 50$", "Oui, 100$", "Non, aucuns frais", "Oui, 25$"],
+      "correctAnswer": 2,
+      "explanation": "Aucuns frais ne seront appliqués aux transferts de garantie selon la section 10.1.a."
+    },
+    {
+      "question": "Quelle est la franchise pour un Centre de Réparation Non-Autorisé (catégorie 3) ?",
+      "options": ["0$", "100$", "150$", "200$"],
+      "correctAnswer": 3,
+      "explanation": "Une franchise de 200$ CAD s'applique pour catégorie 3 (Motomarines/Bateaux) si réparations dans Centre Non-Autorisé (section 3)."
+    },
+    {
+      "question": "Comment expliquer le délai de transfert de garantie ?",
+      "options": ["Aucun délai", "Demande doit être envoyée dans les 15 premiers jours suivant nouvelle propriété, aucuns frais", "30 jours", "60 jours"],
+      "correctAnswer": 1,
+      "explanation": "Les transferts doivent être envoyés à l'Administrateur dans les 15 premiers jours suivant la nouvelle propriété, aucuns frais (section 10.1)."
+    },
+    {
+      "question": "Les accessoires après-marché sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, accessoires/équipement non-OEM exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout accessoire, équipement ou modification non-OEM (Original Equipment Manufacturer) est exclu (section 4.10)."
+    },
+    {
+      "question": "Un client demande si son scooter électrique est couvert. Que répondez-vous ?",
+      "options": ["Non, véhicules électriques exclus", "Oui, sections 1-21 s'appliquent selon le type de composants (moteur/batterie/transmission électrique)", "Non, programme essence uniquement", "Avec option spéciale"],
+      "correctAnswer": 1,
+      "explanation": "Les véhicules électriques/hybrides sont couverts. Sections 18 (moteur électrique), 19 (transmission électrique), 20 (batterie), 21 (recharge) s'appliquent."
+    },
+    {
+      "question": "Quel est le délai pour soumettre une facture de réparation ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "Les bons de travail et factures de plus de 30 jours à compter de la date de présentation ne seront ni acceptés ni autorisés (section 7.1)."
+    },
+    {
+      "question": "Comment gérer un client frustré d'une réparation refusée légitimement ?",
+      "options": ["Céder immédiatement", "Rester empathique, expliquer raison (contrat section X), offrir alternatives/options disponibles", "Être défensif", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie, explication claire de la raison (référence section contrat), et redirection vers alternatives/options disponibles."
+    },
+    {
+      "question": "Les réparations effectuées hors Canada/USA sont-elles couvertes ?",
+      "options": ["Oui, partout", "Non, seulement Canada et zone continentale USA", "Oui, avec supplément", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Toute panne à l'extérieur du Canada ou de la zone continentale des États-Unis ne sera pas autorisée (section 7.2)."
+    },
+    {
+      "question": "Un client demande conseil pour maximiser sa couverture avec budget limité. Que recommandez-vous ?",
+      "options": ["Aucune option", "Prioriser selon besoins: Protection garantie (flexibilité), puis options selon type véhicule (Turbo/Haut perf si nécessaire)", "Toutes les options", "Uniquement la moins chère"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer besoins client et recommander options pertinentes : Protection garantie (flexibilité), puis options véhicule spécifiques."
+    },
+    {
+      "question": "Quelle est la couverture maximale par réclamation sans option ?",
+      "options": ["5 000$", "7 500$", "10 000$", "15 000$"],
+      "correctAnswer": 2,
+      "explanation": "La couverture maximale est de 10 000$ CAD par réclamation selon la section 3 (sauf avec option Maximum jusqu'à valeur marchande)."
+    },
+    {
+      "question": "Un client satisfait revient 2 ans après pour renouveler. Comment maximiser cette opportunité professionnellement ?",
+      "options": ["Vendre rapidement", "Remercier fidélité, évaluer satisfaction, proposer option Remboursement partiel (récompense fidélité), demander témoignage/référence", "Ignorer historique", "Vendre le moins cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de valoriser la fidélité, évaluer satisfaction, proposer options adaptées (Remboursement partiel), et cultiver témoignage/référence."
+    }
+  ]
+}
+

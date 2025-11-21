@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 10,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le câblage haute tension (véhicule électrique/hybride) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 18 - Groupe motopropulseur électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 18 couvre câblage haute tension, onduleur, convertisseur, moteur électrique et module de commande."
+    },
+    {
+      "question": "Un client demande si les réparations esthétiques sont couvertes. Que répondez-vous ?",
+      "options": ["Oui, toutes", "Non, réparations esthétiques/cosmétiques exclus", "Oui, jusqu'à 500$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toute réparation esthétique, cosmétique ou peinture est exclue de la couverture (section 4.11)."
+    },
+    {
+      "question": "Le réducteur de vitesse (véhicule électrique) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 19 - Transmission électrique", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 19 - Transmission électrique couvre réducteur de vitesse, tous les engrenages, paliers internes et joints."
+    },
+    {
+      "question": "Comment présenter l'avantage du véhicule de remplacement à un client avec motomarine ?",
+      "options": ["Pas utile", "50$/jour max 7 jours (350$ total) pour location si réparation autorisée >24h, loisir continué", "C'est automatique", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "La section 23 offre remboursement 50$/jour max 7 jours (350$ total) pour véhicule de remplacement si réparation autorisée >24h, permet de continuer les loisirs."
+    },
+    {
+      "question": "Les engrenages de transmission électrique sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 19 - Transmission électrique", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 19 - Transmission électrique couvre tous les engrenages, réducteur de vitesse, paliers internes et boîtier de transmission."
+    },
+    {
+      "question": "Un véhicule avec titre de récupération/reconstruction est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule titre de récupération/reconstruction/sauvage exclu", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule avec titre de récupération, reconstruction ou sauvage est exclu du programme (section 9.7)."
+    },
+    {
+      "question": "Le boîtier de transmission électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 19 - Transmission électrique", "Oui, section 18", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 19 - Transmission électrique couvre boîtier de transmission, réducteur de vitesse, engrenages et paliers internes."
+    },
+    {
+      "question": "Les dommages dus à réparations antérieures inadéquates sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus réparations antérieures inadéquates/non-professionnelles exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects dus à réparations antérieures inadéquates ou non-professionnelles sont exclus (section 4.4)."
+    },
+    {
+      "question": "Les paliers internes de transmission électrique sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 19 - Transmission électrique", "Oui, section 18", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 19 - Transmission électrique couvre paliers internes, engrenages, réducteur de vitesse et joints de transmission."
+    },
+    {
+      "question": "Comment gérer un client qui conteste le montant de la franchise ?",
+      "options": ["Négocier", "Expliquer tarif clair: 0$ Centre Autorisé, 100$ (cat 1-2) ou 200$ (cat 3) Centre non-autorisé", "Céder", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : franchise 0$ Centre Autorisé, 100$ (cat 1-2) ou 200$ (cat 3) Centre non-autorisé (section 3)."
+    },
+    {
+      "question": "La batterie haute tension (véhicule électrique/hybride) est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 20 - limitée 1 an/20 000 km au-delà garantie fabricant", "Oui, toujours", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 20 couvre batterie HV/lithium-ion limitée à 1 an/20 000 km AU-DELÀ de la garantie fabricant (dysfonctionnement/cellule défectueuse seulement)."
+    },
+    {
+      "question": "Un client demande garantie pour motocycle 2500cc. Est-il admissible au programme de base ?",
+      "options": ["Oui, automatiquement", "Oui, avec option Haut performance 200$ (751cc à 2500cc)", "Non, trop puissant", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "La base couvre jusqu'à 750cc/30kW. L'option Haut performance (200$) couvre 751cc à 2500cc pour Scooters & Motocycles."
+    },
+    {
+      "question": "La batterie haute tension couvre-t-elle la perte de capacité ?",
+      "options": ["Oui, toute perte", "Non, seulement dysfonctionnement/cellule défectueuse, pas perte de capacité", "Oui, jusqu'à 50%", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 20 couvre dysfonctionnement ou cellule défectueuse seulement. Elle ne couvre pas la perte de capacité normale de la batterie."
+    },
+    {
+      "question": "Les dommages dus à modification de carrosserie sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus modifications carrosserie/structure/suspension exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Véhicules altérés/modifiés (carrosserie, structure, suspension, échappement, ECM) sont exclus sauf exception approuvée (section 9.4)."
+    },
+    {
+      "question": "Le chargeur embarqué (véhicule électrique/hybride) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 21 - Système de recharge", "Oui, section 18", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 21 - Système de recharge couvre chargeur embarqué, module de gestion de charge, port de recharge et câblage."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement partiel ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Remboursement partiel coûte 300$ et offre jusqu'à 1000$ si aucune réclamation et rachat d'une garantie."
+    },
+    {
+      "question": "Le module de gestion de charge (véhicule électrique) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 21 - Système de recharge", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 21 - Système de recharge couvre module de gestion de charge, chargeur embarqué, port de recharge et câblage HV."
+    },
+    {
+      "question": "Comment expliquer l'importance du Centre Autorisé à un client qui veut aller ailleurs ?",
+      "options": ["Ce n'est pas important", "Centre Autorisé: franchise 0$, qualité garantie, autorisation rapide. Non-autorisé: franchise 100$/200$", "Interdire", "Forcer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer avantages Centre Autorisé : franchise 0$, qualité assurée, autorisation facilitée vs franchise appliquée ailleurs (section 3)."
+    },
+    {
+      "question": "Le port de recharge (véhicule électrique/hybride) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 21 - Système de recharge", "Oui, section 18", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 21 - Système de recharge couvre port de recharge, chargeur embarqué, module de gestion et câblage."
+    },
+    {
+      "question": "Un client demande si les frais de remorquage vers centre non-autorisé sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, frais remorquage vers centre non-autorisé exclus (sauf service routier 100$/an)", "Oui, jusqu'à 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Frais de remorquage vers centre non-autorisé sont exclus (section 4.6). Service routier (section 22) rembourse jusqu'à 100$/année seulement."
+    },
+    {
+      "question": "Le câblage de recharge (véhicule électrique) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 21 - Système de recharge", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 21 - Système de recharge couvre câblage de recharge, port de recharge, chargeur embarqué et module de gestion."
+    },
+    {
+      "question": "Un véhicule ayant servi de véhicule de presse est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules de presse/exposition/compétition exclus", "Oui, avec supplément 300$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule ayant servi de véhicule de presse, exposition ou compétition est exclu du programme (section 9.6)."
+    },
+    {
+      "question": "Le service routier/remorquage couvre combien par année ?",
+      "options": ["50$ par année", "75$ par année", "100$ par année", "150$ par année"],
+      "correctAnswer": 2,
+      "explanation": "La section 22 accorde remboursement jusqu'à 100$ CAD par année pour la durée du programme."
+    },
+    {
+      "question": "Comment gérer un client qui veut annuler mais pas admissible après 10 jours ?",
+      "options": ["Accepter", "Expliquer conditions annulation (10 jours ou perte totale/vol), suggérer Protection garantie pour futur", "Mentir", "Forcer annulation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer conditions d'annulation (section 10.2) et suggérer l'option Protection garantie (300$) pour flexibilité future."
+    },
+    {
+      "question": "Les conditions pour le service routier/remorquage incluent-elles des restrictions ?",
+      "options": ["Aucune restriction", "Oui, doit être lié à une pièce couverte et réclamation autorisée", "Illimité", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "La section 22 exige que le service soit lié à une pièce couverte et que la réclamation soit autorisée par l'Administrateur."
+    },
+    {
+      "question": "Les dommages dus à usage hors route non recommandé sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus usage hors route non recommandé/abusif exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages dus à usage hors route non recommandé, usage abusif ou surcharge sont exclus (section 4.4)."
+    },
+    {
+      "question": "Le véhicule de remplacement couvre combien par jour ?",
+      "options": ["25$ par jour", "50$ par jour", "75$ par jour", "100$ par jour"],
+      "correctAnswer": 1,
+      "explanation": "La section 23 rembourse 50$ CAD par jour pour véhicule de remplacement si réparation autorisée excède 24 heures."
+    },
+    {
+      "question": "Un client demande si sa motoneige en panne à 400 km de chez lui est couverte pour hébergement. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Oui, 100$/jour max 4 jours (400$ total) si >300 km du domicile", "Non, jamais", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "La section 24 rembourse 100$/jour max 4 jours (400$ total) si propriétaire >300 km de son adresse indiquée au contrat."
+    },
+    {
+      "question": "Combien de jours maximum pour le véhicule de remplacement ?",
+      "options": ["3 jours", "5 jours", "7 jours", "10 jours"],
+      "correctAnswer": 2,
+      "explanation": "La section 23 limite le remboursement de véhicule de remplacement à un maximum de 7 jours pour la durée du programme."
+    },
+    {
+      "question": "Un collègue partage une information confidentielle d'un client. Comment réagissez-vous ?",
+      "options": ["Partager aussi", "Rappeler importance de confidentialité, signaler si nécessaire, ne pas propager", "Ignorer", "Encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de rappeler l'importance de la confidentialité, de ne pas propager l'information et de signaler si nécessaire."
+    }
+  ]
+}
+

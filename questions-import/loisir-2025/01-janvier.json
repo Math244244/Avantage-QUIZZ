@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 1,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle section couvre le moteur pour les véhicules de loisir ?",
+      "options": ["Section 1", "Section 2", "Section 3", "Section 4"],
+      "correctAnswer": 0,
+      "explanation": "La section 1 - Moteur couvre le bloc-moteur et toutes les pièces lubrifiées internes incluant culasse, vilebrequin, pistons et joints."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour tous les programmes loisir ?",
+      "options": ["5 000$", "8 000$", "10 000$", "15 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le montant maximum par réclamation est de 10 000$ (par visite et cumulatif) pour tous les programmes loisir."
+    },
+    {
+      "question": "Le turbo et surcompresseur sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 2", "Section 3", "Section 12"],
+      "correctAnswer": 1,
+      "explanation": "La section 2 couvre toutes les pièces internes OEM du turbo/surcompresseur incluant boîtier, refroidisseur intermédiaire et soupapes de dérivation."
+    },
+    {
+      "question": "Un client avec un scooter 500cc demande une garantie. Quelle est la puissance maximale de base couverte ?",
+      "options": ["500cc ou 10kW", "750cc ou 15kW", "1000cc ou 20kW", "1200cc ou 25kW"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Scooters & Motocycles s'applique aux véhicules avec moteur jusqu'à 750cc ou 15kW selon l'admissibilité de base."
+    },
+    {
+      "question": "Combien de catégories compose le programme loisir ?",
+      "options": ["2 catégories", "3 catégories", "4 catégories", "5 catégories"],
+      "correctAnswer": 1,
+      "explanation": "Le programme loisir se distingue par 3 catégories : Scooters & Motocycles, VTT/Côte-à-côte/Motoneiges, et Motomarines & Bateaux."
+    },
+    {
+      "question": "Quelle est la franchise si le véhicule est réparé dans un Centre Autorisé ?",
+      "options": ["0$", "50$", "100$", "125$"],
+      "correctAnswer": 0,
+      "explanation": "La franchise est de 0$ si réparé dans un Centre Autorisé, ou 100$ si réparé ailleurs pour tous les programmes loisir."
+    },
+    {
+      "question": "La transmission est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 2", "Section 3", "Section 4"],
+      "correctAnswer": 2,
+      "explanation": "La section 3 - Système d'entraînement Transmission couvre le boîtier et toutes les pièces lubrifiées internes incluant arbre principal et jeux d'engrenages."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme loisir ?",
+      "options": ["3 termes", "4 termes", "5 termes", "6 termes"],
+      "correctAnswer": 2,
+      "explanation": "Le programme loisir est disponible pour 5 termes : 12 mois, 24 mois, 36 mois, 48 mois ou 60 mois selon la durée choisie."
+    },
+    {
+      "question": "L'entraînement primaire est couvert dans quelle section ?",
+      "options": ["Section 3", "Section 4", "Section 5", "Section 6"],
+      "correctAnswer": 1,
+      "explanation": "La section 4 - Système de l'Entraînement Primaire couvre chaîne, moyeu d'embrayage, ressort d'embrayage et jeux d'engrenages."
+    },
+    {
+      "question": "Comment présenter l'avantage de la franchise 0$ dans un Centre Autorisé à un client ?",
+      "options": ["Ce n'est pas important", "Aucune franchise si réparé dans notre réseau, économie de 100$ par visite", "La franchise est obligatoire", "C'est la même partout"],
+      "correctAnswer": 1,
+      "explanation": "La franchise 0$ dans un Centre Autorisé (vs 100$ ailleurs) est un avantage concurrentiel qui fidélise le client et économise 100$ par réclamation."
+    },
+    {
+      "question": "Quelle est la puissance maximale de base pour la catégorie VTT, Côte-à-Côte & Motoneiges ?",
+      "options": ["750cc ou 15kW", "800cc ou 30kW", "1000cc ou 40kW", "1200cc ou 50kW"],
+      "correctAnswer": 1,
+      "explanation": "Le programme VTT, Côte-à-Côte & Motoneiges s'applique aux véhicules avec moteur jusqu'à 800cc ou 30kW selon l'admissibilité de base."
+    },
+    {
+      "question": "L'entraînement secondaire est couvert dans quelle section ?",
+      "options": ["Section 3", "Section 4", "Section 5", "Section 6"],
+      "correctAnswer": 2,
+      "explanation": "La section 5 - Système d'entraînement Secondaire couvre arbre de transmission, chaîne, pignons, poulies, kit d'embrayage et joint homocinétique."
+    },
+    {
+      "question": "Quel numéro doit-on composer pour aviser l'Administrateur d'une panne ?",
+      "options": ["1-800-666-0181", "1-866-666-0181", "1-888-666-0181", "1-877-666-0181"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire doit composer le 1-866-666-0181 pour aviser l'Administrateur d'une panne selon les procédures de réclamation."
+    },
+    {
+      "question": "Le système de propulsion pour motomarine/bateau est couvert dans quelle section ?",
+      "options": ["Section 5", "Section 6", "Section 7", "Section 8"],
+      "correctAnswer": 1,
+      "explanation": "La section 6 couvre le système de propulsion motomarine/bateau incluant boîtier, arbres, pompe interne et pompe à jet."
+    },
+    {
+      "question": "Quelle est la puissance maximale pour la catégorie Motomarines & Bateaux ?",
+      "options": ["300hp", "400hp", "500hp", "600hp"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Motomarines & Bateaux s'applique aux véhicules avec puissance totale jusqu'à 400hp selon l'admissibilité de base."
+    },
+    {
+      "question": "La direction est couverte dans quelle section ?",
+      "options": ["Section 5", "Section 6", "Section 7", "Section 8"],
+      "correctAnswer": 2,
+      "explanation": "La section 7 - Direction couvre arbres d'essieux, biellettes de direction, fusée, tubes de fourche, crémaillère et direction assistée."
+    },
+    {
+      "question": "Un client avec une moto 900cc demande une garantie. Quelle option est requise ?",
+      "options": ["Aucune option", "Option Turbo 100$", "Option Haut performance 200$", "Option Sport 150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Haut performance (200$) est requise pour couvrir les moteurs de 751cc à 2500cc pour les Scooters & Motocycles."
+    },
+    {
+      "question": "Combien coûte l'option Turbocompresseurs pour Scooters & Motocycles ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Turbocompresseurs installés en usine coûte 100$ pour le programme Scooters & Motocycles."
+    },
+    {
+      "question": "Le système de l'assiette est couvert dans quelle section ?",
+      "options": ["Section 6", "Section 7", "Section 8", "Section 9"],
+      "correctAnswer": 2,
+      "explanation": "La section 8 - Système de l'assiette couvre moteur de trim, pompe, cylindres, capteurs et jauge de trim pour bateaux."
+    },
+    {
+      "question": "Comment expliquer la période d'attente à un client ?",
+      "options": ["Il n'y en a pas", "30 jours ET 200 km (ou 20h), les deux conditions doivent être remplies avant activation", "15 jours seulement", "100 km seulement"],
+      "correctAnswer": 1,
+      "explanation": "La période d'attente est de 30 jours ET 200 km (20h selon programme) suivant la livraison, les DEUX conditions devant être remplies."
+    },
+    {
+      "question": "Combien coûte l'option Usagé sans garantie manufacturière pour Scooters & Motocycles ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Usagé sans garantie manufacturière coûte 200$ avec condition de véhicule de moins de 10 ans et moins de 100 000 km."
+    },
+    {
+      "question": "La suspension est couverte dans quelle section ?",
+      "options": ["Section 7", "Section 8", "Section 9", "Section 10"],
+      "correctAnswer": 2,
+      "explanation": "La section 9 - Suspension couvre bras de commande, fusées, bras oscillant, rotules, roulements de roue et barre de liaison."
+    },
+    {
+      "question": "Un client demande si son VTT 950cc est couvert par le programme de base. Que répondez-vous ?",
+      "options": ["Oui, couvert", "Non, véhicule trop puissant", "Oui, avec option Haut performance 200$ (couvre 801cc à 1200cc)", "Non, aucune option disponible"],
+      "correctAnswer": 2,
+      "explanation": "L'option Haut performance (200$) est requise pour couvrir les moteurs de 801cc à 1200cc pour VTT, Côte-à-Côte & Motoneiges."
+    },
+    {
+      "question": "Combien coûte l'option Utilisation en motocross ou dual-sport ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Utilisation en motocross ou dual-sport coûte 400$ pour le programme Scooters & Motocycles."
+    },
+    {
+      "question": "Les freins sont couverts dans quelle section ?",
+      "options": ["Section 8", "Section 9", "Section 10", "Section 11"],
+      "correctAnswer": 2,
+      "explanation": "La section 10 - Système de Freins couvre maître-cylindre, moyeux, étriers, disques, unité ABS, capteurs et conduites hydrauliques."
+    },
+    {
+      "question": "Quelle est la condition de kilométrage pour l'option Usagé sans garantie pour VTT/Côte-à-Côte/Motoneiges ?",
+      "options": ["Moins de 10 000 km", "Moins de 50 000 km", "Moins de 100 000 km", "Aucune limite"],
+      "correctAnswer": 0,
+      "explanation": "L'option Usagé sans garantie pour VTT/Côte-à-Côte/Motoneiges nécessite un véhicule de moins de 10 ans ET moins de 10 000 km (différent des motos)."
+    },
+    {
+      "question": "Le système de refroidissement est couvert dans quelle section ?",
+      "options": ["Section 9", "Section 10", "Section 11", "Section 12"],
+      "correctAnswer": 2,
+      "explanation": "La section 11 - Système de refroidissement couvre pompe à eau, radiateur, échangeur de chaleur, refroidisseurs d'huile et thermostat."
+    },
+    {
+      "question": "Un client hésite à prendre l'option Maximum jusqu'à la valeur marchande. Comment l'expliquez-vous ?",
+      "options": ["Ce n'est pas utile", "Elle garantit couverture jusqu'à la valeur marchande du véhicule, idéal pour véhicules de valeur", "C'est trop cher", "C'est automatique"],
+      "correctAnswer": 1,
+      "explanation": "L'option Maximum jusqu'à la valeur marchande (400$) assure que les réparations sont couvertes jusqu'à la pleine valeur du véhicule."
+    },
+    {
+      "question": "Combien coûte l'option Maximum jusqu'à la valeur marchande ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Maximum jusqu'à la valeur marchande coûte 400$ pour Scooters & Motocycles et VTT/Côte-à-Côte/Motoneiges."
+    },
+    {
+      "question": "Le HVAC (chauffage et climatisation) est couvert dans quelle section ?",
+      "options": ["Section 11", "Section 12", "Section 13", "Section 16"],
+      "correctAnswer": 1,
+      "explanation": "La section 12 - HVAC couvre toutes les pièces du chauffage/climatisation incluant compresseur, condenseur, évaporateur et éléments chauffants."
+    }
+  ]
+}
+

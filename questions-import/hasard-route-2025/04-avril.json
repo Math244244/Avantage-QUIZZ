@@ -1,0 +1,182 @@
+{
+  "module": "hasard-route",
+  "month": 4,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Que couvre la RÉPARATION DE BOSSES SANS PEINTURE ?",
+      "options": ["Tous dommages carrosserie", "Réparation SANS peinture bosses et enfoncements MINEURS sur véhicule", "Seulement capot", "Remplacement panneaux"],
+      "correctAnswer": 1,
+      "explanation": "La RÉPARATION DE BOSSES SANS PEINTURE couvre la réparation sans peinture des bosses et enfoncements MINEURS sur le véhicule (technique PDR - Paintless Dent Repair)."
+    },
+    {
+      "question": "Quel est le remboursement maximum pour une bosse sans peinture par réparation ?",
+      "options": ["100$", "250$ par réparation", "500$ par réparation", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour une RÉPARATION DE BOSSES SANS PEINTURE est jusqu'à 250$ par réparation (réparation principale)."
+    },
+    {
+      "question": "Quel est le remboursement pour réparations SUPPLÉMENTAIRES lors même visite ?",
+      "options": ["250$ chacune", "50$ par réparation supplémentaire, maximum 2 réparations supplémentaires par visite", "100$ chacune", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Pour réparation supplémentaire effectuée lors MÊME visite : remboursement maximum 50$ par réparation, jusqu'à maximum 2 réparations supplémentaires par visite."
+    },
+    {
+      "question": "Combien d'occurrences bosses sans peinture sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La RÉPARATION DE BOSSES SANS PEINTURE couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat."
+    },
+    {
+      "question": "Comment expliquer structure remboursement bosses (250$ + 50$ + 50$) à un client ?",
+      "options": ["C'est compliqué", "Expliquer LOGIQUE : 1ère bosse = 250$ (principale), bosses additionnelles MÊME visite = 50$ chacune (max 2) = économie déplacement. Total possible 350$/visite (3 bosses). Structure encourage réparations groupées efficaces", "Ignorer détails", "Selon le nombre"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification structure : 1ère bosse 250$, additionnelles même visite 50$ (max 2) = total 350$ possible, structure encourage réparations groupées économie déplacement efficacité."
+    },
+    {
+      "question": "Quelle est la taille maximum de bosse couverte ?",
+      "options": ["Aucune limite", "Toute bosse diamètre SUPÉRIEUR à 5 centimètres (2 pouces) = EXCLUE", "10 cm", "3 pouces"],
+      "correctAnswer": 1,
+      "explanation": "Toute bosse d'un diamètre SUPÉRIEUR à 5 centimètres (2 pouces) est EXCLUE de la couverture bosses sans peinture."
+    },
+    {
+      "question": "Les bosses inaccessibles sont-elles couvertes ?",
+      "options": ["Oui, toutes", "NON, toute bosse INACCESSIBLE (équipements aftermarket) ou sur BORDS (réparation sans peinture impossible) = EXCLUE", "Seulement si démontage", "Selon le technicien"],
+      "correctAnswer": 1,
+      "explanation": "Toute bosse inaccessible en raison installation équipements marché secondaire OU se trouvant sur des bords où réparation sans peinture est impossible = EXCLUE."
+    },
+    {
+      "question": "Comment expliquer limite 5 cm (2 pouces) bosses à client avec grosse bosse portière ?",
+      "options": ["Être flexible", "Expliquer LOGIQUE : technique PDR (sans peinture) efficace SEULEMENT petites bosses (≤5 cm). Bosses plus grandes = risque endommager peinture, résultats insatisfaisants. Grosse bosse portière = nécessite peinture (voir couverture Peinture+Éraflures)", "Promettre réparation", "Selon le technicien"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication technique : PDR efficace ≤5 cm, bosses plus grandes = risque dommage peinture résultats insatisfaisants, grosse bosse = peinture requise (autre couverture), gestion attentes."
+    },
+    {
+      "question": "Si réparation bosse risque endommager peinture/finition, est-elle couverte ?",
+      "options": ["Oui, risque accepté", "NON, toute réparation qui pourrait ENDOMMAGER peinture ou finition véhicule = EXCLUE", "Selon le consentement", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Toute réparation qui, si effectuée, pourrait d'une quelconque manière endommager la peinture ou la finition du véhicule = EXCLUE de la couverture."
+    },
+    {
+      "question": "Que couvre la protection PEINTURE + ÉRAFLURES ?",
+      "options": ["Toute carrosserie", "Réparation éraflures MINEURES et éclats peinture sur composants identifiés véhicule", "Seulement pare-chocs", "Peinture complète"],
+      "correctAnswer": 1,
+      "explanation": "La protection PEINTURE + ÉRAFLURES couvre la réparation des éraflures MINEURES et des éclats de peinture sur les composants identifiés du véhicule."
+    },
+    {
+      "question": "Quel est le remboursement TOTAL maximum PEINTURE + ÉRAFLURES pour toute la durée ?",
+      "options": ["1 000$", "2 000$ pour TOUTE la Durée contrat", "5 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement TOTAL maximum pour PEINTURE + ÉRAFLURES est 2 000$ pour TOUTE la Durée du contrat (limite cumulative)."
+    },
+    {
+      "question": "Combien d'occurrences PEINTURE + ÉRAFLURES sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat (jusqu'à limite 2 000$ total)", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La protection PEINTURE + ÉRAFLURES couvre un nombre ILLIMITÉ d'occurrences pendant Durée contrat (jusqu'à atteindre limite cumulative 2 000$)."
+    },
+    {
+      "question": "Comment expliquer limite cumulative 2000$ peinture à client actif ?",
+      "options": ["Minimiser", "Expliquer LOGIQUE : limite 2000$ cumulative = protection généreuse multiples petites réparations (200$-400$ chacune) = 5-10 réparations possibles. Gérer budget, prioriser éraflures visibles importantes. Occurrences illimitées jusqu'à atteinte limite", "C'est restrictif", "Selon le coût"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser : limite 2000$ cumulative = protection généreuse multiples réparations (5-10 possibles 200$-400$ chacune), occurrences illimitées jusqu'à limite, gérer priorités réparations."
+    },
+    {
+      "question": "Quelle est la longueur maximum d'éraflure couverte ?",
+      "options": ["15 cm", "Éraflure PLUS de 30 centimètres (12 pouces) longueur = EXCLUE", "50 cm", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "Toute éraflure de PLUS de 30 centimètres (12 pouces) de longueur est EXCLUE de la couverture peinture + éraflures."
+    },
+    {
+      "question": "Quelle est la taille maximum d'éclat de peinture couvert ?",
+      "options": ["1 cm", "Éclat peinture DÉPASSANT 1,5 centimètre (0,6 pouce) diamètre = EXCLU", "2 cm", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "Tout éclat de peinture dépassant 1,5 centimètre (0,6 pouce) de diamètre est EXCLU de la couverture peinture + éraflures."
+    },
+    {
+      "question": "Les éraflures causées par collision sont-elles couvertes ?",
+      "options": ["Oui, toutes causes", "NON, tout dommage causé par COLLISION, intempéries, force majeure ou VANDALISME = EXCLU", "Seulement petites collisions", "Selon l'assurance"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage causé par une COLLISION, des intempéries, un cas de force majeure ou un acte de VANDALISME est EXCLU de la couverture peinture + éraflures."
+    },
+    {
+      "question": "Comment gérer client avec éraflure 40 cm sur portière (> 30 cm limite) ?",
+      "options": ["Couvrir quand même", "Expliquer NON ADMISSIBLE : éraflure 40 cm dépasse limite 30 cm (12 pouces). Programme couvre éraflures MINEURES hasards routiers (branches, gravier). Éraflure 40 cm = collision/vandalisme probablement (assurance principale). Transparence termes", "Diviser en 2 réclamations", "Selon le coût"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté : éraflure 40 cm > limite 30 cm = non admissible, programme couvre mineures hasards, grande éraflure = probable collision/vandalisme (assurance), transparence termes."
+    },
+    {
+      "question": "Un client atteint limite 2000$ peinture. Peut-il encore utiliser autres couvertures ?",
+      "options": ["Non, contrat terminé", "OUI, limite 2000$ = SEULEMENT peinture+éraflures. Toutes autres couvertures (pneus, roues, pare-brise, etc.) continuent normalement", "Doit renouveler", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La limite 2000$ s'applique SEULEMENT à la couverture peinture+éraflures. Toutes les autres protections (pneus, roues, clés, pare-brise, etc.) continuent normalement jusqu'à expiration contrat."
+    },
+    {
+      "question": "Que couvre la RÉPARATION DU PARE-BRISE + VITRES EXTÉRIEURES ?",
+      "options": ["Tous dommages vitres", "Réparation éclats et fissures MINEURS pare-brise ou vitres extérieures causés par DÉBRIS route projetés", "Seulement pare-brise", "Remplacement vitres"],
+      "correctAnswer": 1,
+      "explanation": "La couverture couvre la réparation des éclats et fissures MINEURS sur pare-brise ou toute vitre extérieure causés par DÉBRIS route projetés (pierres, bois, métal, plastique)."
+    },
+    {
+      "question": "Quel est le remboursement maximum pour une réparation pare-brise/vitre ?",
+      "options": ["50$", "125$ par réparation", "250$ par réparation", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour une RÉPARATION pare-brise/vitre extérieure est 125$ par réparation (réparation principale)."
+    },
+    {
+      "question": "Quel est le remboursement pour réparations SUPPLÉMENTAIRES vitres lors même visite ?",
+      "options": ["125$ chacune", "25$ par réparation supplémentaire lors même visite", "50$ chacune", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Pour toute réparation supplémentaire pare-brise/vitre lors de la MÊME visite : remboursement 25$ par réparation supplémentaire."
+    },
+    {
+      "question": "Combien d'occurrences réparation pare-brise/vitres sont couvertes ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La RÉPARATION PARE-BRISE + VITRES EXTÉRIEURES couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat."
+    },
+    {
+      "question": "Comment expliquer structure remboursement pare-brise (125$ + 25$ + 25$) à un client ?",
+      "options": ["C'est compliqué", "Expliquer LOGIQUE : 1er éclat = 125$ (principal), éclats additionnels MÊME visite = 25$ chacun = économie déplacement/immobilisation. Structure encourage réparations groupées (2-3 éclats = 1 visite). Efficacité + coût-bénéfice", "Ignorer détails", "Selon le nombre"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : 1er éclat 125$, additionnels même visite 25$ chacun = économie déplacement, structure encourage réparations groupées efficaces (2-3 éclats = 1 visite), coût-bénéfice."
+    },
+    {
+      "question": "Quelle est la taille maximum de fissure pare-brise réparable ?",
+      "options": ["10 cm", "Toute fissure PLUS de 5 centimètres (2 pouces) au moment inspection = EXCLUE", "3 pouces", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "Toute fissure de PLUS de 5 centimètres (2 pouces) au moment de l'inspection, ou tout dommage jugé irréparable par le technicien = EXCLU."
+    },
+    {
+      "question": "Les fissures de stress du pare-brise sont-elles couvertes ?",
+      "options": ["Oui, toutes fissures", "NON, toute fissure de STRESS = EXCLUE (seulement débris route projetés couverts)", "Selon la cause", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "Toute fissure de STRESS (causée par contraintes thermiques/structurelles) est EXCLUE. Seulement les dommages causés par DÉBRIS ROUTE PROJETÉS sont couverts."
+    },
+    {
+      "question": "Comment expliquer exclusion fissures stress à client avec fissure spontanée hiver ?",
+      "options": ["Couvrir quand même", "Expliquer DISTINCTION : fissures stress = causées variations température/contraintes (pas impact débris), fréquentes hiver. Programme couvre SEULEMENT impacts débris route (pierres, gravier). Fissure spontanée = stress (exclu). Clarifier cause détermine admissibilité", "C'est injuste", "Selon le technicien"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification distinction : fissures stress = variations température/contraintes (pas impact), programme couvre impacts débris route seulement, fissure spontanée = stress (exclu), cause détermine admissibilité."
+    },
+    {
+      "question": "Un collègue promet \"pare-brise illimité gratuit toujours\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : programme couvre RÉPARATION éclats/fissures ≤5 cm (125$ + 25$), PAS remplacement illimité gratuit. Remplacement = couverture séparée (franchise/remplacement option 1 ou 2). Fausse promesse = litige. Correction obligatoire", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : programme couvre réparation ≤5 cm (125$/25$) PAS remplacement illimité gratuit, remplacement = couverture séparée, fausse promesse = litige, correction protège réputation."
+    },
+    {
+      "question": "Un client veut savoir si pare-brise après-marché (non OEM) est couvert. Que répondre ?",
+      "options": ["Oui, tous pare-brise", "Programme couvre pare-brise/vitres installés sur véhicule (OEM ou qualité équivalente). MAIS dommages préexistants (avant contrat) = EXCLUS. Si installation après-marché AVANT contrat, dommages ultérieurs débris route = couverts", "Non, OEM seulement", "Selon la qualité"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté : programme couvre pare-brise/vitres installés (OEM/équivalent), dommages préexistants avant contrat = exclus, installation après-marché avant contrat + dommages ultérieurs débris = couverts."
+    },
+    {
+      "question": "Comment valoriser réparation pare-brise illimitée à client région montagneuse (gravier fréquent) ?",
+      "options": ["Minimiser", "Démontrer ROI région montagneuse : gravier/pierres fréquents = risques élevés éclats multiples. Réparation atelier = 75$-150$ chaque. Protection illimitée = 5-10 réparations/an possibles = économie 500$-1500$/an. ROI majeur zones risque", "C'est facultatif", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI contexte : région montagneuse = gravier fréquent risques élevés, réparations 75$-150$ chaque, illimitée = 5-10/an = économie 500$-1500$/an, ROI majeur zones risque."
+    }
+  ]
+}
+

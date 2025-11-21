@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 3,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "L'évaporateur d'air climatisé est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 7 - Refroidissement (si installé par manufacturier)", "Oui, toujours", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre évaporateur d'air climatisé (si ces pièces ont été installées par le manufacturier ou si elles sont des pièces d'origines)."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour le remorquage par année ?",
+      "options": ["100$ par année", "200$ par année", "300$ par année", "500$ par année"],
+      "correctAnswer": 3,
+      "explanation": "Un remboursement allant jusqu'à 500$ CAD par année sera accordé pour les remorquages nécessaires si la réparation est autorisée (Protection incluse)."
+    },
+    {
+      "question": "Le moteur du ventilateur de la chaufferette avant et arrière est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 7 - Refroidissement", "Oui, composant 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre moteur du ventilateur de la chaufferette avant et arrière / soufflerie ainsi que radiateur de la chaufferette."
+    },
+    {
+      "question": "Combien coûte l'option Pas de limite par réclamation ?",
+      "options": ["100$", "300$", "500$", "750$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Pas de limite par réclamation coûte 500$ et est disponible uniquement pour les termes de 36 mois et plus (section 3 - aVR-Plus)."
+    },
+    {
+      "question": "Le radiateur est-il couvert ?",
+      "options": ["Oui, toujours", "Oui, composant 7 - Refroidissement (sauf par corrosion)", "Non, jamais", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre radiateur (sauf par corrosion), refroidisseurs de l'huile, sondes thermiques et thermostat."
+    },
+    {
+      "question": "Un client demande si les pneus sont couverts. Que répondez-vous ?",
+      "options": ["Oui, tous", "Non, pneus et valves de pneus, roues, jantes et enjoliveurs exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pneus et valves de pneus, roues, jantes et l'enjoliveurs et tous les réservoirs de fluides sont exclus (section 4.3)."
+    },
+    {
+      "question": "Le thermostat est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 7 - Refroidissement", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre thermostat, sondes thermiques, pompe eau et refroidisseurs de l'huile."
+    },
+    {
+      "question": "Comment présenter l'option Pas de limite par réclamation à un client avec VR haut de gamme ?",
+      "options": ["Pas nécessaire", "500$ pour remplacer limite 10k$ par valeur véhicule, protection maximale pour VR haut de gamme", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (500$) élimine la limite 10k$/réclamation, excellente protection pour VR haut de gamme."
+    },
+    {
+      "question": "L'accumulateur de pression des freins est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 8 - Freins", "Oui, composant 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 8 - Freins couvre accumulateur de pression des freins, compensateur de freinage, boîtier de soupapes et maître-cylindre."
+    },
+    {
+      "question": "L'option Pas de limite par réclamation est-elle disponible pour les termes courts ?",
+      "options": ["Oui, tous termes", "Non, disponible uniquement pour les termes de 36 mois et plus", "Oui, avec supplément", "Selon le programme"],
+      "correctAnswer": 1,
+      "explanation": "L'option Pas de limite par réclamation est disponible uniquement pour les termes de 36 mois et plus selon la condition (section 3 - aVR-Plus)."
+    },
+    {
+      "question": "Le maître-cylindre de frein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 8 - Freins", "Oui, composant 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 8 - Freins couvre maître-cylindre, pompe hydraulique, pompe a dépression, système de servofrein et câble de freins."
+    },
+    {
+      "question": "Les plaquettes et disques de frein sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, plaquette de freins, disques, tambours et sabots exclus (pièces d'usure)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La plaquette de freins, disques de freins, les tambours et sabots de freins sont exclus car pièces d'usure (section 4.2)."
+    },
+    {
+      "question": "Le système de servofrein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 8 - Freins", "Oui, composant 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 8 - Freins couvre système de servofrein, pompe hydraulique, maître-cylindre et accumulateur de pression."
+    },
+    {
+      "question": "Comment gérer un client qui a ignoré les signaux d'avertissement et endommagé le moteur ?",
+      "options": ["Rembourser", "Expliquer poliment exclusion (section 5.5): non-respect signaux avertissement exclu", "Céder", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que non-respect des signaux d'avertissement qui cause dommages est exclu (section 5.5)."
+    },
+    {
+      "question": "Les étriers de freins à disque avant et arrière sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 8 - Freins", "Oui, composant 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 8 - Freins couvre étriers de freins à disque avant et arrière, câble de freins et capteur de roues (ABS)."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour le service routier par année ?",
+      "options": ["25$ par année", "50$ par année", "100$ par année", "200$ par année"],
+      "correctAnswer": 1,
+      "explanation": "Un remboursement allant jusqu'à 50$ CAD par année sera accordé pour services de survoltage, livraison d'essence, réparation crevaison (Protection incluse)."
+    },
+    {
+      "question": "Les biellettes de direction sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 9 - Suspension", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 9 - Suspension couvre biellettes de direction, bras de renvoi, bras de suspension supérieur et inférieur, rotules et fusée de roulement."
+    },
+    {
+      "question": "Les dommages dus à la corrosion sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, réparation endommagée par rouille ou corrosion exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à la rouille, la contamination ou la corrosion (y compris corrosion câbles/connecteurs) est exclue (section 5.2)."
+    },
+    {
+      "question": "Les bras de suspension supérieur et inférieur et leurs coussinets sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 9 - Suspension", "Oui, composant 8", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 9 - Suspension couvre bras de suspension supérieur et inférieur et leur coussinets, biellettes de direction et fusée de roulement."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement de la prime ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Remboursement de la Prime coûte 500$ et est disponible uniquement pour les termes de 36 mois et plus (section 3 - aVR-Plus)."
+    },
+    {
+      "question": "Les rotules de suspension sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 9 - Suspension", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 9 - Suspension couvre rotules, bras de renvoi, biellettes de direction, bras de suspension et fusée de roulement (amortisseurs exclus)."
+    },
+    {
+      "question": "Comment expliquer l'option Remboursement de la prime à un client fidèle ?",
+      "options": ["Pas utile", "500$ pour remboursement partiel jusqu'à 2000$ si aucune réclamation à la fin du contrat, récompense fidélité", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (500$) offre remboursement partiel jusqu'à 2000$ si aucune réclamation, récompense pour clients fidèles."
+    },
+    {
+      "question": "Les amortisseurs sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, amortisseurs exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 9 - Suspension couvre plusieurs pièces mais les amortisseurs sont spécifiquement exclus (fusée de roulement (amortisseurs exclus))."
+    },
+    {
+      "question": "L'option Remboursement de la prime nécessite-t-elle des conditions ?",
+      "options": ["Non, aucune", "Oui, aucune réclamation durant contrat, demande dans 30 derniers jours, pas de transfert", "Automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option exige : aucune réclamation payée, demande dans 30 derniers jours avant expiration, pas de transfert, preuve de propriété requise (section 3)."
+    },
+    {
+      "question": "L'alternateur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 10 - Électricité", "Oui, composant 14", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre alternateur, démarreur, solénoïde du démarreur et régulateur de voltage."
+    },
+    {
+      "question": "Un client demande si les batteries sont couvertes. Que répondez-vous ?",
+      "options": ["Oui, toutes", "Non, batteries, câbles et câblage, fusibles et boite de fusible exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les batteries, les câbles et câblage, les fusibles et boite de fusible sont exclus des systèmes électriques (section 4.2)."
+    },
+    {
+      "question": "Le démarreur et solénoïde du démarreur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 10 - Électricité", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre démarreur, solénoïde du démarreur, alternateur et régulateur de voltage."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour réparation par appel de service par année ?",
+      "options": ["50$ par année", "100$ par année", "200$ par année", "300$ par année"],
+      "correctAnswer": 2,
+      "explanation": "Un remboursement allant jusqu'à 200$ CAD par année sera accordé pour frais de déplacement du service mobile pour réparations autorisées sur place (Protection incluse)."
+    },
+    {
+      "question": "Les interrupteurs des lève-glaces électriques sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 10 - Électricité", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 10 - Électricité couvre interrupteurs des lève-glaces électriques, moteur des lève glaces, interrupteurs des lumières et clignotants."
+    },
+    {
+      "question": "Un collègue demande de couvrir son erreur auprès du gérant. Comment réagissez-vous ?",
+      "options": ["Mentir pour le couvrir", "Être honnête tout en suggérant qu'il assume sa responsabilité pour apprendre", "Le dénoncer publiquement", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige l'honnêteté tout en encourageant le collègue à assumer ses erreurs pour apprendre et progresser."
+    }
+  ]
+}
+

@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 9,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "L'Administrateur peut-il faire inspecter le véhicule ?",
+      "options": ["Non, jamais", "Oui, se réserve le droit de faire inspecter le véhicule dans un Centre de Réparation Autorisé", "Seulement avec accord", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit de faire inspecter le véhicule dans un Centre de Réparation Autorisé (section 6.2)."
+    },
+    {
+      "question": "Comment expliquer les composants couverts à un client avec VR Motorisé ?",
+      "options": ["Seulement moteur", "22 composants (1-22): Moteur, Transmission, Différentiel, Direction, Freins, Suspension, Électricité, Habitacle (12-22)", "10 composants", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : Section A Motorisé couvre 22 composants (1 à 22) incluant mécanique ET habitacle."
+    },
+    {
+      "question": "De quoi le propriétaire est-il responsable concernant les indicateurs d'entretien ?",
+      "options": ["Rien", "S'assurer que tous les indicateurs d'entretien du véhicule sont en état de fonctionnement", "Seulement l'odomètre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Il est de la responsabilité du Propriétaire du Véhicule de s'assurer que tous les indicateurs d'entretien du véhicule sont en état de fonctionnement (section 6.2)."
+    },
+    {
+      "question": "Comment expliquer les composants couverts à un client avec Habitacle (roulotte) ?",
+      "options": ["Rien de couvert", "11 composants (12-22): Cuisinière, Réfrigérateur, Gaz propane, Eau, Chauffe-eau, Chauffage, Moteur auxiliaire, Climatiseur, Extensions, Appareils Lux, Divertissement", "Seulement électricité", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : Section B Habitacle couvre 11 composants (12 à 22) spécifiques aux équipements d'habitation."
+    },
+    {
+      "question": "Quel est le délai maximum pour que l'Administrateur rembourse le Centre de Réparation Autorisé ?",
+      "options": ["7 jours", "Dans le délai convenu entre les deux parties", "30 jours", "60 jours"],
+      "correctAnswer": 1,
+      "explanation": "Pour les autorisations, l'Administrateur remboursera le montant au Centre de Réparation Autorisé dans le délai convenu entre les deux parties (section 8.3)."
+    },
+    {
+      "question": "Un VR avec réglage de puces ECM est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicule avec réglage puces ECM, modifications échappement/admission exclu (exception possible)", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule altéré incluant réglage des puces ECM, modifications du système d'échappement ou d'admission d'air de performance est exclu (exception possible) (section 10.f)."
+    },
+    {
+      "question": "Dans quel délai l'Administrateur rembourse-t-il le propriétaire si celui-ci a payé la facture ?",
+      "options": ["15 jours", "30 à 45 jours suivant réception documentation requise", "60 jours", "Immédiatement"],
+      "correctAnswer": 1,
+      "explanation": "Si le Propriétaire a payé la totalité de la facture, l'Administrateur remboursera le montant autorisé dans les 30 à 45 jours suivant réception de toute la documentation (section 8.3.c)."
+    },
+    {
+      "question": "Comment gérer un client qui refuse de fournir la preuve d'entretien ?",
+      "options": ["Accepter", "Expliquer poliment que preuve peut être demandée à tout moment, refus peut entraîner refus réclamation", "Ignorer", "Forcer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que preuve d'entretien peut être demandée à tout moment et refus peut entraîner refus de réclamation (section 6.2)."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des montants supplémentaires non spécifiés sur l'autorisation ?",
+      "options": ["Oui, toujours", "Non, l'Administrateur ne sera pas tenu responsable des montants supplémentaires", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable des montants supplémentaires non spécifiés sur le formulaire d'autorisation (section 8.4)."
+    },
+    {
+      "question": "Un VR avec suspension levée ou abaissée est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicule avec suspensions levées ou abaissées exclu (exception possible)", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule altéré incluant les suspensions levées ou abaissées est exclu. Le Distributeur peut demander une exception avant vente (section 10.f)."
+    },
+    {
+      "question": "La date de début de garantie peut-elle être révisée par l'Administrateur ?",
+      "options": ["Non, jamais", "Oui, si véhicule acheté sous garantie manufacturier, date peut être révisée avec preuve lecture compteur", "Seulement avec accord", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La date de début peut être révisée si propriétaire a acheté véhicule sous garantie manufacturier et peut fournir preuve de lecture du compteur (section 6.1)."
+    },
+    {
+      "question": "Comment expliquer le remboursement de remorquage à un client ?",
+      "options": ["Pas de remboursement", "Jusqu'à 500$/année pour remorquage vers centre plus près au Canada/USA si réparation autorisée", "Illimité", "100$ seulement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : remboursement jusqu'à 500$ CAD/année pour remorquage nécessaire si réparation autorisée (Protection incluse)."
+    },
+    {
+      "question": "Un VR avec modifications de taille de pneus et de jantes est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicule avec modifications des recommandations de taille de pneus et jantes exclu (exception possible)", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule altéré incluant modifications des recommandations de taille de pneus et de jantes est exclu. Exception possible avant vente (section 10.f)."
+    },
+    {
+      "question": "Comment expliquer le service routier à un client ?",
+      "options": ["Pas de service", "Jusqu'à 50$/année pour survoltage batterie, livraison essence, réparation crevaison ou changement roue secours", "Illimité", "200$ seulement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : remboursement jusqu'à 50$ CAD/année pour services de survoltage, essence, crevaison, changement roue (Protection incluse)."
+    },
+    {
+      "question": "Quelle garantie protège ce programme de garantie ?",
+      "options": ["Aucune", "Protège les composants couverts non couverts par garantie complète manufacturier ou groupe motopropulseur", "Tous les composants", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Cette garantie protège les Composants Couverts qui ne sont plus couverts par la garantie complète du manufacturier ou la garantie du groupe motopropulseur (section 6.1)."
+    },
+    {
+      "question": "Comment expliquer la réparation par appel de service à un client ?",
+      "options": ["Pas de remboursement", "Jusqu'à 200$/année pour frais de déplacement du service mobile si réparation autorisée sur place", "Illimité", "50$ seulement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : remboursement jusqu'à 200$ CAD/année pour frais de déplacement service mobile si réparation autorisée (Protection incluse)."
+    },
+    {
+      "question": "L'Administrateur peut-il exiger une preuve pour déterminer le kilométrage réel ?",
+      "options": ["Non, jamais", "Oui, si informations d'admissibilité falsifiées/mal indiquées, peut exiger toute preuve nécessaire", "Seulement avec accord", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si les informations d'admissibilité sont falsifiées ou mal indiquées, l'Administrateur peut exiger toute preuve pour déterminer le kilométrage réel (section 5.7)."
+    },
+    {
+      "question": "Comment expliquer la location automobile de remplacement à un client ?",
+      "options": ["Pas de remboursement", "50$/jour max 7 jours si réparation implique composants 1-5 et est autorisée, dates correspondant à réparation", "Illimité", "Pour toutes réparations"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : 50$/jour max 7 jours si composants 1-5, réparation autorisée, dates correspondantes (Protection incluse)."
+    },
+    {
+      "question": "L'entretien et les pièces d'entretien recommandés par le fabricant sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, entretien et pièces d'entretien (mise au point, ajustements, alignements) exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'entretien et pièces d'entretien recommandés par le fabricant incluant mise au point, ajustements et réglages, alignements et équilibrage des roues sont exclus (section 4.1)."
+    },
+    {
+      "question": "Comment expliquer le remboursement d'hébergement à un client ?",
+      "options": ["Pas de remboursement", "100$/nuit max 4 nuits si réparation couverte, propriétaire à 300 km de son adresse, réparation plusieurs jours, dates correspondantes", "Illimité", "Pour toutes réparations"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : 100$/nuit max 4 nuits si réparation couverte, >300 km, plusieurs jours, dates correspondantes (Protection incluse)."
+    },
+    {
+      "question": "Le remplissage de tous les liquides et les liquides eux-mêmes sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, remplissage de tous les liquides (huiles, liquides de refroidissement, réfrigérants, additifs, fréon, carburant) exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'entretien et pièces d'entretien incluant le remplissage de tous les liquides pour inclure les liquides eux-mêmes (huiles, réfrigérants, additifs, fréon, carburant) sont exclus (section 4.1)."
+    },
+    {
+      "question": "Comment gérer un client qui a besoin d'hébergement à 250 km de son domicile ?",
+      "options": ["Rembourser", "Expliquer poliment condition: remboursement si propriétaire à PLUS de 300 km de son adresse", "Accepter", "Négocier"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment la condition : remboursement d'hébergement si propriétaire à PLUS de 300 km de son adresse indiquée (Protection incluse)."
+    },
+    {
+      "question": "Les plaquettes de freins, disques, tambours et sabots sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, plaquette de freins, disques de freins, tambours et sabots de freins exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La plaquette de freins, disques de freins, les tambours et sabots de freins sont exclus (section 4.2)."
+    },
+    {
+      "question": "Quelles sont les 5 protections incluses dans le programme VR ?",
+      "options": ["Aucune", "Remorquage 500$/an, Service routier 50$/an, Réparation appel 200$/an, Location auto 50$/jour×7, Hébergement 100$/nuit×4", "Seulement remorquage", "Selon le programme"],
+      "correctAnswer": 1,
+      "explanation": "Les 5 protections incluses sont : Remorquage (500$/an), Service routier (50$/an), Réparation appel (200$/an), Location auto (50$/jour×7), Hébergement (100$/nuit×4)."
+    },
+    {
+      "question": "Les bougies de préchauffage et d'allumage sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, bougies de préchauffage et d'allumage, tringlerie, gicleur et balais d'essuie-glace exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les bougies de préchauffage et d'allumage, le tringlerie, gicleur et les balais d'essuie-glace sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment maximiser la valeur perçue du programme VR lors de la présentation ?",
+      "options": ["Minimiser", "Mettre en avant: 22 composants, 5 protections incluses (valeur 850$/an), options personnalisables, franchise modulable", "C'est cher", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à maximiser valeur perçue : 22 composants, 5 protections incluses (valeur cumulée 850$/an), options, franchise modulable."
+    },
+    {
+      "question": "Les ampoules, ensembles de phares et capteurs adaptatifs de positionnement sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, ampoules, ensemble des phares, capteurs et bras adaptatifs de positionnement des phares exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes d'éclairage incluant ampoules, ensemble des phares, capteurs et bras adaptatifs de positionnement des phares sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un client satisfait revient 3 ans après pour renouveler VR. Comment maximiser cette opportunité ?",
+      "options": ["Vendre rapidement", "Remercier fidélité, évaluer satisfaction, proposer option Remboursement prime (500$) si terme 36+ mois, demander témoignage/référence", "Ignorer historique", "Vendre le moins cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de valoriser la fidélité, évaluer satisfaction, proposer options adaptées (Remboursement prime si 36+ mois), et cultiver témoignage/référence."
+    },
+    {
+      "question": "Les lumières et ballast d'éclairage sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, lumières et ballast d'éclairage exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes d'éclairage incluant lumières et ballast d'éclairage sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un collègue vend une garantie VR avec fausses informations d'admissibilité. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Signaler au gérant, protéger le client, expliquer conséquences (section 5.7: Administrateur peut exiger preuves)", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler les pratiques frauduleuses (falsification admissibilité) pour protéger le client et l'entreprise (conséquences section 5.7)."
+    }
+  ]
+}
+

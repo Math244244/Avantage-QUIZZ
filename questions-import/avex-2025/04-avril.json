@@ -1,0 +1,176 @@
+{
+  "module": "avex",
+  "month": 4,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le Contrôle de l'électricité (Composant 17) est-il couvert ?",
+      "options": ["Non", "OUI, INCLUS: commutateur 4x4, interrupteurs (feu recul, freinage, embrayage, phares), relais, pompe/moteur lave-glace/essuie-glace, moteur antenne, actionneurs/interrupteurs serrures/vitres/miroirs/sièges électriques", "Optionnel", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 17 (Contrôle électricité) est INCLUS: commutateurs (4x4, recul, freinage, embrayage, phares), relais, pompes/moteurs (lave-glace, essuie-glace), antenne, actionneurs/interrupteurs (serrures, vitres, miroirs, sièges), modules, transmission essuie-glaces."
+    },
+    {
+      "question": "Comment valoriser la couverture Contrôle électricité pour véhicules modernes ?",
+      "options": ["Pas important", "Expliquer: véhicules modernes = nombreux systèmes électriques (vitres, sièges, miroirs électriques). Couverture INCLUSE = protection complète confort électronique", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: véhicules modernes hautement électrifiés (vitres, sièges, miroirs, serrures), couverture INCLUSE = protection complète systèmes confort coûteux."
+    },
+    {
+      "question": "L'Électricité A+ (Composant 18) est-elle couverte ?",
+      "options": ["Non", "OUI, INCLUS: capteur température ambiante/habitacle, interrupteur/module/servo régulateur vitesse, moteur/interrupteur/module toit ouvrant, élément chauffant siège, solénoïde coffre/hayon, capteur pluie/solaire", "Optionnel 250$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 18 (Électricité A+) est INCLUS: capteurs température, interrupteur/module/servo régulateur vitesse, moteur/interrupteur/module toit ouvrant, élément chauffant siège, solénoïde coffre, capteur pluie/solaire."
+    },
+    {
+      "question": "Les Émissions (Composant 19) sont-elles couvertes ?",
+      "options": ["Non", "OUI, solénoïde purge valve, absorbeur vapeurs, convertisseurs catalytiques, vanne dérivation, plaque/soupape/refroidisseurs EGR, capteurs oxygène, soupape PCV, cartouche évaporateur, DPF, DOC, capteurs SCR/Nox", "Seulement catalytique", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 19 (Émissions) couvre: solénoïde purge, absorbeur vapeurs, convertisseurs catalytiques, vanne dérivation, EGR (plaque, soupape, refroidisseurs), capteurs O2, PCV, cartouche, DPF, DOC, capteurs SCR/Nox, capteurs température."
+    },
+    {
+      "question": "Comment expliquer la couverture Émissions pour véhicules diesel modernes ?",
+      "options": ["Pas nécessaire", "Expliquer: diesel moderne = systèmes émissions complexes (DPF, SCR, EGR) très coûteux (3k$-8k$). Couverture INCLUSE = protection majeure diesel", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: diesel moderne = systèmes émissions sophistiqués coûteux (DPF, SCR 3k$-8k$+), couverture INCLUSE = protection essentielle véhicules diesel."
+    },
+    {
+      "question": "Les Systèmes ordinateurs (Composant 20) sont-ils couverts ?",
+      "options": ["Non", "OUI, INCLUS: module contrôle véhicule (BCM), moteur (ECM/ECU), transmission (TCM), groupe motopropulseur (PCM), connecteur liaison données (OBD2), interface protocole accessoire (APIM)", "Optionnel 600$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 20 (Systèmes ordinateurs) est INCLUS: BCM, ECM/ECU, TCM, PCM, connecteur OBD2, module APIM. Tous les modules de contrôle électroniques majeurs couverts."
+    },
+    {
+      "question": "Comment valoriser la couverture Systèmes ordinateurs (Composant 20) ?",
+      "options": ["Minimiser", "Expliquer: véhicules modernes = ordinateurs contrôlent TOUT (moteur, transmission, freins, etc.). Modules coûteux (500$-2000$+ chacun). Couverture INCLUSE = protection majeure", "C'est basique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer criticité: véhicules modernes = ordinateurs contrôlent tous systèmes, modules très coûteux (500$-2000$+ chacun), couverture INCLUSE = protection essentielle."
+    },
+    {
+      "question": "Le Haut-Tech (Composant 21) est-il couvert ?",
+      "options": ["Non", "OUI, INCLUS: capteurs/unité alarme, accès Internet, module antenne, port charge, tableau bord numérique, entrée sans clé, chargeur induction, unité info/média, Bluetooth, lecteurs CD/DVD/Blu-ray, radio, GPS, mémoire siège, prises 12v/110v/USB", "Optionnel 800$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 21 (Haut-Tech) est INCLUS sans frais: alarme, Internet, antenne, port charge, écrans, entrée sans clé, chargeur induction, info/média, Bluetooth, lecteurs, radio, GPS, mémoire siège, prises, faisceaux."
+    },
+    {
+      "question": "Comment présenter la valeur exceptionnelle de la couverture Haut-Tech incluse ?",
+      "options": ["Pas important", "Expliquer: systèmes haute-tech (écrans, GPS, Bluetooth, caméras) = très coûteux si achat séparé (1500$-5000$+). INCLUS AVEX = valeur exceptionnelle véhicules modernes", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser énormément: systèmes haute-tech extrêmement coûteux (écrans, GPS, multimédia 1500$-5000$+), INCLUS sans frais = différenciateur majeur AVEX."
+    },
+    {
+      "question": "L'Aide à la conduite (Composant 22) est-elle couverte ?",
+      "options": ["Non", "OUI, INCLUS: régulateur vitesse adaptatif, assistance freins, module/capteurs aide conducteur/stationnement, système évitement collision, capteur distance, phares adaptatifs, caméras (arrière/latérales/avant), système sécurité/retenue, gonfleur, module coussin gonflable, capteur impact", "Optionnel 1000$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 22 (Aide conduite) est INCLUS: régulateur adaptatif, assistance freins, capteurs (aide conducteur, stationnement, sortie voie), évitement collision, caméras multiples, système sécurité, coussins gonflables, capteurs impact."
+    },
+    {
+      "question": "Comment valoriser la couverture Aide à la conduite pour véhicules 2020+ ?",
+      "options": ["Minimiser", "Expliquer: véhicules récents = nombreux systèmes aide (caméras, radars, capteurs) très coûteux (3k$-10k$+). INCLUS AVEX = protection majeure technologies sécurité modernes", "Pas nécessaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: véhicules modernes hautement équipés (caméras 360°, radars, capteurs multiples 3k$-10k$+), INCLUS = protection essentielle technologies coûteuses."
+    },
+    {
+      "question": "Le Véhicule électrique/Hybride (Composant 23) est-il couvert ?",
+      "options": ["Non", "OUI, INCLUS: pièces système BEV/HEV/PHEV (moteur/générateur entraînement, ensemble arbre/rotor/stator, onduleur tension, pompe eau électrique, unité refroidissement e-drive, modules contrôle, convertisseur DC-DC, système freinage friction/régénératif)", "Optionnel 1500$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 23 (Véhicule électrique/Hybride) est INCLUS: moteur/générateur entraînement, arbres, rotor, stator, onduleur, pompe eau électrique, refroidissement, modules contrôle, convertisseur DC-DC, systèmes freinage friction/régénératif."
+    },
+    {
+      "question": "La batterie hybride/électrique (Composant 24) est-elle couverte ?",
+      "options": ["Non", "OUI, LIMITÉ: vérification, remplacement/reconditionnement cellules défectueuses batterie HV/lithium-ion, LIMITÉ à 1 an/20 000 km AU-DELÀ garantie fabricant (si termes toujours admissibles, dysfonctionnement cellule, PAS perte capacité)", "Oui, illimité", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 24 (Batterie hybride/électrique): vérification, remplacement cellules défectueuses LIMITÉ à 1 an/20 000 km AU-DELÀ garantie fabricant (dysfonctionnement cellule seulement, PAS perte capacité, documentation vérifiable requise)."
+    },
+    {
+      "question": "Comment expliquer la limitation de la couverture batterie hybride/électrique ?",
+      "options": ["Ignorer", "Expliquer transparence: batterie = 1 an/20k km APRÈS garantie fabricant (extension limitée). Couvre dysfonctionnement cellule (pas dégradation capacité normale). Documentation requise", "Mentir", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence: batterie = extension limitée 1 an/20k km après fabricant, couvre dysfonctionnement cellule (pas perte capacité naturelle), documentation vérifiable obligatoire."
+    },
+    {
+      "question": "Le Service Routier + (Composant 25) est-il inclus ?",
+      "options": ["Optionnel 400$", "OUI, INCLUS: assistance 24/7 Canada/USA continental, remorquage (max 75 km Centre Autorisé), démarrage-secours, crevaison, livraison carburant (max 10L), treuillage, déverrouillage, 3 appels/an, 1-888-668-6082", "Non disponible", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 25 (Service Routier +) est INCLUS: assistance 24/7 Canada/USA, remorquage 75 km, démarrage, crevaison, carburant 10L, treuillage, déverrouillage, limite 3 appels/an, tiers prépayé, 1-888-668-6082."
+    },
+    {
+      "question": "Comment présenter la valeur du Service Routier inclus à un client ?",
+      "options": ["Minimiser", "Expliquer: Service Routier = valeur 100$-150$/an si achat séparé (CAA/AAA). INCLUS AVEX = économie 500$-750$ sur terme 60 mois, assistance complète 24/7", "Pas important", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: Service Routier = valeur 100$-150$/an séparé, INCLUS = économie potentielle 500$-750$ (terme 60 mois), assistance complète tranquillité totale."
+    },
+    {
+      "question": "La Voiture de remplacement (Composant 26) est-elle incluse ?",
+      "options": ["Non", "OUI, INCLUS: remboursement 50$/jour max 7 jours si réparation couverte (factures requises, dates correspondantes, demande sous 30 jours, véhicule inutilisable)", "Optionnel 300$", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 26 (Voiture remplacement) est INCLUS: remboursement 50$/jour max 7 jours si réparation couverte (responsabilité propriétaire déclarer factures, dates correspondantes réparation, demande sous 30 jours)."
+    },
+    {
+      "question": "L'Hébergement (Composant 27) est-il inclus ?",
+      "options": ["Non", "OUI, INCLUS: remboursement 100$/jour max 4 jours si réparation couverte ET propriétaire à 300+ km adresse (factures requises, dates correspondantes, demande sous 30 jours, véhicule inutilisable)", "Optionnel 400$", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 27 (Hébergement) est INCLUS: remboursement 100$/jour max 4 jours si réparation couverte ET propriétaire à 300+ km adresse indiquée (factures, dates correspondantes, demande sous 30 jours)."
+    },
+    {
+      "question": "Comment expliquer les avantages Voiture remplacement + Hébergement à un voyageur ?",
+      "options": ["Pas utile", "Expliquer: protection complète pannes loin domicile (Voiture 50$/jour × 7 = 350$ + Hébergement 100$/jour × 4 = 400$). INCLUS = tranquillité totale voyages", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser voyageurs: protection pannes loin domicile (voiture 350$ + hébergement 400$ = 750$ max), INCLUS = tranquillité totale déplacements."
+    },
+    {
+      "question": "Combien de composants sont couverts au TOTAL dans AVEX (base + optionnel) ?",
+      "options": ["17 composants", "18 composants au total (1-10 + 12-27, Composant 11 Suspension A+ optionnel 300$)", "27 composants", "20 composants"],
+      "correctAnswer": 1,
+      "explanation": "AVEX couvre 17 composants de BASE (1-10 + 12-27 INCLUS) + 1 composant OPTIONNEL (11 Suspension A+ 300$) = 18 composants au total possible."
+    },
+    {
+      "question": "Comment présenter la couverture COMPLÈTE AVEX (17 composants inclus) ?",
+      "options": ["Lire vite", "Structurer: 1) Mécanique (moteur, turbo, transmissions, différentiel), 2) Châssis (direction, freins, suspension), 3) Systèmes (A/C, refroidissement, alimentation, émissions), 4) Électronique (ordinateurs, haute-tech, aide conduite), 5) Hybride/Électrique, 6) Services (routier, courtoisie, hébergement)", "C'est compliqué", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige présentation structurée en 6 catégories logiques: Mécanique, Châssis, Systèmes, Électronique, Hybride/Électrique, Services. Couverture EXCEPTIONNELLE complète."
+    },
+    {
+      "question": "Un véhicule hybride 2023 Toyota Prius est-il bien couvert par AVEX ?",
+      "options": ["Non, exclu", "OUI, EXCELLENTE couverture: 17 composants base + Hybride (composant 23: moteur électrique, onduleur, etc.) + Batterie limitée (composant 24: 1 an/20k km après fabricant) INCLUS", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "AVEX offre EXCELLENTE couverture hybrides: 17 composants base + systèmes hybrides spécifiques (moteur électrique, onduleur, contrôles) + extension batterie limitée, TOUT INCLUS sans frais."
+    },
+    {
+      "question": "Un client avec Tesla Model 3 2022 est-il bien couvert par AVEX ?",
+      "options": ["Non, exclu", "OUI, avec Option Modèles sélectifs 400$ (Tesla): 17 composants base + Véhicule électrique (composant 23: moteur, onduleur, etc.) + Batterie limitée (24: 1 an/20k km après fabricant) + Haute-tech (21) + Aide conduite (22)", "Non disponible", "Partiellement"],
+      "correctAnswer": 1,
+      "explanation": "Tesla excellemment couvert avec Option Modèles sélectifs 400$: 17 composants + systèmes électriques complets (23), batterie limitée (24), haute-tech avancée (21), aide conduite (22) INCLUS."
+    },
+    {
+      "question": "Comment maximiser la satisfaction lors de la présentation des 17 composants AVEX ?",
+      "options": ["Lire liste", "1) Structurer en 6 catégories, 2) Expliquer chaque catégorie simplement, 3) Donner exemples concrets réparations couvertes, 4) Souligner inclusions sans frais (haute-tech, hybride, services), 5) Valoriser caractère exceptionnel", "Minimiser détails", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche complète: structuration logique, explications simples, exemples concrets, valorisation inclusions exceptionnelles, présentation caractère unique AVEX."
+    },
+    {
+      "question": "Un véhicule de 8 ans avec 140 000 km veut garantie AVEX. Quels composants sont couverts ?",
+      "options": ["Limités", "LES 17 COMPOSANTS COMPLETS (1-10 + 12-27) sont couverts, même véhicule usagé. Tarification Usagés (≤10 ans/160k km). Couverture identique véhicules récents", "Seulement moteur", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT: Véhicule usagé (8 ans/140k km, Tarification Usagés) = MÊME COUVERTURE COMPLÈTE 17 composants que véhicule récent. Seul le tarif diffère, couverture identique exceptionnelle."
+    },
+    {
+      "question": "Comment expliquer que la couverture est identique Tarification Récents vs Usagés ?",
+      "options": ["Mentir", "Expliquer: AVEX = même couverture COMPLÈTE (17 composants) pour récents ET usagés. Seul tarif diffère (reflet âge/km). Couverture exceptionnelle accessible véhicules jusqu'à 10 ans/160k km", "C'est différent", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser équité: MÊME couverture exceptionnelle 17 composants pour TOUS véhicules admissibles (récents ET usagés), tarif adapté âge/km, accessibilité remarquable."
+    },
+    {
+      "question": "Un client avec BMW X5 2021 diesel suspension pneumatique veut protection maximale. Quelles options ?",
+      "options": ["Aucune", "Modèles sélectifs 400$ (BMW obligatoire) + Suspension A+ 300$ (pneumatique) + Réparation ouverte 300$ (haute valeur) + Couverture compl. 200$ = 1200$ protection totale diesel luxe", "Seulement BMW", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige analyse complète: BMW = Modèles sélectifs 400$ (obligatoire), suspension pneumatique = A+ 300$, haute valeur = Réparation ouverte 300$, diesel = Couverture compl. 200$ = 1200$ protection optimale."
+    },
+    {
+      "question": "Un collègue dit \"AVEX couvre tout, même l'esthétique\". Comment réagissez-vous ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT: AVEX couvre 17 composants mécaniques/électroniques/services (exceptionnels), mais PAS esthétique (exclu section 3.4). Protéger client fausses attentes, être transparent", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate: 17 composants exceptionnels couverts, mais esthétique EXCLU (section 3.4). Transparence totale protège client et réputation."
+    }
+  ]
+}
+

@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 1,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le bloc-cylindres et pièces internes lubrifiées du moteur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Moteur (essence ou diesel)", "Oui, avec option", "Seulement diesel"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre le bloc-cylindres et toutes les pièces internes lubrifiées incluant bielles, pistons, vilebrequin, arbre à cames."
+    },
+    {
+      "question": "Quelle est la période d'attente avant que la garantie devienne active ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "La période d'attente est de quinze (15) jours suivant la date de livraison indiquée sur la garantie (section 1)."
+    },
+    {
+      "question": "L'arbre à cames et coussinets d'arbre à cames sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Moteur", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre arbre à cames, coussinets d'arbre à cames, bouchons d'arbres à cames et coussinets de paliers."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme aVR-Plus ?",
+      "options": ["5 000$", "10 000$", "15 000$", "20 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus offre un montant maximum de 10 000$ par réclamation (section Description du programme)."
+    },
+    {
+      "question": "La chaîne de distribution, pignons et tendeurs sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Moteur", "Seulement si bris majeur", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre chaîne de distribution pignons et tendeurs, courroie de distribution et pignons tendeurs (si inclus dans réparation moteur)."
+    },
+    {
+      "question": "Un VR de 12 ans avec 90 000 km est-il admissible au programme aVR-Plus ?",
+      "options": ["Oui, automatiquement", "Non, aVR-Plus exige ≤10 ans et ≤100 000 km", "Oui, avec supplément", "Admissible au aVR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus exige véhicules de 10 ans et moins ayant 100 000 km et moins. Un VR de 12 ans n'est pas admissible à aVR-Plus."
+    },
+    {
+      "question": "Les pistons, segments et axes de piston sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Moteur", "Oui, composant 11", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre pistons, segments, axes de piston ainsi que toutes les pièces internes lubrifiées."
+    },
+    {
+      "question": "Quelle est la franchise standard si aucune option n'est sélectionnée ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "Une franchise de 200$ s'applique sur chaque réclamation autorisée, à moins que l'option Pas de franchise ne soit sélectionnée (Note importante)."
+    },
+    {
+      "question": "La pompe à huile est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 1 - Moteur", "Oui, composant 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre pompe à huile, poussoirs hydrauliques et toutes les pièces internes lubrifiées."
+    },
+    {
+      "question": "Comment présenter l'avantage du programme aVR-Plus à un client avec VR récent ?",
+      "options": ["C'est trop cher", "Couverture complète 22 composants, max 10 000$/réclamation, cumulatif = valeur véhicule, options personnalisables", "Seulement moteur", "Pas nécessaire"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à mettre en valeur : 22 composants couverts, max 10 000$/réclamation, cumulatif = valeur véhicule, protections incluses."
+    },
+    {
+      "question": "Les culasses et couvercles de soupapes sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Moteur", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre culasses, couvercles de soupapes, guides de soupapes, ressorts de soupapes et culbuteurs."
+    },
+    {
+      "question": "Un VR de 12 ans avec 120 000 km est-il admissible au programme aVR ?",
+      "options": ["Oui, automatiquement", "Oui, aVR accepte ≤15 ans et ≤150 000 km", "Non, trop vieux", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR accepte véhicules de 15 ans et moins ayant 150 000 km et moins. Un VR de 12 ans avec 120 000 km est admissible."
+    },
+    {
+      "question": "Le turbo avec carter et pièces internes lubrifiées est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 1.a - Turbo", "Oui, composant 5", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1.a - Turbo couvre carter et toutes les pièces internes lubrifiées, refroidisseur intermédiaire, soupapes de dérivation et soupapes de turbocompresseur."
+    },
+    {
+      "question": "Les réparations pendant la période d'attente sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, pannes survenues avant date de livraison ou pendant période d'attente exclues", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne survenue avant la date de livraison ou pendant la période d'attente (15 jours) est exclue (section 5.8)."
+    },
+    {
+      "question": "Les supports de moteur et transmission sont-ils couverts ?",
+      "options": ["Oui, toujours", "Oui, composant 1 - seulement lors d'un bris majeur", "Non, jamais", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Moteur couvre supports de moteur et transmission (inclus seulement lors d'un bris majeur)."
+    },
+    {
+      "question": "Combien coûte l'option Pas de franchise ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Pas de franchise coûte 100$ et élimine le montant de franchise de 200$ au moment de la réparation (section 3)."
+    },
+    {
+      "question": "Le boîtier de transmission et pièces lubrifiées internes sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Transmission", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Transmission couvre boîtier et toutes les pièces lubrifiées internes : arbre principal, bandes, convertisseur de couple, embrayages."
+    },
+    {
+      "question": "Un client demande si l'entretien recommandé par le fabricant est obligatoire. Que répondez-vous ?",
+      "options": ["Non, optionnel", "Oui, preuve d'entretien peut être demandée à tout moment, sinon risque de refus", "Seulement pour neufs", "Non vérifié"],
+      "correctAnswer": 1,
+      "explanation": "La preuve d'entretien peut être demandée par l'Administrateur à tout moment pendant la durée de la garantie (section 6.2)."
+    },
+    {
+      "question": "Le convertisseur de couple est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 2 - Transmission", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Transmission couvre convertisseur de couple, boîtier de soupapes, pompe à huile, régulateur et modulateur à dépression."
+    },
+    {
+      "question": "Quel est le montant maximum cumulatif pour le programme aVR ?",
+      "options": ["5 000$", "10 000$", "15 000$", "Valeur du véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR offre un montant maximum cumulatif (total du contrat) de 10 000$ (section Description du programme)."
+    },
+    {
+      "question": "Les embrayages internes et tambours de transmission sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Transmission", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Transmission couvre embrayages internes, tambours, bandes, coussinets et paliers internes."
+    },
+    {
+      "question": "Comment gérer un client qui veut réparer sans autorisation ?",
+      "options": ["Accepter", "Expliquer que numéro d'autorisation OBLIGATOIRE AVANT travaux, sinon aucun remboursement", "Rembourser après", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que réparation sans numéro d'autorisation (incluant montant) ne sera pas remboursée (section 5.12)."
+    },
+    {
+      "question": "Les composantes d'embrayage sur transmission manuelle sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, disque, plaquettes et cylindres d'embrayage manuel exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les composantes d'embrayage sur transmission manuelle incluant le disque, plaquettes et cylindres sont exclus (section 2 - note composant 2)."
+    },
+    {
+      "question": "Combien coûte l'option Turbo/Surcompresseur ?",
+      "options": ["25$", "45$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Turbo/Surcompresseur coûte 45$ (section 3 - Options disponibles pour aVR-Plus et aVR)."
+    },
+    {
+      "question": "Le carter de différentiel et pièces internes lubrifiées sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 3 - Différentiel", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 - Différentiel couvre carter et toutes les pièces internes lubrifiées : boîtier porteur, jeux d'engrenages, paliers internes, arbres d'essieux."
+    },
+    {
+      "question": "Un client frustré conteste une exclusion légitime. Comment réagissez-vous ?",
+      "options": ["Céder immédiatement", "Rester empathique, expliquer raison (section spécifique), rediriger vers 22 composants couverts", "Être défensif", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie, explication claire de l'exclusion (référence section), et redirection vers les 22 composants couverts + protections."
+    },
+    {
+      "question": "L'ensemble d'embrayage autobloquant interne du différentiel est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 3 - Différentiel", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 - Différentiel couvre ensemble d'embrayage autobloquant interne, boîtier porteur, jeux d'engrenages et coussinets."
+    },
+    {
+      "question": "Quel délai pour soumettre un bon de travail à l'Administrateur ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "Aucun bon de travail datant de plus de trente (30) jours à compter de la date de vérification ne sera accepté (section 8.1)."
+    },
+    {
+      "question": "La boîte de transfert 4x4 avec carter et pièces internes est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 3 - 4x4 ou traction intégrale", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 3 couvre boîte de transfert carter, ensemble de blocage de moyeu (4x4), actionneur, arbre principal, jeux d'engrenages, chaîne et coupler visqueux."
+    },
+    {
+      "question": "Un collègue partage des informations confidentielles d'un client. Comment réagissez-vous ?",
+      "options": ["Partager aussi", "Rappeler importance de confidentialité, ne pas propager, signaler si nécessaire", "Ignorer", "Encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de rappeler l'importance de la confidentialité (section 1 - consentement), ne pas propager et signaler si nécessaire."
+    }
+  ]
+}
+

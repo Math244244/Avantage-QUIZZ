@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 5,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le boîtier de cardan est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 6 - Système propulsion motomarine/bateau", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 6 - Système propulsion couvre boîtier de cardan, goupilles, gouvernail et croisillon d'entraînement."
+    },
+    {
+      "question": "Un client demande annulation dans les 10 premiers jours. Qui gère le remboursement ?",
+      "options": ["L'Administrateur", "Le Distributeur Autorisé", "La banque", "Le Centre de Réparation"],
+      "correctAnswer": 1,
+      "explanation": "Dans les 10 premiers jours, le propriétaire demande annulation au Distributeur. L'Administrateur n'est pas responsable des remboursements/frais (section 10.2.a)."
+    },
+    {
+      "question": "L'arbre de direction est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 7 - Direction", "Oui, section 5", "Oui, section 6"],
+      "correctAnswer": 1,
+      "explanation": "La section 7 - Direction couvre arbre de direction, rondelles, roulements, biellettes de direction et embouts de biellette."
+    },
+    {
+      "question": "Combien coûte l'option Maximum jusqu'à la valeur marchande pour Scooters & Motocycles ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Maximum jusqu'à la valeur marchande coûte 400$ pour Scooters & Motocycles."
+    },
+    {
+      "question": "La crémaillère de direction est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 7 - Direction", "Oui, section 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 7 - Direction couvre assemblage de crémaillère et de pignon, colonne de direction et guidon/volant."
+    },
+    {
+      "question": "Comment présenter l'avantage du programme loisir à un client avec un scooter 600cc ?",
+      "options": ["Il n'y a pas d'avantage", "Couverture complète 28 sections, franchise 0$ Centre Autorisé, max 10 000$ par réclamation", "C'est trop cher", "Seulement le moteur"],
+      "correctAnswer": 1,
+      "explanation": "Le programme couvre sections 1-28, offre franchise 0$ si Centre Autorisé, max 10 000$/réclamation, idéal pour protection complète scooter/moto."
+    },
+    {
+      "question": "La pompe de direction assistée est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 7 - Direction", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 7 - Direction couvre pompe de direction assistée hydraulique et vérin de direction assistée."
+    },
+    {
+      "question": "Un véhicule modifié avec système d'échappement performance est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules modifiés exclus sauf exception approuvée", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Véhicules altérés/modifiés (échappement, ECM, suspension) sont exclus. Exception possible via représentant Administrateur (section 9.4)."
+    },
+    {
+      "question": "Le moteur de direction assistée électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 7 - Direction", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 7 - Direction couvre moteur du système de direction assistée électrique et pompe de direction assistée."
+    },
+    {
+      "question": "La batterie véhicule électrique/hybride couvre-t-elle la perte de capacité ?",
+      "options": ["Oui, toute perte", "Non, seulement dysfonctionnement/cellule défectueuse", "Oui, jusqu'à 50%", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 20 couvre dysfonctionnement ou cellule défectueuse seulement. Elle ne couvre pas la perte de capacité de la batterie."
+    },
+    {
+      "question": "Les propulseurs latéraux sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 7 - Direction", "Oui, section 6", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 7 - Direction couvre propulseurs latéraux, manette de contrôle, guidon et volant de direction."
+    },
+    {
+      "question": "Un client demande si Documentation vérifiable est obligatoire. Que répondez-vous ?",
+      "options": ["Non, pas nécessaire", "Oui, facture générée par ordinateur d'un centre agréé avec détails complets", "Seulement pour montants élevés", "Non, déclaration suffit"],
+      "correctAnswer": 1,
+      "explanation": "Documentation vérifiable (facture ordinateur du centre agréé avec nom, véhicule, date, km, coût) peut être demandée à tout moment (section 1 et 5.3)."
+    },
+    {
+      "question": "Le moteur de trim électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 8 - Système de l'assiette", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 8 - Système de l'assiette couvre moteur de trim, interrupteurs, pompe, cylindres, capteurs et jauge de trim."
+    },
+    {
+      "question": "Combien coûte l'option Utilisation en motocross pour Scooters & Motocycles ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Utilisation en motocross ou dual-sport coûte 400$ pour Scooters & Motocycles."
+    },
+    {
+      "question": "La pompe de trim hydraulique est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 8 - Système de l'assiette", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 8 - Système de l'assiette couvre pompe de réglage d'inclinaison et de trim ainsi que cylindres de trim électrique/vérins."
+    },
+    {
+      "question": "Comment gérer un client qui demande des promesses non écrites ?",
+      "options": ["Promettre verbalement", "Expliquer poliment que seul le contrat écrit fait foi", "Accepter sans documenter", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le contrat écrit constitue l'intégralité de l'entente et prime sur toute entente verbale (section 11.1). Seules les clauses écrites font foi."
+    },
+    {
+      "question": "Les cylindres de trim électrique sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 8 - Système de l'assiette", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 8 - Système de l'assiette couvre cylindres de trim électrique/vérins, supports, pivots et vérins de cylindre."
+    },
+    {
+      "question": "L'Administrateur peut-il refuser une réclamation sans Documentation vérifiable ?",
+      "options": ["Non, doit toujours payer", "Oui, se réserve le droit de refuser", "Seulement pour montants élevés", "Non, si bonne foi"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit de refuser toute demande si Documentation vérifiable ne peut être fournie (section 5.4)."
+    },
+    {
+      "question": "Le capteur de position de trim est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 8 - Système de l'assiette", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 8 - Système de l'assiette couvre capteur de position de trim, jauge de trim et électrovanne de trim."
+    },
+    {
+      "question": "Un client veut une garantie pour son camion de construction. Est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules de construction exclus (usage non récréatif)", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Les véhicules de construction sont exclus car leur utilisation n'est pas principalement destinée aux loisirs/activités récréatives (section 9.1)."
+    },
+    {
+      "question": "Les bras de commande de suspension sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 9 - Suspension", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 9 - Suspension couvre bras de commande supérieur et inférieur, fusées, bras oscillant et rotules."
+    },
+    {
+      "question": "L'entretien recommandé par le fabricant peut-il être exigé ?",
+      "options": ["Non, optionnel", "Oui, Administrateur peut refuser réclamation si entretien non fait", "Seulement pour véhicules neufs", "Non, jamais vérifié"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit de refuser réclamation si véhicule n'a pas reçu entretien recommandé dans intervalles fabricant (section 5.5)."
+    },
+    {
+      "question": "Les roulements de bras oscillant sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 9 - Suspension", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 9 - Suspension couvre roulements de bras oscillant, fusées, rotules et roulements de roue."
+    },
+    {
+      "question": "Un client demande le remboursement d'une réparation faite sans autorisation. Est-ce possible ?",
+      "options": ["Oui, avec facture", "Non, réparation sans autorisation ne sera pas remboursée", "Oui, partiellement", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Réparation sans numéro d'autorisation (incluant montant) par l'Administrateur est exclue. Aucun remboursement (section 4.13)."
+    },
+    {
+      "question": "Les rotules de suspension sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, section 9 - Suspension", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 9 - Suspension couvre rotules, bras de commande, fusées, bras oscillant et roulements de roue."
+    },
+    {
+      "question": "Comment rassurer un client inquiet des exclusions ?",
+      "options": ["Minimiser les exclusions", "Expliquer les 28 sections couvertes, franchise 0$ Centre Autorisé et options disponibles", "Dire qu'il n'y en a pas", "Changer de sujet"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à mettre l'accent sur l'étendue de la couverture (sections 1-28), les avantages (franchise 0$) et options."
+    },
+    {
+      "question": "Les roulements de roue sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 9 - Suspension", "Oui, section 10", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 9 - Suspension couvre roulements de roue, réservoir, valves de débit et barre de liaison."
+    },
+    {
+      "question": "L'Administrateur peut-il demander inspection du véhicule ?",
+      "options": ["Non, jamais", "Oui, se réserve le droit de faire inspecter dans un Centre Autorisé", "Seulement avec accord", "Seulement pour montants élevés"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit de faire inspecter le véhicule dans un Centre de Réparation Autorisé à tout moment (section 5.6)."
+    },
+    {
+      "question": "La barre de liaison de suspension est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 9 - Suspension", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 9 - Suspension couvre barre de liaison (link kit), réservoir, valves de débit et roulements."
+    },
+    {
+      "question": "Un client demande si une deuxième réparation du même problème est couverte. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, si réparation nécessaire à nouveau dans les 6 mois", "Oui, avec franchise double", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Réparation nécessaire une deuxième fois dans un délai de 6 mois à compter de la première réparation est exclue (section 4.12)."
+    }
+  ]
+}
+

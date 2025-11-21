@@ -1,0 +1,188 @@
+{
+  "module": "hasard-route",
+  "month": 2,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Combien d'occurrences sont couvertes pour PNEU + ROUE pendant la durée du contrat ?",
+      "options": ["3 occurrences", "Occurrences ILLIMITÉES pendant Durée contrat", "5 occurrences", "10 occurrences"],
+      "correctAnswer": 1,
+      "explanation": "La protection PNEU + ROUE couvre un nombre ILLIMITÉ d'occurrences pendant toute la Durée du contrat (aucune limite nombre réclamations)."
+    },
+    {
+      "question": "Quels types de pneus sont couverts par le programme ?",
+      "options": ["Seulement pneus été", "Pneus d'origine, pneus d'hiver, pneus remplacement (même type/qualité/taille que pneus d'origine)", "Seulement 4 saisons", "Tous les pneus"],
+      "correctAnswer": 1,
+      "explanation": "Le programme couvre : pneus d'origine, pneus d'hiver ET pneus de remplacement (de même type, qualité et taille que les pneus d'origine)."
+    },
+    {
+      "question": "Quelle est la profondeur minimale de bande de roulement pour être admissible ?",
+      "options": ["1/32\"", "Profondeur bande roulement pneu DOIT être supérieure ou égale à 3/32\"", "5/32\"", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "La profondeur de la bande de roulement du pneu du véhicule doit être supérieure ou égale à 3/32\" pour être admissible (profondeur < 3/32\" est EXCLUE)."
+    },
+    {
+      "question": "Comment expliquer la limite 3/32\" de bande roulement à un client ?",
+      "options": ["C'est arbitraire", "Expliquer logique : 3/32\" = seuil légal/sécurité usure excessive pneu (pneu fin de vie utile). Programme couvre pneus fonctionnels endommagés, pas remplacement usure normale. Mesure équitable basée sécurité", "Ignorer", "Selon le pneu"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : 3/32\" = seuil sécurité légal usure excessive (fin vie pneu), programme couvre dommages hasards pas usure normale, mesure équitable basée sécurité."
+    },
+    {
+      "question": "Les pneus Run-Flat sont-ils couverts différemment ?",
+      "options": ["Non, pareil", "OUI, pneus Run-Flat : limite 1 500$ par réclamation + limite totale 5 000$ pour TOUTES réclamations Run-Flat durant contrat", "Non couverts", "Illimité pareil"],
+      "correctAnswer": 1,
+      "explanation": "Les pneus Run-Flat ont limites spéciales : 1 500$ MAX par réclamation + 5 000$ MAX total pour toutes réclamations Run-Flat pendant toute la Durée du contrat."
+    },
+    {
+      "question": "Qu'est-ce qu'un pneu crevé couvert par le programme ?",
+      "options": ["Tous dommages", "Pneu crevé causé par Hasards routiers lors utilisation véhicule sur routes/autoroutes publiques de manière LÉGALE", "Seulement clous", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un pneu crevé est couvert s'il est causé par Hasards routiers (nids-de-poule, clous, débris) lors de l'utilisation du véhicule sur routes/autoroutes PUBLIQUES de manière LÉGALE."
+    },
+    {
+      "question": "Comment expliquer les limites spécifiques pneus Run-Flat à un client BMW ?",
+      "options": ["Ignorer", "Expliquer : BMW = souvent pneus Run-Flat (coût 2x-3x pneus standards). Limites spéciales : 1500$/réclamation, 5000$ total contrat. Protection essentielle (pneus Run-Flat très coûteux), limites reflètent coûts élevés", "C'est discriminatoire", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique : pneus Run-Flat = technologie spéciale coûteuse (2x-3x standard), limites spéciales reflètent coûts réels, protection essentielle malgré limites."
+    },
+    {
+      "question": "Seul le pneu endommagé est remplacé ou tous les pneus ?",
+      "options": ["Tous les pneus", "SEUL le pneu ayant subi dommages causés par Hasards routiers sera remplacé", "Selon l'usure", "Pneus même essieu"],
+      "correctAnswer": 1,
+      "explanation": "Le programme remplace UNIQUEMENT le pneu ayant subi les dommages causés par le Hasards routiers (pas de remplacement automatique autres pneus)."
+    },
+    {
+      "question": "Les roues sont-elles réparées ou remplacées ?",
+      "options": ["Toujours remplacées", "Réparation OU remplacement roue devenue Hors d'usage (réparation prioritaire si possible, remplacement si irréparable)", "Seulement réparées", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le programme couvre réparation OU remplacement de toute roue devenue Hors d'usage. Réparation prioritaire (si possible), remplacement seulement si roue irréparable."
+    },
+    {
+      "question": "Comment gérer un client qui veut remplacer tous pneus alors qu'un seul endommagé ?",
+      "options": ["Accepter", "Expliquer programme : couvre SEUL pneu endommagé (hasards routiers), pas remplacement ensemble pneus (usure normale). Si souhaite remplacer autres pneus = à sa charge. Transparence respecte termes contrat", "Vendre service additionnel", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté : programme couvre seul pneu endommagé hasards, pas ensemble (usure normale), autres pneus = frais client si souhaités, transparence respecte contrat."
+    },
+    {
+      "question": "Que couvre le montage et équilibrage ?",
+      "options": ["Rien", "Frais RAISONNABLES montage, équilibrage, tiges valve (excluant TPMS), élimination pneus pour pneu remplacé", "Tout inclus", "Selon le fournisseur"],
+      "correctAnswer": 1,
+      "explanation": "Le programme couvre frais raisonnables : montage, équilibrage, tiges de valve (EXCLUANT systèmes TPMS), élimination pneus pour tout pneu remplacé en vertu contrat."
+    },
+    {
+      "question": "Quel est le remboursement maximum montage/équilibrage pour pneus 19\" ou moins ?",
+      "options": ["40$", "60$ plus taxes applicables", "80$ plus taxes", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Pour tous les pneus et/ou roues mesurant 19\" ou MOINS, le remboursement maximum montage/équilibrage est 60$ plus les taxes applicables."
+    },
+    {
+      "question": "Quel est le remboursement maximum montage/équilibrage pour pneus 20\" ou plus ?",
+      "options": ["60$", "80$ plus taxes applicables", "100$ plus taxes", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Pour tous les pneus et/ou roues mesurant 20\" ou PLUS, le remboursement maximum montage/équilibrage est 80$ plus les taxes applicables."
+    },
+    {
+      "question": "Comment expliquer différence tarifs montage selon taille roues (19\" vs 20\"+) ?",
+      "options": ["C'est arbitraire", "Expliquer logique : roues 20\"+ = pneus plus larges/lourds, équipement spécialisé, temps travail supérieur, coûts réels plus élevés. Tarifs différenciés (60$ vs 80$) reflètent réalité travail technique", "Ignorer", "Selon le fournisseur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication logique : roues 20\"+ = pneus larges lourds, équipement spécial, temps supérieur, coûts réels élevés, tarification différenciée (60$ vs 80$) reflète réalité technique."
+    },
+    {
+      "question": "Quel est le remboursement maximum pour rustines, tiges valve, élimination ?",
+      "options": ["10$", "20$ par pneu", "30$ par pneu", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement maximum pour rustines, tiges de valve, élimination des pneus et taxe environnementale est de 20$ par pneu."
+    },
+    {
+      "question": "Les taxes fédérales/provinciales sont-elles remboursées ?",
+      "options": ["Non", "OUI, remboursement coût taxes fédérales ET/OU provinciales pour pneu OU roue remplacé", "Seulement fédérales", "Selon la province"],
+      "correctAnswer": 1,
+      "explanation": "Le Titulaire sera remboursé du coût des taxes FÉDÉRALES et/OU PROVINCIALES (déterminées par agences) pour tout pneu ou roue remplacé en vertu du contrat."
+    },
+    {
+      "question": "Comment expliquer remboursement taxes à un client Québec (TPS+TVQ) ?",
+      "options": ["Ignorer", "Expliquer : au Québec, taxes fédérale (TPS 5%) + provinciale (TVQ 9.975%) = 14.975% s'appliquent. Programme rembourse COÛT TOTAL pneu/roue + TOUTES taxes applicables. Coût réel zéro pour client", "Taxes exclues", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à clarifier : Québec = TPS + TVQ (14.975%), programme rembourse pièce + TOUTES taxes applicables, coût réel zéro client, transparence totale."
+    },
+    {
+      "question": "Les dispositifs TPMS (détection pression pneus) sont-ils couverts ?",
+      "options": ["Oui, inclus", "NON, frais dispositifs détection pression (TPMS) et fournitures atelier sont EXCLUS", "Seulement réparation", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Les frais pour les dispositifs de détection de pression des pneus (TPMS) et les fournitures de l'atelier sont EXCLUS de la couverture."
+    },
+    {
+      "question": "Un client a besoin remplacer capteur TPMS avec pneu neuf. Comment gérer ?",
+      "options": ["Tout couvrir", "Expliquer CLAIREMENT : programme couvre pneu + montage/équilibrage + tiges valve standards, MAIS capteur TPMS = EXCLU (frais client). Estimer coût TPMS séparé avant, transparence évite surprise facture", "Inclure discrètement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige transparence : pneu couvert MAIS TPMS exclu (frais client séparés), estimer coût TPMS avant travaux, clarté évite surprise facture déception client."
+    },
+    {
+      "question": "Qui peut inspecter pneu/roue endommagé avant réparation/élimination ?",
+      "options": ["Personne", "Administrateur Programme (Auto Shield) se RÉSERVE DROIT INSPECTER pneu/roue endommagé AVANT réparation/élimination", "Seulement concessionnaire", "Client décide"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur du Programme (Auto Shield) se RÉSERVE LE DROIT d'inspecter tout pneu et/ou roue endommagé AVANT sa réparation ou élimination."
+    },
+    {
+      "question": "Que se passe-t-il si le client élimine pneu endommagé AVANT inspection ?",
+      "options": ["Rien", "NON-RESPECT conservation propriété endommagée PEUT ENTRAÎNER REFUS service ou remboursement", "Remboursement quand même", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le NON-RESPECT de la conservation de la propriété endommagée (pneu/roue) PEUT ENTRAÎNER le REFUS du service ou du remboursement par l'Administrateur."
+    },
+    {
+      "question": "Comment expliquer obligation conservation pneu/roue endommagé à client pressé ?",
+      "options": ["L'ignorer", "Expliquer IMPORTANCE : conservation pneu/roue endommagé OBLIGATOIRE (inspection vérification hasards routiers vs usure/négligence). NE PAS éliminer avant autorisation. Non-respect = risque REFUS total réclamation. Patience protège droits", "Être flexible", "Selon l'urgence"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige insistance : conservation obligatoire (inspection vérification cause légitime), ne pas éliminer avant autorisation, non-respect = risque refus total, patience protège droits client."
+    },
+    {
+      "question": "Quelles sont les responsabilités du Titulaire pour l'entretien des pneus ?",
+      "options": ["Aucune", "Entretien adéquat pneus NÉCESSAIRE : équilibrés, alignés, gonflés pression adéquate. Vérification CHAQUE MOIS : pression, signes dégradation sécheresse, usure incorrecte/excessive", "Seulement pression", "Selon le mécanicien"],
+      "correctAnswer": 1,
+      "explanation": "Responsabilités Titulaire : entretien adéquat nécessaire (équilibrés, alignés, pression), vérification MENSUELLE (pression, dégradation sécheresse, usure), entretien requis maximiser vie pneu."
+    },
+    {
+      "question": "Comment conseiller un client sur l'entretien mensuel des pneus ?",
+      "options": ["C'est facultatif", "Expliquer IMPORTANCE : vérification mensuelle pneus (pression, usure, dégradation) = maximise vie pneu, sécurité, économie carburant. Rappeler programme couvre hasards routiers PAS usure négligence. Entretien régulier = admissibilité garantie", "Minimiser", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à éduquer : vérification mensuelle = maximise vie pneu sécurité économie, programme couvre hasards PAS négligence, entretien régulier = admissibilité protection garantie."
+    },
+    {
+      "question": "Si roue endommagée est discontinuée/indisponible, que fait l'Administrateur ?",
+      "options": ["Attend disponibilité", "Administrateur se réserve droit effectuer RÈGLEMENTS EN ESPÈCES (si roue discontinuée/indisponible), basé tarifs marché services similaires zone géographique", "Roue différente", "Selon le concessionnaire"],
+      "correctAnswer": 1,
+      "explanation": "Si roue est discontinuée ou indisponible, l'Administrateur se réserve le droit d'effectuer RÈGLEMENTS EN ESPÈCES plutôt que remplacement, basé sur tarifs du marché pour services similaires."
+    },
+    {
+      "question": "Les roues reconditionnées peuvent-elles être fournies en remplacement ?",
+      "options": ["Non, seulement neuves", "OUI, Administrateur se réserve droit remplacer roue par roue RECONDITIONNÉE même type/qualité (si irréparable)", "Seulement neuves OEM", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve aussi le droit de remplacer la roue endommagée par une roue RECONDITIONNÉE de même type et qualité (si roue irréparable)."
+    },
+    {
+      "question": "Comment expliquer possibilité roue reconditionnée à client exigeant roue neuve ?",
+      "options": ["Céder", "Expliquer logique : roues reconditionnées = remises à neuf standards qualité stricts, même type/qualité que origine, testées sécurité. Programme prévoit reconditionné (coût-efficace), si insatisfaction contacter Administrateur. Transparence termes", "Garantir neuve", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : roues reconditionnées = remises neuf standards stricts, même qualité/sécurité, programme prévoit (efficacité), transparence termes, recours Administrateur si insatisfaction."
+    },
+    {
+      "question": "Un collègue promet \"tous pneus remplacés gratuit toujours\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : programme couvre pneus endommagés hasards routiers (profondeur ≥3/32\"), PAS usure normale/tous pneus. Limites claires (Run-Flat 5k$). Correction protège client fausses attentes, intégrité obligatoire", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : pneus couverts = hasards routiers profondeur ≥3/32\" PAS usure normale, limites claires (Run-Flat), correction fausses promesses protège client déception."
+    },
+    {
+      "question": "Un client veut savoir si crevaison hors-route (sentier VTT) est couverte. Que répondre ?",
+      "options": ["Oui, couvert", "NON COUVERT : programme couvre pneus crevés hasards routiers sur routes/autoroutes PUBLIQUES utilisation LÉGALE. Hors-route/sentiers VTT = EXCLUS. Clarifier limites géographiques/utilisation dès début", "Selon le dommage", "Essayer quand même"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté : programme couvre SEULEMENT routes/autoroutes publiques utilisation légale, hors-route/sentiers = EXCLUS, clarifier limites géographiques/utilisation évite malentendu."
+    },
+    {
+      "question": "Un véhicule a pneus surdimensionnés (non recommandés fabricant). Couverts ?",
+      "options": ["Oui, tous pneus", "NON COUVERT : dommages pneus/roues taille inférieure, supérieure ou NON RECOMMANDÉS par fabricant = EXCLUS", "Selon le type", "Si déclaré"],
+      "correctAnswer": 1,
+      "explanation": "Tout dommage aux pneus et/ou roues de taille inférieure, supérieure ou autrement NON RECOMMANDÉS par le fabricant du véhicule = EXCLUS de la couverture."
+    }
+  ]
+}
+

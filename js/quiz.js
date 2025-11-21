@@ -37,6 +37,16 @@ const moduleConfig = {
         name: 'Équipement Agricole',
         color: 'green',
         label: 'Tracteur'
+    },
+    'avex': {
+        name: 'Protection Exceptionnelle',
+        color: 'purple',
+        label: 'AVEX'
+    },
+    'hasard-route': {
+        name: 'Protection Routière',
+        color: 'amber',
+        label: 'Hasard de Route'
     }
 };
 
@@ -78,7 +88,9 @@ const moduleColors = {
     'indigo': { bg: 'bg-ap-red-primary', text: 'text-ap-red-primary', border: 'border-ap-red-primary' }, // Auto -> Rouge AP
     'cyan': { bg: 'bg-ap-gold', text: 'text-ap-gold', border: 'border-ap-gold' }, // Loisir -> Doré AP
     'orange': { bg: 'bg-orange-600', text: 'text-orange-600', border: 'border-orange-600' }, // VR -> Orange (OK)
-    'green': { bg: 'bg-green-600', text: 'text-green-600', border: 'border-green-600' } // Tracteur -> Vert (OK)
+    'green': { bg: 'bg-green-600', text: 'text-green-600', border: 'border-green-600' }, // Tracteur -> Vert (OK)
+    'purple': { bg: 'bg-purple-600', text: 'text-purple-600', border: 'border-purple-600' }, // AVEX -> Violet
+    'amber': { bg: 'bg-amber-600', text: 'text-amber-600', border: 'border-amber-600' } // Hasard de Route -> Ambre
 };
 
 // Charger les questions depuis Firestore, compatible mois numérique ou texte (rétro-compatibilité)

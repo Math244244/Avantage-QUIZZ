@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 2,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le carter de direction à crémaillère avec ensemble de soupapes est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 4 - Traction Avant et direction", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Traction Avant et direction couvre carter et pièces internes lubrifiées, ensemble de soupapes de direction à crémaillère."
+    },
+    {
+      "question": "Combien coûte l'option Moteur diesel ?",
+      "options": ["45$", "50$", "75$", "100$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Moteur diesel coûte 75$. Note : L'ajout de l'option Turbo (45$) est obligatoire pour tous les diesels (section 3)."
+    },
+    {
+      "question": "La pompe de servodirection et poulie sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 4 - Traction Avant et direction", "Oui, composant 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Traction Avant et direction couvre pompe de servodirection et poulie ainsi que cylindre des roues et colonne de direction."
+    },
+    {
+      "question": "Un VR motorisé de 8 ans avec 80 000 km est-il admissible au programme aVR-Plus ?",
+      "options": ["Non, trop vieux", "Oui, aVR-Plus accepte ≤10 ans et ≤100 000 km", "Seulement avec option", "Admissible au aVR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus (Section A - Motorisé) accepte véhicules de 10 ans et moins ayant 100 000 km et moins. Un VR de 8 ans/80 000 km est admissible."
+    },
+    {
+      "question": "Les joints homocinétiques (C.V.) sont-ils couverts ?",
+      "options": ["Oui, avec soufflets", "Oui, composant 4 - joints homocinétiques seulement (soufflets exclus)", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Traction Avant et direction couvre les joints homocinétiques – C.V. mais les soufflets sont exclus."
+    },
+    {
+      "question": "Comment expliquer la différence entre aVR-Plus et aVR à un client ?",
+      "options": ["Aucune différence", "aVR-Plus: ≤10 ans/100k km, max 10k$/réclamation. aVR: ≤15 ans/150k km, max 5k$/réclamation", "C'est le même", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : aVR-Plus (véhicules récents, max 10k$/réclamation) vs aVR (véhicules plus âgés, max 5k$/réclamation)."
+    },
+    {
+      "question": "Les roulements de roues sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 4 - Traction Avant et direction", "Oui, composant 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Traction Avant et direction couvre cylindre des roues, roulement des roues, colonne de direction et axes."
+    },
+    {
+      "question": "L'option Turbo est-elle obligatoire pour un VR avec moteur diesel ?",
+      "options": ["Non, optionnelle", "Oui, obligatoire pour tous les diesels", "Seulement si pusher", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'ajout de l'option Turbo (45$) est OBLIGATOIRE pour tous les diesels selon la note des options Moteur diesel (section 3)."
+    },
+    {
+      "question": "Les arbres de transmission et joints universels sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 4 - Traction Avant et direction", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 4 - Traction Avant et direction couvre arbres de transmission, les joints universels et axes principaux/intermédiaires."
+    },
+    {
+      "question": "Un VR habitacle (roulotte) de 8 ans est-il admissible au programme aVR-Plus Section B ?",
+      "options": ["Non, trop vieux", "Oui, aVR-Plus Section B accepte ≤10 ans", "Seulement avec option", "Admissible au aVR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus Section B (Habitacle) accepte véhicules de 10 ans et moins (Roulottes, Fifth-wheel, etc.)."
+    },
+    {
+      "question": "La pompe à carburant est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 5 - Système d'alimentation du carburant", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Système d'alimentation couvre pompe à carburant, injecteurs, distributeur d'injection, capteurs et papillon des corps."
+    },
+    {
+      "question": "Les réparations effectuées hors Canada/USA sont-elles couvertes ?",
+      "options": ["Oui, partout", "Non, toute panne à l'extérieur du Canada ou zone continentale USA exclue", "Oui, avec supplément", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Toute panne qui se produit à l'extérieur du Canada ou de la zone continentale des États-Unis est exclue (section 10.e)."
+    },
+    {
+      "question": "Les injecteurs de carburant sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Système d'alimentation du carburant", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Système d'alimentation couvre injecteurs, pompe à carburant, distributeur d'injection, capteurs et papillon des corps / gaz."
+    },
+    {
+      "question": "Combien coûte l'option Pusher diesel ?",
+      "options": ["75$", "100$", "200$", "300$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Pusher diesel coûte 300$ (section 3 - Options disponibles pour aVR-Plus et aVR)."
+    },
+    {
+      "question": "Les capteurs du système d'ignition sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 5 - Système d'alimentation du carburant", "Oui, composant 10", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 couvre bobine d'induction, capteurs système d'ignition, capteur de détonation, capteur d'arbre à came, capteur de vilebrequin."
+    },
+    {
+      "question": "Comment gérer un client qui refuse de payer la franchise de 200$ ?",
+      "options": ["Céder", "Expliquer franchise standard 200$, suggérer option Pas de franchise (100$) pour futurs contrats", "Ignorer", "Forcer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer la franchise standard 200$ (Note importante) et suggérer l'option Pas de franchise (100$) pour éviter cela."
+    },
+    {
+      "question": "Le papillon des corps / gaz d'admission est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 5 - Système d'alimentation du carburant", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 5 - Système d'alimentation couvre papillon des corps / gaz d'admission, injecteurs, pompe à carburant et canalisations/raccords à gaz."
+    },
+    {
+      "question": "Les dommages dus à un manque d'entretien sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus accident, collision, mauvaise utilisation, abus ou manque entretien exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à accident, collision, mauvaise utilisation, abus, hasards de la route ou manque d'entretien est exclue (section 5.4)."
+    },
+    {
+      "question": "La soupape de recirculation des gaz d'échappement (EGR) est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 6 - Système d'émissions", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 6 - Système d'émissions couvre soupape de recirculation des gaz d'échappement (EGR), capteurs d'oxygène, catalyseurs et soupape PCV."
+    },
+    {
+      "question": "Un VR habitacle (fifth-wheel) de 12 ans est-il admissible au programme aVR Section B ?",
+      "options": ["Non, trop vieux", "Oui, aVR Section B accepte véhicules âgés de plus de 10 ans jusqu'à 15 ans", "Seulement avec option", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR Section B (Habitacle) accepte véhicules âgés de plus de 10 ans jusqu'à 15 ans."
+    },
+    {
+      "question": "Les capteurs d'oxygène sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 6 - Système d'émissions", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 6 - Système d'émissions couvre capteurs d'oxygène, soupape EGR, catalyseurs et soupape de ventilation positive du carter (PCV)."
+    },
+    {
+      "question": "Combien coûte l'option Km illimité ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Kilométrage Illimité coûte 100$ et élimine toute limitation d'utilisation du kilomètre (section 3)."
+    },
+    {
+      "question": "Les catalyseurs sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 6 - Système d'émissions", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 6 - Système d'émissions couvre les catalyseurs, soupape EGR, capteurs d'oxygène et soupape PCV."
+    },
+    {
+      "question": "Comment expliquer l'option Km illimité à un client qui voyage beaucoup ?",
+      "options": ["Pas nécessaire", "100$ pour éliminer limitation de km, idéal pour voyageurs fréquents/grands routiers", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option Km illimité (100$) élimine toute limitation de km, parfaite pour voyageurs fréquents."
+    },
+    {
+      "question": "L'embrayage hydraulique du ventilateur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 7 - Refroidissement", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre embrayage hydraulique du ventilateur, moteur du ventilateur du radiateur et pompe eau et poulie."
+    },
+    {
+      "question": "Un client demande si les bougies d'allumage sont couvertes. Que répondez-vous ?",
+      "options": ["Oui, toutes", "Non, bougies de préchauffage et d'allumage exclues (pièces d'entretien)", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les bougies de préchauffage et d'allumage sont exclues car considérées pièces d'entretien (section 4.2)."
+    },
+    {
+      "question": "La pompe à eau et poulie sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 7 - Refroidissement", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre pompe eau et poulie, embrayage hydraulique du ventilateur, moteur du ventilateur et thermostat."
+    },
+    {
+      "question": "Un collègue vend une garantie avec fausses promesses. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Signaler au gérant, protéger le client, expliquer conséquences réputation/légales", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler les pratiques trompeuses pour protéger le client et l'entreprise, et expliquer conséquences."
+    },
+    {
+      "question": "Le compresseur d'air climatisé est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 7 - Refroidissement (si installé par manufacturier)", "Oui, toujours", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 7 - Refroidissement couvre compresseur d'air climatisé, accumulateur, condenseur, déshydrater et embrayage du compresseur (si pièces d'origines)."
+    },
+    {
+      "question": "Les dommages dus à la surchauffe du moteur sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, réparation endommagée par surchauffe du moteur ou tout autre composant exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à surchauffe du moteur ou de tout autre composant couvert est exclue (section 5.2)."
+    }
+  ]
+}
+

@@ -1,0 +1,188 @@
+{
+  "module": "avex",
+  "month": 7,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le propriétaire doit-il confirmer la réparation autorisée et le montant ?",
+      "options": ["Non, optionnel", "OUI, Propriétaire DOIT confirmer réparation autorisée et montant autorisation à l'Administrateur sinon il n'y aura PAS de remboursement pour la réparation (section 7.5)", "Seulement le Centre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.5: Le Propriétaire du Véhicule DOIT confirmer la réparation autorisée et le montant de l'autorisation à l'Administrateur ou il n'y aura pas de remboursement pour la réparation."
+    },
+    {
+      "question": "Comment expliquer l'importance de la double confirmation (sections 7.3 et 7.5) ?",
+      "options": ["C'est lourd", "Expliquer: 2 confirmations (avant ET après) = protection maximale propriétaire. Contrôle AVANT travaux (7.3) + validation APRÈS (7.5). Transparence totale, évite surprises/fraudes", "Pas nécessaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser protection: double confirmation (avant 7.3 + après 7.5) = contrôle total propriétaire, transparence complète, évite travaux non autorisés/surprises facture."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des montants supplémentaires non sur formulaire ?",
+      "options": ["Oui, toujours", "NON, l'Administrateur ne sera PAS responsable des montants supplémentaires qui ne sont pas indiqués sur le formulaire d'autorisation (section 7.6)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.6: L'Administrateur ne sera pas responsable des montants supplémentaires qui ne sont pas indiqués sur le formulaire d'autorisation."
+    },
+    {
+      "question": "Qui sélectionne la qualité et la classe des pièces pour la réparation ?",
+      "options": ["Le propriétaire", "L'Administrateur se réserve le DROIT de sélectionner la qualité et la classe des pièces pour la réparation (section 7.7)", "Le Centre", "Le manufacturier"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.7: L'Administrateur se réserve le droit de sélectionner la qualité et la classe des pièces pour la réparation (OEM, aftermarket, reconditionné selon cas)."
+    },
+    {
+      "question": "Si une catégorie différente de pièces est demandée, qui paie la différence ?",
+      "options": ["L'Administrateur", "L'Administrateur ne sera PAS responsable montants supplémentaires si catégorie différente de pièces autorisées demandée par autre partie (section 7.7)", "Le Centre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.7: L'Administrateur ne sera pas responsable des montants supplémentaires si une catégorie différente de pièces autorisées par l'Administrateur a été demandée par une autre partie (différence à charge demandeur)."
+    },
+    {
+      "question": "Comment expliquer la sélection des pièces par l'Administrateur (section 7.7) ?",
+      "options": ["C'est injuste", "Expliquer: Administrateur sélectionne pièces qualité appropriée (OEM/aftermarket/recon). Si client veut catégorie supérieure, peut payer différence. Équilibre qualité/coût, choix disponible", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer équilibre: Administrateur sélectionne pièces qualité appropriée, client peut upgrader en payant différence, flexibilité avec contrôle coûts raisonnable."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des dommages causés pendant/après réparation ?",
+      "options": ["Oui, toujours", "NON, l'Administrateur ne sera PAS responsable des dommages causés directement ou indirectement au véhicule pendant ou après la réparation (section 7.8)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.8: L'Administrateur ne sera pas responsable des dommages causés directement ou indirectement au véhicule pendant ou après la réparation (responsabilité Centre de Réparation)."
+    },
+    {
+      "question": "L'Administrateur est-il responsable de perte de temps pour pièces manquantes ?",
+      "options": ["Oui, responsable", "NON, Administrateur n'est PAS responsable perte temps résultant pièces manquantes/recommandées/back-ordered, remboursera partie autorisée SEULEMENT une fois véhicule entièrement réparé (section 7.9)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.9: L'Administrateur n'est pas responsable de toute perte de temps résultant de pièces manquantes, recommandées ou back-ordered et ne remboursera la partie autorisée qu'une fois que le véhicule aura été entièrement réparé."
+    },
+    {
+      "question": "Le propriétaire peut-il demander remboursement d'impôt sur montants autorisés ?",
+      "options": ["Oui, possible", "NON, aucune autre partie ne peut demander le remboursement d'impôt sur les montants autorisés et payés par L'Administrateur (section 7.10)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.10: Aucune autre partie ne peut demander le remboursement d'impôt sur les montants autorisés et payés par L'Administrateur."
+    },
+    {
+      "question": "Quelle est la franchise standard dans AVEX ?",
+      "options": ["0$ toujours", "150$ déduits du montant autorisé, SAUF si autorisation provient d'un Centre de Réparation Autorisé (franchise 0$) (section 7.11)", "250$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.11: Franchise standard de cent cinquante dollars (150$) CAD sera déduite du montant autorisé au moment de la réparation. Cette franchise ne sera PAS appliquée si l'autorisation provient d'un Centre de Réparation Autorisé."
+    },
+    {
+      "question": "Comment présenter l'avantage MAJEUR de la franchise 0$ Centre Autorisé ?",
+      "options": ["Minimiser", "Expliquer: franchise 0$ Centre Autorisé = AUCUN débours client pour réparations couvertes + 2h diagnostic remboursées (7.12). Économie 150$/réparation + diagnostic. Valeur exceptionnelle", "Pas important", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser ÉNORMÉMENT: franchise 0$ Centre Autorisé (vs 150$ ailleurs) + 2h diagnostic remboursées = économie substantielle chaque réparation, différenciateur majeur AVEX."
+    },
+    {
+      "question": "Quelle indemnité de vérification est acceptée si vérifié/autorisé Centre Autorisé ?",
+      "options": ["Aucune", "Indemnité standard de DEUX (2) heures sera acceptée dans taux main-d'œuvre si véhicule vérifié et autorisé par Administrateur dans Centre de Réparation Autorisé (section 7.12)", "1 heure", "3 heures"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.12: L'indemnité standard de vérification de deux (2) heures sera acceptée dans le taux de main-d'œuvre si le véhicule a été vérifié et autorisé par L'Administrateur dans un Centre de Réparation Autorisé."
+    },
+    {
+      "question": "Comment calculer l'économie totale Centre Autorisé vs ailleurs ?",
+      "options": ["Pas de différence", "Expliquer: Centre Autorisé = franchise 0$ (économie 150$) + 2h diagnostic remboursées (~200$-300$ selon taux). Total économie 350$-450$/réparation vs garage standard", "C'est pareil", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI Centre Autorisé: franchise 0$ (150$) + 2h diagnostic remboursées (200$-300$) = économie potentielle 350$-450$ vs garage standard, choix évident."
+    },
+    {
+      "question": "Le propriétaire comprend-il que coûts supplémentaires vérification/démontage sont à ses frais ?",
+      "options": ["Non, Administrateur paie", "OUI, Propriétaire comprend que tout coût supplémentaire de vérification, réparation ou démontage pour déterminer cause panne sera à SES frais (section 7.12)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.12: Le Propriétaire du Véhicule comprend que tout coût supplémentaire de vérification, de réparation ou de démontage pour déterminer la cause de la panne sera à ses frais."
+    },
+    {
+      "question": "Comment expliquer les coûts supplémentaires vérification à la charge propriétaire ?",
+      "options": ["C'est injuste", "Expliquer: 2h diagnostic INCLUSES Centre Autorisé (7.12). Si diagnostic complexe nécessite plus (démontage extensif), coûts supplémentaires propriétaire. Mais 2h couvrent majorité cas", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rassurer: 2h diagnostic INCLUSES (couvrent majorité cas), si cas complexe nécessite investigation extensive supplémentaire, coûts additionnels propriétaire (transparent, équitable)."
+    },
+    {
+      "question": "Le dépôt d'une réclamation garantit-il la couverture du programme ?",
+      "options": ["Oui, automatique", "NON, le dépôt d'une réclamation ne garantit PAS la couverture du programme de garantie (section 7.13)", "Oui, toujours", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.13: Le dépôt d'une réclamation ne garantit pas la couverture du programme de garantie (évaluation selon termes/conditions/exclusions chaque cas)."
+    },
+    {
+      "question": "Le propriétaire peut-il déclarer un nombre illimité de réclamations ?",
+      "options": ["Non, limité à 10", "OUI, Propriétaire peut déclarer nombre ILLIMITÉ de réclamations pendant durée programme choisi (section 8 - mais limites maximales s'appliquent)", "Limité à 20", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Section 8: Le Propriétaire du Véhicule peut déclarer un nombre ILLIMITÉ de réclamations pendant la durée du programme choisi, mais l'Administrateur ne sera pas responsable de plus que le moindre des montants (limites section 8)."
+    },
+    {
+      "question": "Comment présenter les réclamations illimitées tout en expliquant les limites ?",
+      "options": ["C'est contradictoire", "Expliquer: réclamations ILLIMITÉES (nombre), mais limites MONTANTS: a) Max par réclamation (10k$ sauf option), b) Prix véhicule sans taxes, c) Prix contrat vente Distributeur, d) Juste Valeur Marchande. Flexibilité avec protection", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer équilibre: réclamations illimitées (nombre/fréquence), limites montants raisonnables (protection jusqu'à valeur véhicule), flexibilité totale avec sécurité financière."
+    },
+    {
+      "question": "Quelles sont les 4 limites maximales de réparation de l'Administrateur (section 8) ?",
+      "options": ["2 limites", "4 limites (moindre de): a) Max par visite/cumulatif indiqué contrat, b) Prix véhicule sans taxes, c) Prix contrat vente Distributeur, d) Juste Valeur Marchande au moment réparation", "Une seule", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Section 8: Administrateur responsable jusqu'au MOINDRE de: a) Total programme réparation max (par visite/cumulatif) contrat, b) Prix véhicule sans taxes contrat, c) Prix contrat vente Distributeur, d) Juste Valeur Marchande moment réparation."
+    },
+    {
+      "question": "Comment expliquer la limite Juste Valeur Marchande (section 8.d) ?",
+      "options": ["C'est limité", "Expliquer: logique = Administrateur ne paiera jamais plus que valeur actuelle véhicule (protection perte totale économique). Si réparation > valeur véhicule, limité à valeur. Raisonnable équitable", "C'est injuste", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique: limite Juste Valeur Marchande évite réparations dépassant valeur véhicule (perte totale économique), protection raisonnable pour tous, équitable."
+    },
+    {
+      "question": "Quels véhicules sont exclus du programme AVEX (section 9.1) ?",
+      "options": ["Tous admissibles", "EXCLUS: véhicules promenade ou commerciales dont poids nominal brut (GVRW) supérieur à 10 000 lb OU catégorie supérieure à classe 5 (section 9.1)", "Seulement camions", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 9.1 EXCLUS: Véhicules du promenade ou commerciales dont le poids nominal brut du véhicule (GVRW) est supérieur à 10 000 lb ou dont la catégorie est supérieure à la classe 5."
+    },
+    {
+      "question": "Les tracteurs, équipements lourds, ambulances sont-ils admissibles à AVEX ?",
+      "options": ["Oui, couverts", "NON EXCLUS: tracteurs, véhicules/camions équipement lourd, ambulances, camions pompier, véhicules remorquage/police/police pack, autobus, véhicules déneigement (section 9.2)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 9.2 EXCLUS: Tracteurs, véhicules et camions d'équipement lourd, ambulances, camions de pompier, véhicules de remorquage, véhicules de police ou installés avec police pack, autobus et véhicules de déneigement."
+    },
+    {
+      "question": "Les véhicules de location à court terme sont-ils admissibles ?",
+      "options": ["Oui, admissibles", "NON EXCLUS: tout véhicule utilisé comme véhicule de location à court terme (contrat de location ou bail de moins de 24 mois) (section 9.3)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 9.3 EXCLUS: Tout véhicule utilisé comme véhicule de location à court terme (qui a un contrat de location ou un bail de moins de 24 mois)."
+    },
+    {
+      "question": "Les véhicules altérés/modifiés sont-ils admissibles à AVEX ?",
+      "options": ["Oui, admissibles", "NON EXCLUS: véhicule altéré/modifié vs installation usine (restrictions spécification, performances, réglage ECM, modifications échappement/admission, suspensions levées/abaissées, taille pneus/jantes) (section 9.4)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 9.4 EXCLUS: Tout véhicule altéré/modifié vs installation usine d'origine, incluant restrictions spécification fabrication, performances groupe motopropulseur, réglage puces ECM, modifications échappement/admission performance, suspensions levées/abaissées, recommandations taille pneus et jantes."
+    },
+    {
+      "question": "Comment expliquer l'exclusion véhicules modifiés (section 9.4) ?",
+      "options": ["C'est injuste", "Expliquer: modifications changent stress/performances composants (augmentation risques pannes). AVEX couvre véhicules configuration usine. Si modifications souhaitées, Distributeur peut demander exception AVANT vente", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique: modifications altèrent stress composants (risques pannes accrus), AVEX couvre configuration usine, exception possible si demandée AVANT vente par Distributeur."
+    },
+    {
+      "question": "Les véhicules sport/luxe haute performance MSRP >150 000$ sont-ils admissibles ?",
+      "options": ["Oui, avec option", "NON EXCLUS: véhicule sport ou luxe haute performance dont MSRP (prix suggéré vente détail) supérieur à 150 000$ CAD (section 9.5) SAUF exception demandée", "Oui, automatiquement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 9.5 EXCLUS: Tout véhicule sport ou de luxe haute performance dont le MSRP (prix suggéré de vente au détail) est supérieur à 150 000$ CAD. Distributeur peut demander exception avant vente."
+    },
+    {
+      "question": "Le Distributeur peut-il demander une exception aux exclusions véhicules (section 9) ?",
+      "options": ["Non, jamais", "OUI, Distributeur Autorisé peut demander exception AVANT avoir vendu garantie au Propriétaire, doit contacter représentant désigné Administrateur. Si approuvée, indiquée sur contrat, Distributeur responsable frais supplémentaires", "Seulement après", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 9: Distributeur Autorisé peut demander exception à ces exclusions AVANT d'avoir vendu la garantie. Doit contacter représentant désigné Administrateur. Si approuvée, exception indiquée sur contrat pour Propriétaire avant approbation finale. Distributeur responsable tous frais supplémentaires encourus."
+    },
+    {
+      "question": "Comment expliquer le processus d'exception pour véhicules modifiés/haute performance ?",
+      "options": ["Impossible", "Expliquer: véhicules spéciaux (modifiés, >150k$) = exclus standard. MAIS Distributeur peut demander exception représentant Administrateur AVANT vente. Si approuvée, indiquée contrat. Flexibilité cas spéciaux", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer flexibilité: exclusions standard véhicules spéciaux, MAIS exception possible si demandée AVANT vente, évaluation cas par cas, flexibilité pour situations particulières."
+    },
+    {
+      "question": "Un client avec F-150 modifié (suspension levée 6\", pneus surdimensionnés) veut AVEX. Que faire ?",
+      "options": ["Refuser directement", "Expliquer: modifications = exclusion standard (9.4). Recommander au Distributeur contacter représentant Administrateur AVANT vente pour demander exception. Si refusée, proposer retour configuration usine", "Accepter automatiquement", "Ignorer modifications"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence: modifications = exclusion (9.4), mais exception possible. Recommander Distributeur contacter Administrateur AVANT vente, si refusée proposer retour usine pour admissibilité."
+    },
+    {
+      "question": "Un collègue vend AVEX à un client avec Porsche 911 Turbo S 2024 (MSRP 225k$) sans mentionner exclusion. Comment réagir ?",
+      "options": ["L'encourager", "Intervenir IMMÉDIATEMENT: MSRP >150k$ = EXCLUS (9.5). Exception DOIT être demandée AVANT vente. Protéger client déception future, corriger vente, demander exception ou annuler", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention urgente: MSRP >150k$ = EXCLUS (9.5), exception obligatoire AVANT vente. Protéger client déception majeure, corriger erreur immédiatement, demander exception ou annuler vente."
+    }
+  ]
+}
+

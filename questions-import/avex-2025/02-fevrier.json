@@ -1,0 +1,176 @@
+{
+  "module": "avex",
+  "month": 2,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Combien d'options sont disponibles dans le programme AVEX ?",
+      "options": ["3 options", "8 options (Suspension A+, Couverture complémentaire, Protection garantie, Remboursement partiel, Km ouvert, Usage spécialisé, Réparation ouverte, Modèles sélectifs)", "5 options", "10 options"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVEX offre 8 options: Suspension A+ (300$), Couverture complémentaire (200$), Protection garantie (300$), Remboursement partiel (300$), Km ouvert (100$), Usage spécialisé (200$), Réparation ouverte (300$), Modèles sélectifs (400$)."
+    },
+    {
+      "question": "Comment présenter les 8 options AVEX à un client de façon structurée ?",
+      "options": ["Toutes obligatoires", "Expliquer: 8 options personnalisation selon besoins (suspension adaptative, km illimité, marques luxe, etc.), coûts 100$-400$, adapter selon véhicule/usage", "C'est compliqué", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer personnalisation: 8 options adaptées besoins spécifiques (suspension, km, usage, marques), coûts variés, recommandations selon profil."
+    },
+    {
+      "question": "Que couvre l'option No. 11 – Suspension A+ (300$) ?",
+      "options": ["Suspension standard", "Systèmes adaptatifs, actifs, cinétiques ou pneumatiques installés en usine (ressorts pneumatiques, solénoïdes, compresseurs, modules, etc.)", "Seulement ressorts", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'option Suspension A+ (300$) couvre systèmes adaptatifs/actifs/cinétiques/pneumatiques installés en usine: ressorts pneumatiques, soupapes, actionneurs, capteurs, modules, compresseurs, conduites (composant 11)."
+    },
+    {
+      "question": "Comment expliquer l'option Suspension A+ à un client avec véhicule haut de gamme ?",
+      "options": ["Pas nécessaire", "Expliquer: suspension pneumatique/adaptative = système coûteux (3k$-8k$ réparation). Option 300$ = protection investissement, tranquillité totale véhicules modernes", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer ROI: systèmes suspension adaptative très coûteux (3k$-8k$+), option 300$ = protection essentielle véhicules haut de gamme/modernes."
+    },
+    {
+      "question": "Que couvre l'option No. 28 – Couverture complémentaire (200$) ?",
+      "options": ["Seulement moteur", "Couverture de toute autre pièce nécessaire à la réparation autorisée (non mentionnée composants 1-24), huiles, liquides, fréon, alignement", "Esthétique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option Couverture complémentaire (200$) couvre toute autre pièce nécessaire à réparation autorisée (non mentionnée composants 1-24), huiles, liquides, fréon, alignement requis."
+    },
+    {
+      "question": "Comment justifier l'option Couverture complémentaire à un client ?",
+      "options": ["Pas utile", "Expliquer: 200$ pour couvrir TOUT nécessaire à réparation (huiles, liquides, alignement, pièces connexes), élimine surprises coûts additionnels", "C'est standard", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: 200$ élimine tous coûts connexes réparation (huiles, liquides, alignement), tranquillité totale, pas de surprises facture."
+    },
+    {
+      "question": "Que couvre l'option No. 29 – Protection de garantie (300$) ?",
+      "options": ["Rien de spécial", "En cas perte totale/vol: crédit jusqu'à 1000$ (égal franchise assurance) sur nouvelle garantie achetée, crédit max 2000$ avec garantie", "Remboursement total", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option Protection garantie (300$, termes 36+ mois): si perte totale/vol, crédit jusqu'à 1000$ (égal franchise assurance) sur nouvelle garantie, crédit max 2000$ total."
+    },
+    {
+      "question": "Quelles sont les conditions de l'option Protection de garantie ?",
+      "options": ["Tous les termes", "Disponible UNIQUEMENT pour termes 36 mois et plus, aucune réclamation payée, aucun prêt en cours (quittance requise)", "Seulement 12 mois", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Conditions Protection garantie: 1) Termes 36+ mois, 2) Aucune réclamation payée, 3) Aucun prêt en cours (preuve quittance), 4) Demande par propriétaire, 5) Max crédit 3000$ incluant 1000$ option."
+    },
+    {
+      "question": "Que couvre l'option No. 30 – Remboursement partiel (300$) ?",
+      "options": ["Rien", "Remboursement partiel prime payée à la FIN du contrat si aucune réclamation (max 2000$ avant taxes)", "Remboursement total", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement partiel (300$, termes 36+ mois): remboursement partiel de la prime à FIN contrat si aucune réclamation payée (max 2000$ avant taxes)."
+    },
+    {
+      "question": "Comment présenter l'option Remboursement partiel à un client ?",
+      "options": ["Pas intéressant", "Expliquer: 300$ pour possibilité récupérer jusqu'à 2000$ FIN contrat si aucune réclamation, récompense bon entretien, protection + remboursement possible", "C'est compliqué", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer bénéfice: 300$ investissement pour possibilité récupération 2000$ fin contrat (si aucune réclamation), récompense entretien responsable."
+    },
+    {
+      "question": "Quelles sont les conditions de l'option Remboursement partiel ?",
+      "options": ["Tous les termes", "Termes 36+ mois, aucune réclamation payée, demande dans 30 derniers jours avant expiration, non transférée, preuve propriété requise", "Automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Conditions Remboursement partiel: 1) Termes 36+ mois, 2) Aucune réclamation, 3) Demande 30 derniers jours avant expiration, 4) Non transférée, 5) Preuve propriété, 6) Non perte totale/vol/reprise."
+    },
+    {
+      "question": "Que couvre l'option Kilométrage ouvert (Illimité) (100$) ?",
+      "options": ["Double km", "Protection sans limite de kilométrage (illimité) pendant durée terme choisi", "Seulement 200k km", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "L'option Kilométrage ouvert (100$) élimine TOUTE limite de kilométrage pendant la durée du terme choisi (protection temps seulement, km illimités)."
+    },
+    {
+      "question": "Quelle est la condition pour l'option Kilométrage ouvert ?",
+      "options": ["Tous les véhicules", "UNIQUEMENT pour véhicules de 5 ans et 80 000 km et moins (Tarification Véhicules Récents)", "Seulement usagés", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "L'option Kilométrage ouvert (100$) est disponible UNIQUEMENT pour véhicules de 5 ans et 80 000 km et moins (Tarification Véhicules Récents)."
+    },
+    {
+      "question": "Comment justifier l'option Kilométrage ouvert (100$) à un client grand rouleur ?",
+      "options": ["Pas nécessaire", "Expliquer: seulement 100$ pour km ILLIMITÉS, idéal grand rouleur (40k+ km/an), élimine souci dépassement km, protection complète", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer valeur: 100$ seulement pour km illimités, ROI exceptionnel grand rouleur (40k+ km/an), tranquillité totale."
+    },
+    {
+      "question": "Que couvre l'option Utilisation spécialisée (200$) ?",
+      "options": ["Rien de spécial", "Protection pour 4x4, moteur diesel ou usage commercial", "Seulement diesel", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'option Utilisation spécialisée (200$) couvre véhicules avec utilisation spécialisée: 4x4 (traction intégrale déjà incluse mais renforce), moteur diesel, usage commercial."
+    },
+    {
+      "question": "Comment expliquer l'option Utilisation spécialisée à un client avec camion diesel commercial ?",
+      "options": ["Pas utile", "Expliquer: usage commercial/diesel = stress supérieur véhicule. Option 200$ = adaptation couverture usage intensif, protection renforcée composants sollicités", "C'est standard", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer adaptation: usage commercial/diesel = sollicitation supérieure, option 200$ adapte couverture usage intensif, protection optimisée."
+    },
+    {
+      "question": "Que couvre l'option Réparation ouverte (300$) ?",
+      "options": ["Double couverture", "Élimine la limite de 10 000$ par réparation (pas de limite par réparation, jusqu'à Juste Valeur Marchande)", "Seulement 15k$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option Réparation ouverte (300$) élimine la limite de 10 000$ par réparation. Aucune limite par réparation (jusqu'à Juste Valeur Marchande du véhicule)."
+    },
+    {
+      "question": "Quelle est la condition pour l'option Réparation ouverte ?",
+      "options": ["Tous les véhicules", "UNIQUEMENT pour véhicules de 5 ans et 80 000 km et moins (Tarification Véhicules Récents)", "Seulement neufs", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "L'option Réparation ouverte (300$) est disponible UNIQUEMENT pour véhicules de 5 ans et 80 000 km et moins (Tarification Véhicules Récents)."
+    },
+    {
+      "question": "Comment justifier l'option Réparation ouverte à un client avec véhicule haute valeur ?",
+      "options": ["Pas nécessaire", "Expliquer: véhicule haute valeur (60k$+), réparation moteur/transmission majeure = 10k$-20k$+. Option 300$ élimine limite 10k$, protection maximale", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI: véhicule haute valeur, réparation majeure peut dépasser 10k$ (moteur/transmission haut de gamme), option 300$ = protection totale."
+    },
+    {
+      "question": "Que couvre l'option Modèles sélectifs (400$) ?",
+      "options": ["Tous les modèles", "Protection pour marques luxe/performance: Alfa Romeo, Audi, BMW, Jaguar, Landrover, Lexus, Maserati, Mercedes-Benz, Mini, Porsche, Smart, Tesla", "Seulement Tesla", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'option Modèles sélectifs (400$) couvre 12 marques luxe/performance: Alfa Romeo, Audi, BMW, Jaguar, Landrover, Lexus, Maserati, Mercedes-Benz, Mini, Porsche, Smart, Tesla."
+    },
+    {
+      "question": "Comment expliquer l'option Modèles sélectifs à un client avec BMW/Mercedes ?",
+      "options": ["C'est cher", "Expliquer: marques allemandes/luxe = pièces/main-d'œuvre coûteuses (2x-3x standard). Option 400$ = adaptation tarification réalité marché, protection adéquate", "Pas nécessaire", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer réalité: marques luxe = coûts réparation 2x-3x supérieurs, option 400$ adapte couverture à réalité marché, protection appropriée."
+    },
+    {
+      "question": "Un client avec Mercedes 2022 (3 ans, 60k km) veut protection maximale. Quelles options recommander ?",
+      "options": ["Aucune", "Modèles sélectifs 400$ (obligatoire Mercedes) + Suspension A+ 300$ (si pneumatique) + Réparation ouverte 300$ + Couverture compl. 200$ = 1200$ protection totale", "Seulement une", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige évaluation complète: Modèles sélectifs 400$ (obligatoire Mercedes), Suspension A+ 300$ (si équipée), Réparation ouverte 300$, Couverture compl. 200$ = protection maximale 1200$."
+    },
+    {
+      "question": "Un client avec camion diesel usage commercial 50k km/an veut protection complète. Quelles options ?",
+      "options": ["Aucune", "Utilisation spécialisée 200$ (diesel/commercial) + Km ouvert 100$ (50k/an) + Couverture compl. 200$ = 500$ protection adaptée usage intensif", "Seulement km", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à analyser besoins: Utilisation spécialisée 200$ (diesel/commercial), Km ouvert 100$ (50k/an intensif), Couverture compl. 200$ = 500$ protection optimale."
+    },
+    {
+      "question": "Comment présenter le package complet d'options à un client avec Tesla Model S 2023 ?",
+      "options": ["Tout vendre", "Évaluer: Modèles sélectifs 400$ (obligatoire Tesla) + Réparation ouverte 300$ (haute valeur) + Km ouvert 100$ (si grand rouleur) = 800$-1100$ selon profil", "Minimum", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige analyse besoins: Modèles sélectifs 400$ (Tesla obligatoire), Réparation ouverte 300$ (protection max), Km ouvert 100$ (selon usage) = recommandation adaptée."
+    },
+    {
+      "question": "Un véhicule de 6 ans peut-il souscrire l'option Kilométrage ouvert ?",
+      "options": ["Oui, automatiquement", "Non, option Km ouvert UNIQUEMENT pour véhicules ≤5 ans et ≤80k km (Tarification Récents). 6 ans exclu", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'option Kilométrage ouvert est UNIQUEMENT disponible pour véhicules ≤5 ans et ≤80k km (Tarification Récents). Un véhicule de 6 ans n'est pas admissible à cette option."
+    },
+    {
+      "question": "Comment maximiser la satisfaction lors de la recommandation d'options AVEX ?",
+      "options": ["Vendre toutes", "1) Évaluer véhicule (marque, suspension, âge/km), 2) Analyser usage (km/an, commercial), 3) Identifier besoins protection, 4) Recommander options pertinentes", "Vendre minimum", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige méthodologie: évaluation véhicule (marque, équipements), analyse usage (km, commercial), identification besoins, recommandations options pertinentes adaptées."
+    },
+    {
+      "question": "Un client avec Civic 2023 (2 ans, 40k km) usage standard veut terme 60 mois. Quelles options recommander ?",
+      "options": ["Toutes les options", "Couverture complémentaire 200$ + Protection garantie 300$ (terme 60 mois) = 500$ optimal. Modèles sélectifs non requis (Honda standard)", "Aucune", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à recommander pertinent: Couverture compl. 200$, Protection garantie 300$ (terme 60 mois). Modèles sélectifs non nécessaire (Honda standard), Km standard OK."
+    },
+    {
+      "question": "Un collègue pousse systématiquement l'option la plus chère sans évaluer besoins client. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Intervenir: expliquer que recommandations doivent être basées sur BESOINS RÉELS client (véhicule, usage), pas commission. Protéger clients et réputation", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention: recommandations basées besoins réels client (marque, usage, budget), pas commission maximale. Protéger clients et réputation entreprise."
+    }
+  ]
+}
+

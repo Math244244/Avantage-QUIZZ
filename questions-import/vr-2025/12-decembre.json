@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 12,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Qui est désigné comme Propriétaire du véhicule ?",
+      "options": ["N'importe qui", "Le signataire indiqué comme propriétaire dans la section Identification du propriétaire", "Le conducteur", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du véhicule désigne le signataire indiqué comme propriétaire du véhicule dans la section Identification du propriétaire (section 1)."
+    },
+    {
+      "question": "Comment expliquer l'ensemble du programme VR de façon complète à un nouveau client ?",
+      "options": ["C'est compliqué", "2 programmes (aVR-Plus/aVR) selon âge/km, 22 composants (Motorisé) ou 11 (Habitacle), 5 protections 850$/an, options personnalisables, franchise 200$ (ou 0$)", "C'est cher", "Selon le VR"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter l'ensemble : 2 programmes adaptés, composants détaillés, 5 protections (850$/an), options, franchise modulable, processus clair."
+    },
+    {
+      "question": "Quelle est la Période d'attente du programme ?",
+      "options": ["7 jours", "Les premier quinze (15) jours suivant la date de livraison indiquée sur la garantie", "30 jours", "Aucune"],
+      "correctAnswer": 1,
+      "explanation": "La Période d'attente désigne les premier quinze (15) jours suivant la date de livraison indiquée sur la garantie (section 1 - Définitions)."
+    },
+    {
+      "question": "Un client demande combien coûte au total l'ensemble des options aVR-Plus. Que calculez-vous ?",
+      "options": ["500$", "1320$ max (Diesel 75$ + Turbo 45$ + Pusher 300$ + Pas franchise 100$ + Km illimité 100$ + 3 options premium 500$ chacune)", "800$", "Selon le VR"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de calculer correctement : Diesel 75$ + Turbo 45$ + Pusher 300$ + Pas franchise 100$ + Km illimité 100$ + 3 options premium 500$ × 3 = 1920$ max."
+    },
+    {
+      "question": "L'Administrateur accepte-t-il de payer les coûts de réparation dès réception du paiement ?",
+      "options": ["Non, jamais", "Oui, dès réception du paiement du programme par le Distributeur, accepte de payer coûts de réparation éligibles après Période d'attente", "Immédiatement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Dès réception du paiement de ce programme par le Distributeur à l'Administrateur, l'Administrateur accepte de payer les coûts de réparation éligibles après la Période d'attente (section 1)."
+    },
+    {
+      "question": "Comment expliquer la stratégie d'options à un client avec VR diesel haut de gamme terme 60 mois ?",
+      "options": ["Aucune option", "Obligatoire: Diesel 75$+Turbo 45$. Recommandé: Pas franchise 100$, Km illimité 100$, options premium 500$ (Pas limite/Remboursement/Suspension)", "Seulement diesel", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à identifier options obligatoires (Diesel+Turbo), recommander adaptées au profil (franchise, km) et premium pour terme long/VR haut de gamme."
+    },
+    {
+      "question": "La durée de couverture coïncide-t-elle avec les modalités du programme choisi ?",
+      "options": ["Non, différent", "Oui, la durée de la couverture coïncidera conformément aux modalités du programme indiqué à la première page", "Aléatoire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La durée de la couverture coïncidera, conformément aux modalités du programme indiqué à la première page de la garantie choisie par le Propriétaire du Véhicule (section 1)."
+    },
+    {
+      "question": "Quel est le montant total maximum des 3 options premium aVR-Plus ?",
+      "options": ["1000$", "1200$", "1500$ (Pas de limite 500$ + Remboursement prime 500$ + Suspension à air 500$)", "2000$"],
+      "correctAnswer": 2,
+      "explanation": "Les 3 options premium aVR-Plus coûtent 500$ chacune : Pas de limite par réclamation + Remboursement de la Prime + Suspension à air = 1500$ total."
+    },
+    {
+      "question": "Quels coûts l'Administrateur accepte-t-il de payer ?",
+      "options": ["Seulement pièces", "Coûts de réparation éligibles incluant la main-d'œuvre et les taxes nécessaires", "Seulement main-d'œuvre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur accepte de payer les coûts de réparation éligibles pour la Panne des Composants Couverts, y compris la main-d'œuvre et les taxes nécessaires (section 1)."
+    },
+    {
+      "question": "Comment justifier le coût total d'options de 1920$ à un client hésitant ?",
+      "options": ["C'est trop cher", "Expliquer ROI: protection maximale VR (valeur >100k$), franchise 0$, km illimité, options premium 36+ mois, tranquillité d'esprit", "Minimiser", "Négocier"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer le ROI : protection complète d'un actif majeur (VR >100k$), tranquillité d'esprit totale, options adaptées usage intensif."
+    },
+    {
+      "question": "Le contrat écrit prime-t-il sur toute entente verbale ?",
+      "options": ["Non, verbal équivalent", "Oui, le présent contrat constitue la totalité de l'entente et prime sur toute entente verbale", "Selon le cas", "Égaux"],
+      "correctAnswer": 1,
+      "explanation": "Le présent contrat constitue la totalité et l'intégralité de l'entente et prime sur toute entente verbale ou écrite intervenue avant sa signature (section 12.1)."
+    },
+    {
+      "question": "Quelles sont les options disponibles pour le programme aVR ?",
+      "options": ["Toutes les options", "4 options seulement: Moteur diesel 75$, Pusher diesel 300$, Turbo 45$, Pas de franchise 100$, Km illimité 100$", "Aucune option", "Selon le VR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR offre 5 options : Moteur diesel (75$), Pusher diesel (300$), Turbo (45$), Pas de franchise (100$), Km illimité (100$) (section 3 - aVR)."
+    },
+    {
+      "question": "Toute disposition conflictuelle avec la Loi est-elle automatiquement modifiée ?",
+      "options": ["Non, invalide", "Oui, toute disposition en conflit avec Loi protection consommateur est automatiquement considérée comme modifiée pour conformité", "Selon le cas", "Ignorée"],
+      "correctAnswer": 1,
+      "explanation": "Toute disposition contenue au contrat qui entre en conflit avec la Loi sur la protection du consommateur est automatiquement considérée comme modifiée pour conformité (section 12.2)."
+    },
+    {
+      "question": "Comment expliquer la différence d'options entre aVR-Plus et aVR ?",
+      "options": ["Aucune différence", "aVR-Plus: 8 options (base 5 + 3 premium 36+ mois). aVR: 5 options de base uniquement. Premium pour VR récents/haut de gamme", "Identiques", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer : aVR-Plus offre 8 options incluant 3 premium (terme 36+ mois), aVR offre 5 options de base seulement."
+    },
+    {
+      "question": "Le propriétaire accepte-t-il les dispositions prévues par le programme ?",
+      "options": ["Non", "Oui, J'accepte et comprends les dispositions prévues par le présent programme de garantie et j'accepte les conditions qui s'appliquent", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire déclare : J'accepte et comprends les dispositions prévues par le présent programme de garantie et j'accepte les conditions qui s'appliquent (section fin du contrat)."
+    },
+    {
+      "question": "Quelle est la valeur totale maximum de toutes les options aVR ?",
+      "options": ["500$", "620$ (Diesel 75$ + Pusher 300$ + Turbo 45$ + Pas franchise 100$ + Km illimité 100$)", "800$", "1000$"],
+      "correctAnswer": 1,
+      "explanation": "Le total maximum des 5 options aVR : Diesel 75$ + Pusher 300$ + Turbo 45$ + Pas de franchise 100$ + Km illimité 100$ = 620$ CAD."
+    },
+    {
+      "question": "Où le propriétaire et le distributeur doivent-ils signer ?",
+      "options": ["Une seule page", "Sur d'autres pages (IMPORTANT – SIGNATURES DU PROPRIÉTAIRE ET DU DISTRIBUTEUR SUR D'AUTRES PAGES)", "N'importe où", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le contrat mentionne : IMPORTANT – SIGNATURES DU PROPRIÉTAIRE ET DU DISTRIBUTEUR SUR D'AUTRES PAGES (section signature)."
+    },
+    {
+      "question": "Comment expliquer pourquoi le programme aVR n'a pas d'options premium ?",
+      "options": ["C'est injuste", "Expliquer: aVR pour VR plus âgés (>10 ans), limites inférieures (5k$/réclamation, 10k$ cumulatif), options de base adaptées à ce profil", "C'est moins bon", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que aVR est adapté aux VR plus âgés avec limites appropriées, options de base suffisantes pour ce profil de véhicule."
+    },
+    {
+      "question": "Quelle est la première étape en cas de panne ?",
+      "options": ["Réparer directement", "Communiquer avec l'Administrateur par téléphone (1-866-666-0181) ou courriel (info@garantieavantageplus.ca) pour aviser de la Panne", "Attendre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "En cas de Panne, le Propriétaire doit communiquer avec l'Administrateur par téléphone (1-866-666-0181) ou courriel pour aviser l'Administrateur de la Panne (section 7)."
+    },
+    {
+      "question": "Quelle option n'est PAS disponible pour le programme aVR ?",
+      "options": ["Diesel", "Pas de limite par réclamation (disponible seulement pour aVR-Plus termes 36+ mois)", "Turbo", "Pas de franchise"],
+      "correctAnswer": 1,
+      "explanation": "L'option Pas de limite par réclamation (500$) est disponible uniquement pour aVR-Plus termes de 36 mois et plus, pas pour aVR (section 3)."
+    },
+    {
+      "question": "Que fait l'agent de l'Administrateur après le contact du propriétaire ?",
+      "options": ["Autorise directement", "Dirige le Propriétaire vers un Centre de Réparation Autorisé où agent soumettra évaluation à l'Administrateur", "Refuse", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'agent de l'Administrateur dirigera le Propriétaire vers un Centre de Réparation Autorisé où un agent soumettra une évaluation à l'Administrateur (section 7)."
+    },
+    {
+      "question": "Comment expliquer le processus complet de réclamation à un nouveau client ?",
+      "options": ["C'est compliqué", "Expliquer 5 étapes: 1) Contacter Administrateur, 2) Direction Centre Autorisé, 3) Évaluation (frais propriétaire), 4) Approbation écrite, 5) Réparation autorisée", "Juste réparer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les 5 étapes du processus de réclamation pour assurer compréhension complète et éviter erreurs."
+    },
+    {
+      "question": "Si la réparation est approuvée, que reçoit le Centre de Réparation Autorisé ?",
+      "options": ["Appel téléphonique", "Numéro d'autorisation avec montant en format imprimé envoyé par courriel ou télécopieur", "Texto", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si la réparation est approuvée, un numéro d'autorisation avec le montant du remboursement sera assigné en format imprimé envoyé par courriel ou télécopieur (section 7)."
+    },
+    {
+      "question": "Quelle est la différence clé entre aVR-Plus et aVR au niveau des options premium ?",
+      "options": ["Aucune", "aVR-Plus offre 3 options premium 500$ (termes 36+ mois): Pas limite, Remboursement prime, Suspension air. aVR: aucune option premium", "Identiques", "Selon le VR"],
+      "correctAnswer": 1,
+      "explanation": "La différence clé : aVR-Plus offre 3 options premium à 500$ pour termes 36+ mois (Pas de limite, Remboursement, Suspension air). aVR n'offre aucune option premium."
+    },
+    {
+      "question": "Une approbation vocale ou par texte est-elle reconnue ?",
+      "options": ["Oui, équivalent", "Non, toute autre forme d'approbation (supposée, vocale, texte) ne sera pas reconnue par l'Administrateur", "Selon le cas", "Parfois"],
+      "correctAnswer": 1,
+      "explanation": "Toute autre forme d'approbation, qu'elle soit supposée, vocale, texte ou autre, ne sera pas reconnue par l'Administrateur (section 7)."
+    },
+    {
+      "question": "Comment maximiser la satisfaction d'un client VR lors de la vente ?",
+      "options": ["Vendre rapidement", "Prendre le temps: évaluer besoins, expliquer programmes/composants/protections, recommander options adaptées, clarifier processus, assurer compréhension complète", "Minimiser détails", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de prendre le temps : évaluation complète besoins, explication détaillée, recommandations personnalisées, clarifications processus, assurer compréhension totale."
+    },
+    {
+      "question": "Que se passe-t-il si la panne survient en dehors des heures de travail ?",
+      "options": ["Attendre", "Propriétaire peut envoyer les factures des montants encourus à l'Administrateur pour évaluation, processus suivi de la même manière", "Impossible", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si la panne survient en dehors des heures de travail et impossibilité de contacter l'Administrateur, le Propriétaire peut envoyer les factures pour évaluation (section 7)."
+    },
+    {
+      "question": "Quelle est la valeur totale annuelle de TOUTES les protections + options maximum aVR-Plus ?",
+      "options": ["1500$", "2770$ par année (850$ protections + 1920$ options max)", "3000$", "4000$"],
+      "correctAnswer": 1,
+      "explanation": "La valeur totale : 850$/an (5 protections incluses) + 1920$ (options max aVR-Plus) = 2770$ de valeur/protection par année pour VR haut de gamme."
+    },
+    {
+      "question": "La présentation d'une réclamation garantit-elle qu'il y aura couverture ?",
+      "options": ["Oui, toujours", "Non, la présentation d'une réclamation ne garantit pas qu'il y aura couverture en vertu du programme", "Automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La présentation d'une réclamation ne garantit pas qu'il y aura couverture en vertu du programme de garantie (section 7)."
+    },
+    {
+      "question": "Un client satisfait avec VR haut de gamme revient 5 ans après. Comment maximiser renouvellement et référence ?",
+      "options": ["Vendre vite", "Remercier fidélité, évaluer satisfaction (5 ans!), proposer aVR-Plus avec options premium (terme long), option Remboursement si aucune réclamation, demander témoignage vidéo et 3 références", "Vendre le moins cher", "Ignorer historique"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de valoriser fidélité exceptionnelle (5 ans), reconnaître qualité entretien (option Remboursement si 0 réclamation), cultiver témoignage vidéo et références qualifiées."
+    }
+  ]
+}
+

@@ -1,0 +1,218 @@
+{
+  "module": "tracteur",
+  "month": 12,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle est la première condition d'admissibilité du programme ?",
+      "options": ["Pas de condition", "Le véhicule doit être entretenu régulièrement selon recommandations fabricant (section 5.1)", "Seulement neuf", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "La première condition d'admissibilité est que le véhicule doit être entretenu régulièrement conformément aux recommandations du fabricant (section 5.1)."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien régulier comme condition d'admissibilité ?",
+      "options": ["Pas important", "Expliquer: entretien régulier = condition OBLIGATOIRE (section 5.1), Administrateur peut demander preuves (section 5.7), négligence = exclusion possible (section 4.B)", "C'est automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : entretien régulier = condition obligatoire admissibilité, preuves peuvent être demandées, négligence = risque exclusion et dommages."
+    },
+    {
+      "question": "Quelle est la condition concernant le kilométrage/les heures du véhicule ?",
+      "options": ["Illimité", "Le véhicule doit respecter les limites d'heures des tarifications (Tarif A: <2 500h, Tarif B: <5 000h) (section 5.2)", "Seulement neuf", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le véhicule doit respecter les limites d'heures des tarifications au moment de l'achat : Tarification A <2 500 heures, Tarification B <5 000 heures (section 5.2)."
+    },
+    {
+      "question": "Un tracteur de 4 ans avec 2 600 heures peut-il souscrire au programme avec Tarif A ?",
+      "options": ["Oui, automatiquement", "Non, 2 600h dépasse limite Tarif A (<2 500h). Admissible Tarif B seulement (≤10 ans ET <5 000h)", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "2 600 heures dépasse la limite de la Tarification A (<2 500h). Le tracteur est admissible à la Tarification B (≤10 ans ET <5 000h) avec termes 12-36 mois."
+    },
+    {
+      "question": "Quelle est la condition concernant l'âge du véhicule ?",
+      "options": ["Pas de limite", "Le véhicule doit respecter les limites d'âge des tarifications (Tarif A: ≤5 ans, Tarif B: ≤10 ans) (section 5.3)", "Seulement neuf", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le véhicule doit respecter les limites d'âge des tarifications au moment de l'achat : Tarification A ≤5 ans, Tarification B ≤10 ans (section 5.3)."
+    },
+    {
+      "question": "Comment expliquer les conditions d'admissibilité de façon structurée à un client ?",
+      "options": ["C'est compliqué", "Expliquer 4 conditions clés: 1) Entretien régulier obligatoire, 2) Respecter limite heures (Tarif A/B), 3) Respecter limite âge (Tarif A/B), 4) Preuves possibles", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à structurer en 4 points clés : entretien régulier, limite heures selon tarif, limite âge selon tarif, possibilité de demande de preuves."
+    },
+    {
+      "question": "Quelle est la condition concernant l'état général du véhicule ?",
+      "options": ["N'importe quel état", "Le véhicule doit être en bon état de fonctionnement au moment de l'achat du programme (section 5.4)", "Seulement neuf", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le véhicule doit être en bon état de fonctionnement général au moment de l'achat du programme de garantie (section 5.4)."
+    },
+    {
+      "question": "Un client veut souscrire une garantie pour un tracteur avec problème électrique existant. Que répondre ?",
+      "options": ["Accepter automatiquement", "Expliquer: véhicule doit être en bon état de fonctionnement à l'achat (section 5.4). Problèmes préexistants non couverts. Recommander réparation AVANT souscription", "Ignorer problème", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige honnêteté : véhicule doit être en bon état à l'achat (5.4), problèmes préexistants exclus. Recommander réparation avant souscription pour couverture future."
+    },
+    {
+      "question": "Quelle est la Période d'attente du programme ?",
+      "options": ["Aucune", "Les premiers quinze (15) jours suivant la date de livraison indiquée sur la garantie (section 5.5)", "30 jours", "60 jours"],
+      "correctAnswer": 1,
+      "explanation": "La Période d'attente est de quinze (15) jours suivant la date de livraison indiquée sur la garantie. Aucune réclamation couverte pendant cette période (section 5.5)."
+    },
+    {
+      "question": "Comment expliquer la Période d'attente de 15 jours à un client ?",
+      "options": ["Minimiser", "Expliquer: 15 jours attente après livraison = protection contre problèmes préexistants, standard industrie, couverture complète débute après (comme assurance)", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique : 15 jours = protection contre problèmes préexistants (standard industrie), couverture complète active après, comparable pratiques assurance."
+    },
+    {
+      "question": "Le propriétaire peut-il utiliser le véhicule pendant la Période d'attente ?",
+      "options": ["Non, interdit", "Oui, propriétaire peut utiliser véhicule normalement, mais aucune réclamation couverte pendant premiers 15 jours", "Seulement usage limité", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire peut utiliser le véhicule normalement pendant la Période d'attente de 15 jours, mais aucune réclamation ne sera couverte pendant cette période (section 5.5)."
+    },
+    {
+      "question": "Quelle est la condition concernant l'utilisation du véhicule ?",
+      "options": ["N'importe quelle utilisation", "Le véhicule doit être utilisé conformément aux spécifications et recommandations du fabricant (section 5.6)", "Seulement commercial", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le véhicule doit être utilisé conformément aux spécifications et recommandations du fabricant d'origine pour maintenir la couverture (section 5.6)."
+    },
+    {
+      "question": "Comment expliquer l'importance de respecter les spécifications du fabricant ?",
+      "options": ["Pas important", "Expliquer: utilisation conforme fabricant = condition couverture (section 5.6). Usage non conforme (surcharge, modifications) = exclusion possible (section 4.B)", "C'est automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer lien : utilisation conforme spécifications fabricant = condition obligatoire couverture, usage non conforme = risque exclusion et dommages majeurs."
+    },
+    {
+      "question": "L'Administrateur peut-il demander des preuves d'entretien ?",
+      "options": ["Non, jamais", "Oui, l'Administrateur se réserve le droit de demander preuves d'entretien et d'utilisation conforme (section 5.7)", "Seulement avec accord", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Oui, l'Administrateur se réserve le droit de demander des preuves d'entretien régulier et d'utilisation conforme aux spécifications du fabricant (section 5.7)."
+    },
+    {
+      "question": "Quels types de preuves l'Administrateur peut-il demander ?",
+      "options": ["Aucune", "Preuves d'entretien (factures garage, carnets entretien, historique réparations) et d'utilisation conforme spécifications fabricant", "Seulement factures", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur peut demander preuves d'entretien régulier (factures, carnets) et preuves d'utilisation conforme aux spécifications du fabricant (section 5.7)."
+    },
+    {
+      "question": "Comment conseiller un client sur la conservation des preuves d'entretien ?",
+      "options": ["Pas nécessaire", "Conseiller: conserver TOUTES factures entretien, carnets, factures réparations. Administrateur peut demander preuves (section 5.7). Organisation simple = protection garantie", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil préventif : conserver toutes preuves entretien (factures, carnets, réparations), Administrateur peut demander (5.7), organisation = protection garantie."
+    },
+    {
+      "question": "Un client a perdu ses factures d'entretien. Quel conseil professionnel donner ?",
+      "options": ["Aucune solution", "Conseiller: contacter garages/concessionnaires pour obtenir copies factures. Créer système conservation futur (dossier numérique/physique). Preuves = protection garantie", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à proposer solutions : récupérer copies auprès garages, créer système conservation futur (numérique/physique), expliquer importance preuves pour protection garantie."
+    },
+    {
+      "question": "Le respect des conditions d'admissibilité est-il obligatoire pendant toute la durée du programme ?",
+      "options": ["Seulement au début", "Oui, toutes conditions (entretien régulier, utilisation conforme, etc.) doivent être respectées PENDANT TOUTE la durée du programme", "Non, après c'est bon", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Toutes les conditions d'admissibilité (entretien régulier, utilisation conforme, etc.) doivent être respectées pendant TOUTE la durée du programme de garantie (section 5)."
+    },
+    {
+      "question": "Comment expliquer les conditions d'admissibilité de façon qui responsabilise le client ?",
+      "options": ["Minimiser", "Expliquer: garantie = partenariat. Client responsable: entretien régulier, utilisation conforme, conservation preuves. Programme protège clients responsables = gagnant-gagnant", "Menacer", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à cadrer comme partenariat : client responsable (entretien, usage, preuves) + programme protection = relation gagnant-gagnant, valorisation clients responsables."
+    },
+    {
+      "question": "Un tracteur de 11 ans avec 3 500 heures est-il admissible au programme ?",
+      "options": ["Oui, Tarif A", "Non, dépasse limites d'âge (>10 ans). Non admissible Tarif A (>5 ans) ni Tarif B (>10 ans)", "Oui, Tarif B", "Avec exception"],
+      "correctAnswer": 1,
+      "explanation": "Le tracteur a 11 ans, ce qui dépasse les limites d'âge des deux tarifications : Tarif A (≤5 ans) et Tarif B (≤10 ans). Il n'est pas admissible au programme (section 5.3)."
+    },
+    {
+      "question": "Un équipement de 8 ans avec 5 200 heures est-il admissible au programme ?",
+      "options": ["Oui, Tarif A", "Non, dépasse limite heures Tarif B (>5 000h). Non admissible bien que âge OK (8 ans < 10 ans)", "Oui, Tarif B", "Avec exception"],
+      "correctAnswer": 1,
+      "explanation": "L'équipement a 5 200 heures, ce qui dépasse la limite d'heures de la Tarification B (<5 000h). Même si l'âge est OK (8 ans), il n'est pas admissible (section 5.2)."
+    },
+    {
+      "question": "Comment expliquer les 5 options disponibles en relation avec les conditions d'admissibilité ?",
+      "options": ["Pas de lien", "Expliquer: options permettent personnalisation APRÈS admissibilité: 1) HP Limitation (extension puissance), 2) 2x heures (double allocation), 3) Pas franchise, 4) Remb vérif, 5) Aucune limite/visite", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer : d'abord admissibilité vérifiée, ENSUITE options permettent personnalisation (HP, heures, franchise, vérif, limite) selon besoins spécifiques."
+    },
+    {
+      "question": "Quelle est la limite maximale de responsabilité par visite de réparation ?",
+      "options": ["Illimitée", "10 000$ par visite de réparation (sauf option Aucune limite par réclamation 500$)", "5 000$", "20 000$"],
+      "correctAnswer": 1,
+      "explanation": "La limite maximale de responsabilité de l'Administrateur est de 10 000$ par visite de réparation, sauf si option Aucune limite par réclamation (500$) souscrite (section 9)."
+    },
+    {
+      "question": "Quelle est la limite maximale de responsabilité cumulée ?",
+      "options": ["Illimitée", "20 000$ cumulatif pour toutes les réparations pendant la durée du programme", "10 000$", "30 000$"],
+      "correctAnswer": 1,
+      "explanation": "La limite maximale de responsabilité cumulée de l'Administrateur est de 20 000$ pour toutes les réparations pendant la durée du programme (section 9)."
+    },
+    {
+      "question": "Comment expliquer les limites de responsabilité (10k$/visite, 20k$ cumulatif) à un client ?",
+      "options": ["Minimiser", "Expliquer: limites 10k$/visite et 20k$ cumulatif protègent contre réparations majeures multiples. Option Aucune limite (500$) élimine limite/visite (jusqu'à 20k$ cumulatif)", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer protection : limites généreuses (10k$/visite, 20k$ cumulatif) couvrent réparations majeures, option Aucune limite (500$) élimine limite/visite."
+    },
+    {
+      "question": "Un client avec tracteur haute valeur (150 000$) veut protection maximale. Quelle option recommander ?",
+      "options": ["Aucune", "Option Aucune limite par réclamation (500$) pour éliminer limite 10k$/visite (jusqu'à 20k$ cumulatif), protection maximale équipement haute valeur", "Standard suffit", "Toutes"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à recommander option Aucune limite (500$) pour équipement haute valeur : élimine limite 10k$/visite, permet réparations majeures jusqu'à 20k$ cumulatif."
+    },
+    {
+      "question": "Quelle est la franchise standard du programme ?",
+      "options": ["100$", "250$ déduits du montant autorisé pour chaque réclamation (sauf option Pas de franchise 250$)", "500$", "Aucune"],
+      "correctAnswer": 1,
+      "explanation": "La franchise standard est de 250$ déduits du montant de remboursement autorisé pour chaque réclamation, SAUF si option Pas de franchise (250$) souscrite (section 8.7)."
+    },
+    {
+      "question": "Comment expliquer la franchise de 250$ à un client ?",
+      "options": ["Minimiser", "Expliquer: franchise 250$ standard déduite automatiquement chaque réclamation. Option Pas de franchise (250$) élimine cette déduction = remboursement 100% montant autorisé", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : franchise 250$ standard automatique chaque réclamation. Option Pas de franchise (250$) élimine déduction = remboursement complet."
+    },
+    {
+      "question": "Combien coûte l'option HP Limitation pour ATC-AU ?",
+      "options": ["150$", "250$ (couvre tracteurs agricoles de 250 HP à 600 HP maximum)", "500$", "Gratuite"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation coûte 250$ et permet de couvrir les tracteurs agricoles (ATC-AU) de 250 HP à 600 HP maximum (non disponible pour ATC-CE)."
+    },
+    {
+      "question": "Combien coûte l'option 2x allocation heures ?",
+      "options": ["150$", "250$ (double les heures autorisées pour chaque terme)", "500$", "Gratuite"],
+      "correctAnswer": 1,
+      "explanation": "L'option 2x allocation heures coûte 250$ et double les heures autorisées pour chaque terme (ex: 12 mois 500h → 1000h, 60 mois 2500h → 5000h)."
+    },
+    {
+      "question": "Combien coûte l'option Pas de franchise ?",
+      "options": ["150$", "250$ (élimine la franchise de 250$ pour chaque réclamation)", "500$", "Gratuite"],
+      "correctAnswer": 1,
+      "explanation": "L'option Pas de franchise coûte 250$ et élimine la franchise standard de 250$ qui serait normalement déduite pour chaque réclamation (section 8.7)."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement vérification ?",
+      "options": ["100$", "150$ (rembourse frais vérification si réparation approuvée et réalisée)", "250$", "500$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement vérification coûte 150$ et rembourse les frais de vérification si la réparation est approuvée et réalisée dans un Centre Autorisé."
+    },
+    {
+      "question": "Combien coûte l'option Aucune limite par réclamation ?",
+      "options": ["250$", "500$ (élimine la limite de 10 000$ par visite, jusqu'à 20 000$ cumulatif)", "150$", "1000$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Aucune limite par réclamation coûte 500$ et élimine la limite de 10 000$ par visite de réparation (limite cumulée 20 000$ maintenue) (section 9)."
+    },
+    {
+      "question": "Comment présenter le package complet d'options à un client avec tracteur 500 HP usage très intensif ?",
+      "options": ["C'est cher", "Package optimal 1400$: HP Limitation 250$ (obligatoire 500 HP) + 2x heures 250$ (intensif) + Pas franchise 250$ + Remb vérif 150$ + Aucune limite 500$ = protection maximale totale", "Minimiser", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter package complet détaillé : chaque option avec coût et valeur, total 1400$ pour protection maximale absolue tracteur haute valeur/usage intensif."
+    },
+    {
+      "question": "Un collègue dit à un client qu'il n'y a \"aucune condition\" pour la garantie. Comment réagissez-vous ?",
+      "options": ["L'encourager", "Intervenir immédiatement: corriger en expliquant conditions claires (entretien régulier, utilisation conforme, preuves), protéger client fausses attentes, préserver réputation", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention immédiate : corriger fausses promesses, expliquer conditions réelles transparentes (section 5), protéger client et réputation entreprise."
+    }
+  ]
+}
+

@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 7,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le remboursement pour hébergement est de combien par jour ?",
+      "options": ["30$", "50$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "La section 27 - Hébergement accorde un remboursement jusqu'à 50$ par jour jusqu'à 4 jours maximum si le propriétaire est immobilisé à plus de 300 km."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AX-1 ?",
+      "options": ["500$", "1 000$", "1 500$", "2 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-1 a un montant maximum par réclamation de 1 000$ selon les détails financiers."
+    },
+    {
+      "question": "L'activateur de verrouillage des portières est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 22", "Non couvert"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre l'activateur de verrouillage des portières et les interrupteurs des verrouillages."
+    },
+    {
+      "question": "Un client avec un Kia Sorento 2020 de 80 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Kia ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 0,
+      "explanation": "Kia fait partie de la Catégorie A incluant Acura, Genesis, Honda, Hyundai, Infiniti, Lexus, Mitsubishi, Nissan, Scion, Suzuki et Toyota."
+    },
+    {
+      "question": "Combien de catégories de véhicules le programme AT PLUS définit-il ?",
+      "options": ["2 catégories", "3 catégories", "4 catégories", "5 catégories"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS définit 3 catégories de véhicules : Catégorie A (asiatiques), Catégorie B (domestiques) et Catégorie C (européennes/luxe)."
+    },
+    {
+      "question": "Combien coûte l'option Suspension + pour le programme AVE ?",
+      "options": ["300$", "400$", "500$", "600$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Suspension + coûte 500$ pour le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "Les canalisations et raccords à gaz sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 19"],
+      "correctAnswer": 2,
+      "explanation": "La section 17 - Système d'alimentation couvre les canalisations et raccords à gaz seulement (pas liquide)."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AVE ?",
+      "options": ["140 000 km", "180 000 km", "200 000 km", "225 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE s'applique aux véhicules ayant 200 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Le moteur d'essuie-glace avant et arrière est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre le moteur d'essuie-glace avant et arrière ainsi que leurs interrupteurs."
+    },
+    {
+      "question": "Comment aborder un client qui a eu une mauvaise expérience avec une garantie prolongée ailleurs ?",
+      "options": ["Critiquer l'autre compagnie", "Écouter son expérience, expliquer les différences de votre programme et rassurer", "Minimiser son expérience", "Offrir un rabais important"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à écouter avec empathie, expliquer les avantages spécifiques de votre programme (couverture, service) et rebâtir la confiance."
+    },
+    {
+      "question": "Le programme AT PLUS couvre-t-il le remboursement des frais de vérification ?",
+      "options": ["Non, pas couvert", "Oui, si la réparation est autorisée et effectuée à un Centre Autorisé", "Oui, dans tous les cas", "Non, sauf exception"],
+      "correctAnswer": 1,
+      "explanation": "La section 25 couvre le remboursement des frais de vérification si la réparation est autorisée et effectuée à un Centre de Réparation Autorisé."
+    },
+    {
+      "question": "Le distributeur d'injection est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 18"],
+      "correctAnswer": 2,
+      "explanation": "La section 17 - Système d'alimentation couvre le distributeur d'injection, les injecteurs et le papillon des corps."
+    },
+    {
+      "question": "Quelle est la période d'attente avant l'activation de la garantie ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "La période d'attente est de 15 jours suivant la date de livraison indiquée sur la garantie selon la section 1 - Définitions."
+    },
+    {
+      "question": "La pompe à dépression est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 12", "Section 13", "Section 16"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre la pompe à dépression ainsi que la pompe à eau et la colonne de direction."
+    },
+    {
+      "question": "Quel est le montant maximum total pour l'option Quincaillerie ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Quincaillerie couvre les huiles, filtres, écrous, boulons, liquides et alignement jusqu'à un maximum total de 100$ CAD pendant la durée du programme."
+    },
+    {
+      "question": "L'ensemble de blocage de moyeu (4x4) est couvert dans quelle section ?",
+      "options": ["Section 4", "Section 5", "Section 12", "Section 13"],
+      "correctAnswer": 3,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre l'ensemble de blocage de moyeu (4x4) et l'actuateur du boîtier de transfert."
+    },
+    {
+      "question": "Un client demande si vous pouvez ajouter des options non autorisées sur le contrat. Que répondez-vous ?",
+      "options": ["Oui, en facturant un supplément", "Non, seules les options autorisées par l'Administrateur peuvent être ajoutées", "Oui, mais discrètement", "Peut-être, selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de respecter strictement les programmes et options autorisés par l'Administrateur. Toute modification non autorisée est interdite."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AT PLUS ?",
+      "options": ["5 000$", "10 000$", "Valeur totale du véhicule", "Illimité"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AT PLUS est la valeur totale du véhicule selon les détails financiers."
+    },
+    {
+      "question": "Les interrupteurs des lumières sont couverts dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre les interrupteurs des lumières ainsi que de nombreux autres interrupteurs électriques."
+    },
+    {
+      "question": "Combien coûte l'option Turbo/Surcompresseur pour le programme AVE ?",
+      "options": ["45$", "50$", "75$", "100$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Turbo/Surcompresseur coûte 75$ pour le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "L'option Kilométrage illimité est-elle disponible pour le programme AP ?",
+      "options": ["Oui, coûte 100$", "Non, pas disponible", "Oui, incluse", "Oui, coûte 150$"],
+      "correctAnswer": 1,
+      "explanation": "Aucune autre option n'est disponible pour le programme AP à part l'option Diesel qui est incluse sans frais."
+    },
+    {
+      "question": "Les axes principaux et intermédiaires de direction sont couverts dans quelle section ?",
+      "options": ["Section 7", "Section 9", "Section 12", "Section 13"],
+      "correctAnswer": 3,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre les axes principaux et intermédiaires de direction ainsi que la colonne de direction."
+    },
+    {
+      "question": "Un collègue vous demande de couvrir un appel urgent alors que vous êtes avec un client. Comment réagissez-vous ?",
+      "options": ["Refuser catégoriquement", "Excuser poliment auprès du client et gérer rapidement l'urgence si nécessaire", "Ignorer la demande", "Quitter le client sans explication"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de gérer les priorités avec courtoisie, en s'excusant auprès du client et en gérant l'urgence rapidement si vraiment nécessaire."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AVE ?",
+      "options": ["3 termes (12, 24, 36 mois)", "4 termes (12, 24, 36, 48 mois)", "5 termes (12, 24, 36, 48, 60 mois)", "2 termes (12, 24 mois)"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE est disponible pour 5 termes : 12, 24, 36, 48 ou 60 mois selon la durée du contrat."
+    },
+    {
+      "question": "Le solénoïde/moteur du hayon électrique est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 20", "Section 22"],
+      "correctAnswer": 3,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre le solénoïde/moteur du hayon électrique et les éléments des sièges chauffants."
+    },
+    {
+      "question": "Quel est le montant maximum par jour pour la location de véhicule de remplacement ?",
+      "options": ["20$", "30$", "40$", "50$"],
+      "correctAnswer": 1,
+      "explanation": "La section 26 accorde un remboursement jusqu'à 30$ par jour jusqu'à 7 jours maximum pour la location d'un véhicule de remplacement."
+    },
+    {
+      "question": "Les prises USB et audio auxiliaire sont couvertes dans quelle section ?",
+      "options": ["Section 15", "Section 16", "Section 22", "Section 23"],
+      "correctAnswer": 2,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre les prises USB, audio auxiliaire et les socles d'alimentation 12v et 115v."
+    },
+    {
+      "question": "Quelle est la condition d'admissibilité pour l'option A.V.N. ?",
+      "options": ["Aucune condition", "Véhicule de 8 ans et moins et 140 000 km et moins", "Véhicule de 10 ans et moins", "Véhicule de 12 ans et moins"],
+      "correctAnswer": 1,
+      "explanation": "L'option A.V.N. nécessite un véhicule de 8 ans et moins et 140 000 km et moins pour être admissible (section 3 - Options)."
+    },
+    {
+      "question": "Le collecteur d'échappement est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 12", "Section 13", "Section 24"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre le collecteur d'échappement et le collecteur d'admission."
+    },
+    {
+      "question": "Un client satisfait vous offre un cadeau de remerciement. Comment réagissez-vous professionnellement ?",
+      "options": ["Accepter tout cadeau", "Remercier chaleureusement mais refuser poliment si contraire à la politique de l'entreprise", "Demander un cadeau plus cher", "Accepter en cachette"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de respecter les politiques de l'entreprise sur les cadeaux tout en remerciant sincèrement le client pour son geste."
+    }
+  ]
+}
+

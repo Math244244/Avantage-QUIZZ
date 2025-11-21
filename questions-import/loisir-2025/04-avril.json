@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 4,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le boîtier de transmission est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 3 - Système d'entraînement Transmission", "Oui, section 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 3 couvre le boîtier de transmission et toutes les pièces lubrifiées internes incluant arbre principal et jeux d'engrenages."
+    },
+    {
+      "question": "Des frais s'appliquent-ils aux transferts de garantie ?",
+      "options": ["Oui, 50$", "Oui, 100$", "Non, aucuns frais", "Oui, 25$"],
+      "correctAnswer": 2,
+      "explanation": "Aucuns frais ne seront appliqués aux transferts de garantie selon la section 10.1.a."
+    },
+    {
+      "question": "L'arbre principal de transmission est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 3 - Transmission", "Oui, section 4", "Oui, section 5"],
+      "correctAnswer": 1,
+      "explanation": "La section 3 - Transmission couvre l'arbre principal, paliers d'arbre principal et joint d'arbre principal."
+    },
+    {
+      "question": "Un client avec une motoneige 1000cc demande une garantie. Est-elle admissible au programme de base ?",
+      "options": ["Oui, couverte", "Non, trop puissante", "Oui, avec option Haut performance 200$ (801cc à 1200cc)", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "La base couvre jusqu'à 800cc/30kW. L'option Haut performance (200$) couvre 801cc à 1200cc pour VTT/Côte-à-Côte/Motoneiges."
+    },
+    {
+      "question": "Les fourchettes de transmission sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, section 3 - Transmission", "Oui, section 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 3 - Transmission couvre les fourchettes, jeux d'engrenages et supports de boîte de vitesses."
+    },
+    {
+      "question": "Quel délai pour soumettre une facture de réparation à l'Administrateur ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "Les bons de travail et factures de plus de 30 jours à compter de la date de présentation ne seront ni acceptés ni autorisés (section 7.1)."
+    },
+    {
+      "question": "La panne d'huile de transmission est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 3 - sauf dommages externes", "Oui, toujours", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 3 - Transmission couvre la panne d'huile et joints de panne d'huile, sauf par dommages externes."
+    },
+    {
+      "question": "Comment expliquer les 3 catégories du programme loisir à un client ?",
+      "options": ["Elles sont identiques", "Cat 1: Scooters/Motos (750cc), Cat 2: VTT/Motoneige (800cc), Cat 3: Motomarines/Bateaux (400hp)", "Une seule catégorie", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Les 3 catégories ont des admissibilités différentes : puissance max et conditions d'options spécifiques à chaque type de véhicule."
+    },
+    {
+      "question": "Les supports de boîte de vitesses sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 3 - Transmission", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 3 - Transmission couvre les supports de boîte de vitesses ainsi que toutes les pièces lubrifiées internes."
+    },
+    {
+      "question": "Un véhicule de location peut-il être couvert ?",
+      "options": ["Oui, tous", "Non, location court terme (moins de 24 mois) exclue", "Oui, avec supplément", "Non, aucun"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule de location à court terme ou ayant contrat de location/crédit-bail de moins de 24 mois est exclu (section 9.3)."
+    },
+    {
+      "question": "La chaîne d'entraînement primaire est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 4 - Entraînement Primaire", "Oui, section 3", "Oui, section 5"],
+      "correctAnswer": 1,
+      "explanation": "La section 4 - Entraînement Primaire couvre chaîne, mécanisme de réglage, moyeu d'embrayage, ressort et jeux d'engrenages."
+    },
+    {
+      "question": "Les pannes survenues à l'extérieur du Canada/USA sont-elles couvertes ?",
+      "options": ["Oui, partout", "Non, seulement Canada et zone continentale USA", "Oui, avec supplément", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Toute panne à l'extérieur du Canada ou de la zone continentale des États-Unis ne sera pas autorisée (section 7.2)."
+    },
+    {
+      "question": "Le moyeu d'embrayage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 4 - Entraînement Primaire", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 4 - Entraînement Primaire couvre moyeu d'embrayage et panier, ressort d'embrayage et assemblée du compensateur."
+    },
+    {
+      "question": "Un client demande annulation après 15 jours car il veut changer de véhicule. Est-ce possible ?",
+      "options": ["Oui, toujours", "Non, seulement si perte totale/vol", "Oui, avec frais", "Oui, si Protection garantie achetée"],
+      "correctAnswer": 3,
+      "explanation": "Après 10 jours, annulation possible uniquement si perte totale déclarée, SAUF si Protection de garantie achetée (section 10.2.b et option 27)."
+    },
+    {
+      "question": "Les jeux d'engrenages de l'entraînement primaire sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 4 - Entraînement Primaire", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 4 - Entraînement Primaire couvre jeux d'engrenages, paliers internes et coussinets."
+    },
+    {
+      "question": "Comment gérer un client agressif mécontent d'une exclusion ?",
+      "options": ["Être agressif en retour", "Rester calme, écouter, expliquer les couvertures incluses et options disponibles", "L'ignorer", "Céder immédiatement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de rester calme, d'écouter les préoccupations et de rediriger vers les avantages (sections 1-28 couvertes)."
+    },
+    {
+      "question": "L'arbre de transmission secondaire est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 5 - Entraînement Secondaire", "Oui, section 3", "Oui, section 4"],
+      "correctAnswer": 1,
+      "explanation": "La section 5 - Entraînement Secondaire couvre arbre de transmission, arbre secondaire, chaîne, pignons et poulies."
+    },
+    {
+      "question": "Quel est le montant maximum total de remboursement pour service routier/remorquage ?",
+      "options": ["100$ par année", "100$ par réclamation", "100$ total programme", "200$ par année"],
+      "correctAnswer": 0,
+      "explanation": "La section 22 accorde remboursement jusqu'à 100$ CAD par année pour la durée du programme."
+    },
+    {
+      "question": "Le kit d'embrayage secondaire est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 5 - Entraînement Secondaire", "Oui, section 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 5 - Entraînement Secondaire couvre kit d'embrayage, roulements internes et boîtier de transmission finale."
+    },
+    {
+      "question": "Un véhicule avec un odomètre/compteur non fonctionnel est-il admissible ?",
+      "options": ["Oui, avec preuve", "Non, véhicule exclu", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule qui n'a pas de compteur kilométrique ou d'heures fonctionnel installé en usine au moment de la vente est exclu (section 9.2)."
+    },
+    {
+      "question": "Les poulies d'entraînement secondaire sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, section 5 - Entraînement Secondaire", "Oui, section 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 5 - Entraînement Secondaire couvre poulies, chaîne, pignons et couvercle de différentiel."
+    },
+    {
+      "question": "Quel est le montant maximum total pour véhicule de remplacement ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 3,
+      "explanation": "Le remboursement de véhicule de remplacement est de 50$/jour × 7 jours max = 350$ maximum pour la durée du programme (section 23)."
+    },
+    {
+      "question": "Le joint homocinétique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 5 - Entraînement Secondaire", "Oui, section 7", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 5 - Entraînement Secondaire couvre joint homocinétique et joint universel."
+    },
+    {
+      "question": "Un client demande une garantie pour son véhicule agricole. Est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules agricoles exclus (usage non récréatif)", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Les véhicules agricoles sont exclus car leur utilisation n'est pas principalement destinée aux loisirs/activités récréatives (section 9.1)."
+    },
+    {
+      "question": "Le boîtier de transmission finale est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 5 - Entraînement Secondaire", "Oui, section 3", "Oui, section 4"],
+      "correctAnswer": 1,
+      "explanation": "La section 5 - Entraînement Secondaire couvre boîtier de transmission finale et couvercle de différentiel."
+    },
+    {
+      "question": "Quel est le montant maximum total pour hébergement ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement d'hébergement est de 100$/jour × 4 jours max = 400$ maximum pour la durée du programme (section 24)."
+    },
+    {
+      "question": "L'arbre d'hélice est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 6 - Système de propulsion motomarine/bateau", "Oui, section 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 6 couvre arbres d'hélice, arbres de transmission en V, pompe interne et boîtier de la pompe à jet."
+    },
+    {
+      "question": "Un collègue vous demande de couvrir son erreur auprès du gérant. Comment réagissez-vous ?",
+      "options": ["Mentir pour le couvrir", "Être honnête tout en suggérant qu'il assume sa responsabilité", "Le dénoncer publiquement", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige l'honnêteté tout en encourageant le collègue à assumer ses erreurs pour apprendre et progresser."
+    },
+    {
+      "question": "Le boîtier de la pompe à jet est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 6 - Système propulsion motomarine/bateau", "Oui, section 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 6 couvre boîtier de la pompe à jet, pompe interne, pompe de circulation d'eau et gouvernail."
+    },
+    {
+      "question": "Combien coûte l'option Maximum jusqu'à la valeur marchande pour VTT/Côte-à-Côte/Motoneiges ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Maximum jusqu'à la valeur marchande coûte 400$ pour VTT, Côte-à-Côte & Motoneiges."
+    }
+  ]
+}
+

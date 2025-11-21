@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 5,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Si la réparation est approuvée, que reçoit le Centre de Réparation Autorisé ?",
+      "options": ["Appel téléphonique", "Numéro d'autorisation avec montant en format imprimé envoyé par courriel ou télécopieur", "Texto", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si la réparation est approuvée, un numéro d'autorisation avec le montant du remboursement sera assigné en format imprimé envoyé par courriel ou télécopieur (section 7)."
+    },
+    {
+      "question": "Comment expliquer le processus complet de réclamation à un nouveau client ?",
+      "options": ["C'est compliqué", "Expliquer 5 étapes: 1) Contacter Administrateur, 2) Direction Centre Autorisé, 3) Évaluation (frais propriétaire), 4) Approbation écrite, 5) Réparation autorisée", "Juste réparer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement les 5 étapes du processus de réclamation pour assurer compréhension complète et éviter erreurs."
+    },
+    {
+      "question": "Une approbation vocale ou par texte est-elle reconnue ?",
+      "options": ["Oui, équivalent", "Non, toute autre forme d'approbation (supposée, vocale, texte) ne sera pas reconnue par l'Administrateur", "Selon le cas", "Parfois"],
+      "correctAnswer": 1,
+      "explanation": "Toute autre forme d'approbation, qu'elle soit supposée, vocale, texte ou autre, ne sera pas reconnue par l'Administrateur (section 7)."
+    },
+    {
+      "question": "Un tracteur agricole de 550 HP est-il admissible au programme ATC-AU ?",
+      "options": ["Oui, automatiquement", "Oui, avec option HP Limitation (250$) qui couvre jusqu'à 600 HP", "Non, trop puissant", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-AU de base couvre <250 HP. Pour 550 HP, il faut l'option HP Limitation (250$) qui couvre jusqu'à 600 HP maximum."
+    },
+    {
+      "question": "Que se passe-t-il si la panne survient en dehors des heures de travail ?",
+      "options": ["Attendre", "Propriétaire peut envoyer les factures des montants encourus à l'Administrateur pour évaluation, processus suivi de la même manière", "Impossible", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si la panne survient en dehors des heures de travail et impossibilité de contacter l'Administrateur, le Propriétaire peut envoyer les factures pour évaluation (section 7)."
+    },
+    {
+      "question": "Comment expliquer l'option Remboursement vérification à un client ?",
+      "options": ["Pas utile", "150$ pour remboursement des frais de vérification si réparation approuvée et réalisée dans Centre Autorisé", "C'est automatique", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que l'option (150$) rembourse les frais de vérification si la réparation est approuvée et réalisée dans un Centre Autorisé."
+    },
+    {
+      "question": "La présentation d'une réclamation garantit-elle qu'il y aura couverture ?",
+      "options": ["Oui, toujours", "Non, la présentation d'une réclamation ne garantit pas qu'il y aura couverture en vertu du programme", "Automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La présentation d'une réclamation ne garantit pas qu'il y aura couverture en vertu du programme de garantie (section 7)."
+    },
+    {
+      "question": "Un tracteur de 650 HP est-il admissible au programme ATC-AU même avec l'option HP Limitation ?",
+      "options": ["Oui, avec option", "Non, option HP Limitation couvre jusqu'à 600 HP maximum, 650 HP exclu", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation (250$) permet de couvrir jusqu'à 600 HP maximum. Un tracteur de 650 HP dépasse cette limite et n'est pas admissible."
+    },
+    {
+      "question": "Quel délai pour soumettre un bon de travail à l'Administrateur ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "Aucun bon de travail datant de plus de trente (30) jours à compter de la date de vérification ne sera accepté (section 8.1)."
+    },
+    {
+      "question": "Comment gérer un client qui pense que \"tout\" est couvert ?",
+      "options": ["Confirmer", "Expliquer 5 composants couverts détaillés, montrer exclusions (section 4), souligner limites 10k$/visite, 20k$ cumulatif", "Mentir", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'être transparent : 5 composants couverts (détaillés section 2), exclusions claires (section 4), limites précises."
+    },
+    {
+      "question": "Quel délai pour soumettre une facture de réparation à l'Administrateur ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "Les factures pour les montants encourus envoyées à l'Administrateur datant de plus de 30 jours à compter de la date de réparation ne seront pas acceptées (section 8.2)."
+    },
+    {
+      "question": "Un tracteur agricole de 480 HP est-il admissible avec l'option HP Limitation ?",
+      "options": ["Non, trop puissant", "Oui, option HP Limitation (250$) couvre de 250 HP à 600 HP maximum", "Non admissible", "Avec autre option"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation (250$) permet de couvrir les tracteurs ATC-AU de 250 HP à 600 HP maximum. Un tracteur de 480 HP est admissible avec cette option."
+    },
+    {
+      "question": "Quels documents le Centre de Réparation Autorisé doit-il retourner à l'Administrateur ?",
+      "options": ["Rien", "Formulaire d'autorisation signé + facture avec montant autorisé + preuve de paiement (si applicable)", "Seulement la facture", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Centre doit retourner : formulaire d'autorisation signé par propriétaire, facture avec montant autorisé, et preuve de paiement si applicable (section 8.3)."
+    },
+    {
+      "question": "Comment expliquer les plages de puissance du programme ATC-AU ?",
+      "options": ["Illimité", "Base: <250 HP. Option HP Limitation (250$): jusqu'à 600 HP. Au-delà 600 HP: non admissible", "Seulement <250 HP", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : base <250 HP, option HP Limitation étend jusqu'à 600 HP, au-delà de 600 HP non admissible."
+    },
+    {
+      "question": "Dans quel délai l'Administrateur rembourse-t-il le Centre de Réparation Autorisé ?",
+      "options": ["7 jours", "Dans le délai convenu entre les deux parties", "30 jours", "60 jours"],
+      "correctAnswer": 1,
+      "explanation": "Pour les autorisations, l'Administrateur remboursera le montant au Centre de Réparation Autorisé dans le délai convenu entre les deux parties (section 8.3)."
+    },
+    {
+      "question": "Un équipement de construction de 300 HP est-il admissible au programme ATC-CE ?",
+      "options": ["Oui, avec option", "Non, ATC-CE couvre <250 HP seulement, pas d'option HP Limitation disponible", "Oui, automatiquement", "Avec supplément"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-CE couvre <250 HP seulement et n'offre pas d'option HP Limitation. Un équipement de 300 HP n'est pas admissible à ATC-CE."
+    },
+    {
+      "question": "Dans quel délai l'Administrateur rembourse-t-il le propriétaire si celui-ci a payé la facture ?",
+      "options": ["15 jours", "30 à 45 jours suivant réception documentation requise", "60 jours", "Immédiatement"],
+      "correctAnswer": 1,
+      "explanation": "Si le Propriétaire a payé la totalité de la facture, l'Administrateur remboursera le montant autorisé dans les 30 à 45 jours suivant réception de toute la documentation (section 8.3.c)."
+    },
+    {
+      "question": "Comment expliquer pourquoi l'option HP Limitation n'existe pas pour ATC-CE ?",
+      "options": ["C'est injuste", "Expliquer: ATC-CE pour construction <250 HP (équipements standard), HP élevée non typique pour construction compacte", "C'est moins bon", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que ATC-CE cible équipements de construction compacts <250 HP (puissances élevées non typiques pour ce segment)."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des montants supplémentaires non spécifiés sur l'autorisation ?",
+      "options": ["Oui, toujours", "Non, l'Administrateur ne sera pas tenu responsable des montants supplémentaires", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable des montants supplémentaires non spécifiés sur le formulaire d'autorisation (section 8.4)."
+    },
+    {
+      "question": "Quelle est la différence clé de puissance entre ATC-AU et ATC-CE ?",
+      "options": ["Aucune", "ATC-AU: <250 HP (extensible à 600 HP avec option). ATC-CE: <250 HP fixe (pas d'extension possible)", "Identiques", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "La différence clé : ATC-AU offre option HP Limitation jusqu'à 600 HP (agricole besoin puissance). ATC-CE reste fixe <250 HP (construction compacte)."
+    },
+    {
+      "question": "L'Administrateur est-il responsable de la qualité du matériel utilisé pour la réparation ?",
+      "options": ["Oui, toujours", "Non, l'Administrateur ne sera pas tenu responsable de la qualité du matériel", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de la qualité du matériel utilisé pour la réparation (section 8.5)."
+    },
+    {
+      "question": "Comment maximiser la satisfaction d'un client tracteur lors de la vente ?",
+      "options": ["Vendre rapidement", "Prendre le temps: évaluer usage/puissance, expliquer programmes/composants, recommander options adaptées, clarifier processus", "Minimiser détails", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de prendre le temps : évaluation complète usage/puissance, explication détaillée, recommandations personnalisées, clarifications processus."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des dommages causés par le Centre de Réparation ?",
+      "options": ["Oui, toujours", "Non, l'Administrateur ne sera pas tenu responsable des dommages causés par le Centre", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de tout dommage causer directement ou indirectement au véhicule par le Centre de Réparation Autorisé (section 8.6)."
+    },
+    {
+      "question": "Un tracteur agricole de 600 HP exactement est-il admissible avec l'option HP Limitation ?",
+      "options": ["Non, trop puissant", "Oui, option HP Limitation couvre JUSQU'À 600 HP maximum (600 HP inclus)", "Non admissible", "Avec autre option"],
+      "correctAnswer": 1,
+      "explanation": "L'option HP Limitation (250$) permet de couvrir jusqu'à 600 HP maximum. Un tracteur exactement à 600 HP est admissible avec cette option."
+    },
+    {
+      "question": "Comment expliquer la franchise à un client ?",
+      "options": ["Pas de franchise", "Franchise 250$ déduite du montant autorisé, SAUF si option Pas de franchise (250$) sélectionnée", "Franchise 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : franchise standard 250$ automatiquement déduite, SAUF si option Pas de franchise (250$) achetée (section 8.7)."
+    },
+    {
+      "question": "L'Administrateur peut-il utiliser des pièces usagées ou remises à neuf ?",
+      "options": ["Non, seulement neuves", "Oui, se réserve le droit d'autoriser pièces usagées, neuves ou remises à neuf", "Seulement avec accord", "Non, jamais"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit d'autoriser les pièces usagées, neuves ou remises à neuf pour chaque réclamation (section 8.8)."
+    },
+    {
+      "question": "Comment présenter la valeur des options à un client avec tracteur agricole 500 HP usage intensif ?",
+      "options": ["Pas nécessaires", "Évaluer: HP Limitation 250$ (obligatoire 500 HP), 2x heures 250$ (intensif), Pas franchise 250$, Aucune limite 500$ (protection max)", "Toutes obligatoires", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer besoins spécifiques (500 HP, intensif) et recommander options pertinentes : HP Limitation (obligatoire), 2x heures, franchise, limite."
+    },
+    {
+      "question": "Un client veut installer une classe de pièce différente de celle autorisée. Est-ce possible ?",
+      "options": ["Non, impossible", "Oui, propriétaire doit payer la différence entre pièce autorisée et celle demandée", "Oui, gratuit", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si le Propriétaire souhaite installer une classe de pièce différente, il doit payer la différence entre la pièce autorisée et celle demandée (section 8.8)."
+    },
+    {
+      "question": "Le propriétaire peut-il réclamer remboursement d'impôt sur les montants versés au Centre ?",
+      "options": ["Oui, toujours", "Non, le Propriétaire ne peut prétendre à aucun remboursement d'impôt", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du Véhicule ne peut prétendre à aucun remboursement d'impôt sur les montants que l'Administrateur verse au Centre de Réparation Autorisé (section 8.9)."
+    },
+    {
+      "question": "Un collègue réussit une vente avec des fausses promesses. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Signaler ou discuter avec lui de l'importance d'honnêteté pour protéger clients et réputation", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler pratiques trompeuses ou discuter avec le collègue pour protéger les clients et la réputation de l'entreprise."
+    }
+  ]
+}
+

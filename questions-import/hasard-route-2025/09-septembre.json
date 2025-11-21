@@ -1,0 +1,182 @@
+{
+  "module": "hasard-route",
+  "month": 9,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Combien existe-t-il de catégories tarifaires différentes dans le programme Hasard de Route ?",
+      "options": ["2 catégories", "4 catégories : Standard, Highline, Super Highline, Super Highline +", "3 catégories", "5 catégories"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Hasard de Route offre 4 catégories tarifaires distinctes basées sur les marques de véhicules : Standard, Highline, Super Highline, et Super Highline +."
+    },
+    {
+      "question": "Quelle est la fourchette de prix pour la catégorie STANDARD (12 mois vs 84 mois) ?",
+      "options": ["500$ à 800$", "770$ (12 mois) à 1 026$ (84 mois)", "1000$ à 1500$", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie STANDARD offre des termes allant de 770$ pour 12 mois jusqu'à 1 026$ pour 84 mois (variation de 256$ sur 7 ans)."
+    },
+    {
+      "question": "Quelle est la fourchette de prix pour la catégorie SUPER HIGHLINE + (12 mois vs 84 mois) ?",
+      "options": ["1500$ à 2000$", "1 909$ (12 mois) à 2 490$ (84 mois)", "2500$ à 3000$", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie SUPER HIGHLINE + (Bentley, Rolls Royce, Tesla) offre des termes allant de 1 909$ pour 12 mois jusqu'à 2 490$ pour 84 mois."
+    },
+    {
+      "question": "Comment calculer le coût mensuel du terme 84 mois catégorie Standard ?",
+      "options": ["15$/mois", "1 026$ ÷ 84 mois = 12,21$/mois (moins d'un café par jour)", "20$/mois", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer accessibilité : terme 84 mois Standard 1 026$ ÷ 84 = 12,21$/mois = moins qu'un café par jour pour protection complète 10 services."
+    },
+    {
+      "question": "Quel est le ratio coût par protection (Standard 84 mois, 10 protections) ?",
+      "options": ["50$ par protection", "1 026$ ÷ 10 protections = 102,60$ par protection (7 ans)", "200$ par protection", "Selon la protection"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration valeur : 1 026$ Standard 84 mois ÷ 10 protections = 102,60$ par protection pour 7 ans (coût unitaire extrêmement bas)."
+    },
+    {
+      "question": "Comment valoriser différence 256$ entre 12 mois et 84 mois (Standard) ?",
+      "options": ["C'est cher", "Démontrer ROI : 256$ différence pour 72 mois ADDITIONNELS protection = 3,56$/mois supplémentaire. Terme 84 mois = meilleur ratio coût/protection (12,21$/mois vs 64,17$/mois terme 12). Recommander FORTEMENT terme long", "Ignorer", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI : 256$ différence = 3,56$/mois pour 72 mois additionnels, ratio mensuel terme 84 (12,21$) vs terme 12 (64,17$) = économie massive long terme."
+    },
+    {
+      "question": "Combien de marques sont incluses dans la catégorie HIGHLINE ?",
+      "options": ["5 marques", "11 marques : Acura, Alfa Romeo, Cadillac, Genesis, Infiniti, Lexus, Lincoln, Mini, Polestar, Vinfast, Volvo", "7 marques", "15 marques"],
+      "correctAnswer": 1,
+      "explanation": "La catégorie HIGHLINE inclut 11 marques de luxe d'entrée/intermédiaire : Acura, Alfa Romeo, Cadillac, Genesis, Infiniti, Lexus, Lincoln, Mini, Polestar, Vinfast, Volvo."
+    },
+    {
+      "question": "Quelle est la progression tarifaire entre catégories (terme 60 mois) ?",
+      "options": ["Linéaire", "Standard 927$, Highline 1 201$ (+30%), Super Highline 1 797$ (+50%), Super Highline + 2 362$ (+31%) - progression reflète coûts pièces réels", "Identique", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication progression : Standard 927$, Highline 1 201$ (+30%), Super Highline 1 797$ (+50%), Super Highline + 2 362$ (+31%), progression reflète coûts réels pièces luxe."
+    },
+    {
+      "question": "Comment justifier catégorie Super Highline + (2362$ vs 927$ Standard) à client Tesla ?",
+      "options": ["C'est excessif", "Démontrer VALEUR RÉELLE : Tesla = pare-brise panoramique 2000$+ (vs 400$ standard), phares LED adaptatifs 1200$ chaque (vs 300$ standard), roues 20\" spécialisées 800$ (vs 300$ standard). Tarification 2362$ reflète coûts RÉELS pièces premium. Protection ESSENTIELLE", "Minimiser différence", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration coûts réels : Tesla = pièces 3x-5x plus coûteuses (pare-brise 2000$+, phares 1200$, roues 800$), tarification reflète réalité, protection essentielle investissement majeur."
+    },
+    {
+      "question": "Quelle est la marque la plus abordable pour un client budget limité ?",
+      "options": ["Toutes pareilles", "Catégorie STANDARD (770$-1026$) = 16 marques incluant Honda, Toyota, Mazda, Hyundai, Kia (marques fiables abordables). Recommander terme 84 mois (1026$ = 12$/mois) = protection maximale coût minimal", "Highline", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à recommander catégorie Standard (16 marques fiables volume : Honda Toyota Mazda Hyundai Kia), terme 84 mois (1026$ = 12$/mois) = protection maximale accessibilité maximale."
+    },
+    {
+      "question": "Combien de protections PRINCIPALES couvre le programme Hasard de Route ?",
+      "options": ["5 protections", "10 protections principales : Pneu+Roue, Cosmétique roues, Clé+Télécommande, Protection intérieur, Bosses sans peinture, Peinture+Éraflures, Réparation pare-brise, Franchise/Remplacement pare-brise, Phares/Feux, Remorquage/Location/Transport", "7 protections", "15 protections"],
+      "correctAnswer": 1,
+      "explanation": "Le programme couvre 10 protections principales distinctes : Pneu+Roue, Cosmétique roues, Clé+Télécommande, Protection intérieur, Bosses sans peinture, Peinture+Éraflures, Réparation pare-brise, Franchise/Remplacement pare-brise, Phares/Feux, Remorquage/Location/Transport."
+    },
+    {
+      "question": "Combien de protections ont occurrences ILLIMITÉES ?",
+      "options": ["3 protections", "9 protections illimitées : Pneu+Roue, Cosmétique roues, Clé+Télécommande, Protection intérieur, Bosses sans peinture, Réparation pare-brise, Franchise/Remplacement pare-brise, Phares/Feux, Remorquage (1 protection = limite cumulative 2000$)", "5 protections", "Toutes illimitées"],
+      "correctAnswer": 1,
+      "explanation": "9 protections sur 10 ont occurrences ILLIMITÉES. Seule la protection Peinture+Éraflures a une limite cumulative totale de 2 000$ (mais occurrences illimitées jusqu'à limite)."
+    },
+    {
+      "question": "Quelle est la limite cumulative TOTALE maximale du programme (toutes protections) ?",
+      "options": ["10 000$", "15 000$ remboursement total maximal (incluant toutes améliorations optionnelles)", "20 000$", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement TOTAL maximal dans le cadre du programme Hasard de Route est limité à 15 000$, incluant toutes les améliorations optionnelles (limite cumulative globale)."
+    },
+    {
+      "question": "Comment expliquer valeur 15 000$ limite totale à client hésitant ?",
+      "options": ["Minimiser", "Démontrer PROTECTION : limite 15 000$ = très généreuse. Exemple scénario 7 ans : 3 pneus remplacés (600$), 2 pare-brise (2000$), 2 clés perdues (1500$), 1 phare (800$), protection intérieur (400$), bosses (500$), remorquages (300$) = 6 100$ utilisés sur 15 000$ disponibles. Protection ample", "C'est limité", "Selon l'utilisation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer générositélimite : scénario réaliste 7 ans = 6 100$ réclamations (3 pneus, 2 pare-brise, 2 clés, 1 phare, intérieur, bosses, remorquages) sur 15 000$ disponibles, protection ample."
+    },
+    {
+      "question": "Quelle protection a la limite INDIVIDUELLE la plus élevée (par incident) ?",
+      "options": ["Pneus", "Clé+Télécommande : 1 250$ par incident (limite individuelle la plus élevée)", "Pare-brise", "Phares"],
+      "correctAnswer": 1,
+      "explanation": "La protection CLÉ + TÉLÉCOMMANDE offre la limite individuelle par incident la plus élevée : 1 250$ par incident (couverture généreuse clés modernes coûteuses)."
+    },
+    {
+      "question": "Combien de protections ont limites cumulatives (vs par incident) ?",
+      "options": ["Toutes", "3 protections limites cumulatives : Peinture+Éraflures (2000$ total), Franchise/Remplacement pare-brise (1000$ total), Phares/Feux (1250$ total)", "5 protections", "Aucune"],
+      "correctAnswer": 1,
+      "explanation": "3 protections ont limites CUMULATIVES totales : Peinture+Éraflures (2 000$ total contrat), Franchise/Remplacement pare-brise (1 000$ total), Phares/Feux (1 250$ total)."
+    },
+    {
+      "question": "Comment présenter les 10 protections de manière mémorable à un client ?",
+      "options": ["Liste sèche", "Regrouper LOGIQUEMENT : 1) ROUES (pneus+roues, cosmétique), 2) VITRES (réparation, franchise/remplacement pare-brise, phares), 3) INTÉRIEUR (sièges, clés), 4) EXTÉRIEUR (bosses, peinture), 5) MOBILITÉ (remorquage, location, transport). 5 catégories = mémorisation facile", "10 items séparés", "Selon l'intérêt"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à structurer : regrouper en 5 catégories logiques (ROUES, VITRES, INTÉRIEUR, EXTÉRIEUR, MOBILITÉ) = 2 protections chaque = mémorisation facile présentation claire."
+    },
+    {
+      "question": "Quelle protection couvre le coût mensuel le plus bas (Standard 84 mois) ?",
+      "options": ["Toutes pareilles", "CHAQUE protection = 1 026$ ÷ 10 = 102,60$ / 84 mois = 1,22$/mois par protection. Ex : protection clés 1250$ = coût 1,22$/mois (ROI exceptionnel)", "Selon la protection", "Variable"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration coût unitaire : chaque protection = 102,60$ total ÷ 84 mois = 1,22$/mois par protection. Ex: clés 1250$ couverture = coût 1,22$/mois = ROI exceptionnel."
+    },
+    {
+      "question": "Quelle est la couverture remorquage (montant + occurrences) ?",
+      "options": ["100$ × 3 occurrences", "150$ par remorquage × occurrences ILLIMITÉES (si réparations couvertes)", "250$ × 5 occurrences", "Selon la distance"],
+      "correctAnswer": 1,
+      "explanation": "La couverture REMORQUAGE offre 150$ par remorquage avec occurrences ILLIMITÉES pendant toute la Durée (tant que liées à réparations couvertes par le programme)."
+    },
+    {
+      "question": "Quelle est la couverture location véhicule (montant + condition) ?",
+      "options": ["50$/jour", "100$ par jour (si réparation couverte nécessite véhicule reste atelier >1 jour), occurrences illimitées", "150$/jour", "Selon la durée"],
+      "correctAnswer": 1,
+      "explanation": "La couverture LOCATION VÉHICULE offre 100$ par jour (si réparation couverte nécessite que véhicule reste à l'atelier >1 jour), occurrences illimitées pendant Durée."
+    },
+    {
+      "question": "Comment valoriser trio Remorquage (150$) + Location (100$/jour) + Transport (60$/jour) ?",
+      "options": ["Services mineurs", "Démontrer VALEUR MOBILITÉ : Scénario réparation pare-brise (3 jours atelier) = remorquage 150$ + location 3 jours 300$ = 450$ services mobilité. Standard 84 mois = 1026$ couvre 2-3 scénarios mobilité COMPLETS. Protection immobilisation essentielle", "Ignorer", "Selon l'utilisation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser mobilité : scénario réparation 3 jours = remorquage 150$ + location 3 jours 300$ = 450$ services, Standard 1026$ = 2-3 scénarios complets, protection immobilisation essentielle."
+    },
+    {
+      "question": "Quel est le coût moyen d'une clé moderne avec transpondeur (sans protection) ?",
+      "options": ["100$-200$", "300$-800$ (standard) à 1 000$+ (luxe) - limite 1 250$ programme = couverture généreuse", "150$-300$", "Selon la marque"],
+      "correctAnswer": 1,
+      "explanation": "Les clés modernes avec transpondeur coûtent 300$-800$ (marques standard) à 1 000$+ (luxe BMW/Tesla). La limite 1 250$ du programme = couverture généreuse réalité coûts."
+    },
+    {
+      "question": "Quel est le coût moyen remplacement pare-brise (sans protection) ?",
+      "options": ["200$-400$", "400$-800$ (standard) à 1 500$-2 500$ (luxe/panoramique) - limite 1 000$ programme = protection partielle/complète selon véhicule", "600$-1000$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le remplacement pare-brise coûte 400$-800$ (standard) à 1 500$-2 500$ (luxe/panoramique Tesla). Limite 1 000$ programme = protection complète standard, partielle luxe, valeur significative."
+    },
+    {
+      "question": "Quel est le coût moyen remplacement pneu (sans protection) ?",
+      "options": ["50$-100$", "150$-300$ (standard 16\"-18\") à 400$-600$ (performance 20\"+) - protection illimitée = ROI majeur régions gravier/nids-poule", "100$-200$", "Selon la taille"],
+      "correctAnswer": 1,
+      "explanation": "Le remplacement pneu coûte 150$-300$ (standard 16\"-18\") à 400$-600$ (performance 20\"+). Protection ILLIMITÉE programme = ROI majeur régions gravier/nids-poule fréquents."
+    },
+    {
+      "question": "Comment calculer ROI potentiel Standard 84 mois (1026$) scénario réaliste 7 ans ?",
+      "options": ["Difficile à calculer", "Scénario RÉALISTE 7 ans : 2 pneus (500$) + 1 pare-brise (600$) + 1 clé (400$) + 1 réparation intérieur (300$) + 2 bosses (400$) + 1 remorquage (150$) = 2 350$ économisés - 1 026$ coût = 1 324$ ROI NET. Ratio 2,3:1", "Pas rentable", "Selon l'utilisation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration ROI concret : scénario réaliste 7 ans = 2 350$ économisés - 1 026$ coût = 1 324$ ROI NET, ratio 2,3:1 (économie 2,30$ pour chaque 1$ investi)."
+    },
+    {
+      "question": "Quel profil client bénéficie le PLUS du programme Hasard de Route ?",
+      "options": ["Tous pareils", "Profils HAUTE VALEUR : 1) Familles jeunes enfants (intérieur, clés), 2) Longs trajets autoroute (pare-brise, pneus), 3) Régions montagneuses/gravier (pneus, phares), 4) Véhicules luxe (toutes pièces coûteuses), 5) Véhicules neufs/conservés long terme (7 ans)", "Seulement luxe", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à identifier profils haute valeur : familles enfants (intérieur clés), longs trajets (pare-brise pneus), montagnes (pneus phares), luxe (pièces coûteuses), conservation long terme (84 mois)."
+    },
+    {
+      "question": "Comment répondre client disant \"J'ai jamais eu de problèmes, pas besoin protection\" ?",
+      "options": ["Accepter refus", "Expliquer LOGIQUE ASSURANCE : protection = tranquillité AVANT problème (pas après). Hasards routiers = IMPRÉVUS par définition (nids-poule, débris, pierres). Coût 12$/mois Standard = minime vs 1 seul pare-brise 600$. Prévention > réaction. Un incident paie programme complet", "Insister lourdement", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à éduquer logique : protection = tranquillité avant problème (pas après), hasards = imprévus imprévisibles, coût 12$/mois minime vs 600$ pare-brise, prévention > réaction, 1 incident paie tout."
+    },
+    {
+      "question": "Comment gérer objection prix client budget serré (Standard 1026$ trop cher) ?",
+      "options": ["Réduire prix", "Proposer ALTERNATIVES : 1) Terme court 12 mois (770$ = 64$/mois test), 2) Financement dans prêt véhicule (1026$ ÷ 60 mois prêt = 17$/mois), 3) Démontrer ROI 1 incident (pare-brise 600$ = économie nette 426$ après 1 réclamation). Flexibilité options", "Abandonner", "Rabais"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à proposer alternatives : terme court 12 mois test (770$), financement prêt (17$/mois), démonstration ROI 1 incident (pare-brise paie 60% coût), flexibilité maximise accessibilité."
+    },
+    {
+      "question": "Un collègue dit à client \"Toutes réparations carrosserie couvertes illimité\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT DEVANT CLIENT : programme couvre bosses sans peinture ≤5 cm (250$ + 50$ × illimité) ET peinture+éraflures ≤30 cm (2000$ total cumul) PAS toutes réparations carrosserie. Accidents/collisions = EXCLUS (assurance principale). Transparence protège client déception + notre intégrité", "L'ignorer", "Après vente"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate devant client : bosses ≤5 cm (250$+50$ illimité) + peinture ≤30 cm (2000$ cumul) PAS toutes carrosserie, accidents exclus (assurance), transparence protège déception intégrité."
+    }
+  ]
+}
+

@@ -1,0 +1,176 @@
+{
+  "module": "avex",
+  "month": 3,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quels composants du Moteur (Composant 1) sont couverts dans AVEX ?",
+      "options": ["Seulement bloc", "Bloc-cylindres et TOUTES pièces internes lubrifiées: culasse, vilebrequin, pistons, bielles, arbres à cames, soupapes, pompe à huile, etc.", "Seulement culasse", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 1 (Moteur) couvre bloc-cylindres et TOUTES pièces internes lubrifiées: culasse, joints culasse, soupapes, vilebrequin, pistons, bielles, arbres à cames, pompe à huile, courroie/chaîne distribution, etc."
+    },
+    {
+      "question": "Comment expliquer la couverture Moteur (Composant 1) à un client non technique ?",
+      "options": ["C'est compliqué", "Expliquer simplement: couvre TOUT l'intérieur du moteur (bloc, pistons, vilebrequin, soupapes, etc.), protection complète cœur mécanique véhicule", "Ignorer détails", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à simplifier: Composant 1 = TOUT l'intérieur du moteur (éléments qui font tourner moteur), protection complète du cœur mécanique du véhicule."
+    },
+    {
+      "question": "Le Turbo/Surcompresseur (Composant 2) est-il couvert dans AVEX ?",
+      "options": ["Non, exclu", "OUI, TOUTES pièces internes OEM turbo/compresseur: boîtier, refroidisseur intermédiaire, soupapes dérivation, vanne purge, actuateur, joints", "Seulement boîtier", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 2 (Turbo/Surcompresseur) couvre TOUTES pièces internes OEM: boîtier (si endommagé par pièce interne), refroidisseur intermédiaire, soupapes, vanne purge, actuateur turbo, joints."
+    },
+    {
+      "question": "Comment expliquer la valeur de la couverture Turbo à un client avec véhicule turbo ?",
+      "options": ["Pas important", "Expliquer: turbo/compresseur = composant coûteux (2k$-5k$+ remplacement). Couverture AVEX incluse = protection investissement, tranquillité totale", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: turbo/compresseur = composant coûteux (2k$-5k$+), couverture INCLUSE AVEX = protection majeure véhicules turbo modernes."
+    },
+    {
+      "question": "La Transmission Automatique (Composant 3) est-elle couverte ?",
+      "options": ["Non", "OUI, boîtier et TOUTES pièces lubrifiées internes: arbre principal, bandes, boîtier soupapes, embrayages, convertisseur couple, solénoïdes, ECU transmission", "Seulement boîtier", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 3 (Transmission Auto) couvre boîtier et TOUTES pièces lubrifiées internes: arbre principal, bandes, boîtier soupapes, embrayages, convertisseur, solénoïdes, ECU, pompe, refroidisseur."
+    },
+    {
+      "question": "La Transmission Manuelle (Composant 4) est-elle couverte ?",
+      "options": ["Non", "OUI, boîtier et TOUTES pièces lubrifiées internes: arbre principal, engrenages, fourchettes, synchroniseurs, maître-cylindre, cylindre récepteur", "Seulement engrenages", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 4 (Transmission Manuelle) couvre boîtier et TOUTES pièces lubrifiées internes: arbre principal, engrenages, fourchettes, synchroniseurs, maître-cylindre, cylindre récepteur. NOTE: embrayage NON couvert."
+    },
+    {
+      "question": "L'embrayage est-il couvert dans la Transmission Manuelle ?",
+      "options": ["Oui, couvert", "NON, composants ensemble d'embrayage (pédale, disque, plaque pression, volant) NON couverts (exclusion explicite section 2.4)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT: Les composants de l'ensemble d'embrayage (pédale, disque, plaque pression, volant d'inertie) ne sont PAS couverts dans le programme AVEX (exclusion explicite Composant 4)."
+    },
+    {
+      "question": "Comment expliquer l'exclusion de l'embrayage à un client avec transmission manuelle ?",
+      "options": ["Ignorer", "Expliquer transparence: embrayage = pièce d'usure normale (durée vie variable selon conduite), exclu programme. Transmission interne COUVERTE (engrenages, arbres, etc.)", "Mentir", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence: embrayage = pièce d'usure variable (selon conduite), exclu. MAIS transmission interne complète COUVERTE (engrenages, arbres, synchroniseurs, etc.)."
+    },
+    {
+      "question": "Le Différentiel et Groupe motopropulseur (Composant 5) est-il couvert ?",
+      "options": ["Non", "OUI, boîtier différentiel/entraînement final et TOUTES pièces lubrifiées internes: paliers, pignons, engrenages, chaîne, arbre transmission, joints homocinétiques, arbres essieux", "Seulement boîtier", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 5 (Différentiel) couvre boîtier et TOUTES pièces lubrifiées internes: paliers, pignons, engrenages, chaîne, arbre transmission, cardan, visco coupleur, joints homocinétiques, arbres essieux."
+    },
+    {
+      "question": "La Boîte de transfert (Composant 6) est-elle couverte ?",
+      "options": ["Non", "OUI, INCLUS: ensemble et composants internes, actionneur boîtier transfert, ensemble blocage moyeu (4x4), joints, anneaux, clips", "Optionnelle", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 6 (Boîte de transfert) est INCLUS sans frais: ensemble et composants internes, actionneur, ensemble blocage moyeu (4x4), tous joints, anneaux, clips."
+    },
+    {
+      "question": "Comment valoriser la couverture Boîte de transfert pour client avec véhicule 4x4 ?",
+      "options": ["Pas important", "Expliquer: boîte transfert 4x4 = composant coûteux (3k$-6k$ remplacement). Couverture INCLUSE AVEX = protection essentielle véhicules traction intégrale", "C'est standard", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: boîte transfert = composant coûteux véhicules 4x4 (3k$-6k$+), couverture INCLUSE = protection majeure traction intégrale."
+    },
+    {
+      "question": "La Direction (Composant 7) est-elle couverte ?",
+      "options": ["Non", "OUI, boîtier direction et TOUTES pièces lubrifiées internes: axes, fusée, capteur position, mécanisme inclinaison, bras, biellette, crémaillère, pompe servodirection", "Seulement pompe", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 7 (Direction) couvre boîtier et TOUTES pièces lubrifiées internes: axes, fusée, capteur, mécanisme inclinaison, bras, biellette, crémaillère, pignon, pompe servodirection, réservoir."
+    },
+    {
+      "question": "Les Freins (Composant 8) sont-ils couverts dans AVEX ?",
+      "options": ["Non", "OUI, maître-cylindre, pompe freinage, servofrein, soupapes, unité contrôle hydraulique, module électronique, accumulateur, cylindres roue, étriers", "Seulement étriers", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 8 (Freins) couvre: maître-cylindre, pompe, servofrein, vannes, unité contrôle hydraulique, soupape modulatrice, module électronique, accumulateur, cylindres roue, étriers, joints."
+    },
+    {
+      "question": "Les plaquettes et disques de frein sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, plaquettes, disques, tambours et sabots EXCLUS (pièces d'usure normale, section 3.1)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT: Les plaquettes de frein, disques de frein, tambours et sabots de frein sont EXCLUS (considérés pièces d'usure normale requérant remplacement périodique, section 3.1)."
+    },
+    {
+      "question": "Comment expliquer la différence entre système freins couvert et plaquettes/disques exclus ?",
+      "options": ["C'est compliqué", "Expliquer: système freinage hydraulique COUVERT (maître-cylindre, étriers, ABS). Plaquettes/disques = usure normale prévisible (entretien régulier)", "Tout est exclu", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté: système hydraulique/électronique freinage COUVERT (composants coûteux). Plaquettes/disques = usure normale prévisible, coûts modérés entretien régulier."
+    },
+    {
+      "question": "Les Freins A+ (Composant 9) sont-ils couverts ?",
+      "options": ["Non", "OUI, INCLUS: pompe ABS, module ABS, capteurs roues, contrôle traction, réservoir liquide, câble stationnement, contrôle/moteur stationnement, régulateurs, conduites métal", "Optionnel 300$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 9 (Freins A+) est INCLUS: pompe ABS, module ABS, capteurs roues, contrôle traction, réservoir, câble/contrôle/moteur stationnement, régulateurs, conduites métal."
+    },
+    {
+      "question": "La Suspension (Composant 10) est-elle couverte ?",
+      "options": ["Non", "OUI, barre stabilisatrice, bras suspension, rotules, ressort hélicoïdal/à lames, barre torsion, jambe suspension, axe roue, bras arrière, moyeu, roulements roue", "Optionnelle", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 10 (Suspension) couvre: barre stabilisatrice, bras, rotules, ressort hélicoïdal/lames, barre torsion, jambe, axe roue, support, bras arrière, moyeu, roulements roue."
+    },
+    {
+      "question": "La suspension pneumatique/adaptative est-elle couverte dans le Composant 10 ?",
+      "options": ["Oui, incluse", "NON, suspension standard SEULEMENT. Suspension pneumatique/adaptative requiert option No. 11 Suspension A+ (300$)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 10 couvre suspension STANDARD seulement. Suspension pneumatique/adaptative/active/cinétique requiert option No. 11 Suspension A+ (300$) pour compresseurs, solénoïdes, modules."
+    },
+    {
+      "question": "Comment expliquer la différence Composant 10 vs Option 11 Suspension A+ ?",
+      "options": ["C'est pareil", "Expliquer: Composant 10 = suspension mécanique standard INCLUSE (ressorts, amortisseurs). Option 11 (300$) = suspension électronique/pneumatique (compresseurs, capteurs, modules)", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté: Composant 10 = suspension mécanique standard INCLUSE. Option 11 (300$) = suspension électronique/pneumatique (systèmes complexes coûteux)."
+    },
+    {
+      "question": "Le Chauffage et climatisation (Composant 12) est-il couvert ?",
+      "options": ["Non", "OUI, TOUTES pièces internes OEM: compresseur A/C, condenseur, évaporateur, accumulateur, déshydrateur, moteur ventilateur, résistance, actionneur recirculation, module contrôle", "Seulement compresseur", "Optionnel"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 12 (Chauffage/Climatisation) couvre TOUTES pièces OEM: compresseur A/C, poulie, palier, condenseur, ventilateur, déshydrateur, évaporateur, soupape expansion, moteur ventilateur, résistance, actionneur, module."
+    },
+    {
+      "question": "Le Système de refroidissement (Composant 13) est-il couvert ?",
+      "options": ["Non", "OUI, pompe à eau, boîtier, poulie, courroie, tendeur, thermostat, ventilateur, relais, capteur température, réservoir, refroidisseurs huile, radiateur chauffage/moteur", "Seulement pompe", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 13 (Refroidissement) couvre: pompe à eau, boîtier, poulie, courroie, tendeur, thermostat, ventilateur, relais, capteur, réservoir, refroidisseurs huile, radiateur chauffage/moteur (sauf corrosion)."
+    },
+    {
+      "question": "Le radiateur est-il couvert si endommagé par la corrosion ?",
+      "options": ["Oui, couvert", "NON, radiateur exclu si endommagé par corrosion (exclusion explicite Composant 13)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT: Le radiateur est couvert SAUF s'il est endommagé par la corrosion (exclusion explicite Composant 13). Dommages corrosion = exclusion section 4.2."
+    },
+    {
+      "question": "Le Système d'alimentation (Composant 14) est-il couvert ?",
+      "options": ["Non", "OUI, pompe à carburant, résistance pompe, pompe haute pression, module contrôle injection, injecteurs, régulateur pression, tuyaux/raccords métal", "Seulement pompe", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 14 (Système alimentation) couvre: pompe à carburant, résistance, pompe haute pression, module contrôle injection, injecteurs, régulateur pression, tuyaux/raccords métal."
+    },
+    {
+      "question": "Le Système d'alimentation A+ (Composant 15) est-il couvert ?",
+      "options": ["Non", "OUI, INCLUS: papillon corps, capteur positionnement, moteur contrôle air ralenti, soupape contrôle carburant, carburateur, rail, capteur débit air, bobines allumage", "Optionnel 200$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 15 (Alimentation A+) est INCLUS: papillon, capteur position, moteur IAC, soupape contrôle, carburateur, rail, capteur débit, bobines, câbles, distributeur, module, capteurs, pédale accélérateur."
+    },
+    {
+      "question": "L'Électricité (Composant 16) est-elle couverte ?",
+      "options": ["Non", "OUI, alternateur, capteur arbre à cames/vilebrequin, solénoïde hayon électrique, bouton démarrage, moteur contrôle ralenti, ensemble cylindre serrure, capteur détonation/MAP, démarreur, capteur TPMS, régulateur voltage", "Seulement alternateur", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le Composant 16 (Électricité) couvre: alternateur, capteurs (cames, vilebrequin, détonation, MAP, TPMS), solénoïde hayon, bouton démarrage, moteur ralenti, cylindre serrure, démarreur, solénoïde, régulateur."
+    },
+    {
+      "question": "La batterie est-elle couverte dans le Composant 16 ?",
+      "options": ["Oui, couverte", "NON, batteries, câbles et câblage EXCLUS (section 3.2)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT: Les batteries, câbles de batterie et câblage sont EXCLUS du programme AVEX (considérés pièces d'entretien, section 3.2)."
+    },
+    {
+      "question": "Comment présenter les 17 composants couverts de façon claire à un client ?",
+      "options": ["Lire vite", "Regrouper par systèmes: 1) Mécanique (moteur, turbo, transmission, différentiel), 2) Châssis (direction, freins, suspension), 3) Confort (A/C, refroidissement, alimentation), 4) Électronique (électricité, contrôles, haute-tech)", "C'est compliqué", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à structurer: 4 groupes logiques (Mécanique, Châssis, Confort, Électronique), chaque composant expliqué simplement, couverture complète véhicule moderne."
+    },
+    {
+      "question": "Un collègue minimise la couverture AVEX en disant \"juste 17 composants\". Comment réagissez-vous ?",
+      "options": ["Être d'accord", "Corriger professionnellement: 17 composants = TOUS systèmes majeurs véhicule (moteur à électronique), couverture exceptionnelle, valeur énorme, présenter positivement", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction: 17 composants = couverture complète TOUS systèmes majeurs véhicule moderne, protection exceptionnelle, présenter valeur réelle positivement."
+    }
+  ]
+}
+

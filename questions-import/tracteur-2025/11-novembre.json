@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelles sont les 2 grandes catégories d'exclusions du programme ?",
+      "options": ["Une seule catégorie", "2 catégories: Véhicules non admissibles (section 4.A) et Conditions d'exclusion générales (section 4.B)", "Trois catégories", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les exclusions sont divisées en 2 grandes catégories : A) Véhicules non admissibles (types de véhicules exclus) et B) Conditions d'exclusion générales (situations/causes exclusions) (section 4)."
+    },
+    {
+      "question": "Comment présenter les exclusions de façon positive et transparente à un client ?",
+      "options": ["Les cacher", "Expliquer: 5 composants critiques couverts (moteur, transmission, etc.), exclusions claires pour transparence (usure normale, entretien négligé), processus juste", "Les minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence positive : mettre accent sur ce qui EST couvert (5 composants), expliquer exclusions logiques (usure normale, négligence), processus équitable."
+    },
+    {
+      "question": "Les pneus, freins, embrayages et batteries sont-ils couverts ?",
+      "options": ["Oui, tous couverts", "Non, pneus, freins, embrayages et batteries sont exclus (considérés usure normale)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Les pneus, freins, embrayages et batteries sont exclus de la couverture car considérés comme éléments d'usure normale nécessitant remplacement périodique (section 4.B)."
+    },
+    {
+      "question": "Un client demande si les pneus sont couverts. Comment expliquer l'exclusion de façon professionnelle ?",
+      "options": ["Dire non seulement", "Expliquer: pneus exclus (usure normale), garantie couvre composants mécaniques critiques (moteur, transmission, électrique, direction, différentiel)", "Mentir", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication claire : pneus = usure normale prévisible, garantie concentrée sur composants mécaniques critiques à haute valeur réparation."
+    },
+    {
+      "question": "Les dommages causés par manque d'entretien sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages causés par entretien inadéquat, manque d'entretien ou négligence d'entretien exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages causés par entretien inadéquat, manque d'entretien ou négligence dans l'entretien du véhicule sont exclus de la couverture (section 4.B)."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien régulier à un client ?",
+      "options": ["Pas important", "Expliquer: entretien régulier = condition couverture (section 5.1), négligence entretien = exclusion (section 4.B). Administrateur peut demander preuves entretien", "C'est automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer lien clair : entretien régulier = condition admissibilité (section 5.1), négligence = exclusion (4.B), preuves peuvent être demandées (5.7)."
+    },
+    {
+      "question": "Les dommages causés par conduite abusive sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages résultant de conduite abusive, négligente ou imprudente exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages résultant de conduite abusive, négligente ou imprudente du véhicule sont exclus de la couverture (section 4.B)."
+    },
+    {
+      "question": "Un client demande ce qui constitue une \"conduite abusive\". Comment répondre professionnellement ?",
+      "options": ["C'est vague", "Expliquer exemples: surcharge régulière, utilisation non conforme fabricant, conditions extrêmes évitables. Suivre recommandations fabricant = protection garantie", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à donner exemples concrets : surcharge, usage non conforme spécifications, et souligner importance suivre recommandations fabricant pour protection garantie."
+    },
+    {
+      "question": "Les dommages causés par accidents sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages résultant d'accident, incendie, vol, vandalisme ou catastrophe naturelle exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages résultant d'accident, incendie, vol, vandalisme ou catastrophe naturelle sont exclus de la couverture (relevant de l'assurance véhicule) (section 4.B)."
+    },
+    {
+      "question": "Comment expliquer la différence entre garantie mécanique et assurance véhicule ?",
+      "options": ["C'est pareil", "Expliquer: garantie mécanique = pannes mécaniques composants couverts. Assurance véhicule = accidents, vol, vandalisme, catastrophes. 2 protections complémentaires", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : garantie mécanique = pannes mécaniques internes, assurance = événements externes (accidents, vol). Deux protections distinctes complémentaires."
+    },
+    {
+      "question": "Les dommages causés par modifications non autorisées sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages résultant de modifications, altérations ou réparations non autorisées exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages résultant de modifications, altérations ou réparations non autorisées par le fabricant ou l'Administrateur sont exclus (section 4.B)."
+    },
+    {
+      "question": "Un client veut installer un système hydraulique modifié. Quel conseil donner ?",
+      "options": ["Accepter automatiquement", "Expliquer: modifications non autorisées = exclusion couverture (section 4.B). Recommander contacter Distributeur AVANT modification pour demander exception (section 10.g)", "Refuser directement", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de prévenir : modifications non autorisées = exclusion. Recommander contacter Distributeur AVANT pour demander exception à l'Administrateur (section 10.g)."
+    },
+    {
+      "question": "Les dommages causés par liquides/lubrifiants contaminés sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages causés par utilisation liquides/lubrifiants contaminés ou non conformes exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages causés par l'utilisation de liquides ou lubrifiants contaminés ou non conformes aux spécifications du fabricant sont exclus (section 4.B)."
+    },
+    {
+      "question": "Comment expliquer l'importance d'utiliser les liquides recommandés par le fabricant ?",
+      "options": ["Pas important", "Expliquer: liquides conformes spécifications fabricant = condition couverture. Liquides non conformes/contaminés = exclusion (section 4.B), peut causer dommages majeurs", "C'est automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer : liquides conformes = protection garantie, liquides non conformes = exclusion + risques dommages majeurs moteur/transmission."
+    },
+    {
+      "question": "Les dommages causés par surchauffe due à manque liquide de refroidissement sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages résultant de surchauffe due à manque de liquide de refroidissement exclus (négligence entretien)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages résultant de surchauffe due à un manque de liquide de refroidissement sont exclus, car considérés comme résultant de négligence dans l'entretien (section 4.B)."
+    },
+    {
+      "question": "Un client a un doute sur le niveau de liquide de refroidissement. Quel conseil professionnel donner ?",
+      "options": ["Attendre", "Conseiller vérification immédiate: manque liquide refroidissement = risque surchauffe = dommages majeurs moteur NON couverts (exclusion section 4.B)", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil préventif immédiat : vérification urgente recommandée, surchauffe par manque liquide = exclusion + risques dommages moteur majeurs très coûteux."
+    },
+    {
+      "question": "Les dommages causés par utilisation carburant incorrect sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages causés par utilisation carburant incorrect ou contaminé exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages causés par l'utilisation d'un carburant incorrect ou contaminé sont exclus de la couverture (section 4.B)."
+    },
+    {
+      "question": "Comment expliquer les exclusions liées à l'entretien de façon qui encourage la responsabilité client ?",
+      "options": ["Minimiser", "Expliquer positivement: entretien régulier = protection investissement + garantie active. Négligence entretien = risques doubles (dommages + exclusion). Programme récompense bon entretien", "Menacer", "Ignorer"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à cadrer positivement : bon entretien = double protection (véhicule + garantie), programme récompense clients responsables, approche gagnant-gagnant."
+    },
+    {
+      "question": "Les frais de diagnostic sont-ils couverts ?",
+      "options": ["Oui, toujours", "Frais diagnostic couverts SEULEMENT si réparation approuvée et réalisée. Option Remboursement vérification (150$) peut couvrir ces frais", "Non, jamais", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les frais de diagnostic/vérification sont couverts si la réparation est approuvée et réalisée. L'option Remboursement vérification (150$) peut rembourser ces frais (sections 4.B et Options)."
+    },
+    {
+      "question": "Comment présenter l'option Remboursement vérification (150$) en lien avec les exclusions ?",
+      "options": ["Pas utile", "Expliquer: frais diagnostic standard exclus SAUF si réparation approuvée. Option 150$ rembourse ces frais quand réparation approuvée/réalisée, élimine souci coût vérification", "C'est obligatoire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer valeur : option 150$ élimine souci coût vérification en remboursant frais diagnostic quand réparation approuvée/réalisée, tranquillité totale."
+    },
+    {
+      "question": "Les dommages causés par utilisation commerciale non autorisée sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages résultant d'utilisation commerciale non autorisée exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages résultant d'une utilisation commerciale non autorisée du véhicule sont exclus de la couverture (section 4.B)."
+    },
+    {
+      "question": "Un client avec équipement agricole veut l'utiliser pour des travaux de construction commerciale. Quel conseil ?",
+      "options": ["Accepter", "Expliquer: usage doit correspondre à type véhicule et programme (ATC-AU = agriculture). Usage commercial non prévu = exclusion possible. Vérifier admissibilité avant", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : usage doit correspondre au programme (AU = agriculture, CE = construction). Usage non conforme = risque exclusion, vérifier avant."
+    },
+    {
+      "question": "Les pièces d'usure normale sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, pièces d'usure normale (filtres, courroies, bougies, joints, etc.) exclus sauf si endommagées par panne composant couvert", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces d'usure normale (filtres, courroies, bougies, joints, etc.) sont exclus SAUF si endommagées directement par une panne d'un composant couvert (section 4.B)."
+    },
+    {
+      "question": "Comment expliquer l'exclusion des pièces d'usure normale tout en restant positif ?",
+      "options": ["C'est négatif", "Expliquer: garantie cible composants mécaniques critiques haute valeur (moteur, transmission = 5k$-20k$). Pièces usure = coût modéré prévisible, entretien régulier standard", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer focus : garantie protège contre réparations majeures coûteuses (5k$-20k$+), pièces usure = coûts modérés prévisibles, entretien normal."
+    },
+    {
+      "question": "Les dommages esthétiques sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages esthétiques (peinture, enjoliveurs, moulures, etc.) exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages esthétiques ou cosmétiques (peinture, enjoliveurs, moulures, garnitures, etc.) sont exclus de la couverture (section 4.B)."
+    },
+    {
+      "question": "Comment expliquer les 5 options disponibles en relation avec les exclusions ?",
+      "options": ["Pas de lien", "Expliquer: options éliminent limitations/exclusions: HP Limitation (extension puissance), 2x heures (limitation heures), Pas franchise, Remboursement vérif (frais diagnostic), Aucune limite/visite", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que les 5 options permettent d'éliminer certaines limitations : HP, heures, franchise, frais diagnostic, limite visite = personnalisation complète."
+    },
+    {
+      "question": "Les dommages causés par utilisation hors garantie fabricant sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages causés par utilisation hors des paramètres de la garantie du fabricant exclus", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les dommages causés par une utilisation du véhicule hors des paramètres de la garantie du fabricant d'origine sont exclus (section 4.B)."
+    },
+    {
+      "question": "Comment maximiser la compréhension des exclusions tout en maintenant enthousiasme du client ?",
+      "options": ["Cacher exclusions", "1) Commencer par ce qui EST couvert (5 composants), 2) Expliquer exclusions logiques (usure, négligence), 3) Souligner options personnalisation, 4) Mettre accent protection valeur majeure", "Minimiser détails", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche équilibrée : commencer positif (couverture), expliquer exclusions logiques transparentes, présenter options, conclure sur protection valeur investissement majeur."
+    },
+    {
+      "question": "Les réparations effectuées sans autorisation préalable sont-elles remboursées ?",
+      "options": ["Oui, toujours", "Non, réparations effectuées sans autorisation écrite préalable de l'Administrateur exclus (sauf urgence hors heures section 7)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les réparations effectuées sans autorisation écrite préalable de l'Administrateur sont exclus, SAUF en cas d'urgence hors heures (section 7 prévoit envoi factures) (sections 4.B et 7)."
+    },
+    {
+      "question": "Un collègue dit à un client que \"tout est couvert, pas de souci\". Comment réagissez-vous ?",
+      "options": ["L'encourager", "Intervenir immédiatement: corriger avec transparence (5 composants couverts, exclusions claires), protéger client de fausses attentes, préserver réputation entreprise", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention immédiate : corriger fausses promesses, expliquer couverture réelle (5 composants) et exclusions transparentes, protéger client et réputation."
+    }
+  ]
+}
+

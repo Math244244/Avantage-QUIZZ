@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 6,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Les disques de frein sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, considérés pièces d'usure", "Oui, avec option", "Seulement si bris moteur"],
+      "correctAnswer": 1,
+      "explanation": "Disques, tambours, plaquettes, garnitures, patins et chaussons sont exclus car considérés pièces d'usure normales (section 4.8)."
+    },
+    {
+      "question": "L'étrier de frein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 10 - Freinage", "Oui, section 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre étriers, pistons d'étrier, cylindre maître, servo-frein et assemblage de pédale de frein."
+    },
+    {
+      "question": "Un client demande garantie pour un véhicule d'exposition. Est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules d'exposition/piste exclus", "Oui, avec supplément 300$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule ayant servi à l'exposition, compétition, véhicule de piste/presse est exclu du programme (section 9.6)."
+    },
+    {
+      "question": "Le cylindre maître de frein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 10 - Freinage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre cylindre maître de frein, servo-frein et pompe de pression du système ABS."
+    },
+    {
+      "question": "Comment présenter l'option Protection de garantie à un client qui envisage revendre ?",
+      "options": ["Pas utile", "Crédit jusqu'à 2000$ (750$ franchise + 1250$ nouvelle garantie) si perte totale/vol/vente", "C'est obligatoire", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "L'option Protection de garantie (300$) offre crédit jusqu'à 2000$ en cas de perte totale/vol/vente, excellent pour clients mobiles."
+    },
+    {
+      "question": "Le servo-frein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 10 - Freinage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre servo-frein (booster), cylindre maître et régulateur de pression de frein."
+    },
+    {
+      "question": "Les plaquettes de frein sont-elles couvertes ?",
+      "options": ["Oui, section 10", "Non, pièces d'usure normales exclues", "Oui, avec option", "Seulement si bris majeur"],
+      "correctAnswer": 1,
+      "explanation": "Disques, tambours, plaquettes, garnitures, patins et chaussons sont exclus car considérés pièces d'usure normales (section 4.8)."
+    },
+    {
+      "question": "La pompe de pression ABS est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 10 - Freinage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre pompe de pression du système ABS, accumulateur et module de commande ABS."
+    },
+    {
+      "question": "L'Administrateur peut-il utiliser pièces usagées/remises à neuf ?",
+      "options": ["Non, seulement neuves", "Oui, se réserve le droit (OEM uniquement)", "Seulement avec accord", "Non, jamais"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur peut choisir de réparer ou remplacer toute pièce avec pièces usagées/remises à neuf (OEM uniquement) à sa seule discrétion (section 5.9)."
+    },
+    {
+      "question": "Le module de commande ABS est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 10 - Freinage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre module de commande ABS, capteurs de vitesse de roue et capteurs ABS."
+    },
+    {
+      "question": "Un client demande si les dommages dus à un accident sont couverts. Que répondez-vous ?",
+      "options": ["Oui, tous", "Non, dommages causés par collision/accident/grêle/feu/vol exclus", "Oui, avec franchise double", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par collision, accidents, grêle, feu, vol, vandalisme ou dommages intentionnels sont exclus (section 4.2)."
+    },
+    {
+      "question": "Le régulateur de pression de frein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 10 - Freinage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre régulateur de pression de frein, accumulateur et valve proportionnelle."
+    },
+    {
+      "question": "Comment gérer un client qui veut acheter une garantie pour un véhicule avec 11 000 km ?",
+      "options": ["Accepter automatiquement", "Expliquer que max 10 000 km/200h avec option Usagé sans garantie", "Refuser directement", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "L'option Usagé sans garantie (200$) exige véhicule moins de 10 000 km/200h pour VTT/Côte-à-Côte/Motoneiges. Au-delà, non admissible."
+    },
+    {
+      "question": "L'accumulateur de frein est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 10 - Freinage", "Oui, section 9", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre accumulateur de frein, étriers, pistons d'étrier et régulateur de pression."
+    },
+    {
+      "question": "Un véhicule avec usage taxi/livraison est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules usage commercial/taxi/livraison exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule utilisé pour usage commercial, taxi, limousine, livraison, ambulance, location <24 mois est exclu (section 9.3)."
+    },
+    {
+      "question": "Les capteurs de vitesse de roue sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 10 - Freinage", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 - Freinage couvre capteurs de vitesse de roue, capteurs ABS et module de commande ABS."
+    },
+    {
+      "question": "Les dommages dus à un mauvais entretien sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, dommages directs/indirects dus négligence/entretien inadéquat exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects/accessoires dus à négligence, manque d'entretien, mauvaise réparation sont exclus (section 4.4)."
+    },
+    {
+      "question": "Le compresseur de climatisation est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 11 - Climatisation", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre compresseur, embrayage de compresseur, accumulateur et condenseur."
+    },
+    {
+      "question": "Combien coûte l'option Maximum jusqu'à la valeur marchande pour Motomarines & Bateaux ?",
+      "options": ["300$", "400$", "500$", "600$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Maximum jusqu'à la valeur marchande coûte 500$ pour Motomarines & Bateaux."
+    },
+    {
+      "question": "Le condenseur de climatisation est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 11 - Climatisation", "Oui, section 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre condenseur, évaporateur, vanne d'expansion et déshydrateur."
+    },
+    {
+      "question": "Un client veut annuler après 45 jours avec 3000 km. Peut-il ?",
+      "options": ["Oui, toujours", "Non, après 10 jours annulation possible uniquement perte totale/vol (sauf Protection garantie)", "Oui, avec frais 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Après 10 jours, annulation possible uniquement si perte totale/vol, SAUF si Protection de garantie achetée (section 10.2.b et option 27)."
+    },
+    {
+      "question": "L'évaporateur de climatisation est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 11 - Climatisation", "Oui, section 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre évaporateur, compresseur, vanne d'expansion et tous les interrupteurs."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien à un client ?",
+      "options": ["Ce n'est pas important", "Entretien recommandé fabricant obligatoire, Documentation vérifiable exigible, sinon réclamation refusée", "Optionnel", "Seulement pour neufs"],
+      "correctAnswer": 1,
+      "explanation": "Entretien recommandé fabricant est obligatoire. Documentation vérifiable peut être demandée à tout moment. Non-respect = refus réclamation (section 5.3 et 5.5)."
+    },
+    {
+      "question": "Le déshydrateur de climatisation est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 11 - Climatisation", "Oui, section 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre déshydrateur, accumulateur, vanne d'expansion et régulateur de pression."
+    },
+    {
+      "question": "Les dommages dus à une catastrophe naturelle sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages dus inondation/ouragan/actes de Dieu exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par inondation, ouragan, tremblement de terre ou tout autre acte de Dieu sont exclus (section 4.2)."
+    },
+    {
+      "question": "La vanne d'expansion de climatisation est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 11 - Climatisation", "Oui, section 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre vanne d'expansion, tube d'orifice, déshydrateur et régulateur de pression."
+    },
+    {
+      "question": "Un client demande si les frais de diagnostic sans réparation sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, temps consacré au diagnostic/inspection sans réparation exclu", "Oui, partiellement", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Temps consacré au diagnostic, inspection ou dépose d'un assemblage sans réparation de pièces couvertes est exclu (section 4.5)."
+    },
+    {
+      "question": "Le tube d'orifice de climatisation est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 11 - Climatisation", "Oui, section 12", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre tube d'orifice, vanne d'expansion, régulateur de pression et module de commande."
+    },
+    {
+      "question": "Un collègue réussit une vente avec des fausses promesses. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Signaler au gérant ou discuter avec le collègue de l'importance d'honnêteté", "L'ignorer", "L'encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de signaler pratiques trompeuses pour protéger les clients et réputation de l'entreprise."
+    },
+    {
+      "question": "Le régulateur de pression de climatisation est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 11 - Climatisation", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 11 - Climatisation couvre régulateur de pression, tube d'orifice, module de commande et tous les interrupteurs."
+    }
+  ]
+}
+

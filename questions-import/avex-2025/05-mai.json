@@ -1,0 +1,188 @@
+{
+  "module": "avex",
+  "month": 5,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelles sont les 3 grandes catégories d'exclusions dans AVEX ?",
+      "options": ["Une seule", "3 catégories: 1) Exclusions générales pièces entretien (section 3.1-3.2), 2) Pièces carrosserie/esthétiques (3.3-3.4), 3) Coûts environnementaux (3.5)", "Deux catégories", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les exclusions AVEX sont divisées en 3 catégories: 1) Pièces d'entretien recommandées fabricant, 2) Cadre/carrosserie/pièces esthétiques, 3) Coûts environnementaux/traitement déchets (section 3)."
+    },
+    {
+      "question": "Comment présenter les exclusions AVEX de façon transparente et positive ?",
+      "options": ["Les cacher", "Expliquer: 17 composants majeurs couverts (moteur à électronique), exclusions logiques (entretien normal, esthétique, usure prévisible), transparence totale, processus équitable", "Les minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence positive: accent sur 17 composants couverts (exceptionnels), exclusions logiques clairement expliquées (entretien, usure, esthétique), processus transparent équitable."
+    },
+    {
+      "question": "Les pièces d'entretien recommandées par le fabricant sont-elles couvertes ?",
+      "options": ["Oui, toutes", "NON, EXCLUS: réglages, ajustements, fuites liquide/air (sauf majeures), alignements roues, équilibrage, huiles, liquides, réfrigérants, additifs, fréon, carburant (section 3.1)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 3.1: Pièces d'entretien recommandées fabricant EXCLUS: réglages, ajustements, fuites (sueur/humidité mineure), alignements, équilibrage, huiles, liquides, réfrigérants, additifs, fréon, carburant."
+    },
+    {
+      "question": "Comment expliquer l'exclusion des pièces d'entretien de façon professionnelle ?",
+      "options": ["Ignorer", "Expliquer: pièces entretien = usure normale prévisible (huiles, filtres), coûts modérés réguliers. AVEX concentré sur composants majeurs coûteux (moteur, transmission 5k$-15k$+)", "C'est négatif", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique: entretien normal = coûts modérés prévisibles, garantie concentrée sur réparations majeures imprévues coûteuses (moteur, transmission, électronique)."
+    },
+    {
+      "question": "Les plaquettes de frein, disques, tambours et sabots sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, EXCLUS avec batteries, câbles, fusibles, démarreur distance, bougies, balais essuie-glace, ampoules, phares, ballast, mises à jour logicielles, antennes, haut-parleurs, tubes, courroies non listées, équipement atelier (section 3.2)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 3.2 EXCLUS: plaquettes, disques, tambours, sabots frein, batteries, câbles, fusibles, bougies préchauffage/allumage, balais essuie-glace, ampoules, phares, ballast, logiciels, antennes, haut-parleurs, tubes, courroies, outils atelier."
+    },
+    {
+      "question": "Comment expliquer l'exclusion plaquettes/disques tout en valorisant système freins couvert ?",
+      "options": ["Tout est exclu", "Expliquer: système freinage hydraulique/électronique COUVERT (maître-cylindre, ABS, étriers 500$-3000$+). Plaquettes/disques = usure normale (200$-500$ entretien régulier)", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige équilibre: système freinage complet COUVERT (composants coûteux 500$-3000$+), plaquettes/disques = usure prévisible coûts modérés entretien régulier."
+    },
+    {
+      "question": "Le cadre, la carrosserie et les pièces du véhicule sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, EXCLUS: volant, rétroviseurs, fenêtres, vitre, sièges et cadres siège, orifices, attaches, charnières, loquet, verrou, poignées portes, pneus, soupapes pneus, roues, jantes, enjoliveurs (section 3.3)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 3.3 EXCLUS: cadre, carrosserie, pièces véhicule (volant, miroirs, fenêtres, vitre, sièges/cadres, orifices, attaches, charnières, loquets, verrous, poignées), pneus, soupapes, roues, jantes, enjoliveurs."
+    },
+    {
+      "question": "Toutes les pièces esthétiques sont-elles exclues ?",
+      "options": ["Non, couvertes", "OUI, EXCLUS: adhésifs, moulures, chrome, garnitures, ornements, tissus, peinture, panneaux, revêtement caoutchouc, tapis, moulures étanchéité, autocollants, plastiques (section 3.4)", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 3.4: TOUTES pièces esthétiques EXCLUS: adhésifs, moulures, chrome, garnitures, ornements, tissus, peinture, panneaux, revêtement caoutchouc, tapis, moulures étanchéité, autocollants, plastiques."
+    },
+    {
+      "question": "Les coûts environnementaux et de traitement des déchets sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, EXCLUS (section 3.5) SAUF Option No. 28 Couverture complémentaire (200$) qui couvre ces coûts liés à réparation autorisée", "Partiellement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Section 3.5: Coûts environnementaux et traitement déchets EXCLUS. EXCEPTION: Option No. 28 Couverture complémentaire (200$) couvre ces coûts nécessaires à réparation autorisée."
+    },
+    {
+      "question": "Comment justifier l'Option Couverture complémentaire (200$) en lien avec les exclusions ?",
+      "options": ["Pas utile", "Expliquer: Option 200$ élimine TOUS coûts connexes réparation (huiles, liquides, alignement, frais environnementaux). Tranquillité totale, aucune surprise facture", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser: Option 200$ couvre TOUT nécessaire réparation (huiles, liquides, alignement, frais environnementaux exclus section 3), élimine surprises facture."
+    },
+    {
+      "question": "Les réparations de composants endommagés par feu, eau, neige sont-elles couvertes ?",
+      "options": ["Oui, couvertes", "NON, EXCLUS: dommages par feu, eau, infiltration eau, neige, glace, vent ou autre acte nature (section 4.1 - relevant assurance véhicule)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.1 EXCLUS: Réparation composants endommagés par feu, eau, infiltration eau, neige, glace, vent ou tout autre acte de la nature (relevant de l'assurance véhicule)."
+    },
+    {
+      "question": "Comment expliquer la différence entre garantie mécanique AVEX et assurance véhicule ?",
+      "options": ["C'est pareil", "Expliquer: AVEX = pannes mécaniques/électroniques (17 composants). Assurance = événements externes (accidents, feu, eau, vol, vandalisme, nature). Deux protections COMPLÉMENTAIRES distinctes", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification: AVEX = pannes mécaniques/électroniques internes, Assurance = événements externes (accidents, actes nature, vol). Deux protections distinctes complémentaires essentielles."
+    },
+    {
+      "question": "Les dommages causés par friction, usure, carbone, corrosion sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, EXCLUS: dommages par friction, usure, accumulation carbone, corrosion (câbles/connecteurs), rouille, contamination, manque lubrifiants, qualité lubrifiants, pré-allumage, surchauffe moteur (section 4.2)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.2 EXCLUS: Dommages par friction, usure, accumulation carbone, corrosion (incluant câbles/connecteurs), rouille, contamination, manque lubrifiants, qualité lubrifiants, pré-allumage moteur, surchauffe moteur."
+    },
+    {
+      "question": "Comment expliquer l'exclusion dommages par surchauffe moteur ?",
+      "options": ["Ignorer", "Expliquer: surchauffe moteur souvent due négligence (manque liquide refroidissement, entretien inadéquat). Responsabilité propriétaire surveiller indicateurs, entretien régulier = prévention", "C'est injuste", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer responsabilité: surchauffe souvent évitable (surveillance indicateurs, entretien liquide refroidissement), exclusion incite entretien préventif responsable."
+    },
+    {
+      "question": "Un composant couvert endommagé par un composant non couvert est-il réparé ?",
+      "options": ["Oui, toujours", "NON, EXCLUS: réparation composant normalement couvert mais endommagé par composant non couvert (mécanique, électrique ou esthétique) (section 4.3)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.3 EXCLUS: Réparation de tout composant normalement couvert mais qui a été endommagé par un composant non couvert (qu'il soit mécanique, électrique ou esthétique)."
+    },
+    {
+      "question": "Les dommages causés par accident, collision, abus, manque entretien sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, EXCLUS: dommages par accident, collision, mauvaise utilisation, abus, hasards route, manque d'entretien (section 4.4)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.4 EXCLUS: Réparation composants endommagés par accident, collision, mauvaise utilisation, abus, hasards de la route ou manque d'entretien."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'entretien régulier en lien avec l'exclusion section 4.4 ?",
+      "options": ["Pas important", "Expliquer: entretien régulier = CONDITION couverture (section 5.3). Manque entretien = exclusion (4.4). Documentation vérifiable peut être demandée (5.3). Responsabilité propriétaire", "C'est automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer lien critique: entretien régulier = condition obligatoire couverture (5.3), manque entretien = exclusion (4.4), documentation peut être demandée anytime."
+    },
+    {
+      "question": "Les dommages causés par non-respect des signaux d'avertissement sont-ils couverts ?",
+      "options": ["Oui, couverts", "NON, EXCLUS: réparation composants endommagés suite non-respect signaux avertissement (feux, indicateurs, jauges, son) qui pourraient causer dommages supplémentaires par poursuite exploitation (section 4.5)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.5 EXCLUS: Réparation composants endommagés par non-respect signaux d'avertissement (feux, indicateurs, jauges, son) qui pourraient causer d'autres dommages véhicule par poursuite de l'exploitation."
+    },
+    {
+      "question": "Comment conseiller un client sur l'importance des indicateurs d'avertissement ?",
+      "options": ["Pas nécessaire", "Conseiller: TOUJOURS arrêter si indicateur important (température, huile, freins). Poursuite exploitation = dommages aggravés EXCLUS (section 4.5). Responsabilité surveiller indicateurs (section 5.5)", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil préventif: arrêt immédiat si indicateur critique, poursuite = dommages aggravés exclus (4.5), responsabilité propriétaire surveiller indicateurs fonctionnels (5.5)."
+    },
+    {
+      "question": "Les réparations pour améliorer performances, compression, consommation huile sont-elles couvertes ?",
+      "options": ["Oui, couvertes", "NON, EXCLUS: réparation composants pour améliorer performances véhicule, résoudre pertes compression ou réduire consommation excessive huile (section 4.6)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.6 EXCLUS: Réparation de tout composant pour améliorer les performances du véhicule, résoudre les pertes de compression ou réduire la consommation excessive d'huile."
+    },
+    {
+      "question": "Les réparations si odomètre non fonctionnel ou modifié sont-elles couvertes ?",
+      "options": ["Oui, couvertes", "NON, EXCLUS: réparation composants si lecture compteur kilométrique non fonctionnelle OU si odomètre modifié en contravention loi applicable (section 4.7)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.7 EXCLUS: Réparation de tout composant si lecture du compteur kilométrique du véhicule n'est pas fonctionnelle OU si l'odomètre a été modifié en contravention d'une loi applicable."
+    },
+    {
+      "question": "Les réparations si informations admissibilité falsifiées sont-elles couvertes ?",
+      "options": ["Oui, couvertes", "NON, EXCLUS: réparation composants si renseignements concernant admissibilité véhicule au programme sont falsifiés ou mal déclarés (section 4.8)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.8 EXCLUS: Réparation de tout composant si les renseignements concernant l'admissibilité du véhicule au programme sont falsifiés ou mal déclarés."
+    },
+    {
+      "question": "Les pannes survenues avant date livraison ou pendant Période attente sont-elles couvertes ?",
+      "options": ["Oui, couvertes", "NON, EXCLUS: réparation composants pour Panne survenue AVANT date livraison indiquée sur contrat, OU pendant Période d'attente (15 premiers jours) (section 4.9)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.9 EXCLUS: Réparation de tout composant en raison d'une Panne survenue avant la date de livraison indiquée sur le contrat, ou pendant la Période d'attente (15 premiers jours)."
+    },
+    {
+      "question": "Comment expliquer la Période d'attente de 15 jours à un client ?",
+      "options": ["Ignorer", "Expliquer: 15 jours attente après livraison = standard industrie protection problèmes préexistants. Couverture complète débute après, comme période carence assurance", "C'est long", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique: 15 jours attente = standard industrie (protection problèmes préexistants), couverture complète active après, similaire période carence assurances."
+    },
+    {
+      "question": "Les réparations si pièce déjà couverte par garantie fabricant sont-elles remboursées ?",
+      "options": ["Oui, doublées", "NON, EXCLUS: réparation composants si pièce déjà couverte par garantie manufacturier originale, garantie prolongée manufacturier, ou visée par rappel manufacturier (section 4.10)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.10 EXCLUS: Réparation de tout composant si cette pièce est déjà couverte par la garantie de manufacturer originale ou garantie de manufacturer prolongée ou visée par un rappel du manufacturier."
+    },
+    {
+      "question": "Comment expliquer l'interaction AVEX avec garantie fabricant ?",
+      "options": ["Compliqué", "Expliquer: AVEX débute après/complète garantie fabricant (section 5.1-5.2). Si pièce encore sous garantie fabricant ou rappel, utiliser celle-ci d'abord (4.10). AVEX = extension/complément", "C'est pareil", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer complémentarité: AVEX étend/complète garantie fabricant (sections 5.1-5.2), si pièce couverte fabricant/rappel, utiliser celle-ci (4.10), AVEX = protection continue."
+    },
+    {
+      "question": "Les réparations si Distributeur n'a pas payé contrat sont-elles honorées ?",
+      "options": ["Oui, toujours", "NON, EXCLUS: réparation composants si Distributeur Autorisé n'a pas payé à l'Administrateur le contrat du programme de garantie (section 4.11)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.11 EXCLUS: Réparation de tout composant si le Distributeur Autorisé n'a pas payé à l'Administrateur le contrat du programme de garantie."
+    },
+    {
+      "question": "Une réparation nécessaire 2ème fois dans 3 mois/5000km est-elle couverte ?",
+      "options": ["Oui, couverte", "NON, EXCLUS: réparation composants si réparation nécessaire DEUXIÈME fois dans délai de 3 mois OU 5000 km à compter date première réparation effectuée (section 4.12)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.12 EXCLUS: Réparation de tout composant si la réparation est nécessaire une deuxième fois dans un délai de trois (3) mois ou 5000km à compter de la date de la première réparation effectuée."
+    },
+    {
+      "question": "Comment expliquer l'exclusion section 4.12 (2ème réparation dans 3 mois/5000km) ?",
+      "options": ["C'est injuste", "Expliquer: exclusion protège contre réparations mal effectuées/pièces défectueuses. Incite Centre Autorisé faire travail qualité. Si problème récurrent, Administrateur investiguerait responsabilité", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique: exclusion protège contre travail inadéquat, incite qualité réparations, si problème récurrent légitime, Administrateur évaluerait responsabilité."
+    },
+    {
+      "question": "Un collègue conseille à un client de \"ne pas s'inquiéter des exclusions\". Comment réagissez-vous ?",
+      "options": ["Être d'accord", "Intervenir: expliquer que client DOIT connaître exclusions (transparence totale). 17 composants couverts (exceptionnels) + exclusions logiques claires = confiance client informé", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige transparence totale: client DOIT connaître exclusions (logiques, claires), 17 composants couverts exceptionnels, transparence complète = confiance et satisfaction long terme."
+    }
+  ]
+}
+

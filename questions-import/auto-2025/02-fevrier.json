@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 2,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle section couvre les injecteurs de carburant ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 18"],
+      "correctAnswer": 1,
+      "explanation": "La section 13 - Système d'alimentation couvre les injecteurs de carburant, la pompe à carburant électrique et le régulateur de pression."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AT PLUS ?",
+      "options": ["2 000$", "3 000$", "5 000$", "10 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS a un montant maximum par réclamation de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les roulements des roues sont couverts dans quelle section ?",
+      "options": ["Section 7", "Section 9", "Section 12", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 12 - Accessoires Essentiels couvre les roulements des roues ainsi que les cylindres des roues."
+    },
+    {
+      "question": "Un client possède une Ford F-150 2019 avec 110 000 km. Quelle catégorie de véhicule pour le programme AT PLUS ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Ford fait partie de la Catégorie B incluant Buick, Cadillac, Chrysler, Chevrolet, Dodge, GMC, Hummer, Lincoln, Mazda, Saturn et Subaru."
+    },
+    {
+      "question": "Combien de sections le programme AT couvre-t-il ?",
+      "options": ["11 sections", "12 sections", "16 sections", "27 sections"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT couvre les sections 1 à 16 selon la description du programme."
+    },
+    {
+      "question": "Quelle est la franchise du programme AT ?",
+      "options": ["0$", "100$", "125$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "La pompe de servodirection est couverte dans quelle section ?",
+      "options": ["Section 7", "Section 9", "Section 12", "Section 13"],
+      "correctAnswer": 1,
+      "explanation": "La section 9 - Direction couvre la pompe de servodirection et sa poulie, ainsi que l'ensemble de soupapes de direction à crémaillère."
+    },
+    {
+      "question": "Combien coûte l'option Turbo/Surcompresseur pour le programme AX-1 ?",
+      "options": ["25$", "45$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Turbo/Surcompresseur coûte 45$ pour le programme AX-1 selon les options disponibles."
+    },
+    {
+      "question": "Quels composants du système de freins sont couverts par la section 14 ?",
+      "options": ["Plaquettes et disques", "Systèmes ABS, ESP, EBD, TCS avec modules et capteurs", "Câbles de freins seulement", "Tambours et sabots"],
+      "correctAnswer": 1,
+      "explanation": "La section 14 - Freins électroniques couvre les systèmes ABS, ESP, EBD, TCS et leurs modules électroniques et capteurs."
+    },
+    {
+      "question": "Comment argumenter l'option Kilométrage illimité à un client qui roule beaucoup ?",
+      "options": ["Elle n'est pas nécessaire", "Elle élimine la limite de 20 000 km par année pour plus de tranquillité d'esprit", "Elle coûte trop cher", "Elle est automatique"],
+      "correctAnswer": 1,
+      "explanation": "L'option Kilométrage illimité élimine la restriction annuelle de 20 000 km, idéale pour les clients grands rouleurs (coût 100$)."
+    },
+    {
+      "question": "Le programme AP couvre combien de sections ?",
+      "options": ["Sections 1 à 4", "Sections 1 à 6", "Sections 1 à 11", "Sections 1 à 16"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP (programme d'entrée de gamme) couvre les sections 1 à 6 selon la description du programme."
+    },
+    {
+      "question": "Le maître-cylindre de freins est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 0,
+      "explanation": "La section 8 - Freins conventionnels couvre le maître-cylindre, les cylindres de roues, le servofrein et les étriers."
+    },
+    {
+      "question": "Quelle est la période d'attente avant que la garantie ne soit active ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "La période d'attente est de 15 jours suivant la date de livraison indiquée sur la garantie selon la section 1 - Définitions."
+    },
+    {
+      "question": "Les arbres de transmission sont couverts dans quelle section ?",
+      "options": ["Section 4", "Section 7", "Section 12", "Section 13"],
+      "correctAnswer": 2,
+      "explanation": "La section 12 - Accessoires Essentiels couvre les arbres de transmission et les joints universels."
+    },
+    {
+      "question": "Un client demande si vous pouvez réduire l'âge du véhicule sur le contrat pour obtenir plus d'options. Que répondez-vous ?",
+      "options": ["Oui, si le montant est élevé", "Non, c'est illégal et contraire à l'éthique professionnelle", "Oui, en facturant un supplément", "Peut-être, selon les circonstances"],
+      "correctAnswer": 1,
+      "explanation": "Toute falsification d'informations sur le contrat est illégale. L'intégrité professionnelle exige de refuser catégoriquement (section 5.7)."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AP ?",
+      "options": ["12 ans", "15 ans", "20 ans", "25 ans"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AP s'applique aux véhicules âgés de 13 à 20 ans ayant 280 000 km et moins."
+    },
+    {
+      "question": "Le régulateur de voltage est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 18", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre le régulateur de voltage ainsi que de nombreux interrupteurs et moteurs électriques."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AT PLUS ?",
+      "options": ["3 termes (12, 24, 36 mois)", "4 termes (12, 24, 36, 48 mois)", "5 termes (12, 24, 36, 48, 60 mois)", "2 termes (12, 24 mois)"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS est disponible pour 5 termes : 12, 24, 36, 48 ou 60 mois selon la durée du contrat."
+    },
+    {
+      "question": "Les capteurs d'oxygène sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 17", "Section 18", "Section 24"],
+      "correctAnswer": 3,
+      "explanation": "La section 24 - Système d'émissions couvre les capteurs d'oxygène, la soupape EGR, les catalyseurs et la soupape PCV."
+    },
+    {
+      "question": "Quel programme recommander à un client avec une Tesla Model 3 2022 de 75 000 km ?",
+      "options": ["Programme AT", "Programme AT PLUS", "Programme AVE", "Programme AX-3"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE est spécifiquement conçu pour les véhicules Hybrides (HEV), Hybrides Branchables (PHEV) et Électriques (BEV)."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AX-2 ?",
+      "options": ["1 000$", "1 500$", "2 000$", "3 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-2 a un montant maximum par réclamation de 1 500$ selon les détails financiers."
+    },
+    {
+      "question": "Le turbo est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 5", "Section 7", "Section 12"],
+      "correctAnswer": 2,
+      "explanation": "La section 7 - Turbo couvre le carter et toutes les pièces internes lubrifiées, le refroidisseur intermédiaire et les soupapes."
+    },
+    {
+      "question": "L'option Service routier + est-elle incluse dans le programme AT PLUS ?",
+      "options": ["Non, coûte 50$ par année", "Oui, incluse sans frais (0$)", "Oui, mais coûte 25$", "Non disponible"],
+      "correctAnswer": 1,
+      "explanation": "L'option Service routier + est incluse sans frais (0$) dans le programme AT PLUS selon les options disponibles."
+    },
+    {
+      "question": "Les moteurs des lève-glaces électriques sont couverts dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 16", "Section 22"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre les moteurs des lève-glaces électriques et leurs interrupteurs."
+    },
+    {
+      "question": "Un client inquiet demande combien de réclamations il peut faire pendant la durée du contrat. Que lui répondez-vous ?",
+      "options": ["Maximum 5 réclamations", "Maximum 10 réclamations", "Un nombre illimité de réclamations", "Selon le programme choisi"],
+      "correctAnswer": 2,
+      "explanation": "Le propriétaire peut déclarer un nombre illimité de réclamations pendant la durée du programme choisi selon la section 9."
+    },
+    {
+      "question": "Combien coûte l'option A.V.N. pour le programme AT ?",
+      "options": ["75$", "100$", "150$", "200$"],
+      "correctAnswer": 2,
+      "explanation": "L'option A.V.N. (Haute Technologie) coûte 150$ pour le programme AT avec condition de véhicule de 8 ans et moins et 140 000 km et moins."
+    },
+    {
+      "question": "La bobine d'induction est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 15", "Section 17", "Section 18"],
+      "correctAnswer": 3,
+      "explanation": "La section 18 - Système d'allumage plus + couvre la bobine d'induction, les capteurs système d'ignition et le capteur de détonation."
+    },
+    {
+      "question": "Quelle est la franchise du programme AVE ?",
+      "options": ["0$", "100$", "125$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVE a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Un collègue suggère d'augmenter artificiellement le prix de vente pour augmenter sa commission. Quelle est votre réaction ?",
+      "options": ["Accepter pour être solidaire", "Refuser et rappeler les standards éthiques de l'entreprise", "Demander une part de la commission", "Ignorer la situation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme et l'éthique exigent de refuser toute pratique malhonnête et de maintenir l'intégrité dans toutes les transactions."
+    },
+    {
+      "question": "Le surcompresseur est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 7", "Section 8", "Section 12"],
+      "correctAnswer": 2,
+      "explanation": "La section 8 - Surcompresseur couvre le carter et toutes les pièces internes lubrifiées, les soupapes de dérivation et le refroidisseur intermédiaire."
+    }
+  ]
+}
+

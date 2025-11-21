@@ -1,0 +1,140 @@
+{
+  "module": "avex",
+  "month": 9,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Comment maximiser la satisfaction client lors de la vente AVEX ?",
+      "options": ["Vendre vite", "Approche complète 5 étapes: 1) Évaluer véhicule (âge/km/marque/équipements), 2) Expliquer 17 composants + 9 inclusions, 3) Recommander options pertinentes, 4) Clarifier processus réclamation, 5) Répondre questions transparence totale", "Minimiser détails", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche méthodique complète: évaluation véhicule, explication détaillée couverture/inclusions, recommandations personnalisées options, clarification processus, transparence questions."
+    },
+    {
+      "question": "Un client avec Honda Civic 2023 (2 ans, 45k km) usage standard veut terme 60 mois. Quelle offre optimale ?",
+      "options": ["Base seulement", "AVEX Tarif Récent terme 60 mois (2175$) + Couverture complémentaire 200$ + Protection garantie 300$ (terme 60>36) = 2675$ protection optimale véhicule fiable usage standard", "Toutes les options", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à recommander pertinent: Civic (fiable) = base excellent, terme 60 mois = Couverture compl. + Protection garantie recommandées, pas besoin Modèles sélectifs/Km ouvert (usage standard)."
+    },
+    {
+      "question": "Un client avec BMW X5 2022 (3 ans, 55k km) grand rouleur (35k km/an) veut protection maximale. Package optimal ?",
+      "options": ["Base suffisant", "AVEX Tarif Récent 60 mois (2175$) + Modèles sélectifs 400$ (BMW) + Suspension A+ 300$ (si pneumatique) + Km ouvert 100$ (35k/an) + Réparation ouverte 300$ + Couverture compl. 200$ + Protection garantie 300$ = 3775$ (ou 3475$ sans suspension A+) protection totale luxe", "Minimum", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige analyse complète BMW grand rouleur: Modèles sélectifs 400$ (obligatoire BMW), Suspension A+ 300$ (si pneumatique), Km ouvert 100$ (35k/an), Réparation ouverte 300$, Couverture compl. 200$, Protection garantie 300$ = protection maximale adaptée."
+    },
+    {
+      "question": "Un client avec Toyota RAV4 Hybride 2021 (4 ans, 72k km) veut garantie. Quels avantages AVEX souligner ?",
+      "options": ["Aucun spécial", "Souligner AVANTAGES MAJEURS hybride: 1) Couverture Hybride INCLUSE (composant 23: moteur électrique, onduleur, etc.), 2) Batterie extension 1 an/20k km INCLUSE (composant 24), 3) Haute-tech INCLUSE (composant 21), 4) Aide conduite INCLUSE (composant 22). Valeur exceptionnelle véhicules modernes", "C'est standard", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser ÉNORMÉMENT pour hybrides: couverture systèmes hybrides + batterie + haute-tech + aide conduite INCLUS (valeur 2000$-5000$+ si achat séparé), AVEX exceptionnel véhicules modernes."
+    },
+    {
+      "question": "Un client avec F-150 2020 diesel (5 ans, 95k km, configuration usine) usage commercial veut garantie. Recommandation ?",
+      "options": ["Non admissible", "ADMISSIBLE Tarif Usagé (≤10 ans/160k km): Terme 60 mois (2375$) + Utilisation spécialisée 200$ (diesel/commercial) + Couverture compl. 200$ + Remboursement partiel 300$ (terme 60>36) = 3075$ protection diesel commercial", "Seulement base", "Selon l'usage"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige adaptation diesel commercial: F-150 5 ans/95k km = Tarif Usagé admissible, Utilisation spécialisée 200$ (diesel/commercial), Couverture compl. 200$, Remboursement partiel 300$ = protection optimale usage intensif."
+    },
+    {
+      "question": "Un client avec Tesla Model 3 2023 (2 ans, 38k km) veut garantie. Comment présenter AVEX ?",
+      "options": ["Non compatible", "Présenter AVANTAGES EXCEPTIONNELS Tesla: 1) Modèles sélectifs 400$ (Tesla), 2) Véhicule électrique INCLUS (composant 23: moteur, onduleur, etc.), 3) Batterie 1 an/20k km INCLUS (24), 4) Haute-tech complète INCLUS (21: écrans, GPS, etc.), 5) Aide conduite avancée INCLUS (22: Autopilot, caméras). AVEX = protection IDÉALE véhicules électriques modernes", "Pas adapté", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation MAXIMALE Tesla: Option Modèles sélectifs 400$ + couvertures électrique/batterie/haute-tech/aide conduite INCLUS = AVEX parfaitement adapté véhicules électriques sophistiqués, protection complète."
+    },
+    {
+      "question": "Un client hésite entre AVEX Tarif Récent 12 mois (1675$) et 60 mois (2175$). Comment expliquer ROI ?",
+      "options": ["C'est pareil", "Expliquer ROI terme long: Différence 500$ (60 vs 12 mois). Sur 5 ans = 100$/an supplémentaire. Protection 5 ans vs 1 an = MEILLEUR ratio coût/protection. Une SEULE réparation majeure (5k$-15k$) justifie 60 mois. Recommander 60 mois fortement", "Pas de différence", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer ROI: 500$ différence = 100$/an supplémentaire pour 4 ans protection additionnelle, ratio exceptionnel, une réparation majeure justifie investissement, recommander terme long."
+    },
+    {
+      "question": "Un client avec Audi Q7 2021 suspension pneumatique (4 ans, 68k km) ne veut pas option Suspension A+. Que faire ?",
+      "options": ["Forcer la vente", "Expliquer RISQUES clairement: suspension pneumatique = 3k$-8k$ réparation. SANS option A+ (300$) = suspension EXCLUE. Si panne suspension, propriétaire paie 100%. Recommander FORTEMENT option A+ (ROI exceptionnel une panne). Respecter décision finale client informé", "Mentir", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence risques: suspension pneumatique très coûteuse (3k$-8k$), SANS option A+ = EXCLUE totalement, propriétaire paie 100% si panne, recommander fortement ROI, respecter décision informée."
+    },
+    {
+      "question": "Un client avec véhicule 11 ans/140k km veut AVEX. Que répondre ?",
+      "options": ["Accepter", "Expliquer NON ADMISSIBLE: AVEX Tarif Usagé accepte JUSQU'À 10 ans ET 160k km. Véhicule 11 ans dépasse limite âge (même si km OK). Expliquer critères transparence, exprimer regrets, proposer alternatives si disponibles", "Vendre quand même", "Ignorer critères"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté: véhicule 11 ans dépasse limite Tarif Usagé (≤10 ans), non admissible AVEX même si km OK, expliquer critères clairement, exprimer regrets, proposer alternatives."
+    },
+    {
+      "question": "Un client avec Porsche 911 2022 (MSRP 145k$) veut AVEX. Est-ce admissible ?",
+      "options": ["Non, exclu", "OUI ADMISSIBLE: MSRP 145k$ < limite 150k$ (section 9.5). AVEX Tarif Récent + Modèles sélectifs 400$ (Porsche) + Réparation ouverte 300$ + Suspension A+ 300$ (si adaptative) + Couverture compl. 200$ = protection optimale haute performance", "Non disponible", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à confirmer admissibilité: MSRP 145k$ < limite 150k$ = ADMISSIBLE, Modèles sélectifs 400$ (Porsche obligatoire), recommander options protection maximale haute performance."
+    },
+    {
+      "question": "Comment expliquer la différence de coût Tarif Récent vs Usagé pour même terme ?",
+      "options": ["C'est injuste", "Expliquer logique actuarielle: Tarif Usagé (6-10 ans, 80k-160k km) = risque pannes supérieur vs Récent (≤5 ans, ≤80k km). Différence coût (200$/terme) reflète risque. MAIS couverture IDENTIQUE (17 composants), équité totale", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer équité: différence coût reflète risque statistique pannes (véhicules plus anciens), MAIS couverture IDENTIQUE exceptionnelle (17 composants), tarification actuarielle juste."
+    },
+    {
+      "question": "Un client avec Mercedes GLE 2020 (5 ans, 82k km) veut garantie. Quel tarif ?",
+      "options": ["Récent", "Tarif USAGÉ car 82k km dépasse limite Récent (≤80k km), même si 5 ans = limite Récent. Critères CUMULATIFS (âge ET km). Tarif Usagé admissible (≤10 ans ET ≤160k km). Prix: terme 60 mois Usagé (2375$) + Modèles sélectifs 400$ (Mercedes) + options", "Non admissible", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige précision critères: 82k km > limite Récent 80k km (même si âge OK), Tarif Usagé applicable. Critères CUMULATIFS (âge ET km) TOUS deux requis Tarif Récent."
+    },
+    {
+      "question": "Un client avec véhicule Tarif Usagé dit \"couverture moins bonne que Récent\". Que répondre ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT: Couverture IDENTIQUE (17 composants complets) pour Récent ET Usagé. SEUL tarif diffère (reflète âge/km). Même protection exceptionnelle, même processus, même avantages. Rassurer totalement", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction ferme: couverture ABSOLUMENT IDENTIQUE (17 composants) Récent/Usagé, seul prix diffère (reflète risque), rassurer complètement égalité protection exceptionnelle."
+    },
+    {
+      "question": "Comment présenter les 9 inclusions AVEX pour maximiser valeur perçue ?",
+      "options": ["Lire liste vite", "Présenter valeur ajoutée CHAQUE inclusion: 1) Haute Techno (1500$+ séparé), 2) Hybride/Électrique (2000$+ séparé), 3) 0$ Franchise (150$/réparation), 4) VGA (composant 6), 5) Service Routier (100$-150$/an), 6) Transférable (augmente valeur revente), 7) Traction intégrale, 8) Courtoisie (350$), 9) Diagnostic payé (200$-300$). TOTAL valeur 5000$+ INCLUS", "C'est standard", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation MAXIMALE chaque inclusion avec coût équivalent si achat séparé: total valeur potentielle 5000$+ INCLUS sans frais, différenciateur majeur AVEX."
+    },
+    {
+      "question": "Un client avec Subaru Outback 2022 (3 ans, 62k km) veut garantie. Quelle valeur AVEX souligner ?",
+      "options": ["Aucune spéciale", "Souligner: 1) Traction intégrale INCLUSE (composant 6: boîte transfert), 2) Système AWD Subaru couvert, 3) Tarif Récent admissible (3 ans/62k), 4) Terme 60 mois optimal fiabilité Subaru. AVEX = protection idéale véhicules traction intégrale", "C'est standard", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser spécificités Subaru: traction intégrale système AWD INCLUSE (composant 6), protection complète système coûteux, AVEX adapté véhicules AWD."
+    },
+    {
+      "question": "Comment gérer un client qui compare AVEX avec garantie concurrence moins chère ?",
+      "options": ["Baisser prix", "Comparer VALEUR (pas prix): 1) AVEX = 17 composants vs concurrence (souvent 8-12), 2) 9 inclusions majeures (haute-tech, hybride, service routier, etc.) vs concurrence (souvent optionnelles), 3) Franchise 0$ Centre Autorisé vs concurrence (100$-250$), 4) Processus transparent. VALEUR SUPÉRIEURE justifie prix", "Abandonner", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration VALEUR supérieure: couverture plus étendue (17 vs 8-12 composants), inclusions exceptionnelles (vs optionnelles concurrence), franchise 0$, processus transparent = ROI supérieur."
+    },
+    {
+      "question": "Un client veut ajouter options après achat AVEX. Est-ce possible ?",
+      "options": ["Oui, toujours", "NON, options doivent être sélectionnées AU MOMENT de l'achat garantie (sections 4: forfait optionnel sélectionné AVEC garantie au moment achat). Expliquer importance évaluer besoins AVANT achat, options non ajoutables après", "Possible moyennant frais", "Selon l'option"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté: options sélectionnables UNIQUEMENT au moment achat (sections 4), non ajoutables après, importance évaluer besoins complets AVANT achat, prendre temps décision."
+    },
+    {
+      "question": "Un client avec Jeep Wrangler 2021 modifié (suspension levée 4\", pneus 35\") veut AVEX. Quelle démarche ?",
+      "options": ["Refuser directement", "Expliquer processus: 1) Modifications = exclusion standard (section 9.4), 2) Exception POSSIBLE si Distributeur demande AVANT vente, 3) Contacter représentant Administrateur, 4) Si approuvée = indiquée contrat + Distributeur responsable frais supplémentaires, 5) Si refusée = proposer retour configuration usine pour admissibilité", "Accepter automatiquement", "Ignorer modifications"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige processus transparent: modifications = exclusion (9.4), exception possible si demandée AVANT vente par Distributeur, contacter Administrateur, si refusée proposer retour usine, transparence totale."
+    },
+    {
+      "question": "Comment maximiser taux de conversion ventes AVEX ?",
+      "options": ["Pression maximale", "Approche consultative 6 étapes: 1) Écouter besoins client, 2) Évaluer véhicule complètement, 3) Présenter valeur AVEX (17 composants + 9 inclusions), 4) Recommander options pertinentes, 5) Démontrer ROI terme long, 6) Répondre objections transparence. VALEUR + CONFIANCE = conversion", "Minimiser prix", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche consultative: écoute besoins, évaluation complète, présentation valeur exceptionnelle, recommandations personnalisées, démonstration ROI, transparence objections = confiance + conversion durable."
+    },
+    {
+      "question": "Un client satisfait AVEX (3 ans sans réclamation) revient acheter nouveau véhicule. Comment maximiser cette opportunité ?",
+      "options": ["Vendre vite", "Valoriser fidélité 5 étapes: 1) Remercier satisfaction/fidélité (3 ans!), 2) Souligner aucune réclamation = bon entretien, 3) Expliquer Option Remboursement partiel si terme 36+ mois (récupération 2000$ fin si aucune réclamation), 4) Proposer nouveau AVEX nouveau véhicule, 5) Demander témoignage/référence. Cultiver relation long terme", "Vendre minimum", "Ignorer historique"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation fidélité: remercier satisfaction, souligner bon entretien, présenter Option Remboursement partiel (incitation), proposer nouveau AVEX, cultiver témoignage/références = relation long terme."
+    },
+    {
+      "question": "Un collègue vend AVEX en promettant \"couverture 100% véhicule, aucune exclusion\". Comment réagir ?",
+      "options": ["L'imiter", "Intervenir IMMÉDIATEMENT: 1) Corriger fausses promesses (17 composants couverts, exclusions claires sections 3-4), 2) Protéger client déception future, 3) Expliquer au collègue importance transparence (intégrité + réputation), 4) Signaler direction si récurrent. Intégrité professionnelle NON NÉGOCIABLE", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention URGENTE: corriger fausses promesses (protection client déception), expliquer importance transparence (réputation entreprise), signaler si récurrent. Éthique NON NÉGOCIABLE."
+    },
+    {
+      "question": "Comment gérer objection client \"garantie trop chère, préfère risquer\" ?",
+      "options": ["Abandonner", "Réponse consultative 4 points: 1) Comprendre budget/préoccupations, 2) Expliquer coût UNE réparation majeure (moteur 8k$-15k$, transmission 5k$-10k$), 3) Démontrer ROI: terme 60 mois (2175$) = 36$/mois = coût MINIME vs risque réparation majeure, 4) Respecter décision finale informée. Valeur démontrable", "Insister fortement", "Baisser prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démontrer valeur: écoute budget, explication coûts réparations majeures réelles (8k$-15k$+), démonstration ROI mensuel (36$/mois protection vs milliers$ risque), respecter décision informée."
+    }
+  ]
+}
+

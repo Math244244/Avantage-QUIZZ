@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 10,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Les batteries, câbles et câblage des systèmes électriques sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, batteries, câbles et câblage, fusibles et boite de fusible exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant batteries, les câbles et câblage, les fusibles et boite de fusible sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment expliquer la valeur des options à un client avec VR haut de gamme ?",
+      "options": ["Pas nécessaires", "Évaluer besoins: Diesel 75$+Turbo 45$, Pusher 300$, Pas franchise 100$, Km illimité 100$, options premium 500$ (36+ mois)", "Toutes obligatoires", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer besoins du client VR et recommander options pertinentes selon type VR, usage et durée du terme choisi."
+    },
+    {
+      "question": "La sonde de niveau d'essence est-elle couverte ?",
+      "options": ["Oui, toujours", "Non, sonde de niveau d'essence exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le sonde de niveau d'essence sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un VR motorisé de 9 ans avec 95 000 km est-il admissible au programme aVR-Plus ?",
+      "options": ["Non, trop vieux", "Oui, aVR-Plus Section A accepte ≤10 ans et ≤100 000 km", "Seulement avec option", "Admissible au aVR"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR-Plus Section A (Motorisé) accepte véhicules de 10 ans et moins ayant 100 000 km et moins. Un VR de 9 ans/95 000 km est admissible."
+    },
+    {
+      "question": "Le panneau de tableau de bord est-il couvert ?",
+      "options": ["Oui, toujours", "Non, panneau de tableau de bord exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le panneau de tableau de bord sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment gérer un client VR qui hésite entre plusieurs termes ?",
+      "options": ["Vendre le plus long", "Évaluer usage: voyageur fréquent→terme long+Km illimité. Usage modéré→terme moyen. Budget serré→terme court", "Toujours 12 mois", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer usage réel du VR (fréquence voyages, km annuels, budget) pour recommander terme adapté aux besoins."
+    },
+    {
+      "question": "Le cadre et mécanisme de toit ouvrant sont-ils couverts ?",
+      "options": ["Oui, toujours", "Non, cadre et mécanisme de toit ouvrant exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le cadre et mécanisme de toit ouvrant sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un VR habitacle (fifth-wheel) de 11 ans est-il admissible au programme aVR Section B ?",
+      "options": ["Non, trop vieux", "Oui, aVR Section B accepte véhicules âgés de plus de 10 ans jusqu'à 15 ans", "Seulement avec option", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR Section B (Habitacle) accepte véhicules âgés de plus de 10 ans jusqu'à 15 ans. Un fifth-wheel de 11 ans est admissible."
+    },
+    {
+      "question": "Le démarreur à distance est-il couvert ?",
+      "options": ["Oui, toujours", "Non, démarreur à distance exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le démarreur à distance sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment expliquer la différence entre Motorisé Section A et Habitacle Section B ?",
+      "options": ["Aucune différence", "Section A: VR motorisés, composants 1-22 (mécanique+habitacle). Section B: Roulottes/Fifth-wheel, composants 12-22 (habitacle seulement)", "C'est pareil", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : Section A (motorisés, 22 composants) vs Section B (habitacles non-motorisés, 11 composants d'habitation)."
+    },
+    {
+      "question": "La télécommande de déverrouillage est-elle couverte ?",
+      "options": ["Oui, toujours", "Non, télécommande de déverrouillage exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le télécommande de déverrouillage sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un VR motorisé de 13 ans avec 120 000 km est-il admissible au programme aVR ?",
+      "options": ["Non, trop vieux", "Oui, aVR Section A accepte ≤15 ans et ≤150 000 km", "Seulement avec option", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Le programme aVR Section A (Motorisé) accepte véhicules de 15 ans et moins ayant 150 000 km et moins. Un VR de 13 ans/120 000 km est admissible."
+    },
+    {
+      "question": "L'unité de commande électronique (BCM) et les systèmes qu'il contrôle sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, unité de commande électronique (BCM) et systèmes non mentionnés qu'il contrôle exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant l'unité de commande électronique (BCM) et les systèmes, non mentionnés, qu'il contrôle sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment gérer un client qui compare les prix entre aVR-Plus et aVR ?",
+      "options": ["Vendre le plus cher", "Expliquer valeur: aVR-Plus (max 10k$/réclamation, cumulatif=valeur VR, plus d'options). aVR (max 5k$/réclamation, cumulatif=10k$)", "C'est pareil", "Négocier"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer la valeur différenciée : aVR-Plus offre limites supérieures et plus d'options premium pour VR récents/haut de gamme."
+    },
+    {
+      "question": "Les mises à jour logicielles sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, mise à jour logicielles exclues", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant les mise à jour logicielles sont exclus (section 4.2)."
+    },
+    {
+      "question": "Un client demande si l'option Diesel inclut automatiquement le Turbo. Que répondez-vous ?",
+      "options": ["Non, séparé", "Oui, l'ajout de l'option Turbo (45$) est OBLIGATOIRE pour tous les diesels", "Optionnel", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'ajout de l'option Turbo (45$) est OBLIGATOIRE pour tous les diesels selon la note de l'option Moteur diesel (section 3)."
+    },
+    {
+      "question": "Les écrous, bouchons, boulons, tubes et tubulures (non mentionnés) sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, écrous, bouchons, boulons, tubes, tubulures, tuyauterie et boyaux (non mentionnés) exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant écrous, bouchons, boulons, tubes, tubulures, tuyauterie et boyaux (non mentionnés) sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment expliquer pourquoi l'option Turbo est obligatoire pour les diesels ?",
+      "options": ["Ce n'est pas obligatoire", "Expliquer que les moteurs diesel ont un turbo d'usine qui nécessite couverture spécifique (option 45$ obligatoire)", "C'est optionnel", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer que les moteurs diesel ont généralement un turbo d'usine qui nécessite une couverture spécifique (option Turbo 45$ obligatoire)."
+    },
+    {
+      "question": "Les courroies (non mentionnées) et le matériel de l'atelier sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, courroies (non mentionnées) et tout le matériel de l'atelier exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant courroies (non mentionnées) et tout le matériel de l'atelier sont exclus (section 4.2)."
+    },
+    {
+      "question": "Quel est le coût total pour un VR diesel : Moteur diesel + Turbo ?",
+      "options": ["75$", "100$", "120$ (75$ diesel + 45$ turbo obligatoire)", "150$"],
+      "correctAnswer": 2,
+      "explanation": "Pour un VR diesel : option Moteur diesel 75$ + option Turbo 45$ (obligatoire) = 120$ CAD total."
+    },
+    {
+      "question": "Le klaxon est-il couvert ?",
+      "options": ["Oui, toujours", "Non, klaxon exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les éléments suivants des systèmes électriques incluant le klaxon sont exclus (section 4.2)."
+    },
+    {
+      "question": "Comment gérer un client qui veut acheter toutes les options disponibles ?",
+      "options": ["Vendre toutes", "Évaluer besoins réels: vérifier admissibilité options (terme, type VR), expliquer valeur de chacune, recommander priorités", "Refuser", "Vendre minimum"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer admissibilité options (terme 36+ mois pour premium), expliquer valeur de chacune et recommander selon besoins réels."
+    },
+    {
+      "question": "L'Administrateur peut-il refuser une réclamation si le contrat n'a pas été payé par le Distributeur ?",
+      "options": ["Non, jamais", "Oui, réparation si Distributeur n'a pas payé le contrat exclue (sauf exception)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation si le Distributeur Autorisé n'a pas payé à l'Administrateur le contrat du programme de garantie est exclue (sauf exception accordée) (section 5.10)."
+    },
+    {
+      "question": "Quelle est la valeur totale annuelle des 5 protections incluses ?",
+      "options": ["500$ par année", "750$ par année", "850$ par année (500 remorquage + 50 service + 200 appel + 50×7 location + 100×4 hébergement)", "1000$ par année"],
+      "correctAnswer": 2,
+      "explanation": "La valeur totale des 5 protections incluses est de 850$ par année : 500$ (remorquage) + 50$ (service routier) + 200$ (appel service) + 350$ (location) + 400$ (hébergement)."
+    },
+    {
+      "question": "Le propriétaire comprend-il qu'un contrat non payé peut ne pas être honoré ?",
+      "options": ["Non", "Oui, le Propriétaire comprend que si contrat non payé par Distributeur, Administrateur ne s'engage pas à honorer (sauf exception)", "Toujours honoré", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du Véhicule comprendre que si le contrat n'a pas été payé par la Distributeur suivant sa date de facturation, l'Administrateur ne s'engage pas à honorer (sauf exception) (section 1)."
+    },
+    {
+      "question": "Comment expliquer la valeur des protections incluses à un client ?",
+      "options": ["Pas importantes", "Expliquer valeur totale 850$/an: sécurité pannes (remorquage 500$), services urgence (50$), mobilité (550$), hébergement (400$)", "C'est gratuit", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer la valeur concrète des 5 protections : 850$/an en sécurité, services d'urgence, mobilité et hébergement."
+    },
+    {
+      "question": "Le propriétaire consent-il à la communication de ses renseignements à l'Administrateur ?",
+      "options": ["Non", "Oui, le Propriétaire consent expressément à ce que le Distributeur communique tous renseignements à l'Administrateur", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du Véhicule consent expressément à ce que le Distributeur communique tous les renseignements obtenus à son sujet à l'Administrateur (section 1)."
+    },
+    {
+      "question": "Un client demande qui a accès à ses renseignements personnels. Que répondez-vous ?",
+      "options": ["Tout le monde", "Accès limité aux personnes pour qui il est nécessaire d'y accéder dans l'exercice de leurs fonctions", "Aucun accès", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'accès aux renseignements personnels du Propriétaire du Véhicule est limité aux personnes pour qui il est nécessaire d'y accéder dans l'exercice de leurs fonctions (section 1)."
+    },
+    {
+      "question": "Le propriétaire peut-il demander une copie de ses renseignements personnels ?",
+      "options": ["Non, jamais", "Oui, peut demander à l'Administrateur de confirmer l'existence et en demander une copie", "Seulement avec autorisation", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du Véhicule peut demander à l'Administrateur de confirmer l'existence des renseignements personnels et en demander une copie (section 1)."
+    },
+    {
+      "question": "Un collègue demande accès aux renseignements d'un client sans raison légitime. Comment réagissez-vous ?",
+      "options": ["Donner accès", "Refuser, expliquer que accès limité aux personnes nécessaires dans l'exercice de leurs fonctions (section 1)", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser et expliquer que l'accès aux renseignements est limité aux personnes nécessaires dans l'exercice de leurs fonctions (section 1)."
+    }
+  ]
+}
+

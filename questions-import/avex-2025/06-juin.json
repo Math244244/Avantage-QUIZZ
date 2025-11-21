@@ -1,0 +1,188 @@
+{
+  "module": "avex",
+  "month": 6,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Les réparations effectuées sans numéro d'autorisation sont-elles remboursées ?",
+      "options": ["Oui, toujours", "NON, EXCLUS: réparation composants si réparation effectuée SANS numéro d'autorisation (incluant montant autorisé remboursement) par l'Administrateur (section 4.13) SAUF urgence hors heures (section 6)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.13 EXCLUS: Réparation effectuée sans numéro d'autorisation (y compris montant autorisé) par l'Administrateur. EXCEPTION: urgence hors heures (section 6, envoi Documentation vérifiable après)."
+    },
+    {
+      "question": "Comment expliquer l'importance du processus d'autorisation préalable ?",
+      "options": ["Pas important", "Expliquer: autorisation préalable = OBLIGATOIRE (1-866-666-0181 ou info@garantieavantageplus.ca). Protège client (vérification couverture avant travaux) ET Administrateur (validation admissibilité). Processus transparent", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer bénéfice mutuel: autorisation préalable protège CLIENT (confirmation couverture avant coûts) et Administrateur (validation), processus simple transparent."
+    },
+    {
+      "question": "Les réparations si véhicule repris par banque sont-elles couvertes ?",
+      "options": ["Oui, couvertes", "NON, EXCLUS: réparation composants si véhicule repris par banque, institution financière ou retourné au Distributeur Autorisé à tout moment pendant durée garantie (section 4.14)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 4.14 EXCLUS: Réparation de tout composant si le véhicule a été repris par la banque, l'institution financière ou retourné au Distributeur Autorisé à tout moment pendant la durée de la garantie sélectionnée."
+    },
+    {
+      "question": "Quelle est la première règle concernant le programme de garantie (section 5.1) ?",
+      "options": ["Aucune règle", "Cette garantie protège Composants Couverts et forfaits optionnels NON couverts par garantie manufacturier complète/groupe motopropulseur, débute à date début garantie indiquée", "Couvre tout", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Section 5.1: Cette garantie protège les Composants Couverts et composants forfaits optionnels qui ne sont PLUS couverts par garantie complète/groupe motopropulseur manufacturier, commence à date début garantie indiquée."
+    },
+    {
+      "question": "Comment expliquer le début de la garantie AVEX par rapport à la garantie fabricant ?",
+      "options": ["C'est pareil", "Expliquer: AVEX débute après/complète garantie fabricant. Date début peut être révisée si garantie fabricant active (section 5.2), preuve km requise. AVEX = prolongation/extension", "C'est compliqué", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à clarifier: AVEX = prolongation après garantie fabricant, date début ajustable si fabricant active (5.2), preuve km requise, AVEX continue protection seamless."
+    },
+    {
+      "question": "La date de début de garantie peut-elle être révisée par l'Administrateur ?",
+      "options": ["Non, jamais", "OUI, date début peut être révisée si Propriétaire sous garantie manufacturier à l'achat, n'est plus couvert, peut fournir preuve lecture km à ce moment-là (section 5.2)", "Seulement augmentée", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 5.2: Date début garantie peut être révisée par Administrateur si Propriétaire qui a acheté véhicule sous garantie manufacturier, n'est plus couvert, peut fournir preuve lecture compteur kilométrique."
+    },
+    {
+      "question": "La Documentation vérifiable peut-elle être demandée par l'Administrateur ?",
+      "options": ["Non, jamais", "OUI, Documentation vérifiable peut être demandée par l'Administrateur à TOUT MOMENT pendant durée de la garantie (section 5.3)", "Seulement au début", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 5.3: Documentation vérifiable peut être demandée par l'Administrateur à tout moment pendant la durée de la garantie (factures entretien générées ordinateur, Centre agréé, avec infos complètes)."
+    },
+    {
+      "question": "Comment conseiller un client sur la conservation de la Documentation vérifiable ?",
+      "options": ["Pas nécessaire", "Conseiller FORTEMENT: conserver TOUTES factures entretien/réparations (générées ordinateur, Centres agréés, infos complètes). Administrateur peut demander anytime (5.3). Organisation = protection garantie", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil préventif fort: conserver TOUTES factures (ordinateur, Centre agréé, infos complètes Propriétaire/véhicule/date/km), demande possible anytime (5.3), organisation cruciale."
+    },
+    {
+      "question": "L'Administrateur peut-il faire inspecter le véhicule ?",
+      "options": ["Non, jamais", "OUI, l'Administrateur se réserve le DROIT de faire inspecter le véhicule dans un Centre de Réparation Autorisé (section 5.4)", "Seulement avec permission", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 5.4: L'Administrateur se réserve le droit de faire inspecter le véhicule dans un Centre de Réparation Autorisé (vérification état, admissibilité, etc.)."
+    },
+    {
+      "question": "Quelle est la responsabilité du propriétaire concernant les indicateurs d'entretien ?",
+      "options": ["Aucune", "Responsabilité Propriétaire s'assurer que TOUS indicateurs d'entretien du véhicule sont EN ÉTAT DE FONCTIONNEMENT (section 5.5)", "Administrateur responsable", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "Section 5.5: Il est de la responsabilité du Propriétaire du Véhicule de s'assurer que tous les indicateurs d'entretien du véhicule sont en état de fonctionnement."
+    },
+    {
+      "question": "Comment expliquer l'importance des indicateurs fonctionnels (section 5.5) ?",
+      "options": ["Pas important", "Expliquer: indicateurs fonctionnels = CRUCIAL surveiller santé véhicule (température, huile, freins). Non-respect signaux = exclusion (4.5). Responsabilité vérifier fonctionnement", "C'est automatique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer criticité: indicateurs = surveillance santé véhicule, non-respect = exclusion (4.5), responsabilité propriétaire vérifier fonctionnement (5.5), prévention dommages."
+    },
+    {
+      "question": "Que doit faire le propriétaire en cas de Panne selon la section 6 ?",
+      "options": ["Réparer directement", "Communiquer avec Administrateur par téléphone (1-866-666-0181) OU courriel (info@garantieavantageplus.ca) pour aviser de la Panne", "Attendre", "Selon le garage"],
+      "correctAnswer": 1,
+      "explanation": "Section 6: En cas de Panne, Propriétaire DOIT communiquer avec Administrateur soit par téléphone (1-866-666-0181) ou par courriel (info@garantieavantageplus.ca) afin d'aviser l'Administrateur de la Panne."
+    },
+    {
+      "question": "Comment expliquer le processus de réclamation AVEX étape par étape ?",
+      "options": ["C'est compliqué", "5 étapes: 1) Contacter Administrateur (1-866-666-0181), 2) Direction vers Centre Autorisé, 3) Évaluation soumise Administrateur, 4) Si approuvée: numéro autorisation écrit, 5) Réparation effectuée", "3 étapes", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication claire 5 étapes: contact Administrateur, direction Centre Autorisé, évaluation soumise, approbation écrite (si admissible), réparation. Processus transparent simple."
+    },
+    {
+      "question": "L'agent de l'Administrateur dirige le propriétaire vers quel type d'établissement ?",
+      "options": ["N'importe quel garage", "Centre de Réparation Autorisé où agent soumettra évaluation (aux frais propriétaire) directement à l'Administrateur pour évaluation", "Concessionnaire seulement", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Section 6: Agent Administrateur dirige Propriétaire vers Centre de Réparation Autorisé où agent Centre soumettra évaluation (aux frais propriétaire) directement à Administrateur pour évaluation par agent."
+    },
+    {
+      "question": "Comment expliquer les frais d'évaluation à la charge du propriétaire ?",
+      "options": ["Ignorer", "Expliquer: évaluation initiale = frais propriétaire (diagnostic). Si réparation approuvée: 2 heures diagnostic REMBOURSÉES taux main-d'œuvre Centre Autorisé (section 7.12). Pas de frais si couvert", "C'est cher", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rassurer: évaluation = frais initiaux propriétaire, MAIS si réparation approuvée Centre Autorisé: 2 heures diagnostic REMBOURSÉES (7.12), frais nets finaux zéro si couvert."
+    },
+    {
+      "question": "Si la réparation est approuvée, que reçoit le Centre de Réparation Autorisé ?",
+      "options": ["Appel verbal", "Numéro d'autorisation avec montant remboursement assigné au bon de travail dans format IMPRIMÉ envoyé par courriel ou télécopieur", "Texto", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 6: Si réparation approuvée, un numéro d'autorisation avec le montant du remboursement sera assigné au bon de travail dans un format IMPRIMÉ pour être envoyé par courriel ou par télécopieur au Centre."
+    },
+    {
+      "question": "Les approbations vocales, textes ou supposées sont-elles reconnues ?",
+      "options": ["Oui, équivalent", "NON, toute autre forme d'approbation (supposée, vocale, texte ou autre) ne sera PAS reconnue par l'Administrateur (section 6)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 6: Toute autre forme d'approbation, qu'elle soit supposée, vocale, texte ou autre, ne sera PAS reconnue par l'Administrateur. Seule autorisation ÉCRITE (imprimée courriel/fax) reconnue."
+    },
+    {
+      "question": "Comment expliquer l'importance de l'autorisation ÉCRITE seulement ?",
+      "options": ["C'est rigide", "Expliquer: autorisation ÉCRITE (imprimée courriel/fax) = protection TOUS (Propriétaire, Centre, Administrateur). Trace claire, montant précis, évite malentendus. Processus professionnel transparent", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer bénéfice: autorisation ÉCRITE protège tous (propriétaire, Centre, Administrateur), trace claire, montant précis, évite malentendus/litiges, professionnalisme."
+    },
+    {
+      "question": "Que peut faire le propriétaire si la panne survient hors heures de travail ?",
+      "options": ["Attendre obligatoirement", "Propriétaire peut envoyer factures (Documentation vérifiable) des montants encourus à l'Administrateur pour évaluation, processus suivi même manière", "Rien", "Selon le garage"],
+      "correctAnswer": 1,
+      "explanation": "Section 6: Si panne hors heures et impossibilité contacter Administrateur, Propriétaire peut envoyer Documentation vérifiable des montants encourus à Administrateur pour évaluation, processus suivi même manière."
+    },
+    {
+      "question": "La présentation d'une réclamation garantit-elle la couverture ?",
+      "options": ["Oui, automatique", "NON, la présentation d'une réclamation ne garantit PAS qu'il y aura couverture en vertu du programme de garantie (section 6)", "Oui, toujours", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 6: IMPORTANT - La présentation d'une réclamation ne garantit PAS qu'il y aura couverture en vertu du programme de garantie (évaluation selon termes/conditions)."
+    },
+    {
+      "question": "Comment expliquer que réclamation ne garantit pas couverture ?",
+      "options": ["C'est injuste", "Expliquer: réclamation soumise = évaluation selon termes/conditions/exclusions. Si admissible = couvert. Si exclus = non couvert. Processus équitable transparent basé contrat", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer équité: chaque réclamation évaluée selon termes/conditions/exclusions contrat, si admissible = couvert, si exclus = non couvert, processus transparent équitable."
+    },
+    {
+      "question": "Quel délai pour soumettre bons de travail/factures à l'Administrateur ?",
+      "options": ["60 jours", "Trente (30) jours à compter date présentation demande à l'Administrateur (section 7.1)", "15 jours", "45 jours"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.1: Les bons de travail, factures et tous autres Documentation vérifiable de plus de trente (30) jours à compter de la date de présentation de la demande à l'Administrateur ne sera ni accepté ni autorisé."
+    },
+    {
+      "question": "Les pannes à l'extérieur du Canada ou USA continental sont-elles autorisées ?",
+      "options": ["Oui, partout", "NON, toute Panne qui se produit à l'extérieur du Canada ou de la zone continentale des États-Unis ne sera PAS autorisée par l'Administrateur (section 7.2)", "Partiellement", "Selon le pays"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.2: Toute Panne qui se produit à l'extérieur du Canada ou de la zone continentale des États-Unis ne sera pas autorisée par l'Administrateur (couverture Canada/USA continental seulement)."
+    },
+    {
+      "question": "La présentation de réclamation doit-elle être confirmée par le propriétaire ?",
+      "options": ["Non, Centre suffit", "OUI, présentation réclamation DOIT être confirmée par Propriétaire du Véhicule à l'Administrateur sinon il n'y aura PAS d'autorisation pour la réparation (section 7.3)", "Optionnel", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.3: La présentation de la réclamation DOIT être confirmée par le Propriétaire du Véhicule à l'Administrateur ou il n'y aura pas d'autorisation pour la réparation."
+    },
+    {
+      "question": "Comment expliquer l'importance de la confirmation propriétaire (section 7.3) ?",
+      "options": ["Pas important", "Expliquer: confirmation propriétaire = protection contre travaux non autorisés, fraudes. Propriétaire informé/approuve AVANT réparation. Contrôle total, transparence, sécurité", "C'est bureaucratique", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer protection: confirmation propriétaire protège contre travaux non autorisés/fraudes, propriétaire informé/approuve avant, contrôle total, transparence complète."
+    },
+    {
+      "question": "Quels documents le Centre doit-il fournir pour remboursement (section 7.4.a) ?",
+      "options": ["Seulement facture", "Copie facture autorisée indiquant Administrateur = payeur facture, avec montant facturé correspondant au montant sur formulaire d'autorisation", "Rien", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.4.a: Administrateur remboursera quand reçu copie de la facture autorisée, indiquant que l'Administrateur est le payeur de la facture, avec le montant facturé correspondant au montant sur le formulaire d'autorisation."
+    },
+    {
+      "question": "Quels documents si le propriétaire est le payeur (section 7.4.b) ?",
+      "options": ["Seulement facture", "Copie facture autorisée indiquant Propriétaire = payeur, avec nom Administrateur, numéro autorisation et montant autorisation visiblement situés sur facture", "Rien de spécial", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.4.b: Copie de la facture autorisée, indiquant que le Propriétaire du Véhicule est le payeur de cette facture, avec le nom de l'Administrateur, le numéro d'autorisation et le montant de l'autorisation visiblement situés sur la facture."
+    },
+    {
+      "question": "Quels documents si le propriétaire a payé en totalité (section 7.4.c) ?",
+      "options": ["Seulement facture", "Copie facture indiquant Propriétaire = payeur + copie formulaire autorisation signé par propriétaire + preuve de paiement complet", "Rien de plus", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 7.4.c: Copie de la facture, indiquant que le Propriétaire du Véhicule est le payeur de la facture, avec une copie du formulaire d'autorisation signé par le propriétaire du véhicule, accompagnée d'une preuve de paiement complet."
+    },
+    {
+      "question": "Comment expliquer les 3 options de paiement/remboursement AVEX ?",
+      "options": ["C'est compliqué", "Expliquer 3 scénarios: A) Administrateur paie directement Centre (facture Administrateur payeur), B) Propriétaire paie (infos autorisation sur facture), C) Propriétaire paie total (formulaire signé + preuve paiement requise). Flexibilité processus", "Un seul choix", "Selon le Centre"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer flexibilité: 3 scénarios possibles (Administrateur paie Centre, Propriétaire paie avec infos, Propriétaire paie total avec preuves), processus adaptable situations."
+    },
+    {
+      "question": "Un collègue dit à un client \"pas besoin d'appeler Administrateur, réparez directement\". Comment réagissez-vous ?",
+      "options": ["Être d'accord", "Corriger IMMÉDIATEMENT: autorisation préalable OBLIGATOIRE (1-866-666-0181). Sans autorisation = exclusion (4.13), aucun remboursement. Protéger client erreur coûteuse", "L'ignorer", "Selon l'urgence"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction urgente: autorisation préalable OBLIGATOIRE, sans autorisation = exclusion totale (4.13), protéger client erreur très coûteuse, expliquer processus correct."
+    }
+  ]
+}
+

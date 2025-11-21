@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 1,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle section couvre le moteur essence ou diesel ?",
+      "options": ["Section 1", "Section 2", "Section 3", "Section 4"],
+      "correctAnswer": 0,
+      "explanation": "La section 1 couvre le moteur (essence ou diesel) incluant le bloc-cylindres et toutes les pièces internes lubrifiées."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour être admissible au programme AT PLUS ?",
+      "options": ["6 ans", "8 ans", "10 ans", "12 ans"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS s'applique aux véhicules âgés de 8 ans et moins ayant 140 000 km et moins."
+    },
+    {
+      "question": "Quelle section couvre la transmission automatique ?",
+      "options": ["Section 1", "Section 2", "Section 3", "Section 4"],
+      "correctAnswer": 1,
+      "explanation": "La section 2 couvre la transmission automatique incluant le boîtier et toutes les pièces lubrifiées internes."
+    },
+    {
+      "question": "Un client avec un véhicule Toyota Camry 2020 de 90 000 km demande la couverture maximale. Quel programme recommandez-vous ?",
+      "options": ["Programme AX-3", "Programme AT", "Programme AT PLUS", "Programme AVE"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS couvre les sections 1 à 27 (couverture la plus complète) et Toyota fait partie de la Catégorie A admissible."
+    },
+    {
+      "question": "Le programme AT PLUS couvre combien de sections au total ?",
+      "options": ["16 sections", "18 sections", "24 sections", "27 sections"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AT PLUS couvre les sections 1 à 27, offrant la couverture la plus complète de tous les programmes."
+    },
+    {
+      "question": "Quelle est la franchise du programme AX-1 ?",
+      "options": ["100$", "125$", "150$", "175$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-1 a une franchise de 125$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Quelles pièces internes du moteur sont couvertes par la section 1 ?",
+      "options": ["Seulement le bloc-cylindres", "Bloc et pistons uniquement", "Bloc-cylindres et toutes les pièces internes lubrifiées", "Uniquement l'arbre à cames"],
+      "correctAnswer": 2,
+      "explanation": "La section 1 couvre le bloc-cylindres et toutes les pièces internes lubrifiées incluant arbre à cames, bielles, coussinets, pistons, vilebrequin, etc."
+    },
+    {
+      "question": "Combien coûte l'option Service routier + par année pour le programme AX-1 ?",
+      "options": ["25$", "50$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Service routier + coûte 50$ par année pour le programme AX-1 (exemple : 150$ pour un contrat de 3 ans)."
+    },
+    {
+      "question": "Un client vous demande si son alternateur est couvert. Dans quelle section se trouve cette pièce ?",
+      "options": ["Section 11", "Section 12", "Section 15", "Section 18"],
+      "correctAnswer": 1,
+      "explanation": "L'alternateur est couvert dans la section 12 - Accessoires Essentiels, qui inclut aussi le démarreur et le compresseur d'air climatisé."
+    },
+    {
+      "question": "Comment expliquer à un client la valeur de l'option A.V.N. pour son véhicule 2021 avec écran tactile et navigation ?",
+      "options": ["Cette option n'est pas nécessaire pour les véhicules récents", "Elle couvre les écrans tactiles, GPS, caméras et système Bluetooth", "Elle couvre seulement la radio", "Elle est incluse dans tous les programmes"],
+      "correctAnswer": 1,
+      "explanation": "L'option A.V.N. couvre les écrans tactiles, système de navigation GPS, caméras, lecteurs DVD/CD et ensemble Bluetooth (section 3)."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AX-3 ?",
+      "options": ["140 000 km", "200 000 km", "225 000 km", "280 000 km"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-3 s'applique aux véhicules ayant 200 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "La pompe à carburant électrique est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 12", "Section 13", "Section 17"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Système d'alimentation couvre la pompe à carburant électrique ainsi que les injecteurs et le régulateur de pression."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AX-2 ?",
+      "options": ["1 terme (12 mois)", "2 termes (12 et 24 mois)", "3 termes (12, 24 et 36 mois)", "5 termes"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-2 est disponible pour 3 termes : 12 mois, 24 mois ou 36 mois selon la durée du contrat."
+    },
+    {
+      "question": "Les joints homocinétiques (C.V.) sont couverts dans quelle section ?",
+      "options": ["Section 5", "Section 6", "Section 7", "Section 9"],
+      "correctAnswer": 3,
+      "explanation": "La section 9 - Direction couvre les joints homocinétiques (C.V.), bien que les soufflets soient exclus."
+    },
+    {
+      "question": "Un client demande de modifier la date de livraison sur le contrat pour éviter la période d'attente. Quelle est la réponse professionnelle ?",
+      "options": ["Accepter pour satisfaire le client", "Refuser poliment en expliquant que c'est contraire aux règles", "Demander un supplément pour le faire", "Accepter si le montant est élevé"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de refuser toute falsification de documents. La période d'attente de 15 jours est obligatoire selon le contrat."
+    },
+    {
+      "question": "Quelle est la franchise du programme AT PLUS ?",
+      "options": ["0$", "100$", "125$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS a une franchise de 100$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Le compresseur d'air climatisé est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 0,
+      "explanation": "La section 12 - Accessoires Essentiels couvre le compresseur d'air climatisé, bien que la valve détendeur soit exclue."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AX-1 ?",
+      "options": ["1 000$", "2 000$", "4 000$", "6 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le montant total payé par le contrat pour le programme AX-1 est de 2 000$ selon les détails financiers."
+    },
+    {
+      "question": "Quelle section couvre le différentiel avant ou arrière ?",
+      "options": ["Section 3", "Section 4", "Section 5", "Section 6"],
+      "correctAnswer": 1,
+      "explanation": "La section 4 couvre le différentiel (avant ou arrière) incluant le carter et toutes les pièces internes lubrifiées."
+    },
+    {
+      "question": "Un client hésite entre AX-2 et AX-3 pour son véhicule de 10 ans avec 180 000 km. Quel argument clé présentez-vous ?",
+      "options": ["Les deux sont identiques", "AX-3 offre une section supplémentaire et des montants maximaux supérieurs", "AX-2 est suffisant pour tous les véhicules", "AX-3 coûte moins cher"],
+      "correctAnswer": 1,
+      "explanation": "AX-3 couvre les sections 1 à 12 (vs 1-11 pour AX-2) avec un montant total de 6 000$ (vs 4 000$) et 3 000$ par réclamation (vs 1 500$)."
+    },
+    {
+      "question": "Combien coûte l'option Diesel pour le programme AT ?",
+      "options": ["45$", "75$", "100$", "150$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Diesel coûte 75$ pour le programme AT. Si choisie, l'option Turbo doit être ajoutée obligatoirement."
+    },
+    {
+      "question": "Le démarreur est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 12", "Section 15"],
+      "correctAnswer": 2,
+      "explanation": "La section 12 - Accessoires Essentiels couvre le démarreur et le solénoïde du démarreur."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AT ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT a une limite de kilométrage de 20 000 km par année sélectionnée selon les détails financiers."
+    },
+    {
+      "question": "La transmission manuelle est couverte dans quelle section ?",
+      "options": ["Section 2", "Section 3", "Section 4", "Section 5"],
+      "correctAnswer": 1,
+      "explanation": "La section 3 couvre la transmission manuelle incluant le boîtier et toutes les pièces lubrifiées internes."
+    },
+    {
+      "question": "Un client mécontent d'une exclusion menace de partir. Comment gérez-vous cette situation professionnellement ?",
+      "options": ["Promettre que tout sera couvert", "Expliquer calmement les couvertures incluses et proposer des options supplémentaires", "Ignorer ses préoccupations", "Baisser le prix sans expliquer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige de rassurer le client en expliquant les nombreuses pièces couvertes (sections 1 à 27 pour AT PLUS) et les options disponibles."
+    },
+    {
+      "question": "Le programme AVE est conçu pour quels types de véhicules ?",
+      "options": ["Véhicules diesel uniquement", "Véhicules essence seulement", "Véhicules Hybrides (HEV), Hybrides Branchables (PHEV) et Électriques (BEV)", "Véhicules commerciaux"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE est spécifique pour les véhicules Hybrides (HEV), Hybrides Branchables (PHEV) et Électriques (BEV)."
+    },
+    {
+      "question": "Combien coûte l'option 0$ de Franchise pour le programme AX-1 ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 0$ de Franchise coûte 100$ pour le programme AX-1 selon les options disponibles."
+    },
+    {
+      "question": "Le boîtier de transfert (4x4) est couvert dans quelle section ?",
+      "options": ["Section 4", "Section 5", "Section 6", "Section 7"],
+      "correctAnswer": 1,
+      "explanation": "La section 5 couvre le boîtier de transfert (inclut 4x4 ou traction intégrale) avec le carter et toutes les pièces internes lubrifiées."
+    },
+    {
+      "question": "Quel numéro le propriétaire doit-il composer en cas de panne ?",
+      "options": ["1-800-666-0181", "1-866-666-0181", "1-888-666-0181", "1-877-666-0181"],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire doit composer le 1-866-666-0181 pour aviser l'Administrateur d'une panne selon les procédures de réclamation."
+    },
+    {
+      "question": "Quelle marque automobile fait partie de la Catégorie A du programme AT PLUS ?",
+      "options": ["Ford", "BMW", "Toyota", "Volkswagen"],
+      "correctAnswer": 2,
+      "explanation": "Toyota fait partie de la Catégorie A incluant Acura, Genesis, Honda, Hyundai, Infiniti, Kia, Lexus, Mitsubishi, Nissan, Scion et Suzuki."
+    }
+  ]
+}
+

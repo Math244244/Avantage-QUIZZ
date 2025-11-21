@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 5,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le brûleur du chauffe-eau est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 16 - Système chauffe-Eau", "Oui, composant 15", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 16 - Système chauffe-Eau couvre brûleur, les connexions, relais & interrupteur électrique, soupape de sureté et réservoir."
+    },
+    {
+      "question": "Combien coûte l'option Suspension à air ?",
+      "options": ["200$", "300$", "400$", "500$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Suspension à air coûte 500$ et est disponible uniquement pour les termes de 36 mois et plus (section 3 - aVR-Plus)."
+    },
+    {
+      "question": "Le réservoir du chauffe-eau est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 16 - Système chauffe-Eau", "Oui, composant 15", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 16 - Système chauffe-Eau couvre réservoir, brûleur, thermocouple, thermostat, soupape de sureté et relais & interrupteur électrique."
+    },
+    {
+      "question": "L'option Suspension à air est-elle disponible pour tous les termes ?",
+      "options": ["Oui, tous termes", "Non, disponible uniquement pour les termes de 36 mois et plus", "Oui, avec supplément", "Selon le programme"],
+      "correctAnswer": 1,
+      "explanation": "L'option Suspension à air est disponible uniquement pour les termes de 36 mois et plus selon la condition (section 3 - aVR-Plus)."
+    },
+    {
+      "question": "Le thermostat du chauffe-eau est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 16 - Système chauffe-Eau", "Oui, composant 17", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 16 - Système chauffe-Eau couvre thermostat, thermocouple, réservoir, soupape de sureté et brûleur."
+    },
+    {
+      "question": "Comment présenter les options disponibles à un client avec VR récent ?",
+      "options": ["Pas nécessaires", "Évaluer besoins: Diesel/Pusher si applicable, Pas franchise 100$, Km illimité 100$, options premium 500$ (termes 36+ mois)", "Toutes obligatoires", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer besoins du client et recommander options pertinentes selon type VR et durée du terme choisi."
+    },
+    {
+      "question": "Le brûleur de fournaise est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 17 - Système de chauffage", "Oui, composant 16", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 17 - Système de chauffage couvre brûleur, fournaise, moteur de ventilateur, les connecteurs, démarreur et soupapes."
+    },
+    {
+      "question": "Un VR repris par la banque est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule repris par banque/institution financière exclu", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule qui a été repris par la banque, l'institution financière ou retourné au Distributeur Autorisé est exclu (section 10.c)."
+    },
+    {
+      "question": "La pompe à chaleur du système de chauffage est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, composant 17 - Système de chauffage", "Oui, composant 19", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 17 - Système de chauffage couvre pompe à chaleur, fournaise, brûleur, moteur de ventilateur, circuits imprimer et thermostat."
+    },
+    {
+      "question": "Les dommages dus au feu sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, réparation endommagée par feu, eau, infiltration d'eau, neige, glace, vent exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due au feu, l'eau, l'infiltration d'eau, la neige, la glace, le vent ou tout autre acte de la nature est exclue (section 5.1)."
+    },
+    {
+      "question": "Le thermostat du système de chauffage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 17 - Système de chauffage", "Oui, composant 16", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 17 - Système de chauffage couvre thermostat, thermocouple, relais, circuits imprimer, joints et soupapes."
+    },
+    {
+      "question": "Comment gérer un client qui a fait réparer une pièce non couverte ?",
+      "options": ["Rembourser", "Expliquer poliment que réparation de pièce non couverte est exclue, rediriger vers 22 composants couverts", "Mentir", "Céder"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment l'exclusion, référer aux composants couverts (sections 2) et offrir information pour futures réclamations."
+    },
+    {
+      "question": "Le moteur génératrice est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 18 - Système moteur auxiliaire", "Oui, composant 1", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 18 - Système moteur auxiliaire couvre moteur génératrice, panneau de commande, convertisseur & inverseur de puissance, relais électrique."
+    },
+    {
+      "question": "Un VR déclaré perte totale est-il encore couvert ?",
+      "options": ["Oui, automatiquement", "Non, tout véhicule déclaré perte totale, perte partielle ou volé exclu", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule déclaré perte totale, perte partielle ou volé est exclu du programme (section 10.d)."
+    },
+    {
+      "question": "Le convertisseur & inverseur de puissance est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 18 - Système moteur auxiliaire", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 18 - Système moteur auxiliaire couvre convertisseur & inverseur de puissance, panneau de commande, relais électrique et circuits imprimés."
+    },
+    {
+      "question": "L'Administrateur peut-il utiliser des pièces usagées ou remises à neuf ?",
+      "options": ["Non, seulement neuves", "Oui, se réserve le droit d'autoriser pièces usagées, neuves ou remises à neuf", "Seulement avec accord", "Non, jamais"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur se réserve le droit d'autoriser les pièces usagées, neuves ou remises à neuf pour chaque réclamation (section 8.8)."
+    },
+    {
+      "question": "Les câbles électriques de génératrice sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 18 - Système moteur auxiliaire", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 18 - Système moteur auxiliaire couvre câbles électriques de génératrice, démarreur, régulateur, circuits imprimés et moteur génératrice."
+    },
+    {
+      "question": "Un client veut installer une classe de pièce différente de celle autorisée. Est-ce possible ?",
+      "options": ["Non, impossible", "Oui, propriétaire doit payer la différence entre pièce autorisée et celle demandée", "Oui, gratuit", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si le propriétaire souhaite installer une classe de pièce différente, il doit payer la différence entre la pièce autorisée et celle demandée (section 8.8)."
+    },
+    {
+      "question": "Le compresseur du climatiseur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 19 - Climatiseur (centrale / toit)", "Oui, composant 7", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 19 - Climatiseur couvre compresseur, accumulateur, moteur du ventilateur, condenseur, panneau de commande et évaporateur."
+    },
+    {
+      "question": "Les factures de plus de 30 jours sont-elles acceptées ?",
+      "options": ["Oui, toutes", "Non, factures de plus de 30 jours à compter de la date de réparation non acceptées", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les factures pour les montants encourus envoyées à l'Administrateur datant de plus de 30 jours à compter de la date de réparation ne seront pas acceptées (section 8.2)."
+    },
+    {
+      "question": "Le condenseur du climatiseur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 19 - Climatiseur (centrale / toit)", "Oui, composant 7", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 19 - Climatiseur couvre condenseur, compresseur, évaporateur, soupapes, pompe de la chaleur et thermostat."
+    },
+    {
+      "question": "Comment expliquer le processus d'autorisation à un nouveau client ?",
+      "options": ["Pas nécessaire", "Obligatoire: contacter Administrateur AVANT travaux, obtenir numéro d'autorisation écrit avec montant, sinon aucun remboursement", "Optionnel", "Après réparation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : numéro d'autorisation OBLIGATOIRE AVANT travaux (format imprimé avec montant), sinon aucun remboursement (section 5.12 et 7)."
+    },
+    {
+      "question": "Le thermostat du climatiseur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 19 - Climatiseur (centrale / toit)", "Oui, composant 17", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 19 - Climatiseur couvre thermostat, relais, interrupteurs, pompe de la chaleur, soupapes et panneau de commande."
+    },
+    {
+      "question": "Les dommages dus à une pièce non couverte sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, réparation endommagée par une pièce non couverte (mécanique ou esthétique) exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne due à une pièce non couverte, mécanique ou esthétique, est exclue (section 5.3)."
+    },
+    {
+      "question": "Le moteur de l'auvent est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 20 - System d'extensions", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 20 - System d'extensions couvre moteur de l'auvent, système marchepied (manuel ou électrique), systèmes à glissières et systèmes à mise à niveau."
+    },
+    {
+      "question": "Un client satisfait partage une critique positive. Comment réagissez-vous ?",
+      "options": ["Ignorer", "Remercier chaleureusement, partager sur réseaux sociaux, lui offrir carte référence", "Demander argent", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage à cultiver les témoignages positifs en remerciant, partageant et facilitant les références futures pour développer le business."
+    },
+    {
+      "question": "Le système marchepied électrique incluant câblage est-il couvert ?",
+      "options": ["Non, exclu", "Oui, composant 20 - System d'extensions", "Oui, composant 10", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 20 - System d'extensions couvre système marchepied – manuel ou électrique incluant câblage, systèmes à glissières et moteur de l'auvent."
+    },
+    {
+      "question": "Un VR dont l'odomètre a été modifié est-il admissible ?",
+      "options": ["Oui, si déclaré", "Non, réparation si odomètre non fonctionnel ou modifié en contravention d'une loi exclue", "Oui, avec supplément", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation si la lecture du compteur kilométrique n'est pas fonctionnelle ou a été modifié en contravention d'une loi applicable est exclue (section 5.7)."
+    },
+    {
+      "question": "Les systèmes à glissières mécaniques, électriques ou hydrauliques sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 20 - System d'extensions", "Oui, composant 18", "Seulement avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 20 - System d'extensions couvre systèmes à glissières – mécanique, électrique ou hydraulique, systèmes à mise à niveau et marchepied."
+    },
+    {
+      "question": "Comment rassurer un client inquiet des exclusions ?",
+      "options": ["Minimiser", "Expliquer les 22 composants couverts (Motorisé/Habitacle), 5 protections incluses, options disponibles", "Dire qu'il n'y en a pas", "Changer de sujet"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à mettre l'accent sur l'étendue de la couverture (22 composants), les 5 protections incluses et les options disponibles."
+    }
+  ]
+}
+

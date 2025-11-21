@@ -1,0 +1,170 @@
+{
+  "module": "hasard-route",
+  "month": 12,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelle est la valeur TOTALE maximale de protection offerte par Hasard de Route (tous services combinés) ?",
+      "options": ["10 000$", "15 000$ limite cumulative totale + valeur services illimités (pneus, roues, clés, intérieur, bosses, pare-brise, remorquage) = protection potentielle 20 000$-30 000$ sur 7 ans utilisation intensive", "20 000$", "Selon l'utilisation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation complète : limite 15 000$ cumulative + services illimités (pneus roues clés intérieur bosses pare-brise remorquage) = protection potentielle 20 000$-30 000$ sur 7 ans utilisation réaliste intensive."
+    },
+    {
+      "question": "Quel est le ROI MINIMUM garanti si client utilise UNE SEULE réclamation majeure (pare-brise Tesla 2500$, programme Super Highline + 84 mois 2490$) ?",
+      "options": ["Perte", "ROI positif 10$ (2500$ économisé - 2490$ coût) dès 1ère réclamation. MAIS client conserve 9 autres protections illimitées 7 ans restants = ROI potentiel 10 000$+ additionnel. Investissement rentabilisé réclamation 1, profit massif après", "Neutre", "Selon l'utilisation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige démonstration ROI minimum : 1 pare-brise Tesla 2500$ = +10$ profit immédiat (2500-2490), client conserve 9 protections illimitées 7 ans = potentiel 10 000$+ additionnel, rentabilisé réclamation 1 profit massif après."
+    },
+    {
+      "question": "Comment calculer le coût RÉEL quotidien du programme Standard 84 mois pour client hésitant ?",
+      "options": ["Trop compliqué", "Calcul ACCESSIBILITÉ : 1 026$ ÷ 84 mois = 12,21$/mois ÷ 30 jours = 0,41$/jour. \"Moins qu'un café quotidien (2$-3$). Protection 10 services COMPLÈTE = prix 1 café chaque 5-7 jours. Accessibilité exceptionnelle tranquillité totale.\" Démonstration accessibilité maximale", "12$/mois seulement", "Selon le mois"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à démonstration accessibilité : 1 026$ ÷ 84 ÷ 30 = 0,41$/jour = moins café quotidien (2$-3$), protection 10 services complète = prix 1 café/5-7 jours, accessibilité exceptionnelle tranquillité, impact budget minimal."
+    },
+    {
+      "question": "Quelle est la stratégie OPTIMALE pour présenter les 4 catégories tarifaires à un client ?",
+      "options": ["Liste sèche", "Stratégie CONSULTATIVE : 1) Identifier marque véhicule client AVANT discussion prix, 2) Présenter catégorie APPLICABLE client (ex: Honda = Standard), 3) Expliquer LOGIQUE tarification (coûts pièces réels marque), 4) Comparer 2 termes (36 vs 84 mois = démonstration ratio), 5) Recommander terme optimal profil. Approche CIBLÉE (pas bombarder 4 catégories). Efficacité présentation", "4 catégories toutes", "Prix seulement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche consultative ciblée : identifier marque avant, présenter catégorie applicable seulement, expliquer logique tarification (coûts réels), comparer 2 termes (ratio), recommander optimal profil, ciblé (pas bombarder 4 catégories), efficacité."
+    },
+    {
+      "question": "Comment gérer un client indécis entre 2 véhicules (Honda Civic Standard 927$ vs Acura TLX Highline 1201$) demandant conseil Hasard de Route ?",
+      "options": ["Neutralité", "Conseil TRANSPARENT INTÉGRÉ : \"Différence Hasard de Route = 274$ (60 mois). Acura = pièces 30-40% plus coûteuses (phares LED complexes, roues alliage premium). Si budget permet Acura + Highline = investissement cohérent (protection adaptée valeur véhicule). Honda + Standard = protection excellente coût optimal. Décision basée budget TOTAL véhicule + entretien (pas seulement Hasard de Route isolé). Conseil holistique intégré\"", "Promouvoir cher", "Ignorer demande"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil transparent intégré : différence 274$ (60 mois), Acura pièces 30-40% plus coûteuses, budget permet Acura = investissement cohérent protection adaptée, Honda = protection excellente optimal, décision budget total (pas isolé), conseil holistique."
+    },
+    {
+      "question": "Un client entrepreneur (flotte 5 véhicules commerciaux) demande tarif groupe Hasard de Route. Que répondre ?",
+      "options": ["Refuser", "Réponse OPPORTUNITÉ COMMERCIALE : \"Excellente question flotte 5 véhicules. Hasard de Route = conçu véhicules individuels. Flottes commerciales = besoins spécifiques. Je contacte représentant Auto Shield (1-888-406-3002) évaluer possibilité tarif groupe/programme flotte adapté. Engagement revenir 48h avec réponse. Appréciation volume affaires.\" Opportunité développement affaires", "Tarif standard seulement", "Ignorer demande"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à opportunité commerciale : excellente question flotte, Hasard de Route = individuel, flottes = besoins spécifiques, contacter représentant Auto Shield évaluer groupe/flotte, engagement retour 48h, appréciation volume, opportunité développement."
+    },
+    {
+      "question": "Comment intégrer Hasard de Route dans présentation F&I (Financement & Assurance) sans allonger excessivement processus ?",
+      "options": ["Présentation longue", "Intégration F&I EFFICACE : 1) Menu F&I visuel (Hasard de Route = 1 ligne 10 protections résumées), 2) Présentation structurée 5-7 minutes MAXIMUM (10 protections, tarif, ROI scénario), 3) Brochure détaillée remise (lecture ultérieure), 4) Question décision (oui/non/réflexion), 5) Respect temps client. Efficacité + professionnalisme = ne pas allonger processus excessivement (satisfaction globale)", "30 minutes détail", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige efficacité F&I : menu visuel (1 ligne 10 protections), présentation 5-7 min maximum (protections tarif ROI), brochure détaillée remise, question décision (oui/non/réflexion), respect temps, efficacité ne pas allonger excessivement, satisfaction."
+    },
+    {
+      "question": "Un client financé (prêt 60 mois 3,99%) demande \"Quel est le coût RÉEL Hasard de Route avec intérêts prêt ?\". Comment calculer ?",
+      "options": ["Prix catalogue seulement", "Calcul TRANSPARENT INTÉRÊTS : Standard 84 mois 1 026$ financé prêt 60 mois @ 3,99%. Coût intérêts : 1 026$ × (3,99% ÷ 2) × (60 mois ÷ 12 mois) ≈ 102$ intérêts. COÛT TOTAL RÉEL = 1 026$ + 102$ = 1 128$ sur 60 mois = 18,80$/mois incluant intérêts. Transparence totale coût réel client. Honnêteté financière", "Ignorer intérêts", "Selon le prêt"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence intérêts : 1 026$ financé 60 mois @ 3,99% = ~102$ intérêts, coût total réel 1 128$ (1 026+102) = 18,80$/mois incluant intérêts, transparence complète coût réel, honnêteté financière client."
+    },
+    {
+      "question": "Comment gérer un client ayant déjà acheté protection similaire concessionnaire précédent (jamais utilisée, sentiment perte argent) ?",
+      "options": ["Insister quand même", "Approche EMPATHIE + REVALORISATION : \"Comprends frustration investissement non utilisé (sentiment perte). RÉALITÉ protection : valeur = tranquillité esprit (assurance) PAS seulement utilisation réclamations. Analogie : assurance habitation jamais réclamée = succès (pas échec). Hasard de Route précédent = protection réussie (aucun problème majeur). Nouveau véhicule = risques renouvelés (nids-poule, débris imprévisibles). Revalorisation perspective psychologique.\"", "Abandonner", "Rabais compensation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie + revalorisation : comprendre frustration sentiment perte, réalité protection = tranquillité (pas seulement réclamations), analogie assurance habitation jamais réclamée = succès, précédent = protection réussie, nouveau véhicule = risques renouvelés, revalorisation perspective."
+    },
+    {
+      "question": "Un client dit \"Je préfère mettre 1026$ dans compte épargne pour imprévus\". Comment répondre professionnellement ?",
+      "options": ["Insister", "Réponse ANALYTIQUE RESPECTUEUSE : \"Approche sage (discipline épargne). Analyse comparative : 1 026$ épargne = couvre 1-2 réparations majeures (pare-brise 600$ + 1 pneu 250$ = 850$, reste 176$). Hasard de Route 1 026$ = couvre 10 protections ILLIMITÉES 7 ans (potentiel 20-30 réclamations = 5 000$-15 000$ économies). Épargne = réserve limitée. Protection = levier multiplicateur. Respect décision épargne, présenter données comparatives. Choix éclairé client\"", "Forcer achat", "Minimiser épargne"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige analyse respectueuse : approche sage épargne, comparatif 1 026$ épargne = 1-2 réparations (850$ épuisé), Hasard de Route = 10 illimitées 7 ans (20-30 réclamations 5k$-15k$ potentiel), épargne limitée vs levier multiplicateur, respect + données, choix éclairé."
+    },
+    {
+      "question": "Comment structurer suivi post-livraison client ayant acheté Hasard de Route (fidélisation + utilisation optimale) ?",
+      "options": ["Aucun suivi", "Programme SUIVI STRUCTURÉ : 1) Semaine 1 : Appel courtoisie (questions, rappel coordonnées Administrateur), 2) Mois 6 : Courriel rappel protections disponibles + processus réclamation, 3) Année 2 : Enquête satisfaction + utilisation, 4) Année 4-5 : Contact proactif (rappel protections restantes, encouragement utilisation légitime), 5) Année 6-7 : Préparation renouvellement véhicule suivant. Engagement relationnel = fidélisation + satisfaction + utilisation optimale", "Contact seulement problèmes", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à suivi structuré : semaine 1 courtoisie (questions rappel Administrateur), mois 6 courriel protections processus, année 2 satisfaction utilisation, année 4-5 proactif (restantes encouragement légitime), année 6-7 renouvellement futur, engagement relationnel fidélisation."
+    },
+    {
+      "question": "Un client demande \"Puis-je transférer Hasard de Route à véhicule suivant si je change dans 3 ans ?\". Que répondre ?",
+      "options": ["Oui, transférable véhicule", "Clarification TERMES : \"NON, Hasard de Route = lié VÉHICULE SPÉCIFIQUE (NIV/immatriculation), pas transférable autre véhicule. MAIS 2 options : 1) TRANSFERT nouveau propriétaire véhicule actuel (99$+taxes, valeur ajoutée revente), 2) NOUVEAU contrat véhicule suivant (admissibilité vérifiée). Annulation après 10 jours = IMPOSSIBLE (sauf Perte Totale, frais 199$). Planification importante terme choisi (84 mois = période conservation probable).\"", "Oui, transférable", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification termes : non transférable autre véhicule (lié spécifique NIV), mais 2 options (transfert nouveau propriétaire 99$ valeur revente, nouveau contrat véhicule suivant admissibilité), annulation après 10 jours impossible (sauf Perte Totale 199$), planification terme."
+    },
+    {
+      "question": "Comment gérer un client mécontent après refus réclamation (dommage préexistant non déclaré achat) ?",
+      "options": ["Céder", "Gestion EMPATHIE + FERMETÉ : 1) Écouter frustration complètement (validation émotions), 2) Expliquer CLAIREMENT exclusion préexistants (termes contrat écrits), 3) Montrer section contrat spécifique (preuve écrite), 4) Expliquer logique (protection dommages FUTURS pas passés), 5) Proposer révision Administrateur (si preuves nouvelles), 6) Maintenir fermeté termes (intégrité programme). Empathie + limites claires = professionnel", "Rembourser", "Blâmer client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie + fermeté : écouter frustration validation, expliquer exclusion préexistants (termes écrits), montrer section contrat (preuve), logique protection futurs (pas passés), proposer révision (preuves nouvelles), maintenir fermeté intégrité, empathie + limites."
+    },
+    {
+      "question": "Un client voyage fréquemment Mexique (6 mois/an). Hasard de Route couvre-t-il dommages Mexique ?",
+      "options": ["Oui, Amérique Nord", "NON COUVERT MEXIQUE : couverture SEULEMENT Canada + USA continentaux (exclusion explicite). Client voyageur Mexique = recommander : 1) Assurance voyage mexicaine temporaire (couvertures spécifiques), 2) Hasard de Route = protège 6 mois Canada (valeur partielle), 3) Évaluer pertinence investissement (50% temps non couvert). Transparence géographique totale + conseil adapté profil = intégrité", "Oui, avec supplément", "Selon la durée"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté : non couvert Mexique (Canada/USA seulement exclusion explicite), voyageur Mexique = recommander assurance mexicaine temporaire, Hasard de Route protège 6 mois Canada (valeur partielle), évaluer pertinence (50% non couvert), transparence + conseil adapté."
+    },
+    {
+      "question": "Comment former nouveaux conseillers F&I à intégrer Hasard de Route éthiquement dans processus vente ?",
+      "options": ["Formation minimale vente", "Formation F&I ÉTHIQUE COMPLÈTE : 1) Connaissance PRODUIT (termes, protections, limites - test écrit 90%+), 2) Compétences CONSULTATIVES (écoute, questions ouvertes, personnalisation profil), 3) Gestion OBJECTIONS (empathie, données, respect), 4) ÉTHIQUE vente (transparence, aucune pression, respect décision), 5) Jeux RÔLES 20 scénarios clients, 6) Accompagnement terrain 30 jours, 7) Évaluation continue (satisfaction clients, conformité). Excellence = compétence + éthique", "Vendre maximum", "Selon l'expérience"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige formation complète éthique : connaissance produit (termes limites test 90%+), compétences consultatives (écoute questions personnalisation), objections (empathie données respect), éthique (transparence pas pression respect), jeux rôles 20 scénarios, accompagnement 30 jours, évaluation satisfaction conformité, excellence."
+    },
+    {
+      "question": "Un client demande \"Quelle est la différence entre Hasard de Route et garantie prolongée mécanique ?\". Comment clarifier ?",
+      "options": ["Même chose", "Clarification DISTINCTION FONDAMENTALE : GARANTIE PROLONGÉE = protège COMPOSANTS MÉCANIQUES internes (moteur, transmission, différentiel, électronique - pannes mécaniques). HASARD DE ROUTE = protège COMPOSANTS EXTÉRIEURS/CONSOMMABLES (pneus, roues, pare-brise, clés, intérieur, carrosserie - dommages hasards routiers). Deux produits COMPLÉMENTAIRES couvrent aspects DIFFÉRENTS véhicule. Idéalement = COMBINER les deux protection totale (mécanique + hasards). Distinction claire = valeur chaque", "Concurrent", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige distinction fondamentale : Garantie prolongée = composants mécaniques internes (moteur transmission pannes), Hasard de Route = composants extérieurs consommables (pneus pare-brise clés hasards), deux complémentaires aspects différents, idéalement combiner protection totale, distinction = valeur chaque."
+    },
+    {
+      "question": "Comment mesurer performance GLOBALE programme Hasard de Route concessionnaire (pas seulement ventes) ?",
+      "options": ["Ventes seulement", "KPIs GLOBAUX ÉQUILIBRÉS : 1) Taux pénétration ventes (% clients achetant, cible 25-35%), 2) Satisfaction clients post-achat (NPS score), 3) Taux réclamations approuvées clients (qualité ventes, cible 90%+), 4) Revenus programme (commissions Détaillant), 5) Fidélisation clients (renouvellement véhicule suivant), 6) Réputation (avis en ligne, recommandations), 7) Conformité formation équipe. Performance HOLISTIQUE (pas seulement $$) = succès durable", "Commissions seulement", "Selon le mois"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige KPIs holistiques équilibrés : pénétration 25-35%, satisfaction NPS, réclamations approuvées 90%+ (qualité), revenus commissions, fidélisation renouvellement, réputation avis recommandations, conformité formation, performance globale (pas seulement $$) succès durable."
+    },
+    {
+      "question": "Un client mécontent (réclamation refusée) menace avis négatif en ligne. Comment gérer professionnellement ?",
+      "options": ["Ignorer menace", "Gestion CRISE RÉPUTATION : 1) Rester CALME professionnel (ne pas réagir émotionnellement menace), 2) Écouter frustration complètement (validation), 3) Offrir RÉVISION dossier superviseur/Administrateur (2e opinion), 4) Expliquer processus appel/recours disponible, 5) Documenter interaction (protection), 6) Si avis publié = réponse publique professionnelle (reconnaissance, explication termes, invitation contact privé résolution). Transformer menace = opportunité démontrer professionnalisme résolution", "Céder menace", "Contre-menace"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige gestion crise : rester calme (pas émotionnel menace), écouter frustration validation, offrir révision superviseur Administrateur (2e opinion), expliquer appel recours, documenter interaction, si avis publié = réponse professionnelle (reconnaissance explication invitation privé), transformer menace = opportunité professionnalisme."
+    },
+    {
+      "question": "Comment intégrer Hasard de Route dans stratégie DIGITALE concessionnaire (site web, réseaux sociaux) ?",
+      "options": ["Pas nécessaire", "Stratégie DIGITALE INTÉGRÉE : 1) Page web dédiée Hasard de Route (10 protections, tarifs, témoignages, FAQ), 2) Vidéo explicative 3-5 minutes (format simple accessible), 3) Posts réseaux sociaux éducatifs mensuels (scénarios réels, conseils), 4) Calculateur en ligne (estimation tarif selon marque), 5) Formulaire demande info (génération leads), 6) Témoignages vidéo clients satisfaits (preuve sociale), 7) Articles blog (valeur SEO, éducation). Présence digitale = crédibilité + génération intérêt pré-visite", "Seulement vente personne", "Selon le budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à stratégie digitale intégrée : page web dédiée (protections tarifs témoignages FAQ), vidéo 3-5 min explicative, posts sociaux éducatifs mensuels (scénarios conseils), calculateur en ligne (estimation marque), formulaire leads, témoignages vidéo (preuve sociale), blog SEO éducation, présence digitale crédibilité génération."
+    },
+    {
+      "question": "Un client senior (75 ans) conduite très limitée (5000 km/an, trajets locaux) dit \"Pas besoin protection, je conduis prudemment\". Comment répondre respectueusement ?",
+      "options": ["Insister lourdement", "Réponse RESPECTUEUSE ADAPTÉE : \"Respecte totalement votre conduite prudente expérience (sagesse route). RÉALITÉ hasards routiers : imprévisibles indépendants prudence (nid-poule municipalité, débris camion précédent, pierre projection - aucun contrôle conducteur). Budget fixe retraite = dépense imprévue 600$ pare-brise = impact significatif. Protection 12$/mois = tranquillité budget prévisible. Respect décision finale, perspective offerte données. Choix éclairé respecté dignité.\"", "Abandonner immédiatement", "Argumenter agressivement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige respect adapté senior : respecter prudence expérience (sagesse), réalité hasards imprévisibles indépendants prudence (nid-poule débris pierre aucun contrôle), budget fixe retraite = 600$ impact significatif, protection 12$/mois tranquillité prévisible, respect décision perspective données, choix éclairé dignité."
+    },
+    {
+      "question": "Comment gérer tension équipe F&I entre conseillers performance vente Hasard de Route inégale (certains 50% pénétration, autres 10%) ?",
+      "options": ["Ignorer écarts", "Gestion ÉQUIPE CONSTRUCTIVE : 1) Analyse causes écarts (compétence vs effort vs profils clients), 2) Partage meilleures pratiques conseiller 50% (mentorat pair), 3) Formation additionnelle ciblée conseiller 10% (objections, présentation), 4) Accompagnement terrain individuel (coaching personnalisé), 5) Objectifs progressifs réalistes (pas comparaisons directes), 6) Reconnaissance progrès (pas seulement top performer), 7) Culture collaboration (pas compétition toxique). Élever équipe complète = succès durable", "Blâmer faibles", "Compétition agressive"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme managérial exige construction équipe : analyser causes écarts (compétence effort profils), partage pratiques mentorat pair 50%, formation ciblée 10% (objections présentation), coaching terrain personnalisé, objectifs progressifs (pas comparaisons), reconnaissance progrès (pas seulement top), culture collaboration (pas toxique), élever équipe complète."
+    },
+    {
+      "question": "Un client ayant acheté Hasard de Route il y a 5 ans (aucune réclamation) achète véhicule neuf. Comment aborder renouvellement sans lui rappeler \"perte\" investissement précédent ?",
+      "options": ["Ne pas mentionner", "Approche REVALORISATION POSITIVE : \"Félicitations nouveau véhicule. Hasard de Route précédent = SUCCÈS TOTAL (5 ans protection tranquillité, aucun problème majeur véhicule = excellente fiabilité). Votre expérience positive précédente = témoignage valeur. Nouveau véhicule = risques renouvelés (routes détériorées, nouveau cycle). Clients satisfaits protection précédente = taux renouvellement 75% (confiance). Continuité protection sagesse.\" Cadrage POSITIF (succès tranquillité) pas négatif (perte inutilisée)", "Ignorer historique", "Rabais compensation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige revalorisation positive : félicitations nouveau, précédent = succès total (5 ans tranquillité aucun problème fiabilité), expérience positive = témoignage valeur, nouveau = risques renouvelés, clients satisfaits = renouvellement 75% confiance, continuité sagesse, cadrage positif (succès) pas négatif (perte)."
+    },
+    {
+      "question": "Quelle est la phrase de clôture OPTIMALE après présentation complète Hasard de Route client réceptif ?",
+      "options": ["\"Alors, vous le prenez ?\"", "Clôture PROFESSIONNELLE CONSULTATIVE : \"Basé sur votre profil [famille/voyageur/luxe], les 10 protections Hasard de Route à [tarif] représentent investissement [X$/mois] tranquillité totale 7 ans. Je recommande fortement cette protection. Êtes-vous confortable procéder aujourd'hui, ou préférez-vous période réflexion révision termes ?\" = Recommandation confiante + respect choix + alternatives = professionnalisme closing", "Pression immédiate", "\"À vous de décider\""],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clôture consultative : basé profil (famille voyageur luxe), 10 protections tarif = investissement X$/mois tranquillité 7 ans, recommandation forte, confortable procéder aujourd'hui ou réflexion révision termes, recommandation confiante + respect choix + alternatives = professionnalisme closing conversion."
+    },
+    {
+      "question": "Comment créer culture EXCELLENCE vente Hasard de Route concessionnaire (engagement équipe, standards élevés, résultats durables) ?",
+      "options": ["Commissions seulement", "Culture EXCELLENCE HOLISTIQUE : 1) VISION partagée (protection clients = mission, pas seulement ventes), 2) FORMATION continue rigoureuse (compétence obligatoire, certifications), 3) STANDARDS service (100% présentation, qualité conseil, transparence totale), 4) RECONNAISSANCE équilibrée (performance + éthique + satisfaction clients), 5) RESPONSABILITÉ individuelle (conformité, professionnalisme), 6) AMÉLIORATION continue (feedback clients, révision processus), 7) LEADERSHIP exemple (managers modèlent standards). Culture = résultats durables + réputation + fidélisation", "Quotas pression", "Selon les résultats"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme managérial exige culture excellence holistique : vision partagée (protection mission pas seulement ventes), formation continue rigoureuse (compétence certifications), standards service (100% présentation qualité transparence), reconnaissance équilibrée (performance éthique satisfaction), responsabilité individuelle (conformité professionnalisme), amélioration continue (feedback révision), leadership exemple (managers modèlent), culture = résultats durables réputation fidélisation."
+    },
+    {
+      "question": "Après étude complète programme Hasard de Route (12 mois formation), quelle est LA compétence professionnelle FONDAMENTALE réussite vente éthique ?",
+      "options": ["Techniques closing", "Compétence FONDAMENTALE : ÉCOUTE ACTIVE EMPATHIQUE = comprendre profondément besoins/inquiétudes/profil client AVANT recommander solution. Hasard de Route = produit EXCELLENT, mais pertinence dépend client individuel (famille enfants vs senior limité vs voyageur vs luxe). Écoute = personnalisation = conseil adapté = confiance = conversion éthique durable. Techniques vente = outils secondaires. ÉCOUTE EMPATHIQUE = fondation professionnalisme succès relationnel", "Connaissance produit", "Présentation structurée"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme fondamental exige écoute active empathique : comprendre profondément besoins inquiétudes profil client avant recommander, Hasard de Route = excellent mais pertinence dépend individuel (famille senior voyageur luxe), écoute = personnalisation = conseil adapté = confiance = conversion éthique durable, techniques = outils secondaires, écoute empathique = fondation professionnalisme relationnel succès."
+    },
+    {
+      "question": "Un conseiller F&I junior demande \"Quel est LE conseil le plus important que vous donneriez pour réussir vente Hasard de Route long terme ?\". Que répondre ?",
+      "options": ["\"Vendre maximum\"", "Conseil MENTOR SAGESSE : \"Conseil le plus important : vends SEULEMENT si tu crois SINCÈREMENT que client bénéficiera protection (pas seulement commission). Si tu recommandes Hasard de Route à ta propre famille même situation = vends client confiance. Si hésitation = transparence honnêteté. Intégrité LONG TERME (réputation, fidélisation, sommeil tranquille) vaut infiniment plus que vente COURT TERME forcée. Clients sentent authenticité. Sois conseiller DIGNE CONFIANCE, pas vendeur pression. Carrière bâtie intégrité = succès durable épanouissement.\"", "\"Fermer ventes\"", "\"Atteindre quotas\""],
+      "correctAnswer": 1,
+      "explanation": "La sagesse professionnelle mentoring exige conseil intégrité fondamentale : vends seulement si crois sincèrement client bénéficiera (pas commission), si recommandes famille même situation = vends confiance, hésitation = transparence honnêteté, intégrité long terme (réputation fidélisation sommeil) vaut infiniment plus vente court forcée, clients sentent authenticité, conseiller digne confiance (pas vendeur pression), carrière intégrité = succès durable épanouissement."
+    },
+    {
+      "question": "QUESTION FINALE SYNTHÈSE : Après avoir complété cette formation complète Hasard de Route (360 questions), quelles sont les 3 VALEURS FONDAMENTALES que tout professionnel doit incarner ?",
+      "options": ["Performance, quotas, commissions", "3 VALEURS FONDAMENTALES PROFESSIONNALISME : 1) INTÉGRITÉ = transparence totale, honnêteté termes/limites, aucune promesse non prévue contrat, respect client dignité. 2) COMPÉTENCE = connaissance approfondie produit (10 protections, limites, processus), formation continue, conseil adapté personnalisé profil. 3) EMPATHIE = écoute active besoins, respect décision client (aucune pression), gestion objections respectueuse, relation durable (pas transaction unique). INTÉGRITÉ + COMPÉTENCE + EMPATHIE = Excellence professionnelle succès durable épanouissement carrière protection clients", "Vente, closing, persuasion", "Selon les résultats"],
+      "correctAnswer": 1,
+      "explanation": "La synthèse professionnelle finale exige 3 valeurs fondamentales : 1) INTÉGRITÉ (transparence honnêteté termes aucune promesse non prévue respect dignité), 2) COMPÉTENCE (connaissance approfondie 10 protections limites processus formation continue conseil adapté personnalisé), 3) EMPATHIE (écoute active besoins respect décision aucune pression objections respectueuses relation durable), INTÉGRITÉ + COMPÉTENCE + EMPATHIE = excellence professionnelle succès durable épanouissement carrière protection clients. FIN FORMATION."
+    }
+  ]
+}
+

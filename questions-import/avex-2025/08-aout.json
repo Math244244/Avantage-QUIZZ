@@ -1,0 +1,182 @@
+{
+  "module": "avex",
+  "month": 8,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "À tout moment pendant la période de garantie, le propriétaire peut-il transférer la garantie ?",
+      "options": ["Non, jamais", "OUI, Propriétaire peut demander transfert garantie à nouveau Propriétaire à TOUT MOMENT pendant période garantie (section 10.1.a)", "Seulement première année", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.1.a: À tout moment pendant la période de garantie, le Propriétaire du Véhicule peut demander le transfert de la garantie à un nouveau Propriétaire de Véhicule."
+    },
+    {
+      "question": "Comment présenter l'avantage MAJEUR de la garantie transférable AVEX ?",
+      "options": ["Minimiser", "Expliquer: garantie transférable INCLUSE (aucuns frais) = augmente VALEUR REVENTE véhicule (argument puissant), différencie véhicule marché, attractif acheteurs, protection continue nouveau propriétaire", "Pas important", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser ÉNORMÉMENT: garantie transférable INCLUSE gratuite = augmente valeur revente, différenciateur majeur marché, argument vente puissant, attractivité maximale acheteurs."
+    },
+    {
+      "question": "Quelles informations doivent être envoyées pour un transfert de garantie ?",
+      "options": ["Seulement nom", "Nom complet et adresse nouveau Propriétaire de Véhicule, incluant date d'achat et lecture odomètre au moment du transfert (section 10.1.a)", "Aucune", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.1.a: Demandes de transfert doivent être envoyées à l'Administrateur avec le nom complet et l'adresse du nouveau Propriétaire de Véhicule, y compris la date d'achat et la lecture de l'odomètre au moment du transfert."
+    },
+    {
+      "question": "Quel délai pour envoyer les informations de transfert à l'Administrateur ?",
+      "options": ["30 jours", "Quinze premiers jours (15) suivant la nouvelle propriété (section 10.1.a)", "7 jours", "60 jours"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.1.a: Ces informations doivent être envoyées à l'Administrateur dans les quinze premiers jours (15) suivant la nouvelle propriété."
+    },
+    {
+      "question": "Un Distributeur ou Centre de Réparation peut-il recevoir un transfert de garantie ?",
+      "options": ["Oui, admissibles", "NON, Distributeur Autorisé ou Centre de Réparation Autorisé n'est PAS éligible pour les transferts de garantie (section 10.1.a)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.1.a: Un Distributeur Autorisé ou un Centre de Réparation Autorisé n'est pas éligible pour les transferts de garantie."
+    },
+    {
+      "question": "Des frais sont-ils appliqués aux transferts de garantie AVEX ?",
+      "options": ["Oui, 150$", "NON, AUCUNS frais ne seront appliqués aux transferts de garantie (section 10.1.a)", "Oui, 100$", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.1.a: Aucuns frais ne seront appliqués aux transferts de garantie (INCLUS sans frais supplémentaires)."
+    },
+    {
+      "question": "Comment expliquer le processus de transfert simple à un client vendeur ?",
+      "options": ["C'est compliqué", "Expliquer 3 étapes simples: 1) Aviser nouveau propriétaire garantie transférable, 2) Recueillir infos complètes (nom, adresse, date, km), 3) Envoyer Administrateur sous 15 jours. Aucuns frais, processus rapide", "Impossible", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à simplifier: 3 étapes faciles (aviser, recueillir infos, envoyer sous 15 jours), aucuns frais, processus rapide simple, valorise véhicule vente."
+    },
+    {
+      "question": "Dans les 10 premiers jours, le propriétaire peut-il demander annulation ?",
+      "options": ["Non, impossible", "OUI, dans les DIX (10) premiers jours suivant date livraison, Propriétaire peut demander annuler garantie directement au Distributeur Autorisé (section 10.2.a)", "Seulement 5 jours", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.a: Dans les dix (10) premiers jours suivant la date de livraison indiquée sur le programme, le Propriétaire de Véhicule peut demander d'annuler la garantie directement au Distributeur Autorisé."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des remboursements annulation dans les 10 premiers jours ?",
+      "options": ["Oui, responsable", "NON, l'Administrateur n'est PAS responsable des remboursements, refus, frais administratifs ou frais supplémentaires que Distributeur Autorisé peut appliquer (section 10.2.a)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.a: L'Administrateur n'est pas responsable des remboursements, des refus, des frais administratifs ou des frais supplémentaires que le Distributeur Autorisé peut appliquer (annulation 10 premiers jours = entre Propriétaire et Distributeur)."
+    },
+    {
+      "question": "Comment expliquer la période d'annulation de 10 jours (section 10.2.a) ?",
+      "options": ["Ignorer", "Expliquer: 10 premiers jours = période réflexion, annulation possible directement avec Distributeur. Après 10 jours, annulation SEULEMENT si perte totale/vol (10.2.b). Protection changement d'avis initial", "C'est court", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer protection: 10 premiers jours = période réflexion changement avis (annulation Distributeur), après = seulement perte totale/vol, période raisonnable équitable."
+    },
+    {
+      "question": "Après 10 jours, sans Option Protection garantie, quand annulation possible ?",
+      "options": ["Toujours possible", "Annulation possible SEULEMENT si véhicule déclaré perte totale par compagnie assurance (avec preuves: déclaration assureur + certificat immatriculation + lettre quittance si aucun prêt) (section 10.2.b)", "Jamais possible", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.b: Après 10 jours, si Propriétaire n'a PAS acheté Protection de garantie, annulation possible SEULEMENT si véhicule déclaré perte totale par assurance (preuves requises: déclaration, certificat, quittance)."
+    },
+    {
+      "question": "Comment est calculé le remboursement en cas d'annulation après 10 jours ?",
+      "options": ["100% remboursé", "Calculé au PRORATA en utilisant partie prix payé par Distributeur à Administrateur, fonction temps et kilométrage utilisés, MOINS toutes réclamations payées (section 10.2.b)", "50% fixe", "Selon le terme"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.b: Tout montant de remboursement admissible sera calculé au prorata en utilisant une partie du prix payé pour la garantie par le Distributeur Autorisé à L'Administrateur, en fonction du temps et du kilométrage utilisés, moins toutes réclamations payées."
+    },
+    {
+      "question": "Quels documents sont requis pour annulation perte totale (section 10.2.b.i-iv) ?",
+      "options": ["Seulement formulaire", "4 documents: i) Formulaire demande résiliation signé Propriétaire, ii) Certificat immatriculation (infos correspondantes), iii) Preuve déclaration perte totale assurance, iv) Lettre quittance (si aucun prêt en cours)", "Un seul", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.b: 4 documents requis: i) Formulaire demande résiliation signé, ii) Certificat immatriculation correspondant, iii) Preuve déclaration perte totale assureur, iv) Lettre quittance si aucun prêt (fournie par titulaire privilège quand prêt payé)."
+    },
+    {
+      "question": "Comment expliquer le remboursement prorata en cas perte totale ?",
+      "options": ["C'est injuste", "Expliquer: remboursement prorata équitable basé temps/km utilisés (protection reçue) moins réclamations payées. Si perte totale précoce + aucune réclamation, remboursement substantiel. Système équitable", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer équité: prorata basé protection réellement reçue (temps/km) moins réclamations, si perte totale précoce sans réclamations, remboursement significatif, système juste."
+    },
+    {
+      "question": "La banque/institution financière peut-elle demander annulation ?",
+      "options": ["Non, jamais", "OUI, banque/institution financière indiquée comme titulaire privilège peut demander annulation si véhicule repris OU déclaré perte totale (preuves requises: preuve reprise OU perte totale + rapport prêt impayé) (section 10.2.c)", "Seulement propriétaire", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.c: Banque ou institution financière indiquée comme titulaire du privilège véhicule peut demander annulation si véhicule repris OU déclaré perte totale par assurance (preuves: reprise OU perte totale + rapport prêt impayé)."
+    },
+    {
+      "question": "Quels documents la banque doit-elle fournir pour annulation reprise (section 10.2.c) ?",
+      "options": ["Rien", "3 documents: i) Preuve reprise possession (date et km), ii) Preuve déclaration perte totale assurance, iii) Rapport détaillé prêt impayé restant (confirmer si garantie incluse prêt)", "Seulement lettre", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 10.2.c: Banque doit fournir: i) Preuve de reprise possession (date, km reprise), ii) Preuve déclaration perte totale assureur, iii) Rapport détaillé prêt impayé restant véhicule (confirmer si garantie incluse prêt lui-même)."
+    },
+    {
+      "question": "Le contrat écrit prime-t-il sur toute entente verbale ?",
+      "options": ["Non, équivalent", "OUI, présent contrat constitue TOTALITÉ et INTÉGRALITÉ entente intervenue entre Propriétaire et Distributeur, PRIME sur toute entente verbale ou écrite, représentation ou promesse intervenue AVANT signature (section 11.1)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 11.1: Le présent contrat constitue la totalité et l'intégralité de l'entente intervenue entre le Propriétaire du Véhicule et le Distributeur Autorisé concernant la protection de la garantie. Il prime sur toute entente verbale ou écrite, représentation ou promesse intervenue avant sa signature."
+    },
+    {
+      "question": "Comment expliquer la primauté du contrat écrit (section 11.1) à un client ?",
+      "options": ["Minimiser", "Expliquer: TOUT est dans contrat écrit (termes, conditions, couverture, exclusions). Aucune promesse verbale valide. Protection = lire/comprendre contrat AVANT signature. Transparence totale écrite", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à insister: TOUT dans contrat écrit (protection légale), promesses verbales non valides (11.1), importance lire/comprendre AVANT signature, transparence totale écrite."
+    },
+    {
+      "question": "Que se passe-t-il si une disposition du contrat entre en conflit avec la Loi ?",
+      "options": ["Contrat invalide", "Toute disposition en conflit avec Loi protection consommateur (Québec) ou loi autre province (ordre public) est AUTOMATIQUEMENT considérée comme MODIFIÉE pour devenir conforme (section 11.2)", "Ignorée", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 11.2: Toute disposition contenue au contrat qui entre en conflit avec la Loi sur la protection du consommateur (Québec) ou une loi d'une autre province dont les dispositions sont d'ordre public est automatiquement considérée comme modifiée afin de devenir conforme."
+    },
+    {
+      "question": "Comment expliquer l'ajustement automatique des dispositions conflictuelles (section 11.2) ?",
+      "options": ["C'est négatif", "Expliquer: disposition conforme automatiquement à lois protection consommateur = PROTECTION CLIENT maximale. Lois consommateur priment toujours. Sécurité juridique totale", "Ignorer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser protection: ajustement automatique conformité lois consommateur = protection maximale client, lois protection priment, sécurité juridique totale garantie."
+    },
+    {
+      "question": "Le propriétaire accepte-t-il et comprend-il les dispositions du programme ?",
+      "options": ["Non", "OUI, « J'accepte et comprends les dispositions prévues par le présent programme de garantie et j'accepte les conditions qui s'appliquent » (fin contrat)", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Fin du contrat: Le propriétaire déclare « J'accepte et comprends les dispositions prévues par le présent programme de garantie et j'accepte les conditions qui s'appliquent »."
+    },
+    {
+      "question": "Qui désigne le terme « Administrateur » dans le contrat AVEX ?",
+      "options": ["Une seule société", "Les Produits Avantage Plus Inc. OU 9112-3158 QUÉBEC INC. faisant affaires sous le nom Les Produits Avantage Plus, 2700 Boul. des Entreprises Local 102, Terrebonne J6X 4J8, 450-666-0181, info@garantieavantageplus.ca (section 1)", "Trois sociétés", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 1 Définitions: « Administrateur » désigne la société Les Produits Avantage Plus Inc. OU désigne la société 9112-3158 QUÉBEC INC. faisant affaires sous le nom Les Produits Avantage Plus, 2700 Boul. des Entreprises Local 102, Terrebonne (Québec) J6X 4J8, 450-666-0181, info@garantieavantageplus.ca."
+    },
+    {
+      "question": "Comment expliquer les coordonnées de contact Administrateur à un client ?",
+      "options": ["Pas nécessaire", "Expliquer clairement: Téléphone 1-866-666-0181 (réclamations 24/7) OU courriel info@garantieavantageplus.ca. TOUJOURS contacter AVANT réparation. Coordonnées aussi sur contrat", "C'est évident", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification coordonnées: 1-866-666-0181 (24/7) OU info@garantieavantageplus.ca, OBLIGATOIRE contacter AVANT réparation, coordonnées facilement accessibles contrat."
+    },
+    {
+      "question": "Qu'est-ce qu'un « Distributeur Autorisé » selon la section 1 ?",
+      "options": ["N'importe qui", "Commerçants titulaires permis automobiles, motocyclettes, véhicules récréatifs, loisirs routiers/hors route, bicyclettes assistées, tout autre fournisseur véhicules occasion/neufs AUTORISÉ vendre garanties par entremise portail Administrateur (section 1)", "Seulement concessionnaires", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Section 1: « Distributeur Autorisé » désigne tous les commerçants titulaires d'un permis (automobiles, motos, VR, loisirs, bicyclettes assistées, autres fournisseurs véhicules) autorisé à vendre des garanties par l'entremise du portail de l'Administrateur."
+    },
+    {
+      "question": "Qu'est-ce qu'un « Centre de Réparation Autorisé » selon la section 1 ?",
+      "options": ["Tous les garages", "Établissement légal autorisé effectuer réparations véhicules avec taux horaire, utilisation logiciels temps travail max (Mitchell/All-Data), marge bénéficiaire convenue pièces avec Administrateur, NON détenu ni géré par Administrateur (section 1)", "Seulement concessionnaires", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Section 1: « Centre de Réparation Autorisé » désigne établissement légal autorisé réparations véhicules qui dispose taux horaire, logiciels temps travail (Mitchell/All-Data), marge pièces convenue Administrateur, NON détenu ni géré par Administrateur."
+    },
+    {
+      "question": "Comment expliquer l'importance d'utiliser un Centre de Réparation Autorisé ?",
+      "options": ["Pas important", "Expliquer AVANTAGES MAJEURS: 1) Franchise 0$ (vs 150$ ailleurs), 2) 2h diagnostic remboursées, 3) Taux/temps travail convenus (Mitchell/All-Data), 4) Processus simplifié. Économie 350$-450$/réparation", "C'est pareil", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige valorisation MAXIMALE Centres Autorisés: franchise 0$, diagnostic remboursé, taux convenus, processus optimisé, économie substantielle 350$-450$/réparation, choix évident."
+    },
+    {
+      "question": "Qu'est-ce que la « Juste valeur marchande » selon la section 1 ?",
+      "options": ["Prix achat", "Valeur d'échange la PLUS ÉLEVÉE du véhicule en fonction âge, kilométrage et état, calculée par évaluateurs calcul valeur voitures d'occasion comme déterminé par Administrateur (section 1)", "Prix neuf", "Selon le propriétaire"],
+      "correctAnswer": 1,
+      "explanation": "Section 1: « Juste valeur marchande » = La valeur d'échange la plus élevée du véhicule en fonction de l'âge, du kilométrage et de l'état est calculée par des évaluateurs de calcul de la valeur des voitures d'occasion comme déterminé par l'Administrateur."
+    },
+    {
+      "question": "Qu'est-ce que la « Documentation vérifiable » selon la section 1 ?",
+      "options": ["N'importe quel papier", "Facture entretien/réparation générée ORDINATEUR provenant Centre réparation AGRÉÉ avec infos et coût service effectué, incluant nom Propriétaire, marque, modèle, année, VIN, date et kilométrage véhicule moment prestation (section 1)", "Reçu manuel", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Section 1: « Documentation vérifiable » = Facture entretien/réparation GÉNÉRÉE ORDINATEUR provenant Centre réparation AGRÉÉ comprenant infos/coût service, nom Propriétaire, marque, modèle, année, VIN, date, kilométrage moment prestation."
+    },
+    {
+      "question": "Un client avec véhicule AVEX demande recommandation garage pour entretien. Que conseiller ?",
+      "options": ["N'importe lequel", "Conseiller FORTEMENT: 1) Utiliser Centre Autorisé (franchise 0$, diagnostic remboursé, processus optimal), 2) Conserver TOUTES factures générées ordinateur (Documentation vérifiable section 1), 3) Infos complètes requises (VIN, date, km)", "Garage le moins cher", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil complet: prioriser Centre Autorisé (avantages majeurs), conserver toutes factures ordinateur (Documentation vérifiable), infos complètes essentielles (VIN, date, km), protection garantie optimale."
+    }
+  ]
+}
+

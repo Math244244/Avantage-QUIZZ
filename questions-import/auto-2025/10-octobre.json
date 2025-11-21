@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 10,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quel est le montant maximum de remboursement pour l'hébergement pendant toute la durée du programme ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "La section 27 accorde 50$ par jour jusqu'à 4 jours maximum, soit 200$ maximum pour la durée du programme (50$ × 4 jours)."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AX-1 ?",
+      "options": ["1 000$", "2 000$", "4 000$", "6 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le montant total payé par le contrat pour le programme AX-1 est de 2 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les étriers de freins sont couverts dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 0,
+      "explanation": "La section 8 - Freins Conventionnels couvre les étriers de freins ainsi que le maître-cylindre et les cylindres de roues."
+    },
+    {
+      "question": "Un client avec un Volkswagen Tiguan 2019 de 90 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Volkswagen ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "Volkswagen fait partie de la Catégorie C incluant Audi, BMW, Fiat, Jaguar, Landrover, Mercedes, Mini, Porsche, Smart, Volvo, Alpha Roméo et Maserati."
+    },
+    {
+      "question": "Quel programme est conçu comme programme d'entrée de gamme ?",
+      "options": ["Programme AX-1", "Programme AX-2", "Programme AT", "Programme AP"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AP est conçu comme programme d'entrée de gamme pour véhicules de 13 à 20 ans selon la description du programme."
+    },
+    {
+      "question": "Combien coûte l'option Diesel pour le programme AX-1 ?",
+      "options": ["45$", "50$", "75$", "100$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Diesel coûte 75$ pour le programme AX-1. Si choisie, l'option Turbo doit être ajoutée obligatoirement."
+    },
+    {
+      "question": "Les conduites métalliques de freins sont couvertes dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 0,
+      "explanation": "La section 8 - Freins Conventionnels couvre les conduites métalliques de freins ainsi que le maître-cylindre et les étriers."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AX-1 ?",
+      "options": ["8 ans", "10 ans", "12 ans", "15 ans"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-1 s'applique aux véhicules âgés de 12 ans et moins ayant 225 000 km et moins."
+    },
+    {
+      "question": "L'interrupteur du toit ouvrant est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 22", "Non couvert"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre l'interrupteur du toit ouvrant et le moteur du toit ouvrant, mais le cadre et mécanisme sont exclus."
+    },
+    {
+      "question": "Comment présenter le programme AP à un client avec un véhicule de 16 ans en bon état ?",
+      "options": ["Lui dire que c'est inutile", "Expliquer que c'est une protection essentielle abordable (sections 1-6) adaptée aux véhicules plus âgés", "Forcer le AT PLUS", "Minimiser la couverture"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP offre une protection essentielle (moteur, transmissions, différentiels) à coût abordable pour véhicules de 13-20 ans."
+    },
+    {
+      "question": "Le programme AX-3 est-il disponible pour un véhicule de 12 ans avec 195 000 km ?",
+      "options": ["Non, trop vieux", "Oui, admissible (12 ans et moins, 200 000 km et moins)", "Non, trop de kilométrage", "Oui, avec exception"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-3 s'applique aux véhicules de 12 ans et moins ayant 200 000 km et moins. Le véhicule est donc admissible."
+    },
+    {
+      "question": "Le servofrein est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 0,
+      "explanation": "La section 8 - Freins Conventionnels couvre le servofrein ainsi que le maître-cylindre et les cylindres de roues."
+    },
+    {
+      "question": "Quelle est la condition pour l'option Suspension + dans le programme AT PLUS ?",
+      "options": ["Aucune condition", "Disponible seulement pour les contrats de 36, 48 et 60 mois", "Disponible pour tous les termes", "Véhicule de 8 ans et moins"],
+      "correctAnswer": 1,
+      "explanation": "L'option Suspension + pour le programme AT PLUS est disponible seulement pour les contrats de 36, 48 et 60 mois (section 3 - Options)."
+    },
+    {
+      "question": "Le kit de barre suspension (link kit) est couvert dans quelle section ?",
+      "options": ["Section 9", "Section 12", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 - Suspension couvre le kit de barre suspension (link kit), les rotules et les bras de suspension."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AT PLUS ?",
+      "options": ["3 000$", "4 000$", "5 000$", "10 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS a un montant maximum par réclamation de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "Le maître-cylindre de freins est couvert dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 0,
+      "explanation": "La section 8 - Freins Conventionnels couvre le maître-cylindre, les cylindres de roues et le servofrein."
+    },
+    {
+      "question": "Un client vous fait une offre d'achat bien inférieure à la valeur. Comment négociez-vous professionnellement ?",
+      "options": ["Refuser immédiatement avec colère", "Écouter, expliquer calmement la valeur réelle et explorer un terrain d'entente raisonnable", "Accepter pour conclure vite", "Insulter le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'écouter, de rester calme, d'expliquer objectivement la valeur et de négocier de bonne foi dans les limites raisonnables."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AX-3 ?",
+      "options": ["140 000 km", "180 000 km", "200 000 km", "225 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-3 s'applique aux véhicules ayant 200 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Les cylindres de roues sont couverts dans quelle section ?",
+      "options": ["Section 8", "Section 12", "Section 14", "Section 20"],
+      "correctAnswer": 0,
+      "explanation": "La section 8 - Freins Conventionnels couvre les cylindres de roues ainsi que le maître-cylindre et le servofrein."
+    },
+    {
+      "question": "Combien coûte l'option 0$ de Franchise pour le programme AX-3 ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 0$ de Franchise coûte 100$ pour le programme AX-3 selon les options disponibles."
+    },
+    {
+      "question": "L'option A.V.N. est-elle disponible pour le programme AX-1 ?",
+      "options": ["Oui, coûte 100$", "Oui, coûte 150$", "Non, pas disponible", "Oui, incluse"],
+      "correctAnswer": 2,
+      "explanation": "L'option A.V.N. n'est pas listée dans les options disponibles pour le programme AX-1. Elle est disponible pour AT, AT PLUS et AVE."
+    },
+    {
+      "question": "Les bras de ralenti de suspension sont couverts dans quelle section ?",
+      "options": ["Section 9", "Section 12", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 - Suspension couvre les bras de ralenti ainsi que les bras de suspension, rotules et fusées de roulement."
+    },
+    {
+      "question": "Un client satisfait vous recommande à ses amis. Comment maximisez-vous cette opportunité professionnellement ?",
+      "options": ["Ne rien faire", "Remercier chaleureusement, demander s'il accepte d'être référence et rester disponible", "Harceler ses amis", "Offrir un pot-de-vin"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage à cultiver les relations positives, remercier sincèrement et faciliter les recommandations naturelles."
+    },
+    {
+      "question": "Combien de sections le programme AP couvre-t-il ?",
+      "options": ["4 sections", "6 sections", "11 sections", "16 sections"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP couvre les sections 1 à 6 selon la description du programme."
+    },
+    {
+      "question": "Le dispositif de frein à main est-il couvert ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclu", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Le dispositif de frein à main et le câble font partie des pièces du cadre et véhicule exclues selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AX-3 ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-3 a une limite de kilométrage de 20 000 km par année selon les détails financiers."
+    },
+    {
+      "question": "Les ressorts de suspension sont-ils couverts par défaut ?",
+      "options": ["Oui, section 20", "Non, exclus sauf avec option Suspension +", "Oui, section 21", "Oui, tous les programmes"],
+      "correctAnswer": 1,
+      "explanation": "Les ressorts, jambes de force et amortisseurs sont exclus de la section 20, sauf avec l'option Suspension + pour systèmes spéciaux."
+    },
+    {
+      "question": "Combien coûte l'option Kilométrage illimité pour le programme AX-3 ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Kilométrage illimité coûte 100$ pour le programme AX-3 avec condition de véhicule de 8 ans et moins et 140 000 km et moins."
+    },
+    {
+      "question": "Le câble de frein à main est-il couvert ?",
+      "options": ["Oui, section 8", "Oui, section 14", "Non, exclu", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Le câble de frein à main fait partie des pièces du cadre et véhicule exclues selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Un client demande à voir les termes et conditions complets avant d'acheter. Comment réagissez-vous ?",
+      "options": ["Refuser car confidentiel", "Fournir le document complet avec transparence et encourager sa lecture", "Minimiser l'importance", "Décourager la lecture"],
+      "correctAnswer": 1,
+      "explanation": "La transparence et l'honnêteté professionnelles exigent de fournir tous les documents et d'encourager leur lecture avant l'achat."
+    }
+  ]
+}
+

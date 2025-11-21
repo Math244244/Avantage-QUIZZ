@@ -1,0 +1,182 @@
+{
+  "module": "hasard-route",
+  "month": 8,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quels véhicules selon POIDS sont EXCLUS du programme Hasard de Route ?",
+      "options": ["Aucune exclusion poids", "Véhicules promenade/commerciales poids nominal brut (GVRW) SUPÉRIEUR à 10 000 lb OU catégorie SUPÉRIEURE classe 5 = EXCLUS", "Seulement >20 000 lb", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "EXCLUS : Véhicules du promenade ou commerciales dont le poids nominal brut du véhicule (GVRW) est SUPÉRIEUR à 10 000 lb OU dont la catégorie est SUPÉRIEURE à la classe 5."
+    },
+    {
+      "question": "Quels types de véhicules SPÉCIALISÉS sont exclus ?",
+      "options": ["Aucune exclusion type", "EXCLUS : Tracteurs, véhicules/camions équipement lourd, ambulances, camions pompier, véhicules remorquage, véhicules police/police pack, autobus, véhicules déneigement", "Seulement commerciaux", "Selon l'utilisation"],
+      "correctAnswer": 1,
+      "explanation": "EXCLUS : Tracteurs, véhicules et camions d'équipement lourd, ambulances, camions de pompier, véhicules de remorquage, véhicules de police ou avec police pack, autobus et véhicules de déneigement."
+    },
+    {
+      "question": "Les véhicules de location à court terme sont-ils admissibles ?",
+      "options": ["Oui, tous véhicules", "NON, tout véhicule utilisé comme véhicule LOCATION À COURT TERME (contrat location/bail MOINS de 24 mois) = EXCLU", "Selon la durée", "Si déclaré"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule utilisé comme véhicule de LOCATION À COURT TERME (qui a un contrat de location ou un bail de MOINS de 24 mois) est EXCLU du programme."
+    },
+    {
+      "question": "Comment expliquer exclusion location court terme (<24 mois) à client entreprise location ?",
+      "options": ["Vendre quand même", "Expliquer LOGIQUE : location court terme = utilisation intensive multiples conducteurs, usure accélérée, risques élevés. Programme ciblé véhicules personnels/bail long terme. Recommander assurance flottes commerciales (couverture adaptée location). Transparence évite contrat invalide", "Ignorer utilisation", "Selon le volume"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté : location court terme = utilisation intensive multiples conducteurs usure accélérée risques élevés, programme ciblé personnel/long bail, recommander flottes commerciales, transparence évite invalide."
+    },
+    {
+      "question": "Les véhicules modifiés/altérés sont-ils admissibles ?",
+      "options": ["Oui, selon modifications", "NON, tout véhicule ALTÉRÉ ou MODIFIÉ par rapport installation usine origine (restrictions spécification, performances groupe motopropulseur, ECM, échappement/admission, suspensions levées/abaissées, taille pneus/jantes) = EXCLU", "Seulement esthétiques", "Sur approbation"],
+      "correctAnswer": 1,
+      "explanation": "EXCLU : Tout véhicule altéré ou modifié par rapport à installation usine d'origine, incluant : restrictions spécification fabrication, performances groupe motopropulseur, réglage puces ECM, modifications échappement/admission performance, suspensions levées/abaissées, recommandations taille pneus et jantes."
+    },
+    {
+      "question": "Un client avec Jeep Wrangler levé (suspension +6 pouces, pneus 35\") veut Hasard de Route. Admissible ?",
+      "options": ["Oui, Jeep populaire", "NON ADMISSIBLE : suspension levée + pneus surdimensionnés = modifications installation usine = EXCLU explicitement. Expliquer exclusion, exprimer regrets, véhicule modifié nécessite assurance spécialisée modifications", "Selon le levage", "Si déclaré"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté : suspension levée + pneus surdimensionnés = modifications usine = exclu explicitement, expliquer exclusion regrets, véhicule modifié = assurance spécialisée requise."
+    },
+    {
+      "question": "Les véhicules sport/luxe haute performance sont-ils admissibles sans limite prix ?",
+      "options": ["Oui, tous véhicules", "NON, tout véhicule sport ou luxe haute performance MSRP (prix suggéré vente détail) SUPÉRIEUR à 150 000$ CAD = EXCLU", "Seulement >200 000$", "Selon la marque"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule sport ou de luxe haute performance dont le MSRP (prix suggéré de vente au détail) est SUPÉRIEUR à 150 000$ CAD est EXCLU du programme."
+    },
+    {
+      "question": "Le Détaillant peut-il demander exception aux exclusions véhicules ?",
+      "options": ["Non, exclusions absolues", "OUI, Détaillant peut demander EXCEPTION à Administrateur AVANT vente (si approuvée, exception indiquée contrat garantie avant approbation finale, Détaillant responsable frais supplémentaires)", "Selon le véhicule", "Après vente possible"],
+      "correctAnswer": 1,
+      "explanation": "OUI, Détaillant peut demander EXCEPTION à exclusions véhicules avant avoir vendu au client (contacter représentant Administrateur). Si approuvée, exception indiquée contrat avant approbation finale, Détaillant responsable frais supplémentaires encourus."
+    },
+    {
+      "question": "Comment gérer client Ferrari F8 (MSRP 285 000$) voulant Hasard de Route ?",
+      "options": ["Vendre automatiquement", "Expliquer EXCLUSION : MSRP 285k$ > limite 150k$ = non admissible standard. MAIS possibilité demander EXCEPTION Administrateur (avant vente, approbation requise, frais supplémentaires possibles). Contacter représentant Auto Shield évaluer faisabilité. Transparence processus", "Refuser net", "Selon la négociation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige processus : MSRP > 150k$ = exclusion standard, MAIS exception possible (demande Administrateur avant vente approbation frais supplémentaires), contacter représentant évaluer, transparence processus."
+    },
+    {
+      "question": "Si exception véhicule approuvée, qui paie les frais supplémentaires ?",
+      "options": ["Administrateur", "DÉTAILLANT responsable TOUS frais supplémentaires encourus en raison exceptions véhicules", "Client", "Partagés"],
+      "correctAnswer": 1,
+      "explanation": "Le DÉTAILLANT est responsable de TOUS les frais supplémentaires encourus en raison de ces exceptions véhicules (si exception accordée par Administrateur)."
+    },
+    {
+      "question": "Qu'est-ce que le \"MSRP\" utilisé pour limite 150 000$ ?",
+      "options": ["Prix payé client", "MSRP = Prix Suggéré de Vente au Détail par FABRICANT (prix catalogue officiel, pas prix négocié client)", "Prix facturé", "Valeur marchande"],
+      "correctAnswer": 1,
+      "explanation": "\"MSRP\" signifie : Prix Suggéré de Vente au Détail (Manufacturer's Suggested Retail Price) - prix catalogue officiel du fabricant (pas le prix négocié payé par client)."
+    },
+    {
+      "question": "Comment expliquer MSRP vs prix payé à client ayant négocié rabais important ?",
+      "options": ["Utiliser prix payé", "Expliquer DISTINCTION : MSRP = prix CATALOGUE OFFICIEL fabricant (référence standard). Prix payé = prix négocié après rabais. Limite 150k$ = basée MSRP (pas prix payé). Ex : MSRP 160k$, payé 140k$ = EXCLU quand même (MSRP > 150k$)", "Ignorer différence", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : MSRP = prix catalogue officiel fabricant (référence standard), prix payé = négocié après rabais, limite 150k$ = MSRP (pas payé), ex: MSRP 160k$ payé 140k$ = exclu."
+    },
+    {
+      "question": "Ceci est-il un contrat d'assurance ?",
+      "options": ["Oui, assurance", "NON, CECI N'EST PAS UN CONTRAT D'ASSURANCE (contrat de SERVICE)", "Assurance complémentaire", "Selon la province"],
+      "correctAnswer": 1,
+      "explanation": "IMPORTANT : CECI N'EST PAS UN CONTRAT D'ASSURANCE. C'est un Contrat de SERVICE pour protection hasards routiers (distinction légale importante)."
+    },
+    {
+      "question": "Comment expliquer différence contrat service vs assurance à client confus ?",
+      "options": ["C'est pareil", "Expliquer DISTINCTION LÉGALE : Assurance = couverture risques accidents/responsabilité (réglementée provinciale, obligatoire). Contrat service = prestations SPÉCIFIQUES hasards routiers (réparations/remplacements définis). Deux produits DIFFÉRENTS juridiquement + fonctionnellement", "Ignorer distinction", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige distinction légale : Assurance = couverture risques accidents responsabilité (réglementée obligatoire), Contrat service = prestations spécifiques hasards (réparations définies), deux produits différents juridiquement fonctionnellement."
+    },
+    {
+      "question": "Ce Contrat de service constitue-t-il la totalité de l'entente ?",
+      "options": ["Non, accords verbaux comptent", "OUI, contrat constitue TOTALITÉ et INTÉGRALITÉ entente (prime sur toute entente verbale ou écrite, représentation ou promesse intervenue AVANT signature)", "Selon les discussions", "Peut être modifié verbalement"],
+      "correctAnswer": 1,
+      "explanation": "OUI, ce contrat constitue la TOTALITÉ et l'INTÉGRALITÉ de l'entente. Il prime sur toute entente verbale ou écrite, représentation ou promesse intervenue AVANT sa signature."
+    },
+    {
+      "question": "Si collègue a promis verbalement couverture non dans contrat écrit, quelle valeur ?",
+      "options": ["Promesse compte", "AUCUNE valeur : contrat ÉCRIT prime sur TOUTE promesse verbale antérieure. Seuls termes ÉCRITS contrat valides", "Selon la situation", "Négociable"],
+      "correctAnswer": 1,
+      "explanation": "AUCUNE valeur : le contrat ÉCRIT prime sur TOUTE entente verbale ou promesse antérieure. Seuls les termes ÉCRITS dans le contrat sont juridiquement valides et applicables."
+    },
+    {
+      "question": "Comment gérer client disant \"vendeur m'a promis pare-brise illimité\" (non dans contrat) ?",
+      "options": ["Honorer promesse", "Expliquer LÉGALEMENT : contrat ÉCRIT = seul document valide (prime promesses verbales antérieures). Contrat indique limites 1000$ pare-brise (pas illimité). Promesse verbale = NON valide légalement. Exprimer regrets malentendu, clarifier termes ÉCRITS applicables", "Faire exception", "Selon le vendeur"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté légale : contrat écrit = seul valide (prime verbal), contrat indique limites 1000$ (pas illimité), verbal = non valide légalement, regrets malentendu, termes écrits applicables."
+    },
+    {
+      "question": "Que se passe-t-il si disposition contrat entre en conflit avec Loi protection consommateur ?",
+      "options": ["Contrat prime", "Disposition AUTOMATIQUEMENT MODIFIÉE pour devenir CONFORME loi (Loi protection consommateur Québec OU loi autre province ordre public)", "Contrat invalide", "Selon la province"],
+      "correctAnswer": 1,
+      "explanation": "Toute disposition contenue au contrat qui entre en conflit avec la Loi sur la protection du consommateur (Québec) OU une loi d'une autre province dont les dispositions sont d'ordre public est AUTOMATIQUEMENT considérée comme MODIFIÉE afin de devenir CONFORME."
+    },
+    {
+      "question": "Comment expliquer primauté loi protection consommateur à client inquiet droits ?",
+      "options": ["Minimiser", "Rassurer CLIENT : lois protection consommateur Canada = protègent droits consommateurs (ordre public). Si clause contrat conflit loi = clause MODIFIÉE automatiquement (conforme loi). Client TOUJOURS protégé lois provinciales. Sécurité juridique totale", "Ignorer aspect légal", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rassurer : lois protection consommateur Canada = protègent droits (ordre public), clause conflit loi = modifiée automatiquement conforme, client toujours protégé lois provinciales, sécurité juridique."
+    },
+    {
+      "question": "L'Administrateur est-il responsable de garanties/promesses faites par Détaillant ?",
+      "options": ["Oui, entièrement", "NON, Administrateur NON responsable déclarations/engagements allégués faits par Détaillant au nom Administrateur pour responsabilité SUPÉRIEURE à celle prévue garantie", "Selon la promesse", "Partagée"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera PAS tenu responsable de toute déclaration ou engagement allégué fait par le Détaillant au nom de l'Administrateur pour toute responsabilité SUPÉRIEURE à celle prévue par la présente garantie."
+    },
+    {
+      "question": "Comment gérer client disant \"Détaillant m'a promis couverture hors-route\" (exclue) ?",
+      "options": ["Couvrir quand même", "Expliquer CLAIREMENT : Détaillant = partenaire vente (pas Administrateur). Promesse hors-route = NON autorisée (contrat exclut hors-route). Administrateur NON responsable promesses détaillant excédant termes contrat. Seuls termes ÉCRITS contrat applicables. Regrets malentendu", "Blâmer détaillant", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté : Détaillant = partenaire vente (pas Administrateur), promesse non autorisée, Administrateur non responsable promesses excédant termes, seuls termes écrits applicables, regrets malentendu."
+    },
+    {
+      "question": "Le client consent-il à communication renseignements Détaillant → Administrateur ?",
+      "options": ["Non, confidentiel", "OUI, client CONSENT EXPRESSÉMENT à ce que Détaillant communique TOUS renseignements obtenus (client + véhicule + société financement) à Administrateur", "Selon le type info", "Sur demande"],
+      "correctAnswer": 1,
+      "explanation": "Le client consent EXPRESSÉMENT à ce que le Détaillant communique TOUS les renseignements obtenus à son sujet, ainsi qu'au sujet du véhicule ou de la société de financement, à l'Administrateur."
+    },
+    {
+      "question": "À quoi servent les renseignements collectés par Administrateur ?",
+      "options": ["Marketing", "Renseignements utilisés pour : déterminer ADMISSIBILITÉ programme, MAINTENIR garantie, TRAITER demandes réclamation", "Vente tiers", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les renseignements recueillis par l'Administrateur sont utilisés pour : déterminer l'admissibilité au programme, maintenir la garantie ainsi que traiter les demandes de réclamation (le cas échéant)."
+    },
+    {
+      "question": "L'accès aux renseignements personnels client est-il illimité dans l'organisation ?",
+      "options": ["Oui, tous employés", "NON, accès renseignements personnels client LIMITÉ aux personnes pour qui il est NÉCESSAIRE accéder dans exercice FONCTIONS", "Selon le département", "Sur demande"],
+      "correctAnswer": 1,
+      "explanation": "L'accès aux renseignements personnels du client est LIMITÉ aux personnes pour qui il est NÉCESSAIRE d'y accéder dans l'exercice de leurs FONCTIONS (protection confidentialité)."
+    },
+    {
+      "question": "Le client peut-il demander confirmation/copie de ses renseignements personnels ?",
+      "options": ["Non, confidentiel", "OUI, client peut demander à Administrateur : CONFIRMER existence renseignements + DEMANDER COPIE + DEMANDER RECTIFICATION renseignements inexacts/incomplets/équivoques", "Moyennant frais", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "OUI, le client peut demander à l'Administrateur de : confirmer l'existence des renseignements personnels détenus + en demander une copie + demander rectification des renseignements inexacts, incomplets ou équivoques."
+    },
+    {
+      "question": "Comment rassurer client inquiet utilisation données personnelles marketing ?",
+      "options": ["Ignorer inquiétudes", "Expliquer UTILISATIONS : données utilisées UNIQUEMENT admissibilité + maintenance garantie + traitement réclamations. Administrateur PEUT proposer prestations/services financiers. Client peut RETIRER nom/adresse/téléphone liste (demande écrite). Contrôle client respecté", "Minimiser", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à clarifier utilisations : données uniquement admissibilité maintenance réclamations, Administrateur peut proposer prestations financiers, client peut retirer nom liste (demande écrite), contrôle client respecté."
+    },
+    {
+      "question": "Le client peut-il retirer son consentement à utilisation/communication renseignements ?",
+      "options": ["Non, obligatoire", "OUI, client peut RETIRER consentement (sous réserve conditions/restrictions), lequel RETRAIT peut entraîner RUPTURE service garantie", "Selon le type info", "Sans conséquence"],
+      "correctAnswer": 1,
+      "explanation": "OUI, le client peut également retirer son consentement à l'utilisation ou communication de ses renseignements personnels (sous réserve de certaines conditions/restrictions), lequel retrait de consentement pourrait entraîner la RUPTURE du service de garantie."
+    },
+    {
+      "question": "Les renseignements personnels peuvent-ils être conservés/communiqués HORS Québec ?",
+      "options": ["Non, Québec seulement", "OUI, en raison utilisation systèmes informatiques/technologiques (entrée données/sauvegarde), POSSIBLE que renseignements personnels conservés ou communiqués À L'EXTÉRIEUR du Québec", "Selon le type info", "Sur demande seulement"],
+      "correctAnswer": 1,
+      "explanation": "OUI, notamment en raison de l'utilisation de systèmes informatiques et technologiques impliquant l'entrée de données et la sauvegarde, il est POSSIBLE que les renseignements personnels soient conservés ou communiqués À L'EXTÉRIEUR du Québec."
+    },
+    {
+      "question": "Un collègue promet \"Couverture mondiale illimitée tous dommages\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT et FERMEMENT : 1) Couverture Canada/USA continentaux SEULEMENT (pas mondiale), 2) 10 protections SPÉCIFIQUES (pas tous dommages), 3) Limites $ définies (pas illimité). Fausse promesse = vente frauduleuse = litiges majeurs + réputation. CORRECTION URGENTE OBLIGATOIRE", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate ferme : 1) Canada/USA seulement (pas mondial), 2) 10 protections spécifiques (pas tous), 3) limites $ définies (pas illimité), fausse promesse = fraude litiges réputation, correction urgente."
+    }
+  ]
+}
+

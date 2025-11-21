@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 10,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quels véhicules sont admissibles selon la Tarification A ?",
+      "options": ["Tous les véhicules", "Véhicules ≤ 5 ans et < 2 500 heures (Termes disponibles: 12, 24, 36, 48, 60 mois)", "Seulement neufs", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A couvre les véhicules de 5 ans ou moins ET ayant moins de 2 500 heures d'utilisation. 5 termes disponibles : 12, 24, 36, 48, 60 mois (section 3.1)."
+    },
+    {
+      "question": "Comment expliquer les critères d'admissibilité de la Tarification A à un client ?",
+      "options": ["C'est compliqué", "Expliquer: Tarif A pour équipements récents (≤5 ans ET <2 500h). 5 choix de termes (12-60 mois), allocation heures progressive selon terme", "C'est pour neufs", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : Tarif A = équipements récents (≤5 ans ET <2 500h), 5 options de termes, allocation heures adaptée à chaque terme."
+    },
+    {
+      "question": "Quels termes sont disponibles pour la Tarification A ?",
+      "options": ["3 termes", "5 termes: 12 mois (500h), 24 mois (1000h), 36 mois (1500h), 48 mois (2000h), 60 mois (2500h)", "Un seul terme", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A offre 5 termes : 12 mois (500h), 24 mois (1000h), 36 mois (1500h), 48 mois (2000h), 60 mois (2500h) (section 3.1)."
+    },
+    {
+      "question": "Un tracteur de 4 ans avec 2 200 heures est-il admissible à la Tarification A ?",
+      "options": ["Non, trop vieux", "Oui, satisfait les 2 critères : ≤5 ans (4 ans OK) ET <2 500h (2 200h OK)", "Non, trop d'heures", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le tracteur satisfait les deux critères de la Tarification A : âge ≤5 ans (4 ans OK) ET heures <2 500h (2 200h OK). Il est admissible à tous les termes Tarif A."
+    },
+    {
+      "question": "Quels véhicules sont admissibles selon la Tarification B ?",
+      "options": ["Tous les véhicules", "Véhicules ≤ 10 ans et < 5 000 heures (Termes disponibles: 12, 24, 36 mois seulement)", "Seulement neufs", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B couvre les véhicules de 10 ans ou moins ET ayant moins de 5 000 heures d'utilisation. 3 termes disponibles : 12, 24, 36 mois seulement (section 3.2)."
+    },
+    {
+      "question": "Comment expliquer la différence entre Tarification A et B à un client ?",
+      "options": ["C'est pareil", "Tarif A: équipements récents (≤5 ans, <2 500h), 5 termes (12-60 mois). Tarif B: équipements plus anciens (≤10 ans, <5 000h), 3 termes (12-36 mois)", "C'est compliqué", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : Tarif A = récent + 5 termes longs, Tarif B = plus ancien + 3 termes courts, adaptation selon âge/heures équipement."
+    },
+    {
+      "question": "Quels termes sont disponibles pour la Tarification B ?",
+      "options": ["5 termes", "3 termes: 12 mois (500h), 24 mois (1000h), 36 mois (1500h)", "Un seul terme", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B offre 3 termes seulement : 12 mois (500h), 24 mois (1000h), 36 mois (1500h). Pas de termes 48 ou 60 mois disponibles (section 3.2)."
+    },
+    {
+      "question": "Un équipement de 7 ans avec 3 800 heures est-il admissible à la Tarification B ?",
+      "options": ["Non, trop vieux", "Oui, satisfait les 2 critères : ≤10 ans (7 ans OK) ET <5 000h (3 800h OK)", "Non, trop d'heures", "Seulement Tarif A"],
+      "correctAnswer": 1,
+      "explanation": "L'équipement satisfait les deux critères de la Tarification B : âge ≤10 ans (7 ans OK) ET heures <5 000h (3 800h OK). Il est admissible aux 3 termes Tarif B."
+    },
+    {
+      "question": "Un tracteur de 5 ans avec 2 300 heures peut-il choisir un terme 60 mois ?",
+      "options": ["Oui, avec Tarif B", "Oui, avec Tarif A seulement (≤5 ans ET <2 500h = admissible Tarif A, qui offre terme 60 mois)", "Non, impossible", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le tracteur (5 ans, 2 300h) satisfait critères Tarif A (≤5 ans ET <2 500h). Tarif A offre terme 60 mois. Tarif B n'offre que termes 12-36 mois."
+    },
+    {
+      "question": "Comment aider un client à choisir entre Tarification A et B ?",
+      "options": ["C'est automatique", "Vérifier âge ET heures: si ≤5 ans ET <2 500h = Tarif A (5 termes). Si >5 ans OU >2 500h mais ≤10 ans ET <5 000h = Tarif B (3 termes)", "Selon le prix", "Le moins cher"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige vérification systématique : âge ET heures déterminent tarif. Tarif A = plus récent (plus d'options termes), Tarif B = plus ancien (termes limités)."
+    },
+    {
+      "question": "Un tracteur de 6 ans avec 2 100 heures est-il admissible à la Tarification A ?",
+      "options": ["Oui, <2 500h", "Non, dépasse critère âge (>5 ans). Admissible Tarification B seulement (≤10 ans ET <5 000h)", "Oui, automatiquement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le tracteur a 6 ans, ce qui dépasse le critère ≤5 ans de la Tarification A. Il est admissible à la Tarification B (≤10 ans ET <5 000h) avec termes 12-36 mois."
+    },
+    {
+      "question": "Quelle allocation heures pour un terme 24 mois (Tarif A ou B) ?",
+      "options": ["500 heures", "1000 heures (24 mois = 1000h standard, identique Tarif A et B)", "1500 heures", "2000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Le terme 24 mois offre une allocation de 1000 heures standard (500h/an), identique pour Tarification A et Tarification B (sections 3.1 et 3.2)."
+    },
+    {
+      "question": "Comment expliquer les allocations heures progressives à un client ?",
+      "options": ["C'est fixe", "Expliquer: allocation heures augmente avec durée terme (12 mois=500h, 24=1000h, 36=1500h, 48=2000h, 60=2500h), soit 500h/an standard", "C'est compliqué", "Selon le tracteur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer progression logique : 500 heures/an standard, allocation totale augmente avec terme (12 mois=500h jusqu'à 60 mois=2500h)."
+    },
+    {
+      "question": "Un équipement de 4 ans avec 2 600 heures est-il admissible à la Tarification A ?",
+      "options": ["Oui, ≤5 ans", "Non, dépasse critère heures (>2 500h). Admissible Tarification B seulement (≤10 ans ET <5 000h)", "Oui, automatiquement", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "L'équipement a 2 600 heures, ce qui dépasse le critère <2 500h de la Tarification A. Il est admissible à la Tarification B (≤10 ans ET <5 000h) avec termes 12-36 mois."
+    },
+    {
+      "question": "Quelle allocation heures pour un terme 48 mois ?",
+      "options": ["1500 heures", "2000 heures (48 mois = 2000h standard, disponible Tarif A SEULEMENT)", "2500 heures", "3000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Le terme 48 mois offre une allocation de 2000 heures standard (500h/an). Ce terme est disponible UNIQUEMENT pour la Tarification A, pas pour Tarif B (section 3.1)."
+    },
+    {
+      "question": "Comment justifier le choix d'un terme long (60 mois) à un client avec équipement récent ?",
+      "options": ["C'est cher", "Expliquer: terme 60 mois (2500h) = protection maximale long terme, meilleur ratio coût/protection, idéal équipement récent/bon état, tranquillité 5 ans", "Pas nécessaire", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer avantages terme long : meilleur ROI (coût/protection), protection maximale (2500h), idéal équipement récent, tranquillité 5 ans complètes."
+    },
+    {
+      "question": "Un tracteur de 9 ans avec 4 200 heures veut un terme 48 mois. Est-ce possible ?",
+      "options": ["Oui, avec Tarif A", "Non, 9 ans/4 200h = Tarif B seulement (termes max 36 mois). Terme 48 mois disponible UNIQUEMENT Tarif A", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tracteur 9 ans/4 200h = admissible Tarif B uniquement (≤10 ans, <5 000h). Tarif B offre termes 12-36 mois max. Terme 48 mois réservé Tarif A seulement."
+    },
+    {
+      "question": "Quelle allocation heures pour un terme 36 mois (Tarif A ou B) ?",
+      "options": ["1000 heures", "1500 heures (36 mois = 1500h standard, identique Tarif A et B)", "2000 heures", "2500 heures"],
+      "correctAnswer": 1,
+      "explanation": "Le terme 36 mois offre une allocation de 1500 heures standard (500h/an), identique pour Tarification A et Tarification B (sections 3.1 et 3.2)."
+    },
+    {
+      "question": "Comment expliquer pourquoi Tarif B n'offre pas les termes 48 et 60 mois ?",
+      "options": ["C'est injuste", "Expliquer: équipements plus anciens (Tarif B: ≤10 ans) = risque supérieur, termes courts (12-36 mois) adaptés à âge/heures plus élevés", "C'est moins bon", "Selon le prix"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer logique actuarielle : équipements plus anciens (Tarif B) = termes courts adaptés, Tarif A (équipements récents) = termes longs disponibles."
+    },
+    {
+      "question": "Un équipement de 5 ans exactement avec 2 500 heures exactement est-il admissible à Tarif A ?",
+      "options": ["Oui, à la limite", "Non, critères Tarif A sont ≤5 ans (OK) mais <2 500h (2 500h exactement = exclus). Admissible Tarif B", "Oui, automatiquement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Critères Tarif A : ≤5 ans (5 ans OK) ET <2 500h (strictement inférieur). 2 500h exactement = exclu Tarif A. Admissible Tarif B (≤10 ans ET <5 000h)."
+    },
+    {
+      "question": "Quelle allocation heures pour un terme 60 mois ?",
+      "options": ["2000 heures", "2500 heures (60 mois = 2500h standard, disponible Tarif A SEULEMENT)", "3000 heures", "5000 heures"],
+      "correctAnswer": 1,
+      "explanation": "Le terme 60 mois offre une allocation de 2500 heures standard (500h/an). Ce terme est disponible UNIQUEMENT pour la Tarification A, pas pour Tarif B (section 3.1)."
+    },
+    {
+      "question": "Comment aider un client à choisir le terme optimal selon son usage ?",
+      "options": ["Le plus long", "Évaluer: 1) Vérifier tarif admissible (A ou B), 2) Calculer heures/an actuelles, 3) Projeter usage futur, 4) Choisir terme avec allocation suffisante", "Le moins cher", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige méthodologie : 1) Déterminer tarif, 2) Analyser usage actuel, 3) Projeter usage futur, 4) Sélectionner terme adapté avec allocation suffisante (± option 2x)."
+    },
+    {
+      "question": "Un tracteur de 10 ans exactement avec 4 900 heures est-il admissible à Tarif B ?",
+      "options": ["Non, trop vieux", "Oui, satisfait les 2 critères Tarif B : ≤10 ans (10 ans OK) ET <5 000h (4 900h OK)", "Non, trop d'heures", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le tracteur satisfait les deux critères de la Tarification B : âge ≤10 ans (10 ans exactement OK) ET heures <5 000h (4 900h OK). Admissible termes 12-36 mois."
+    },
+    {
+      "question": "Quelle allocation heures pour un terme 12 mois (Tarif A ou B) ?",
+      "options": ["250 heures", "500 heures (12 mois = 500h standard, identique Tarif A et B)", "1000 heures", "1500 heures"],
+      "correctAnswer": 1,
+      "explanation": "Le terme 12 mois offre une allocation de 500 heures standard (500h/an), identique pour Tarification A et Tarification B (sections 3.1 et 3.2)."
+    },
+    {
+      "question": "Comment présenter les avantages du terme 36 mois (Tarif B) à un client avec équipement ancien ?",
+      "options": ["C'est cher", "Expliquer: terme 36 mois = protection maximale disponible Tarif B (1500h), équilibre coût/durée, idéal équipement 6-10 ans bon état", "C'est court", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser : terme 36 mois = max Tarif B, protection 3 ans complètes (1500h), équilibre optimal coût/durée pour équipements plus anciens."
+    },
+    {
+      "question": "Un équipement de 11 ans avec 3 000 heures est-il admissible à un programme ATC ?",
+      "options": ["Oui, Tarif A", "Non, dépasse critère âge (>10 ans). Non admissible Tarif A (>5 ans) ni Tarif B (>10 ans)", "Oui, Tarif B", "Avec exception"],
+      "correctAnswer": 1,
+      "explanation": "L'équipement a 11 ans, ce qui dépasse les critères des deux tarifications : Tarif A (≤5 ans) et Tarif B (≤10 ans). Il n'est pas admissible aux programmes ATC."
+    },
+    {
+      "question": "Comment expliquer les allocations heures avec l'option 2x allocation à un client ?",
+      "options": ["C'est compliqué", "Expliquer: option 2x (250$) double toutes allocations. Ex: 24 mois standard 1000h → avec option 2x = 2000h total. 500h/an → 1000h/an", "Pas utile", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer concrètement : option 2x (250$) double allocation pour chaque terme (ex: 24 mois 1000h→2000h), idéal usage intensif."
+    },
+    {
+      "question": "Un tracteur de 3 ans avec 2 700 heures veut terme 60 mois. Est-ce possible ?",
+      "options": ["Oui, Tarif A", "Non, 2 700h dépasse critère Tarif A (<2 500h). Admissible Tarif B max 36 mois. Terme 60 mois impossible", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "2 700h dépasse critère Tarif A (<2 500h). Tracteur admissible Tarif B seulement (≤10 ans, <5 000h). Tarif B offre max 36 mois. Terme 60 mois impossible."
+    },
+    {
+      "question": "Comment maximiser la satisfaction lors du choix du terme et de la tarification ?",
+      "options": ["Vendre le plus cher", "1) Déterminer tarif admissible (A ou B), 2) Analyser usage actuel/futur, 3) Expliquer termes disponibles, 4) Recommander terme optimal, 5) Évaluer option 2x si nécessaire", "Vendre le moins cher", "Selon le budget"},
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche méthodique en 5 étapes : déterminer tarif, analyser usage, expliquer options, recommander terme optimal, évaluer option 2x adaptée."
+    },
+    {
+      "question": "Un collègue pousse un client vers un terme inadapté pour maximiser sa commission. Comment réagissez-vous ?",
+      "options": ["L'imiter", "Intervenir ou signaler: l'intégrité exige recommandations basées sur BESOINS CLIENT (usage, budget), pas commission. Protéger client et réputation", "L'ignorer", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige d'intervenir : recommandations basées sur besoins réels client (usage, budget), pas commission. Protéger client et réputation entreprise."
+    }
+  ]
+}
+

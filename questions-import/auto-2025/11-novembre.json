@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le propriétaire peut-il faire un nombre illimité de réclamations ?",
+      "options": ["Non, maximum 5", "Non, maximum 10", "Oui, nombre illimité pendant la durée du programme", "Selon le programme"],
+      "correctAnswer": 2,
+      "explanation": "Le propriétaire peut déclarer un nombre illimité de réclamations pendant la durée du programme choisi selon la section 9."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AX-3 ?",
+      "options": ["2 000$", "4 000$", "6 000$", "8 000$"],
+      "correctAnswer": 2,
+      "explanation": "Le montant total payé par le contrat pour le programme AX-3 est de 6 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les amortisseurs de suspension sont-ils couverts par défaut ?",
+      "options": ["Oui, section 20", "Non, exclus sauf avec option Suspension +", "Oui, section 21", "Oui, tous les programmes"],
+      "correctAnswer": 1,
+      "explanation": "Les amortisseurs, ressorts et jambes de force sont exclus de la section 20, sauf avec l'option Suspension + pour systèmes spéciaux."
+    },
+    {
+      "question": "Un client avec un Mercedes GLC 2020 de 70 000 km demande le programme AT PLUS. Dans quelle catégorie se situe Mercedes ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "Mercedes fait partie de la Catégorie C incluant Audi, BMW, Fiat, Jaguar, Landrover, Mini, Porsche, Smart, Volkswagen, Volvo, Alpha Roméo et Maserati."
+    },
+    {
+      "question": "Quel programme couvre le plus de sections après le AT PLUS ?",
+      "options": ["Programme AX-3", "Programme AT", "Programme AVE", "Programme AX-2"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE couvre les sections 1 à 18, le deuxième plus après AT PLUS (sections 1-27)."
+    },
+    {
+      "question": "Combien coûte l'option Service routier + par année pour le programme AX-3 ?",
+      "options": ["25$", "50$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Service routier + coûte 50$ par année pour le programme AX-3 (exemple : 150$ pour un contrat de 3 ans)."
+    },
+    {
+      "question": "Les jambes de force de suspension sont-elles couvertes par défaut ?",
+      "options": ["Oui, section 20", "Non, exclues sauf avec option Suspension +", "Oui, section 21", "Oui, tous les programmes"],
+      "correctAnswer": 1,
+      "explanation": "Les jambes de force, ressorts et amortisseurs sont exclus de la section 20, sauf avec l'option Suspension + pour systèmes spéciaux."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AT PLUS ?",
+      "options": ["6 ans", "8 ans", "10 ans", "12 ans"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS s'applique aux véhicules âgés de 8 ans et moins ayant 140 000 km et moins."
+    },
+    {
+      "question": "Les systèmes de suspension Double-A sont-ils couverts par défaut ?",
+      "options": ["Oui, section 20", "Non, exclus tout temps sauf avec option Suspension +", "Oui, section 21", "Oui, AT PLUS seulement"],
+      "correctAnswer": 1,
+      "explanation": "Les systèmes Double-A et KDSS sont exclus tout temps de la section 20, sauf si l'option Suspension + est achetée."
+    },
+    {
+      "question": "Comment expliquer la valeur de l'option 0$ de Franchise à un client soucieux de son budget ?",
+      "options": ["Ce n'est pas nécessaire", "Elle élimine la participation de 100-125$ à chaque réparation, idéal si plusieurs réparations prévues", "C'est trop cher", "C'est automatique"],
+      "correctAnswer": 1,
+      "explanation": "L'option 0$ Franchise (100$) élimine la franchise de 100-125$ par réparation, rentable dès la 1ère ou 2ème réclamation."
+    },
+    {
+      "question": "Le programme AT PLUS est-il disponible pour un véhicule de 9 ans ?",
+      "options": ["Oui, sans restriction", "Non, maximum 8 ans", "Oui, avec exception", "Oui, avec supplément"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS s'applique aux véhicules de 8 ans et moins seulement selon les véhicules admissibles."
+    },
+    {
+      "question": "Les systèmes de suspension à l'air sont-ils couverts par défaut ?",
+      "options": ["Oui, section 20", "Non, exclus tout temps sauf avec option Suspension +", "Oui, section 21", "Oui, AVE seulement"],
+      "correctAnswer": 1,
+      "explanation": "Les systèmes de suspension à l'air sont exclus tout temps de la section 20, sauf si l'option Suspension + est achetée."
+    },
+    {
+      "question": "Quelle est la condition pour l'option 2 x 5000$ dans le programme AT ?",
+      "options": ["Aucune condition", "Véhicule de 10 ans et moins et 200 000 km et moins", "Véhicule de 8 ans et moins", "Tous les véhicules"],
+      "correctAnswer": 1,
+      "explanation": "L'option 2 x 5000$ pour le programme AT nécessite un véhicule de 10 ans et moins et 200 000 km et moins (section 3 - Options)."
+    },
+    {
+      "question": "Les systèmes KDSS de suspension sont-ils couverts par défaut ?",
+      "options": ["Oui, section 20", "Non, exclus tout temps sauf avec option Suspension +", "Oui, section 21", "Oui, tous les programmes"],
+      "correctAnswer": 1,
+      "explanation": "Les systèmes KDSS et Double-A sont exclus tout temps de la section 20, sauf si l'option Suspension + est achetée."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AVE ?",
+      "options": ["3 000$", "4 000$", "5 000$", "Valeur du véhicule"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE a un montant maximum par réclamation de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "Le pneu de secours est-il couvert ?",
+      "options": ["Oui, section 12", "Non, exclu", "Oui, avec option", "Oui, section 20"],
+      "correctAnswer": 1,
+      "explanation": "Les pneus et le mécanisme du pneu de secours sont exclus selon la section 4.5 - Exclusions de pièces supplémentaires."
+    },
+    {
+      "question": "Un collègue fait une vente douteuse. Devriez-vous intervenir ?",
+      "options": ["Non, ce n'est pas votre affaire", "Oui, en discuter avec lui d'abord puis alerter le supérieur si nécessaire", "Oui, le dénoncer immédiatement publiquement", "Non, profiter de la situation"],
+      "correctAnswer": 1,
+      "explanation": "La responsabilité professionnelle exige d'aborder d'abord le collègue directement, puis d'alerter la hiérarchie si la situation persiste."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AT PLUS ?",
+      "options": ["100 000 km", "120 000 km", "140 000 km", "200 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AT PLUS s'applique aux véhicules ayant 140 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "Les roues et jantes sont-elles couvertes ?",
+      "options": ["Oui, section 12", "Oui, section 20", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les roues et jantes sont exclues des pièces du cadre et véhicule selon la section 4.3, mais les roulements des roues sont couverts (section 12)."
+    },
+    {
+      "question": "Combien coûte l'option 2 x Réclamation pour le programme AX-3 ?",
+      "options": ["150$", "200$", "250$", "300$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 2 x Réclamation coûte 250$ pour le programme AX-3 selon les options disponibles. Cette option est spécifique à AX-3."
+    },
+    {
+      "question": "Le programme AT est-il disponible pour un véhicule de 12 ans ?",
+      "options": ["Non, maximum 10 ans", "Oui, mais seulement pour 12, 24 ou 36 mois", "Oui, pour tous les termes", "Non, trop vieux"],
+      "correctAnswer": 1,
+      "explanation": "Si le véhicule a 11 ou 12 ans et 200 000 km et moins, le programme AT est disponible pour 12, 24 ou 36 mois seulement."
+    },
+    {
+      "question": "Les valves de pneus sont-elles couvertes ?",
+      "options": ["Oui, section 12", "Oui, section 20", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les pneus et valves de pneus sont exclus des pièces du cadre et véhicule selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Comment gérer un client qui insiste pour avoir une option non disponible pour son programme ?",
+      "options": ["Inventer l'option", "Expliquer clairement les options disponibles et proposer un programme supérieur si nécessaire", "Refuser sèchement", "Facturer l'option quand même"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement les limitations et de proposer des alternatives légitimes (programme supérieur avec l'option)."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AT PLUS ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS a une limite de kilométrage de 20 000 km par année selon les détails financiers."
+    },
+    {
+      "question": "Les enjoliveurs sont-ils couverts ?",
+      "options": ["Oui, section 12", "Oui, section 20", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les enjoliveurs font partie des pièces du cadre et véhicule exclues selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Combien coûte l'option Diesel pour le programme AX-3 ?",
+      "options": ["45$", "50$", "75$", "100$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Diesel coûte 75$ pour le programme AX-3. Si choisie, l'option Turbo doit être ajoutée obligatoirement."
+    },
+    {
+      "question": "Les réservoirs de fluides sont-ils couverts ?",
+      "options": ["Oui, section 10", "Oui, section 19", "Non, exclus", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Tous les réservoirs de fluides sont exclus des pièces du cadre et véhicule selon la section 4.3 - Exclusions."
+    },
+    {
+      "question": "Un client mentionne qu'un autre vendeur lui a fait des promesses non écrites. Comment réagissez-vous ?",
+      "options": ["Confirmer les promesses", "Expliquer poliment que seul le contrat écrit fait foi", "Critiquer le collègue", "Faire d'autres promesses"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de rappeler que seul le contrat écrit fait foi et de ne pas s'engager sur des promesses non documentées."
+    },
+    {
+      "question": "Le programme AVE couvre-t-il les véhicules hybrides branchables (PHEV) ?",
+      "options": ["Non, seulement électriques purs", "Non, seulement hybrides", "Oui, HEV, PHEV et BEV", "Non, aucun véhicule hybride"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE couvre les véhicules Hybrides (HEV), Hybrides Branchables (PHEV) et Électriques (BEV)."
+    },
+    {
+      "question": "Les pédales de véhicule sont-elles couvertes ?",
+      "options": ["Oui, section 15", "Oui, section 20", "Non, exclues", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "Les pédales, palettes et sélecteurs de vitesse sont exclus des pièces du cadre et véhicule selon la section 4.3 - Exclusions."
+    }
+  ]
+}
+

@@ -1,0 +1,188 @@
+{
+  "module": "tracteur",
+  "month": 1,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le bloc-cylindres et toutes les pièces lubrifiées internes du moteur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, avec option", "Seulement diesel"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre le bloc-cylindres et toutes les pièces lubrifiées internes incluant culasse, vilebrequin, pistons, arbre à cames."
+    },
+    {
+      "question": "Quelle est la franchise standard si aucune option n'est sélectionnée ?",
+      "options": ["100$", "200$", "250$", "300$"],
+      "correctAnswer": 2,
+      "explanation": "Une franchise de 250$ s'applique sur chaque réclamation autorisée, sauf si l'option Pas de franchise est achetée (Note importante)."
+    },
+    {
+      "question": "La culasse et joints d'étanchéité sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre culasse et joints d'étanchéité, carter supérieur/inférieur, vilebrequin et arbre à cames."
+    },
+    {
+      "question": "Quel est le montant maximum par visite (réclamation) pour les programmes ATC ?",
+      "options": ["5 000$", "10 000$", "15 000$", "20 000$"],
+      "correctAnswer": 1,
+      "explanation": "Les programmes ATC-AU et ATC-CE offrent un montant maximum par visite de 10 000$ (Limites de réparation)."
+    },
+    {
+      "question": "Le vilebrequin et arbre à vilebrequin poulie sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre vilebrequin, arbre à vilebrequin poulie, arbre à cames et arbre de dé ralenti."
+    },
+    {
+      "question": "Un tracteur de 6 ans avec 2 200 heures est-il admissible à la Tarification A ?",
+      "options": ["Oui, automatiquement", "Non, Tarification A exige ≤5 ans et <2 500 heures", "Oui, avec supplément", "Admissible Tarification B"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification A exige véhicules de 5 ans et moins avec moins de 2 500 heures. Un tracteur de 6 ans n'est pas admissible à la Tarification A."
+    },
+    {
+      "question": "Les pistons et ensemble couvercle avant sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre pistons, ensemble couvercle avant, engrenage de distribution et tige de poussée."
+    },
+    {
+      "question": "Quel est le montant maximum cumulatif (total du contrat) pour les programmes ATC ?",
+      "options": ["10 000$", "15 000$", "20 000$", "25 000$"],
+      "correctAnswer": 2,
+      "explanation": "Les programmes ATC-AU et ATC-CE offrent un montant cumulatif maximum (total du contrat) de 20 000$ (Limites de réparation)."
+    },
+    {
+      "question": "La pompe à huile et entraînement de l'engrenage de la pompe à huile sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre pompe à huile, entraînement de l'engrenage, unité et assemblage de séparation d'huile."
+    },
+    {
+      "question": "Comment présenter les programmes ATC à un client avec tracteur agricole ?",
+      "options": ["C'est compliqué", "2 programmes: ATC-AU (Agricole <250 HP) et ATC-CE (Construction <250 HP), 5 composants, max 10k$/visite, options personnalisables", "Seulement construction", "Pas nécessaire"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer clairement : 2 programmes selon usage (Agricole/Construction), 5 composants couverts, limites claires, options adaptées."
+    },
+    {
+      "question": "La pompe à eau et poulie sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre pompe à eau et poulie, bride et thermostat d'eau, capteur de température."
+    },
+    {
+      "question": "Un tracteur de 8 ans avec 4 500 heures est-il admissible à la Tarification B ?",
+      "options": ["Non, trop vieux", "Oui, Tarification B accepte ≤10 ans et <5 000 heures", "Seulement avec option", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B accepte véhicules de 10 ans et moins avec moins de 5 000 heures. Un tracteur de 8 ans/4 500 heures est admissible."
+    },
+    {
+      "question": "Les collecteurs d'entrée et d'échappement sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre collecteurs d'entrée et d'échappement, pompe d'échappement, soupapes de reniflard."
+    },
+    {
+      "question": "Quelle est la période d'attente avant que la garantie devienne active ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "La Période d'attente désigne les premier quinze (15) jours suivant la date de livraison indiquée sur la garantie (section 1)."
+    },
+    {
+      "question": "La pompe à carburant et arbre à cames et régulateur de carburant sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre pompe à carburant, couvercle, arbre à cames et régulateur de carburant, ensemble séparateur."
+    },
+    {
+      "question": "Les réparations pendant la période d'attente sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, pannes survenues avant date de livraison ou pendant période d'attente (15 jours) exclues", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation de panne survenue avant la date de livraison ou pendant la Période d'attente est exclue (section 5.8)."
+    },
+    {
+      "question": "Le kit d'injecteur et ensemble et capteur ECU sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre ensemble rail de carburant, harnais d'injecteur, pompe d'injection, kit d'injecteur, ensemble et capteur ECU."
+    },
+    {
+      "question": "Combien coûte l'option Pas de franchise ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Pas de franchise coûte 250$ et élimine le montant de franchise de 250$ au moment de la réparation (section 3)."
+    },
+    {
+      "question": "Le dynamo et poulie, stator et armature sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 5", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre dynamo et poulie, stator, armature, démarreur et solénoïdes."
+    },
+    {
+      "question": "Comment gérer un client qui demande réparation sans autorisation ?",
+      "options": ["Accepter", "Expliquer que numéro d'autorisation OBLIGATOIRE AVANT travaux, sinon aucun remboursement (section 5.12)", "Rembourser après", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer que réparation sans numéro d'autorisation (incluant montant) ne sera pas remboursée (section 5.12)."
+    },
+    {
+      "question": "La vanne et refroidisseur EGR sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre plaque de contrôle de vitesse, vanne et refroidisseur EGR, radiateur et convertisseur catalytique."
+    },
+    {
+      "question": "Quels termes sont disponibles pour la Tarification B ?",
+      "options": ["12-60 mois", "12-36 mois seulement (termes 48 et 60 non disponibles)", "12-24 mois", "Tous les termes"],
+      "correctAnswer": 1,
+      "explanation": "La Tarification B offre termes de 12 mois, 24 mois et 36 mois seulement. Les termes de 48 et 60 mois ne sont pas disponibles."
+    },
+    {
+      "question": "L'ensemble turbocompresseur et refroidisseur intercalaire sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 1 - Assemblage complet du moteur", "Oui, composant 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 1 - Assemblage complet du moteur couvre ensemble turbocompresseur, refroidisseur intercalaire, vannes, anneaux, manchons et joints toriques."
+    },
+    {
+      "question": "Un équipement de construction camion à benne est-il admissible au programme ATC-CE ?",
+      "options": ["Oui, automatiquement", "Non, camions à benne et bouteurs exclus du programme ATC-CE", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Le programme ATC-CE (Équipement de Construction) exclut spécifiquement les camions à benne et les bouteurs (section 2 - Exclusions spécifiques)."
+    },
+    {
+      "question": "Le boîtier de transmission et toutes les pièces lubrifiées internes sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Groupe motopropulseur", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Groupe motopropulseur couvre le boîtier de transmission et toutes les pièces lubrifiées internes : pistons, arbre principal, engrenages."
+    },
+    {
+      "question": "Un client frustré conteste une exclusion légitime. Comment réagissez-vous ?",
+      "options": ["Céder immédiatement", "Rester empathique, expliquer raison (section spécifique), rediriger vers 5 composants couverts", "Être défensif", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie, explication claire de l'exclusion (référence section), et redirection vers les 5 composants couverts."
+    },
+    {
+      "question": "L'arbre principal, arbre d'entrée et de compteur sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Groupe motopropulseur", "Oui, composant 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Groupe motopropulseur couvre arbre principal, arbre d'entrée et de compteur, arbre de changement de puissance, arbre d'embrayage."
+    },
+    {
+      "question": "Quel délai pour soumettre un bon de travail à l'Administrateur ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "Aucun bon de travail datant de plus de trente (30) jours à compter de la date de vérification ne sera accepté (section 8.1)."
+    },
+    {
+      "question": "L'ensemble de transmission HST (hydrostatique) avec embrayage et piston sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, composant 2 - Groupe motopropulseur", "Oui, composant 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "Le composant 2 - Groupe motopropulseur couvre ensemble de transmission HST (hydrostatique) - embrayage et piston, engrenages (creeper), cylindres."
+    },
+    {
+      "question": "Un collègue partage des informations confidentielles d'un client. Comment réagissez-vous ?",
+      "options": ["Partager aussi", "Rappeler importance de confidentialité (section 1), ne pas propager, signaler si nécessaire", "Ignorer", "Encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de rappeler l'importance de la confidentialité (section 1 - consentement), ne pas propager et signaler si nécessaire."
+    }
+  ]
+}
+

@@ -1,0 +1,176 @@
+{
+  "module": "hasard-route",
+  "month": 10,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Quelles sont les 3 étapes OBLIGATOIRES avant toute réparation/remplacement ?",
+      "options": ["1 étape seulement", "3 étapes OBLIGATOIRES : 1) Contacter Administrateur (claims@goautoshield.com OU 1-888-406-3002), 2) Fournir photo + description dommages, 3) Obtenir AUTORISATION PRÉALABLE (avant travaux). Sinon = réclamation REFUSÉE", "2 étapes", "Selon l'urgence"],
+      "correctAnswer": 1,
+      "explanation": "3 étapes OBLIGATOIRES : 1) Contacter Administrateur (courriel ou téléphone), 2) Fournir photo + description dommages (si demandé), 3) Obtenir AUTORISATION PRÉALABLE avant travaux. Non-respect = réclamation REFUSÉE totalement."
+    },
+    {
+      "question": "Quel est le délai moyen d'autorisation réclamation Hasard de Route ?",
+      "options": ["7 jours", "24-48 heures ouvrables (jours normaux), urgences traitées plus rapidement", "5 jours", "Instantané"],
+      "correctAnswer": 1,
+      "explanation": "Le délai moyen d'autorisation est 24-48 heures ouvrables pour les demandes normales. Les urgences peuvent être traitées plus rapidement selon la disponibilité de l'Administrateur."
+    },
+    {
+      "question": "Comment gérer un client exigeant autorisation immédiate weekend (bureau fermé) ?",
+      "options": ["Autoriser nous-mêmes", "Expliquer PROCESSUS : bureau Administrateur fermé weekends/fériés = autorisation lundi. URGENCE ABSOLUE (véhicule dangereux) = effectuer réparation + soumettre factures/photos Administrateur APRÈS (évaluation cas par cas). NON-urgence = attendre autorisation. Respect processus", "Faire exception", "Selon le coût"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté processus : bureau fermé weekends = autorisation lundi, urgence absolue (danger) = réparer + soumettre après (évaluation cas par cas), non-urgence = attendre autorisation, respect processus."
+    },
+    {
+      "question": "Quels documents le client DOIT-il conserver après dommage hasard routier ?",
+      "options": ["Rien", "Documents OBLIGATOIRES : 1) Photos dommage (avant réparation), 2) Pièce endommagée conservée (pneu, roue, clé cassée) si possible, 3) Facture estimation atelier, 4) Tout autre preuve (témoignage, rapport police si applicable). Preuves = admissibilité", "Seulement facture", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige liste documentation : photos dommage avant réparation, pièce endommagée conservée (si possible), facture estimation, autres preuves (témoignages, rapport), documentation complète = admissibilité garantie."
+    },
+    {
+      "question": "Le client peut-il choisir N'IMPORTE QUEL atelier pour réparations ?",
+      "options": ["Oui, libre choix", "NON, client dirigé vers : Détaillant Vente Original (si applicable) OU fournisseur AGRÉÉ Administrateur. Atelier non-agréé = autorisation préalable REQUISE, peut être refusé si tarifs déraisonnables", "Oui, mais tarif plafonné", "Selon la région"],
+      "correctAnswer": 1,
+      "explanation": "Le client est dirigé vers Détaillant Original OU fournisseur AGRÉÉ. Atelier non-agréé = autorisation préalable REQUISE, peut être refusé si tarifs déraisonnables (Administrateur vérifie coûts marché)."
+    },
+    {
+      "question": "Comment expliquer restriction fournisseurs agréés à client voulant atelier spécifique ?",
+      "options": ["Refuser net", "Expliquer LOGIQUE : fournisseurs agréés = tarifs négociés raisonnables + qualité contrôlée + paiement direct (client paie rien). Atelier client préféré = possible MAIS autorisation préalable (vérification tarifs) + client peut payer différence si coûts excessifs. Flexibilité avec conditions", "Accepter tous ateliers", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : fournisseurs agréés = tarifs négociés qualité contrôlée paiement direct, atelier préféré = possible autorisation préalable (vérification), client paie différence si excessif, flexibilité conditions."
+    },
+    {
+      "question": "Si client effectue réparation SANS autorisation préalable, peut-il être remboursé ?",
+      "options": ["Oui, avec facture", "NON, TOUTES demandes REFUSÉES si autorisation préalable NON OBTENUE ou preuves fausses déclarations (AUCUNE exception)", "Selon le cas", "Partiellement"],
+      "correctAnswer": 1,
+      "explanation": "CRITIQUE : TOUTES LES DEMANDES DE REMBOURSEMENT SERONT REFUSÉES si l'autorisation préalable n'a PAS été obtenue OU s'il existe des preuves de toute FAUSSE DÉCLARATION IMPORTANTE (aucune exception)."
+    },
+    {
+      "question": "Quel recours a un client si Administrateur refuse un devis jugé déraisonnable ?",
+      "options": ["Aucun recours", "Administrateur proposera ALTERNATIVES : 1) Fournisseur agréé tarifs raisonnables (même qualité), 2) Deuxième estimation atelier différent, 3) Règlement espèces montant raisonnable (client choisit fournisseur). Client libre accepter alternative OU payer différence atelier préféré", "Obligation accepter", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige options : Administrateur propose alternatives (fournisseur agréé, 2e estimation, règlement espèces raisonnable), client libre accepter alternative OU payer différence atelier préféré, flexibilité équitable."
+    },
+    {
+      "question": "Quelle est la procédure si le client est en voyage éloigné (ex: 2000 km de Détaillant Original) ?",
+      "options": ["Retourner obligatoire", "Procédure ÉLOIGNEMENT : 1) Contacter Administrateur (1-888-406-3002), 2) Expliquer situation géographique, 3) Administrateur fournit remboursement pour réparation autorisée effectuée Canada/USA continentaux (atelier local). Flexibilité géographique totale", "Pas de couverture", "Selon la distance"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté procédure éloignement : contacter Administrateur, expliquer situation, Administrateur fournit remboursement réparation autorisée Canada/USA (atelier local), flexibilité géographique totale client voyageur."
+    },
+    {
+      "question": "Comment valoriser flexibilité géographique Canada/USA à client voyageur fréquent ?",
+      "options": ["Minimiser", "Démontrer AVANTAGE MOBILITÉ : couverture Canada + USA continentaux = protection 48 états + 10 provinces + 3 territoires. Client voyage affaires/plaisir = protection PARTOUT Amérique Nord. Aucune restriction régionale. Tranquillité totale déplacements. Réseau fournisseurs continental", "Ignorer aspect", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à valoriser mobilité : couverture Canada + USA continentaux = 48 états + 10 provinces + 3 territoires, voyages affaires/plaisir = protection partout Amérique Nord, réseau continental, tranquillité déplacements."
+    },
+    {
+      "question": "Que se passe-t-il si la pièce de remplacement nécessaire est discontinuée/indisponible ?",
+      "options": ["Attendre disponibilité", "Administrateur se réserve droit effectuer RÈGLEMENT EN ESPÈCES (montant équivalent tarifs marché services similaires zone géographique). Client utilise montant chez fournisseur choix (pièce équivalente/alternative)", "Aucune couverture", "Selon la pièce"],
+      "correctAnswer": 1,
+      "explanation": "Si pièce discontinuée/indisponible : Administrateur peut effectuer RÈGLEMENT EN ESPÈCES (tarifs marché équivalents zone géographique), client libre utiliser montant fournisseur choix (pièce équivalente/alternative)."
+    },
+    {
+      "question": "L'Administrateur peut-il inspecter le véhicule/pièce endommagée ?",
+      "options": ["Non, confiance", "OUI, Administrateur se RÉSERVE DROIT examiner véhicule/pièce endommagée (à seule discrétion). Non-respect conservation propriété endommagée = peut entraîner REFUS service/remboursement", "Seulement si fraude", "Avec consentement"],
+      "correctAnswer": 1,
+      "explanation": "OUI, Administrateur se RÉSERVE LE DROIT d'examiner véhicule/pièce endommagée (vérification authentification). Non-respect conservation propriété endommagée = peut entraîner REFUS total service/remboursement."
+    },
+    {
+      "question": "Comment expliquer obligation conservation pièce endommagée à client pressé jeter pneu crevé ?",
+      "options": ["Laisser jeter", "Insister FERMEMENT : pièce endommagée = PREUVE essentielle (vérification cause légitime hasard routier vs négligence). NE PAS éliminer avant autorisation Administrateur. Non-respect = risque REFUS TOTAL réclamation (perte protection complète). Conservation = protection droits. ATTENDRE autorisation", "Être flexible", "Selon la pièce"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige fermeté : pièce endommagée = preuve essentielle (vérification cause légitime), ne pas éliminer avant autorisation, non-respect = risque refus total réclamation, conservation = protection droits, attendre."
+    },
+    {
+      "question": "Combien de temps le client doit-il conserver la pièce endommagée ?",
+      "options": ["1 semaine", "Conserver pièce jusqu'à : 1) Inspection Administrateur effectuée (si demandée), OU 2) Autorisation finale réclamation reçue + confirmation élimination. Généralement 5-10 jours ouvrables", "30 jours", "Indéfiniment"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté délai : conserver pièce jusqu'à inspection Administrateur (si demandée) OU autorisation finale + confirmation élimination reçues. Généralement 5-10 jours ouvrables (délai raisonnable)."
+    },
+    {
+      "question": "Quelle est la procédure si le client soupçonne fraude/négligence atelier agréé ?",
+      "options": ["Rien à faire", "Procédure PLAINTE : 1) Contacter Administrateur IMMÉDIATEMENT (clientservices@goautoshield.com), 2) Décrire problème détaillé + preuves (photos, factures), 3) Administrateur enquête + propose solutions (réparation correcte autre atelier, remboursement). Protection client prioritaire", "Accepter situation", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige processus clair : contacter Administrateur immédiatement (clientservices@goautoshield.com), décrire problème + preuves détaillées, Administrateur enquête + solutions (réparation correcte, remboursement), protection client prioritaire."
+    },
+    {
+      "question": "Le client peut-il demander deuxième opinion si Administrateur refuse réclamation ?",
+      "options": ["Non, décision finale", "OUI, client peut : 1) Demander révision décision (preuves additionnelles, explications), 2) Escalader au superviseur (cas complexes), 3) Recours loi protection consommateur (désaccords majeurs). Processus révision disponible", "Selon le cas", "Seulement tribunal"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté recours : client peut demander révision décision (preuves additionnelles), escalader superviseur (cas complexes), recours loi protection consommateur (désaccords majeurs), processus révision disponible équitable."
+    },
+    {
+      "question": "Quelle information le client reçoit-il après soumission réclamation ?",
+      "options": ["Rien", "Client reçoit : 1) Accusé réception réclamation (24-48h), 2) Numéro dossier référence, 3) Délai traitement estimé, 4) Décision autorisation (acceptée/refusée + justification), 5) Montant autorisé/limite (si acceptée). Communication transparente complète", "Seulement décision finale", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige transparence communication : accusé réception 24-48h, numéro dossier, délai estimé, décision + justification, montant autorisé (si acceptée), communication complète transparente tout processus."
+    },
+    {
+      "question": "Comment gérer un client frustré par refus réclamation pare-brise (fissure stress) ?",
+      "options": ["Céder", "Démontrer EMPATHIE + CLARTÉ : 1) Comprendre frustration sincèrement, 2) Expliquer DISTINCTION fissure stress (contraintes thermiques = exclue) vs impact débris (couvert), 3) Montrer termes contrat écrits, 4) Proposer révision si preuves impact débris, 5) Maintenir fermeté termes. Empathie + intégrité", "Accepter réclamation", "Blâmer Administrateur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige empathie + fermeté : comprendre frustration sincèrement, expliquer distinction stress (exclu) vs impact (couvert), montrer termes écrits, proposer révision si preuves impact, maintenir intégrité termes."
+    },
+    {
+      "question": "Quelle est la responsabilité du Détaillant après vente contrat Hasard de Route ?",
+      "options": ["Aucune", "Responsabilités POST-VENTE : 1) Diriger client vers Administrateur (réclamations), 2) Expliquer processus autorisation préalable, 3) NE PAS promettre couvertures non prévues contrat, 4) Supporter client questions générales. Rôle liaison + éducation", "Tout gérer", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarté rôle post-vente : diriger vers Administrateur (réclamations), expliquer processus autorisation, ne pas promettre couvertures non prévues, supporter questions générales, rôle liaison éducation."
+    },
+    {
+      "question": "Le Détaillant peut-il autoriser des réclamations au nom de l'Administrateur ?",
+      "options": ["Oui, si confiant", "NON, SEUL Administrateur autorise réclamations. Détaillant peut : 1) INFORMER client processus, 2) AIDER soumission réclamation, 3) DIRIGER vers Administrateur. JAMAIS autoriser/promettre couverture. Dépassement autorité = responsabilité Détaillant", "Oui, petites réclamations", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté autorité : SEUL Administrateur autorise réclamations, Détaillant = informer processus aider soumission diriger, JAMAIS autoriser/promettre couverture, dépassement autorité = responsabilité personnelle Détaillant."
+    },
+    {
+      "question": "Comment former nouveaux employés sur programme Hasard de Route efficacement ?",
+      "options": ["Formation minimale", "Programme FORMATION STRUCTURÉ : 1) Étude complète contrat (termes/conditions), 2) Révision 10 protections + limites, 3) Processus autorisation préalable, 4) Scénarios clients (objections/questions), 5) Coordination Administrateur. Test connaissances avant vente. Compétence = protection réputation", "Sur le tas", "Selon l'expérience"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige formation structurée : étude complète contrat, révision 10 protections limites, processus autorisation, scénarios clients, coordination Administrateur, test connaissances avant vente, compétence = protection réputation."
+    },
+    {
+      "question": "Quels sont les 5 erreurs FRÉQUENTES à éviter lors vente Hasard de Route ?",
+      "options": ["Aucune erreur courante", "5 erreurs CRITIQUES éviter : 1) Promettre couvertures non prévues contrat (accidents, hors-route), 2) Dire \"illimité tout\" (limites $ existent), 3) Ignorer exclusions véhicules (modifiés, >150k$ MSRP), 4) Ne pas expliquer autorisation préalable OBLIGATOIRE, 5) Confusion service vs assurance. Formation prévient erreurs", "2 erreurs", "Selon le vendeur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conscience erreurs fréquentes : 1) Promesses non prévues (accidents hors-route), 2) \"Illimité tout\" (limites existent), 3) Ignorer exclusions véhicules, 4) Oublier autorisation préalable, 5) Confusion service/assurance, formation prévient."
+    },
+    {
+      "question": "Comment mesurer satisfaction client programme Hasard de Route post-vente ?",
+      "options": ["Pas nécessaire", "Système SUIVI SATISFACTION : 1) Enquête satisfaction 6 mois post-achat (utilisation, réclamations), 2) Suivi 12 mois (renouvellement futur), 3) Taux réclamations approuvées/refusées, 4) Feedbacks réclamations, 5) NPS (Net Promoter Score). Données = amélioration continue", "Seulement plaintes", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à mesurer satisfaction : enquête 6 mois (utilisation réclamations), suivi 12 mois (renouvellement), taux approbation/refus, feedbacks, NPS, données = amélioration continue qualité service."
+    },
+    {
+      "question": "Quelle est la meilleure pratique pour présenter Hasard de Route lors livraison véhicule ?",
+      "options": ["Mention rapide", "Pratique OPTIMALE LIVRAISON : 1) Moment détendu post-signature (client réceptif), 2) Présentation 5-7 minutes structurée (10 protections, tarifs, ROI), 3) Scénarios personnalisés profil client (famille, voyageur, luxe), 4) Brochure détaillée + coordonnées Administrateur, 5) Période réflexion (pas pression). Professionnalisme = résultats", "Pression immédiate", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige approche optimale : moment détendu post-signature, présentation 5-7 min structurée (protections tarifs ROI), scénarios personnalisés profil, brochure + coordonnées, période réflexion, professionnalisme = résultats conversion."
+    },
+    {
+      "question": "Comment gérer un client ayant acheté Hasard de Route mais n'utilisant jamais (année 6/7) ?",
+      "options": ["Ignorer", "Approche PROACTIVE VALEUR : 1) Contact courtoisie (rappel protections disponibles), 2) Vérification satisfaction générale, 3) Rappel occurrences illimitées (utilisation sans culpabilité), 4) Exemples réclamations légitimes courantes, 5) Valoriser tranquillité esprit (valeur immatérielle). Engagement relationnel", "Laisser oublier", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à engagement proactif : contact courtoisie rappel protections, vérification satisfaction, rappel illimité (sans culpabilité), exemples réclamations légitimes, valoriser tranquillité esprit, engagement relationnel fidélisation."
+    },
+    {
+      "question": "Un collègue promet verbalement à client \"Toute réparation vitre couverte 100% illimité\". Comment intervenir ?",
+      "options": ["Après vente", "Intervention IMMÉDIATE DEVANT CLIENT : \"Précision importante : programme couvre RÉPARATION pare-brise/vitres éclats ≤5 cm (125$ + 25$ illimité) ET franchise/remplacement 1000$ total. PAS toutes réparations vitres illimité. Termes écrits contrat = référence\". Correction protège client + collègue responsabilité. Formation collègue après", "Laisser faire", "Correction privée"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige intervention immédiate devant client : précision réparation ≤5 cm (125$+25$ illimité) + franchise 1000$ total PAS toutes illimité, termes écrits référence, correction protège client + collègue, formation après."
+    },
+    {
+      "question": "Quelle documentation le Détaillant doit-il conserver après vente Hasard de Route ?",
+      "options": ["Rien", "Documentation OBLIGATOIRE : 1) Copie contrat signé client (7 ans minimum), 2) Preuve paiement Administrateur, 3) Confirmation admissibilité véhicule (inspection, MSRP), 4) Communications client/Administrateur, 5) Exceptions approuvées (si applicable). Conformité légale + protection litiges", "Seulement contrat", "Selon la province"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige documentation complète : copie contrat signé (7 ans min), preuve paiement Administrateur, confirmation admissibilité véhicule, communications, exceptions approuvées, conformité légale + protection litiges."
+    },
+    {
+      "question": "Comment maximiser taux conversion vente Hasard de Route (sans pression excessive) ?",
+      "options": ["Pression vente", "Stratégie CONVERSION ÉTHIQUE : 1) Formation solide équipe (compétence = confiance), 2) Présentation structurée professionnelle (10 protections ROI), 3) Personnalisation profil client (famille, voyageur, luxe), 4) Démonstration coûts réels pièces (pare-brise, clés), 5) Période réflexion respectée, 6) Suivi courtois 24-48h. Professionnalisme = résultats durables", "Rabais agressifs", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conversion éthique : formation équipe solide, présentation structurée professionnelle, personnalisation profil, démonstration coûts réels, période réflexion respectée, suivi courtois, professionnalisme = résultats durables fidélisation."
+    }
+  ]
+}
+

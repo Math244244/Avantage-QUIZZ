@@ -1,0 +1,188 @@
+{
+  "module": "vr",
+  "month": 8,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le système des dispositifs de sécurité et coussins gonflables sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, système des dispositifs de sécurité et coussins gonflables exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système des dispositifs de sécurité et le système des coussins gonflables sont exclus (section 4.5)."
+    },
+    {
+      "question": "Comment présenter l'ensemble du programme VR à un nouveau client ?",
+      "options": ["C'est compliqué", "2 programmes (aVR-Plus/aVR), 22 composants, 5 protections incluses, options personnalisables, franchise 200$ (ou 0$ avec option)", "C'est cher", "Pas nécessaire"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à présenter avantages clairs : 2 programmes adaptés, 22 composants, 5 protections incluses, options, franchise modulable."
+    },
+    {
+      "question": "Les réparations liées à des fuites de liquide ou d'air sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparations liées à fuites de liquide/air (transpiration ou humidité mineures) exclues", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées à des fuites de liquide ou d'air (y compris la transpiration ou l'humidité mineures) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un client hésite entre aVR-Plus et aVR. Comment l'aider à choisir ?",
+      "options": ["Vendre le plus cher", "Évaluer âge/km VR: ≤10 ans/100k km→aVR-Plus (max 10k$/réclamation). >10 ans→aVR (max 5k$/réclamation)", "C'est pareil", "Selon son budget"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à évaluer admissibilité (âge/km VR) et besoins pour recommander programme adapté : aVR-Plus (récent) vs aVR (plus âgé)."
+    },
+    {
+      "question": "Le système DRL automatique et de vision nocturne est-il couvert ?",
+      "options": ["Oui, toujours", "Non, système DRL automatique et de vision nocturne exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au système DRL automatique et de vision nocturne sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un VR sport haute performance avec MSRP de 160 000$ CAD est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicule sport/luxe haute performance MSRP >150 000$ CAD exclu", "Oui, avec supplément", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule sport ou de luxe haute performance dont le MSRP est supérieur à 150 000$ CAD est exclu (section 10.g)."
+    },
+    {
+      "question": "Le mécanisme du pneu de secours est-il couvert ?",
+      "options": ["Oui, toujours", "Non, mécanisme du pneu de secours exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au mécanisme du pneu de secours sont exclus (section 4.5)."
+    },
+    {
+      "question": "Comment gérer un client qui demande exception pour VR modifié ?",
+      "options": ["Refuser directement", "Expliquer exclusion (section 10.f), suggérer contacter représentant Administrateur AVANT achat pour demander exception", "Accepter automatiquement", "Mentir"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer exclusion véhicules modifiés puis suggérer au Distributeur de contacter représentant Administrateur AVANT vente pour demander exception."
+    },
+    {
+      "question": "Le mécanisme d'ouverture à ressort de la valise est-il couvert ?",
+      "options": ["Oui, toujours", "Non, mécanisme d'ouverture à ressort de la valise exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires et réparations liées au mécanisme d'ouverture à ressort de la valise sont exclus (section 4.5)."
+    },
+    {
+      "question": "Le Distributeur peut-il facturer des frais supplémentaires pour exception approuvée ?",
+      "options": ["Non, jamais", "Oui, le Distributeur est responsable de tous les frais supplémentaires encourus", "Seulement avec accord", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Si une exception est approuvée, elle sera indiquée sur le contrat. Le Distributeur Autorisé est responsable de tous les frais supplémentaires encourus (section 10.g)."
+    },
+    {
+      "question": "Les éléments et fans de sièges chauffants de refroidissement ou de ventilation sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, éléments et fans de sièges chauffants de refroidissement ou de ventilation exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les pièces supplémentaires liées aux éléments et fans de sièges chauffants de refroidissement ou de ventilation sont exclus (section 4.5)."
+    },
+    {
+      "question": "Comment expliquer l'importance de contacter l'Administrateur en cas de panne ?",
+      "options": ["Pas nécessaire", "Obligatoire: contacter 1-866-666-0181 ou info@garantieavantageplus.ca pour aviser panne, obtenir direction Centre Autorisé", "Optionnel", "Après réparation"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer : contact Administrateur OBLIGATOIRE pour aviser panne, obtenir direction vers Centre Autorisé et processus d'autorisation (section 7)."
+    },
+    {
+      "question": "Les frais environnementaux et de traitement des déchets sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, frais environnementaux et traitement des déchets exclus", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les frais environnementaux et de traitement des déchets y compris la soupape de purge, la cartouche de vapeur, le solénoïde d'évent et le système urée (pour diesels) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Un Centre de Réparation Autorisé soumet l'évaluation. Qui la paye ?",
+      "options": ["L'Administrateur", "Le Propriétaire du Véhicule (évaluation aux frais du propriétaire)", "Le Distributeur", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un agent du Centre de Réparation Autorisé soumettra une évaluation (aux frais du propriétaire) directement à l'Administrateur (section 7)."
+    },
+    {
+      "question": "Le système urée pour véhicules diesel est-il couvert ?",
+      "options": ["Oui, toujours", "Non, système urée (pour véhicules diesel) exclu", "Oui, avec option", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Les frais environnementaux et de traitement des déchets y compris le système urée (pour les véhicules diesel) sont exclus (section 4.5)."
+    },
+    {
+      "question": "Quelle forme d'approbation est reconnue par l'Administrateur ?",
+      "options": ["Vocale acceptable", "Seulement numéro d'autorisation avec montant en format imprimé (courriel/télécopieur)", "Texto acceptable", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Un numéro d'autorisation avec montant en format imprimé (courriel/télécopieur) est requis. Toute autre forme (vocale, texte) ne sera pas reconnue (section 7)."
+    },
+    {
+      "question": "Les réparations endommagées par friction ou usure sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par friction, usure, accumulation de carbone ou corrosion exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation endommagée par la friction, l'usure, l'accumulation de carbone ou la corrosion (y compris corrosion câbles/connecteurs) est exclue (section 5.2)."
+    },
+    {
+      "question": "Que faire si la panne survient en dehors des heures de travail de l'Administrateur ?",
+      "options": ["Attendre", "Propriétaire peut envoyer factures des montants encourus à l'Administrateur pour évaluation", "Impossible", "Payer directement"],
+      "correctAnswer": 1,
+      "explanation": "Si panne survient en dehors des heures de travail et impossibilité de contacter Administrateur, propriétaire peut envoyer factures pour évaluation (section 7)."
+    },
+    {
+      "question": "Les réparations endommagées par contamination ou manque de lubrifiants sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par contamination, manque de lubrifiants ou qualité des lubrifiants exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation endommagée par la contamination, le manque de lubrifiants ou la qualité des lubrifiants est exclue (section 5.2)."
+    },
+    {
+      "question": "Comment gérer un client qui pense que présentation d'une réclamation garantit la couverture ?",
+      "options": ["Confirmer", "Expliquer poliment que présentation d'une réclamation ne garantit pas qu'il y aura couverture", "Mentir", "Ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement que la présentation d'une réclamation ne garantit pas qu'il y aura couverture en vertu du programme (section 7)."
+    },
+    {
+      "question": "Les réparations endommagées par pré-allumage du moteur sont-elles couvertes ?",
+      "options": ["Oui, toutes", "Non, réparation endommagée par pré-allumage du moteur ou surchauffe exclue", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La réparation endommagée par le pré-allumage du moteur ou la surchauffe du moteur ou de tout autre composant couvert est exclue (section 5.2)."
+    },
+    {
+      "question": "Quels documents le Centre de Réparation Autorisé doit-il retourner à l'Administrateur ?",
+      "options": ["Rien", "Formulaire d'autorisation signé + facture avec montant autorisé + preuve de paiement (si applicable)", "Seulement la facture", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Centre doit retourner : formulaire d'autorisation signé par propriétaire, facture avec montant autorisé, et preuve de paiement si applicable (section 8.3)."
+    },
+    {
+      "question": "L'Administrateur est-il responsable de la qualité du matériel utilisé pour la réparation ?",
+      "options": ["Oui, toujours", "Non, l'Administrateur ne sera pas tenu responsable de la qualité du matériel", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de la qualité du matériel utilisé pour la réparation (section 8.5)."
+    },
+    {
+      "question": "L'Administrateur est-il responsable des dommages causés par le Centre de Réparation ?",
+      "options": ["Oui, toujours", "Non, l'Administrateur ne sera pas tenu responsable des dommages causés par le Centre", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas tenu responsable de tout dommage causer directement ou indirectement au véhicule par le Centre de Réparation Autorisé (section 8.6)."
+    },
+    {
+      "question": "Comment expliquer la franchise à un client ?",
+      "options": ["Pas de franchise", "Franchise 200$ déduite du montant autorisé, SAUF si option Pas de franchise (100$) sélectionnée", "Franchise 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer clairement : franchise standard 200$ automatiquement déduite, SAUF si option Pas de franchise (100$) achetée (section 8.7 et Note importante)."
+    },
+    {
+      "question": "Le propriétaire peut-il réclamer remboursement d'impôt sur les montants versés au Centre ?",
+      "options": ["Oui, toujours", "Non, le Propriétaire ne peut prétendre à aucun remboursement d'impôt", "Partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le Propriétaire du Véhicule ne peut prétendre à aucun remboursement d'impôt sur les montants que l'Administrateur verse au Centre de Réparation Autorisé (section 8.9)."
+    },
+    {
+      "question": "Comment rassurer un client inquiet du nombre de réclamations possibles ?",
+      "options": ["Limité à 5", "Nombre illimité de réclamations possible, limites: max par réclamation et cumulatif total selon programme", "Seulement 10", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rassurer : réclamations illimitées possibles, seules limites sont max/réclamation (5k$ ou 10k$) et cumulatif selon programme (section 9)."
+    },
+    {
+      "question": "Quelles sont les 3 limites maximales de réparation de l'Administrateur ?",
+      "options": ["Une seule limite", "3 limites: Max par visite (programme), Prix véhicule (sans taxes), Prix sur contrat vente Distributeur", "Deux limites", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'Administrateur ne sera pas responsable de plus que le moindre des : max par visite/cumulatif (programme), prix véhicule, prix sur contrat vente (section 9)."
+    },
+    {
+      "question": "Un client demande si l'entretien peut être demandé. Que répondez-vous ?",
+      "options": ["Non, jamais", "Oui, preuve d'entretien et codes d'anomalie peuvent être demandés à tout moment", "Seulement pour neufs", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La preuve d'entretien et les informations de code d'anomalie (antérieures et présentes) peuvent être demandées par l'Administrateur à tout moment (section 6.2)."
+    },
+    {
+      "question": "Un collègue partage des informations confidentielles d'un client VR. Comment réagissez-vous ?",
+      "options": ["Partager aussi", "Rappeler importance de confidentialité (section 1), ne pas propager, signaler si nécessaire", "Ignorer", "Encourager"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige de rappeler l'importance de la confidentialité (consentement section 1), ne pas propager l'information et signaler si nécessaire."
+    }
+  ]
+}
+

@@ -1,0 +1,188 @@
+{
+  "module": "auto",
+  "month": 5,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le refroidisseur de l'huile à transmission est couvert dans quelle section ?",
+      "options": ["Section 2", "Section 19", "Section 21", "Section 23"],
+      "correctAnswer": 3,
+      "explanation": "La section 23 - Système du refroidissement Plus + couvre le refroidisseur de l'huile à transmission et le refroidisseur de l'huile à moteur."
+    },
+    {
+      "question": "Quel est le montant total payé par le contrat pour le programme AP ?",
+      "options": ["500$", "1 000$", "1 500$", "2 000$"],
+      "correctAnswer": 1,
+      "explanation": "Le montant total payé par le contrat pour le programme AP est de 1 000$ selon les détails financiers."
+    },
+    {
+      "question": "Les fusées de roulement sont couvertes dans quelle section ?",
+      "options": ["Section 7", "Section 12", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 - Suspension couvre les fusées de roulement, les rotules et les bras de suspension avec coussinettes."
+    },
+    {
+      "question": "Un client avec un Chevrolet Silverado 2020 de 105 000 km demande le programme AT PLUS. Dans quelle catégorie ?",
+      "options": ["Catégorie A", "Catégorie B", "Catégorie C", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "Chevrolet fait partie de la Catégorie B incluant Buick, Cadillac, Chrysler, Dodge, Ford, GMC, Hummer, Lincoln, Mazda, Saturn et Subaru."
+    },
+    {
+      "question": "Le programme AP est disponible pour quel terme ?",
+      "options": ["12 mois seulement", "12 mois ou 20 000 km", "24 mois ou 40 000 km", "36 mois ou 60 000 km"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AP est disponible pour un terme de 12 mois ou 20 000 km selon la durée du contrat."
+    },
+    {
+      "question": "Combien coûte l'option 2 x Réclamation pour le programme AT PLUS ?",
+      "options": ["150$", "200$", "250$", "300$"],
+      "correctAnswer": 3,
+      "explanation": "L'option 2 x Réclamation coûte 300$ pour le programme AT PLUS selon les options disponibles."
+    },
+    {
+      "question": "Le papillon des corps (throttle body) est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 18"],
+      "correctAnswer": 2,
+      "explanation": "La section 17 - Système d'alimentation couvre le papillon des corps / gaz d'admission, les injecteurs et le distributeur d'injection."
+    },
+    {
+      "question": "Quel est l'âge maximal d'un véhicule pour le programme AVE ?",
+      "options": ["8 ans", "10 ans", "12 ans", "15 ans"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AVE s'applique aux véhicules âgés de 10 ans et moins ayant 200 000 km et moins."
+    },
+    {
+      "question": "La pompe de lave-glace est couverte dans quelle section ?",
+      "options": ["Section 12", "Section 15", "Section 16", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 15 - Électricité couvre la pompe de lave-glace avant et arrière ainsi que le module de délai de lave-glace."
+    },
+    {
+      "question": "Comment présenter la différence de couverture entre AX-1 et AX-2 à un client ?",
+      "options": ["Ils sont identiques", "AX-2 offre des montants maximaux doubles (4 000$ vs 2 000$ total, 1 500$ vs 1 000$ par réclamation)", "AX-2 couvre plus de sections", "AX-1 est suffisant pour tous"],
+      "correctAnswer": 1,
+      "explanation": "AX-1 et AX-2 couvrent les mêmes sections (1-11), mais AX-2 offre des montants maximaux supérieurs pour une meilleure protection financière."
+    },
+    {
+      "question": "Quel kilométrage maximal pour être admissible au programme AX-1 ?",
+      "options": ["140 000 km", "200 000 km", "225 000 km", "280 000 km"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-1 s'applique aux véhicules ayant 225 000 km et moins selon les véhicules admissibles."
+    },
+    {
+      "question": "La soupape EGR (recirculation des gaz d'échappement) est couverte dans quelle section ?",
+      "options": ["Section 1", "Section 13", "Section 17", "Section 24"],
+      "correctAnswer": 3,
+      "explanation": "La section 24 - Système d'émissions couvre la soupape EGR, les capteurs d'oxygène, les catalyseurs et la soupape PCV."
+    },
+    {
+      "question": "Combien coûte l'option 0$ de Franchise pour le programme AT ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option 0$ de Franchise coûte 100$ pour le programme AT selon les options disponibles."
+    },
+    {
+      "question": "Les joints et bagues sont couverts dans quelle section ?",
+      "options": ["Section 1", "Section 10", "Section 21", "Toutes les sections"],
+      "correctAnswer": 1,
+      "explanation": "La section 10 couvre tous les joints et bagues, mais seulement lors d'un bris d'une pièce mécanique majeur (joint de carter de l'huile exclus)."
+    },
+    {
+      "question": "Quelle est la franchise du programme AX-2 ?",
+      "options": ["100$", "125$", "150$", "175$"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AX-2 a une franchise de 125$ selon les détails financiers du programme."
+    },
+    {
+      "question": "Le capteur de papillon des corps est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 17", "Section 18"],
+      "correctAnswer": 2,
+      "explanation": "La section 17 - Système d'alimentation couvre le capteur de papillon des corps et le capteur de position d'accélérateur."
+    },
+    {
+      "question": "Un client avec un budget limité veut une protection de base. Quel programme recommandez-vous pour son véhicule de 15 ans ?",
+      "options": ["Programme AX-1", "Programme AX-2", "Programme AT", "Programme AP"],
+      "correctAnswer": 3,
+      "explanation": "Le programme AP est conçu comme programme d'entrée de gamme pour véhicules de 13 à 20 ans, offrant une protection essentielle (sections 1-6) à coût abordable."
+    },
+    {
+      "question": "Quel est le montant maximum par réclamation pour le programme AVE ?",
+      "options": ["3 000$", "4 000$", "5 000$", "Valeur du véhicule"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AVE a un montant maximum par réclamation de 5 000$ selon les détails financiers."
+    },
+    {
+      "question": "Le solénoïde des soupapes de transmission est couvert dans quelle section ?",
+      "options": ["Section 2", "Section 11", "Section 15", "Section 22"],
+      "correctAnswer": 3,
+      "explanation": "La section 22 - Électricité / Haut Tech Plus + couvre le solénoïde des soupapes de transmission et les modules ECM/TCM."
+    },
+    {
+      "question": "Combien coûte l'option Service routier + par année pour le programme AX-2 ?",
+      "options": ["25$", "50$", "75$", "100$"],
+      "correctAnswer": 1,
+      "explanation": "L'option Service routier + coûte 50$ par année pour le programme AX-2 (exemple : 150$ pour un contrat de 3 ans)."
+    },
+    {
+      "question": "L'option Service routier + est-elle incluse dans le programme AVE ?",
+      "options": ["Non, coûte 50$ par année", "Non, coûte 75$ par année", "Oui, incluse sans frais (0$)", "Non disponible"],
+      "correctAnswer": 2,
+      "explanation": "L'option Service routier + est incluse sans frais (0$) dans le programme AVE selon les options disponibles."
+    },
+    {
+      "question": "La barre stabilisatrice (sway bar) est couverte dans quelle section ?",
+      "options": ["Section 9", "Section 12", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 - Suspension couvre la barre stabilisatrice (sway), les bras de suspension et les rotules."
+    },
+    {
+      "question": "Un client satisfait vous demande votre carte professionnelle pour vous recommander. Comment réagissez-vous ?",
+      "options": ["Refuser par modestie", "Donner la carte avec enthousiasme et remercier pour la confiance", "Demander une commission supplémentaire", "Ignorer la demande"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage le réseautage et les recommandations. Remercier chaleureusement et faciliter les références futures démontre de l'excellence."
+    },
+    {
+      "question": "Le capteur de détonation est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 11", "Section 17", "Section 18"],
+      "correctAnswer": 3,
+      "explanation": "La section 18 - Système d'allumage plus + couvre le capteur de détonation, la bobine d'induction et les capteurs système d'ignition."
+    },
+    {
+      "question": "Combien de termes sont disponibles pour le programme AX-3 ?",
+      "options": ["1 terme", "2 termes", "3 termes", "5 termes"],
+      "correctAnswer": 2,
+      "explanation": "Le programme AX-3 est disponible pour 3 termes : 12 mois, 24 mois ou 36 mois selon la durée du contrat."
+    },
+    {
+      "question": "Le refroidisseur de l'huile à moteur est couvert dans quelle section ?",
+      "options": ["Section 1", "Section 19", "Section 21", "Section 23"],
+      "correctAnswer": 3,
+      "explanation": "La section 23 - Système du refroidissement Plus + couvre le refroidisseur de l'huile à moteur et le refroidisseur de l'huile à transmission."
+    },
+    {
+      "question": "Quelle est la limite de kilométrage annuelle pour le programme AT PLUS ?",
+      "options": ["15 000 km", "20 000 km", "25 000 km", "Illimité"],
+      "correctAnswer": 1,
+      "explanation": "Le programme AT PLUS a une limite de kilométrage de 20 000 km par année selon les détails financiers."
+    },
+    {
+      "question": "L'actuateur du boîtier de transfert est couvert dans quelle section ?",
+      "options": ["Section 5", "Section 11", "Section 12", "Section 13"],
+      "correctAnswer": 3,
+      "explanation": "La section 13 - Motopropulseur Essentiel couvre l'actuateur du boîtier de transfert et l'ensemble de blocage de moyeu (4x4)."
+    },
+    {
+      "question": "Un collègue commet une erreur dans un contrat. Comment l'abordez-vous ?",
+      "options": ["Le dénoncer publiquement", "L'aider discrètement à corriger l'erreur et en discuter constructivement", "Ignorer l'erreur", "En profiter pour le ridiculiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage l'entraide et la correction constructive des erreurs dans un esprit d'amélioration continue et de respect mutuel."
+    },
+    {
+      "question": "L'embrayage du compresseur de climatisation est couvert dans quelle section ?",
+      "options": ["Section 12", "Section 16", "Section 17", "Section 19"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 - Climatisation Plus+ couvre l'embrayage du compresseur, le condenseur, l'accumulateur et le déshydrateur."
+    }
+  ]
+}
+

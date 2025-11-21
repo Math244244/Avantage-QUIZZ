@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 9,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "La pompe à carburant électrique est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 16 - Système d'alimentation en carburant", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 couvre pompe à carburant électrique/mécanique, régulateur de pression, corps de papillon et injecteurs."
+    },
+    {
+      "question": "Un client demande si les frais de stockage du véhicule sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, frais de stationnement/stockage exclus", "Oui, jusqu'à 7 jours", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tout frais de stationnement ou de stockage du véhicule est exclu de la couverture (section 4.6)."
+    },
+    {
+      "question": "Le régulateur de pression de carburant est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 16 - Système d'alimentation en carburant", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 couvre régulateur de pression de carburant, pompe à carburant, filtre à carburant et injecteurs de carburant."
+    },
+    {
+      "question": "Comment présenter l'avantage du service routier/remorquage à un client avec motoneige ?",
+      "options": ["Pas utile", "Remboursement jusqu'à 100$/année pour remorquage/service routier, sécurité en territoire éloigné", "C'est inclus fabricant", "Trop cher"],
+      "correctAnswer": 1,
+      "explanation": "La section 22 offre remboursement jusqu'à 100$/année pour service routier/remorquage, sécurité essentielle pour motoneige en territoire éloigné."
+    },
+    {
+      "question": "Les injecteurs de carburant sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 16 - Système d'alimentation en carburant", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 couvre injecteurs de carburant, rampe d'injection, régulateur de pression et pompe à carburant."
+    },
+    {
+      "question": "Un véhicule avec usage ambulance est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules usage ambulance/police/pompier exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule utilisé pour usage commercial, ambulance, police ou pompier est exclu du programme (section 9.3)."
+    },
+    {
+      "question": "Le corps de papillon est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 16 - Système d'alimentation en carburant", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 couvre corps de papillon, moteur de contrôle du papillon, injecteurs et rampe d'injection."
+    },
+    {
+      "question": "Les dommages dus à accessoires non-OEM sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés accessoires/équipement non-OEM exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous dommages directs/indirects causés par accessoires, équipement ou modifications non-OEM sont exclus (section 4.4)."
+    },
+    {
+      "question": "La rampe d'injection est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 16 - Système d'alimentation en carburant", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 couvre rampe d'injection, injecteurs de carburant, régulateur de pression et pompe à carburant."
+    },
+    {
+      "question": "Comment gérer un client qui veut une garantie pour véhicule exclu (ex: piste) ?",
+      "options": ["Accepter", "Expliquer exclusion (section 9.6), suggérer contacter représentant Administrateur pour exception possible", "Mentir", "Refuser sèchement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer l'exclusion (section 9.6), puis suggérer de contacter représentant Administrateur pour évaluer exception (section 9.4)."
+    },
+    {
+      "question": "Le filtre à carburant est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 16 - Système d'alimentation en carburant", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 16 couvre filtre à carburant, pompe à carburant, régulateur de pression et injecteurs."
+    },
+    {
+      "question": "Un client demande garantie avec 250 heures. Est-il admissible au programme de base ?",
+      "options": ["Oui, automatiquement", "Non, max 200h avec option Usagé sans garantie (véhicule <10 ans)", "Oui, sans option", "Selon le véhicule"],
+      "correctAnswer": 1,
+      "explanation": "L'option Usagé sans garantie (200$) exige véhicule <10 ans et <200h. Au-delà de 200h, véhicule non admissible."
+    },
+    {
+      "question": "Le convertisseur catalytique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 17 - Système d'échappement", "Oui, section 16", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 17 - Système d'échappement couvre convertisseur catalytique, collecteur d'échappement et capteurs d'échappement."
+    },
+    {
+      "question": "Combien coûte l'option Protection de garantie ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Protection de garantie coûte 300$ et offre crédit jusqu'à 2000$ en cas de perte totale/vol/vente."
+    },
+    {
+      "question": "Le collecteur d'échappement est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 17 - Système d'échappement", "Oui, section 1", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 17 - Système d'échappement couvre collecteur d'échappement, convertisseur catalytique et tous les capteurs d'échappement."
+    },
+    {
+      "question": "Les dommages dus à submersion/inondation sont-ils couverts ?",
+      "options": ["Oui, tous", "Non, dommages causés par submersion/inondation exclus", "Oui, partiellement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Tous les dommages causés par inondation, submersion ou tout autre acte de Dieu sont exclus (section 4.2)."
+    },
+    {
+      "question": "La sonde lambda est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 17 - Système d'échappement", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 17 - Système d'échappement couvre sonde lambda (capteur O2), convertisseur catalytique et collecteur d'échappement."
+    },
+    {
+      "question": "Comment expliquer la documentation vérifiable à un client qui refuse de la fournir ?",
+      "options": ["Ce n'est pas important", "Obligatoire: facture ordinateur Centre agréé avec détails. Administrateur peut refuser réclamation sans elle", "Optionnelle", "Seulement montants élevés"],
+      "correctAnswer": 1,
+      "explanation": "Documentation vérifiable (facture ordinateur du centre agréé avec détails complets) est obligatoire. Administrateur peut refuser réclamation (section 5.3 et 5.4)."
+    },
+    {
+      "question": "Le capteur de température d'échappement est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 17 - Système d'échappement", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 17 - Système d'échappement couvre capteur de température d'échappement, sonde lambda et tous les capteurs d'échappement."
+    },
+    {
+      "question": "Un véhicule avec usage police est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules usage police/pompier/ambulance exclus", "Oui, avec supplément 500$", "Selon le modèle"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule utilisé pour usage commercial, police, pompier ou ambulance est exclu du programme (section 9.3)."
+    },
+    {
+      "question": "Le capteur de pression d'échappement est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 17 - Système d'échappement", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 17 - Système d'échappement couvre capteur de pression d'échappement et tous les capteurs du système d'échappement."
+    },
+    {
+      "question": "Comment rassurer un client inquiet du coût des options ?",
+      "options": ["Minimiser", "Expliquer que options adaptent couverture à ses besoins, coût faible vs protection (ex: 300$ Protection = jusqu'à 2000$)", "Dire non nécessaires", "Changer de sujet"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à expliquer les options comme investissement adapté (ex: Protection 300$ = jusqu'à 2000$ crédit, ROI clair)."
+    },
+    {
+      "question": "Le moteur électrique principal (véhicule électrique) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 18 - Groupe motopropulseur électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 18 couvre moteur électrique, onduleur, convertisseur, module de commande du moteur électrique et câblage HV."
+    },
+    {
+      "question": "Un client demande si les frais de nettoyage du véhicule sont couverts. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Non, frais de nettoyage/esthétique/entretien de routine exclus", "Oui, jusqu'à 100$", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Frais de nettoyage, esthétique, entretien de routine, ou tout entretien recommandé fabricant sont exclus (section 4.1)."
+    },
+    {
+      "question": "L'onduleur (véhicule électrique) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 18 - Groupe motopropulseur électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 18 couvre onduleur, convertisseur, moteur électrique, module de commande et câblage haute tension."
+    },
+    {
+      "question": "Un véhicule qui participe à des événements promotionnels est-il admissible ?",
+      "options": ["Oui, automatiquement", "Non, véhicules d'exposition/presse/promotionnels exclus", "Oui, avec supplément", "Selon le type"],
+      "correctAnswer": 1,
+      "explanation": "Tout véhicule ayant servi à l'exposition, véhicule de presse ou événements promotionnels est exclu du programme (section 9.6)."
+    },
+    {
+      "question": "Le convertisseur DC-DC (véhicule électrique) est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 18 - Groupe motopropulseur électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 18 couvre convertisseur DC-DC, onduleur, moteur électrique et tous les composants du groupe motopropulseur électrique."
+    },
+    {
+      "question": "Comment gérer un client qui a fait réparer sans autorisation ?",
+      "options": ["Rembourser", "Expliquer poliment que réparation sans autorisation ne peut être remboursée (section 4.13)", "Mentir", "Payer partiellement"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige d'expliquer poliment que réparation sans numéro d'autorisation ne peut être remboursée (section 4.13), tout en soulignant processus correct."
+    },
+    {
+      "question": "Le module de commande du moteur électrique est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 18 - Groupe motopropulseur électrique", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 18 couvre module de commande du moteur électrique, onduleur, convertisseur et moteur électrique principal."
+    },
+    {
+      "question": "Un client demande si son véhicule hybride avec batterie HV de 3 ans est couvert. Que répondez-vous ?",
+      "options": ["Oui, toujours", "Batterie HV couverte 1 an/20 000 km AU-DELÀ garantie fabricant, dysfonctionnement seulement", "Non, jamais", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "La section 20 couvre batterie HV limitée à 1 an/20 000 km AU-DELÀ de la garantie fabricant, dysfonctionnement/cellule défectueuse seulement (pas perte capacité)."
+    }
+  ]
+}
+

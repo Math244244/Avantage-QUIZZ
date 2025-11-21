@@ -1,0 +1,182 @@
+{
+  "module": "hasard-route",
+  "month": 7,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Toute autorisation DOIT-elle être obtenue AVANT réparation/remplacement ?",
+      "options": ["Non, après acceptable", "OUI, toute réparation/remplacement DOIT être AUTORISÉ par Administrateur AVANT travaux (TOUTES demandes REFUSÉES si autorisation préalable non obtenue)", "Selon l'urgence", "Sur présentation facture"],
+      "correctAnswer": 1,
+      "explanation": "CRITIQUE : Toute réparation ou remplacement en vertu des termes DOIT être AUTORISÉ par l'Administrateur AVANT toute réparation/remplacement. TOUTES DEMANDES REFUSÉES si autorisation préalable non obtenue."
+    },
+    {
+      "question": "Comment faire une demande de remboursement ?",
+      "options": ["Téléphone seulement", "Demandes en ligne à claims@goautoshield.com OU téléphone 1-888-406-3002. Photo + description dommages peuvent être demandées", "Courrier seulement", "Selon le type dommage"],
+      "correctAnswer": 1,
+      "explanation": "Les demandes de remboursement peuvent être effectuées en ligne à claims@goautoshield.com OU en contactant le 1-888-406-3002. Photo et description des dommages peuvent être demandées."
+    },
+    {
+      "question": "Vers où le client sera-t-il dirigé pour réparations/remplacements ?",
+      "options": ["N'importe quel atelier", "Détaillant Vente Original (si applicable) OU fournisseur agréé (pour toutes réparations/remplacements)", "Seulement concessionnaire", "Selon le choix client"],
+      "correctAnswer": 1,
+      "explanation": "Le client sera dirigé vers son Détaillant de Vente Original (si applicable), OU vers un fournisseur agréé pour toutes réparations ou remplacements autorisés."
+    },
+    {
+      "question": "Comment expliquer obligation autorisation préalable à client urgent voulant réparer immédiatement ?",
+      "options": ["Être flexible", "Expliquer IMPORTANCE : autorisation préalable = vérification admissibilité + estimation coût + coordination fournisseur. SANS autorisation = réclamation REFUSÉE totalement (client paie 100%). Patience 24-48h protège investissement. AUCUNE exception urgence", "Faire exception", "Selon le coût"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige fermeté : autorisation préalable = vérification admissibilité estimation coordination, sans autorisation = refus total (client paie 100%), patience 24-48h protège investissement, aucune exception urgence."
+    },
+    {
+      "question": "Si client éloigné zone achat original ou ne peut retourner Détaillant Original ?",
+      "options": ["Pas de remboursement", "Administrateur fournira remboursement pour réparation PRÉALABLEMENT AUTORISÉE effectuée au Canada et USA continentaux", "Seulement Détaillant Original", "Selon la distance"],
+      "correctAnswer": 1,
+      "explanation": "Si client ne peut retourner Détaillant Original ou éloigné zone achat : Administrateur fournira remboursement pour réparation PRÉALABLEMENT AUTORISÉE effectuée au Canada et USA continentaux."
+    },
+    {
+      "question": "Que doit fournir l'atelier de réparation pour recevoir remboursement ?",
+      "options": ["Estimation seulement", "Atelier DOIT fournir FACTURE pour travaux autorisés pour recevoir remboursement", "Bon de commande", "Selon l'arrangement"],
+      "correctAnswer": 1,
+      "explanation": "L'atelier de réparation DOIT fournir une FACTURE pour les travaux autorisés afin de recevoir un remboursement de l'Administrateur."
+    },
+    {
+      "question": "L'Administrateur peut-il refuser un coût de réparation jugé déraisonnable ?",
+      "options": ["Non, doit accepter", "OUI, Administrateur se RÉSERVE DROIT refuser coût réparation/devis jugé DÉRAISONNABLE (à discrétion) par rapport autres alternatives", "Selon le fournisseur", "Seulement si excessif"],
+      "correctAnswer": 1,
+      "explanation": "OUI, l'Administrateur se RÉSERVE LE DROIT de refuser tout coût de réparation ou devis jugé DÉRAISONNABLE (à sa seule discrétion) par rapport à d'autres alternatives."
+    },
+    {
+      "question": "Comment expliquer droit refus coûts déraisonnables à client frustré devis refusé ?",
+      "options": ["Céder", "Expliquer LOGIQUE : Administrateur vérifie tarifs marché (protection intégrité programme + équité tous clients). Devis excessif = fournisseur alternatif proposé (même qualité, coût raisonnable). Programme paie coûts RAISONNABLES (pas surévalués). Protection tous", "Accepter coût", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : Administrateur vérifie tarifs marché (intégrité + équité), devis excessif = alternatif proposé (qualité égale coût raisonnable), paie raisonnable pas surévalué, protection tous."
+    },
+    {
+      "question": "L'Administrateur peut-il recommander alternatives coûts/directives approvisionnement pièces ?",
+      "options": ["Non, client décide", "OUI, Administrateur se RÉSERVE DROIT recommander alternatives coûts et/ou directives approvisionnement pièces", "Selon le fournisseur", "Seulement si économie majeure"],
+      "correctAnswer": 1,
+      "explanation": "OUI, l'Administrateur se RÉSERVE LE DROIT de recommander des alternatives de coûts et/ou des directives concernant l'approvisionnement en pièces."
+    },
+    {
+      "question": "L'Administrateur peut-il examiner le véhicule du client ?",
+      "options": ["Non, pas autorisé", "OUI, Administrateur se RÉSERVE DROIT examiner véhicule (à seule discrétion)", "Seulement si fraude suspectée", "Avec consentement client"],
+      "correctAnswer": 1,
+      "explanation": "OUI, l'Administrateur se RÉSERVE LE DROIT d'examiner le véhicule du client à sa seule discrétion (vérification authentification dommages)."
+    },
+    {
+      "question": "Si Administrateur n'a pas de fournisseurs/pièces disponibles dans région client ?",
+      "options": ["Aucun service", "Administrateur se réserve droit effectuer RÈGLEMENTS EN ESPÈCES au lieu fournir service (basé tarifs marché services similaires zone géographique)", "Client doit voyager", "Selon la pièce"],
+      "correctAnswer": 1,
+      "explanation": "Si pas de fournisseurs/pièces disponibles dans région : Administrateur se réserve droit procéder à RÈGLEMENTS EN ESPÈCES plutôt que fournir service (basé sur tarifs marché zone géographique)."
+    },
+    {
+      "question": "Comment expliquer règlement espèces (si fournisseur indisponible) à client préférant service ?",
+      "options": ["Forcer service", "Expliquer LOGIQUE : zone éloignée = fournisseurs limités/indisponibles. Règlement espèces = montant équivalent tarif marché (client libre choisir fournisseur). Alternative pratique zones éloignées. Flexibilité avantage client", "Promettre service", "Selon la région"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : zone éloignée = fournisseurs limités, règlement espèces = équivalent tarif marché (client choisit fournisseur), alternative pratique éloignement, flexibilité avantage client."
+    },
+    {
+      "question": "Quand le contrat prend-il fin automatiquement sans préavis (5 cas) ?",
+      "options": ["Seulement expiration", "5 cas fin automatique : 1) Reprise véhicule par Détenteur privilège/ordre tribunal, 2) 90 jours après Perte totale (si aucun remboursement demandé), 3) Montant maximum payé, 4) Véhicule échangé/vendu (sauf transfert valide), 5) Date expiration", "3 cas", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Contrat prend fin automatiquement sans préavis dans 5 cas : reprise/ordre, 90 jours post-Perte totale sans demande, maximum payé, échange/vente sans transfert, date expiration."
+    },
+    {
+      "question": "Si véhicule repris par banque, le contrat continue-t-il ?",
+      "options": ["Oui, jusqu'à expiration", "NON, contrat prend fin AUTOMATIQUEMENT à date reprise véhicule par Détenteur privilège (aucun remboursement/indemnité)", "Selon l'entente", "Transfert possible"],
+      "correctAnswer": 1,
+      "explanation": "Si véhicule repris par Détenteur de privilège (banque/institution) : contrat prend fin AUTOMATIQUEMENT à date de reprise (aucun remboursement ou indemnité versé dans ce cas)."
+    },
+    {
+      "question": "Combien de jours après Perte totale pour demander remboursement avant fin contrat ?",
+      "options": ["30 jours", "90 jours suivant date véhicule considéré Perte totale (si aucun remboursement demandé = contrat prend fin automatiquement)", "60 jours", "120 jours"],
+      "correctAnswer": 1,
+      "explanation": "Dans les 90 jours suivant la date à laquelle le véhicule est considéré comme Perte totale : si aucun remboursement n'est demandé = contrat prend fin automatiquement sans préavis."
+    },
+    {
+      "question": "Comment conseiller client ayant Perte totale sur importance demander remboursement rapidement ?",
+      "options": ["Attendre", "Expliquer URGENCE : Perte totale = délai 90 jours demander remboursement prorata (contrat résiduel). Après 90 jours = contrat TERMINE automatiquement (perte totale remboursement). Agir RAPIDEMENT dans 90 jours protège droits récupération partielle coût", "Pas urgent", "Selon l'assurance"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige urgence : Perte totale = délai 90 jours demander remboursement prorata résiduel, après 90 jours = fin automatique perte totale remboursement, agir rapidement 90 jours protège récupération."
+    },
+    {
+      "question": "Si contrat a été résilié, y a-t-il remboursement ou indemnité ?",
+      "options": ["Oui, prorata", "NON, si contrat résilié = AUCUN remboursement ou indemnité versé", "Selon la raison", "Sur demande"],
+      "correctAnswer": 1,
+      "explanation": "Dans le cas où le contrat a été résilié (pour quelque raison que ce soit) : AUCUN remboursement ou indemnité ne sera versé."
+    },
+    {
+      "question": "Que signifie \"Détaillant de Vente Original\" ?",
+      "options": ["N'importe quel concessionnaire", "Concessionnaire où client a ACHETÉ véhicule (indiqué sur Page titre Contrat service)", "Concessionnaire marque", "Selon le choix client"],
+      "correctAnswer": 1,
+      "explanation": "\"Détaillant de Vente Original\" signifie : le concessionnaire où le client a ACHETÉ le véhicule, tel qu'indiqué sur la Page titre du Contrat de service."
+    },
+    {
+      "question": "Que signifie \"Compagnie d'Assurance Principale\" ?",
+      "options": ["Auto Shield", "Compagnie assurance DÛMENT AUTORISÉE Canada, assureur véhicule client (délivrance Police Assurance Principale)", "N'importe quelle assurance", "Selon le choix"],
+      "correctAnswer": 1,
+      "explanation": "\"Compagnie d'Assurance Principale\" signifie : une compagnie d'assurance DÛMENT AUTORISÉE à exercer des activités au Canada, qui est l'assureur du véhicule du client (délivrance Police Assurance Principale)."
+    },
+    {
+      "question": "Comment expliquer différence Assurance Principale vs Hasard de Route à client confus ?",
+      "options": ["C'est pareil", "Expliquer DISTINCTION : Assurance Principale = couverture accidents/collisions/responsabilité (obligatoire légalement). Hasard de Route = protections SPÉCIFIQUES hasards routiers (pneus, pare-brise, clés, etc.) COMPLÉMENTAIRES. Deux produits DIFFÉRENTS travaillent ENSEMBLE protection totale", "Ignorer différence", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification : Assurance Principale = accidents collisions responsabilité (obligatoire légal), Hasard de Route = protections spécifiques hasards (complémentaires), deux produits différents ensemble protection totale."
+    },
+    {
+      "question": "Que signifie \"Créancier\" dans le contrat ?",
+      "options": ["Administrateur", "Institution financière ayant AVANCÉ fonds pour achat Contrat Service ET véhicule", "Concessionnaire", "Assurance"],
+      "correctAnswer": 1,
+      "explanation": "\"Créancier\" signifie : toute institution financière qui a AVANCÉ les fonds pour l'achat de ce Contrat de Service ET du véhicule du client."
+    },
+    {
+      "question": "Qui reçoit le remboursement annulation si contrat financé ?",
+      "options": ["Client directement", "Remboursement payable à Détaillant Vente Original OU CRÉANCIER (le cas échéant), par chèque", "Administrateur", "Selon l'entente"],
+      "correctAnswer": 1,
+      "explanation": "Si contrat annulé (et financé) : remboursement sera payable à Détaillant de Vente Original, ou au CRÉANCIER (le cas échéant), par chèque."
+    },
+    {
+      "question": "Comment expliquer remboursement au Créancier (pas client) à client frustré ?",
+      "options": ["Changer procédure", "Expliquer LOGIQUE : contrat financé = Créancier a PAYÉ (pas client directement). Remboursement Créancier = réduit solde prêt client (bénéfice indirect client). Procédure standard financière protège droits Créancier + ajuste solde client équitablement", "Rembourser client", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige explication : contrat financé = Créancier a payé, remboursement Créancier = réduit solde prêt client (bénéfice indirect), procédure standard financière protège droits ajuste solde équitablement."
+    },
+    {
+      "question": "Tous les montants en dollars sont-ils exprimés en quelle devise ?",
+      "options": ["USD", "CAD (devises canadiennes)", "Selon la région", "Client choisit"],
+      "correctAnswer": 1,
+      "explanation": "Tous les montants en dollars mentionnés dans ce Contrat de service sont exprimés en devises CANADIENNES (CAD)."
+    },
+    {
+      "question": "Si réparation effectuée aux USA, comment est calculé le remboursement ?",
+      "options": ["USD directement", "Tous remboursements effectués en dollars CANADIENS, selon taux change à DATE facture réparation/remplacement", "Selon le choix client", "Double devise"],
+      "correctAnswer": 1,
+      "explanation": "Tous les remboursements seront effectués en dollars CANADIENS, en fonction du taux de change à la DATE de la facture de réparation ou de remplacement."
+    },
+    {
+      "question": "Comment expliquer taux de change (si réparation USA) à client québécois ?",
+      "options": ["USD accepté", "Expliquer CONVERSION : réparation USA = facture USD, Administrateur convertit CAD selon taux change DATE facture (taux officiel banque). Client remboursé CAD. Exemple : facture 1000 USD, taux 1.35 = remboursement 1350 CAD. Transparent équitable", "Ignorer conversion", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige clarification conversion : réparation USA = facture USD, conversion CAD taux officiel date facture (ex: 1000 USD × 1.35 = 1350 CAD remboursement), transparent équitable."
+    },
+    {
+      "question": "Que protège la clause \"Avis de création dossiers renseignements personnels\" ?",
+      "options": ["Rien", "Protection CONFIDENTIALITÉ informations personnelles : dossiers conservés bureaux Auto Shield, accès RESTREINT employés/agents/prestataires (gestion contrats/réclamations), droit accès/rectification client", "Seulement administratif", "Selon la loi"],
+      "correctAnswer": 1,
+      "explanation": "La clause protège CONFIDENTIALITÉ : dossiers renseignements personnels conservés bureaux Auto Shield, accès RESTREINT (employés/agents/prestataires gestion), client a droit accès et rectification informations."
+    },
+    {
+      "question": "Comment rassurer client inquiet protection données personnelles ?",
+      "options": ["Minimiser", "Expliquer PROTECTIONS : Auto Shield suit lois protection renseignements personnels Canada. Accès restreint employés autorisés, données utilisées UNIQUEMENT gestion contrat/réclamations. Client droit accès/rectification gratuit (demande écrite). Confidentialité totale garantie", "Ignorer inquiétudes", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à rassurer : Auto Shield suit lois protection Canada, accès restreint autorisés, données uniquement gestion contrat/réclamations, droit accès rectification gratuit, confidentialité totale garantie."
+    },
+    {
+      "question": "Un collègue dit \"Hasard de Route couvre même si client pas d'assurance principale\". Comment réagir ?",
+      "options": ["Confirmer", "Corriger IMMÉDIATEMENT : Assurance Principale valide = CONDITION OBLIGATOIRE Hasard de Route (termes généraux). Sans Assurance Principale = contrat INVALIDE. Fausse promesse = vente contrat non valide = litige majeur. Correction protège client + légalité", "L'ignorer", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige correction immédiate : Assurance Principale = condition obligatoire Hasard de Route, sans Assurance = contrat invalide, fausse promesse = vente invalide litige, correction protège client légalité."
+    }
+  ]
+}
+

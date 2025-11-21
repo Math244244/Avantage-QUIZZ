@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 2,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Le système d'alimentation est couvert dans quelle section ?",
+      "options": ["Section 11", "Section 12", "Section 13", "Section 14"],
+      "correctAnswer": 2,
+      "explanation": "La section 13 - Système d'Alimentation couvre pompe à carburant, injecteurs, régulateur de pression, réservoir et conduites métalliques."
+    },
+    {
+      "question": "Quelle est la période d'attente en kilomètres pour l'activation de la garantie ?",
+      "options": ["100 km", "150 km", "200 km", "250 km"],
+      "correctAnswer": 2,
+      "explanation": "La période d'attente est de 200 kilomètres (ou 20 heures selon programme) basés sur le relevé du compteur indiqué sur la garantie."
+    },
+    {
+      "question": "Le système électrique est couvert dans quelle section ?",
+      "options": ["Section 13", "Section 14", "Section 15", "Section 16"],
+      "correctAnswer": 2,
+      "explanation": "La section 15 - Électrique couvre alternateur, démarreur, ECM, injection électronique, bobines d'allumage et modules de commande."
+    },
+    {
+      "question": "Un client avec une motomarine usagée de 4 ans demande une garantie. Quelle option est disponible ?",
+      "options": ["Aucune option", "Option Usagé sans garantie 200$ (véhicule moins de 5 ans)", "Option Performance", "Non admissible"],
+      "correctAnswer": 1,
+      "explanation": "L'option Usagé sans garantie manufacturière (200$) pour Motomarines & Bateaux nécessite véhicule de moins de 5 ans (critère d'âge seulement)."
+    },
+    {
+      "question": "Combien de sections le programme loisir couvre-t-il au total ?",
+      "options": ["20 sections", "22 sections", "24 sections", "28 sections"],
+      "correctAnswer": 3,
+      "explanation": "Le programme loisir couvre les sections 1 à 28 selon les composants couverts (incluant options additionnelles)."
+    },
+    {
+      "question": "Quelle est la franchise si le véhicule est réparé ailleurs qu'un Centre Autorisé ?",
+      "options": ["0$", "50$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "La franchise est de 100$ si le véhicule est réparé ailleurs qu'un Centre Autorisé pour tous les programmes loisir."
+    },
+    {
+      "question": "Le système Haut Tech + Sport est couvert dans quelle section ?",
+      "options": ["Section 14", "Section 15", "Section 16", "Section 17"],
+      "correctAnswer": 2,
+      "explanation": "La section 16 - Haut Tech + Sport couvre console, USB, audio, GPS, Bluetooth, sondeur de profondeur et moteur de pêche électrique."
+    },
+    {
+      "question": "Combien coûte l'option Suspension A+ ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 25 - Suspension A+ coûte 300$ et couvre systèmes adaptatifs, actifs ou pneumatiques installés en usine."
+    },
+    {
+      "question": "L'injection d'huile est couverte dans quelle section ?",
+      "options": ["Section 12", "Section 13", "Section 14", "Section 15"],
+      "correctAnswer": 2,
+      "explanation": "La section 14 - Système d'Alimentation d'injection d'huile couvre pompe, régulateur, réservoir, capteur et conduites métalliques."
+    },
+    {
+      "question": "Comment expliquer l'option Couverture liée à l'autorisation à un client ?",
+      "options": ["Elle n'est pas nécessaire", "Elle couvre toute pièce nécessaire à la réparation autorisée non déjà mentionnée, incluant huiles et liquides", "C'est automatique", "Elle double la couverture"],
+      "correctAnswer": 1,
+      "explanation": "L'option No 26 (200$) couvre pièces nécessaires à la réparation non mentionnées (1-20), incluant huiles, liquides, fréon et alignement."
+    },
+    {
+      "question": "Quelle est la condition d'âge pour l'option Usagé sans garantie pour Motomarines & Bateaux ?",
+      "options": ["Moins de 3 ans", "Moins de 5 ans", "Moins de 10 ans", "Aucune limite"],
+      "correctAnswer": 1,
+      "explanation": "L'option Usagé sans garantie pour Motomarines & Bateaux nécessite véhicule de moins de 5 ans (pas de km spécifié, seulement âge)."
+    },
+    {
+      "question": "Le système d'alimentation électrique à quai est couvert dans quelle section ?",
+      "options": ["Section 15", "Section 16", "Section 17", "Section 18"],
+      "correctAnswer": 2,
+      "explanation": "La section 17 couvre l'alimentation électrique du bateau, convertisseur, onduleur, panneaux solaires et prises de courant du bateau."
+    },
+    {
+      "question": "Combien coûte l'option Couverture liée à l'autorisation ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 26 - Couverture liée à l'autorisation coûte 200$ pour tous les programmes loisir."
+    },
+    {
+      "question": "Les aides à la conduite sont couvertes dans quelle section ?",
+      "options": ["Section 16", "Section 17", "Section 18", "Section 19"],
+      "correctAnswer": 2,
+      "explanation": "La section 18 - Aide à la conduite couvre régulateur adaptatif, capteurs de stationnement, évitement collision et caméras."
+    },
+    {
+      "question": "Un client demande combien de réclamations il peut faire. Que répondez-vous ?",
+      "options": ["Maximum 5", "Maximum 10", "Nombre illimité pendant la durée du programme", "Selon le montant"],
+      "correctAnswer": 2,
+      "explanation": "Le propriétaire peut déclarer un nombre illimité de réclamations pendant la durée du programme choisi selon la section 8."
+    },
+    {
+      "question": "Combien coûte l'option Protection de garantie ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 27 - Protection de garantie coûte 300$ et offre crédit jusqu'à 750$ en cas de perte totale ou vol."
+    },
+    {
+      "question": "Les composants E-Power sont couverts dans quelle section ?",
+      "options": ["Section 17", "Section 18", "Section 19", "Section 20"],
+      "correctAnswer": 2,
+      "explanation": "La section 19 - Composants E-Power couvre moteur/générateur électrique, inverseur, pompe auxiliaire et système de freinage régénératif."
+    },
+    {
+      "question": "Quelle est la condition pour l'option Remboursement partiel de la prime ?",
+      "options": ["Tous les contrats", "Contrats de 24 mois et plus", "Contrats de 36 mois et plus", "Contrats de 48 mois et plus"],
+      "correctAnswer": 2,
+      "explanation": "L'option Remboursement partiel (300$) est applicable seulement aux contrats de 36 mois et plus pour tous les programmes loisir."
+    },
+    {
+      "question": "La batterie véhicule électrique/hybride est couverte dans quelle section ?",
+      "options": ["Section 18", "Section 19", "Section 20", "Section 21"],
+      "correctAnswer": 2,
+      "explanation": "La section 20 couvre vérification, remplacement et nettoyage des cellules défectueuses de la batterie HV ou lithium-ion (limité 1 an/20 000 km)."
+    },
+    {
+      "question": "Un client possède une moto de compétition. Est-elle admissible ?",
+      "options": ["Oui, automatiquement", "Oui, avec option Motocross 400$", "Non, véhicules de compétition exclus", "Oui, avec supplément"],
+      "correctAnswer": 1,
+      "explanation": "L'utilisation en motocross n'est pas couverte sauf si l'option Motocross (400$) est explicitement indiquée au contrat pour Scooters & Motocycles."
+    },
+    {
+      "question": "Combien coûte l'option Remboursement partiel de la prime ?",
+      "options": ["200$", "250$", "300$", "350$"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 27 - Remboursement partiel coûte 300$ et offre remboursement jusqu'à 1000$ si aucune réclamation (contrats 36 mois+)."
+    },
+    {
+      "question": "La protection de la remorque est couverte dans quelle section ?",
+      "options": ["Section 19", "Section 20", "Section 21", "Section 22"],
+      "correctAnswer": 2,
+      "explanation": "La section 21 - Protection de la remorque couvre essieux, ressorts, suspension, système hydraulique/électrique et structure générale."
+    },
+    {
+      "question": "Comment gérer un client qui veut une garantie pour son véhicule modifié ?",
+      "options": ["Accepter sans conditions", "Expliquer que véhicules altérés/modifiés sont exclus, sauf exception approuvée", "Refuser sans explication", "Facturer un supplément"],
+      "correctAnswer": 1,
+      "explanation": "Les véhicules modifiés (ECM, échappement, suspension) sont exclus selon section 9. Une exception peut être demandée au représentant."
+    },
+    {
+      "question": "Quel est le remboursement maximal pour service routier/remorquage par année ?",
+      "options": ["50$", "75$", "100$", "150$"],
+      "correctAnswer": 2,
+      "explanation": "La section 22 accorde remboursement jusqu'à 100$ CAD par année pour service routier, remorquage ou mise en cale sèche au Canada & USA."
+    },
+    {
+      "question": "Combien coûte l'option Turbocompresseurs pour VTT/Côte-à-Côte/Motoneiges ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Turbocompresseurs installés en usine coûte 100$ pour VTT, Côte-à-Côte & Motoneiges."
+    },
+    {
+      "question": "Le véhicule de remplacement est remboursé à quel montant par jour ?",
+      "options": ["30$", "40$", "50$", "75$"],
+      "correctAnswer": 2,
+      "explanation": "La section 23 rembourse la location d'un véhicule de remplacement à 50$ CAD par jour, maximum 7 jours pour la durée du programme."
+    },
+    {
+      "question": "Un client nerveux signe son premier contrat de garantie loisir. Que faites-vous après signature ?",
+      "options": ["Partir rapidement", "Rassurer, expliquer période d'attente (30 jours/200 km) et procédures de réclamation", "Vendre autre chose", "L'ignorer"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme post-vente exige de rassurer, expliquer la période d'attente et les procédures (1-866-666-0181) et rester disponible."
+    },
+    {
+      "question": "Combien de jours maximums pour le remboursement de véhicule de remplacement ?",
+      "options": ["4 jours", "5 jours", "7 jours", "10 jours"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement du véhicule de remplacement (section 23) est limité à 7 jours maximum pour la durée du programme."
+    },
+    {
+      "question": "Combien coûte l'option Turbocompresseurs pour Motomarines & Bateaux ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Turbocompresseurs installés en usine coûte 100$ pour le programme Motomarines & Bateaux."
+    },
+    {
+      "question": "Quel est le remboursement maximal d'hébergement par jour ?",
+      "options": ["50$", "75$", "100$", "125$"],
+      "correctAnswer": 2,
+      "explanation": "La section 24 rembourse l'hébergement à 100$ CAD par jour si le propriétaire est à plus de 300km de son adresse."
+    }
+  ]
+}
+

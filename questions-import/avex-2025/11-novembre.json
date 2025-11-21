@@ -1,0 +1,146 @@
+{
+  "module": "avex",
+  "month": 11,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Comment former un nouveau collègue vendeur AVEX efficacement ?",
+      "options": ["Le laisser observer", "Programme formation structuré 7 modules: 1) Étudier contrat complet (composants, exclusions, conditions), 2) Comprendre tarifications/options, 3) Maîtriser processus réclamation, 4) Pratiquer présentations valeur, 5) Apprendre gestion objections, 6) Observer ventes expérimentés, 7) Ventes supervisées feedback. Formation complète = ventes qualité", "Apprendre sur le tas", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige formation structurée complète: étude contrat détaillée, maîtrise tarifs/options/processus, pratique présentations, gestion objections, observation, supervisions = vendeurs compétents confiants."
+    },
+    {
+      "question": "Un client revient mécontent car réclamation refusée (exclusion légitime section 4). Comment gérer ?",
+      "options": ["Défendre rigidement", "Gestion empathique professionnelle 6 étapes: 1) ÉCOUTER complètement frustration (valider émotion), 2) EXAMINER dossier réclamation détails, 3) EXPLIQUER exclusion applicable transparence (référence section contrat), 4) OFFRIR aide compréhension/documentation, 5) SI erreur Administrateur = escalade immédiate, 6) MAINTENIR relation professionnelle respectueuse. Empathie + transparence + professionnalisme", "Blâmer Administrateur", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige gestion empathique: écoute complète frustration, examen détaillé dossier, explication transparente exclusion (références), aide offerte, escalade si erreur, maintien relation respectueuse professionnelle."
+    },
+    {
+      "question": "Comment évaluer la performance d'un vendeur AVEX au-delà des chiffres ventes ?",
+      "options": ["Seulement ventes", "Évaluation holistique 6 critères: 1) Taux satisfaction clients (sondages post-vente), 2) Taux rétention/fidélité clients, 3) Nombre références/témoignages générés, 4) Qualité recommandations (pertinence options selon besoins), 5) Taux annulation 10 premiers jours (indicateur transparence), 6) Volume ventes. Qualité + quantité = succès durable", "Uniquement commissions", "Selon le mois"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige évaluation holistique: satisfaction clients, rétention, références, qualité recommandations, taux annulation (indicateur transparence), volume = performance complète durable."
+    },
+    {
+      "question": "Un client demande comparaison détaillée AVEX vs garantie fabricant prolongée. Comment structurer réponse ?",
+      "options": ["AVEX toujours meilleur", "Comparaison objective 5 critères: 1) COUVERTURE: AVEX 17 composants vs fabricant souvent 8-12, 2) DURÉE: AVEX jusqu'à 10 ans/160k km vs fabricant 7 ans/100k km typique, 3) INCLUSIONS: AVEX 9 inclusions (haute-tech, hybride, service routier) vs fabricant aucune, 4) FRANCHISE: AVEX 0$ Centre Autorisé vs fabricant 100$-200$, 5) PRIX: AVEX compétitif meilleures valeur. Comparaison objective = confiance décision éclairée", "AVEX parfait", "Selon le fabricant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige comparaison objective factuelle: couverture (17 vs 8-12), durée (10 ans/160k vs 7/100k), inclusions (9 vs 0), franchise (0$ vs 100$-200$), prix compétitif, objectivité = confiance."
+    },
+    {
+      "question": "Comment gérer client qui veut \"négocier\" prix AVEX ?",
+      "options": ["Baisser immédiatement", "Réponse professionnelle 4 points: 1) Expliquer tarification actuarielle structurée (basée risque statistique, non négociable), 2) VALORISER ce qui est inclus (17 composants + 9 inclusions = valeur 5000$+), 3) Démontrer ROI vs coût réparations réelles, 4) SI budget serré = proposer terme court OU options minimales (pas baisse prix). Valeur justifiée, tarification équitable", "Négocier toujours", "Selon le client"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige maintien valeur: tarification actuarielle structurée (non négociable), valorisation inclusions (5000$+ valeur), démonstration ROI, si budget = terme court/options minimales, pas baisse prix."
+    },
+    {
+      "question": "Un client avec véhicule AVEX depuis 2 ans (aucune réclamation) veut ajouter Option Suspension A+. Possible ?",
+      "options": ["Oui, moyennant frais", "NON impossible: Options sélectionnables UNIQUEMENT au moment achat initial (sections 4: forfait optionnel sélectionné AVEC garantie au moment achat). Expliquer impossibilité ajout après, exprimer regrets, souligner importance évaluation besoins COMPLÈTE lors achat initial futur. Transparence + apprentissage", "Oui, gratuitement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté: options ajout impossible après achat (sections 4), expliquer clairement impossibilité, exprimer regrets, souligner leçon évaluation complète besoins AVANT achat futur."
+    },
+    {
+      "question": "Comment maximiser références clients satisfaits AVEX ?",
+      "options": ["Demander vaguement", "Stratégie références structurée 5 étapes: 1) Identifier clients très satisfaits (aucune réclamation OU réclamation gérée excellemment), 2) Appel personnalisé (remercier fidélité), 3) Demander témoignage écrit spécifique (expérience, valeur perçue), 4) Demander 3 références contacts (amis, famille, collègues), 5) Offrir incitatif approprié (cadeau remerciement, pas commission). Programme références systématique = croissance organique", "Ne pas demander", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige stratégie systématique: identification clients satisfaits, appel personnalisé, demande témoignage spécifique, demande 3 références, incitatif remerciement approprié = croissance références qualité."
+    },
+    {
+      "question": "Un client demande pourquoi batterie hybride couverte seulement 1 an/20k km au-delà fabricant. Comment expliquer ?",
+      "options": ["C'est limité", "Explication transparente 4 points: 1) Batteries HV = composants TRÈS coûteux (5k$-15k$+ remplacement), 2) Garanties fabricant déjà extensives (8 ans/160k km typique), 3) AVEX extension 1 an/20k km = BONUS au-delà fabricant (protection additionnelle bienvenue), 4) Couvre dysfonctionnement cellule (pas dégradation capacité normale). Extension limitée mais valeur réelle bienvenue", "C'est mauvais", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme consiste à contextualiser: batteries très coûteuses, fabricant déjà extensif (8 ans/160k typique), AVEX 1 an/20k = extension bonus appréciable, couvre dysfonctionnement (pas usure normale), valeur réelle."
+    },
+    {
+      "question": "Comment gérer client qui compare AVEX avec \"garantie gratuite concessionnaire\" ?",
+      "options": ["Dévaloriser concurrence", "Réponse professionnelle objective 5 points: 1) \"Gratuite\" souvent incluse prix véhicule (coût caché), 2) Vérifier couverture réelle (souvent groupe motopropulseur seulement vs AVEX 17 composants), 3) Vérifier durée (souvent 1 an vs AVEX jusqu'à 10 ans), 4) Vérifier franchise (souvent 100$+ vs AVEX 0$ Centre Autorisé), 5) Comparer pommes avec pommes (couverture réelle). Objectivité = crédibilité", "Critiquer concurrence", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige objectivité: \"gratuit\" = coût caché prix véhicule, comparer couverture réelle (composants, durée, franchise), comparaison pommes/pommes factuelle, objectivité = crédibilité confiance."
+    },
+    {
+      "question": "Un client avec AVEX demande conseil meilleur garage entretien. Recommandation professionnelle ?",
+      "options": ["N'importe lequel", "Recommandation structurée 6 critères: 1) PRIORISER Centre de Réparation Autorisé (franchise 0$, diagnostic remboursé, processus optimal), 2) Sinon: garage réputé utilisant Mitchell/All-Data (temps travail standard), 3) Capable générer factures ordinateur complètes (Documentation vérifiable section 1), 4) Conserver TOUTES factures entretien, 5) Respecter recommandations fabricant entretien, 6) Liste Centres Autorisés disponible Administrateur. Guidance complète protection garantie", "Le moins cher", "Selon la ville"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige guidance complète: prioriser Centre Autorisé (avantages majeurs), sinon garage réputé logiciels standards, factures ordinateur complètes, conservation documentation, respect entretien fabricant, liste disponible Administrateur."
+    },
+    {
+      "question": "Comment former vendeurs à gérer objections AVEX efficacement ?",
+      "options": ["Argumenter toujours", "Formation gestion objections 5 techniques: 1) ÉCOUTER objection complètement (ne pas interrompre), 2) VALIDER préoccupation (empathie), 3) CLARIFIER si nécessaire (comprendre vraie préoccupation), 4) RÉPONDRE factuellement (données, ROI, comparaisons), 5) CONFIRMER satisfaction réponse. Technique ÉCOUTE-VALIDE-CLARIFIE-RÉPOND-CONFIRME = gestion objections professionnelle", "Convaincre fortement", "Selon l'objection"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige technique structurée: écoute complète, validation empathique, clarification besoin, réponse factuelle données/ROI, confirmation satisfaction = gestion objections respectueuse efficace professionnelle."
+    },
+    {
+      "question": "Un client demande combien temps conservation Documentation vérifiable recommandée. Conseil professionnel ?",
+      "options": ["1 an suffit", "Conseil professionnel complet: 1) Conserver TOUTE durée garantie + 1 an après expiration (sécurité), 2) Administrateur peut demander ANYTIME pendant garantie (section 5.3), 3) Organiser chronologiquement (dossier papier OU numérique), 4) Inclure: factures entretien, réparations, inspections (toutes générées ordinateur), 5) Infos complètes requises (VIN, km, date). Organisation proactive = protection garantie optimale", "Selon le cas", "Pas nécessaire"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige conseil complet conservation: toute durée + 1 an après (sécurité), demande possible anytime (5.3), organisation chronologique papier/numérique, infos complètes, proactivité = protection optimale."
+    },
+    {
+      "question": "Comment mesurer ROI programme AVEX pour concessionnaire/distributeur ?",
+      "options": ["Seulement ventes", "Mesure ROI holistique 6 métriques: 1) Revenus ventes AVEX directs, 2) Augmentation satisfaction clients globale (sondages), 3) Taux rétention clients (achats futurs), 4) Valeur vie client augmentée (LTV), 5) Références générées clients satisfaits, 6) Différenciation compétitive (argument vente véhicules). ROI financier + stratégique = valeur complète", "Uniquement commissions", "Selon le mois"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige vision holistique ROI: revenus directs + satisfaction accrue + rétention + LTV augmentée + références + différenciation = valeur complète financière ET stratégique programme."
+    },
+    {
+      "question": "Un client demande si AVEX accepte paiements mensuels. Comment répondre et proposer solutions ?",
+      "options": ["Non impossible", "Réponse solution 3 options: 1) AVEX = paiement complet au moment achat (standard industrie), 2) SOLUTION: inclure AVEX dans financement véhicule (paiements mensuels intégrés prêt auto), 3) ALTERNATIVE: vérifier si Distributeur offre plan paiement interne, 4) Démontrer coût mensuel raisonnable si financé (ex: 2175$/60 mois = 36$/mois intégré prêt). Solutions créatives = facilitation achat", "Refuser", "Selon le Distributeur"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige solutions créatives: AVEX = paiement complet standard, MAIS intégration financement véhicule possible (mensuel intégré), vérifier plan Distributeur, démontrer coût mensuel raisonnable = facilitation."
+    },
+    {
+      "question": "Comment gérer situation où client a acheté AVEX mais change véhicule dans 10 premiers jours ?",
+      "options": ["Garder argent", "Gestion professionnelle éthique 4 étapes: 1) Confirmer dans 10 premiers jours (section 10.2.a = annulation possible), 2) Faciliter annulation AVEX véhicule 1 avec Distributeur, 3) Proposer NOUVEAU AVEX véhicule 2 (évaluer admissibilité/besoins), 4) Processus transparent équitable (aucune pénalité changement légitime). Service client + éthique = fidélité", "Compliquer processus", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige service éthique: confirmer 10 jours (annulation possible), faciliter annulation véhicule 1, proposer nouveau AVEX véhicule 2, processus transparent équitable = service client fidélité."
+    },
+    {
+      "question": "Un client avec AVEX Tarif Usagé (8 ans/130k km) demande si peut \"upgrader\" vers Tarif Récent. Possible ?",
+      "options": ["Oui, moyennant frais", "NON impossible: Tarification déterminée à l'ACHAT selon âge/km véhicule moment achat (sections 1-2). Véhicule 8 ans/130k km = Tarif Usagé permanent (critères Tarif Récent non respectés). Expliquer impossibilité upgrade, rassurer couverture IDENTIQUE (17 composants), seul tarif diffère. Transparence + réassurance", "Oui, gratuitement", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige clarté: tarification fixée à l'achat selon critères âge/km (non modifiable après), véhicule Usagé reste Usagé, RASSURER couverture identique (17 composants), seul tarif diffère."
+    },
+    {
+      "question": "Comment développer expertise vente AVEX véhicules électriques/hybrides spécifiquement ?",
+      "options": ["Pas nécessaire", "Formation spécialisée 6 modules: 1) Comprendre systèmes électriques/hybrides (moteur, batterie, onduleur, etc.), 2) Maîtriser Composants 23-24 détails (couverture électrique/batterie), 3) Valoriser inclusions haute-tech/aide conduite (composants 21-22), 4) Comprendre limites batterie (1 an/20k km extension, dysfonctionnement vs capacité), 5) Identifier marques applicables Option Modèles sélectifs (Tesla, etc.), 6) Pratiquer présentations véhicules électriques. Expertise = crédibilité segment croissance", "Apprendre basique", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige expertise spécialisée segment croissance: formation systèmes électriques/hybrides, maîtrise composants 23-24, valorisation haute-tech/aide conduite, compréhension limites batterie, marques luxe, pratique = crédibilité expertise."
+    },
+    {
+      "question": "Un client mécontent dit \"collègue m'a promis ça serait couvert\" (exclusion légitime). Comment gérer ?",
+      "options": ["Blâmer collègue", "Gestion délicate professionnelle 6 étapes: 1) ÉCOUTER complètement frustration (empathie), 2) EXAMINER promesse alléguée (détails), 3) RÉFÉRER contrat écrit (section 11.1: contrat prime sur verbal), 4) EXPLIQUER exclusion applicable transparence, 5) OFFRIR aide si erreur collègue (escalade direction), 6) PROPOSER solution raisonnable si applicable. Empathie + vérité + solution = gestion professionnelle", "Défendre collègue", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige gestion délicate: écoute empathique, examen promesse, référence contrat écrit (11.1: prime sur verbal), explication exclusion, aide si erreur collègue, solution raisonnable = gestion professionnelle intègre."
+    },
+    {
+      "question": "Comment créer culture d'excellence ventes AVEX dans équipe ?",
+      "options": ["Pression ventes", "Culture excellence 7 piliers: 1) Formation continue approfondie (produit, techniques vente consultative), 2) Partage meilleures pratiques équipe (réunions régulières), 3) Reconnaissance performance qualité (pas seulement volume), 4) Feedback coaching constructif individuel, 5) Outils support (scripts, comparaisons, calculateurs ROI), 6) Standards éthiques NON NÉGOCIABLES (transparence totale), 7) Célébration succès collectifs. Culture positive = performance durable", "Compétition agressive", "Selon les résultats"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige culture positive: formation continue, partage pratiques, reconnaissance qualité, coaching constructif, outils support, éthique non négociable, célébrations = culture excellence performance durable."
+    },
+    {
+      "question": "Un client demande garantie écrite que réclamation future sera approuvée. Comment répondre honnêtement ?",
+      "options": ["Promettre approbation", "Réponse honnête professionnelle 4 points: 1) IMPOSSIBLE garantir approbation future (évaluation selon termes/conditions/exclusions chaque cas), 2) Confirmer section 6: \"présentation réclamation ne garantit pas couverture\", 3) ASSURER processus équitable transparent (évaluation basée contrat écrit), 4) SOULIGNER couverture exceptionnelle 17 composants (probabilité couverture élevée si conditions respectées). Honnêteté = confiance long terme", "Promettre oui", "Selon le cas"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige honnêteté totale: impossible garantir approbation (évaluation cas par cas), confirmer section 6, assurer processus équitable, souligner couverture exceptionnelle, honnêteté = confiance durable."
+    },
+    {
+      "question": "Comment gérer vendeur qui promet systématiquement \"tout sera couvert\" pour faciliter ventes ?",
+      "options": ["Tolérer résultats", "Intervention disciplinaire 5 étapes: 1) Rencontre privée immédiate (confronter comportement), 2) Expliquer conséquences graves (clients déçus, réputation ternie, problèmes légaux potentiels), 3) Formation obligatoire transparence/éthique, 4) Supervision ventes temporaire (vérification promesses), 5) Mesures disciplinaires progressives si récidive (jusqu'à cessation emploi). INTÉGRITÉ NON NÉGOCIABLE", "Ignorer", "Selon les ventes"],
+      "correctAnswer": 1,
+      "explanation": "L'intégrité professionnelle exige action ferme: rencontre confrontation, explication conséquences graves (clients/réputation/légal), formation obligatoire éthique, supervision, mesures disciplinaires progressives. INTÉGRITÉ NON NÉGOCIABLE JAMAIS."
+    },
+    {
+      "question": "Un client fidèle (3ème véhicule avec AVEX) demande \"rabais fidélité\". Comment gérer ?",
+      "options": ["Refuser sèchement", "Gestion professionnelle reconnaissance 4 étapes: 1) REMERCIER CHALEUREUSEMENT fidélité exceptionnelle (3 véhicules!), 2) EXPLIQUER tarification actuarielle structure (non négociable), 3) VALORISER \"rabais\" indirect (connaissance produit/processus = gain temps, confiance établie), 4) OFFRIR valeur ajoutée alternative (ex: aide prioritaire questions, extension courtoisie service, attention spéciale). Reconnaissance créative = fidélité renforcée", "Baisser prix", "Selon le montant"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige reconnaissance créative fidélité: remerciements chaleureux, explication tarification structure, valorisation \"rabais\" indirect (temps/confiance), valeur ajoutée alternative service = fidélité renforcée maintien valeur."
+    },
+    {
+      "question": "Comment maximiser satisfaction lors livraison documents AVEX post-achat ?",
+      "options": ["Remettre vite", "Livraison professionnelle 6 étapes: 1) Révision contrat complète avec client (pas seulement remettre), 2) Confirmation compréhension composants couverts, 3) Révision processus réclamation (coordonnées Administrateur 1-866-666-0181), 4) Rappel importance Documentation vérifiable conservation, 5) Remise documents organisés (dossier/pochette), 6) Invitation questions futures. Livraison = éducation finale = satisfaction début", "Remettre documents", "Selon le temps"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme exige livraison éducative: révision contrat complète, confirmation compréhension, révision processus réclamation, rappel documentation, documents organisés, invitation questions = satisfaction début relation optimale."
+    }
+  ]
+}
+

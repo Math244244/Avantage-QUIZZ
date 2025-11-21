@@ -1,0 +1,188 @@
+{
+  "module": "loisir",
+  "month": 3,
+  "year": 2025,
+  "questions": [
+    {
+      "question": "Combien de jours maximums pour le remboursement d'hébergement ?",
+      "options": ["3 jours", "4 jours", "5 jours", "7 jours"],
+      "correctAnswer": 1,
+      "explanation": "Le remboursement d'hébergement (section 24) est limité à 4 jours maximum pour la durée du programme."
+    },
+    {
+      "question": "Quelle est la distance minimale pour être admissible au remboursement d'hébergement ?",
+      "options": ["100 km", "200 km", "300 km", "500 km"],
+      "correctAnswer": 2,
+      "explanation": "Le remboursement d'hébergement s'applique si le propriétaire se trouve à plus de 300 km de son adresse indiquée au contrat."
+    },
+    {
+      "question": "L'option Suspension A+ couvre quels types de systèmes ?",
+      "options": ["Tous les ressorts", "Seulement conventionnels", "Systèmes adaptatifs, actifs ou pneumatiques installés en usine", "Amortisseurs seulement"],
+      "correctAnswer": 2,
+      "explanation": "L'option No 25 - Suspension A+ (300$) couvre spécifiquement les systèmes adaptatifs, actifs ou de suspension pneumatique installés en usine."
+    },
+    {
+      "question": "Un client avec un VTT 1100cc demande une garantie. Quelle option est nécessaire ?",
+      "options": ["Aucune", "Option Turbo 100$", "Option Haut performance 200$ (couvre 801cc à 1200cc)", "Non admissible"],
+      "correctAnswer": 2,
+      "explanation": "L'option Haut performance (200$) est requise pour couvrir les moteurs de 801cc à 1200cc pour VTT, Côte-à-Côte & Motoneiges."
+    },
+    {
+      "question": "Le vilebrequin du moteur est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 1 - Moteur", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre le vilebrequin, coussinets de vilebrequin et tous les joints de roulement de vilebrequin."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour l'option Protection de garantie ?",
+      "options": ["500$", "750$", "1000$", "1250$"],
+      "correctAnswer": 3,
+      "explanation": "L'option Protection de garantie offre crédit jusqu'à 750$ (franchise assureur) + crédit max 1250$ dans la nouvelle garantie = 2000$ total."
+    },
+    {
+      "question": "Les pistons et segments sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 1 - Moteur", "Oui, section 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre les pistons, axes de piston et segments ainsi que toutes les pièces internes lubrifiées."
+    },
+    {
+      "question": "Combien coûte l'option Usagé sans garantie pour VTT/Côte-à-Côte/Motoneiges ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Usagé sans garantie coûte 200$ pour VTT/Côte-à-Côte/Motoneiges (condition : moins de 10 ans et moins de 10 000 km)."
+    },
+    {
+      "question": "L'arbre à cames est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 1 - Moteur", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre l'arbre à cames, paliers d'arbre à cames (suiveurs) et pignon d'entraînement de l'arbre à cames."
+    },
+    {
+      "question": "Comment expliquer l'avantage de l'option Remboursement partiel à un client hésitant ?",
+      "options": ["Ce n'est pas utile", "Si aucune réclamation, remboursement jusqu'à 1000$ et rachat d'une nouvelle garantie", "C'est automatique", "C'est trop cher"],
+      "correctAnswer": 1,
+      "explanation": "L'option Remboursement partiel (300$) offre jusqu'à 1000$ si aucune réclamation et rachat d'une garantie, excellent pour clients fidèles."
+    },
+    {
+      "question": "Quelle est la puissance maximale de base admissible pour Motomarines & Bateaux ?",
+      "options": ["300hp", "400hp", "500hp", "600hp"],
+      "correctAnswer": 1,
+      "explanation": "Le programme Motomarines & Bateaux couvre les véhicules avec puissance totale jusqu'à 400hp selon l'admissibilité de base."
+    },
+    {
+      "question": "La pompe à huile est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 1 - Moteur", "Oui, section 13", "Oui, section 14"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre la pompe à huile, boîtier du filtreur à l'huile et soupape de dérivation du filtre à huile."
+    },
+    {
+      "question": "Combien coûte l'option Usagé sans garantie pour Motomarines & Bateaux ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Usagé sans garantie coûte 200$ pour Motomarines & Bateaux (condition : véhicule de moins de 5 ans, pas de km spécifié)."
+    },
+    {
+      "question": "Les soupapes de culasse sont-elles couvertes ?",
+      "options": ["Non, exclues", "Oui, section 1 - Moteur", "Oui, section 2", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre les soupapes de culasse, guides de soupapes, poussoirs et ressorts de soupapes."
+    },
+    {
+      "question": "Un client demande si les réparations doivent être autorisées avant de commencer. Que répondez-vous ?",
+      "options": ["Non, réparez et envoyez facture", "Oui, obligatoire d'obtenir numéro d'autorisation AVANT travaux", "Seulement si plus de 1000$", "Non nécessaire"],
+      "correctAnswer": 1,
+      "explanation": "Un numéro d'autorisation avec montant DOIT être obtenu avant travaux (format imprimé). Approbation vocale/texte non reconnue (section 6)."
+    },
+    {
+      "question": "Quel est le montant maximum de remboursement pour l'option Remboursement partiel ?",
+      "options": ["500$", "750$", "1000$", "1500$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Remboursement partiel ne dépassera pas 1000$ CAD avant taxes selon la section 28."
+    },
+    {
+      "question": "Les bielles et coussinets de bielles sont-ils couverts ?",
+      "options": ["Non, exclus", "Oui, section 1 - Moteur", "Oui, section 3", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre les bielles, roulements de bielle et coussinets de bielles."
+    },
+    {
+      "question": "Quelle est la période d'attente en jours pour l'activation de la garantie ?",
+      "options": ["15 jours", "20 jours", "30 jours", "45 jours"],
+      "correctAnswer": 2,
+      "explanation": "La période d'attente est de 30 jours suivant la date de livraison ET 200 km (ou 20h), les DEUX conditions devant être remplies."
+    },
+    {
+      "question": "La chaîne de distribution est-elle couverte ?",
+      "options": ["Non, exclue", "Oui, section 1 - Moteur", "Oui, section 4", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre la chaîne de distribution, tendeur de chaîne et guide de chaîne de distribution."
+    },
+    {
+      "question": "Comment gérer un client qui veut modifier les conditions du contrat verbalement ?",
+      "options": ["Accepter la demande verbale", "Expliquer que le contrat écrit prime sur toute entente verbale", "Promettre sans documenter", "Ignorer la demande"],
+      "correctAnswer": 1,
+      "explanation": "Le contrat écrit constitue l'intégralité de l'entente et prime sur toute entente verbale selon la section 11 - Dispositions générales."
+    },
+    {
+      "question": "Quelle est la limite de couverture pour la batterie véhicule électrique/hybride ?",
+      "options": ["6 mois/10 000 km", "1 an/20 000 km", "2 ans/40 000 km", "3 ans/60 000 km"],
+      "correctAnswer": 1,
+      "explanation": "La section 20 couvre la batterie HV/lithium-ion limitée à 1 an/20 000 km au-delà de la garantie fabricant (dysfonctionnement cellule seulement)."
+    },
+    {
+      "question": "Le collecteur d'admission est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 1 - Moteur (4-temps seulement)", "Oui, section 13", "Oui, tous moteurs"],
+      "correctAnswer": 1,
+      "explanation": "La section 1 - Moteur couvre le collecteur d'admission et joints du collecteur (moteur 4-temps seulement)."
+    },
+    {
+      "question": "Combien coûte l'option Haut performance pour Scooters & Motocycles ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Haut performance coûte 200$ pour Scooters & Motocycles et est requise pour moteurs de 751cc à 2500cc."
+    },
+    {
+      "question": "Les supports de moteur sont-ils couverts ?",
+      "options": ["Non, jamais", "Oui, toujours", "Oui, section 1 - seulement lors d'un bris majeur", "Oui, avec option"],
+      "correctAnswer": 2,
+      "explanation": "La section 1 - Moteur couvre les supports de moteur mais seulement lors d'un bris majeur."
+    },
+    {
+      "question": "Un client demande un transfert de garantie. Quel est le délai pour en faire la demande ?",
+      "options": ["7 jours", "10 jours", "15 jours", "30 jours"],
+      "correctAnswer": 2,
+      "explanation": "Les transferts doivent être envoyés à l'Administrateur dans les 15 premiers jours suivant la nouvelle propriété selon la section 10.1."
+    },
+    {
+      "question": "Combien coûte l'option Haut performance pour VTT/Côte-à-Côte/Motoneiges ?",
+      "options": ["100$", "150$", "200$", "250$"],
+      "correctAnswer": 2,
+      "explanation": "L'option Haut performance coûte 200$ pour VTT/Côte-à-Côte/Motoneiges et est requise pour moteurs de 801cc à 1200cc."
+    },
+    {
+      "question": "Le refroidisseur intermédiaire du turbo est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 2 - Turbo/Surcompresseur", "Oui, section 1", "Oui, section 11"],
+      "correctAnswer": 1,
+      "explanation": "La section 2 - Turbo/Surcompresseur couvre le refroidisseur intermédiaire, soupapes de dérivation et actuateur de turbo."
+    },
+    {
+      "question": "Quelle est la limite de MSRP pour qu'un véhicule soit admissible ?",
+      "options": ["100 000$ CAD", "125 000$ CAD", "150 000$ CAD", "200 000$ CAD"],
+      "correctAnswer": 2,
+      "explanation": "Tout véhicule dont le MSRP est supérieur à 150 000$ CAD est exclu du programme selon la section 9.5 - Exclusions de véhicules."
+    },
+    {
+      "question": "L'actuateur de turbo est-il couvert ?",
+      "options": ["Non, exclu", "Oui, section 2 - Turbo/Surcompresseur", "Oui, section 15", "Oui, avec option"],
+      "correctAnswer": 1,
+      "explanation": "La section 2 - Turbo/Surcompresseur couvre l'actuateur de turbo, vanne de purge et toutes les pièces internes OEM."
+    },
+    {
+      "question": "Un client satisfait veut recommander vos services. Comment maximiser cette opportunité ?",
+      "options": ["Ignorer", "Remercier et lui demander de partager son expérience avec contacts", "Demander argent", "Minimiser"],
+      "correctAnswer": 1,
+      "explanation": "Le professionnalisme encourage à cultiver les recommandations en remerciant chaleureusement et en facilitant le partage d'expérience positive."
+    }
+  ]
+}
+
